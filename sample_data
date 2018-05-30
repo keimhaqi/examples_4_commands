@@ -1,0 +1,36 @@
+insert into t_crawl_url (domain_id, jinbag_id, webpage_id, url, hashcode, create_time, update_time, priority, status_code, server, path, discount_id, start_time, end_time, operation, new_brand_id, new_category_id, type) values('3', '191522', 'B0002ARR22', 'https://www.amazon.com/dp/B0002ARR22', '6b8f7979a75b4e9a71a162a1a933a953', '2018-01-24 11:57:22', '2018-04-17 23:53:12', '1', '0', '54.218.72.208', '/mnt/crawl_cache/3', NULL, NULL, NULL, '4', NULL, '12406', '6'
+);
+insert into t_crawl_url (domain_id, jinbag_id, webpage_id, url, hashcode, create_time, update_time, priority, status_code, server, path, discount_id, start_time, end_time, operation, new_brand_id, new_category_id, type) values('3', '194185', 'B0010VCTJ8', 'https://www.amazon.com/dp/B0010VCTJ8', '97d320e73ca3f499d9f9b0534da3dcad', '2018-01-26 06:40:52', '2018-04-18 00:02:19', '1', '0', '54.218.72.208', '/mnt/crawl_cache/3', NULL, NULL, NULL, '0', NULL, '10786', '6'
+);
+insert into t_crawl_url (domain_id, jinbag_id, webpage_id, url, hashcode, create_time, update_time, priority, status_code, server, path, discount_id, start_time, end_time, operation, new_brand_id, new_category_id, type) values('3', '195091', 'B008KP7JA6', 'https://www.amazon.com/dp/B008KP7JA6', 'f5b2b30a2fc8d414fcc704267f66528', '2018-01-29 03:23:02', '2018-04-17 22:24:57', '1', '0', '96.90.248.210', '/mnt/crawl_cache/3', NULL, NULL, NULL, '4', NULL, '13047', '6'
+);
+insert into t_crawl_url (domain_id, jinbag_id, webpage_id, url, hashcode, create_time, update_time, priority, status_code, server, path, discount_id, start_time, end_time, operation, new_brand_id, new_category_id, type) values('3', '191578', 'B01B7CUX9M', 'https://www.amazon.com/dp/B01B7CUX9M', 'fedae1f8b3b40b924e33bf249c8e9fbd', '2018-01-24 11:57:04', '2018-04-18 03:02:44', '1', '0', '96.90.248.210', '/mnt/crawl_cache/3', NULL, NULL, NULL, '0', NULL, '12526', '6'
+);
+insert into t_crawl_url (domain_id, jinbag_id, webpage_id, url, hashcode, create_time, update_time, priority, status_code, server, path, discount_id, start_time, end_time, operation, new_brand_id, new_category_id, type) values('3', '185964', 'B01EWV2W6C', 'https://www.amazon.com/dp/B01EWV2W6C', '5606955c15a472a51843fa80f88e6106', '2017-12-17 20:32:54', '2018-04-18 02:00:05', '99', '0', '54.218.72.208', '/mnt/crawl_cache/3', NULL, NULL, NULL, '2', NULL, '10858', '6'
+);
+insert into t_crawl_url (domain_id, jinbag_id, webpage_id, url, hashcode, create_time, update_time, priority, status_code, server, path, discount_id, start_time, end_time, operation, new_brand_id, new_category_id, type) values('3', '193186', 'B01GNXBS62', 'https://www.amazon.com/dp/B01GNXBS62', '77e5015c442c037cf660fd5df21174b7', '2018-01-25 09:56:09', '2018-04-17 23:14:46', '1', '0', '34.211.110.176', '/mnt/crawl_cache/3', NULL, '2018-01-25 10:00:00', NULL, '4', NULL, '7816', '6'
+);
+insert into t_crawl_url (domain_id, jinbag_id, webpage_id, url, hashcode, create_time, update_time, priority, status_code, server, path, discount_id, start_time, end_time, operation, new_brand_id, new_category_id, type) values('3', '193612', 'B01K224J9S', 'https://www.amazon.com/dp/B01K224J9S', '3069aa73b028430dc517058368431dda', '2018-01-26 06:19:13', '2018-04-18 03:55:39', '99', '0', '96.90.248.210', '/mnt/crawl_cache/3', NULL, NULL, NULL, '0', NULL, '8212', '0'
+);
+insert into t_crawl_url (domain_id, jinbag_id, webpage_id, url, hashcode, create_time, update_time, priority, status_code, server, path, discount_id, start_time, end_time, operation, new_brand_id, new_category_id, type) values('3', '194355', 'B06XRFGZ5P', 'https://www.amazon.com/dp/B06XRFGZ5P', '5eb22cb9c0bdf837436d8d8655880224', '2018-01-26 06:51:07', '2018-04-18 04:05:08', '1', '0', '96.90.248.210', '/mnt/crawl_cache/3', NULL, NULL, NULL, '4', NULL, '6155', '6'
+);
+insert into t_crawl_url (domain_id, jinbag_id, webpage_id, url, hashcode, create_time, update_time, priority, status_code, server, path, discount_id, start_time, end_time, operation, new_brand_id, new_category_id, type) values('3', '193496', 'B074QGK828', 'https://www.amazon.com/dp/B074QGK828', 'de67c9c870dff4d047feca5bc87ebb1', '2018-01-26 01:20:56', '2018-04-17 23:34:07', '1', '0', '34.211.110.176', '/mnt/crawl_cache/3', NULL, NULL, NULL, '2', NULL, '6740', '6'
+);
+
+
+
+
+
+'6639141', '3', '191522', 'B0002ARR22', 'https://www.amazon.com/dp/B0002ARR22', '6b8f7979a75b4e9a71a162a1a933a953', '2018-01-24 11:57:22', '2018-04-17 23:53:12', '1', '0', '54.218.72.208', '/mnt/crawl_cache/3', NULL, NULL, NULL, '4', NULL, '12406', '6'
+'6645395', '3', '194185', 'B0010VCTJ8', 'https://www.amazon.com/dp/B0010VCTJ8', '97d320e73ca3f499d9f9b0534da3dcad', '2018-01-26 06:40:52', '2018-04-18 00:02:19', '1', '0', '54.218.72.208', '/mnt/crawl_cache/3', NULL, NULL, NULL, '0', NULL, '10786', '6'
+'6651964', '3', '195091', 'B008KP7JA6', 'https://www.amazon.com/dp/B008KP7JA6', 'f5b2b30a2fc8d414fcc704267f66528', '2018-01-29 03:23:02', '2018-04-17 22:24:57', '1', '0', '96.90.248.210', '/mnt/crawl_cache/3', NULL, NULL, NULL, '4', NULL, '13047', '6'
+'6639118', '3', '191578', 'B01B7CUX9M', 'https://www.amazon.com/dp/B01B7CUX9M', 'fedae1f8b3b40b924e33bf249c8e9fbd', '2018-01-24 11:57:04', '2018-04-18 03:02:44', '1', '0', '96.90.248.210', '/mnt/crawl_cache/3', NULL, NULL, NULL, '0', NULL, '12526', '6'
+'5553180', '3', '185964', 'B01EWV2W6C', 'https://www.amazon.com/dp/B01EWV2W6C', '5606955c15a472a51843fa80f88e6106', '2017-12-17 20:32:54', '2018-04-18 02:00:05', '99', '0', '54.218.72.208', '/mnt/crawl_cache/3', NULL, NULL, NULL, '2', NULL, '10858', '6'
+'6642505', '3', '193186', 'B01GNXBS62', 'https://www.amazon.com/dp/B01GNXBS62', '77e5015c442c037cf660fd5df21174b7', '2018-01-25 09:56:09', '2018-04-17 23:14:46', '1', '0', '34.211.110.176', '/mnt/crawl_cache/3', NULL, '2018-01-25 10:00:00', NULL, '4', NULL, '7816', '6'
+'6645283', '3', '193612', 'B01K224J9S', 'https://www.amazon.com/dp/B01K224J9S', '3069aa73b028430dc517058368431dda', '2018-01-26 06:19:13', '2018-04-18 03:55:39', '99', '0', '96.90.248.210', '/mnt/crawl_cache/3', NULL, NULL, NULL, '0', NULL, '8212', '0'
+'6645918', '3', '194355', 'B06XRFGZ5P', 'https://www.amazon.com/dp/B06XRFGZ5P', '5eb22cb9c0bdf837436d8d8655880224', '2018-01-26 06:51:07', '2018-04-18 04:05:08', '1', '0', '96.90.248.210', '/mnt/crawl_cache/3', NULL, NULL, NULL, '4', NULL, '6155', '6'
+'6645159', '3', '193496', 'B074QGK828', 'https://www.amazon.com/dp/B074QGK828', 'de67c9c870dff4d047feca5bc87ebb1', '2018-01-26 01:20:56', '2018-04-17 23:34:07', '1', '0', '34.211.110.176', '/mnt/crawl_cache/3', NULL, NULL, NULL, '2', NULL, '6740', '6'
+
+
+
+如果BI将要写的数据与Fangfei之前贴过的数据无论是价格还是打折日期都完全一样的话，BI是不是就可以取消本次写数据的操作了？ 

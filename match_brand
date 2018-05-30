@@ -1,0 +1,21 @@
+curl -XGET '192.168.1.106:9200/todayspicks/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 0,
+    "query": {
+       "match" : {"vendors": "amazon"}
+    }
+}
+'
+
+curl -XPOST 'localhost:9200/search/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": {
+        "bool" : {
+            "must" : {
+            "terms" : {
+                "promo" : [ "promo_v" ]
+            }
+            }
+        }
+    }
+}'

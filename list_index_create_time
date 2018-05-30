@@ -1,0 +1,2 @@
+curl -i http://172.18.0.2:9200/_cat/indices?h=h,s,i,id,p,r,dc,dd,ss,creation.date.string
+curl -i http://192.168.1.106:9200/_cat/indices?h=h,s,i,id,p,r,dc,dd,ss,creation.date.string

@@ -1,0 +1,19 @@
+curl -XGET 'localhost:9200/fuzzy_a/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "query": {
+        "multi_match" : {
+            "fields" : ["words"],
+            "query" : "amazno"
+        }
+    }
+}
+'
+
+
+curl -XGET 'localhost:9200/fuzzyjinbag/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "query": {
+       "match" : {"words":{"query": "nike", "fuzziness": "AUTO"}  }
+    }
+}
+'

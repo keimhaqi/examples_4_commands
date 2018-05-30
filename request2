@@ -1,0 +1,6 @@
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "num": 10,
+  "fields":[{"name": "brandName", "values":["Mpow"]}, {"name": "sources", "values":["bestsellers"]}, {"name": "sources", "values":["bestsellers"]}]
+}
+' http://96.90.248.211:9124/api/v3/todayPicks

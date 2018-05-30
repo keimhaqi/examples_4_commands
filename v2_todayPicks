@@ -1,0 +1,15 @@
+1. 根据传入的参数请求UR，获取推荐信息，把推荐信息保存到ur;
+2. 根据传入的参数和ur查询ElasticSearch;
+    2.1 准备ElasticSearch的query语句queryBuilder;
+    2.2 在queryBuilder设置各项筛选参数:promo、link、availability、blacklist、channel、languange;
+    2.3 向ElasticSearch提交请求，设置Filter，使本次请求从ur给出的productId中进行匹配;
+    2.4 根据匹配结果把匹配的productId保存到动态数组itemlist;
+    2.5 查看itemlist中的元素个数itemlist.size是否满足请求参数中的商品请求个数？;
+        2.5.1 满足请求个数，直接退出查询ElasticSearch;
+        2.5.2 不满足请求个数，继续查询ElasticSearch;
+            2.5.2.1 把所有ur给出的productId和当前已经匹配到的productId作为blacklist，把blacklist添加到queryBuilder;
+            2.5.2.2 再次查询ElasticSearch，不再设置Filter，从而在ElasticSearch的全局范围内进行匹配，不受ur给出的推荐信息的约束;
+            2.5.2.3 把匹配的结果添加到动态数组itemlist中;
+    2.6 退出查询ElasticSearch;
+3. 对查询结果进行sort，根据score的大小降序排序;
+4. 向接口调用者返回排序结果;

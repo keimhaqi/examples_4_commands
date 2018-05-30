@@ -1,0 +1,16 @@
+curl -XPUT 'localhost:9200/hockey/player/_bulk?refresh&pretty' -H 'Content-Type: application/json' -d'
+{"index":{"_id":1}, "doc_as_upsert": True}
+{"first":"johnny","last":"gaudreau","goals":[9,27,1],"assists":[17,46,0],"gp":[26,82,1]}
+'
+
+
+
+curl -XPOST 'localhost:9200/hockey/player/1/_explain?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "script": {
+      "script": "Debug.explain(doc[\u0027goals\u0027])"
+    }
+  }
+}
+'

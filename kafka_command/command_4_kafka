@@ -1,0 +1,59 @@
+启动zookeeper server
+bin/zookeeper-server-start.sh config/zookeeper.properties -daemon
+
+启动kafka server
+bin/kafka-server-start.sh -daemon config/server.properties
+
+创建topic
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+
+列出所有topic
+bin/kafka-topics.sh --list --zookeeper localhost:2181
+
+启动kafka producer
+bin/kafka-console-producer.sh --broker-list 192.168.1.103:9092 --topic bi.merge
+
+启动kafka consumer
+bin/kafka-console-consumer.sh --bootstrap-server 192.168.1.103:9092 --topic bi.merge
+
+bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --topic linkshare_search --zookeeper 192.168.1.102:2181 --group linkshare_update
+bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --topic linkshare_update --zookeeper localhost:2181 --group linkshare_search
+bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --topic linkshare_search --zookeeper localhost:2181 --group linkshare_search
+
+
+//使用最新的脚本获取所有topic的offset信息
+./bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --new-consumer --group pro --describe
+
+bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --topic linkshare_search --zookeeper localhost:2181 --group pro
+
+
+
+
+
+
+
+
+Hi，关于lastCheckTime，之前前端在显示首页瀑布流时是通过直接查询数据库得到商品信息的，现在的话是直接从搜索系统拿数据，而搜索系统中的商品来源是BI模块，BI模块的商品来源是UA提供的合并结果，所以我认为
+
+
+
+
+TOPIC                          PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG        CONSUMER-ID                                       HOST                           CLIENT-ID
+linkshare_update               0          28              28              0          -                                                 -                              -
+linkshare_update               2          28              28              0          -                                                 -                              -
+link_list                      1          67              67              0          -                                                 -                              -
+linkshare_search               0          1057            3518            2461       -                                                 -                              -
+prod.backend                   0          3533            3533            0          -                                                 -                              -
+renovate_product               2          3               3               0          -                                                 -                              -
+bi.ur                          0          138             138             0          -                                                 -                              -
+link_list                      2          69              69              0          -                                                 -                              -
+renovate_product               1          2               2               0          -                                                 -                              -
+linkshare_update               1          29              29              0          -                                                 -                              -
+linkshare_search               1          1057            3518            2461       -                                                 -                              -
+renovate_product               0          1               1               0          -                                                 -                              -
+linkshare_search               2          1063            3518            2455       -                                                 -                              -
+bi.ur                          2          138             138             0          -                                                 -                              -
+prod.backend                   2          3533            3533            0          -                                                 -                              -
+bi.ur                          1          138             138             0          -                                                 -                              -
+link_list                      0          66              66              0          -                                                 -                              -
+prod.backend                   1          3534            3534            0          -                                                 -                              -

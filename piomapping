@@ -1,0 +1,1989 @@
+2017-06-30 09:53:54,813 INFO  io.prediction.tools.console.Console$ [main] - Creating Event Server at 0.0.0.0:7070
+2017-06-30 09:54:06,634 ERROR io.prediction.data.storage.hbase.StorageClient [main] - HBase master is not running (ZooKeeper ensemble: localhost). Please make sure that HBase is running properly, and that the configuration is pointing at the correct ZooKeeper ensemble.
+2017-06-30 09:54:06,637 ERROR io.prediction.data.storage.Storage$ [main] - Error initializing storage client for source HBASE
+org.apache.hadoop.hbase.MasterNotRunningException: java.io.IOException: Can't get master address from ZooKeeper; znode data == null
+	at org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation$StubMaker.makeStub(HConnectionManager.java:1645)
+	at org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation$MasterServiceStubMaker.makeStub(HConnectionManager.java:1671)
+	at org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation.getKeepAliveMasterService(HConnectionManager.java:1878)
+	at org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation.isMasterRunning(HConnectionManager.java:894)
+	at org.apache.hadoop.hbase.client.HBaseAdmin.checkHBaseAvailable(HBaseAdmin.java:2366)
+	at io.prediction.data.storage.hbase.StorageClient.<init>(StorageClient.scala:50)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at io.prediction.data.storage.Storage$.getClient(Storage.scala:217)
+	at io.prediction.data.storage.Storage$.io$prediction$data$storage$Storage$$updateS2CM(Storage.scala:248)
+	at io.prediction.data.storage.Storage$$anonfun$sourcesToClientMeta$1.apply(Storage.scala:209)
+	at io.prediction.data.storage.Storage$$anonfun$sourcesToClientMeta$1.apply(Storage.scala:209)
+	at scala.collection.mutable.MapLike$class.getOrElseUpdate(MapLike.scala:189)
+	at scala.collection.mutable.AbstractMap.getOrElseUpdate(Map.scala:91)
+	at io.prediction.data.storage.Storage$.sourcesToClientMeta(Storage.scala:209)
+	at io.prediction.data.storage.Storage$.getDataObject(Storage.scala:278)
+	at io.prediction.data.storage.Storage$.getDataObjectFromRepo(Storage.scala:263)
+	at io.prediction.data.storage.Storage$.getLEvents(Storage.scala:385)
+	at io.prediction.data.api.EventServer$.createEventServer(EventServer.scala:614)
+	at io.prediction.tools.console.Console$.eventserver(Console.scala:890)
+	at io.prediction.tools.console.Console$$anonfun$main$1.apply(Console.scala:725)
+	at io.prediction.tools.console.Console$$anonfun$main$1.apply(Console.scala:693)
+	at scala.Option.map(Option.scala:145)
+	at io.prediction.tools.console.Console$.main(Console.scala:693)
+	at io.prediction.tools.console.Console.main(Console.scala)
+Caused by: java.io.IOException: Can't get master address from ZooKeeper; znode data == null
+	at org.apache.hadoop.hbase.zookeeper.MasterAddressTracker.getMasterAddress(MasterAddressTracker.java:108)
+	at org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation$StubMaker.makeStubNoRetries(HConnectionManager.java:1572)
+	at org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation$StubMaker.makeStub(HConnectionManager.java:1617)
+	... 26 more
+2017-06-30 09:54:45,957 INFO  io.prediction.tools.console.Console$ [main] - Inspecting PredictionIO...
+2017-06-30 09:54:45,961 INFO  io.prediction.tools.console.Console$ [main] - PredictionIO 0.9.7-aml is installed at /Users/g_jeanp/PredictionIO
+2017-06-30 09:54:45,962 INFO  io.prediction.tools.console.Console$ [main] - Inspecting Apache Spark...
+2017-06-30 09:54:45,974 INFO  io.prediction.tools.console.Console$ [main] - Apache Spark is installed at /Users/g_jeanp/PredictionIO/vendors/spark-1.6.2-bin-hadoop2.6
+2017-06-30 09:54:46,030 INFO  io.prediction.tools.console.Console$ [main] - Apache Spark 1.6.2 detected (meets minimum requirement of 1.3.0)
+2017-06-30 09:54:46,031 INFO  io.prediction.tools.console.Console$ [main] - Inspecting storage backend connections...
+2017-06-30 09:54:46,057 INFO  io.prediction.data.storage.Storage$ [main] - Verifying Meta Data Backend (Source: ELASTICSEARCH)...
+2017-06-30 09:54:57,615 INFO  io.prediction.data.storage.Storage$ [main] - Verifying Model Data Backend (Source: LOCALFS)...
+2017-06-30 09:54:57,619 INFO  io.prediction.data.storage.Storage$ [main] - Verifying Event Data Backend (Source: HBASE)...
+2017-06-30 09:55:08,521 INFO  io.prediction.data.storage.Storage$ [main] - Test writing to Event Store (App Id 0)...
+2017-06-30 09:55:18,870 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - The table pio_event:events_0 doesn't exist yet. Creating now...
+2017-06-30 09:55:20,108 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - Removing table pio_event:events_0...
+2017-06-30 09:55:22,887 INFO  io.prediction.tools.console.Console$ [main] - (sleeping 5 seconds for all messages to show up...)
+2017-06-30 09:55:27,890 INFO  io.prediction.tools.console.Console$ [main] - Your system is all ready to go.
+
+
+
+Traceback (most recent call last):
+  File "operation.py", line 109, in <module>
+    properties = prop1
+  File "build/bdist.macosx-10.12-intel/egg/predictionio/__init__.py", line 247, in create_event
+  File "build/bdist.macosx-10.12-intel/egg/predictionio/connection.py", line 111, in get_response
+  File "build/bdist.macosx-10.12-intel/egg/predictionio/__init__.py", line 118, in _acreate_resp
+predictionio.NotCreatedError: Exception happened: [Errno 61] Connection refused for request POST /events.json?accessKey=ZfmYll932Izfw1kuVuPNtCRBQwbC9dTWqaWgwzPSF4Iwsu4hFgdm5OCZHhABFOeY {'entityId': '2110071116', 'entityType': 'item', 'properties': {'promo': ['promo_v_1199'], 'category': ['Man', 'Shose']}, 'event': '$set', 'eventTime': '2017-06-30T02:04:54.132+0000'} /events.json?accessKey=ZfmYll932Izfw1kuVuPNtCRBQwbC9dTWqaWgwzPSF4Iwsu4hFgdm5OCZHhABFOeY?entityId=2110071116&entityType=item&properties=%7B%27promo%27%3A+%5B%27promo_v_1199%27%5D%2C+%27category%27%3A+%5B%27Man%27%2C+%27Shose%27%5D%7D&event=%24set&eventTime=2017-06-30T02%3A04%3A54.132%2B0000
+
+starting master, logging to /Users/g_jeanp/PredictionIO/vendors/hbase-1.2.2/bin/../logs/hbase-g_jeanp-master-G-JeanPdeMacBook-Pro.local.out
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=128m; support was removed in 8.0
+
+Starting Elasticsearch...
+Starting HBase...
+master running as process 6369. Stop it first.
+Waiting 10 seconds for HBase to fully initialize...
+Starting PredictionIO Event Server...
+
+2017-06-30 10:21:46,051 INFO  io.prediction.tools.console.Console$ [main] - Inspecting PredictionIO...
+2017-06-30 10:21:46,055 INFO  io.prediction.tools.console.Console$ [main] - PredictionIO 0.9.7-aml is installed at /Users/g_jeanp/PredictionIO
+2017-06-30 10:21:46,055 INFO  io.prediction.tools.console.Console$ [main] - Inspecting Apache Spark...
+2017-06-30 10:21:46,067 INFO  io.prediction.tools.console.Console$ [main] - Apache Spark is installed at /Users/g_jeanp/PredictionIO/vendors/spark-1.6.2-bin-hadoop2.6
+2017-06-30 10:21:46,103 INFO  io.prediction.tools.console.Console$ [main] - Apache Spark 1.6.2 detected (meets minimum requirement of 1.3.0)
+2017-06-30 10:21:46,104 INFO  io.prediction.tools.console.Console$ [main] - Inspecting storage backend connections...
+2017-06-30 10:21:46,124 INFO  io.prediction.data.storage.Storage$ [main] - Verifying Meta Data Backend (Source: ELASTICSEARCH)...
+2017-06-30 10:21:57,329 INFO  io.prediction.data.storage.Storage$ [main] - Verifying Model Data Backend (Source: LOCALFS)...
+2017-06-30 10:21:57,333 INFO  io.prediction.data.storage.Storage$ [main] - Verifying Event Data Backend (Source: HBASE)...
+2017-06-30 10:22:08,252 INFO  io.prediction.data.storage.Storage$ [main] - Test writing to Event Store (App Id 0)...
+2017-06-30 10:22:18,556 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - The table pio_event:events_0 doesn't exist yet. Creating now...
+2017-06-30 10:22:19,796 INFO  io.prediction.data.storage.hbase.HBLEvents [main] - Removing table pio_event:events_0...
+2017-06-30 10:22:22,596 INFO  io.prediction.tools.console.Console$ [main] - (sleeping 5 seconds for all messages to show up...)
+2017-06-30 10:22:27,598 INFO  io.prediction.tools.console.Console$ [main] - Your system is all ready to go.
+
+
+create table user_search( searchwords varchar(512), searchID int(20) unsigned not null primary key auto_increment, userID int(20))engine=InnoDB default charset=utf8;
+
+create table user_search_euphemism( searchwords varchar(512), searchID int(20) unsigned not null primary key auto_increment, userID int(20))engine=InnoDB default charset=utf8;
++-------------+------------------+------+-----+---------+----------------+
+| Field       | Type             | Null | Key | Default | Extra          |
++-------------+------------------+------+-----+---------+----------------+
+| searchwords | varchar(512)     | YES  |     | NULL    |                |
+| searchID    | int(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| userID      | int(20)          | YES  |     | NULL    |                |
++-------------+------------------+------+-----+---------+----------------+
+
++-------------+------------------+------+-----+---------+----------------+
+| Field       | Type             | Null | Key | Default | Extra          |
++-------------+------------------+------+-----+---------+----------------+
+| searchwords | varchar(512)     | YES  |     | NULL    |                |
+| searchID    | int(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| userID      | int(20)          | YES  |     | NULL    |                |
++-------------+------------------+------+-----+---------+----------------+
+curl -XGET 'localhost:9200/autojinbag/_analyze?pretty' -d '
+{
+  "analyzer": "my_analyzer",
+  "text": "1"
+}
+'
+
+{
+	"eventId":"9qHE1hytRSO07Zc8DsRgEQAAAV0CNVMIm5NPq6uVA9U",
+	"event":"add_to_basket",
+	"entityType":"user",
+	"entityId":"200121",
+	"targetEntityType":"item",
+	"targetEntityId":"The Book Shop",
+	"properties":{},
+	"eventTime":"2017-07-02T07:30:35.400Z",
+	"creationTime":"2017-07-02T07:30:35.401Z"
+}
+
+{
+	"eventId":"8twI9f0wvPfaQ6MurhtzVAAAAV0CNVaxukPYX96x37I",
+	"event":"search",
+	"entityType":"user",
+	"entityId":"20018",
+	"targetEntityType":"item",
+	"targetEntityId":"Frames",
+	"properties":{},
+	"eventTime":"2017-07-02T07:30:36.337Z",
+	"creationTime":"2017-07-02T07:30:36.337Z"
+}
+
+
+{
+	'eventTime': '2017-07-02T07:30:36.160+0000', 
+	'entityType': 'user', 
+	'targetEntityType': 'item', 
+	'targetEntityId': '94', 'entityId': '200129', 'event': 'fav'
+}
+
+{
+	"flag":"true",
+	"autocomplete":["Baby", "Hurricane", "Bath"]
+}
+
+{
+	"flag":"false"
+}
+
+{
+	"flag":"true",
+	"productID":[11, 1, 533031, 40096, 12]
+}
+
+{
+	"flag":"false"
+}
+
+// Perfect answer
+curl -XPOST "http://localhost:9200/actidx/_search?pretty" -d'
+{
+   "size": 10,
+   "query": {
+      "multi_match": {
+         "query":"ba",
+         "fields":["category", "title", "brand"]
+      }
+   },
+   "highlight":{
+     "pre_tags":[""],
+     "post_tags":[""],
+     "fields":{
+       "category":{"fragment_size" : 180, "number_of_fragments" : 10},
+       "brand":{"fragment_size" : 180, "number_of_fragments" : 10},
+       "title":{"fragment_size" : 180, "number_of_fragments" : 10}
+     }
+   }
+}'
+
+//删除每个匹配单词两侧的标签
+curl -XPOST "http://localhost:9200/testsearch/_search?pretty" -d'
+{
+   
+   "query": {
+      "multi_match": {
+         "query":"a",
+         "fields":["category", "title", "brand", "description"]
+      }
+   }
+}'
+
+// 删除重复项
+curl -XPOST "http://localhost:9200/actidx/_search?pretty" -d'
+{
+   "query": {
+      "multi_match": {
+         "query":"n",
+         "fields":["category", "brand"]
+      }
+   },
+   "aggregations":{
+     "top_brand":{
+       "terms":{
+         "field":"brand"
+       },
+       "aggregations":{
+         "top_category":{
+            "terms":{"field":"category"},
+            "aggregations":{
+              "_score":{
+                "top_hits":{
+                  "sort":[{"_score":{"order":"desc"}}],
+                  "size": 1
+                }
+              }
+            }
+        }
+      }
+    }
+  },
+   "highlight":{
+     "pre_tags":[""],
+     "post_tags":[""],
+     "fields":{
+       "category":{"fragment_size" : 180, "number_of_fragments" : 10},
+       "brand":{"fragment_size" : 180, "number_of_fragments" : 10},
+       "title":{"fragment_size" : 180, "number_of_fragments" : 10}
+     }
+   }
+}'
+
+
+"aggregations":{
+     "top_brand":{
+       "terms":{
+         "field":"brand"
+       },
+       "aggregations":{
+         "top_category":{
+            "terms":{"field":"category"}
+        }
+      }
+    }
+  },
+//autocomplete,只获取category和brand这两个字段
+curl -XPOST "http://localhost:9200/actidx/_search?pretty" -d'
+{
+   "size": 0,
+   "query": {
+      "multi_match": {
+         "query":"ni",
+         "fields":["category"]
+      }
+   },
+   "aggs": {
+    "users": {
+      "terms": {
+        "field":   "category",      
+        "order": { "top_score": "desc" } 
+      },
+      "aggs": {
+        "top_score": { "max":      { "script":  "_score"           }}, 
+        "blogposts": { "top_hits": { 
+            "_source": "category",
+            "highlight":{
+            "pre_tags":[""],
+            "post_tags":[""],
+              "fields":{
+                "category":{"fragment_size" : 180, "number_of_fragments" : 10}
+              }
+            }
+          }
+        }  
+      }
+    }
+  }
+}'
+
+curl -XPOST 'localhost:9200/_analyze?pretty' -H 'Content-Type: application/json' -d'
+{
+  "analyzer": "standard",
+  "text": "The 2 QUICK Brown-Foxes jumped over the lazy dog\u0027s bone."
+}
+'
+
+
+
+curl -XPOST "http://192.168.1.110:9200/testauto/_search?pretty" -d'
+{
+   "size": 10,
+   "query": {
+      "multi_match": {
+         "query":"pol",
+         "fields":["words"]
+      }
+   },
+   "highlight":{
+        "pre_tags":[""],
+        "post_tags":[""],
+        "fields":{
+        "words":{"fragment_size" : 180, "number_of_fragments" : 10}
+    }
+  }
+}'
+
+"aggs": {
+    "users": {
+      "terms": {
+        "field":   "user.name.raw",      
+        "order": { "top_score": "desc" } 
+      },
+      "aggs": {
+        "top_score": { "max":      { "script":  "_score"           }}, 
+        "blogposts": { "top_hits": { "_source": "title", "size": 5 }}  
+      }
+    }
+  }
+
+
+{
+    "aggs" : {
+        "genres" : {
+            "terms" : { "field" : "genre" }
+        }
+    }
+}
+
+curl -XGET 'localhost:9200/searchidx2/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "size":10,
+  "query":{
+    "bool":{
+      "should":[
+        {"match":{"brand":{"query":["SK-II"]}}}
+      ]
+    }
+  }
+}
+'
+curl -XGET '192.168.1.110:9200/searchidxa/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "size":10,
+  "query":{
+    "bool":{
+      "must":[
+        {"match":{"brand":{"query":["nike"]}}},
+        {"match":{"full_brand":{"query":["nike"]}}}
+      ]
+    }
+  }
+}
+'
+
+curl -XGET 'localhost:9200/searchidx2/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "size":10,
+  "query":{
+    "bool":{
+      "must":[
+        {"match":{"vendor":{"query":["dyson"]}}},
+        {"match":{"brand":{"query":["dyson"]}}},
+        {"match":{"full_brand":{"query":["dyson"]}}}
+      ]
+    }
+  }
+}
+'
+
+// term query
+curl -XGET 'localhost:9200/myidxg/_search?pretty' -H 'Content-Type: application/json' -d'
+{"size":20,
+  "query":
+    {"bool":
+      {
+      "should":[
+        {"term":{"category":"Bags"}}
+	],
+      "minimum_should_match":1}
+    },
+	"highlight":{
+	"pre_tags":[""],
+	"post_tags":[""],
+     "fields":{
+       "category":{"fragment_size" : 180, "number_of_fragments" : 10},
+       "brand":{"fragment_size" : 180, "number_of_fragments" : 10},
+       "title":{"fragment_size" : 180, "number_of_fragments" : 10}
+     }
+   }
+  }
+'
+
+// terms query
+curl -XGET 'localhost:9200/testsearch/_search?pretty' -H 'Content-Type: application/json' -d'
+{"size":20,
+  "query":
+    {"bool":
+      {
+      "should":[
+        {"terms":{"description":["finish"]}}
+	    ],
+      "minimum_should_match":1}
+    },
+	"highlight":{
+	"pre_tags":[""],
+	"post_tags":[""],
+     "fields":{
+       "category":{"fragment_size" : 180, "number_of_fragments" : 10},
+       "brand":{"fragment_size" : 180, "number_of_fragments" : 10},
+       "title":{"fragment_size" : 180, "number_of_fragments" : 10}
+     }
+   }
+  }
+'
+// terms query without highlight
+curl -XGET 'localhost:9200/searchidx/_search?pretty' -H 'Content-Type: application/json' -d'
+{"size":20,
+  "query":
+    {"bool":
+      {
+      "should":[
+        {"terms":{"brand":["3.1 phillip lim"]}}
+	    ],
+      "must_not":{"ids":{"values":[],"boost":0}},
+      "minimum_should_match":1}
+    }
+  }
+'
+
+
+//terms query without must_not
+// terms query without highlight
+curl -XGET '192.168.1.110:9200/testsearch/_search?pretty' -H 'Content-Type: application/json' -d'
+{"size":20,
+  "query":
+    {"bool":
+      {
+      "should":[
+        {"terms":{"full_brand":["polo ralph lauren children"]}}
+	    ],
+      "minimum_should_match":1}
+    }
+  }
+'
+//容错大小写
+curl -XGET 'localhost:9200/lcidx/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "query": {
+    "multi_match" : {
+      "query":      "nike",
+      "fields":     [
+        "title", "brand", "category"
+      ]
+    }
+  }
+}
+'
+
+{
+"size":20,
+  "query":
+    {"bool":
+      {
+      "should":[
+        {"terms":{"category":["Adidas"]}},
+        {"terms":{"brand":["Adidas"]}},
+        {"terms":{"title":["Adidas"]}}
+	],
+,
+"must_not":{"ids":{"values":[87, 8],"boost":0}},      "minimum_should_match":1}
+    }
+  }
+
+535370,519172
+// match_all
+curl -XPOST "http://localhost:9200/myidx/_search?pretty" -d'
+{
+   "size": 10,
+   "query": {
+      "match": {
+         "_all": {
+            "query": "Bar Accessories",
+            "operator": "and"
+         }
+      }
+   },
+   "highlight":{
+     "fields":{
+       "_all":{
+         "require_field_match": false,
+         "fragment_size" : 1, "number_of_fragments" : 3
+       }
+     }
+   }
+}'
+
+{
+  "productId":6071438,
+  "categoryTypeId":0,
+  "categoryTypePriority":0,
+  "height":0,
+  "availability":0,
+  "morePictures":0,
+  "hasSmartPrice":0,
+  "missedTime":1513382340000,
+  "topProductPromoInfoVendor":{"productId":6071438,"vendorId":3,"taskId":3927704,"missedTime":1513382340000,"titleEn":"$201.48 ($385.00) Zojirushi NP-HCC10XH Induction Heating System Rice Cooker and Warmer, 1 L, Stainless Dark Gray","titleCh":"Amazon现有$201.48 ($385.00) Zojirushi NP-HCC10XH Induction Heating System Rice Cooker and Warmer, 1 L, Stainless Dark Gray","descEn":"Shipping is free with Prime or over $25.","descCh":"Prime会员或订单满$25美国境内免邮。","shareTitleEn":"Amazon - $201.48 ($385.00) Zojirushi NP-HCC10XH Induction Heating System Rice Cooker and Warmer, 1 L, Stainless Dark Gray","shareTitleCh":"Amazon现有$201.48 ($385.00) Zojirushi NP-HCC10XH Induction Heating System Rice Cooker and Warmer, 1 L, Stainless Dark Gray","shareDescEn":"Shipping is free with Prime or over $25.","shareDescCh":"会员或订单满$25美国境内免邮。","imgUrl":"1513160062_6071438card_img.jpg","cardWidth":290,"cardHeight":290,"startDate":1513123200000,"endDate":1513382399000,"confirmed":0,"confirmedTime":1513216591000}
+  }
+
+
+curl -XPOST "http://localhost:9200/myidx/_search?pretty" -d'
+{
+  "size":8,
+  "query":{
+    "bool":{
+      "should":[
+        {"terms":{"buy":[]}},
+        {"terms":{"plan":[]}},
+        {"terms":{"fav":[]}},
+        {"terms":{"view":[]}},
+        {"constant_score":{"filter":{"match_all":{}},"boost":0}}
+        ],
+        "must":[{"terms":{"link":["1512"],"boost":0}}],
+        "must_not":{"ids":{"values":[],"boost":0}},
+        "minimum_should_match":1}},
+        "sort":[
+          {"_score":{"order":"desc"}},
+          {"popRank":{"unmapped_type":"double","order":"desc"}}
+        ]
+    }
+'
+//get all documents in specific index
+
+curl -XGET 'localhost:9200/pio_meta/engine_instances/AV3oxrMcx6XzyzzBuIQj?pretty'
+curl -XGET 'localhost:9200/search/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 1,
+    "query": {
+       "match_all" : {}
+    }
+}
+'
+
+curl -XGET 'localhost:9200/searchpro/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 46,
+    "query": {
+       "match" : {"promo": "promo_v"}
+    }
+}
+'
+
+{
+  "took" : 4,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 0,
+    "max_score" : null,
+    "hits" : [ ]
+  }
+}
+
+create table RawData(searchId bigint(20) not null auto_increment,time timestamp,field varchar(10),searchword varchar(100),sha1 char(40),userId bigint(20),primary key (searchId)) engine=InnoDB default charset=utf8;
+
+{"size":20,"query":{"bool":{"should":[{"terms":{"add_to_basket":["iphone cord","iphone case","iphone 5"]}},{"terms":{"search":["iphone 4","iphone case","iphone 5","sss","ttt","xxx"]}},{"constant_score":{"filter":{"match_all":{}},"boost":0}}],"must":[],"must_not":[{"ids":{"values":["iphone 5","iphone case","iphone cord"],"boost":0}}],"minimum_should_match":1}},"sort":[{"_score":{"order":"desc"}},{"popRank":{"unmapped_type":"double","order":"desc"}}]}
+{"itemScores":[{"item":"iphone 6","score":0.3104374408721924},{"item":"iphone 6+","score":0.0439697727560997},{"item":"some other stuff","score":0.007804303430020809}]}
+
+{"size":20,"query":{"bool":{"should":[{"terms":{"add_to_basket":[]}},{"terms":{"search":[]}},{"constant_score":{"filter":{"match_all":{}},"boost":0}}],"must":[{"terms":{"search":["iphone 4"],"boost":0}}],"must_not":[{"ids":{"values":[],"boost":0}}],"minimum_should_match":1}},"sort":[{"_score":{"order":"desc"}},{"popRank":{"unmapped_type":"double","order":"desc"}}]}
+{"itemScores":[{"item":"iphone case","score":0.0},{"item":"iphone 5","score":0.0}]}
+{"itemScores":[]}
+{"size":20,"query":{"bool":{"should":[{"terms":{"add_to_basket":["iphone cord","iphone case","iphone 5"]}},{"terms":{"search":["iphone 4","iphone case","iphone 5","sss","ttt","xxx"]}},{"constant_score":{"filter":{"match_all":{}},"boost":0}}],"must":[{"terms":{"search":["iphone 4"],"boost":0}}],"must_not":[{"ids":{"values":["iphone 5","iphone case","iphone cord"],"boost":0}}],"minimum_should_match":1}},"sort":[{"_score":{"order":"desc"}},{"popRank":{"unmapped_type":"double","order":"desc"}}]}
+"xxx", "yyy", "zzz", "sss", "ttt"
+curl -H "Content-Type: application/json" -d '{ "user": "u1", "num": 20 }' http://localhost:8000/queries.json
+client.create_event(
+  {"itemScores":[{"item":"iphone 6","score":0.3104374408721924},{"item":"iphone 6+","score":0.0439697727560997},{"item":"some other stuff","score":0.007804303430020809}]}
+                    event=SEARCH_EVENT,
+                    entity_type="user",
+                    entity_id=user_id,
+                    target_entity_type="item",
+                    target_entity_id=chaos[random.randint(0, 4)]
+                    event_time = current_date
+                )
+
+
+curl -XGET 'localhost:9200/pio_meta/engine_instances/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size":10,
+    "query": {
+       "match" : {
+         "appName":"myrecg"
+       }
+    }
+}
+'
+
+
+curl -XGET 'localhost:9200/actidx/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+"query": {
+        "match_phrase_prefix" : {
+            "brand" : "Nik"
+        }
+    },
+	"highlight":{
+	"pre_tags":[""],
+	"post_tags":[""],
+     "fields":{
+       "category":{"fragment_size" : 180, "number_of_fragments" : 10},
+       "brand":{"fragment_size" : 180, "number_of_fragments" : 10}
+     }
+   }
+}'
+
+
+GET /my_index/blogpost/_search
+{
+  "size" : 0, 
+  "query": { 
+    "bool": {
+      "must": [
+        { "match": { "title":     "relationships" }},
+        { "match": { "user.name": "John"          }}
+      ]
+    }
+  },
+  "aggs": {
+    "users": {
+      "terms": {
+        "field":   "user.name.raw",      
+        "order": { "top_score": "desc" } 
+      },
+      "aggs": {
+        "top_score": { "max":      { "script":  "_score"           }}, 
+        "blogposts": { "top_hits": { "_source": "title", "size": 5 }}  
+      }
+    }
+  }
+}
+
+// get document with a specific document_id in specific index
+curl -XGET 'localhost:9200/pio_meta/engine_instances/testaa?pretty'
+pio_modelAV2tZOjIxDFS2ZfnmLju
+pio_modelAV2tZOjIxDFS2ZfnmLju
+//delete 
+curl -XGET 'localhost:9200/search/link/525?pretty'
+curl -XGET 'localhost:9200/search/items/5425668?pretty'
+curl -XDELETE '192.168.1.110:9200/testauto/items/6?pretty'
+curl -XDELETE '192.168.1.110:9200/testauto/items/40?pretty'
+curl -XDELETE '192.168.1.110:9200/testauto/items/1237?pretty'
+curl -XDELETE '192.168.1.110:9200/testauto/items/3184?pretty'
+curl -XDELETE '192.168.1.110:9200/testauto/items/13867?pretty'
+
+
+5663040,231959,232974,2588282
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+62
+Le Creuset Signature 6.75-qt Quart Oval Enamel Cas...
+4
+232824,10488,450666,231773,387973,231805,343356,231775,231816,4739346,387726,4795908,4795902,4748768,4748610,4750378
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+64
+Le Creuset Signature Enameled Cast-Iron 3.5-qt Ova...
+4
+450666
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+66
+Staub Cast Iron 1-qt Oval Cocotte
+6
+5663040
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+68
+Le Creuset Signature Round Dutch Oven 4.5 qt
+4
+231773
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+70
+Le Creuset Signature 2-qt Oval Enamel Cast Iron Fr...
+4
+387973
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+72
+Le Creuset Signature Enameled Cast Iron 5-qt Oval ...
+4
+231805
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+74
+Le Creuset Signature Enameled Cast Iron 7.25-qt Ro...
+4
+343356
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+76
+Le Creuset Signature Enameled Cast Iron 13.25-qt R...
+4
+231775
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+78
+Le Creuset Signature Enameled Cast Iron 9.5-qt Ova...
+4
+231816
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+80
+Le Creuset Signature Enameled Cast-Iron Oval Frenc...
+4
+4739346
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+82
+Le Creuset Gold Knob Collection 2.75-qt Shallow Ro...
+4
+387726
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+84
+Le Creuset Gold Knob Collection 7.5-qt Round Frenc...
+4
+4795908
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+86
+Le Creuset Gold Knob Collection 5.5-qt Round Frenc...
+4
+4795902
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+88
+Le Creuset Signature Enameled Cast-Iron 2-qt Round...
+4
+4748768
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+90
+Le Creuset Signature Enameled Cast-Iron Oval Frenc...
+4
+4748610,
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+92
+Le Creuset of America Enameled Cast Iron Signature...
+4
+4748610,4750378,
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+93
+Apple iPad with Wi-Fi 9.7 32GB
+11
+4748610,4750378,6228130,
+
+编辑 编辑
+ 复制 复制
+ 删除 删除
+95
+Bose QuietComfort 25 Acoustic Noise Cancelling Hea...
+13
+4748610,4750378,6228130,4709122
+
+
+
+
+curl -XGET 'localhost:9200/search/items/150412?pretty'
+curl -XGET 'localhost:9200/search/items/3?pretty'
+curl -XGET 'localhost:9200/search/items/4?pretty'
+curl -XGET 'localhost:9200/search/items/7?pretty'
+curl -XGET 'localhost:9200/search/items/9031068?pretty'
+
+
+curl -XGET '96.90.248.211:9200/logs-webapp/webapp/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "multi_match" : {
+      "query":      "Searching Spends",
+      "type":       "cross_fields",
+      "fields":     [
+        "messages"
+      ]
+    }
+  }
+}
+'
+
+curl -XGET 'localhost:9200/searchprox/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "query": {
+        "has_parent": {
+            "type": "items",
+            "query": {
+                "match":{
+                    "brand":"nike"
+                }
+            }
+        }
+    }
+}'
+
+'brands', 'CREATE TABLE `brands` (\n  `brand_id` int(11) NOT NULL AUTO_INCREMENT,\n  `parent_id` bigint(20) NOT NULL DEFAULT \'-1\',\n  `brand_name` varchar(255) DEFAULT NULL,\n  `alias_c1` varchar(255) DEFAULT NULL,\n  `alias_c2` varchar(255) DEFAULT NULL,\n  `alias_e1` varchar(255) DEFAULT NULL,\n  `alias_e2` varchar(255) DEFAULT NULL,\n  `alias_e3` varchar(255) DEFAULT NULL,\n  `logo_filename` varchar(255) DEFAULT NULL,\n  `readable` tinyint(1) NOT NULL DEFAULT \'1\',\n  PRIMARY KEY (`brand_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=19518 DEFAULT CHARSET=utf8'
+
+brands, CREATE TABLE `brands` (
+  `brand_id` int(11) NOT NULL AUTO_INCREMENT,
+  `parent_id` bigint(20) NOT NULL DEFAULT '-1',
+  `brand_name` varchar(255) DEFAULT NULL,
+  `alias_c1` varchar(255) DEFAULT NULL,
+  `alias_c2` varchar(255) DEFAULT NULL,
+  `alias_e1` varchar(255) DEFAULT NULL,
+  `alias_e2` varchar(255) DEFAULT NULL,
+  `alias_e3` varchar(255) DEFAULT NULL,
+  `logo_filename` varchar(255) DEFAULT NULL,
+  `readable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`brand_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19518 DEFAULT CHARSET=utf8;
+
+
+vendor, CREATE TABLE `vendor` (
+  `vendor_id` int(11) NOT NULL AUTO_INCREMENT,
+  `vendor_name_en` varchar(100) DEFAULT NULL,
+  `vendor_name_ch` varchar(100) DEFAULT NULL,
+  `vendor_desc_en` varchar(256) DEFAULT NULL,
+  `vendor_desc_ch` varchar(256) DEFAULT NULL,
+  `vendor_logo_url` varchar(100) DEFAULT NULL,
+  `readable` tinyint(1) NOT NULL DEFAULT '1',
+  `vendor_logo_width` int(11) unsigned DEFAULT NULL,
+  `vendor_logo_height` int(11) unsigned DEFAULT NULL,
+  `vendor_domain` varchar(100) NOT NULL,
+  `currency` char(3) NOT NULL DEFAULT 'USD',
+  `default_language` varchar(50) DEFAULT 'en',
+  PRIMARY KEY (`vendor_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=38811 DEFAULT CHARSET=utf8;
+
+/Users/g_jeanp/.pio_store/models
+AV2tZOjIxDFS2ZfnmLju
+pio deploy --engine-instance-id AV3mFAnq_ViqOouPbSnC
+pio deploy --engine-instance-id AV2tZOjIxDFS2ZfnmLju
+
+V3_create_table_2017_09_30.sql
+
+curl -XGET 'localhost:9200/searchcheck/items/20082008?pretty'
+curl -XDELETE 'localhost:9200/search/items/9312184?pretty'
+curl -XGET 'localhost:9200/search/items/4737822?pretty'
+curl -XGET 'localhost:9200/search/items/4737824?pretty'
+curl -XGET 'localhost:9200/search/items/239662?pretty'
+curl -XGET 'localhost:9200/search/items/4737838?pretty'
+curl -XGET 'localhost:9200/search/items/239865?pretty'
+curl -XGET 'localhost:9200/search/items/239127?pretty'
+curl -XGET 'localhost:9200/search/items/232824?pretty'
+
+
+
+curl -XGET 'localhost:9200/search/items/9312184?pretty'
+
+
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+    "fields": 
+    [
+        {"name":"promo", "values": ["promo_v"],"bias": -1},
+        {"name":"availability", "values":["in_stock", "out_of_stock"], "bias": -1},
+        {"name":"brand", "values":["nike"], "bias": -1}
+    ],
+    "user": 200117, 
+    "num": 1, 
+    "userBias":0,
+    "itemBias":0,
+    "searchword": "nike"
+}' http://192.168.1.105:9123/api/v3/todayPicks
+
+
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+    "userBias":0,
+    "itemBias":0
+}' http://localhost:9123/api/v3/todayPicks
+
+curl -XGET 'localhost:9200/searchprox/items/10088?pretty' // 没有类别
+
+
+{userBias=-1, num=4000, blacklistItems=[4776152, 4737846, 4776162, 4776172, 4776202, 4776206, 4738126, 4738282, 4776208, 4776174], user=299}
+  curl -i -H "Accept:application/json" -X GET -d '
+  {
+    "user":23,
+    "total":20,
+    "searchword":"amazon",
+    "blacklist":[],
+    "language": ["en"],
+    "startdate" : "2017-01-16 00:00:00",
+    "enddate" : "2017-01-17 00:00:00",
+    "brand":["nike", "puma"],
+    "category":["shoes", "skirt"],
+    "vendor":["amazon", "macys"],
+    "pricemin": 23.32,
+    "pricemax": 32.54,
+    "discountmin": 20.44,
+    "discountmax": 50.36,
+    "visible":["0", "1"],
+    "displaytype":["2", "3"],
+    "missedtime": "2017-01-17 00:00:00",
+    "datasource":["17", "0"]
+  }
+  ' http://192.168.1.111:9123/api/v2/linklist
+
+  curl -i -H "Accept:application/json" -X GET -d '
+  {
+    "user":23,
+    "total":20,
+    "searchword":"amazon",
+    "blacklist":[],
+    "language": ["en"]
+  }
+  ' http://localhost:9223/api/v2/linklist
+
+  
+curl -k -H 'Content-Type: application/json' -d '
+  {"fields":[
+  {"name":"promo", "values": ["promo"],"bias": -1},
+  {"name":"availability", "values":["in_stock", "out_of_stock"], "bias": -1}    ],    
+       "user": 200117,     "num": 10,     "userBias":0,    "itemBias":0,    "searchword": "mafengwo"}' 
+       http://localhost:9123/api/v3/todayPicks
+curl -k -H 'Content-Type: application/json' -d '
+{
+    "fields": 
+    [
+        {"name":"promo", "values": ["promo_v"],"bias": -1}
+    ],
+    "user": "23",
+    "num": 50
+}' http://192.168.1.191:9123/api/v2/todayPicks
+
+
+{"productId":7461822,"brandId":8267,"categoryTypeId":0,"categoryTypePriority":0,"height":340,"availability":0,"productDescription":"[\"Lindt chocolate embodies the passion and expert craftsmanship of its Lindt Master Swiss Chocolatiers\",\"Kosher Certified, Made in the USA ; Perfect for gifting, the candy dish and as an individual indulgence\",\"Each box contains 120 LINDOR Milk Chocolate Truffles\",\"When you break its chocolate shell, LINDOR starts to melt and so will you\",\"Lindt delivers a unique chocolate experience offering a distinctly smooth and rich, gourmet taste\"]","productDetail":"[]","productImageLink":"https://images-na.ssl-images-amazon.com/images/I/91bT6mt1UyL._SX355_.jpg","productPrice":"$28.00","productSale":"$28.00","productTitle":"Lindt LINDOR Milk Chocolate Truffles, Kosher, 120 Count Box","sourceId":3,"sourceProductId":"B002RO70UK","width":355,"morePictures":0,"hasSmartPrice":0,"lastCheckedTime":1513221661000,"deleted":0}
+
+{
+  user=0, 
+  num=6, 
+  userBias=0, 
+  itemBias=-1, 
+  searchword='null', 
+  fields=[
+    {name=promo, values=[promo_v], bias=-1}, 
+    {name=availability, values=[in_stock, out_of_stock], bias=-1}
+  ], 
+  blacklistItems=TodaysPicksBlacklistParam{
+    product=[477, 496, 504, 491, 484, 489], link=[null]}}
+
+[2017-11-19 23:59:59,998]
+
+2017-11-16 05:41:57,481
+2017-11-16 05:41:57,733
+
+2017-11-16 05:41:57,491
+2017-11-16 05:41:57,614
+
+2017-11-16 05:41:57,614
+2017-11-16 05:41:57,727
+
+  Hansgrohe 04508800
+commit 666a0b14546af25277eb1ad8216553f31733a324
+
+  curl -i -H "Accept:application/json" -X GET -d '
+  {
+    "size": 100,
+    "language": "en",
+    "brands":["nike"],
+    "availability": ["in_stock"]
+  }
+  ' http://localhost:9123/api/v2/myStore
+  curl -XGET 'localhost:9200/search/link/713?pretty'
+  
+curl -XGET 'localhost:9200/search/_analyze?analyzer=my_analyzer&pretty' -H 'Content-Type: application/json' -d'
+Macys
+'
+
+  {"productList":[]}
+{"productList":[]}
+{"productList":[210322,59347,40966,1319,9192,8360,8459,66842,58685,210492]}
+{"productList":[80512,80066,197984,147590,148008,147592,197960,9134,5393,80496,82674,87636,147578,79416,148792,79420,80766]}
+{"productList":[533450,536618,555788,31621,512322,632238,631406,510922,515112,785690,455988,477684,794968,513712,537072,31900,446266,750934,532438,501464]}
+
+    curl -i -H "Content-type:application/json" -X POST -d '
+  {
+    "user":0,
+    "searchword":"3.1 Phillip Lim",
+  }
+  ' http://localhost:9123/api/v1/feedback
+
+      curl -i -H "Content-type:application/json" -X POST -d '
+    "TT"
+  ' http://localhost:9099/api/v1/fixdata
+
+curl -i -H "Content-type:application/json" -X POST -d '  {
+    "user":0,
+    "language":"en",
+    "brands":["puma", "burberry", "gucci", "nike", "under armour", "adidas"],
+    "vendors":["amazon", "neiman marcus", "nordstrom" "macy", "saks fifth avenue", "bloomingdales", "neiman marcus last call", "saks off 5th"]          
+  }                                                 
+  ' http://96.90.248.213:9123/api/v2/myStore
+
+curl -i -H "Content-type:application/json" -X POST -d '  {
+    "searchword":"niek",
+    "language":"en"         
+  }                                                 
+  ' http://localhost:9123/api/v3/autocomplete
+
+
+curl -i -H "Content-type:application/json" -X POST -d '  {
+    "searchword":"nik",
+    "language":"en"         
+  }                                                 
+  ' http://localhost:9124/api/v2/autocomplete
+
+
+
+curl -i -H "Content-type:application/json" -X POST -d '  {
+    "user":299,
+    "language":"en",
+    "vendors":["Saks Fifth Avenue"],
+    "blacklist":[],
+    "availability":["in_stock"]
+  }                        
+  ' http://localhost:9124/api/v2/myStore
+
+  SELECT product_id, brand_id, source_id FROM `product` WHERE `product_id`=40990
+
+"blacklist":[39714,40178,40372,65230,41144,39987,40267,40357,40311,62654,40990,61364]
+
+
+curl -XGET 'localhost:9200/auto_a/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+   "size": 1,
+   "query": {
+      "multi_match": {
+         "query":"amazno",
+         "fields":["words"]
+      }
+   },
+   "highlight":{
+	"pre_tags":[""],
+	"post_tags":[""],
+     "fields":{
+       "words":{"fragment_size" : 180, "number_of_fragments" : 10}
+     }
+   }
+}
+'
+
+
+
+{
+   "size": 10,
+   "query": {
+      "multi_match": {
+         "query":"amaz",
+         "fields":["words"]
+      }
+   },
+   "highlight":{
+	"pre_tags":[""],
+	"post_tags":[""],
+     "fields":{
+       "words":{"fragment_size" : 180, "number_of_fragments" : 10}
+     }
+   }
+}
+
+
+
+
+
+
+
+
+
+
+    curl -i -H "Content-type:application/json" -X GET -d '
+  {
+  }
+  ' http://96.90.248.213:9099/api/v1/test
+
+curl -i -H "Content-type:application/json" -X GET -d '
+{
+  "userId":10001,
+  "searchword":"fishes",
+  "language": "en",
+  "channel": 1
+}
+' http://localhost:8088/api/v1/analyze
+
+2017-07-27 14:22:52.627
+2017-07-27 14:31:12.404
+2017-07-27 14:33:46.022 
+2017-07-27 14:46:31.063
+{"autoComplete":["3.1 Phillip Lim","Medium Cashmere Elephant","Days-of-the-Week Bib Set","RALPH LAUREN PET","Striped Cotton Burp Cloth Set","Sterling Silver Baby Comb","Duck-Print Cotton Bib","Cotton Hooded Towel & Mitt Set","Ralph Lauren Home","Burp Cloth Set"]}
+{"autoComplete":["Nitrile Gloves","Nightgowns & Sleepshirts","Nightgowns","Duck-Print Cotton Bib","3.1 Phillip Lim","Ralph Lauren Home","Burp Cloth Set","Medium Cashmere Elephant","Cotton Bib Set","Ralph Lauren"]}
+
+{"autoComplete":["Nitrile Gloves","Nightgowns & Sleepshirts","Nightgowns","3.1 Phillip Lim","Medium Cashmere Elephant","Days-of-the-Week Bib Set","RALPH LAUREN PET","Striped Cotton Burp Cloth Set","Sterling Silver Baby Comb","Duck-Print Cotton Bib"]}
+
+{"autoComplete":["Bao Bao Issey Miyake","Baby-Banz","Baseball Coach Tshirt Baseball Coach Tees","3.1 Phillip Lim","Medium Cashmere Elephant","Days-of-the-Week Bib Set","RALPH LAUREN PET","Striped Cotton Burp Cloth Set","Sterling Silver Baby Comb","Duck-Print Cotton Bib"]}
+      
+  curl -k -H 'Content-Type: application/json' -d '
+  {
+    "user": "20011",
+    "searchword":"Shipping",
+    "language": "en",
+    "total":10,
+    "blacklist": [111, 222, 333, 444]
+  }
+  ' http://localhost:9123/api/v2/itemlist
+
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+    "fields": 
+    [
+        {"name":"promo", "values": ["promo_v"],"bias": -1},
+        {"name":"availability", "values":["in_stock", "out_of_stock"], "bias": -1}
+    ],
+    "user": "23"
+}' http://localhost:9123/api/v2/todayPicks
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+    "fields": 
+    [
+        {"name":"promo", "values": ["promo_v"],"bias": -1},
+        {"name":"availability", "values":["in_stock", "out_of_stock"], "bias": -1}
+    ],
+    "user": "23",
+    "num": 50
+}' http://localhost:9123/api/v3/todayPicks
+
+  curl -l -H "Content-type:application/json" -X GET -d '
+ {"total":"10", "language": "en"}
+  ' http://localhost:9223/api/v2/buzzwords
+
+{"itemScores":[{"item":"117","score":0.0},{"item":"81","score":0.0},{"item":"52","score":0.0},{"item":"29","score":0.0}]}
+curl -k -H 'Content-Type: application/json' -d '{"fields": [{"name":"field", "values": ["vendor"],"bias": -1, "num":20}]}' http://localhost:8123/queries.json
+{"itemScores":[{"item":"751","score":2.6200063228607178},{"item":"13874","score":2.5609118938446045},{"item":"13333","score":0.9681894183158875},{"item":"13831","score":0.9022342562675476}]}
+  curl -H "Content-Type: application/json" -d '{ "user": 23, "num": 4, "userBias":-1 }' http://192.168.1.111:8001/queries.json
+curl -k -H 'Content-Type: application/json' -d '{"fields": [{"name":"brand", "values": ["42"],"bias": -1}]}' http://96.90.248.213:8000/queries.json
+
+AV3vQrzOEl1fmCl8E7zr
+pio deploy --engine-instance-id AV3vQrzOEl1fmCl8E7zr
+python handle_engine_instance.py --appName mv --engineId P8biobPum7ycLaY448vrAoCg13J2uqlK --engineVersion 60725b53474b929840ae864eda427ebfb463e696 --engineInstanceId AV3vQrzOEl1fmCl8E7zr --appEsIndex myidxg
+
+curl -H "Content-Type: application/json" -d '{ "num": 100, "fields": [{"name":"availability", "values": [0, 1],"bias": -1} }' http://localhost:8000/queries.json
+                                          {"num":10,"fields":[{"bias":-1,"name":"category","value":["bags"]}]}
+curl -H "Content-Type: application/json" -d '{ "discontinued": "false", "out_of_stock": "true", "num": 10, "userBias":-1 }' http://localhost:8000/queries.json
+
+
+curl -H "Content-Type: application/json" -d '{ "fields": [{"name":"discontinued", "values": ["true"],"bias": -1},], "num": 10, "userBias":-1 }' http://localhost:8000/queries.json
+
+curl -H "Content-Type: application/json" -d '{ "fields": [{"name":"out_of_stock", "values": ["true"],"bias": -1},], "num": 10, "userBias":-1 }' http://localhost:8000/queries.json
+
+curl -H "Content-Type: application/json" -d '{ "fields": [{"name":"out_of_stock", "values": ["false"],"bias": -1},], "num": 10, "userBias":-1 }' http://localhost:8000/queries.json
+
+{"itemScores":[{"item":"207172","score":0.0},{"item":"324840","score":0.0},{"item":"293780","score":0.0},{"item":"159804","score":0.0},{"item":"184180","score":0.0},{"item":"14120","score":0.0},{"item":"195442","score":0.0},{"item":"136554","score":0.0},{"item":"223218","score":0.0},{"item":"194134","score":0.0}]}
+
+
+{"itemScores":[{"item":"207172","score":0.0},{"item":"324840","score":0.0},{"item":"293780","score":0.0},{"item":"159804","score":0.0},{"item":"184180","score":0.0},{"item":"14120","score":0.0},{"item":"195442","score":0.0},{"item":"136554","score":0.0},{"item":"223218","score":0.0},{"item":"194134","score":0.0}]}
+
+{"size":10,"query":{"bool":{"should":[{"terms":{"buy":[]}},{"terms":{"plan":[]}},{"terms":{"fav":[]}},{"terms":{"view":[]}},{"constant_score":{"filter":{"match_all":{}},"boost":0}}],"must":[{"terms":{"discontinued":["false"],"boost":0}}],"must_not":[{"ids":{"values":[],"boost":0}}],"minimum_should_match":1}},"sort":[{"_score":{"order":"desc"}},{"popRank":{"unmapped_type":"double","order":"desc"}}]}
+
+{"size":10,"query":{"bool":{"should":[{"terms":{"buy":[]}},{"terms":{"plan":[]}},{"terms":{"fav":[]}},{"terms":{"view":[]}},{"constant_score":{"filter":{"match_all":{}},"boost":0}}],"must":[{"terms":{"out_of_stock":["false"],"boost":0}}],"must_not":[{"ids":{"values":[],"boost":0}}],"minimum_should_match":1}},"sort":[{"_score":{"order":"desc"}},{"popRank":{"unmapped_type":"double","order":"desc"}}]}
+
+{"size":10,"query":{"bool":{"should":[{"terms":{"buy":[]}},{"terms":{"plan":[]}},{"terms":{"fav":[]}},{"terms":{"view":[]}},{"constant_score":{"filter":{"match_all":{}},"boost":0}}],"must":[{"terms":{"discontinued":["true"],"boost":0}}],"must_not":[{"ids":{"values":[],"boost":0}}],"minimum_should_match":1}},"sort":[{"_score":{"order":"desc"}},{"popRank":{"unmapped_type":"double","order":"desc"}}]}
+
+{"size":10,"query":{"bool":{"should":[{"terms":{"buy":[]}},{"terms":{"plan":[]}},{"terms":{"fav":[]}},{"terms":{"view":[]}},{"constant_score":{"filter":{"match_all":{}},"boost":0}}],"must":[{"terms":{"out_of_stock":["true"],"boost":0}}],"must_not":[{"ids":{"values":[],"boost":0}}],"minimum_should_match":1}},"sort":[{"_score":{"order":"desc"}},{"popRank":{"unmapped_type":"double","order":"desc"}}]}
+
+
+{"itemScores":[{"item":"402898","score":0.0},{"item":"422500","score":0.0},{"item":"680994","score":0.0},{"item":"429412","score":0.0},{"item":"395074","score":0.0},{"item":"428806","score":0.0},{"item":"408404","score":0.0},{"item":"600396","score":0.0},{"item":"402862","score":0.0},{"item":"396488","score":0.0}]}
+  
+{"itemScores":[]}  
+  
+478  curl -H "Content-Type: application/json" -d '{ "user": "0", "num": 4, "userBias":-1 }' http://96.90.248.213:8000/queries.json
+
+
+  479  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":-1 }' http://192.168.1.110:8001/queries.json
+  480  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":-1 }' http://localhost:8001/queries.json
+  481  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":-1, "eventNames:["buy"] }' http://localhost:8000/queries.json
+  482  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":-1, "eventNames":["buy"] }' http://localhost:8000/queries.json
+  483  curl -H "Content-Type: application/json" -d '{ "user": "200112", "num": 4, "userBias":-1, "eventNames":["buy"] }' http://localhost:8000/queries.json
+  484  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":-1, "eventNames":["buy"] }' http://localhost:8000/queries.json
+  485  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":0, "eventNames":["buy"] }' http://localhost:8000/queries.json
+  486  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":-1, "eventNames":["buy"] }' http://localhost:8000/queries.json
+  487  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 100, "userBias":-1, "eventNames":["buy"] }' http://localhost:8000/queries.json
+  488  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":-1, "eventNames":["view"] }' http://localhost:8000/queries.json
+  489  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 100, "userBias":-1, "eventNames":["buy"] }' http://localhost:8000/queries.json
+  490  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 100, "userBias":-1, "eventNames":["buy"] }' http://localhost:8000/queries.json
+  491  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":-1, "eventNames":["buy"] }' http://localhost:8000/queries.json
+  492  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":-1, "eventNames":["buy"] }' http://localhost:8000/queries.json
+  493  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 5, "userBias":-1, "eventNames":["buy"] }' http://localhost:8000/queries.json
+
+
+curl -k -H 'Content-Type: application/json' -d '{"fields": [{"name":"field", "values": ["category"],"bias": 1}]}' http://96.90.248.213:8000/queries.json
+
+
+curl -k -H 'Content-Type: application/json' -d '{"bias": 1, "num":20}' http://localhost:8123/queries.json
+
+
+
+
+curl -H "Content-Type: application/json" -d '{"backfillField": [{"backfillType":"hot", "eventnames": ["search"]}] }' http://localhost:8123/queries.json
+
+
+curl -k -H 'Content-Type: application/json' -d '{"fields": [{"name":"promo", "values": ["promo_v_2739"],"bias": -1}]}' http://lcoalhost:8000/queries.json
+
+[ERROR] [Executor] Managed memory leak detected; size = 5476352 bytes, TID = 2200
+[ERROR] [Executor] Managed memory leak detected; size = 5744256 bytes, TID = 2206
+[ERROR] [Executor] Managed memory leak detected; size = 5360828 bytes, TID = 2204
+[ERROR] [Executor] Managed memory leak detected; size = 5374986 bytes, TID = 2202
+
+//创建支持nGram的索引，包含了mapping和settings
+curl -XPUT 'localhost:9200/acidxxx?pretty' -H 'Content-Type: application/json' -d'
+{
+    "settings" : {
+      "index" : {
+        "creation_date" : "1500285265015",
+        "analysis" : {
+          "filter" : {
+            "nGram_filter" : {
+              "token_chars" : [ "letter", "digit", "punctuation", "symbol" ],
+              "min_gram" : "1",
+              "type" : "nGram",
+              "max_gram" : "50"
+            },
+            "code" : {
+              "type" : "pattern_capture",
+              "preserve_original" : "true",
+              "patterns" : [ "(\\p{Ll}+|\\p{Lu}\\p{Ll}+|\\p{Lu}+)", "(\\d+)" ]
+            }
+          },
+          "analyzer" : {
+            "nGram_analyzer" : {
+              "filter" : [ "lowercase", "asciifolding", "stop", "code", "nGram_filter" ],
+              "type" : "custom",
+              "tokenizer" : "whitespace"
+            },
+            "whitespace_analyzer" : {
+              "filter" : [ "lowercase", "asciifolding", "stop", "code" ],
+              "type" : "custom",
+              "tokenizer" : "whitespace"
+            }
+          }
+        },
+        "number_of_shards" : "5",
+        "uuid" : "ojQiDNd4ThGZAyGvjLOFZg",
+        "version" : {
+          "created" : "1070599"
+        },
+        "number_of_replicas" : "1"
+      }
+    },
+    "mappings" : {
+      "items" : {
+        "properties" : {
+          "brand" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "index_analyzer" : "nGram_analyzer",
+            "search_analyzer" : "whitespace_analyzer",
+            "include_in_all" : true
+          },
+          "buy" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "category" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "index_analyzer" : "nGram_analyzer",
+            "search_analyzer" : "whitespace_analyzer",
+            "include_in_all" : true
+          },
+          "description" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "fav" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "id" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "link" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "plan" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "popRank" : {
+            "type" : "float"
+          },
+          "promo" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "title" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "index_analyzer" : "nGram_analyzer",
+            "search_analyzer" : "whitespace_analyzer",
+            "include_in_all" : true
+          },
+          "vendor" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "view" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+}
+'
+
+
+//mapping
+"mappings" : {
+      "items" : {
+        "properties" : {
+          "brand" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "index_analyzer" : "nGram_analyzer",
+            "search_analyzer" : "whitespace_analyzer",
+            "include_in_all" : true
+          },
+          "buy" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "category" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "index_analyzer" : "nGram_analyzer",
+            "search_analyzer" : "whitespace_analyzer",
+            "include_in_all" : true
+          },
+          "description" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "fav" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "id" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "link" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "plan" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "popRank" : {
+            "type" : "float"
+          },
+          "promo" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "title" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "index_analyzer" : "nGram_analyzer",
+            "search_analyzer" : "whitespace_analyzer",
+            "include_in_all" : true
+          },
+          "vendor" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "view" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+
+    curl -XGET 'localhost:9200/myidxg/_settings?pretty'
+    curl -XGET 'localhost:9200/search/_mappings?pretty'
+  
+{"itemScores":[{"item":"47","score":0.4196854829788208},{"item":"104","score":0.3928864300251007},{"item":"12","score":0.39124590158462524},{"item":"118","score":0.3847563564777374},{"item":"70","score":0.3577791452407837},{"item":"20","score":0.34063464403152466},{"item":"19","score":0.330918550491333},{"item":"109","score":0.32998090982437134},{"item":"85","score":0.3294200897216797},{"item":"23","score":0.3294064402580261},{"item":"48","score":0.3246908485889435},{"item":"72","score":0.3183955252170563},{"item":"98","score":0.31411921977996826},{"item":"55","score":0.3138684630393982},{"item":"99","score":0.30681538581848145},{"item":"61","score":0.3060036301612854},{"item":"97","score":0.30459365248680115},{"item":"71","score":0.30213630199432373},{"item":"112","score":0.2996429204940796},{"item":"29","score":0.293576717376709}]}
+
+
+{"itemScores":[{"item":"52","score":0.0},{"item":"73","score":0.0},{"item":"35","score":0.0},{"item":"13","score":0.0},{"item":"56","score":0.0},{"item":"28","score":0.0},{"item":"81","score":0.0},{"item":"106","score":0.0},{"item":"57","score":0.0},{"item":"117","score":0.0},{"item":"94","score":0.0},{"item":"63","score":0.0},{"item":"109","score":0.0},{"item":"58","score":0.0},{"item":"77","score":0.0},{"item":"31","score":0.0},{"item":"95","score":0.0},{"item":"26","score":0.0},{"item":"7","score":0.0},{"item":"76","score":0.0}]}
+
+
+{"itemScores":[{"item":"47","score":0.4196854829788208},{"item":"104","score":0.3928864300251007},{"item":"12","score":0.39124590158462524},{"item":"118","score":0.3847563564777374},{"item":"70","score":0.3577791154384613},{"item":"20","score":0.34063467383384705},{"item":"19","score":0.330918550491333},{"item":"109","score":0.32998090982437134},{"item":"85","score":0.3294200897216797},{"item":"23","score":0.3294064402580261},{"item":"48","score":0.3246908485889435},{"item":"72","score":0.3183955252170563},{"item":"55","score":0.3138684630393982},{"item":"61","score":0.306003600358963},{"item":"97","score":0.30459365248680115},{"item":"71","score":0.30213627219200134},{"item":"112","score":0.2996428906917572},{"item":"29","score":0.293576717376709},{"item":"77","score":0.2926011383533478},{"item":"86","score":0.2925310730934143}]}
+
+
+curl -XPUT 'localhost:9200/testidx/items/1?pretty' -H 'Content-Type: application/json' -d'
+{"id" : "kimchy","brand" : "2009-11-15T14:12:12","category" : "trying out Elasticsearch","title":"","vendor":["6"],"description":[""]}'
+
+({
+  'vendor': '2', 
+  'description': 'op Home\'s  at RalphLauren.co,the Official Site of Ralph Lauren. Ayers Skull Place-Card Holders - Ideal for entertainin,our Ayers place-card holders are crafted from silver-plated brass and feature a whimsica,eye-catching skull-and-crossbones design. Packaged in a set of four. Twelve place cards included. 1\xbe" width. 1\xbd" height. Wipe clean. Imported', 
+  'title': 'Ayers Skull Place-Card Holders'
+}, UnicodeDecodeError('utf8', 'op Home\'s  at RalphLauren.co,the Official Site of Ralph Lauren. Ayers Skull Place-Card Holders - Ideal for entertainin,our Ayers place-card holders are crafted from silver-plated brass and feature a whimsica,eye-catching skull-and-crossbones design. Packaged in a set of four. Twelve place cards included. 1\xbe" width. 1\xbd" height. Wipe clean. Imported', 307, 308, 'invalid start byte'))
+
+
+
+SerializationError: ({
+  'vendor': '2', 
+  'description': 'op Home\'s  at RalphLauren.co,the Official Site of Ralph Lauren. Collette Highball Glass - Made in Ital,this cobalt-hued highball tumbler is crafted from beautiful hand-blown glass. 5\xbe" height. Holds 15.22 liquid oz. Made in Italy', 'title': 'Collette Highball Glass'}, 
+  UnicodeDecodeError('utf8', 'op Home\'s  at RalphLauren.co,the Official Site of Ralph Lauren. Collette Highball Glass - Made in Ital,this cobalt-hued highball tumbler is crafted from beautiful hand-blown glass. 5\xbe" height. Holds 15.22 liquid oz. Made in Italy', 182, 183, 'invalid start byte'))
+
+
+
+  python import_es_parallel.py --numberOfProduct -1 --esIndex autoidx &
+
+
+
+  hMYV4gtKGsU3UUWkrca2gzEvIGp7cveixpHiugsRheslDfUa6nkF4bbyhNKCAmcp
+
+   5.7.18 MySQL Community Server (GPL)
+
+
+    parser = argparse.ArgumentParser(description="Import product info for recommendation engine")
+    parser.add_argument('--dbuser', default='receng')
+    parser.add_argument('--dbpassword', default='Rjbd-yihu-75')
+    parser.add_argument('--dbhost', default='192.168.1.196')
+    parser.add_argument('--dbport', default='3306')
+    parser.add_argument('--dbdatabase', default='jinbag')
+    parser.add_argument('--numOfThread', default='30')
+    parser.add_argument('--numberOfProduct', default='100')
+    parser.add_argument('--ua', default='False')
+    parser.add_argument('--esIndex', default='actidx')
+    parser.add_argument('--docType', default='items')
+
+
+// start point
+[INFO ] 2017-07-20 12:42:31  [ main:193118640 ] - [ INFO ] htmlParserKafkaConsumer.HPKafkaConsumer.getRecord(HPKafkaConsumer.java:287) eventId = ceAbgpzXIdmFtPvZSvUc2gAAAV1gBWKKoMyEz7X02i0
+
+
+UPDATE `search_schema`.`user_search_complete` SET `useraction`='None' WHERE `searchID`='129966';
+
+curl -XGET '96.90.248.211:9200/logs-webapp/webapp/_mapping?pretty'
+
+curl -XGET 'localhost:9200/actidx/_settings?pretty'
+
+//NEW SETTING and MAPPING
+
+curl -XPUT 'localhost:9200/actidx/_settings?pretty' -H 'Content-Type: application/json' -d'
+{
+    "index" : {
+        "analysis" : {
+          "tokenizer" : {
+            "autocomplete" : {
+              "token_chars" : [ "letter" ],
+              "min_gram" : "1",
+              "type" : "edge_ngram",
+              "max_gram" : "10"
+            },
+            "my_tokenizer" : {
+              "token_chars" : [ "letter", "digit" ],
+              "min_gram" : "1",
+              "type" : "edge_ngram",
+              "max_gram" : "10"
+            }
+          }
+        }
+    }
+}
+'
+
+curl -XPOST 'localhost:9200/myidxg_1502848197619/items/_delete_by_query?pretty' -H 'Content-Type:application/json' -d'
+{
+  "query": {
+    "match_all": {}
+  }
+}
+'
+4320208
+curl -XGET 'localhost:9200/un/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size":10,
+    "query": {
+       "match_all" : {}
+    }
+}
+'
+
+{"add_to_basket":[],"search":[],"popRank":4.0,"id":"iphone cord"}
+curl -H "Content-Type: application/json" -d '{"user": "u1"}' http://localhost:8000/queries.json
+
+{"size":20,"query":{"bool":{"should":[{"terms":{"add_to_basket":["iphone cord","iphone case","iphone 5"]}},{"terms":{"search":["iphone 4","iphone case","iphone 5"]}},{"constant_score":{"filter":{"match_all":{}},"boost":0}}],"must":[],"must_not":[{"ids":{"values":["iphone 5","iphone case","iphone cord"],"boost":0}}],"minimum_should_match":1}},"sort":[{"_score":{"order":"desc"}},{"popRank":{"unmapped_type":"double","order":"desc"}}]}
+
+
+{"itemScores":[{"item":"iphone 6","score":0.1417817771434784},{"item":"some other stuff","score":0.0},{"item":"iphone 6+","score":0.0}]}
+
+curl -XPOST 'localhost:9200/twitter,blog/tweet,post/_delete_by_query?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "match_all": {}
+  }
+}
+'
+
+health status index                 pri rep docs.count docs.deleted store.size pri.store.size 
+yellow open   blogs                   3   1          0            0       432b           432b 
+yellow open   recidx_1505361375369    5   1     381273            0    226.2mb        226.2mb 
+yellow open   ps_1505805021290        5   1        120            0    132.4kb        132.4kb 
+yellow open   pio_meta                5   1         77            7      311kb          311kb 
+yellow open   urindex_1502374714804   5   1          7            0     31.7kb         31.7kb 
+yellow open   megacorp                5   1          3            0     10.6kb         10.6kb 
+yellow open   mvidx_1502680669580     5   1     413164            0      253mb          253mb 
+
+curl -XDELETE 'localhost:9200/myidxg?pretty'
+curl -XDELETE 'localhost:9200/logs-webapp?pretty' -H 'Content-Type: application/json' -d'
+{
+    "query": {
+       "match_all" : {}
+    }
+}
+'
+// create an index
+curl -XPUT 'localhost:9200/gap?pretty&pretty'
+
+// get index's setting and mapping
+curl -XGET 'localhost:9200/searchft/_settings,_mappings?pretty'
+
+//list all indices
+curl -XGET 'localhost:9200/_cat/indices?v&pretty'
+
+pio_meta
+
+curl -XPOST 'localhost:9200/myidxg/_close?pretty'
+curl -XPOST 'localhost:9200/myidxg/_open?pretty'
+
+
+// update an index's mapping
+curl -XPUT 'localhost:9200/myidxg/_settings?pretty' -H 'Content-Type: application/json' -d'
+{
+    "settings" : {
+      "index" : {
+        "creation_date" : "1501143798054",
+        "analysis" : {
+          "filter" : {
+            "nGram_filter" : {
+              "token_chars" : [ "letter", "digit", "punctuation", "symbol" ],
+              "min_gram" : "1",
+              "type" : "nGram",
+              "max_gram" : "50"
+            },
+            "code" : {
+              "type" : "pattern_capture",
+              "preserve_original" : "true",
+              "patterns" : [ "(\\p{Ll}+|\\p{Lu}\\p{Ll}+|\\p{Lu}+)", "(\\d+)" ]
+            }
+          },
+          "analyzer" : {
+            "nGram_analyzer" : {
+              "filter" : [ "lowercase", "asciifolding", "stop", "code", "nGram_filter" ],
+              "type" : "custom",
+              "tokenizer" : "whitespace"
+            },
+            "analyzer_keyword" : {
+              "filter" : "lowercase",
+              "tokenizer" : "keyword"
+            },
+            "whitespace_analyzer" : {
+              "filter" : [ "lowercase", "asciifolding", "stop", "code" ],
+              "type" : "custom",
+              "tokenizer" : "whitespace"
+            },
+            "my_analyzer" : {
+              "tokenizer" : "my_tokenizer"
+            },
+            "autocomplete_search" : {
+              "tokenizer" : "lowercase"
+            },
+            "autocomplete" : {
+              "filter" : [ "lowercase" ],
+              "tokenizer" : "autocomplete"
+            }
+          },
+          "tokenizer" : {
+            "autocomplete" : {
+              "token_chars" : [ "letter" ],
+              "min_gram" : "2",
+              "type" : "edge_ngram",
+              "max_gram" : "10"
+            },
+            "my_tokenizer" : {
+              "token_chars" : [ "letter", "digit" ],
+              "min_gram" : "2",
+              "type" : "edge_ngram",
+              "max_gram" : "10"
+            }
+          }
+        }
+      }
+    },
+    "mappings" : {
+      "items" : {
+        "properties" : {
+          "age" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "availableDateEnd" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "availableDateStart" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "brand" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "analyzer" : "analyzer_keyword",
+            "include_in_all" : true
+          },
+          "buy" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "category" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "analyzer" : "analyzer_keyword",
+            "include_in_all" : true
+          },
+          "description" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "discontinued" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "fav" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "gender" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "id" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "link" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "out_of_stock" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "plan" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "popRank" : {
+            "type" : "float"
+          },
+          "promo" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "title" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "vendor" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "view" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+}
+'
+
+
+elasticdump --input=http://localhost:9200/mvidx --output ./data/myindex2.json --type data
+elasticdump --input=myindex2.json --output=http://localhost:9200/mvidx --type=data
+
+
+elasticdump --input=http://localhost:9200/myidxg --output=/data/my_index.json --type=data
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>Disabled</key>
+<false/>
+<key>Label</key>
+<string>org.samba.rsync</string>
+<key>Program</key>
+<string>/usr/bin/rsync</string>
+<key>ProgramArguments</key>
+<array>
+<string>/usr/bin/rsync</string>
+<string>--daemon</string>
+<string>--config=/etc/rsync/rsyncd.conf</string>
+</array>
+<key>inetdCompatibility</key>
+<dict>
+<key>Wait</key>
+<false/>
+</dict>
+<key>Sockets</key>
+<dict>
+<key>Listeners</key>
+<dict>
+<key>SockServiceName</key>
+<string>rsync</string>
+<key>SockType</key>
+<string>stream</string>
+</dict>
+</dict>
+</dict>
+</plist>
+
+
+Traceback (most recent call last):
+  File "ftpclient.py", line 106, in <module>
+    handle_single_dir(ad, args.dest)
+  File "ftpclient.py", line 61, in handle_single_dir
+    transfer_file(dest + "/" + match.group(0), '/tmp/weekNewData')
+  File "ftpclient.py", line 77, in transfer_file
+    ssh.connect('96.90.248.210', username='zhenping', password='jzp19910307jzp', timeout=60)
+  File "/usr/lib/python2.7/site-packages/paramiko/client.py", line 394, in connect
+    look_for_keys, gss_auth, gss_kex, gss_deleg_creds, gss_host)
+  File "/usr/lib/python2.7/site-packages/paramiko/client.py", line 649, in _auth
+    raise saved_exception
+paramiko.ssh_exception.AuthenticationException: Authentication timeout.
+
+
+curl -XGET -i 'http://192.168.1.110:9200/testauto/_count?pretty' -d '
+{
+    "query": {
+        "match_all": {}
+    }
+}
+'
+
+
+
+
+
+{
+  "_index" : "pio_meta",
+  "_type" : "engine_instances",
+  "_id" : "AV3oxrMcx6XzyzzBuIQj",
+  "_version" : 2,
+  "found" : true,
+  "_source":{"id":"AV3oxrMcx6XzyzzBuIQj","status":"COMPLETED","startTime":"2017-08-16T10:02:01.818+08:00","endTime":"2017-08-16T10:02:12.474+08:00","engineId":"lmFiOzwZK0xCpYdZyzHB6BJHk1luHn0Z","engineVersion":"6e2e849bd166f4cd2174759357988eec1d8af88e","engineVariant":"default","engineFactory":"com.jinbag.RecommendationEngine","batch":"","env":{"PIO_STORAGE_SOURCES_HBASE_TYPE":"hbase","PIO_ENV_LOADED":"1","PIO_STORAGE_REPOSITORIES_METADATA_NAME":"pio_meta","PIO_FS_BASEDIR":"/home/jiangzhenping/.pio_store","PIO_STORAGE_SOURCES_HBASE_HOME":"/home/jiangzhenping/PredictionIO-0.9.7-aml/vendor/hbase-1.2.2","PIO_HOME":"/home/jiangzhenping/PredictionIO-0.9.7-aml","PIO_FS_ENGINESDIR":"/home/jiangzhenping/.pio_store/engines","PIO_STORAGE_SOURCES_LOCALFS_PATH":"/home/jiangzhenping/.pio_store/models","PIO_STORAGE_SOURCES_ELASTICSEARCH_TYPE":"elasticsearch","PIO_STORAGE_REPOSITORIES_METADATA_SOURCE":"ELASTICSEARCH","PIO_STORAGE_REPOSITORIES_MODELDATA_SOURCE":"LOCALFS","PIO_STORAGE_REPOSITORIES_EVENTDATA_NAME":"pio_event","PIO_STORAGE_SOURCES_ELASTICSEARCH_HOME":"/home/jiangzhenping/PredictionIO-0.9.7-aml/vendor/elasticsearch-1.7.5","PIO_FS_TMPDIR":"/home/jiangzhenping/.pio_store/tmp","PIO_STORAGE_REPOSITORIES_MODELDATA_NAME":"pio_model","PIO_STORAGE_REPOSITORIES_EVENTDATA_SOURCE":"HBASE","PIO_CONF_DIR":"/home/jiangzhenping/PredictionIO-0.9.7-aml/conf","PIO_STORAGE_SOURCES_LOCALFS_TYPE":"localfs"},"sparkConf":{"spark.serializer":"org.apache.spark.serializer.KryoSerializer","spark.kryo.registrator":"org.apache.mahout.sparkbindings.io.MahoutKryoRegistrator","es.index.auto.create":"true","spark.kryo.referenceTracking":"false","spark.kryoserializer.buffer":"300m","spark.executor.extraClassPath":"."},"dataSourceParams":"{\"\":{\"appName\":\"mv\",\"eventNames\":[\"buy\",\"plan\",\"fav\",\"view\"]}}","preparatorParams":"{\"\":{}}","algorithmsParams":"[{\"ur\":{\"appName\":\"mv\",\"indexName\":\"myidxg\",\"typeName\":\"items\",\"eventNames\":[\"buy\",\"plan\",\"fav\",\"view\"]}}]","servingParams":"{\"\":{}}"}
+}
+
+curl -XGET '192.168.1.110:9200/pio_meta/engine_instances/AV3oxrMcx6XzyzzBuIQj?pretty'
+
+
+Registering engine P8biobPum7ycLaY448vrAoCg13J2uqlK 60725b53474b929840ae864eda427ebfb463e696
+
+AV3pMWLFSkjvuSGRmENI
+
+[INFO] [Console$] Using existing engine manifest JSON at /Users/g_jeanp/RecEngine/manifest.json
+[INFO] [Console$] Using command '/Users/g_jeanp/PredictionIO/sbt/sbt' at the current working directory to build.
+[INFO] [Console$] If the path above is incorrect, this process will fail.
+[INFO] [Console$] Uber JAR disabled. Making sure lib/pio-assembly-0.9.7-aml.jar is absent.
+[INFO] [Console$] Going to run: /Users/g_jeanp/PredictionIO/sbt/sbt  package assemblyPackageDependency
+[INFO] [Console$] Build finished successfully.
+[INFO] [Console$] Looking for an engine...
+[INFO] [Console$] Found template-scala-parallel-universal-recommendation-assembly-0.2.3-deps.jar
+[INFO] [Console$] Found template-scala-parallel-universal-recommendation_2.10-0.2.3.jar
+[INFO] [RegisterEngine$] Registering engine P8biobPum7ycLaY448vrAoCg13J2uqlK 60725b53474b929840ae864eda427ebfb463e696
+[INFO] [Console$] Your engine is ready for training.
+
+
+{
+  "_index" : "pio_meta",
+  "_type" : "engine_instances",
+  "_id" : "AV3oxrMcx6XzyzzBuIQj",
+  "_version" : 2,
+  "found" : true,
+  "_source":{"id":"AV3oxrMcx6XzyzzBuIQj","status":"COMPLETED","startTime":"2017-08-16T10:02:01.818+08:00","endTime":"2017-08-16T10:02:12.474+08:00","engineId":"lmFiOzwZK0xCpYdZyzHB6BJHk1luHn0Z","engineVersion":"6e2e849bd166f4cd2174759357988eec1d8af88e","engineVariant":"default","engineFactory":"com.jinbag.RecommendationEngine","batch":"","env":{"PIO_STORAGE_SOURCES_HBASE_TYPE":"hbase","PIO_ENV_LOADED":"1","PIO_STORAGE_REPOSITORIES_METADATA_NAME":"pio_meta","PIO_FS_BASEDIR":"/home/jiangzhenping/.pio_store","PIO_STORAGE_SOURCES_HBASE_HOME":"/home/jiangzhenping/PredictionIO-0.9.7-aml/vendor/hbase-1.2.2","PIO_HOME":"/home/jiangzhenping/PredictionIO-0.9.7-aml","PIO_FS_ENGINESDIR":"/home/jiangzhenping/.pio_store/engines","PIO_STORAGE_SOURCES_LOCALFS_PATH":"/home/jiangzhenping/.pio_store/models","PIO_STORAGE_SOURCES_ELASTICSEARCH_TYPE":"elasticsearch","PIO_STORAGE_REPOSITORIES_METADATA_SOURCE":"ELASTICSEARCH","PIO_STORAGE_REPOSITORIES_MODELDATA_SOURCE":"LOCALFS","PIO_STORAGE_REPOSITORIES_EVENTDATA_NAME":"pio_event","PIO_STORAGE_SOURCES_ELASTICSEARCH_HOME":"/home/jiangzhenping/PredictionIO-0.9.7-aml/vendor/elasticsearch-1.7.5","PIO_FS_TMPDIR":"/home/jiangzhenping/.pio_store/tmp","PIO_STORAGE_REPOSITORIES_MODELDATA_NAME":"pio_model","PIO_STORAGE_REPOSITORIES_EVENTDATA_SOURCE":"HBASE","PIO_CONF_DIR":"/home/jiangzhenping/PredictionIO-0.9.7-aml/conf","PIO_STORAGE_SOURCES_LOCALFS_TYPE":"localfs"},"sparkConf":{"spark.serializer":"org.apache.spark.serializer.KryoSerializer","spark.kryo.registrator":"org.apache.mahout.sparkbindings.io.MahoutKryoRegistrator","es.index.auto.create":"true","spark.kryo.referenceTracking":"false","spark.kryoserializer.buffer":"300m","spark.executor.extraClassPath":"."},"dataSourceParams":"{\"\":{\"appName\":\"mv\",\"eventNames\":[\"buy\",\"plan\",\"fav\",\"view\"]}}","preparatorParams":"{\"\":{}}","algorithmsParams":"[{\"ur\":{\"appName\":\"mv\",\"indexName\":\"myidxg\",\"typeName\":\"items\",\"eventNames\":[\"buy\",\"plan\",\"fav\",\"view\"]}}]","servingParams":"{\"\":{}}"}
+}
+
+
+
+
+curl -XPUT 'localhost:9200/testidx/items/1?pretty' -H 'Content-Type: application/json' -d'
+
+
+[INFO] [RootSolverFactory$] Creating org.apache.mahout.viennacl.opencl.GPUMMul solver
+[INFO] [RootSolverFactory$] Unable to create class GPUMMul: attempting OpenMP version
+[INFO] [RootSolverFactory$] Creating org.apache.mahout.viennacl.openmp.OMPMMul solver
+[INFO] [RootSolverFactory$] org.apache.mahout.viennacl.openmp.OMPMMul$
+[INFO] [RootSolverFactory$] Unable to create class OMPMMul: falling back to java version
+
+curl -XGET 'localhost:9200/recidx/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{"explain": true,"size":4,"query":{"bool":{"should":[{"terms":{"buy":["13969","13545","13424","217350","194134","146192","199728","229122"]}},{"terms":{"plan":["19581","16851","53429","34641","24107","40439","63238","52848","49954","14004","13831","8","13329","13879","29515","13530","13858","194134","146192","219914","337514","268714","119500"]}},{"terms":{"fav":["14135","13945","13782","13898","13762","13826","14011","13574","13847","13753","13879","29515","142334","155708","272","205826","210940","194134","295626","146192","320944","228268","320906","237756","226448","237678","234018","193004","232980"]}},{"terms":{"view":["301862","380860","381136","380836","381128","130070","382444","159804","195442","223218","13858","382446","328652","489606","6988","197020","14161","1200","197568","194134","302372","637720","207172","184844","158918","649564","299118","163026","594186","400544","197400","237416","164480","644818","336600","649546","317268","235410","178556","165274","268714","302360","230958","220120","376334","652544","139058","53122","652594","103370","219914","116854","188478","677674"]}},{"constant_score":{"filter":{"match_all":{}},"boost":0}}],"must":[],"must_not":[{"ids":{"values":["229122","199728","146192","194134","217350","13424","13545","13969"],"boost":0}}],"minimum_should_match":1}},"sort":[{"_score":{"order":"desc"}},{"popRank":{"unmapped_type":"double","order":"desc"}}]}
+'
+
+curl -XGET 'localhost:9200/psidx/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{"explain": true,"size":20,"query":{"bool":{"should":[{"terms":{"add_to_basket":["iphone cord","iphone case","iphone 5"]}},{"terms":{"search":["iphone 4","iphone case","iphone 5"]}},{"constant_score":{"filter":{"match_all":{}},"boost":0}}],"must":[],"must_not":[{"ids":{"values":["iphone 5","iphone case","iphone cord"],"boost":0}}],"minimum_should_match":1}},"sort":[{"_score":{"order":"desc"}},{"popRank":{"unmapped_type":"double","order":"desc"}}]}
+'
+curl -XGET 'localhost:9200/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "explain": true,
+    "query" : {
+        "term" : { "user" : "kimchy" }
+    }
+}
+'
+
+curl -XPUT 'localhost:9200/my_index?pretty' -H 'Content-Type: application/json' -d'
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "my_english_analyzer": {
+          "type": "standard",
+          "max_token_length": 5,
+          "stopwords": "_english_"
+        }
+      }
+    }
+  }
+}
+'
+curl -XPOST 'localhost:9200/my_index/_analyze?pretty' -H 'Content-Type: application/json' -d'
+{
+  "analyzer": "my_analyzer",
+  "text": "The 2 QUICK Brown-Foxes jumped over the lazy dog\u0027s bone."
+}
+'
+
+
+
+
+curl -XGET 'localhost:9200/searchprox/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "match_all" : {}
+  },
+  "aggs": {
+    "top-sites": {
+      "terms": {
+        "field": "full_brand",
+        "order": {
+          "top_hit": "desc"
+        }
+      },
+      "aggs": {
+        "top_tags_hits": {
+          "top_hits": {}
+        },
+        "top_hit" : {
+          "max": {
+            "script": "_score"
+          }
+        }
+      }
+    }
+  }
+}
+'
+
+
+
+curl -XGET 'localhost:9200/searchprox/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "size":0,
+  "query": {
+    "match" : {"title":"boy"}
+  },
+  "aggs": {
+    "top-sites": {
+      "terms": {
+        "field": "full_brand",
+        "order": {
+          "top_hit": "desc"
+        },
+        "size":967092
+      },
+      "aggs": {
+        "top_tags_hits": {
+          "top_hits": {"size":1}
+        },
+        "top_hit" : {
+          "max": {
+            "script": "_score"
+          }
+        }
+      }
+    }
+  }
+}
+'
+
+
+10152136

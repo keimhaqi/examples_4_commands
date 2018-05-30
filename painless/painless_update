@@ -1,0 +1,98 @@
+// stored_fields表示明确要获取在mapping中带有stored属性的字段
+
+curl -XGET 'localhost:9200/hockey/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "stored_fields": [
+    "_id",
+    "_source"
+  ],
+  "query": {
+    "term": {
+      "_id": 1
+    }
+  }
+}
+'
+
+// to change player 1's last name to hockey, simpley set ctx._source.ast to the new value:
+curl -XPOST 'localhost:9200/hockey/player/1/_update?pretty' -H 'Content-Type: application/json' -d'
+{
+  "script": {
+    "lang": "painless",
+    "inline": "ctx._source.last = params.last",
+    "params": {
+      "last": "hockey"
+    }
+  }
+}
+'
+
+
+// this script adds a new field that contains the player’s nickname, hockey.
+curl -XPOST 'localhost:9200/hockey/player/1/_update?pretty' -H 'Content-Type: application/json' -d'
+{
+  "script": {
+    "lang": "painless",
+    "inline": "ctx._source.last = params.last; ctx._source.nick = params.nick",
+    "params": {
+      "last": "gaudreau",
+      "nick": "hockey"
+    }
+  }
+}
+'
+
+// 如果字段last中包含了nes，例如jones，则调整该字段的值，在字段末尾添加matched，否则不做任何操作(noop)
+// =~表示find操作
+curl -XPOST 'localhost:9200/hockey/player/_update_by_query?pretty' -H 'Content-Type: application/json' -d'
+{
+  "script": {
+    "lang": "painless",
+    "inline": "if (ctx._source.last =~ /nes/) {ctx._source.last += \"matched\"} else {ctx.op = \u0027noop\u0027}"
+  }
+}
+'
+
+// 查找last字段值以aeiou起头，并且以aeiou结尾的document，如果匹配则在匹配的document的last字段的值末尾添加matched，否则不做任何操作(noop)
+// ==~表示match操作，表示完全匹配
+curl -XPOST 'localhost:9200/hockey/player/_update_by_query?pretty' -H 'Content-Type: application/json' -d'
+{
+  "script": {
+    "lang": "painless",
+    "inline": "if (ctx._source.last ==~ /[^aeiou].*[aeiou]/) {ctx._source.last += \"matched\"} else {ctx.op = \u0027noop\u0027}"
+  }
+}
+'
+
+
+// 查找所有last字段值中包含aeiou的document，并把last字段中包含的aeiou删除,matcher表示一个匹配器，表示已经匹配的实体，通过调用replaceAll并替换为
+// 空字符串来完成删除字母的操作
+curl -XPOST 'localhost:9200/hockey/player/_update_by_query?pretty' -H 'Content-Type: application/json' -d'
+{
+  "script": {
+    "lang": "painless",
+    "inline": "ctx._source.first = /[aeiou]/.matcher(ctx._source.first).replaceAll(\u0027\u0027)"
+  }
+}
+'
+
+
+curl -XPOST 'localhost:9200/hockey/player/_update_by_query?pretty' -H 'Content-Type: application/json' -d'
+{
+  "script": {
+    "lang": "painless",
+    "inline": "ctx._source.first = /n([aeiou])/.matcher(ctx._source.first).replaceAll(\u0027$1\u0027)"
+  }
+}
+'
+
+curl -XPOST 'localhost:9200/hockey/player/_update_by_query?pretty' -H 'Content-Type: application/json' -d'
+{
+  "script": {
+    "lang": "painless",
+    "inline": "ctx._source.last = ctx._source.last.replaceFirst(/[aeiou]/, m -> m.group().toUpperCase(Locale.ROOT))"
+  }
+}
+'
+
+

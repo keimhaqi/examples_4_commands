@@ -1,0 +1,8 @@
+curl -XGET 'localhost:9200/auto_a/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 10,
+    "query": {
+       "match" : {"words": "niek"}
+    }
+}
+'

@@ -1,0 +1,195 @@
+{
+    "itemlist": [
+        {
+            "type": "product",
+            "items": [
+                {
+                    "item": {
+                        "productSale": "$3.70",
+                        "sourceId": [
+                            3
+                        ],
+                        "sources": [
+                            "camelcamelcamel",
+                            "add-on item"
+                        ],
+                        "channel": 1,
+                        "discount": {
+                            "min": 58.84316,
+                            "max": 58.84316,
+                            "discountStr": "58.84316%"
+                        },
+                        "language": [
+                            "en"
+                        ],
+                        "availability": "in_stock",
+                        "score": 4.1,
+                        "price": {
+                            "min": 8.99,
+                            "max": 8.99
+                        },
+                        "updateESTime": 1526438669612,
+                        "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/81OD0uVKAdL._AC_SX215_.jpg",
+                        "hasSmartPrice": 0,
+                        "currency": "$",
+                        "vendors": [
+                            "Amazon"
+                        ],
+                        "productDescription": [
+                            
+                        ],
+                        "height": 142,
+                        "numOfReviews": 77,
+                        "brands": "Notebook",
+                        "productId": 10558078,
+                        "productDetail": [
+                            "Color: Black   An Amazon Brand."
+                        ],
+                        "topProduct": true,
+                        "lastCheckedTime": 1525684719000,
+                        "categoryTypePriority": 0,
+                        "sourceProductId": "B00DMI0QNI",
+                        "productTitle": "AmazonBasics Protection Kit for Nintendo Switch with Carrying Case and Tempered-glass Screen Protector (Black)",
+                        "sale": {
+                            "min": 3.7,
+                            "max": 3.7
+                        },
+                        "deleted": 0,
+                        "brandId": 10131,
+                        "width": 215,
+                        "categoryTypeId": 1015,
+                        "morePictures": 0,
+                        "productPrice": " $8.99",
+                        "topProductPromoInfoVendor": {
+                            "shareTitleEn": "$3.70 ( $8.99) AmazonBasics Protection Kit for Nintendo Switch with Carrying Case and Tempered-glass Screen Protector (Black)",
+                            "postedTime": 1525766583000,
+                            "confirmerId": 99,
+                            "authorId": 99,
+                            "confirmed": 1,
+                            "vendorLogoHeight": 33,
+                            "titleEn": "Amazon - $3.70 ( $8.99) AmazonBasics Protection Kit for Nintendo Switch with Carrying Case and Tempered-glass Screen Protector (Black)",
+                            "price": "$3.70",
+                            "confirmedTime": 1525850574000,
+                            "createdTime": 1525850574000,
+                            "vendorLogoUrl": "amazon.png",
+                            "id": {
+                                "vendorId": 3,
+                                "id": 10558078
+                            },
+                            "taskId": 1,
+                            "startDate": 1525766583000,
+                            "vendorLogoWidth": 109
+                        }
+                    },
+                    "score": 2.0
+                },
+                {
+                    "item": {
+                        "productSale": "$3.70",
+                        "sourceId": [
+                            3
+                        ],
+                        "sources": [
+                            "camelcamelcamel",
+                            "add-on item"
+                        ],
+                        "channel": 1,
+                        "discount": {
+                            "min": 58.84316,
+                            "max": 58.84316,
+                            "discountStr": "58.84316%"
+                        },
+                        "language": [
+                            "en"
+                        ],
+                        "availability": "in_stock",
+                        "score": 4.1,
+                        "price": {
+                            "min": 8.99,
+                            "max": 8.99
+                        },
+                        "updateESTime": 1526462024750,
+                        "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/81OD0uVKAdL._AC_SX215_.jpg",
+                        "hasSmartPrice": 0,
+                        "currency": "$",
+                        "vendors": [
+                            "Amazon"
+                        ],
+                        "productDescription": [
+                            
+                        ],
+                        "height": 142,
+                        "numOfReviews": 77,
+                        "brands": "Notebook",
+                        "productId": 10558079,
+                        "productDetail": [
+                            "Color: Black   An Amazon Brand."
+                        ],
+                        "topProduct": true,
+                        "lastCheckedTime": 1525684719000,
+                        "categoryTypePriority": 0,
+                        "sourceProductId": "B00DMI0QNI",
+                        "productTitle": "AmazonBasics Protection Kit for Nintendo Switch with Carrying Case and Tempered-glass Screen Protector (Black)",
+                        "sale": {
+                            "min": 3.7,
+                            "max": 3.7
+                        },
+                        "deleted": 0,
+                        "brandId": 10131,
+                        "width": 215,
+                        "categoryTypeId": 1015,
+                        "morePictures": 0,
+                        "productPrice": " $8.99",
+                        "topProductPromoInfoVendor": {
+                            "shareTitleEn": "$3.70 ( $8.99) AmazonBasics Protection Kit for Nintendo Switch with Carrying Case and Tempered-glass Screen Protector (Black)",
+                            "postedTime": 1525766583000,
+                            "confirmerId": 99,
+                            "authorId": 99,
+                            "confirmed": 1,
+                            "vendorLogoHeight": 33,
+                            "titleEn": "Amazon - $3.70 ( $8.99) AmazonBasics Protection Kit for Nintendo Switch with Carrying Case and Tempered-glass Screen Protector (Black)",
+                            "price": "$3.70",
+                            "confirmedTime": 1526462023123,
+                            "createdTime": 1526462023123,
+                            "vendorLogoUrl": "amazon.png",
+                            "id": {
+                                "vendorId": 3,
+                                "id": 10558079
+                            },
+                            "taskId": 1,
+                            "startDate": 1525766583000,
+                            "vendorLogoWidth": 109
+                        }
+                    },
+                    "score": 1.0
+                }
+            ],
+            "num": 2
+        },
+        {
+            "type": "article",
+            "items": [
+                {
+                    "item": {
+                        "upCount": 0,
+                        "weight": 0.0,
+                        "title": "【参加好物推荐活动】不会收拾的懒婆娘推荐点别的",
+                        "good": "\u0000",
+                        "userId": 217,
+                        "content": "<div class='article-detail-content-text'>\r\nhttps://www.amazon.com/Rocketbook-EVR-E-R-Everlast-Smart-Notebook/dp/B06ZXWVZ3X/ref=sr_1_1?ie=UTF8&sr=8-1&keywords=rocket%20book\r\n这个是我朋友给我安利的。 好处是可以一页笔记写满了了以后用他家的app扫一下就能自动存到比如evernote, onenote这些地方，然后拿纸巾蘸水就可以擦掉再重新写， 既能电子存档， 又能满足某些文青半文青手写的需求，还环保。 前两天价钱还低一点， 今天一看价钱又涨上去了。 \r\n</div>\r\n<JINBAGID@1@10610468@>\r\n<div class='article-detail-content-text'>\r\n<div>https://www.amazon.com/Magnetic-Screen-Frame-Velcro-Openings/dp/B00KZNOHTW/ref=sr_1_1_sspa?ie=UTF8&sr=8-1-spons&keywords=screen%20door&psc=1这种现在亚马逊上很多， 估计其实都是中国卖家在卖， 能淘宝的肯定还是淘宝上价钱更好。 我是懒得折腾， 就买了这个。 装起来很简单，以后开后院门吹吹风就不用太担心苍蝇蚊子进来了。 \r\n<JINBAGID@1@10164404@>\r\n</div>",
+                        "tags": "Notebook",
+                        "commentCount": 0,
+                        "inTime": 1526293167000,
+                        "downCount": 0,
+                        "view": 0,
+                        "top": "\u0000",
+                        "id": 10,
+                        "viewCount": 216
+                    },
+                    "score": 0.28768208622932434
+                }
+            ],
+            "num": 1
+        }
+    ]
+}

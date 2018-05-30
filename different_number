@@ -1,0 +1,200 @@
+6244168
+6244226
+6244176
+6244370
+6244130
+6244160
+6244330
+10589702
+6244216
+6244324
+
+
+curl -XGET '172.18.0.2:9200/todayspicks/items/6244168?pretty'
+curl -XGET '172.18.0.2:9200/todayspicks/items/6244484?pretty'
+curl -XGET '172.18.0.2:9200/todayspicks/items/6243652?pretty'
+curl -XGET '172.18.0.2:9200/todayspicks/items/6244226?pretty'
+curl -XGET '172.18.0.2:9200/todayspicks/items/6244176?pretty'
+curl -XGET '172.18.0.2:9200/todayspicks/items/6244370?pretty'
+curl -XGET '172.18.0.2:9200/todayspicks/items/6244130?pretty'
+curl -XGET '172.18.0.2:9200/todayspicks/items/6244160?pretty'
+curl -XGET '172.18.0.2:9200/todayspicks/items/6244330?pretty'
+curl -XGET '172.18.0.2:9200/todayspicks/items/10589702?pretty'
+curl -XGET '172.18.0.2:9200/todayspicks/items/6244216?pretty'
+curl -XGET '172.18.0.2:9200/todayspicks/items/6244182?pretty'
+curl -XGET '172.18.0.2:9200/todayspicks/items/6244324?pretty'
+curl -XGET '172.18.0.2:9200/todayspicks/items/10583084?pretty'
+curl -XGET '172.18.0.2:9200/todayspicks/items/6244082?pretty'
+curl -XGET '172.18.0.2:9200/todayspicks/items/6244188?pretty'
+
+
+
+
+
+
+{
+  "bool" : {
+    "must" : [
+      {
+        "bool" : {
+          "must" : [
+            {
+              "bool" : {
+                "should" : [
+                  {
+                    "match" : {
+                      "vendors" : {
+                        "query" : "amazon",
+                        "operator" : "AND",
+                        "prefix_length" : 0,
+                        "max_expansions" : 50,
+                        "fuzzy_transpositions" : true,
+                        "lenient" : false,
+                        "zero_terms_query" : "NONE",
+                        "boost" : 1.0
+                      }
+                    }
+                  }
+                ],
+                "disable_coord" : false,
+                "adjust_pure_negative" : true,
+                "minimum_should_match" : "1",
+                "boost" : 1.0
+              }
+            },
+            {
+              "bool" : {
+                "should" : [
+                  {
+                    "match" : {
+                      "brands" : {
+                        "query" : "LEGO",
+                        "operator" : "AND",
+                        "prefix_length" : 0,
+                        "max_expansions" : 50,
+                        "fuzzy_transpositions" : true,
+                        "lenient" : false,
+                        "zero_terms_query" : "NONE",
+                        "boost" : 1.0
+                      }
+                    }
+                  }
+                ],
+                "disable_coord" : false,
+                "adjust_pure_negative" : true,
+                "minimum_should_match" : "1",
+                "boost" : 1.0
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      }
+    ],
+    "must_not" : [
+      {
+        "ids" : {
+          "type" : [ ],
+          "values" : [ ],
+          "boost" : 1.0
+        }
+      }
+    ],
+    "disable_coord" : false,
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
+
+
+{
+  "query" : {
+    "bool" : {
+      "should" : [
+        {
+          "bool" : {
+            "must" : [
+              {
+                "bool" : {
+                  "must" : [
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "vendors" : {
+                                "query" : "amazon",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    }
+                  ],
+                  "disable_coord" : false,
+                  "adjust_pure_negative" : true,
+                  "boost" : 1.0
+                }
+              }
+            ],
+            "disable_coord" : false,
+            "adjust_pure_negative" : true,
+            "boost" : 1.0
+          }
+        }
+      ],
+      "disable_coord" : false,
+      "adjust_pure_negative" : true,
+      "boost" : 1.0
+    }
+  },
+  "aggregations" : {
+    "null.Option.vendors" : {
+      "terms" : {
+        "field" : "vendors.keyword",
+        "size" : 10,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    },
+    "null.Option.brands" : {
+      "terms" : {
+        "field" : "brands.keyword",
+        "size" : 10,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    }
+  }
+}

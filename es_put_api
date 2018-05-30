@@ -1,0 +1,85 @@
+curl -X PUT "192.168.1.106:9200/jinbagsearch/items/9652035" -H 'Content-Type: application/json' -d'
+{
+    
+    "productTitle" : "Nike Womens Free Run 2017 Running Sneakers from FinishLine",
+    "attribute" : [ ],
+    "height" : 367,
+    "morePictures" : 0,
+    "availability" : "out_of_stock",
+    "productDescription" : [ ],
+    "width" : 300,
+    "vendors" : [
+      "Macys"
+    ],
+    "productDetail" : [
+      "Nike Womens Free Run 2017 Running Sneakers from Finish Line Shoes SHOES"
+    ],
+    "updateESTime" : 1526498121740,
+    "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/2/optimized/8478412_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+    "channel" : 1,
+    "productId" : 9652035,
+    "brand" : "dyson",
+    "lastCheckedTime" : 1526498120000,
+    "discount" : {
+      "max" : 0.0,
+      "discountStr" : "$0.0",
+      "min" : 0.0
+    },
+    "hasSmartPrice" : 0,
+    "categories" : [
+      "shoes",
+      "shopping"
+    ],
+    "onSale" : "0",
+    "categoryTypeId" : 3,
+    "language" : "en",
+    "sourceId" : [
+      3184
+    ],
+    "promo" : [
+      "promo_v"
+    ],
+    "id" : 9652034,
+    "brandName" : "Nike",
+    "missedTime" : 1525953336177,
+    "topProduct" : true,
+    "categoryTypePriority" : 0,
+    "sourceProductId" : "4565575",
+    "deleted" : 0,
+    "brandId" : 2943,
+    "topProductPromoInfoVendor" : {
+      "productId" : 9652034,
+      "missedTime" : 1525953336177,
+      "shareTitleEn" : "$50.00 $99.99 Nike Womens Free Run 2017 Running Sneakers from Finish Line ",
+      "endDate" : 1515905999000,
+      "vendorId" : 3184,
+      "titleCh" : "Macys梅西百货现有Nike 2017款女款跑鞋仅售$50.00 $99.99",
+      "confirmed" : 1,
+      "imgUrl" : "1514446030_9652034card_img.jpg",
+      "cardHeight" : 290,
+      "descEn" : "Discount price shows in cart. Free shipping with order over $49. ",
+      "shareDescEn" : "Discount price shows in cart. Free shipping with order over $49. ",
+      "titleEn" : "Macys - $50.00 $99.99 Nike Womens Free Run 2017 Running Sneakers from Finish Line ",
+      "price" : "$50.00",
+      "confirmedTime" : 1514446030000,
+      "vendorLogoUrl" : "macys.png",
+      "shareTitleCh" : "Nike 2017款女款跑鞋仅售$50.00 $99.99",
+      "cardWidth" : 290,
+      "taskId" : 343744,
+      "startDate" : 1514437200000,
+      "descCh" : "加入购物车后会看到折扣价格。美国境内订单满$49免运费。",
+      "shareDescCh" : "加入购物车后会看到折扣价格。美国境内订单满$49免运费。"
+    }
+  
+}
+'
+
+
+
+
+curl -X PUT "localhost:9200/twitter/tweet/1" -H Content-Type: application/json -d
+{
+    "user" : "kimchy",
+    "post_date" : "2009-11-15T14:12:12",
+    "message" : "trying out Elasticsearch"
+}

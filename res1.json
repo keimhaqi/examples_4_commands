@@ -1,0 +1,104 @@
+
+{
+
+    "options":{
+        "brandName":{
+            "semiOption":[
+                {
+                    "option":"AstroAI",
+                    "num":2
+                },
+                {
+                    "option":"Mpow",
+                    "num":2
+                },
+                {
+                    "option":"Nintendo",
+                    "num":2
+                },
+                {
+                    "option":"URPOWER",
+                    "num":2
+                },
+                {
+                    "option":"Allen Patio Protectors",
+                    "num":1
+                },
+                {
+                    "option":"Ammex",
+                    "num":1
+                },
+                {
+                    "option":"Curt Manufacturing",
+                    "num":1
+                },
+                {
+                    "option":"Darice",
+                    "num":1
+                },
+                {
+                    "option":"ECOVACS",
+                    "num":1
+                },
+                {
+                    "option":"Flexzilla",
+                    "num":1
+                }
+            ]
+        },
+        "categories":{
+            "semiOption":[
+                {
+                    "option":"books",
+                    "num":23
+                },
+                {
+                    "option":"arts, crafts & sewing",
+                    "num":13
+                },
+                {
+                    "option":"home & kitchen",
+                    "num":12
+                },
+                {
+                    "option":"patio, lawn & garden",
+                    "num":12
+                },
+                {
+                    "option":"beauty & personal care",
+                    "num":9
+                },
+                {
+                    "option":"toys & games",
+                    "num":6
+                },
+                {
+                    "option":"baby products",
+                    "num":5
+                },
+                {
+                    "option":"health & household",
+                    "num":4
+                },
+                {
+                    "option":"sports & outdoors",
+                    "num":3
+                }
+            ]
+        },
+        "vendors":{
+            "semiOption":[
+                {
+                    "option":"Amazon",
+                    "num":102
+                },
+                {
+                    "option":"Amazon.cn",
+                    "num":102
+                }
+            ]
+        }
+    },
+    "lifeCycle":1
+
+}

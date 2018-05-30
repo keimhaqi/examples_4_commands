@@ -1,0 +1,140 @@
+curl -XPOST http://localhost:9200/searchal/items/_search?pretty  -H 'Content-Type: application/json' -d'
+{
+    "explain": true,
+    "query":
+    {
+  "bool" : {
+    "must" : [
+      {
+        "terms" : {
+          "promo" : [
+            "promo_v"
+          ],
+          "boost" : 1.0
+        }
+      },
+      {
+        "bool" : {
+          "should" : [
+            {
+              "match" : {
+                "availability" : {
+                  "query" : "in_stock",
+                  "operator" : "AND",
+                  "analyzer" : "my_analyzer",
+                  "prefix_length" : 0,
+                  "max_expansions" : 50,
+                  "fuzzy_transpositions" : true,
+                  "lenient" : false,
+                  "zero_terms_query" : "NONE",
+                  "boost" : 1.0
+                }
+              }
+            },
+            {
+              "match" : {
+                "availability" : {
+                  "query" : "out_of_stock",
+                  "operator" : "AND",
+                  "analyzer" : "my_analyzer",
+                  "prefix_length" : 0,
+                  "max_expansions" : 50,
+                  "fuzzy_transpositions" : true,
+                  "lenient" : false,
+                  "zero_terms_query" : "NONE",
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      },
+      {
+        "bool" : {
+          "should" : [
+            {
+              "range" : {
+                "topProductPromoInfoVendor.missedTime" : {
+                  "from" : 1515360456702,
+                  "to" : null,
+                  "include_lower" : true,
+                  "include_upper" : true,
+                  "boost" : 1.0
+                }
+              }
+            },
+            {
+              "bool" : {
+                "must_not" : [
+                  {
+                    "exists" : {
+                      "field" : "topProductPromoInfoVendor.missedTime",
+                      "boost" : 1.0
+                    }
+                  }
+                ],
+                "disable_coord" : false,
+                "adjust_pure_negative" : true,
+                "boost" : 1.0
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "minimum_should_match" : "1",
+          "boost" : 1.0
+        }
+      }
+    ],
+    "must_not" : [
+      {
+        "ids" : {
+          "type" : [ ],
+          "values" : [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "boost" : 1.0
+        }
+      }
+    ],
+    "should" : [
+      {
+        "terms" : {
+          "productId" : [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21,
+            23,
+            25,
+            27,
+            29
+          ],
+          "boost" : 1.0
+        }
+      }
+    ],
+    "disable_coord" : false,
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
+}'

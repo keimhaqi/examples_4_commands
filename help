@@ -1,0 +1,179 @@
+    @KafkaListener(topics = "${kafka.update.topic}")
+    public void update(String message) {
+//        new Thread(() -> {
+            logger.info(message);
+            try{
+                JsonMapper jsonMapper = JsonMapper.nonNullMapper();
+                itemService.importURItemsInfoPersonalizedSearch(jsonMapper.fromJson(message, ProductBackendLevel2.class));
+            }catch (JSONException je){
+                logger.error(message);
+                logger.error(je.getMessage());
+            }catch (JsonParseException jpe){
+                logger.error(message);
+                logger.error(jpe.getMessage());
+            }
+//        }).start();
+    }
+
+        public Boolean importURItemsInfoPersonalizedSearch(ProductBackendLevel2 productBackendLevel2){
+        return jinbagElasticSearchCli.updateItems(productBackendLevel2);
+    }
+
+
+    public Boolean updateItems(ProductBackendLevel2 productBackendLevel2){
+        if(productBackendLevel2 == null) return Boolean.FALSE;
+        logger.info(productBackendLevel2.getProductId().toString());
+        if(activeProductManager.isExist(productBackendLevel2.getProductId())){
+            // update items in UR
+            importURItems(productBackendLevel2);
+        }
+        // update items in SearchSystem
+        indexSingleItem(productBackendLevel2);
+        return Boolean.TRUE;
+    }
+
+
+    private Boolean indexSingleItem(ProductBackendLevel2 productBackendLevel2){
+        BulkRequestBuilder bulkRequest = client.prepareBulk();
+        ProductBackend productBackend = new ProductBackend(productBackendLevel2);
+
+        ProductBackend queryRes = querySingleItem(productBackend.getId().toString());
+
+        if(queryRes != null && queryRes.getPromo() != null){
+            productBackend.setPromo(queryRes.getPromo());
+        }
+
+        if(productBackend.getId() == null){
+            return true;
+        }else{
+            logger.info(productBackend.getId().toString());
+        }
+
+        if(productBackend.getId() == null){
+            return Boolean.TRUE;
+        }else{
+            logger.info(productBackend.getId().toString());
+        }
+        productBackend = vendorManager.vendorHandler(productBackend);
+        productBackend = categoryManager.categoryHandler(productBackend);
+        logger.debug(productBackend.toString());
+        IndexRequest indexRequest = new IndexRequest(index, docType, productBackend.getId().toString())
+                .source(jinbagUtils.getJsonMapper().toJson(productBackend));
+//        UpdateRequest updateRequest = new UpdateRequest(index, docType, productBackend.getId().toString())
+//                .retryOnConflict(RETRY_ON_CONFLICT)
+//                .doc(jinbagUtils.getJsonMapper().toJson(productBackend))
+//                .upsert(indexRequest);
+        bulkRequest.add(indexRequest);
+
+        if(bulkRequest.numberOfActions() > 0){
+            BulkResponse bulkResponse = bulkRequest.execute().actionGet();
+            if(bulkResponse.hasFailures()){
+                logger.error(bulkResponse.buildFailureMessage());
+            }
+        }
+
+
+        return Boolean.TRUE;
+    }
+
+
+        private Boolean importURItems(ProductBackendLevel2 productBackendLevel2){
+        ProductBackend productBackend = new ProductBackend(productBackendLevel2);
+        if(productBackend.getId() == null){
+            return Boolean.FALSE;
+        }
+        productBackend = vendorManager.vendorHandler(productBackend);
+        productBackend = categoryManager.categoryHandler(productBackend);
+
+        Event event = new Event();
+        event.event("$set");
+        event.entityType("item");
+        event.entityId(productBackend.getId().toString());
+
+        Map<String, Object> properties = new HashMap<String, Object>();
+        if(!StringUtils.isEmpty(productBackend.getBrand())){
+            properties.put("brand", productBackend.getBrand());
+        }
+        if(!StringUtils.isEmpty(productBackend.getTitle())){
+            properties.put("title", productBackend.getTitle());
+        }
+        if(!StringUtils.isEmpty(productBackend.getDescription())){
+            properties.put("description", productBackend.getDescription());
+        }
+        if(!StringUtils.isEmpty(productBackend.getDetail())){
+            properties.put("detail", productBackend.getDetail());
+        }
+        if(!StringUtils.isEmpty(productBackend.getImageLink())){
+            properties.put("imageLink", productBackend.getImageLink());
+        }
+        if(!StringUtils.isEmpty(productBackend.getKeywords())){
+            properties.put("keywords", productBackend.getKeywords());
+        }
+        if(!StringUtils.isEmpty(productBackend.getWidth())){
+            properties.put("width", productBackend.getWidth());
+        }
+        if(productBackend.getHeight() != null){
+            properties.put("height", productBackend.getHeight());
+        }
+        if(!StringUtils.isEmpty(productBackend.getUpc())){
+            properties.put("upc", productBackend.getUpc());
+        }
+        if(!StringUtils.isEmpty(productBackend.getSpu())){
+            properties.put("spu", productBackend.getSpu());
+        }
+        if(productBackend.getClassId() != null){
+            properties.put("classId", productBackend.getClassId());
+        }
+        if(!StringUtils.isEmpty(productBackend.getCurrency())){
+            properties.put("currency", productBackend.getCurrency());
+        }
+        if(productBackend.getProductPrice() != null){
+            properties.put("productPriceMin", productBackend.getProductPrice().getMin());
+            properties.put("productPriceMax", productBackend.getProductPrice().getMax());
+        }
+        if(productBackend.getProductSale() != null){
+            properties.put("productSaleMin", productBackend.getProductSale().getMin());
+            properties.put("productSaleMax", productBackend.getProductSale().getMax());
+        }
+        if(!StringUtils.isEmpty(productBackend.getLanguage())){
+            properties.put("language", productBackend.getLanguage());
+        }
+        if(productBackend.getVendors() != null){
+            properties.put("vendors", productBackend.getVendors());
+        }
+
+        if(productBackend.getCouponPrice() != null){
+            properties.put("couponMin", productBackend.getCouponPrice().getMin());
+            properties.put("couponMax", productBackend.getCouponPrice().getMax());
+        }
+
+        if(productBackend.getTopProduct() != null){
+            properties.put("top_product", productBackend.getTopProduct());
+            if(productBackend.getTopProduct() == Boolean.TRUE && productBackend.getTopProductPromoInfoVendor() != null){
+                properties.put("topProductPromoInfoVendor", jinbagUtils.getJsonMapper().toJson(productBackend.getTopProductPromoInfoVendor()));
+            }
+
+            if(productBackend.getTopProduct() == Boolean.TRUE && productBackend.getTopProductPromoInfo() != null){
+                properties.put("topProductPromoInfo", jinbagUtils.getJsonMapper().toJson(productBackend.getTopProductPromoInfo()));
+            }
+        }
+
+        if(productBackend.getMissedTime() != null){
+            properties.put("missedTime", productBackend.getMissedTime());
+        }
+
+        if(productBackend.getLastCheckedTime() != null){
+            properties.put("lastCheckedTime", productBackend.getLastCheckedTime());
+        }
+
+        properties.put("channel", productBackend.getChannel());
+
+        event.properties(properties);
+        String eventId = predictionIOSD.createEvent(event);
+        logger.info(event.toJsonString());
+        logger.info("eventId = " + eventId);
+        return Boolean.TRUE;
+    }
+
+
+    192.168.1.191

@@ -1,0 +1,34 @@
+curl -k -H 'Content-Type: application/json' -d '
+{    
+    "fields":     [        
+        {"name":"promo", "values": ["promo_v"],"bias": -1},
+        {"name":"missedRange", "values": 120,"bias": -1},
+        {"name":"confirmed", "values": [1,0],"bias": -1},        
+        {"name":"availability", "values":["in_stock", "out_of_stock"], "bias": -1}    
+    ],    
+    "user": 200117,     
+    "num": 8,    
+    "userBias":0,    
+    "itemBias":0,    
+    "blacklistItems":{"link":[111, 222],"product":[111, 444]}
+}' http://localhost:9223/api/v3/todayPicks
+
+
+{"taskId":1,"visible":7,"dataType":0,"displayType":0,"title":"aaaa","startDate":1513728000000,"endDate":1513987199000,"cTitle":"一二三","cLongDesc":"一二三一二三一二三一二三一二三一二三","longDesc":"aaaaaaaaaaaaaaaa","shortDesc":"aaaaaaaa","cShortDesc":"一二三一二三一二三","cardImg":"1513835735_16751card_img.jpg","cardWidth":290,"cardHeight":290,"productList":[{"sale":"","productId":8376442,"price":"$5.50 - $27.11","vendorId":3,"brand":"NIKE","categoryId":0},{"sale":"","productId":8376441,"price":"$9.00 - $20.32","vendorId":3,"brand":"NIKE","categoryId":0},{"sale":"","productId":8376444,"price":"$14.97 - $14.99","vendorId":3,"brand":"NIKE","categoryId":0},{"sale":"","productId":8376446,"price":"$19.99","vendorId":3,"brand":"NIKE","categoryId":0},{"sale":"","productId":8376445,"price":"$19.99","vendorId":3,"brand":"NIKE","categoryId":0},{"sale":"","productId":8376443,"price":"$9.99 - $39.99","vendorId":3,"brand":"NIKE","categoryId":0},{"sale":"","productId":8376447,"price":"$15.96 - $26.20","vendorId":3,"brand":"NIKE","categoryId":428}],"id":16751}
+
+
+
+curl -k -H 'Content-Type: application/json' -d '
+{    
+    "fields":     [        
+        {"name":"visible", "values":[7] ,"bias": -1}   
+    ],    
+    "user": 200117,     
+    "num": 8,    
+    "userBias":0,    
+    "itemBias":0,    
+    "blacklistItems":{"link":[111, 222],"product":[111, 444]}
+}' http://localhost:9223/api/v3/todayPicks
+
+
+{"id":8238366,"imageLink":"https://images-na.ssl-images-amazon.com/images/I/819S6M-5cpL._SY355_.jpg","description":["Power-saving, high-accuracy Delta Zero sensor technology. Try tracking on a different surface","Up to 250 hours of battery life","Lag-free gaming-grade wireless, Performance and Endurance modes maximize battery life","For Windows 10, Windows 8, Windows 7, Windows Vista, and Mac OS X 10.6.8 or higher. For more details go through the \"System Requirements\" mentioned below.","Long-life buttons rated to 20 million clicks, 11 programmable buttons"],"detail":[],"attribute":[null],"keywords":"Logitech G602 Lag-Free Wireless Gaming Mouse – 11 Programmable Buttons, Up to 2500 DPI","width":229,"height":355,"category":1,"categories":["shopping"],"availability":"out_of_stock","brand":"Logitech","discount":{"discountMetricMin":62.507812,"discountMetricMax":62.507812,"discount":"62.507812%"},"currency":"$","productSale":{"min":29.99,"max":29.99},"sale":"$29.99","productPrice":{"min":79.99,"max":79.99},"price":"$79.99","vendorId":[3,5],"vendors":["Amazon.cn","Amazon"],"language":"en","channel":1,"title":"Logitech G602 Lag-Free Wireless Gaming Mouse – 11 Programmable Buttons, Up to 2500 DPI","promo":["promo_v"],"link":[],"lastCheckedTime":1513850920000,"missedTime":1513827936000,"top_product":true,"top_product_promo_info_vendor":{"endDate":1513929599000,"vendorId":3,"titleCh":"Amazon - $29.99 ($79.99) Logitech G602 Lag-Free Wireless Gaming Mouse – 11 Programmable Buttons, Up to 2500 DPI","confirmed":1,"imgUrl":"1513602283_16611card_img.jpg","cardHeight":290,"descEn":"Shipping is free with Prime or over $25.","titleEn":"Amazon - $29.99 ($79.99) Logitech G602 Lag-Free Wireless Gaming Mouse – 11 Programmable Buttons, Up to 2500 DPI","confirmedTime":1513842214000,"cardWidth":290,"id":8238366,"taskId":5370384,"startDate":1513584000000,"descCh":"Shipping is free with Prime or over $25.","missedTime":1513827936000}}

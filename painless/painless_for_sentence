@@ -1,0 +1,69 @@
+curl -XGET 'localhost:9200/hockey/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "function_score": {
+      "script_score": {
+        "script": {
+          "lang": "painless",
+          "inline": "int total = 0; for (int i = 0; i < doc[\'goals\'].length; ++i) { total += doc[\'goals\'][i]; } return total;"
+        }
+      }
+    }
+  }
+}
+'
+
+
+// 在url中单引号(')的数字表示形式是\u0027
+curl -XGET 'localhost:9200/hockey/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "function_score": {
+      "script_score": {
+        "script": {
+          "lang": "painless",
+          "inline": "int total = 0; for (int i = 0; i < doc[\u0027goals\u0027].length; ++i) { total += doc[\u0027goals\u0027][i]; } return total;"
+        }
+      }
+    }
+  }
+}
+'
+
+
+
+curl -XGET 'localhost:9200/hockey/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "match_all": {}
+  },
+  "script_fields": {
+    "total_goals": {
+      "script": {
+        "lang": "painless",
+        "inline": "int total = 0; for (int i = 0; i < doc[\u0027goals\u0027].length; ++i) { total += doc[\u0027goals\u0027][i]; } return total;"
+      }
+    }
+  }
+}
+'
+
+
+
+curl -XGET 'localhost:9200/hockey/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "match_all": {}
+  },
+  "sort": {
+    "_script": {
+      "type": "string",
+      "order": "asc",
+      "script": {
+        "lang": "painless",
+        "inline": "doc[\u0027first.keyword\u0027].value + \u0027 \u0027 + doc[\u0027last.keyword\u0027].value"
+      }
+    }
+  }
+}
+'

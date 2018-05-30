@@ -1,0 +1,6 @@
+curl -XGET 'localhost:9200/search_b/_analyze?pretty' -d '
+{
+  "analyzer": "my_analyzer",
+  "text": "bloomingdale&#039;s"
+}
+'

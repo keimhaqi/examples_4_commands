@@ -1,0 +1,34 @@
+1. 根据传入的参数请求UR，获取推荐信息，把推荐信息保存到ur;
+2-1. 根据传入的参数和ur异步查询ElasticSearch，同时匹配link;
+    2-1.1 准备ElasticSearch的query语句queryBuilder4Link;
+    2-1.2 在queryBuilder4Link设置各项筛选参数: blacklist、vendors、brand、categories、visible、
+          price_min、price_max、discount_min、discount_max、start_date、end_date、
+          c_title、long_desc、c_long_desc、short_desc、c_short_desc;
+    2-1.3 向ElasticSearch提交请求;
+    2-1.4 根据匹配结果把link信息保存到动态数组itemlist中;
+2-2. 根据传入的参数和ur异步查询ElasticSearch，打折商品;
+    2-2.1 准备两个ElasticSearch的query语句queryBuilder4Product、queryBuilder4TopProduct;
+    2-2.2 在queryBuilder4TopProduct中设置各项筛选参数：blacklist、promo、link、availability、language、channel、top_product_promo_info_vendor、top_product_promo_info、top_product;
+    2-2.3 在queryBuilder4Product中设置各项筛选参数: blacklist、promo、link、availability、language、channel;
+    2-2.4 查询ElasticSearch;
+        2-2.4.1 使用queryBuilder4TopProduct查询ElasticSearch，设置Filter，从ur给出的推荐信息中优先查找top_product并且满足promo、top_product_promo_info_vendor的一级商品; 
+        2-2.4.2 把查询结果保存到动态数组itemlist中;
+    2-2.5 查看itemlist中的元素个数是否满足请求参数中的请求个数？
+        2-2.5.1 满足请求个数，直接退出查询ElasticSearch;
+        2-2.5.2 不满足请求个数，继续查询ElasticSearch;
+            2-2.5.2.1 把所有ur给出的productId和当前已经匹配的productId作为queryBuilder4TopProduct的blacklist;
+            2-2.5.2.2 使用queryBuilder4TopProduct查询ElasticSearch，不设置Filter，查询不受ur约束的满足top_product、promo、top_product_promo_info_vendor的商品;
+            2-2.5.2.3 把匹配结果添加到itemlist中;
+    2-2.6 查看itemlist中的元素个数是否满足请求参数中的请求个数？
+        2-2.6.1 满足请求个数，直接退出查询ElasticSearch;
+        2-2.6.2 不满足请求个数，继续查询ElasticSearch;
+            2-2.6.2.1 使用queryBuilder4Product查询ElasticSearch，设置Filter，从ur给出的推荐信息中优先筛选满足promo的商品;
+            2-2.6.2.2 把匹配结果添加到itemlist中;
+    2-2.7 查看itemlist中的元素个数是否满足请求参数中的请求个数？
+        2-2.7.1 满足请求个数，直接退出查询ElasticSearch;
+        2-2.7.2 不满足请求个数，继续查询ElasticSearch;
+            2-2.7.2.1 使用queryBuilder4Product查询ElasticSearch，不设置Filter，满足promo的普通商品;
+            2-2.7.2.2 把匹配结果添加到itemlist中;
+3. 退出查询ElasticSearch;
+4. 对查询结果(打折商品和link)进行sort，根据score的大小降序排序;
+5. 向接口调用者返回排序结果;

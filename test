@@ -1,0 +1,214 @@
+curl -XGET '172.18.0.2:9200/.monitoring-es-6-2018.05.14/doc/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 10,
+    "query": {
+       "range" : {
+         "timestamp":{
+           "gte": "2018-05-14T01:59:50.000Z",
+           "lte": "2018-05-14T02:00:03.000Z"
+         }
+       }
+    }
+}
+'
+
+curl -X GET "96.90.248.211:9201/_stats"
+
+
+{
+  "took" : 19,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 1,
+    "max_score" : 1.0,
+    "hits" : [
+      {
+        "_index" : ".monitoring-es-6-2018.05.14",
+        "_type" : "doc",
+        "_id" : "AWNcYD8eHiV5khiBJDlA",
+        "_score" : 1.0,
+        "_source" : {
+          "cluster_uuid" : "WmtHdUcpSvCRoa5GLFeULw",
+          "timestamp" : "2018-05-14T02:00:01.169Z",
+          "type" : "node_stats",
+          "source_node" : {
+            "uuid" : "ien8yNpFRqGP4dNDbSTjcg",
+            "host" : "172.18.0.2",
+            "transport_address" : "172.18.0.2:9300",
+            "ip" : "172.18.0.2",
+            "name" : "ien8yNp",
+            "attributes" : {
+              "ml.enabled" : "true"
+            }
+          },
+          "node_stats" : {
+            "node_id" : "ien8yNpFRqGP4dNDbSTjcg",
+            "node_master" : false,
+            "mlockall" : true,
+            "indices" : {
+              "docs" : {
+                "count" : 10446687
+              },
+              "store" : {
+                "size_in_bytes" : 10683149729,
+                "throttle_time_in_millis" : 0
+              },
+              "indexing" : {
+                "index_total" : 31731903,
+                "index_time_in_millis" : 14050331,
+                "throttle_time_in_millis" : 0
+              },
+              "search" : {
+                "query_total" : 615757,
+                "query_time_in_millis" : 1332935
+              },
+              "query_cache" : {
+                "memory_size_in_bytes" : 703995,
+                "hit_count" : 157687,
+                "miss_count" : 653562,
+                "evictions" : 789
+              },
+              "fielddata" : {
+                "memory_size_in_bytes" : 2093720,
+                "evictions" : 0
+              },
+              "segments" : {
+                "count" : 691,
+                "memory_in_bytes" : 29952710,
+                "terms_memory_in_bytes" : 20575973,
+                "stored_fields_memory_in_bytes" : 2027168,
+                "term_vectors_memory_in_bytes" : 1056928,
+                "norms_memory_in_bytes" : 423104,
+                "points_memory_in_bytes" : 1163605,
+                "doc_values_memory_in_bytes" : 4705932,
+                "index_writer_memory_in_bytes" : 52535654,
+                "version_map_memory_in_bytes" : 15926933,
+                "fixed_bit_set_memory_in_bytes" : 766072
+              },
+              "request_cache" : {
+                "memory_size_in_bytes" : 0,
+                "evictions" : 0,
+                "hit_count" : 0,
+                "miss_count" : 8
+              }
+            },
+            "os" : {
+              "cpu" : {
+                "load_average" : {
+                  "1m" : 1.49,
+                  "5m" : 1.83,
+                  "15m" : 2.32
+                }
+              },
+              "cgroup" : {
+                "cpuacct" : {
+                  "control_group" : "/",
+                  "usage_nanos" : 72665686386689
+                },
+                "cpu" : {
+                  "control_group" : "/",
+                  "cfs_period_micros" : 100000,
+                  "cfs_quota_micros" : -1,
+                  "stat" : {
+                    "number_of_elapsed_periods" : 0,
+                    "number_of_times_throttled" : 0,
+                    "time_throttled_nanos" : 0
+                  }
+                }
+              }
+            },
+            "process" : {
+              "open_file_descriptors" : 728,
+              "max_file_descriptors" : 65536,
+              "cpu" : {
+                "percent" : 1
+              }
+            },
+            "jvm" : {
+              "mem" : {
+                "heap_used_in_bytes" : 2105888624,
+                "heap_used_percent" : 50,
+                "heap_max_in_bytes" : 4181590016
+              },
+              "gc" : {
+                "collectors" : {
+                  "young" : {
+                    "collection_count" : 16062,
+                    "collection_time_in_millis" : 194850
+                  },
+                  "old" : {
+                    "collection_count" : 11,
+                    "collection_time_in_millis" : 1465
+                  }
+                }
+              }
+            },
+            "thread_pool" : {
+              "bulk" : {
+                "threads" : 16,
+                "queue" : 0,
+                "rejected" : 0
+              },
+              "generic" : {
+                "threads" : 8,
+                "queue" : 0,
+                "rejected" : 0
+              },
+              "get" : {
+                "threads" : 16,
+                "queue" : 0,
+                "rejected" : 0
+              },
+              "index" : {
+                "threads" : 16,
+                "queue" : 0,
+                "rejected" : 0
+              },
+              "management" : {
+                "threads" : 4,
+                "queue" : 0,
+                "rejected" : 0
+              },
+              "search" : {
+                "threads" : 25,
+                "queue" : 0,
+                "rejected" : 0
+              },
+              "watcher" : {
+                "threads" : 0,
+                "queue" : 0,
+                "rejected" : 0
+              }
+            },
+            "fs" : {
+              "total" : {
+                "total_in_bytes" : 480406102016,
+                "free_in_bytes" : 357925814272,
+                "available_in_bytes" : 333498847232
+              },
+              "data" : [
+                {
+                  "spins" : "true"
+                }
+              ],
+              "io_stats" : {
+                "total" : {
+                  "operations" : 41783510,
+                  "read_operations" : 3068689,
+                  "write_operations" : 38714821,
+                  "read_kilobytes" : 67629556,
+                  "write_kilobytes" : 1251363140
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

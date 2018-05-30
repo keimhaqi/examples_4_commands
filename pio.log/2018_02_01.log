@@ -1,0 +1,278 @@
+2018-02-01 10:05:19,873 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - 
+2018-02-01 10:05:19,874 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Query:
+2018-02-01 10:05:19,879 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Results: 100 retrieved of a possible 1503
+2018-02-01 10:05:23,454 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:05:23,454 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - 
+2018-02-01 10:05:23,454 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Query:
+2018-02-01 10:05:25,436 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Results: 1024 retrieved of a possible 2135
+2018-02-01 10:05:29,707 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:05:29,708 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - 
+2018-02-01 10:05:29,708 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Query:
+2018-02-01 10:05:31,075 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Results: 1024 retrieved of a possible 2135
+2018-02-01 10:05:33,384 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:05:33,384 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - 
+2018-02-01 10:05:33,385 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Query:
+2018-02-01 10:05:34,999 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Results: 1024 retrieved of a possible 2134
+2018-02-01 10:05:37,632 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:05:37,632 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - 
+2018-02-01 10:05:37,632 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Query:
+2018-02-01 10:05:39,040 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Results: 1024 retrieved of a possible 2134
+2018-02-01 10:05:39,048 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - No user id for recs, returning similar items for the item specified
+2018-02-01 10:05:39,048 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - 
+2018-02-01 10:05:39,048 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Query:
+2018-02-01 10:05:39,052 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Results: 100 retrieved of a possible 1503
+2018-02-01 10:05:42,649 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:05:42,649 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - 
+2018-02-01 10:05:42,650 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Query:
+2018-02-01 10:05:44,551 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Results: 1024 retrieved of a possible 2133
+2018-02-01 10:05:47,226 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:05:47,226 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - 
+2018-02-01 10:05:47,227 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Query:
+2018-02-01 10:05:49,132 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Results: 1024 retrieved of a possible 2133
+2018-02-01 10:05:51,940 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:05:51,940 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - 
+2018-02-01 10:05:51,941 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Query:
+2018-02-01 10:05:53,485 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Results: 1024 retrieved of a possible 2133
+2018-02-01 10:05:55,143 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:05:55,144 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - 
+2018-02-01 10:05:55,144 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Query:
+2018-02-01 10:05:56,652 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Results: 1024 retrieved of a possible 2133
+2018-02-01 10:06:00,725 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:06:00,726 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - 
+2018-02-01 10:06:00,726 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Query:
+2018-02-01 10:06:01,507 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Results: 1024 retrieved of a possible 2133
+2018-02-01 10:06:06,597 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:06:06,597 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - 
+2018-02-01 10:06:06,597 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Query:
+2018-02-01 10:06:06,601 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Results: 100 retrieved of a possible 1503
+2018-02-01 10:06:20,209 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:06:20,210 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - 
+2018-02-01 10:06:20,210 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Query:
+2018-02-01 10:06:22,192 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Results: 100 retrieved of a possible 1503
+2018-02-01 10:06:33,662 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - No user id for recs, returning similar items for the item specified
+2018-02-01 10:06:33,663 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - 
+2018-02-01 10:06:33,663 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Query:
+2018-02-01 10:06:35,542 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Results: 100 retrieved of a possible 1503
+2018-02-01 10:06:46,949 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1941] - Query:
+2018-02-01 10:07:16,792 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-1] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 millisecon
+ds]
+2018-02-01 10:07:16,793 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-1] - 
+2018-02-01 10:07:16,793 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-1] - Query:
+2018-02-01 10:07:21,845 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-1] - Results: 1024 retrieved of a possible 2153
+2018-02-01 10:07:29,784 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1945] - Query:
+2018-02-01 10:07:32,121 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - No user id for recs, returning similar items for the item specified
+2018-02-01 10:07:32,122 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:07:32,123 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:07:32,131 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 100 retrieved of a possible 1503
+2018-02-01 10:07:38,117 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-3] - 
+2018-02-01 10:07:40,026 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-3] - Query:
+2018-02-01 10:07:40,912 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:07:40,914 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:07:40,914 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:07:40,915 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-3] - Results: 1024 retrieved of a possible 2153
+2018-02-01 10:07:40,968 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2153
+2018-02-01 10:07:42,909 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-3] - 
+2018-02-01 10:07:42,910 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-3] - Query:
+2018-02-01 10:07:42,915 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-3] - Results: 16 retrieved of a possible 1503
+2018-02-01 10:07:49,819 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:07:49,820 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:07:49,820 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:07:49,858 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2146
+2018-02-01 10:07:53,152 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:07:53,153 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:07:53,153 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:07:53,195 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2142
+2018-02-01 10:07:55,497 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:07:55,497 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:07:55,497 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:07:55,541 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2142
+2018-02-01 10:07:58,129 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:07:58,130 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:07:58,130 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:07:58,191 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2142
+2018-02-01 10:08:01,646 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:08:01,647 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:08:01,647 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:08:01,696 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2142
+2018-02-01 10:08:04,490 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:08:04,491 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:08:04,491 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:08:05,392 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2142
+2018-02-01 10:08:07,666 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:08:07,667 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:08:07,667 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:08:08,413 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2142
+2018-02-01 10:08:11,452 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:08:11,453 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:08:11,453 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:08:12,311 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2142
+2018-02-01 10:08:13,098 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:08:13,099 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:08:13,099 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:08:13,103 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 100 retrieved of a possible 1503
+2018-02-01 10:08:14,914 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:08:14,915 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:08:14,916 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:08:15,988 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2141
+2018-02-01 10:08:17,458 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:08:17,459 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:08:17,459 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:08:17,460 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 16 retrieved of a possible 1503
+2018-02-01 10:08:19,062 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:08:19,063 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:08:19,063 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:08:19,981 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2140
+2018-02-01 10:08:22,845 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:08:22,846 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:08:22,846 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:08:23,711 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2140
+2018-02-01 10:08:25,097 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:08:25,098 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:08:25,098 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:08:25,100 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 16 retrieved of a possible 1487
+2018-02-01 10:08:26,478 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:08:26,479 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:08:26,479 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:08:26,481 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 18 retrieved of a possible 1503
+2018-02-01 10:08:30,455 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:08:30,457 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:08:30,457 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:08:31,271 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 12 retrieved of a possible 1485
+2018-02-01 10:08:33,345 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - No user id for recs, returning similar items for the item specified
+2018-02-01 10:08:33,345 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:08:33,345 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:08:34,014 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 100 retrieved of a possible 1503
+2018-02-01 10:08:40,260 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:08:40,261 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:08:40,261 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:08:40,963 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2145
+2018-02-01 10:09:04,743 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1940] - Query:
+2018-02-01 10:09:20,221 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:09:20,222 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:09:20,222 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:09:20,971 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2153
+2018-02-01 10:09:31,284 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - No user id for recs, returning similar items for the item specified
+2018-02-01 10:09:32,075 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:09:33,460 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:09:34,926 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 100 retrieved of a possible 1503
+2018-02-01 10:09:40,569 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1941] - Query:
+2018-02-01 10:09:54,913 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:09:54,914 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:09:54,914 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:09:55,709 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2140
+2018-02-01 10:10:00,775 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:10:00,776 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:10:00,776 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:10:02,260 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2138
+2018-02-01 10:10:11,527 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:10:12,178 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - 
+2018-02-01 10:10:12,179 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Query:
+2018-02-01 10:10:20,662 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Results: 1024 retrieved of a possible 2146
+2018-02-01 10:10:21,340 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1940] - Query:
+2018-02-01 10:10:24,945 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-7] - 
+2018-02-01 10:10:24,945 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-7] - Query:
+2018-02-01 10:10:25,706 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-7] - Results: 100 retrieved of a possible 1503
+2018-02-01 10:11:04,458 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1947] - Query:
+2018-02-01 10:11:09,267 WARN  org.apache.hadoop.ipc.RpcClient [IPC Client (1427813093) connection to rectest1.maui.jinbag.com/192.168.1.195:49293 from jinbag] - IPC Client (1427813093) connection to rectest1.maui
+.jinbag.com/192.168.1.195:49293 from jinbag: unexpected exception receiving call responses
+2018-02-01 10:11:13,535 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1947] - Query:
+2018-02-01 10:11:48,713 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1947] - Query:
+2018-02-01 10:12:23,768 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Timeout when read recent events. Empty list is used. java.util.concurrent.TimeoutException: Futures timed out after [200 milliseco
+nds]
+2018-02-01 10:12:23,768 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - 
+2018-02-01 10:12:25,952 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Query:
+2018-02-01 10:12:27,573 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1948] - Query:
+2018-02-01 10:12:28,583 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-31] - Results: 1024 retrieved of a possible 2137
+2018-02-01 10:13:10,956 WARN  org.apache.hadoop.ipc.RpcClient [IPC Client (1427813093) connection to rectest1.maui.jinbag.com/192.168.1.195:49293 from jinbag] - IPC Client (1427813093) connection to rectest1.maui
+.jinbag.com/192.168.1.195:49293 from jinbag: unexpected exception receiving call responses
+2018-02-01 10:13:15,732 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1938] - Query:
+2018-02-01 10:13:17,633 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-9] - 
+2018-02-01 10:13:17,674 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-9] - Query:
+2018-02-01 10:13:17,711 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-9] - Results: 1024 retrieved of a possible 2153
+2018-02-01 10:13:32,345 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-13] - 
+2018-02-01 10:13:32,375 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-13] - Query:
+2018-02-01 10:13:32,411 INFO  com.jinbag.URAlgorithm [ForkJoinPool-2-worker-13] - Results: 1024 retrieved of a possible 2153
+2018-02-01 10:18:34,107 WARN  org.apache.hadoop.ipc.RpcClient [IPC Client (1427813093) connection to rectest1.maui.jinbag.com/192.168.1.195:49293 from jinbag] - IPC Client (1427813093) connection to rectest1.maui
+.jinbag.com/192.168.1.195:49293 from jinbag: unexpected exception receiving call responses
+2018-02-01 10:20:47,124 WARN  org.elasticsearch.transport [elasticsearch[Living Diamond][transport_client_worker][T#1]{New I/O worker #34}] - [Living Diamond] Received response for a request that has timed out, s
+ent [22520ms] ago, timed out [9337ms] ago, action [cluster:monitor/nodes/info], node [[#transport#-1][rectest1][inet[localhost/127.0.0.1:9300]]], id [77402]
+2018-02-01 10:20:53,956 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-23] - Error when read recent events: java.lang.RuntimeException: org.apache.hadoop.hbase.client.ScannerTimeoutException: 272495ms passed
+ since the last invocation, timeout is currently set to 60000
+2018-02-01 10:20:53,958 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1941] - Query:
+2018-02-01 10:20:53,958 WARN  org.apache.hadoop.hbase.client.HConnectionManager$HConnectionImplementation [ForkJoinPool-2-worker-15-EventThread] - This client just lost it's session with ZooKeeper, closing it. It
+ will be recreated next time someone needs it
+2018-02-01 10:21:08,961 ERROR org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper [ForkJoinPool-2-worker-25] - ZooKeeper getData failed after 4 attempts
+2018-02-01 10:21:08,962 ERROR org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper [ForkJoinPool-2-worker-1] - ZooKeeper getData failed after 4 attempts
+2018-02-01 10:21:08,962 ERROR org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper [ForkJoinPool-2-worker-27] - ZooKeeper getData failed after 4 attempts
+2018-02-01 10:21:08,961 ERROR org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper [ForkJoinPool-2-worker-17] - ZooKeeper getData failed after 4 attempts
+2018-02-01 10:21:08,963 ERROR org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher [ForkJoinPool-2-worker-27] - hconnection-0x573d2dd6-0x1613b42f10b0024, quorum=localhost:2181, baseZNode=/hbase Received unexpected 
+KeeperException, re-throwing exception
+2018-02-01 10:21:08,962 ERROR org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher [ForkJoinPool-2-worker-1] - hconnection-0x573d2dd6-0x1613b42f10b0024, quorum=localhost:2181, baseZNode=/hbase Received unexpected K
+eeperException, re-throwing exception
+2018-02-01 10:21:08,962 ERROR org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher [ForkJoinPool-2-worker-25] - hconnection-0x573d2dd6-0x1613b42f10b0024, quorum=localhost:2181, baseZNode=/hbase Received unexpected 
+KeeperException, re-throwing exception
+2018-02-01 10:21:08,963 ERROR org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher [ForkJoinPool-2-worker-17] - hconnection-0x573d2dd6-0x1613b42f10b0024, quorum=localhost:2181, baseZNode=/hbase Received unexpected 
+KeeperException, re-throwing exception
+2018-02-01 10:21:09,061 ERROR org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper [ForkJoinPool-2-worker-19] - ZooKeeper getData failed after 4 attempts
+2018-02-01 10:21:09,061 ERROR org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper [ForkJoinPool-2-worker-15] - ZooKeeper getData failed after 4 attempts
+2018-02-01 10:21:09,061 ERROR org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher [ForkJoinPool-2-worker-19] - hconnection-0x573d2dd6-0x1613b42f10b0024, quorum=localhost:2181, baseZNode=/hbase Received unexpected 
+KeeperException, re-throwing exception
+2018-02-01 10:21:09,061 ERROR org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper [ForkJoinPool-2-worker-29] - ZooKeeper getData failed after 4 attempts
+2018-02-01 10:21:09,061 ERROR org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher [ForkJoinPool-2-worker-15] - hconnection-0x573d2dd6-0x1613b42f10b0024, quorum=localhost:2181, baseZNode=/hbase Received unexpected 
+KeeperException, re-throwing exception
+2018-02-01 10:21:09,062 ERROR org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher [ForkJoinPool-2-worker-29] - hconnection-0x573d2dd6-0x1613b42f10b0024, quorum=localhost:2181, baseZNode=/hbase Received unexpected 
+KeeperException, re-throwing exception
+2018-02-01 10:21:09,506 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-17] - Error when read recent events: java.lang.RuntimeException: org.apache.hadoop.hbase.client.ScannerTimeoutException: 348982ms passed
+ since the last invocation, timeout is currently set to 60000
+2018-02-01 10:21:09,507 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1941] - Query:
+2018-02-01 10:21:09,567 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-19] - Error when read recent events: java.lang.RuntimeException: org.apache.hadoop.hbase.client.ScannerTimeoutException: 346980ms passed
+ since the last invocation, timeout is currently set to 60000
+2018-02-01 10:21:09,568 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1941] - Query:
+2018-02-01 10:21:09,569 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-15] - Error when read recent events: java.lang.RuntimeException: org.apache.hadoop.hbase.client.ScannerTimeoutException: 289022ms passed
+ since the last invocation, timeout is currently set to 60000
+2018-02-01 10:21:09,570 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1941] - Query:
+2018-02-01 10:21:09,571 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-29] - Error when read recent events: java.lang.RuntimeException: org.apache.hadoop.hbase.client.ScannerTimeoutException: 158378ms passed
+ since the last invocation, timeout is currently set to 60000
+2018-02-01 10:21:09,572 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1941] - Query:
+2018-02-01 10:21:09,970 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-1] - Error when read recent events: java.lang.RuntimeException: org.apache.hadoop.hbase.client.ScannerTimeoutException: 372244ms passed 
+since the last invocation, timeout is currently set to 60000
+2018-02-01 10:21:09,971 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1941] - Query:
+2018-02-01 10:21:09,974 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-25] - Error when read recent events: java.lang.RuntimeException: org.apache.hadoop.hbase.client.ScannerTimeoutException: 372248ms passed
+ since the last invocation, timeout is currently set to 60000
+2018-02-01 10:21:09,975 ERROR io.prediction.workflow.ServerActor [pio-server-akka.actor.default-dispatcher-1941] - Query:
+2018-02-01 10:21:11,977 ERROR com.jinbag.URAlgorithm [ForkJoinPool-2-worker-27] - Error when read recent events: java.lang.RuntimeException: org.apache.hadoop.hbase.client.ScannerTimeoutException: 373665ms passed
+ since the last invocation, timeout is currently set to 60000
+2018-02-01 10:05:19,873

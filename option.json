@@ -1,0 +1,193 @@
+{
+    "options": {
+        "brands": {
+            "semiOption": [
+                {
+                    "option": "Sony",
+                    "num": 17
+                },
+                {
+                    "option": "Stanley",
+                    "num": 13
+                },
+                {
+                    "option": "Canon",
+                    "num": 12
+                },
+                {
+                    "option": "DEWALT",
+                    "num": 11
+                },
+                {
+                    "option": "Panasonic",
+                    "num": 11
+                },
+                {
+                    "option": "Samsung",
+                    "num": 11
+                },
+                {
+                    "option": "LEGO",
+                    "num": 10
+                },
+                {
+                    "option": "Garmin",
+                    "num": 8
+                },
+                {
+                    "option": "AmazonBasics",
+                    "num": 7
+                },
+                {
+                    "option": "L'Oreal Paris",
+                    "num": 7
+                },
+                {
+                    "option": "Powertec",
+                    "num": 7
+                },
+                {
+                    "option": "Western Digital",
+                    "num": 7
+                },
+                {
+                    "option": "Columbia River",
+                    "num": 6
+                },
+                {
+                    "option": "Eagle Creek",
+                    "num": 6
+                },
+                {
+                    "option": "Philips",
+                    "num": 6
+                },
+                {
+                    "option": "Etekcity",
+                    "num": 5
+                },
+                {
+                    "option": "Fujifilm",
+                    "num": 5
+                },
+                {
+                    "option": "NETGEAR",
+                    "num": 5
+                },
+                {
+                    "option": "Neiko",
+                    "num": 5
+                }
+            ]
+        },
+        "categories": {
+            "semiOption": [
+                {
+                    "option": "Tools & Home Improvement",
+                    "num": 161
+                },
+                {
+                    "option": "Health & Household",
+                    "num": 146
+                },
+                {
+                    "option": "Power & Hand Tools",
+                    "num": 133
+                },
+                {
+                    "option": "Books",
+                    "num": 123
+                },
+                {
+                    "option": "Beauty & Personal Care",
+                    "num": 120
+                },
+                {
+                    "option": "Home & Kitchen",
+                    "num": 116
+                },
+                {
+                    "option": "Sports & Outdoors",
+                    "num": 77
+                },
+                {
+                    "option": "Toys & Games",
+                    "num": 58
+                },
+                {
+                    "option": "Arts, Crafts & Sewing",
+                    "num": 57
+                },
+                {
+                    "option": "Grocery & Gourmet Food",
+                    "num": 54
+                },
+                {
+                    "option": "Patio, Lawn & Garden",
+                    "num": 49
+                },
+                {
+                    "option": "Electronics",
+                    "num": 48
+                },
+                {
+                    "option": "Sports & Fitness",
+                    "num": 33
+                },
+                {
+                    "option": "Baby Products",
+                    "num": 30
+                },
+                {
+                    "option": "Kitchen & Dining",
+                    "num": 26
+                },
+                {
+                    "option": "Office Products",
+                    "num": 18
+                },
+                {
+                    "option": "Movies & Tv",
+                    "num": 17
+                },
+                {
+                    "option": "Cell Phones & Accessories",
+                    "num": 16
+                },
+                {
+                    "option": "Pet Supplies",
+                    "num": 16
+                },
+                {
+                    "option": "Industrial & Scientific",
+                    "num": 13
+                },
+                {
+                    "option": "Video Games",
+                    "num": 13
+                },
+                {
+                    "option": "Clothing, Shoes & Jewelry",
+                    "num": 10
+                },
+                {
+                    "option": "Appliances",
+                    "num": 8
+                },
+                {
+                    "option": "Musical Instruments",
+                    "num": 8
+                },
+                {
+                    "option": "Automotive",
+                    "num": 6
+                },
+                {
+                    "option": "Medical Supplies & Equipment",
+                    "num": 6
+                }
+            ]
+        }
+    },
+    "lifeCycle": 1
+}

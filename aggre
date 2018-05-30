@@ -1,0 +1,607 @@
+curl -XPOST http://192.168.1.106:9200/todayspicks/items/_search?pretty  -H 'Content-Type: application/json' -d'
+{
+  "size": 0,  
+  "query" : {
+    "bool" : {
+      "should" : [
+        {
+          "bool" : {
+            "must" : [
+              {
+                "bool" : {
+                  "must" : [
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "sources" : {
+                                "query" : "add-on item",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          },
+                          {
+                            "match" : {
+                              "sources" : {
+                                "query" : "add-on items prime",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    }
+                  ],
+                  "disable_coord" : false,
+                  "adjust_pure_negative" : true,
+                  "boost" : 1.0
+                }
+              }
+            ],
+            "disable_coord" : false,
+            "adjust_pure_negative" : true,
+            "boost" : 1.0
+          }
+        },
+        {
+          "bool" : {
+            "must" : [
+              {
+                "bool" : {
+                  "must" : [
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "sources" : {
+                                "query" : "subscribe and save",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    }
+                  ],
+                  "disable_coord" : false,
+                  "adjust_pure_negative" : true,
+                  "boost" : 1.0
+                }
+              }
+            ],
+            "disable_coord" : false,
+            "adjust_pure_negative" : true,
+            "boost" : 1.0
+          }
+        },
+        {
+          "bool" : {
+            "must" : [
+              {
+                "bool" : {
+                  "must" : [
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "sources" : {
+                                "query" : "bestsellers",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    },
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "vendors" : {
+                                "query" : "amazon",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    },
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "categories" : {
+                                "query" : "toys & games",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    }
+                  ],
+                  "disable_coord" : false,
+                  "adjust_pure_negative" : true,
+                  "boost" : 1.0
+                }
+              }
+            ],
+            "disable_coord" : false,
+            "adjust_pure_negative" : true,
+            "boost" : 1.0
+          }
+        },
+        {
+          "bool" : {
+            "must" : [
+              {
+                "bool" : {
+                  "must" : [
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "categories" : {
+                                "query" : "home & kitchen",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    },
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "vendors" : {
+                                "query" : "amazon",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    },
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "sources" : {
+                                "query" : "bestsellers",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    }
+                  ],
+                  "disable_coord" : false,
+                  "adjust_pure_negative" : true,
+                  "boost" : 1.0
+                }
+              }
+            ],
+            "disable_coord" : false,
+            "adjust_pure_negative" : true,
+            "boost" : 1.0
+          }
+        }
+      ],
+      "disable_coord" : false,
+      "adjust_pure_negative" : true,
+      "boost" : 1.0
+    }
+  },
+  "aggregations" : {
+    "Amazon Add-on items" : {
+      "filters" : {
+        "filters" : {
+          "Amazon Add-on items" : {
+            "bool" : {
+              "must" : [
+                {
+                  "bool" : {
+                    "must" : [
+                      {
+                        "bool" : {
+                          "should" : [
+                            {
+                              "match" : {
+                                "sources" : {
+                                  "query" : "add-on item",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            },
+                            {
+                              "match" : {
+                                "sources" : {
+                                  "query" : "add-on items prime",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "disable_coord" : false,
+                          "adjust_pure_negative" : true,
+                          "minimum_should_match" : "1",
+                          "boost" : 1.0
+                        }
+                      }
+                    ],
+                    "disable_coord" : false,
+                    "adjust_pure_negative" : true,
+                    "boost" : 1.0
+                  }
+                }
+              ],
+              "disable_coord" : false,
+              "adjust_pure_negative" : true,
+              "boost" : 1.0
+            }
+          }
+        },
+        "other_bucket" : false,
+        "other_bucket_key" : "_other_"
+      }
+    },
+    "Amazon Subscribe & Save" : {
+      "filters" : {
+        "filters" : {
+          "Amazon Subscribe & Save" : {
+            "bool" : {
+              "must" : [
+                {
+                  "bool" : {
+                    "must" : [
+                      {
+                        "bool" : {
+                          "should" : [
+                            {
+                              "match" : {
+                                "sources" : {
+                                  "query" : "subscribe and save",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "disable_coord" : false,
+                          "adjust_pure_negative" : true,
+                          "minimum_should_match" : "1",
+                          "boost" : 1.0
+                        }
+                      }
+                    ],
+                    "disable_coord" : false,
+                    "adjust_pure_negative" : true,
+                    "boost" : 1.0
+                  }
+                }
+              ],
+              "disable_coord" : false,
+              "adjust_pure_negative" : true,
+              "boost" : 1.0
+            }
+          }
+        },
+        "other_bucket" : false,
+        "other_bucket_key" : "_other_"
+      }
+    },
+    "goldbox" : {
+      "filters" : {
+        "filters" : {
+          "goldbox" : {
+            "bool" : {
+              "must" : [
+                {
+                  "bool" : {
+                    "must" : [
+                      {
+                        "bool" : {
+                          "should" : [
+                            {
+                              "match" : {
+                                "sources" : {
+                                  "query" : "bestsellers",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "disable_coord" : false,
+                          "adjust_pure_negative" : true,
+                          "minimum_should_match" : "1",
+                          "boost" : 1.0
+                        }
+                      },
+                      {
+                        "bool" : {
+                          "should" : [
+                            {
+                              "match" : {
+                                "vendors" : {
+                                  "query" : "amazon",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "disable_coord" : false,
+                          "adjust_pure_negative" : true,
+                          "minimum_should_match" : "1",
+                          "boost" : 1.0
+                        }
+                      },
+                      {
+                        "bool" : {
+                          "should" : [
+                            {
+                              "match" : {
+                                "categories" : {
+                                  "query" : "toys & games",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "disable_coord" : false,
+                          "adjust_pure_negative" : true,
+                          "minimum_should_match" : "1",
+                          "boost" : 1.0
+                        }
+                      }
+                    ],
+                    "disable_coord" : false,
+                    "adjust_pure_negative" : true,
+                    "boost" : 1.0
+                  }
+                }
+              ],
+              "disable_coord" : false,
+              "adjust_pure_negative" : true,
+              "boost" : 1.0
+            }
+          }
+        },
+        "other_bucket" : false,
+        "other_bucket_key" : "_other_"
+      }
+    },
+    "bestsellers in home & kitchen" : {
+      "filters" : {
+        "filters" : {
+          "bestsellers in home & kitchen" : {
+            "bool" : {
+              "must" : [
+                {
+                  "bool" : {
+                    "must" : [
+                      {
+                        "bool" : {
+                          "should" : [
+                            {
+                              "match" : {
+                                "categories" : {
+                                  "query" : "home & kitchen",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "disable_coord" : false,
+                          "adjust_pure_negative" : true,
+                          "minimum_should_match" : "1",
+                          "boost" : 1.0
+                        }
+                      },
+                      {
+                        "bool" : {
+                          "should" : [
+                            {
+                              "match" : {
+                                "vendors" : {
+                                  "query" : "amazon",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "disable_coord" : false,
+                          "adjust_pure_negative" : true,
+                          "minimum_should_match" : "1",
+                          "boost" : 1.0
+                        }
+                      },
+                      {
+                        "bool" : {
+                          "should" : [
+                            {
+                              "match" : {
+                                "sources" : {
+                                  "query" : "bestsellers",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "disable_coord" : false,
+                          "adjust_pure_negative" : true,
+                          "minimum_should_match" : "1",
+                          "boost" : 1.0
+                        }
+                      }
+                    ],
+                    "disable_coord" : false,
+                    "adjust_pure_negative" : true,
+                    "boost" : 1.0
+                  }
+                }
+              ],
+              "disable_coord" : false,
+              "adjust_pure_negative" : true,
+              "boost" : 1.0
+            }
+          }
+        },
+        "other_bucket" : false,
+        "other_bucket_key" : "_other_"
+      }
+    }
+  }
+}
+'
+
+
+.monitoring-es-6-2018.05.14

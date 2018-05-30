@@ -1,0 +1,5 @@
+// 查看211上docker部署的ElasticSearch的日志
+docker logs a04ec7970613 > log.log
+
+// 查看当前docker部署的所有应用
+docker ps

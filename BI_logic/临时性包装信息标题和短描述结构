@@ -1,0 +1,162 @@
+目前的推荐语，基本上是  
+网站 - 现价（原价）商品title  的结构，
+我认为  网站名 和卡片上的网站logo是重复的，没必要再放一次， 
+后面的文字描述将价格和title连起来，还不如想普通商品卡片那样分开放，
+所以我建议打折卡片除了多一个网站logo外，其他跟普通商品一致
+
+
+现在的推荐语，还有一种情况是使用coupon的，
+如果系统能辨别，价格可以使用橙色coupon price来标识，或者在现价的后面标注 
+使用coupon
+
+
+第三种情况是推荐语中有标注套装价值的，
+这个信息是芳菲看商品信息是提取的，
+不知是否能自动生成。如果不能，可以放弃，因为那个价值实际上没有客观依据，算是商家的宣传文案。
+
+
+
+
+
+
+
+{
+  "took" : 5,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 240,
+    "max_score" : 1.0,
+    "hits" : [
+      {
+        "_index" : "todayspicks",
+        "_type" : "items",
+        "_id" : "10466930",
+        "_score" : 1.0,
+        "_source" : {
+          "productId" : 10466930,
+          "categoryTypeId" : 1,
+          "categoryTypePriority" : 0,
+          "height" : 355,
+          "availability" : "in_stock",
+          "productDescription" : [ ],
+          "productDetail" : [
+            "Color: Barefoot in Barcelona   Product Description The Classic Colors of OPI nail polish offers OPI nail colors that are beautiful, yet sassy.  OPI is the number one salon brand and the most respected, admired and beloved nail lacquer brand in the world."
+          ],
+          "productImageLink" : "https://images-na.ssl-images-amazon.com/images/I/613JAakHFIL._SY355_.jpg",
+          "productPrice" : "$10.50",
+          "productSale" : "$10.50",
+          "productTitle" : "stores OPI Nail Polish",
+          "sourceId" : [
+            5,
+            3
+          ],
+          "sourceProductId" : "B00421X35C",
+          "width" : 134,
+          "morePictures" : 0,
+          "hasSmartPrice" : 0,
+          "brandName" : "stores",
+          "lastCheckedTime" : 1521881278000,
+          "numOfReviews" : 8467,
+          "score" : 4.3,
+          "sources" : [
+            "add-on item"
+          ],
+          "price" : {
+            "min" : 10.5,
+            "max" : 10.5
+          },
+          "currency" : "$",
+          "sale" : {
+            "min" : 10.5,
+            "max" : 10.5
+          },
+          "discount" : {
+            "min" : 0.0,
+            "max" : 0.0,
+            "discountStr" : "0.0%"
+          },
+          "vendors" : [
+            "Amazon.cn",
+            "Amazon"
+          ],
+          "language" : "en",
+          "channel" : 1,
+          "updateESTime" : 1522228974280,
+          "deleted" : 0
+        }
+      }
+    ]
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tag_condition:
+字段名称
+	
+字段类型
+	
+描述
+condition_id
+	
+int(8)
+	
+条件表达式id，自增
+condition
+	
+varchar(200)
+	
+条件表达式
+sha
+	
+varchar(200)
+	
+条件表达式的sha1值
+
+
+[
+
+    {
+        "productId":10129927,
+        "categoryTypeId":295,
+        "categoryTypePriority":0,
+        "height":355,
+        "availability":0,
+        "productDescription":"[]",
+        "productDetail":"[\"*Features:\",\"*Condition: 100% Brand New and High Quality !\",\"*Color:  White\",\"*Brush material: Nylon Hair\",\"*Quantity: 1pcs\",\"*length: 18.5cm\",\"*The written does neither split nor deformation as durable and never corrosion.\",\"*The pen fast colors after soaking with oil color and crystal.\",\"*Used for making acrylics carve patterns\",\"*Enable you to creat your own designs on your nail\",\"*The spade-shape-end handle can be used as cuticle pusher\",\"*High quality, Easy to use\",\"*Great for fine nail art work\",\"*Ideal for professional use or home use\",\"*Package Included :\",\"*1 X Nail Art Brush Pen\"]",
+        "productImageLink":"https://images-na.ssl-images-amazon.com/images/I/51LL3jspBzL._SY355_.jpg",
+        "productPrice":"$1.72",
+        "productSale":"$1.72",
+        "productTitle":"YJYdada Acrylic Design 3D Painting Drawing UV Gel DIY Brush Pen Tool Nail Art Set Tool",
+        "sourceId":3,
+        "sourceProductId":"B079PRHNN2",
+        "width":355,
+        "morePictures":0,
+        "hasSmartPrice":0,
+        "lastCheckedTime":1521535867000,
+        "deleted":0,
+        "brands":[
+            "yjydada"
+        ]
+    }
+
+]
+

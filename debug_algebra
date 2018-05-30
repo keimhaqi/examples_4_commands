@@ -1,0 +1,472 @@
+商品ID: 
+    9721770 猴子 
+        "startDate":1514620800000,  2017/12/30 16:0:0
+        "endDate":1517644799000,    2018/2/3 15:59:59
+        "confirmedTime":1515159752000,  2018/1/5 21:42:32
+        "missedTime":1516063144617  2018/1/16 8:39:4
+    6055986 包 
+        "startDate":1515474000000,  2018/1/9 13:0:0
+        "endDate":1517720399000,    2018/2/4 12:59:59
+        "confirmedTime":1515549961000,  2018/1/10 10:6:1
+        "missedTime":1515962220743  2018/1/15 4:37:0
+
+        {"id":6055986,"title":"TORY BURCH Tory Burch Chelsea Convertible Leather Clutch - Blue","imageLink":"http://n.nordstrommedia.com/imagegallery/store/product/large/3/_102090183.jpg","description":[],"detail":["Pebbled leather and a gleaming logo medallion make this streamlined clutch a polished around-town essential. The optional chain strap provides hands-free, on-the-go versatility. Style Name: Tory Burch Chelsea Convertible Leather Clutch. Style Number: 5473527. Available in stores."],"attribute":[{"gender":"Female","productType":"Bags"}],"keywords":"Tory Burch Chelsea Convertible Leather Clutch - Blue","width":350,"height":537,"category":4,"categories":["bags","shopping"],"availability":"out_of_stock","brand":"TORY BURCH","discount":{"discountMetricMin":50.00503,"discountMetricMax":50.00503,"discount":"50.00503%"},"currency":"$","productSale":{"min":198.98,"max":198.98},"sale":"$198.98","productPrice":{"min":398.0,"max":398.0},"price":"$398.00","vendorId":[1237],"vendors":["Nordstrom"],"language":"en","channel":1,"promo":["promo_v"],"lastCheckedTime":1516063109000,"updateESTime":1516063111045,"top_product":true,"top_product_promo_info_vendor":{"vendorId":1237,"taskId":3922193,"titleEn":"Nordstrom - $198.98 ($398.00) Tory Burch Chelsea Convertible Leather Clutch - Blue","titleCh":"Nordstrom现有Tory Burch Chelsea单肩背包仅售$198.98 (原价$398.00) ","descEn":"Shipping is free.","descCh":"美国境内免邮。","shareTitleEn":"$198.98 ($398.00) Tory Burch Chelsea Convertible Leather Clutch - Blue","shareTitleCh":"Tory Burch Chelsea单肩背包仅售$198.98 (原价$398.00) ","shareDescEn":"Shipping is free.","shareDescCh":"美国境内免邮。","imgUrl":"1515549961_6055986card_img.jpg","cardWidth":290,"cardHeight":290,"price":"$198.98","startDate":1515474000000,"endDate":1517720399000,"confirmed":1,"confirmedTime":1515549961000,"vendorLogoUrl":"Nordstrom.png","id":6055986,"missedTime":1515962220743},"missedTime":1515962220743}
+
+    9977760 床 
+        "startDate":1514966400000,  2018/1/3 16:0:0
+        "endDate":1517644799000,    2018/2/3 15:59:59
+        "confirmedTime":1515545433000,  2018/1/10 8:50:33
+        "missedTime":1515808446000  2018/1/13 9:54:6
+    10059174 袋子 
+        "startDate":1515312000000,
+        "endDate":1517644799000,
+        "confirmedTime":1515332426000,
+        "missedTime":1515693622000
+
+    9978652 彩色笔
+        "startDate":1514966400000,
+        "endDate":1517644799000,
+        "confirmedTime":1515051648000,
+
+{"id":9978652,"title":"Prismacolor Premier Colored Pencils, Soft Core, 48-Count","imageLink":"https://images-na.ssl-images-amazon.com/images/I/91h8E7jdGfL._SY355_.jpg","description":[],"detail":[],"attribute":[null],"keywords":"Prismacolor Premier Colored Pencils, Soft Core, 48-Count","width":355,"height":355,"category":1,"categories":["shopping"],"availability":"in_stock","discount":{"discountMetricMin":0.0,"discountMetricMax":0.0,"discount":"0.0%"},"currency":"$","productSale":{"min":16.0,"max":16.0},"sale":"$16.00","productPrice":{"min":16.0,"max":16.0},"price":"$16.00","vendorId":[3,5],"vendors":["Amazon.cn","Amazon"],"language":"en","channel":1,"lastCheckedTime":1516067536000,"updateESTime":1516067538189,"top_product":true,"top_product_promo_info_vendor":{"vendorId":3,"taskId":6540727,"titleEn":"Amazon - $16.00 Prismacolor Premier Colored Pencils, Soft Core, 48-Count","titleCh":"Amazon亚马逊现有Prismacolor软芯彩色铅笔48支装仅售$16.00","descEn":"It's at the lowest price in history. Shipping is free with Prime or over $25.","descCh":"现在是历史最低价格。Prime会员或订单满$25美国境内免邮。","shareTitleEn":"$16.00 Prismacolor Premier Colored Pencils, Soft Core, 48-Count","shareTitleCh":"Prismacolor软芯彩色铅笔48支装仅售$16.00","shareDescEn":"It's at the lowest price in history. Shipping is free with Prime or over $25.","shareDescCh":"现在是历史最低价格。Prime会员或订单满$25美国境内免邮。","imgUrl":"1515051648_9978652card_img.jpg","cardWidth":290,"cardHeight":290,"price":"$16.00","startDate":1514966400000,"endDate":1517644799000,"confirmed":1,"confirmedTime":1515051648000,"id":9978652},"promo":["promo_v"],"brand":"Prismacolor"}
+
+        141.61382680530767
+
+ProductId:6055986|ESScore:13.161383|URScore:0.0|TopProduct:10.0|Discount:1.0|DeltaConfiremdTime:186571774|Score:141.61382680530767
+ProductId:9977760|ESScore:13.161383|URScore:0.0|TopProduct:10.0|Discount:1.0|DeltaConfiremdTime:191099775|Score:141.61382680403767
+ProductId:10059174|ESScore:13.161383|URScore:0.0|TopProduct:10.0|Discount:1.0|DeltaConfiremdTime:404106775|Score:141.6138267764549
+ProductId:9721770|ESScore:12.789482|URScore:0.0|TopProduct:10.0|Discount:1.0|DeltaConfiremdTime:559241778|Score:137.89482118487354
+
+
+1007958
+
+ProductId:10094466|ESScore:12.581762|URScore:0.0|TopProduct:10.0|Discount:1.0|DeltaConfiremdTime:6806109|Score:135.817624607696
+
+
+
+ProductId:3|ESScore:3.1247888|URScore:0.0|TopProduct:10.0|Discount:2.5|DeltaConfiremdTime:1567591144|Score:56.24788761776838
+ProductId:3|ESScore:3.13956|URScore:0.0|TopProduct:10.0|Discount:2.5|DeltaConfiremdTime:1568075288|Score:56.39559984844878
+
+
+
+
+{
+
+    "id":10079958,
+    "title":"Decorté Decorte Liposome Sakura Two-Piece Kit",
+    "imageLink":"https://image.s5a.com/is/image/saks/0400097205246_500x500.jpg",
+    "description":[
+        "Liposome Sakura Two-Piece Kit"
+    ],
+    "detail":[
+        "EXCLUSIVELY AT SAKS FIFTH AVENUE. Our #1 selling Moisture Liposome Serum offered in a limited-edition Sakura presentation. A $150 Special Value. Collection Includes: Moisture Liposome Hydration Boosting Serum, 2 oz.; and Liposome Treatment Liquid, 1 oz. Imported."
+    ],
+    "attribute":[
+        {
+            "productType":"newbest"
+        }
+    ],
+    "keywords":"Decorte Liposome Sakura Two-Piece Kit",
+    "width":300,
+    "height":400,
+    "category":77,
+    "categories":[
+        "makeup",
+        "shopping",
+        "beauty"
+    ],
+    "availability":"out_of_stock",
+    "brand":"Decorté",
+    "discount":{
+        "discountMetricMin":0.0,
+        "discountMetricMax":0.0,
+        "discount":"0.0%"
+    },
+    "currency":"$",
+    "productSale":{
+        "min":120.0,
+        "max":120.0
+    },
+    "sale":"$120.00",
+    "productPrice":{
+        "min":120.0,
+        "max":120.0
+    },
+    "price":"$120.00",
+    "vendorId":[
+        13816
+    ],
+    "vendors":[
+        "Saks Fifth Avenue"
+    ],
+    "language":"en",
+    "channel":1,
+    "promo":[
+        "promo_v"
+    ],
+    "lastCheckedTime":1516085061000,
+    "updateESTime":1516085061820,
+    "top_product":true,
+    "top_product_promo_info_vendor":{
+        "vendorId":13816,
+        "taskId":6611414,
+        "titleEn":"Saks Fifth Avenue - $120.00 ($150 Special Value) Decorté Liposome Sakura Two-Piece Kit",
+        "titleCh":"Saks Fifth Avenue现有Decorté保湿精华两件套装仅售$120.00（价值$150)",
+        "descEn":"Shipping is free.",
+        "descCh":"美国境内免邮。",
+        "shareTitleEn":"$120.00 ($150 Special Value) Decorté Liposome Sakura Two-Piece Kit",
+        "shareTitleCh":"Decorté保湿精华两件套装仅售$120.00（价值$150)",
+        "shareDescEn":"Shipping is free.",
+        "shareDescCh":"美国境内免邮。",
+        "imgUrl":"1515725806_10079958card_img.jpg",
+        "cardWidth":290,
+        "cardHeight":290,
+        "price":"$120.00",
+        "startDate":1515646800000,
+        "endDate":1517720399000,
+        "confirmed":1,
+        "confirmedTime":1515725806000,
+        "vendorLogoUrl":"Saks_Fifth_Avenue.png",
+        "id":10079958,
+        "missedTime":1516063115203
+    },
+    "missedTime":1516063115203
+
+}
+
+
+
+
+
+{"id":10094772,"title":"BIC Round Stic Grip Xtra Comfort Ball Pen, Medium Point (1.2 mm), Black and Blue Ink, 36-Count","imageLink":"https://images-na.ssl-images-amazon.com/images/I/514u9c9xb1L._SY355_.jpg","description":["Medium point","Consistent, fluid writing","36 pens- 24 Black, 12 Blue","Soft grip for a comfortable hold"],"detail":["Size: 36 Count  |  Color: Black and Blue   Round Stic Grip Xtra Comfort Ball Pen offers consistent, fluid writing with a soft grip for a comfortable hold. Medium point features Easy-Glide System Ink. This exclusive ink technology offers 50% smoother writing and bolder ink than our traditional ballpoint ink. Package includes 36 pens (24 black ink and 12 blue ink)."],"attribute":[null],"keywords":"BIC Round Stic Grip Xtra Comfort Ball Pen, Medium Point (1.2 mm), Black and Blue Ink, 36-Count","width":264,"height":355,"category":1,"categories":["shopping"],"availability":"in_stock","discount":{"discountMetricMin":76.0101,"discountMetricMax":76.0101,"discount":"76.0101%"},"currency":"$","productSale":{"min":2.85,"max":2.85},"sale":"$2.85","productPrice":{"min":11.88,"max":11.88},"price":"$11.88","vendorId":[3,5],"vendors":["Amazon.cn","Amazon"],"language":"en","channel":1,"promo":["promo_v"],"lastCheckedTime":1516087725000,"updateESTime":1516087880946,"top_product":true,"top_product_promo_info_vendor":{"vendorId":3,"taskId":6618953,"titleEn":"Amazon - $2.85 ($11.88) BIC Round Stic Grip Xtra Comfort Ball Pen, Medium Point (1.2 mm), Black and Blue Ink, 36-Count","titleCh":"Amazon亚马逊现有BIC 蓝黑两色圆珠笔36支装仅售$2.85 (原价$11.88)","descEn":"Shipping is free with Prime or over $25.","descCh":"Prime会员或订单满$25美国境内免邮。","shareTitleEn":"$2.85 ($11.88) BIC Round Stic Grip Xtra Comfort Ball Pen, Medium Point (1.2 mm), Black and Blue Ink, 36-Count","shareTitleCh":"BIC 蓝黑两色圆珠笔36支装仅售$2.85 (原价$11.88)","shareDescEn":"Shipping is free with Prime or over $25.","shareDescCh":"Prime会员或订单满$25美国境内免邮。","imgUrl":"1516087813_10094772card_img.jpg","cardWidth":290,"cardHeight":290,"price":"$2.85","startDate":1516003200000,"endDate":1517644799000,"confirmed":1,"confirmedTime":1516087880000,"vendorLogoUrl":"amazon.png","id":10094772}}
+
+
+
+
+{
+
+    "id":10094772,
+    "title":"BIC Round Stic Grip Xtra Comfort Ball Pen, Medium Point (1.2 mm), Black and Blue Ink, 36-Count",
+    "imageLink":"https://images-na.ssl-images-amazon.com/images/I/514u9c9xb1L._SY355_.jpg",
+    "description":[
+        "Medium point",
+        "Consistent, fluid writing",
+        "36 pens- 24 Black, 12 Blue",
+        "Soft grip for a comfortable hold"
+    ],
+    "detail":[
+        "Size: 36 Count  |  Color: Black and Blue Round Stic Grip Xtra Comfort Ball Pen offers consistent, fluid writing with a soft grip for a comfortable hold. Medium point features Easy-Glide System Ink. This exclusive ink technology offers 50% smoother writing and bolder ink than our traditional ballpoint ink. Package includes 36 pens (24 black ink and 12 blue ink)."
+    ],
+    "attribute":[
+        null
+    ],
+    "keywords":"BIC Round Stic Grip Xtra Comfort Ball Pen, Medium Point (1.2 mm), Black and Blue Ink, 36-Count",
+    "width":264,
+    "height":355,
+    "category":1,
+    "categories":[
+        "shopping"
+    ],
+    "availability":"in_stock",
+    "discount":{
+        "discountMetricMin":76.0101,
+        "discountMetricMax":76.0101,
+        "discount":"76.0101%"
+    },
+    "currency":"$",
+    "productSale":{
+        "min":2.85,
+        "max":2.85
+    },
+    "sale":"$2.85",
+    "productPrice":{
+        "min":11.88,
+        "max":11.88
+    },
+    "price":"$11.88",
+    "vendorId":[
+        3,
+        5
+    ],
+    "vendors":[
+        "Amazon.cn",
+        "Amazon"
+    ],
+    "language":"en",
+    "channel":1,
+    "promo":[
+        "promo_v"
+    ],
+    "lastCheckedTime":1516087725000,
+    "updateESTime":1516087880946,
+    "top_product":true,
+    "top_product_promo_info_vendor":{
+        "vendorId":3,
+        "taskId":6618953,
+        "titleEn":"Amazon - $2.85 ($11.88) BIC Round Stic Grip Xtra Comfort Ball Pen, Medium Point (1.2 mm), Black and Blue Ink, 36-Count",
+        "titleCh":"Amazon亚马逊现有BIC 蓝黑两色圆珠笔36支装仅售$2.85 (原价$11.88)",
+        "descEn":"Shipping is free with Prime or over $25.",
+        "descCh":"Prime会员或订单满$25美国境内免邮。",
+        "shareTitleEn":"$2.85 ($11.88) BIC Round Stic Grip Xtra Comfort Ball Pen, Medium Point (1.2 mm), Black and Blue Ink, 36-Count",
+        "shareTitleCh":"BIC 蓝黑两色圆珠笔36支装仅售$2.85 (原价$11.88)",
+        "shareDescEn":"Shipping is free with Prime or over $25.",
+        "shareDescCh":"Prime会员或订单满$25美国境内免邮。",
+        "imgUrl":"1516087813_10094772card_img.jpg",
+        "cardWidth":290,
+        "cardHeight":290,
+        "price":"$2.85",
+        "startDate":1516003200000,
+        "endDate":1517644799000,
+        "confirmed":1,
+        "confirmedTime":1516087880000,
+        "vendorLogoUrl":"amazon.png",
+        "id":10094772
+    }
+
+}
+
+// first query
+curl -XPOST http://localhost:9200/search/items/_search?pretty  -H 'Content-Type: application/json' -d'
+{
+    "size": 30,
+    "query" :
+{
+  "bool" : {
+    "must" : [ {
+      "terms" : {
+        "promo" : [ "promo_v" ]
+      }
+    }, {
+      "bool" : {
+        "should" : [ {
+          "constant_score" : {
+            "query" : {
+              "match" : {
+                "availability" : {
+                  "query" : "in_stock",
+                  "type" : "boolean",
+                  "operator" : "AND",
+                  "analyzer" : "my_analyzer"
+                }
+              }
+            },
+            "boost" : 1.0
+          }
+        }, {
+          "constant_score" : {
+            "query" : {
+              "match" : {
+                "availability" : {
+                  "query" : "out_of_stock",
+                  "type" : "boolean",
+                  "operator" : "AND",
+                  "analyzer" : "my_analyzer"
+                }
+              }
+            },
+            "boost" : 1.0
+          }
+        } ]
+      }
+    }, {
+      "terms" : {
+        "top_product" : [ true ]
+      }
+    }, {
+      "bool" : {
+        "should" : [ {
+          "match" : {
+            "top_product_promo_info_vendor.confirmed" : {
+              "query" : 1,
+              "type" : "boolean",
+              "operator" : "AND",
+              "analyzer" : "my_analyzer"
+            }
+          }
+        }, {
+          "constant_score" : {
+            "filter" : {
+              "missing" : {
+                "field" : "top_product_promo_info_vendor.confirmed"
+              }
+            }
+          }
+        } ],
+        "minimum_should_match" : "1"
+      }
+    }, {
+      "bool" : {
+        "must" : [ {
+          "range" : {
+            "top_product_promo_info_vendor.startDate" : {
+              "from" : null,
+              "to" : 1516095064930,
+              "include_lower" : true,
+              "include_upper" : true
+            }
+          }
+        }, {
+          "range" : {
+            "top_product_promo_info_vendor.endDate" : {
+              "from" : 1516095064930,
+              "to" : null,
+              "include_lower" : true,
+              "include_upper" : true
+            }
+          }
+        } ]
+      }
+    }, {
+      "bool" : {
+        "should" : [ {
+          "constant_score" : {
+            "query" : {
+              "range" : {
+                "top_product_promo_info_vendor.missedTime" : {
+                  "from" : 1515663064930,
+                  "to" : null,
+                  "include_lower" : true,
+                  "include_upper" : true
+                }
+              }
+            },
+            "boost" : 1.0
+          }
+        }, {
+          "constant_score" : {
+            "filter" : {
+              "missing" : {
+                "field" : "top_product_promo_info_vendor.missedTime"
+              }
+            },
+            "boost" : 1.0
+          }
+        } ],
+        "minimum_should_match" : "1"
+      }
+    } ],
+    "must_not" : {
+      "ids" : {
+        "types" : [ ],
+        "values" : [ ]
+      }
+    }
+  }
+}
+}'
+
+
+// second query
+{
+  "bool" : {
+    "must" : [ {
+      "terms" : {
+        "promo" : [ "promo_v" ]
+      }
+    }, {
+      "bool" : {
+        "should" : [ {
+          "match" : {
+            "availability" : {
+              "query" : "in_stock",
+              "type" : "boolean",
+              "operator" : "AND",
+              "analyzer" : "my_analyzer"
+            }
+          }
+        }, {
+          "match" : {
+            "availability" : {
+              "query" : "out_of_stock",
+              "type" : "boolean",
+              "operator" : "AND",
+              "analyzer" : "my_analyzer"
+            }
+          }
+        } ]
+      }
+    }, {
+      "terms" : {
+        "top_product" : [ true ]
+      }
+    }, {
+      "bool" : {
+        "should" : [ {
+          "match" : {
+            "top_product_promo_info_vendor.confirmed" : {
+              "query" : 1,
+              "type" : "boolean",
+              "operator" : "AND",
+              "analyzer" : "my_analyzer"
+            }
+          }
+        }, {
+          "constant_score" : {
+            "filter" : {
+              "missing" : {
+                "field" : "top_product_promo_info_vendor.confirmed"
+              }
+            }
+          }
+        } ],
+        "minimum_should_match" : "1"
+      }
+    }, {
+      "bool" : {
+        "must" : [ {
+          "range" : {
+            "top_product_promo_info_vendor.startDate" : {
+              "from" : null,
+              "to" : 1516088111444,
+              "include_lower" : true,
+              "include_upper" : true
+            }
+          }
+        }, {
+          "range" : {
+            "top_product_promo_info_vendor.endDate" : {
+              "from" : 1516088111444,
+              "to" : null,
+              "include_lower" : true,
+              "include_upper" : true
+            }
+          }
+        } ]
+      }
+    }, {
+      "bool" : {
+        "should" : [ {
+          "constant_score" : {
+            "query" : {
+              "range" : {
+                "top_product_promo_info_vendor.missedTime" : {
+                  "from" : 1516044911444,
+                  "to" : null,
+                  "include_lower" : true,
+                  "include_upper" : true
+                }
+              }
+            },
+            "boost" : 1.0
+          }
+        }, {
+          "constant_score" : {
+            "filter" : {
+              "missing" : {
+                "field" : "top_product_promo_info_vendor.missedTime"
+              }
+            },
+            "boost" : 1.0
+          }
+        } ],
+        "minimum_should_match" : "1"
+      }
+    } ],
+    "must_not" : {
+      "ids" : {
+        "types" : [ ],
+        "values" : [ ]
+      }
+    }
+  }
+}

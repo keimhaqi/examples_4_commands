@@ -1,0 +1,2 @@
+http://96.90.248.211:5601/app/kibana#/discover?_g=()&_a=(columns:!(_source),index:logs-scrapy-cluster,interval:auto,query:(query_string:(analyze_wildcard:!t,query:'*')),sort:!(timestamp,desc))
+http://96.90.248.211:5601/app/kibana#/discover?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-30m,mode:quick,to:now))&_a=(columns:!(_source),index:logs-scrapy-cluster,interval:auto,query:(query_string:(analyze_wildcard:!t,query:'*')),sort:!(timestamp,desc))

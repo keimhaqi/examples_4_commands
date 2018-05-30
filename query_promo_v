@@ -1,0 +1,58 @@
+curl -XGET 'localhost:9200/search/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size":0,
+    "query": 
+{
+  "bool" : {
+    "must" : [ {
+      "terms" : {
+        "promo" : [ "promo_v" ]
+      }
+    }, {
+      "bool" : {
+        "should" : [ {
+          "match" : {
+            "availability" : {
+              "query" : "in_stock",
+              "type" : "boolean",
+              "operator" : "AND",
+              "analyzer" : "my_analyzer"
+            }
+          }
+        }, {
+          "match" : {
+            "availability" : {
+              "query" : "out_of_stock",
+              "type" : "boolean",
+              "operator" : "AND",
+              "analyzer" : "my_analyzer"
+            }
+          }
+        } ]
+      }
+    }, {
+      "bool" : {
+        "should" : [ {
+          "match" : {
+            "top_product_promo_info.confirmed" : {
+              "query" : 1,
+              "type" : "boolean",
+              "operator" : "AND",
+              "analyzer" : "my_analyzer"
+            }
+          }
+        }, {
+          "constant_score" : {
+            "filter" : {
+              "missing" : {
+                "field" : "top_product_promo_info.confirmed"
+              }
+            }
+          }
+        } ],
+        "minimum_should_match" : "1"
+      }
+    } ]
+  }
+}
+}'

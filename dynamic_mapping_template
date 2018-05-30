@@ -1,0 +1,125 @@
+curl -X PUT "192.168.1.106:9200/_template/template_1" -H 'Content-Type: application/json' -d'
+{
+  "template": ["items"],
+   "settings": {
+        "index": {
+            "analysis": {
+                "analyzer": {
+                    "analyzer_keyword": {
+                        "type": "custom",
+                        "tokenizer": "keyword",
+                        "filter": "lowercase"
+                    },
+                    "my_analyzer": {
+                        "type": "custom",
+                        "tokenizer": "my_tokenizer",
+                        "filter": ["english_possessive_stemmer", "lowercase", "english_stop", "english_stemmer"]
+                    },
+                    "default": {
+                        "type": "custom",
+                        "tokenizer": "my_tokenizer",
+                        "filter": ["english_possessive_stemmer", "lowercase", "english_stop", "english_stemmer"]
+                    }
+                },
+                "tokenizer": {
+                    "my_tokenizer": {
+                        "token_chars": ["letter", "digit"],
+                        "type": "standard"
+                    }
+                },
+                "filter": {
+                    "english_stop": {
+                        "type": "stop",
+                        "stopwords": "_english_"
+                    },
+                    "english_stemmer": {
+                        "type": "stemmer",
+                        "language": "english"
+                    },
+                    "english_possessive_stemmer": {
+                        "type": "stemmer",
+                        "language": "possessive_english"
+                    },
+                    "my_stemmer": {
+                        "type": "stemmer",
+                        "language": "english"
+                    }
+                }
+
+            }
+        }
+    },
+    "mappings": {
+    "items": {
+        "dynamic_templates": [
+            {
+                "strings": {
+                    "match_mapping_type": "string",
+                        "mapping": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                            "type":  "keyword",
+                            "doc_values": true
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    }
+  }
+}
+'
+curl -X PUT "192.168.1.106:9200/todayspicks/items/1" -H 'Content-Type: application/json' -d'
+{
+  "my_string": "Some string" 
+}
+'
+
+
+curl -XGET '192.168.1.106:9200/todayspicks/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 2,
+    "query": {
+       "match" : {"my_string.raw":"Some string"}
+    }
+}
+'
+
+
+curl -XGET '192.168.1.106:9200/todayspicks/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 2,
+    "query": {
+       "match" : {"my_string":"Some"}
+    }
+}
+'
+
+
+
+curl -X PUT "localhost:9200/_template/template_1" -H 'Content-Type: application/json' -d'
+{
+  "index_patterns": ["te*", "bar*"],
+  "settings": {
+    "number_of_shards": 1
+  },
+  "mappings": {
+    "type1": {
+      "_source": {
+        "enabled": false
+      },
+      "properties": {
+        "host_name": {
+          "type": "keyword"
+        },
+        "created_at": {
+          "type": "date",
+          "format": "EEE MMM dd HH:mm:ss Z YYYY"
+        }
+      }
+    }
+  }
+}
+'

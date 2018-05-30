@@ -1,0 +1,38 @@
+{
+    "sourceId":[3],
+    "productSale":"$69.00",
+    "channel":"1",
+    "discount":{
+        "min":0.0,
+        "max":0.0,
+        "discountStr":"0.0%"
+    },
+    "language":"en",
+    "availability":"in_stock",
+    "updateESTime":1515054403000,
+    "price":{
+        "min":69.0,
+        "max":69.0
+    },
+    "productImageLink":"https://images-na.ssl-images-amazon.com/images/I/81jsG2oYhRL._UX395_.jpg",
+    "onSale":"0",
+    "currency":"$",
+    "hasSmartPrice":0,
+    "attribute":[],
+    "categories":["v-necks","shopping","apparel","sweaters & sweatshirts"],
+    "vendors":["Amazon"],
+    "brand":"Michael Kors",
+    "productDescription":["Post with friction back","Imported","Gold-tone studs featuring radiant-cut pink faux-gemstone centerpiece with halo of round fuchsia crystals"],
+    "height":182,
+    "productId":13345,
+    "lastCheckedTime":1483200000000,
+    "productTitle":"Michael Kors Parisian Jewels Gold-Tone Stud Earrings",
+    "sale":{
+        "min":69.0,
+        "max":69.0
+    },
+    "width":395,
+    "categoryTypeId":167,
+    "morePictures":1,
+    "productPrice":"$69.00"
+}

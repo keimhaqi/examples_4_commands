@@ -1,0 +1,284 @@
+"items" : {
+        "properties" : {
+          "attribute" : {
+            "type" : "nested",
+            "properties" : {
+              "attrsPrice" : {
+                "properties" : {
+                  "max" : {
+                    "type" : "float"
+                  },
+                  "min" : {
+                    "type" : "float"
+                  }
+                }
+              },
+              "color" : {
+                "type" : "string",
+                "term_vector" : "with_positions_offsets",
+                "norms" : {
+                  "enabled" : false
+                },
+                "index_analyzer" : "my_analyzer",
+                "include_in_all" : true
+              },
+              "currency" : {
+                "type" : "string"
+              },
+              "gender" : {
+                "type" : "string",
+                "term_vector" : "with_positions_offsets",
+                "norms" : {
+                  "enabled" : false
+                },
+                "index_analyzer" : "my_analyzer",
+                "include_in_all" : true
+              },
+              "id" : {
+                "type" : "long"
+              },
+              "price" : {
+                "type" : "string"
+              },
+              "productType" : {
+                "type" : "string",
+                "term_vector" : "with_positions_offsets",
+                "norms" : {
+                  "enabled" : false
+                },
+                "index_analyzer" : "my_analyzer",
+                "include_in_all" : true
+              },
+              "size" : {
+                "type" : "string",
+                "term_vector" : "with_positions_offsets",
+                "norms" : {
+                  "enabled" : false
+                },
+                "index_analyzer" : "my_analyzer",
+                "include_in_all" : true
+              },
+              "vendors" : {
+                "type" : "string",
+                "term_vector" : "with_positions_offsets",
+                "norms" : {
+                  "enabled" : false
+                },
+                "index_analyzer" : "my_analyzer",
+                "include_in_all" : true
+              }
+            }
+          },
+          "attribute_combination" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "availability" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "index_analyzer" : "my_analyzer",
+            "include_in_all" : true
+          },
+          "brand" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "index_analyzer" : "my_analyzer",
+            "copy_to" : [ "full_brand" ],
+            "include_in_all" : true
+          },
+          "categories" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "index_analyzer" : "my_analyzer",
+            "include_in_all" : true
+          },
+          "category" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "index_analyzer" : "my_analyzer",
+            "include_in_all" : true
+          },
+          "channel" : {
+            "type" : "long"
+          },
+          "classId" : {
+            "type" : "long"
+          },
+          "coupon" : {
+            "type" : "string"
+          },
+          "couponPrice" : {
+            "properties" : {
+              "max" : {
+                "type" : "float"
+              },
+              "min" : {
+                "type" : "float"
+              }
+            }
+          },
+          "currency" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "index_analyzer" : "my_analyzer",
+            "include_in_all" : true
+          },
+          "detail" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "index_analyzer" : "my_analyzer",
+            "include_in_all" : true
+          },
+          "discount" : {
+            "properties" : {
+              "discount" : {
+                "type" : "string"
+              },
+              "discountMetricMax" : {
+                "type" : "double"
+              },
+              "discountMetricMin" : {
+                "type" : "double"
+              }
+            }
+          },
+          "full_brand" : {
+            "type" : "string",
+            "analyzer" : "analyzer_keyword"
+          },
+          "full_product_keywords" : {
+            "type" : "string",
+            "analyzer" : "analyzer_keyword"
+          },
+          "has_smart_price" : {
+            "type" : "long"
+          },
+          "height" : {
+            "type" : "long"
+          },
+          "id" : {
+            "type" : "long"
+          },
+          "imageLink" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "keywords" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "index_analyzer" : "my_analyzer",
+            "copy_to" : [ "full_product_keywords" ],
+            "include_in_all" : true
+          },
+          "language" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "linkshareProductId" : {
+            "type" : "long"
+          },
+          "linkshareSku" : {
+            "type" : "long"
+          },
+          "more_pictures" : {
+            "type" : "long"
+          },
+          "onSale" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "price" : {
+            "type" : "string"
+          },
+          "productPrice" : {
+            "properties" : {
+              "max" : {
+                "type" : "float"
+              },
+              "min" : {
+                "type" : "float"
+              }
+            }
+          },
+          "productSale" : {
+            "properties" : {
+              "max" : {
+                "type" : "float"
+              },
+              "min" : {
+                "type" : "float"
+              }
+            }
+          },
+          "productUrl" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "promo" : {
+            "type" : "string"
+          },
+          "sale" : {
+            "type" : "string"
+          },
+          "sourceProductId" : {
+            "type" : "long"
+          },
+          "spu" : {
+            "type" : "long"
+          },
+          "title" : {
+            "type" : "string",
+            "term_vector" : "with_positions_offsets",
+            "norms" : {
+              "enabled" : false
+            },
+            "index_analyzer" : "my_analyzer",
+            "include_in_all" : true
+          },
+          "upc" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "updateTime" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "vendorId" : {
+            "type" : "long"
+          },
+          "vendors" : {
+            "type" : "string",
+            "norms" : {
+              "enabled" : false
+            },
+            "index_analyzer" : "my_analyzer",
+            "include_in_all" : true
+          },
+          "width" : {
+            "type" : "long"
+          }
+        }

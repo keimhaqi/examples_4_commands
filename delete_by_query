@@ -1,0 +1,9 @@
+curl -XPOST '192.168.1.106:9200/jinbagsearch/items/_delete_by_query?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "match_all": {}
+  }
+}
+'
+
+

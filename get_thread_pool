@@ -1,0 +1,11 @@
+curl -XGET 'localhost:9201/_cat/thread_pool?pretty'
+
+
+make_query_body
+
+[0]: index [search_a], type [items], id [6744], message 
+[
+    RemoteTransportException[[es-cluster-es-data-2][10.42.243.95:9300][indices:data/write/bulk[s]]]; 
+    nested: RemoteTransportException[[es-cluster-es-data-2][10.42.243.95:9300][indices:data/write/bulk[s][p]]]; 
+    nested: EsRejectedExecutionException[rejected execution of org.elasticsearch.transport.TransportService$7@18538d15 on EsThreadPoolExecutor[bulk, queue capacity = 200, org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor@28d87a9f[Running, pool size = 4, active threads = 4, queued tasks = 255, completed tasks = 11263]]];
+]

@@ -1,0 +1,477 @@
+curl -XGET '172.18.0.2:9200/.monitoring-es-6-2018.05.21/doc/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 1,
+    "query": {
+       "range" : {
+         "timestamp":{
+           "gte": "2018-05-21T23:59:50.000Z",
+           "lte": "2018-05-22T00:00:01.000Z"
+         }
+       }
+    }
+}
+' > 2018.05.21.monitor
+
+curl -X GET "localhost:9200/_nodes/stats/indices/request_cache?human"
+
+
+V3SearchLinkStartTime|Mon May 14 05:20:15 UTC 2018|V3SearchLinkEndTime|Mon May 14 05:20:21 UTC 2018|V3SEARCHLinkTIME|6108
+
+
+curl -XGET '172.18.0.2:9200/.monitoring-es-6-2018.05.14/doc/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 1,
+    "query": {
+       "match_all" : {}
+    }
+}
+'
+
+
+
+curl -XGET '192.168.1.106:9200/articlesearch/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "query": {
+       "match_all" : {}
+    }
+}
+'
+
+
+curl -XGET 'localhost:9201/search/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 0,
+    "query": {
+       "term" : {"productDescription": ""}
+    }
+}
+'
+
+
+curl -XGET '192.168.1.106:9200/todayspicks/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query" : {
+    "bool" : {
+      "should" : [
+        {
+          "bool" : {
+            "must" : [
+              {
+                "bool" : {
+                  "must" : [
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "vendors" : {
+                                "query" : "amazon",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    }
+                  ],
+                  "disable_coord" : false,
+                  "adjust_pure_negative" : true,
+                  "boost" : 1.0
+                }
+              }
+            ],
+            "disable_coord" : false,
+            "adjust_pure_negative" : true,
+            "boost" : 1.0
+          }
+        }
+      ],
+      "disable_coord" : false,
+      "adjust_pure_negative" : true,
+      "boost" : 1.0
+    }
+  },
+  "aggregations" : {
+    "null.Option.brands" : {
+      "terms" : {
+        "field" : "brands.keyword",
+        "size" : 200,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    }
+  }
+}
+'
+
+curl -XGET '192.168.1.106:9200/todayspicks/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 1,
+    "query": {
+       "match_all" : {}
+    }
+}
+'
+
+curl -XGET '192.168.1.106:9200/todayspicks/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 0,
+    "query": {
+       "match" : {"topProductPromoInfoVendor.titleEn": "amazon"}
+    }
+}
+'
+
+
+curl -XGET '172.18.0.2:9200/todayspicks/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 1,
+    "query": {
+       "match" : {"brandName": "Zionor"}
+    }
+}
+'
+
+curl -XGET 'localhost:9200/search/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 11,
+    "query": {
+       "match" : {"top_product_promo_info_vendor.*": "amazon"}
+    }
+}
+'
+
+
+curl -XGET '10.42.165.133:9200/todayspicks/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size":1,
+    "query": {
+       "match" : {"sources":"Subscribe & Save"}
+    }
+}
+'
+
+
+8398542
+
+
+curl -XGET '192.168.1.106:9200/todayspicks/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 5,
+    "query": {
+       "match_all" : {}
+    }
+}
+'
+
+
+curl -XGET 'localhost:9200/search/link/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 2,
+    "query": {
+       "match" : {"taskId": 171175}
+    }
+}
+'
+
+
+curl -XGET '96.90.248.211:9200/logs-webapp/webapp/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "query": {
+       "match" : {"message":{"query": "spends Searching", "operator": "and"}  }
+    }
+}
+'
+
+curl -XGET '96.90.248.211:9200/search/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "query":{
+  "bool" : {
+    "must" : {
+      []
+    },
+    "must_not" : {
+      "ids" : {
+        "types" : [ ],
+        "values" : [ ]
+      }
+    }
+  }
+}
+}'
+
+
+curl -XPOST 'localhost:9200/searchv/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": {
+  "bool" : {
+    "must" : [ {
+      "match" : {
+        "channel" : {
+          "query" : 1,
+          "type" : "boolean",
+          "operator" : "AND"
+        }
+      }
+    }, {
+      "match" : {
+        "language" : {
+          "query" : "en",
+          "type" : "boolean",
+          "operator" : "AND"
+        }
+      }
+    } ],
+    "must_not" : {
+      "ids" : {
+        "types" : [ ],
+        "values" : [ ]
+      }
+    },
+    "should" : [ {
+      "match" : {
+        "title" : {
+          "query" : "micom",
+          "type" : "boolean",
+          "operator" : "AND",
+          "analyzer" : "my_analyzer"
+        }
+      }
+    }, {
+      "match" : {
+        "description" : {
+          "query" : "micom",
+          "type" : "boolean",
+          "operator" : "AND",
+          "analyzer" : "my_analyzer"
+        }
+      }
+    }, {
+      "match" : {
+        "detail" : {
+          "query" : "micom",
+          "type" : "boolean",
+          "operator" : "AND",
+          "analyzer" : "my_analyzer"
+        }
+      }
+    }, {
+      "match" : {
+        "keywords" : {
+          "query" : "micom",
+          "type" : "boolean",
+          "operator" : "AND",
+          "analyzer" : "my_analyzer"
+        }
+      }
+    }, {
+      "match" : {
+        "topProductPromoInfoVendor.*" : {
+          "query" : "micom",
+          "type" : "boolean",
+          "operator" : "AND",
+          "analyzer" : "my_analyzer"
+        }
+      }
+    } ],
+    "minimum_should_match" : "1"
+  }
+}
+}'
+
+
+
+
+"query": {
+        "range" : {
+            "date" : {
+                "gte" : "now-1d/d",
+                "lt" :  "now/d"
+            }
+        }
+    }
+
+
+
+curl -XGET '96.90.248.211:9200/logs-webapp/webapp/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "query": {
+       "match" : {"message":{"query": "spends Searching", "operator": "and"}  }
+    }
+}
+'
+
+
+curl -XPOST '96.90.248.211:9200/logs-webapp/webapp/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": {
+  "bool" : {
+    "must" : [ {
+      "match" : {
+        "message":{
+            "query":"spends Searching",
+            "operator": "and"
+        }
+
+      }
+    },
+    {
+      "range":{
+        "timestamp":{
+          "gte": "now-5m",
+          "lt": "now"
+        }
+      }
+    } ]
+  }
+}
+}'
+
+
+curl -XPOST '96.90.248.211:9200/logs-webapp/webapp/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": {
+  "bool" : {
+    "must" : [ {
+      "range":{
+        "timestamp":{
+          "gte": "now-5m/d",
+          "lt": "now/d"
+        }
+      }
+    } ]
+  }
+}
+}'
+
+
+
+
+
+
+curl -XPOST '96.90.248.211:9200/logs-scrapy-cluster/sc-crawler/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "size": 100,
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "query_string": {
+            "analyze_wildcard": true,
+            "query": "*current"
+          }
+        },
+        {
+          "range": {
+            "timestamp": {
+              "gte": 1514131200000,
+              "lte": 1514217599999,
+              "format": "epoch_millis"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+'
+
+
+
+
+
+
+
+
+
+
+
+
+curl -XGET 'localhost:9200/searchvt/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "query": {
+        "range" : {
+            "missedTime" : {
+                "gte" : 1513573178000,
+                "boost" : 2.0
+            }
+        }
+    }
+}
+'
+
+
+
+curl -XPOST 'localhost:9200/searchv/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": 
+        {
+            "bool" : {
+                "must" :  
+                    {
+                        "match":{
+                            "topProduct": true
+                        }
+                    }
+                ,
+                "should":
+                    {
+                        "match":{
+                            "vendors":"Saks Fifth Avenue"
+                        }
+                    }
+                
+            }
+        }
+}'
+
+
+
+
+
+
+
+
+
+
+curl -XPOST 'localhost:9200/searchv/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": 
+    {
+        "bool" : {
+            "must" :  
+            {
+                "match":{
+                    "topProduct": true
+                }
+            }
+            ,
+            "should":
+            {
+                "match":{
+                    "vendors":"Saks Fifth Avenue"
+                }
+            }
+            
+        }
+    }
+}'

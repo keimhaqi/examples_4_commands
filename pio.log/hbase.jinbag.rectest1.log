@@ -1,0 +1,236 @@
+2018-02-01 10:06:25,441 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3051 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:06:27,413 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,,1513859637362.3d948614ce7220e3ad711e2797ad2feb. because e has an old edit so flush to free WALs after random delay 287815ms
+2018-02-01 10:06:31,083 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3052 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:06:35,009 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3053 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:06:37,413 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,,1513859637362.3d948614ce7220e3ad711e2797ad2feb. because e has an old edit so flush to free WALs after random delay 99906ms
+2018-02-01 10:06:39,047 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3054 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:06:44,559 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3055 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:06:47,413 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,,1513859637362.3d948614ce7220e3ad711e2797ad2feb. because e has an old edit so flush to free WALs after random delay 189587ms
+2018-02-01 10:06:51,038 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3057 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:06:54,149 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3058 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:06:57,571 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3059 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:06:58,135 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,,1513859637362.3d948614ce7220e3ad711e2797ad2feb. because e has an old edit so flush to free WALs after random delay 214913ms
+2018-02-01 10:07:04,478 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3060 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:07:06,603 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3061 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:07:07,429 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,,1513859637362.3d948614ce7220e3ad711e2797ad2feb. because e has an old edit so flush to free WALs after random delay 200337ms
+2018-02-01 10:07:17,413 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,,1513859637362.3d948614ce7220e3ad711e2797ad2feb. because e has an old edit so flush to free WALs after random delay 15318ms
+2018-02-01 10:07:22,879 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3062 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:07:28,158 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,,1513859637362.3d948614ce7220e3ad711e2797ad2feb. because e has an old edit so flush to free WALs after random delay 141618ms
+2018-02-01 10:07:37,668 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,,1513859637362.3d948614ce7220e3ad711e2797ad2feb. because e has an old edit so flush to free WALs after random delay 216524ms
+2018-02-01 10:07:42,151 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3042 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:07:47,413 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,,1513859637362.3d948614ce7220e3ad711e2797ad2feb. because e has an old edit so flush to free WALs after random delay 43465ms
+2018-02-01 10:07:57,416 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,,1513859637362.3d948614ce7220e3ad711e2797ad2feb. because e has an old edit so flush to free WALs after random delay 22301ms
+2018-02-01 10:08:08,234 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,,1513859637362.3d948614ce7220e3ad711e2797ad2feb. because e has an old edit so flush to free WALs after random delay 281586ms
+2018-02-01 10:08:17,755 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,,1513859637362.3d948614ce7220e3ad711e2797ad2feb. because e has an old edit so flush to free WALs after random delay 34844ms
+2018-02-01 10:08:23,210 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3038 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:08:28,148 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,,1513859637362.3d948614ce7220e3ad711e2797ad2feb. because e has an old edit so flush to free WALs after random delay 31591ms
+2018-02-01 10:08:29,785 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3064 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:08:37,439 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,,1513859637362.3d948614ce7220e3ad711e2797ad2feb. because e has an old edit so flush to free WALs after random delay 204186ms
+2018-02-01 10:08:39,846 INFO  [MemStoreFlusher.1] regionserver.HRegion: Flushing 1/2 column families, memstore=2.83 MB; e=2.83 MB
+2018-02-01 10:08:39,879 INFO  [MemStoreFlusher.1] regionserver.DefaultStoreFlusher: Flushed, sequenceid=914636, memsize=2.8 M, hasBloomFilter=true, into tmp file file:/home/jinbag/PredictionIO/vendors/hbase-1.2.2
+/data/data/pio_event/events_1/3d948614ce7220e3ad711e2797ad2feb/.tmp/1f644fd907c84a17a434b39468a51c3c
+2018-02-01 10:08:39,880 INFO  [MemStoreFlusher.1] regionserver.HStore: Added file:/home/jinbag/PredictionIO/vendors/hbase-1.2.2/data/data/pio_event/events_1/3d948614ce7220e3ad711e2797ad2feb/e/1f644fd907c84a17a434
+b39468a51c3c, entries=10394, sequenceid=914636, filesize=1.6 M
+2018-02-01 10:08:39,881 INFO  [MemStoreFlusher.1] regionserver.HRegion: Finished memstore flush of ~2.83 MB/2964216, currentsize=0 B/0 for region pio_event:events_1,,1513859637362.3d948614ce7220e3ad711e2797ad2feb
+. in 35ms, sequenceid=914636, compaction requested=true
+2018-02-01 10:08:40,924 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3066 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:08:49,868 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3069 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:08:53,207 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3070 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:08:55,550 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3071 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:08:59,070 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3072 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:09:02,673 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3073 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:09:05,401 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3074 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:09:08,421 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3075 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:09:12,320 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3076 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:09:13,104 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3077 lease expired on region pio_event:events_1,,1513859637362.3d948614ce7220
+e3ad711e2797ad2feb.
+2018-02-01 10:09:15,999 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3078 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:09:17,461 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3079 lease expired on region pio_event:events_1,,1513859637362.3d948614ce7220
+e3ad711e2797ad2feb.
+2018-02-01 10:09:19,988 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3080 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:09:23,720 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3081 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:09:25,103 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3082 lease expired on region pio_event:events_1,,1513859637362.3d948614ce7220
+e3ad711e2797ad2feb.
+2018-02-01 10:09:26,486 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3083 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:09:31,274 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3084 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:09:43,061 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3085 lease expired on region pio_event:events_1,,1513859637362.3d948614ce7220
+e3ad711e2797ad2feb.
+2018-02-01 10:09:59,828 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3065 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:10:19,510 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3087 lease expired on region pio_event:events_1,,1513859637362.3d948614ce7220
+e3ad711e2797ad2feb.
+2018-02-01 10:10:26,830 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=231.09 MB, freeSize=7.57 GB, max=7.80 GB, blockCount=3526, accesses=39861084, hits=39696917, hitRatio=99.59%, , cachingAcc
+esses=39700439, cachingHits=39691257, cachingHitsRatio=99.98%, evictions=36209, evicted=5656, evictedPerRun=0.1562042534351349
+2018-02-01 10:10:36,919 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3045 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:10:41,950 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2018-02-01 10:10:41,951 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2018-02-01 10:10:42,451 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2018-02-01 10:10:42,452 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2018-02-01 10:10:42,452 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2018-02-01 10:10:57,908 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3090 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:11:06,633 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3091 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:11:09,931 WARN  [PriorityRpcServer.handler=8,queue=0,port=49293] ipc.RpcServer: PriorityRpcServer.handler=8,queue=0,port=49293: caught a ClosedChannelException, this means that the server /192.168.1
+.195:49293 was processing a request but the client went away. The error message was: null
+2018-02-01 10:11:16,560 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3048 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:11:21,341 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3092 lease expired on region pio_event:events_1,,1513859637362.3d948614ce7220
+e3ad711e2797ad2feb.
+2018-02-01 10:11:58,234 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3089 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:12:07,186 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3039 lease expired on region pio_event:events_1,,1513859637362.3d948614ce7220
+e3ad711e2797ad2feb.
+2018-02-01 10:12:07,287 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3046 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:12:07,287 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3086 lease expired on region pio_event:events_1,,1513859637362.3d948614ce7220
+e3ad711e2797ad2feb.
+2018-02-01 10:12:08,569 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3044 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:12:08,670 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3050 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:12:08,670 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3049 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:12:09,272 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3047 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:12:09,372 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3068 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:12:09,373 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3063 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:12:09,373 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3041 lease expired on region pio_event:events_1,,1513859637362.3d948614ce7220
+e3ad711e2797ad2feb.
+2018-02-01 10:12:09,373 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3040 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:12:10,283 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3096 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:12:43,520 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3103 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:13:10,959 WARN  [PriorityRpcServer.handler=3,queue=1,port=49293] ipc.RpcServer: PriorityRpcServer.handler=3,queue=1,port=49293: caught a ClosedChannelException, this means that the server /192.168.1
+.195:49293 was processing a request but the client went away. The error message was: null
+2018-02-01 10:13:22,960 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3102 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:13:23,769 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3106 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:14:09,539 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3043 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:14:09,640 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3104 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:14:10,197 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3088 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:14:11,759 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3100 lease expired on region pio_event:events_1,,1513859637362.3d948614ce7220
+e3ad711e2797ad2feb.
+2018-02-01 10:15:26,830 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=231.09 MB, freeSize=7.57 GB, max=7.80 GB, blockCount=3526, accesses=41904483, hits=41740316, hitRatio=99.61%, , cachingAcc
+esses=41743838, cachingHits=41734656, cachingHitsRatio=99.98%, evictions=36239, evicted=5656, evictedPerRun=0.15607494115829468
+2018-02-01 10:15:41,950 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2018-02-01 10:15:41,951 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2018-02-01 10:15:42,452 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2018-02-01 10:15:42,453 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2018-02-01 10:15:42,453 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2018-02-01 10:16:02,000 INFO  [SessionTracker] server.ZooKeeperServer: Expiring session 0x1613b42f10b0024, timeout of 40000ms exceeded
+2018-02-01 10:16:02,000 INFO  [ProcessThread(sid:0 cport:-1):] server.PrepRequestProcessor: Processed session termination for sessionid: 0x1613b42f10b0024
+2018-02-01 10:16:02,036 INFO  [SyncThread:0] server.NIOServerCnxn: Closed socket connection for client /0:0:0:0:0:0:0:1:59496 which had sessionid 0x1613b42f10b0024
+2018-02-01 10:16:20,525 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3099 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:16:20,525 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3098 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:16:20,525 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3108 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:16:20,525 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3107 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:16:20,626 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3110 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:16:20,626 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3097 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:16:22,596 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3109 lease expired on region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\
+xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:16:25,489 INFO  [regionserver/rectest1.maui.jinbag.com/192.168.1.195:0.leaseChecker] regionserver.RSRpcServices: Scanner 3111 lease expired on region pio_event:events_1,,1513859637362.3d948614ce7220
+e3ad711e2797ad2feb.
+2018-02-01 10:19:57,413 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf. because e has an old edit so flush to free 
+WALs after random delay 12024ms
+2018-02-01 10:20:07,477 INFO  [rectest1.maui.jinbag.com,49293,1517117705400_ChoreService_1] regionserver.HRegionServer: rectest1.maui.jinbag.com,49293,1517117705400-MemstoreFlusherChore requesting flush of pio_ev
+ent:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\xA26-U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf. because e has an old edit so flush to free 
+WALs after random delay 54132ms
+2018-02-01 10:20:09,437 INFO  [MemStoreFlusher.1] regionserver.HRegion: Flushing 1/2 column families, memstore=506.50 KB; e=506.91 KB
+2018-02-01 10:20:09,458 INFO  [MemStoreFlusher.1] regionserver.DefaultStoreFlusher: Flushed, sequenceid=507783, memsize=506.5 K, hasBloomFilter=true, into tmp file file:/home/jinbag/PredictionIO/vendors/hbase-1.2
+.2/data/data/pio_event/events_1/a001ad1b88adcdf5eb27c2c4682ebfaf/.tmp/9dd554eebf074e5286a63e465a3813ba
+2018-02-01 10:20:09,460 INFO  [MemStoreFlusher.1] regionserver.HStore: Added file:/home/jinbag/PredictionIO/vendors/hbase-1.2.2/data/data/pio_event/events_1/a001ad1b88adcdf5eb27c2c4682ebfaf/e/9dd554eebf074e5286a6
+3e465a3813ba, entries=1725, sequenceid=507783, filesize=298.6 K
+2018-02-01 10:20:09,461 INFO  [MemStoreFlusher.1] regionserver.HRegion: Finished memstore flush of ~506.50 KB/518656, currentsize=0 B/0 for region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\xA26-U\xF2\x06\xD
+5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf. in 24ms, sequenceid=507783, compaction requested=true
+2018-02-01 10:20:09,461 INFO  [RS:0;rectest1:49293-shortCompactions-1517117754581] regionserver.HRegion: Starting compaction on e in region pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\xA26-U\xF2\x06\xD5\xFE\x
+92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf.
+2018-02-01 10:20:09,461 INFO  [RS:0;rectest1:49293-shortCompactions-1517117754581] regionserver.HStore: Starting compaction of 3 file(s) in e of pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\xA26-U\xF2\x06\xD5\
+xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf. into tmpdir=file:/home/jinbag/PredictionIO/vendors/hbase-1.2.2/data/data/pio_event/events_1/a001ad1b88ad
+cdf5eb27c2c4682ebfaf/.tmp, totalSize=2.2 M
+2018-02-01 10:20:09,568 INFO  [RS:0;rectest1:49293-shortCompactions-1517117754581] regionserver.HStore: Completed compaction of 3 file(s) in e of pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\xA26-U\xF2\x06\xD5
+\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf. into 4e9a76adc499420a85efe7e71a229eb4(size=2.2 M), total size for store is 200.5 M. This selection was 
+in queue for 0sec, and took 0sec to execute.
+2018-02-01 10:20:09,568 INFO  [RS:0;rectest1:49293-shortCompactions-1517117754581] regionserver.CompactSplitThread: Completed compaction: Request = regionName=pio_event:events_1,\xD1\xD8\xE6\xD3\x0A\x8D\xF5\xA26-
+U\xF2\x06\xD5\xFE\x92\x00\x00\x01_\x9E\xF3\xA1\xA3\x9A\xAB\x0A\xC9:\xFE4#,1513859637362.a001ad1b88adcdf5eb27c2c4682ebfaf., storeName=e, fileCount=3, fileSize=2.2 M, priority=6, time=363375370040321; duration=0sec
+2018-02-01 10:20:26,831 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=230.84 MB, freeSize=7.57 GB, max=7.80 GB, blockCount=3522, accesses=41904521, hits=41740322, hitRatio=99.61%, , cachingAcc
+esses=41743840, cachingHits=41734658, cachingHitsRatio=99.98%, evictions=36269, evicted=5660, evictedPerRun=0.15605613589286804
+2018-02-01 10:20:34,265 WARN  [PriorityRpcServer.handler=14,queue=0,port=49293] regionserver.RSRpcServices: Client tried to access missing scanner 3098
+2018-02-01 10:20:41,950 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2018-02-01 10:20:41,952 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2018-02-01 10:20:42,452 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2018-02-01 10:20:42,452 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2018-02-01 10:20:42,452 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2018-02-01 10:20:45,965 WARN  [PriorityRpcServer.handler=1,queue=1,port=49293] regionserver.RSRpcServices: Client tried to access missing scanner 3107
+2018-02-01 10:20:53,957 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /127.0.0.1:58443
+2018-02-01 10:20:53,958 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Client attempting to renew session 0x1613b42f10b0024 at /127.0.0.1:58443
+2018-02-01 10:20:53,958 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Invalid session 0x1613b42f10b0024 for client /127.0.0.1:58443, probably expired
+2018-02-01 10:20:53,958 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: Closed socket connection for client /127.0.0.1:58443 which had sessionid 0x1613b42f10b0024
+2018-02-01 10:21:09,473 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /127.0.0.1:58468
+2018-02-01 10:21:09,474 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Client attempting to establish new session at /127.0.0.1:58468
+2018-02-01 10:21:09,496 INFO  [SyncThread:0] server.ZooKeeperServer: Established session 0x1613b42f10b0035 with negotiated timeout 40000 for client /127.0.0.1:58468
+2018-02-01 10:21:09,504 WARN  [PriorityRpcServer.handler=11,queue=1,port=49293] regionserver.RSRpcServices: Client tried to access missing scanner 3109
+2018-02-01 10:21:09,566 WARN  [PriorityRpcServer.handler=1,queue=1,port=49293] regionserver.RSRpcServices: Client tried to access missing scanner 3111
+2018-02-01 10:21:09,568 WARN  [PriorityRpcServer.handler=9,queue=1,port=49293] regionserver.RSRpcServices: Client tried to access missing scanner 3108
+2018-02-01 10:21:09,570 WARN  [PriorityRpcServer.handler=14,queue=0,port=49293] regionserver.RSRpcServices: Client tried to access missing scanner 3098
+2018-02-01 10:21:09,968 WARN  [PriorityRpcServer.handler=5,queue=1,port=49293] regionserver.RSRpcServices: Client tried to access missing scanner 3110
+2018-02-01 10:21:09,972 WARN  [PriorityRpcServer.handler=17,queue=1,port=49293] regionserver.RSRpcServices: Client tried to access missing scanner 3097
+2018-02-01 10:21:11,976 WARN  [PriorityRpcServer.handler=3,queue=1,port=49293] regionserver.RSRpcServices: Client tried to access missing scanner 3099

@@ -1,0 +1,1567 @@
+curl -XGET '192.168.1.103:9200/search_ap/items/46957,46960?pretty'
+curl -XGET 'localhost:9200/hockey/player/7?pretty'
+curl -XGET 'localhost:9200/search/items/9652034?pretty'
+curl -XGET 'localhost:9200/searchvt/items/387973?pretty'
+curl -XGET 'localhost:9200/search/items/127150?pretty'
+curl -XGET 'localhost:9200/searchv2/items/391892?pretty'
+
+curl -XGET 'localhost:9201/search/items/10152136?pretty'
+6291154
+
+10152136
+
+41142
+
+http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz
+
+http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz?AuthParam=1525416264_63637299f5083af2c37676236872b8e8
+
+curl -XGET '172.18.0.2:9200/todayspicks/items/2364790?pretty'
+
+curl -XGET '192.168.1.106:9200/todayspicks/items/10649200?pretty'
+curl -XGET '192.168.1.106:9200/todayspicks/items/10646260?pretty'
+curl -XGET '192.168.1.106:9200/todayspicks/items/10640144?pretty'
+curl -XGET '192.168.1.106:9200/todayspicks/items/10601600?pretty'
+curl -XGET '192.168.1.106:9200/todayspicks/items/10585274?pretty'
+
+
+curl -XGET '192.168.1.106:9200/articlesearch/post/10?pretty'
+curl -XGET '192.168.1.106:9200/jinbagsearch/items/1515674?pretty'
+curl -XGET 'localhost:9200/searchal/items/10?pretty'
+curl -XGET 'localhost:9200/autojinbag/tags/Zhongshan?pretty'
+
+{
+  "size": 500,
+  "sort": [
+    {
+      "timestamp": {
+        "order": "desc",
+        "unmapped_type": "boolean"
+      }
+    }
+  ],
+  "highlight": {
+    "pre_tags": [
+      "@kibana-highlighted-field@"
+    ],
+    "post_tags": [
+      "@/kibana-highlighted-field@"
+    ],
+    "fields": {
+      "*": {}
+    },
+    "require_field_match": false,
+    "fragment_size": 2147483647
+  },
+  "_source": {
+    "excludes": []
+  },
+  "aggs": {
+    "2": {
+      "date_histogram": {
+        "field": "timestamp",
+        "interval": "30s",
+        "time_zone": "Asia/Shanghai",
+        "min_doc_count": 1
+      }
+    }
+  },
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match_all": {}
+        },
+        {
+
+        },
+        {
+          "range": {
+            "timestamp": {
+              "gte": 1525858507074,
+              "lte": 1525859407074,
+              "format": "epoch_millis"
+            }
+          }
+        }
+      ],
+      "must_not": []
+    }
+  },
+  "stored_fields": [
+    "*"
+  ],
+  "script_fields": {},
+  "docvalue_fields": [
+    "timestamp",
+    "@timestamp"
+  ]
+}
+
+
+http://96.90.248.211:5601/app/kibana#/discover?_g=()&_a=(columns:!(_type),index:logs-scrapy-cluster,type:redis-monitor,interval:auto,query:(query_string:(analyze_wildcard:!t,query:'*')),sort:!(timestamp,desc),uiState:(spy:(mode:(fill:!f,name:request))))
+
+Mon May 07 01:43:21 UTC 2018
+
+出现这个问题的原因是BI在使用商品的时间信息的逻辑有问题导致的,当前BI使用商品的时间信息的逻辑如下:
+
+    查询data_point,查看是否有lightening deal's 信息;
+        如果有,则采用lightening deal's 时间信息;
+        如果没有,则不采用lightening deal's 时间信息,转而采用商品的价格对应的时间信息;
+
+上述逻辑中有一个错误,如下:
+
+    如果存在lightening deal's 信息,则需要判断该信息是否仍然有效:
+        如果有效,则可以采用;
+        如果无效,例如已经过期了,那么就不应该采用;
+
+
+因此才会出现了LastCheckedTime 8 hours ago, 但是posted 6 hours ago
+
+
+curl -XGET '192.168.1.106:9200/todayspicks/items/10558078?pretty'
+
+
+
+curl -XPUT 'localhost:9200/test?pretty' -H 'Content-Type: application/json' -d'
+{
+    "settings" : {
+        "number_of_shards" : 1
+    },
+    "mappings" : {
+        "items" : {
+            "properties": {
+                "content": {
+                    "type": "string",
+                    "analyzer": "ik",
+                    "search_analyzer": "ik"
+                }
+            }
+        }
+    }
+}
+'
+
+
+curl -XPOST http://172.18.0.2:9200/jinbagsearch/items/_search  -H 'Content-Type: application/json' -d'
+{
+    "query" :
+{
+  "bool" : {
+    "must" : [
+      {
+        "bool" : {
+          "should" : [
+            {
+              "match" : {
+                "language" : {
+                  "query" : "en",
+                  "operator" : "AND",
+                  "prefix_length" : 0,
+                  "max_expansions" : 50,
+                  "fuzzy_transpositions" : true,
+                  "lenient" : false,
+                  "zero_terms_query" : "NONE",
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "minimum_should_match" : "1",
+          "boost" : 1.0
+        }
+      },
+      {
+        "bool" : {
+          "should" : [
+            {
+              "match" : {
+                "brand" : {
+                  "query" : "Nike",
+                  "operator" : "AND",
+                  "prefix_length" : 0,
+                  "max_expansions" : 50,
+                  "fuzzy_transpositions" : true,
+                  "lenient" : false,
+                  "zero_terms_query" : "NONE",
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "minimum_should_match" : "1",
+          "boost" : 1.0
+        }
+      }
+    ],
+    "must_not" : [
+      {
+        "ids" : {
+          "type" : [ ],
+          "values" : [ ],
+          "boost" : 1.0
+        }
+      }
+    ],
+    "should" : [
+      {
+        "match" : {
+          "topProduct" : {
+            "query" : true,
+            "operator" : "OR",
+            "prefix_length" : 0,
+            "max_expansions" : 50,
+            "fuzzy_transpositions" : true,
+            "lenient" : false,
+            "zero_terms_query" : "NONE",
+            "boost" : 1.0
+          }
+        }
+      }
+    ],
+    "disable_coord" : false,
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
+}'
+
+
+curl -XPOST http://localhost:9200/autojinbag/items/_search  -H 'Content-Type: application/json' -d'
+{
+    "query" :
+{
+  "bool" : {
+    "must" : [
+      {
+        "multi_match" : {
+          "query" : "en",
+          "fields" : [
+            "language^1.0"
+          ],
+          "type" : "best_fields",
+          "operator" : "OR",
+          "slop" : 0,
+          "prefix_length" : 0,
+          "max_expansions" : 50,
+          "lenient" : false,
+          "zero_terms_query" : "NONE",
+          "boost" : 1.0
+        }
+      },
+      {
+        "fuzzy" : {
+          "words" : {
+            "value" : "micheal Kors",
+            "fuzziness" : "2",
+            "prefix_length" : 0,
+            "max_expansions" : 100,
+            "transpositions" : false,
+            "boost" : 1.0
+          }
+        }
+      }
+    ],
+    "should" : [
+      {
+        "multi_match" : {
+          "query" : "words",
+          "fields" : [
+            "micheal Kors^1.0"
+          ],
+          "type" : "best_fields",
+          "operator" : "OR",
+          "slop" : 10,
+          "prefix_length" : 0,
+          "max_expansions" : 50,
+          "lenient" : false,
+          "zero_terms_query" : "NONE",
+          "boost" : 10.0
+        }
+      }
+    ],
+    "disable_coord" : false,
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
+}'
+
+curl -XPOST http://192.168.1.106:9200/jinbagsearch/items/_search?pretty  -H 'Content-Type: application/json' -d'
+{
+    "size": 10,
+    "explain": true,
+    "query":{
+  "bool" : {
+    "must" : [
+      {
+        "bool" : {
+          "should" : [
+            {
+              "match" : {
+                "language" : {
+                  "query" : "en",
+                  "operator" : "AND",
+                  "prefix_length" : 0,
+                  "max_expansions" : 50,
+                  "fuzzy_transpositions" : true,
+                  "lenient" : false,
+                  "zero_terms_query" : "NONE",
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "minimum_should_match" : "1",
+          "boost" : 1.0
+        }
+      },
+      {
+        "match" : {
+          "_all" : {
+            "query" : "nike 6 men",
+            "operator" : "AND",
+            "prefix_length" : 0,
+            "max_expansions" : 50,
+            "fuzzy_transpositions" : true,
+            "lenient" : false,
+            "zero_terms_query" : "NONE",
+            "boost" : 1.0
+          }
+        }
+      }
+    ],
+    "must_not" : [
+      {
+        "ids" : {
+          "type" : [ ],
+          "values" : [ ],
+          "boost" : 1.0
+        }
+      }
+    ],
+    "disable_coord" : false,
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
+}'
+
+
+curl -XPOST http://localhost:9200/test/items/1 -H 'Content-Type: application/json' -d'
+{"content":"美国留给伊拉克的是个烂摊子吗"}
+'
+
+
+
+curl -XPOST http://localhost:9200/test/items/_search  -H 'Content-Type: application/json' -d'
+{
+    "query" : { "match" : { "content" : "中国" }},
+    "highlight" : {
+        "pre_tags" : ["<tag1>", "<tag2>"],
+        "post_tags" : ["</tag1>", "</tag2>"],
+        "fields" : {
+            "content" : {}
+        }
+    }
+}
+'
+
+
+
+curl -XPOST http://localhost:9200/test/items/_search  -H 'Content-Type: application/json' -d'
+{
+    "query" : { "match" : { "content" : "美国" }}
+}
+'
+
+
+
+curl -XGET 'localhost:9200/test/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 10,
+    "query": {
+       "match_all" : {}
+    }
+}
+'
+
+
+
+
+
+
+
+"fulltext": {
+             "_all": {
+            "indexAnalyzer": "ik",
+            "searchAnalyzer": "ik",
+            "term_vector": "no",
+            "store": "false"
+        },
+        "properties": {
+            "content": {
+                "type": "string",
+                "store": "no",
+                "term_vector": "with_positions_offsets",
+                "indexAnalyzer": "ik",
+                "searchAnalyzer": "ik",
+                "include_in_all": "true",
+                "boost": 8
+            }
+        }
+    }
+
+
+curl -XPUT 'localhost:9200/index?pretty' -H 'Content-Type:application/json' -d'
+{
+    "settings":{
+        "number_of_shards" : 1
+    },
+    "mappings" : {
+        "type1" : {
+            "properties": {
+                "content": {
+                    "type": "text",
+                    "analyzer": "ik_max_word",
+                    "search_analyzer": "ik_max_word"
+                }
+            }   
+        }
+}
+'
+
+
+curl -XPOST http://localhost:9200/search_a/items/_search  -H 'Content-Type: application/json' -d'
+{
+  "query" :{
+        "bool" : {
+            "should" : [ {
+                "range" : {
+                    "missedTime" : {
+                    "from" : 1513708503988,
+                    "to" : null,
+                    "include_lower" : true,
+                    "include_upper" : true
+                    }
+                }
+            }, {
+                "constant_score" : {
+                    "filter" : {
+                        "missing" : {
+                            "field" : "missedTime"
+                        }
+                    }
+                }
+            } ],
+            "minimum_should_match" : "1"
+        }
+    }
+}'
+
+
+
+
+
+
+
+
+
+                "bool" : {
+                    "should" : [ {
+                        "range" : {
+                            "missedTime" : {
+                            "from" : 1513708503988,
+                            "to" : null,
+                            "include_lower" : true,
+                            "include_upper" : true
+                            }
+                        }
+                    }, {
+                        "constant_score" : {
+                            "filter" : {
+                                "missing" : {
+                                    "field" : "missedTime"
+                                }
+                            }
+                        }
+                    } ],
+                    "minimum_should_match" : "1"
+                }
+
+
+
+
+
+curl -XGET "http://localhost:9200/search/items/_search?pretty" -d '
+{
+    "size": 0,
+  "query": {
+    "bool":{
+      "must_not":{
+        "bool": {
+          "must": [
+            {"exists" : { "field" : "promo" }}
+          ]
+        }
+      }
+    }
+  }
+}'
+
+curl -XGET 'localhost:9200/search/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 0,
+    "query": {
+        "exists" : { "field" : "promo" }
+    }
+}
+'
+
+
+curl -XGET "http://localhost:9200/search_a/items/_search?pretty" -d '
+{
+  "query": {
+    "match":{"promo":{"query": null} }
+  }
+}'
+
+
+curl -XPOST http://localhost:9200/search/items/_search?pretty  -H 'Content-Type: application/json' -d'
+{
+    "size": 10,
+    "query":{
+        "bool": {
+            "must": {
+                "match":{
+                    "23": {
+                        "query":"school"
+                    }
+                }
+            }                  
+        }
+    }
+}'
+
+
+curl -XPOST http://localhost:9200/search/items/_search?pretty  -H 'Content-Type: application/json' -d'
+{
+    "size": 10,
+    "query":{
+    "bool" : {
+        "must" : [
+        {
+            "bool" : {
+            "must" : [
+                {
+                "match" : {
+                    "299" : {
+                    "query" : "tag_name",
+                    "operator" : "AND",
+                    "analyzer" : "my_analyzer",
+                    "prefix_length" : 0,
+                    "max_expansions" : 50,
+                    "fuzzy_transpositions" : true,
+                    "lenient" : false,
+                    "zero_terms_query" : "NONE",
+                    "boost" : 1.0
+                    }
+                }
+                }
+            ],
+            "disable_coord" : false,
+            "adjust_pure_negative" : true,
+            "boost" : 1.0
+            }
+        }
+        ],
+        "must_not" : [
+        {
+            "ids" : {
+            "type" : [ ],
+            "values" : [
+                "111",
+                "222",
+                "333",
+                "444",
+                "555"
+            ],
+            "boost" : 1.0
+            }
+        }
+        ],
+        "disable_coord" : false,
+        "adjust_pure_negative" : true,
+        "boost" : 1.0
+    }
+    }
+}'
+
+
+
+
+
+
+
+
+
+
+
+curl -XPOST http://localhost:9200/search/items/_search?pretty  -H 'Content-Type: application/json' -d'
+{
+    "size": 10,
+    "query":
+{
+  "bool" : {
+    "must" : [
+      {
+        "bool" : {
+          "should" : [
+            {
+              "match" : {
+                "23" : {
+                  "query" : "school",
+                  "operator" : "AND",
+                  "analyzer" : "my_analyzer",
+                  "prefix_length" : 0,
+                  "max_expansions" : 50,
+                  "fuzzy_transpositions" : true,
+                  "lenient" : false,
+                  "zero_terms_query" : "NONE",
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "minimum_should_match" : "1",
+          "boost" : 1.0
+        }
+      }
+    ],
+    "must_not" : [
+      {
+        "ids" : {
+          "type" : [ ],
+          "values" : [
+            "111",
+            "222",
+            "333",
+            "444",
+            "555"
+          ],
+          "boost" : 1.0
+        }
+      }
+    ],
+    "should" : [
+      {
+        "match" : {
+          "topProduct" : {
+            "query" : true,
+            "operator" : "OR",
+            "prefix_length" : 0,
+            "max_expansions" : 50,
+            "fuzzy_transpositions" : true,
+            "lenient" : false,
+            "zero_terms_query" : "NONE",
+            "boost" : 1.0
+          }
+        }
+      }
+    ],
+    "disable_coord" : false,
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
+}'
+
+
+
+
+
+curl -XPOST http://localhost:9200/search_bp/items/_search?pretty  -H 'Content-Type: application/json' -d'
+{
+    "size": 10,
+    "query":
+{
+  "bool" : {
+    "must" : [ {
+      "match" : {
+        "_all" : {
+          "query" : "saks",
+          "type" : "boolean",
+          "analyzer" : "my_analyzer"
+        }
+      }
+    }, {
+      "bool" : {
+        "should" : [ {
+          "match" : {
+            "productId" : {
+              "query" : 60,
+              "type" : "boolean"
+            }
+          }
+        }, {
+          "match" : {
+            "productId" : {
+              "query" : 119,
+              "type" : "boolean"
+            }
+          }
+        }, {
+          "match" : {
+            "productId" : {
+              "query" : 366,
+              "type" : "boolean"
+            }
+          }
+        }, {
+          "match" : {
+            "productId" : {
+              "query" : 3736,
+              "type" : "boolean"
+            }
+          }
+        }, {
+          "match" : {
+            "productId" : {
+              "query" : 3840,
+              "type" : "boolean"
+            }
+          }
+        }, {
+          "match" : {
+            "productId" : {
+              "query" : 11590,
+              "type" : "boolean"
+            }
+          }
+        }, {
+          "match" : {
+            "productId" : {
+              "query" : 11911,
+              "type" : "boolean"
+            }
+          }
+        }, {
+          "match" : {
+            "productId" : {
+              "query" : 62860,
+              "type" : "boolean"
+            }
+          }
+        }, {
+          "match" : {
+            "productId" : {
+              "query" : 84090,
+              "type" : "boolean"
+            }
+          }
+        } ],
+        "minimum_should_match" : "1"
+      }
+    } ],
+    "must_not" : {
+      "ids" : {
+        "types" : [ ],
+        "values" : [ "9", "60", "333", "444", "555" ]
+      }
+    },
+    "should" : {
+      "match" : {
+        "topProduct" : {
+          "query" : true,
+          "type" : "boolean"
+        }
+      }
+    }
+  }
+}
+}'
+
+
+
+
+172.18.0.2
+curl -XPOST http://192.168.1.106:9200/todayspicks/items/_search?pretty  -H 'Content-Type: application/json' -d'
+{
+    "size": 0,
+    "query":
+{
+  "query" : {
+    "bool" : {
+      "should" : [
+        {
+          "bool" : {
+            "must" : [
+              {
+                "bool" : {
+                  "must" : [
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "sources" : {
+                                "query" : "add-on item",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          },
+                          {
+                            "match" : {
+                              "sources" : {
+                                "query" : "add-on items prime",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    }
+                  ],
+                  "disable_coord" : false,
+                  "adjust_pure_negative" : true,
+                  "boost" : 1.0
+                }
+              }
+            ],
+            "disable_coord" : false,
+            "adjust_pure_negative" : true,
+            "boost" : 1.0
+          }
+        },
+        {
+          "bool" : {
+            "must" : [
+              {
+                "bool" : {
+                  "must" : [
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "sources" : {
+                                "query" : "subscribe and save",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    }
+                  ],
+                  "disable_coord" : false,
+                  "adjust_pure_negative" : true,
+                  "boost" : 1.0
+                }
+              }
+            ],
+            "disable_coord" : false,
+            "adjust_pure_negative" : true,
+            "boost" : 1.0
+          }
+        },
+        {
+          "bool" : {
+            "must" : [
+              {
+                "bool" : {
+                  "must" : [
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "sources" : {
+                                "query" : "goldbox",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    }
+                  ],
+                  "disable_coord" : false,
+                  "adjust_pure_negative" : true,
+                  "boost" : 1.0
+                }
+              }
+            ],
+            "disable_coord" : false,
+            "adjust_pure_negative" : true,
+            "boost" : 1.0
+          }
+        },
+        {
+          "bool" : {
+            "must" : [
+              {
+                "bool" : {
+                  "must" : [
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "categories" : {
+                                "query" : "home & kitchen",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    },
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "vendors" : {
+                                "query" : "amazon",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    },
+                    {
+                      "bool" : {
+                        "should" : [
+                          {
+                            "match" : {
+                              "sources" : {
+                                "query" : "bestsellers",
+                                "operator" : "AND",
+                                "prefix_length" : 0,
+                                "max_expansions" : 50,
+                                "fuzzy_transpositions" : true,
+                                "lenient" : false,
+                                "zero_terms_query" : "NONE",
+                                "boost" : 1.0
+                              }
+                            }
+                          }
+                        ],
+                        "disable_coord" : false,
+                        "adjust_pure_negative" : true,
+                        "minimum_should_match" : "1",
+                        "boost" : 1.0
+                      }
+                    }
+                  ],
+                  "disable_coord" : false,
+                  "adjust_pure_negative" : true,
+                  "boost" : 1.0
+                }
+              }
+            ],
+            "disable_coord" : false,
+            "adjust_pure_negative" : true,
+            "boost" : 1.0
+          }
+        }
+      ],
+      "disable_coord" : false,
+      "adjust_pure_negative" : true,
+      "boost" : 1.0
+    }
+  },
+  "aggregations" : {
+    "Amazon Add-on items" : {
+      "filters" : {
+        "filters" : {
+          "Amazon Add-on items" : {
+            "bool" : {
+              "must" : [
+                {
+                  "bool" : {
+                    "must" : [
+                      {
+                        "bool" : {
+                          "should" : [
+                            {
+                              "match" : {
+                                "sources" : {
+                                  "query" : "add-on item",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            },
+                            {
+                              "match" : {
+                                "sources" : {
+                                  "query" : "add-on items prime",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "disable_coord" : false,
+                          "adjust_pure_negative" : true,
+                          "minimum_should_match" : "1",
+                          "boost" : 1.0
+                        }
+                      }
+                    ],
+                    "disable_coord" : false,
+                    "adjust_pure_negative" : true,
+                    "boost" : 1.0
+                  }
+                }
+              ],
+              "disable_coord" : false,
+              "adjust_pure_negative" : true,
+              "boost" : 1.0
+            }
+          }
+        },
+        "other_bucket" : false,
+        "other_bucket_key" : "_other_"
+      }
+    },
+    "Amazon Add-on items.Option.categories" : {
+      "terms" : {
+        "field" : "categories.keyword",
+        "size" : 10,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    },
+    "Amazon Add-on items.Option.vendors" : {
+      "terms" : {
+        "field" : "vendors.keyword",
+        "size" : 10,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    },
+    "Amazon Add-on items.Option.brands" : {
+      "terms" : {
+        "field" : "brandName.keyword",
+        "size" : 10,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    },
+    "Amazon Subscribe & Save" : {
+      "filters" : {
+        "filters" : {
+          "Amazon Subscribe & Save" : {
+            "bool" : {
+              "must" : [
+                {
+                  "bool" : {
+                    "must" : [
+                      {
+                        "bool" : {
+                          "should" : [
+                            {
+                              "match" : {
+                                "sources" : {
+                                  "query" : "subscribe and save",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "disable_coord" : false,
+                          "adjust_pure_negative" : true,
+                          "minimum_should_match" : "1",
+                          "boost" : 1.0
+                        }
+                      }
+                    ],
+                    "disable_coord" : false,
+                    "adjust_pure_negative" : true,
+                    "boost" : 1.0
+                  }
+                }
+              ],
+              "disable_coord" : false,
+              "adjust_pure_negative" : true,
+              "boost" : 1.0
+            }
+          }
+        },
+        "other_bucket" : false,
+        "other_bucket_key" : "_other_"
+      }
+    },
+    "Amazon Subscribe & Save.Option.categories" : {
+      "terms" : {
+        "field" : "categories.keyword",
+        "size" : 10,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    },
+    "Amazon Subscribe & Save.Option.vendors" : {
+      "terms" : {
+        "field" : "vendors.keyword",
+        "size" : 10,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    },
+    "Amazon Subscribe & Save.Option.brands" : {
+      "terms" : {
+        "field" : "brandName.keyword",
+        "size" : 10,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    },
+    "goldbox" : {
+      "filters" : {
+        "filters" : {
+          "goldbox" : {
+            "bool" : {
+              "must" : [
+                {
+                  "bool" : {
+                    "must" : [
+                      {
+                        "bool" : {
+                          "should" : [
+                            {
+                              "match" : {
+                                "sources" : {
+                                  "query" : "goldbox",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "disable_coord" : false,
+                          "adjust_pure_negative" : true,
+                          "minimum_should_match" : "1",
+                          "boost" : 1.0
+                        }
+                      }
+                    ],
+                    "disable_coord" : false,
+                    "adjust_pure_negative" : true,
+                    "boost" : 1.0
+                  }
+                }
+              ],
+              "disable_coord" : false,
+              "adjust_pure_negative" : true,
+              "boost" : 1.0
+            }
+          }
+        },
+        "other_bucket" : false,
+        "other_bucket_key" : "_other_"
+      }
+    },
+    "goldbox.Option.categories" : {
+      "terms" : {
+        "field" : "categories.keyword",
+        "size" : 10,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    },
+    "goldbox.Option.vendors" : {
+      "terms" : {
+        "field" : "vendors.keyword",
+        "size" : 10,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    },
+    "goldbox.Option.brands" : {
+      "terms" : {
+        "field" : "brandName.keyword",
+        "size" : 10,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    },
+    "bestsellers in home & kitchen" : {
+      "filters" : {
+        "filters" : {
+          "bestsellers in home & kitchen" : {
+            "bool" : {
+              "must" : [
+                {
+                  "bool" : {
+                    "must" : [
+                      {
+                        "bool" : {
+                          "should" : [
+                            {
+                              "match" : {
+                                "categories" : {
+                                  "query" : "home & kitchen",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "disable_coord" : false,
+                          "adjust_pure_negative" : true,
+                          "minimum_should_match" : "1",
+                          "boost" : 1.0
+                        }
+                      },
+                      {
+                        "bool" : {
+                          "should" : [
+                            {
+                              "match" : {
+                                "vendors" : {
+                                  "query" : "amazon",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "disable_coord" : false,
+                          "adjust_pure_negative" : true,
+                          "minimum_should_match" : "1",
+                          "boost" : 1.0
+                        }
+                      },
+                      {
+                        "bool" : {
+                          "should" : [
+                            {
+                              "match" : {
+                                "sources" : {
+                                  "query" : "bestsellers",
+                                  "operator" : "AND",
+                                  "prefix_length" : 0,
+                                  "max_expansions" : 50,
+                                  "fuzzy_transpositions" : true,
+                                  "lenient" : false,
+                                  "zero_terms_query" : "NONE",
+                                  "boost" : 1.0
+                                }
+                              }
+                            }
+                          ],
+                          "disable_coord" : false,
+                          "adjust_pure_negative" : true,
+                          "minimum_should_match" : "1",
+                          "boost" : 1.0
+                        }
+                      }
+                    ],
+                    "disable_coord" : false,
+                    "adjust_pure_negative" : true,
+                    "boost" : 1.0
+                  }
+                }
+              ],
+              "disable_coord" : false,
+              "adjust_pure_negative" : true,
+              "boost" : 1.0
+            }
+          }
+        },
+        "other_bucket" : false,
+        "other_bucket_key" : "_other_"
+      }
+    },
+    "bestsellers in home & kitchen.Option.categories" : {
+      "terms" : {
+        "field" : "categories.keyword",
+        "size" : 10,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    },
+    "bestsellers in home & kitchen.Option.vendors" : {
+      "terms" : {
+        "field" : "vendors.keyword",
+        "size" : 10,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    },
+    "bestsellers in home & kitchen.Option.brands" : {
+      "terms" : {
+        "field" : "brandName.keyword",
+        "size" : 10,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    }
+  }
+}
+}'
+
+
+
+
+
+
+
+
+
+{
+  "bool" : {
+    "must" : [ {
+      "terms" : {
+        "availability" : [ "in_stock", "out_of_stock" ]
+      }
+    }, {
+      "match" : {
+        "channel" : {
+          "query" : 1,
+          "type" : "boolean",
+          "operator" : "AND"
+        }
+      }
+    }, {
+      "match" : {
+        "language" : {
+          "query" : "en",
+          "type" : "boolean",
+          "operator" : "AND"
+        }
+      }
+    } ],
+    "must_not" : {
+      "ids" : {
+        "types" : [ ],
+        "values" : [ "239865", "237942", "9652036", "9652034", "10142126", "4737822", "10123970", "10566346", "4737838", "4738016", "4738174" ]
+      }
+    },
+    "should" : [ {
+      "match" : {
+        "brand" : {
+          "query" : "dyson",
+          "type" : "boolean",
+          "operator" : "AND"
+        }
+      }
+    }, {
+      "match" : {
+        "vendors" : {
+          "query" : "dyson",
+          "type" : "boolean",
+          "operator" : "AND"
+        }
+      }
+    } ],
+    "minimum_should_match" : "1"
+  }
+}

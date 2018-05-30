@@ -1,0 +1,10 @@
+
+    Stop Kafka server
+    Delete the topic directory with rm -rf command
+
+    Connect to Zookeeper instance: zookeeper-shell.sh host:port =====> /zkCli.sh -server zkc:2181
+
+    ls /brokers/topics
+    Remove the topic folder from ZooKeeper using rmr /brokers/topics/yourtopic
+    Restart Kafka server
+    Confirm if it was deleted or not by using this command kafka-topics.sh --list --zookeeper host:port

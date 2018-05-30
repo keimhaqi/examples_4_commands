@@ -1,0 +1,1 @@
+select A.id,A.attribute_value_en,B.attribute_name_en from attribute_value A inner join attribute_name B on A.attribute_id = B.id where A.id in (1943584,1943582,1943583);
