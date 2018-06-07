@@ -1,0 +1,52 @@
+piwik中的用户行为的数据如下:
+(244,246,248,471)
+|---------|
+|##web端##|
+|---------|
+view -- 点击进入单品详情页
+collect -- 把商品添加到收藏夹
+order -- 对商品设置目标价格
+
+|---------|
+|##app端##|
+|---------|
+view -- 点击进入单品详情页
+collect -- 把商品添加到收藏夹
+order -- 对商品设置目标价格
+
+bought -- 标记已购买的商品(之前的设计是有这个信息, 但是目前web端和app端都不会产生这个事件)
+
+当前piwik中的用户行为与UR中的event之间的对应关系如下:
+piwik    <---->    UR
+view      ==>     view
+collect   ==>     fav
+order     ==>     plan
+
+linkshare report中的数据:
+
+linkshare report中全部是购买记录, 因此每一个购买记录都对应UR中的buy事件
+linkshare report中可获取的数据如下:
+product_id: 前端2级表id;
+user_id: 购买商品的user_id
+product_price: 商品原价
+product_sale: 商品销售价格
+quantity: 购买的商品数量
+Transaction Data Transaction Time:交易产生的日期和时间;
+Process Date Process Time: 交易被处理的日期和时间;
+
+amazon report中的数据:
+amaozn report中的数据全部都是购买的记录, 因此每一个购买记录都对应UR中的buy事件
+amazon report中可获取的数据如下:
+ASIN: 商品的sourceProductId
+Category: 商品的类别
+Name: 商品名称
+Date: 购买发生的日期
+Qty: 购买的数量
+Price($): 商品的销售价格
+Link Type: 跳转到amazon网站的链接类型
+Tag: 跳转链接中用于标识我们公司的字符串"jinbag010d-20"
+Indirect Sales: 是否直接在amazon网站上购买, 或者通过第三方广告商购买
+Devide Type Group: 用户购买商品时使用的设备
+Clicks: 点击量
+Conversion: 点击量与购买量的转化关系
+

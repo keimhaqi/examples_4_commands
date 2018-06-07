@@ -1,0 +1,107 @@
+{
+    "items": [
+        {
+            "item": {
+                "sourceId": [
+                    3
+                ],
+                "productSale": "$11.97",
+                "channel": 1,
+                "discount": {
+                    "min": 27.93498,
+                    "max": 27.93498,
+                    "discountStr": "27.93498%"
+                },
+                "language": "en",
+                "availability": "in_stock",
+                "promo": [
+                    "promo_v"
+                ],
+                "updateESTime": 1526957346187,
+                "price": {
+                    "min": 16.61,
+                    "max": 16.61
+                },
+                "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/91xf4eGpZgL._SY355_.jpg",
+                "currency": "$",
+                "hasSmartPrice": 0,
+                "categories": [
+                    "Home & Kitchen"
+                ],
+                "vendors": [
+                    "Amazon"
+                ],
+                "productDescription": [
+                    "Safety Walk tub and shower tread is ideal for helping prevent slips and falls",
+                    "The strong adhesive resists cracking and peeling yet feels comfortable under bare feet",
+                    "Used for sure-footed protection in the bathroom, can be used on the bottoms of bathtubs and showers",
+                    "Available in clear color; measures 180-Inch length by 2-Inch width",
+                    "Mold and mildew resistant and easy to apply simply cut to size with scissors"
+                ],
+                "height": 355,
+                "productId": 10617600,
+                "productDetail": [
+                    
+                ],
+                "lastCheckedTime": 1526956524000,
+                "sourceProductId": "B009NP1N0Y",
+                "categoryTypePriority": 0,
+                "productTitle": "3M Safety-Walk Tub and Shower Tread, Clear, 2-Inch by 180-Inch Roll, 7641NA",
+                "sale": {
+                    "min": 11.97,
+                    "max": 11.97
+                },
+                "deleted": 0,
+                "width": 355,
+                "categoryTypeId": 0,
+                "morePictures": 0,
+                "productPrice": "$16.61",
+                "topProductPromoInfoVendor": {
+                    "endDate": 1529548355000,
+                    "shareTitleEn": "$11.97 ($16.61) 3M Safety-Walk Tub and Shower Tread, Clear, 2-Inch by 180-Inch Roll, 7641NA",
+                    "postedTime": 1526956355000,
+                    "confirmerId": 217,
+                    "authorId": 217,
+                    "confirmed": 1,
+                    "vendorLogoHeight": 33,
+                    "titleEn": "Amazon - $11.97 ($16.61) 3M Safety-Walk Tub and Shower Tread, Clear, 2-Inch by 180-Inch Roll, 7641NA",
+                    "price": "$11.97",
+                    "confirmedTime": 1526956398000,
+                    "vendorLogoUrl": "amazon.png",
+                    "createdTime": 1526956398000,
+                    "id": {
+                        "vendorId": 3,
+                        "id": 10617600
+                    },
+                    "startDate": 1526956355000,
+                    "taskId": 80050,
+                    "vendorLogoWidth": 109
+                }
+            },
+            "score": 3.0001437681203242,
+            "type": "product"
+        },
+        {
+            "item": {
+                "article_id": 1,
+                "inTime": 1526300595000,
+                "originalLink": "http://forums.huaren.us/showtopic.aspx?topicid=2231683&page=1",
+                "nickName": "lemontea",
+                "weight": 0.0,
+                "viewCount": 163,
+                "title": "【参加好物推荐活动】不会收拾的懒婆娘推荐点别的",
+                "userId": 811,
+                "user": {
+                    "nickName": "Cora’s Mom",
+                    "userId": 811,
+                    "logoUrl": "Q09SQVNfTU9NQEpJTkJBRy5DT00=.jpg"
+                },
+                "tags": "Screen Door,门帘,Air Filter,空气过滤,Allergy Prevention,预防过敏,Laundry Detergent,衣物清洁剂,Traveling Accessory,旅行用品,Traveling Accessory,旅行用品,Water Bottle,水杯,Sports Accessory,运动用品,Notebook,记事本"
+            },
+            "score": 1.4927805662155151,
+            "type": "article"
+        }
+    ],
+    "num": 0,
+    "lifeCycle": 1
+}

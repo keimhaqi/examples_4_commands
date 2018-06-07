@@ -1,0 +1,32 @@
+curl -X PUT "localhost:9200/twitter" -H 'Content-Type: application/json' -d'
+{}
+'
+curl -X PUT "192.168.1.106:9201/linksharetmp/" -H 'Content-Type: application/json' -d'
+{
+  "mappings":{
+    "product":{
+        "properties": {
+            "createOn": {
+                "type": "date",
+                "format": "epoch_millis"
+            }
+        }
+    }
+  }
+}
+'
+
+curl -X PUT "localhost:9200/test" -H 'Content-Type: application/json' -d'
+{
+    "settings" : {
+        "number_of_shards" : 1
+    },
+    "mappings" : {
+        "type1" : {
+            "properties" : {
+                "field1" : { "type" : "text" }
+            }
+        }
+    }
+}
+'

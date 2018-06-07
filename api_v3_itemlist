@@ -18,7 +18,7 @@
   curl -k -H 'Content-Type: application/json' -d '
   {
     "num": 10,
-    "searchword":"nike 5 man",
+    "searchword":"amazon",
     "blacklist":[111, 222, 333, 444, 555],
     "fields":
     [
@@ -26,14 +26,14 @@
     ]
     
   }
-  ' http://localhost:9124/api/v3/itemlist
+  ' http://96.90.248.211:9124/api/v3/itemlist
 
 
 
   curl -k -H 'Content-Type: application/json' -d '
   {
     "num": 10,
-    "searchword":"dyson",
+    "searchword":"nike 5 men",
     "blacklist":[111, 222, 333, 444, 555],
     "fields":
     [
@@ -41,8 +41,12 @@
     ]
     
   }
-  ' http://localhost:9124/api/v3/itemlist
+  ' http://192.168.1.106:9124/api/v3/itemlist
 
+
+{"event":"search","entityType":"user","entityId":"0","targetEntityType":"items","targetEntityId":"dyson","properties":{}}
+
+curl -i -X POST http://localhost:7070/events.json?accessKey=dkobjAiA3Kzuur0-i1JrWpd1i6TvVAnhjhoAXkwW9TuaUI53ejrbWuQr-gm12oXY -H "Content-Type: application/json" -d '{"event":"search","entityType":"user","entityId":"0","targetEntityType":"items","targetEntityId":"dyson","properties":{},"eventTime":"2018-06-01T12:08:21.928+08:00"}'
 
     curl -k -H 'Content-Type: application/json' -d '
   {
@@ -58,6 +62,40 @@
     
   }
   ' http://localhost:9123/api/v3/myStore
+
+
+curl -i -X POST http://localhost:7070/events.json?accessKey=8PG09wgyjdq6d9_e67uoL2ivt73UQqTN0XangeWx8aks-SA3Cz0Op3Ubne3hKQ_J \
+-H "Content-Type: application/json" \
+-d '{
+  "event" : "my_event",
+  "entityType" : "user",
+  "entityId" : "uid",
+  "properties" : {
+    "prop1" : 1,
+    "prop2" : "value2",
+    "prop3" : [1, 2, 3],
+    "prop4" : true,
+    "prop5" : ["a", "b", "c"],
+    "prop6" : 4.56
+  }
+  "eventTime" : "2004-12-13T21:39:45.618-07:00"
+}'
+
+
+curl -i -X POST http://localhost:7070/events.json?accessKey=8PG09wgyjdq6d9_e67uoL2ivt73UQqTN0XangeWx8aks-SA3Cz0Op3Ubne3hKQ_J \
+-H "Content-Type: application/json" \
+-d '{
+  "event" : "my_event",
+  "entityType" : "user",
+  "entityId" : "uid",
+  "targetEntityType" : "item",
+  "targetEntityId" : "iid",
+  "properties" : {
+    "someProperty" : "value1",
+    "anotherProperty" : "value2"
+  },
+  "eventTime" : "2004-12-13T21:39:45.618Z"
+}'
 
 
     curl -k -H 'Content-Type: application/json' -d '
@@ -125,8 +163,8 @@ curl -k -H 'Content-Type: application/json' -d '
 curl -k -H 'Content-Type: application/json' -d '
 {
   "num": 10,
-  "should":[{"name": "brands", "values":["3.1 Phillip Lim"]}],
-  "fields":[{"name": "vendors", "values":["amazon"]}]
+  "should":[{"name": "brands", "values":["Calvin Klein"]}],
+  "fields":[{"name": "vendors", "values":["macys"]}]
 }
 ' http://192.168.1.106:9124/api/v3/todayPicks
 
@@ -145,10 +183,18 @@ curl -k -H 'Content-Type: application/json' -d '
 {
   "num": 10,
   "fields":[{"name": "brands", "values":["gerber"]}, {"name": "categories", "values":["books"]}],
-  "must":[{"name": "sources", "values":["goldbox"]}]
+  "must":[{"name": "sources", "values":["add-on item", "add-on items prime"]}]
 }
 ' http://192.168.1.106:9124/api/v3/todayPicks
 
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "num": 100,
+  "should":[],
+  "fields":[{"name": "sources", "values":["add-on item", "add-on items prime"]}, {"name":"vendors", "values":["amazon"]}]
+}
+' http://192.168.1.106:9124/api/v3/todayPicks
 
 curl -k -H 'Content-Type: application/json' -d '
 {
