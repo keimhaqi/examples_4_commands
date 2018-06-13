@@ -1,0 +1,54 @@
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for jinlist
+-- ----------------------------
+DROP TABLE IF EXISTS `jinlist`;
+CREATE TABLE `jinlist` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `title` VARCHAR (255) NOT NULL,
+  `description` VARCHAR (1000) DEFAULT NULL,
+  `public` tinyint(1) DEFAULT 0,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `delete` tinyint(1) DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for jinlist_product
+-- ----------------------------
+DROP TABLE IF EXISTS `jinlist_product`;
+CREATE TABLE `jinlist_product` (
+  `jinlist_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `description` VARCHAR (1000) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `delete` tinyint(1) DEFAULT 0,
+  PRIMARY KEY (`jinlist_id`,`product_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+INSERT INTO `jinlist`
+(`id`, `user_id`, `title`, `create_time`, `update_time`, `delete`)
+  SELECT `user_tag`.`id`, `user_id`,`tag_name`, `user_tag`.`create_time`, `update_time`, `delete`
+  FROM `user_tag`
+  INNER JOIN `tag`
+  WHERE `user_tag`.`tag_id` = `tag`.`tag_id`
+
+INSERT INTO `jinlist_product`
+(`jinlist_id`, `product_id`, `create_time`, `update_time`, `delete`)
+  SELECT `user_tag`.`id`, `product_id`, `user_tag_product`.`create_time`, `user_tag_product`.`update_time`, `user_tag_product`.`delete`
+  FROM `user_tag`
+  INNER JOIN `user_tag_product`
+  WHERE `user_tag`.`user_id` = `user_tag_product`.`user_id`
+  AND `user_tag`.`tag_id` = `user_tag_product`.`tag_id`
+
+SET FOREIGN_KEY_CHECKS=1;
+
+55d99e907eea048d3176043821ba04a9
+55d99e907eea048d3176043821ba04a9
+
+a683db4ec948ed6c1f4893f11e010fab
+a683db4ec948ed6c1f4893f11e010fab

@@ -26,7 +26,7 @@
     ]
     
   }
-  ' http://96.90.248.211:9124/api/v3/itemlist
+  ' http://192.168.1.106:9124/api/v3/itemlist
 
 
 
@@ -195,6 +195,20 @@ curl -k -H 'Content-Type: application/json' -d '
   "fields":[{"name": "sources", "values":["add-on item", "add-on items prime"]}, {"name":"vendors", "values":["amazon"]}]
 }
 ' http://192.168.1.106:9124/api/v3/todayPicks
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "fields":[{"name": "productId", "values":[10583819]}, {"name": "vendorId", "values":[3184]}],
+  "saleRange":{"min":10, "max":30}
+}
+' http://192.168.1.106:9123/api/v3/metrics/product
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "fields":[{"name": "productId", "values":[10583819]}, {"name": "vendorId", "values":[3184]}],
+  "dateRange":{"min":1521505361000, "max":1522074252000}
+}
+' http://192.168.1.106:9125/api/v3/metrics/product
 
 curl -k -H 'Content-Type: application/json' -d '
 {
