@@ -1224,7 +1224,7 @@ curl -H "Content-Type: application/json" -d '{ "fields": [{"name":"out_of_stock"
 
 
   479  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":-1 }' http://192.168.1.110:8001/queries.json
-  480  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":-1 }' http://localhost:8001/queries.json
+  480  curl -H "Content-Type: application/json" -d '{ "user": "7", "num": 4, "userBias":-1 }' http://localhost:8001/queries.json
   481  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":-1, "eventNames:["buy"] }' http://localhost:8000/queries.json
   482  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":-1, "eventNames":["buy"] }' http://localhost:8000/queries.json
   483  curl -H "Content-Type: application/json" -d '{ "user": "200112", "num": 4, "userBias":-1, "eventNames":["buy"] }' http://localhost:8000/queries.json

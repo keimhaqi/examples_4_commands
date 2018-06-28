@@ -1,1 +1,1 @@
-curl -XDELETE '192.168.1.106:9200/todayspicks?pretty'
+curl -XDELETE '192.168.1.106:9201/monitor?pretty'

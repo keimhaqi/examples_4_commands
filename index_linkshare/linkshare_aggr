@@ -1,0 +1,63 @@
+
+
+curl -X GET "192.168.1.103:9201/linkshare/product/_search?human&pretty" -H 'Content-Type: application/json' -d'
+{
+  "from" : 0,
+  "version" : true,
+  "aggregations" : {
+    "numOfBrand" : {
+      "terms" : {
+        "field" : "brand.keyword",
+        "size" : 100,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order" : [
+          {
+            "_count" : "desc"
+          },
+          {
+            "_term" : "asc"
+          }
+        ]
+      }
+    }
+  }
+}
+'
+
+
+curl -X GET "localhost:9200/_search" -H 'Content-Type: application/json' -d'
+{
+    "version": true,
+    "query" : {
+        "term" : { "user" : "kimchy" }
+    }
+}
+'
+
+
+curl -X GET "192.168.1.103:9201/linkshare/product/_search?human&pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "query": {
+    "match_all": {}
+  },
+  "_source": {
+    "excludes": []
+  },
+  "aggregations": {
+    "numOfBrand": {
+      "terms": {
+        "field": "brand.keyword",
+        "size": 1000,
+        "min_doc_count" : 1,
+        "shard_min_doc_count" : 0,
+        "show_term_doc_count_error" : false,
+        "order": {
+          "_count": "desc"
+        }
+      }
+    }
+  }
+}'

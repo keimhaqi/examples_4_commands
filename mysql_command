@@ -11,3 +11,12 @@ mysqldump -uroot -pdbpasswd dbname >db.sql;
 
 4、导出數據库為dbname某张表(test)结构及表數據（不加-d） 
 mysqldump -uroot -pdbpasswd dbname test>db.sql
+
+向product_amazon_price添加新数据:
+insert into product_amazon_price (product_vendor_id, currency, product_price, product_sale, date, final_price, discount_ids) values(1, 'USD', '$40.04', 40.4, '2018-06-21 06:22:22', 40.4, NULL);
+
+insert into product_amazon_price (product_vendor_id, currency, product_price, product_sale, date, final_price, discount_ids) values(1, 'USD', '$4.04', 4.04, '2018-06-21 05:22:22', 4.04, NULL);
+
+
+
+select * from (select product_id, count(*) as c from top_product_promo_info_vendor_history group by product_id) t where t.c > 1

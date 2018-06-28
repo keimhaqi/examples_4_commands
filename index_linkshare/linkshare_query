@@ -1,0 +1,28 @@
+curl -X GET "192.168.1.103:9201/linkshare/product/_search?human&pretty" -H 'Content-Type: application/json' -d'
+{
+    "size":0,
+    "query":{
+        "bool" : {
+            "must" : [
+            {
+                "match" : {
+                "brand.keyword" : {
+                    "query" : "Effy",
+                    "operator" : "AND",
+                    "prefix_length" : 0,
+                    "max_expansions" : 50,
+                    "fuzzy_transpositions" : true,
+                    "lenient" : false,
+                    "zero_terms_query" : "NONE",
+                    "boost" : 1.0
+                }
+                }
+            }
+            ],
+            "disable_coord" : false,
+            "adjust_pure_negative" : true,
+            "boost" : 1.0
+        }
+    }
+  
+}'

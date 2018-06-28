@@ -185,7 +185,7 @@ curl -k -H 'Content-Type: application/json' -d '
   "fields":[{"name": "brands", "values":["gerber"]}, {"name": "categories", "values":["books"]}],
   "must":[{"name": "sources", "values":["add-on item", "add-on items prime"]}]
 }
-' http://192.168.1.106:9124/api/v3/todayPicks
+' http://96.90.248.211:9124/api/v3/todayPicks
 
 
 curl -k -H 'Content-Type: application/json' -d '
@@ -202,6 +202,24 @@ curl -k -H 'Content-Type: application/json' -d '
   "saleRange":{"min":10, "max":30}
 }
 ' http://192.168.1.106:9123/api/v3/metrics/product
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "fields":[{"name": "productId", "values":[10629040]}, {"name": "vendorId", "values":[3]}]
+}
+' http://96.90.248.211:9124/api/v3/metrics/product
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "fields":[{"name": "productId", "values":[79558]}, {"name": "vendorId", "values":[1237]}]
+}
+' http://192.168.1.106:9124/api/v3/metrics/product
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "searchword":"Repeat"
+}
+' http://192.168.1.106:9124/api/v3/search/brochure
 
 curl -k -H 'Content-Type: application/json' -d '
 {
@@ -266,7 +284,7 @@ curl -k -H 'Content-Type: application/json' -d '
   "params":[
     {
     "num": 10,
-    "fields":[{"name":"sources", "values":["amazon\'s choice"]}],
+    "fields":[{"name":"sources", "values":[""]}],
     "superTag": "amazon\'s choice "
     }
   ]
