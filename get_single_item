@@ -157,6 +157,73 @@ curl -XPUT 'localhost:9200/test?pretty' -H 'Content-Type: application/json' -d'
 '
 
 
+
+
+curl -XGET '192.168.1.103:9201/crawler/product/_search?pretty'  -H 'Content-Type: application/json' -d'
+{
+"size":2,
+"query" :{
+"bool" : {
+    "must" : [
+      {
+        "bool" : {
+          "must" : [
+            {
+              "bool" : {
+                "should" : [
+                  {
+                    "match" : {
+                      "sourceProductId" : {
+                        "query" : "5249834",
+                        "operator" : "AND",
+                        "prefix_length" : 0,
+                        "max_expansions" : 50,
+                        "fuzzy_transpositions" : true,
+                        "lenient" : false,
+                        "zero_terms_query" : "NONE",
+                        "boost" : 1.0
+                      }
+                    }
+                  }
+                ],
+                "minimum_should_match" : "1"
+              }
+            },
+            {
+              "bool" : {
+                "should" : [
+                  {
+                    "match" : {
+                      "vendorId" : {
+                        "query" : 3184,
+                        "operator" : "AND",
+                        "prefix_length" : 0,
+                        "max_expansions" : 50,
+                        "fuzzy_transpositions" : true,
+                        "lenient" : false,
+                        "zero_terms_query" : "NONE",
+                        "boost" : 1.0
+                      }
+                    }
+                  }
+                ],
+                "minimum_should_match" : "1"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+}
+'
+
+
+
+
+
+
 curl -XPOST http://172.18.0.2:9200/jinbagsearch/items/_search  -H 'Content-Type: application/json' -d'
 {
     "query" :

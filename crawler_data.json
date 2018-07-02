@@ -1,0 +1,32 @@
+{
+    "id": "3184_5249837_06202018033338",
+    "productTitle": null,
+    "productUrl": null,
+    "productImageLink": null,
+    "productShortDescription": null,
+    "productLongDescription": null,
+    "productKeywords": null,
+    "width": null,
+    "height": null,
+    "categoryStr": null,
+    "availability": null,
+    "brand": "Nike",
+    "createOn": 1529465618000,
+    "updateTime": 1529465618000,
+    "productSale": null,
+    "productPrice": null,
+    "sourceProductId": "5249837",
+    "vendorId": 3184,
+    "lastChecked": null,
+    "sourceType": 2,
+    "skus": [
+        {
+            "sale": 15.0,
+            "skuNumber": "885178763847",
+            "size": "adjustable",
+            "color": "orange",
+            "upc": "885178763847",
+            "currency": "USD"
+        }
+    ]
+}

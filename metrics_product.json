@@ -1,0 +1,76 @@
+{
+    "dateRange": {
+        "rangeMin": 1511243884000,
+        "rangeMax": 1527580588000,
+        "metric": 14,
+        "unit": "day"
+    },
+    "priceRange": {
+        "rangeMin": 15.0,
+        "rangeMax": 25.0,
+        "min": 15.0,
+        "max": 24.99,
+        "metric": 1.7142857142857144,
+        "unit": "$"
+    },
+    "num": 14,
+    "itemlist": [
+        {
+            "createOn": 1511243884000,
+            "sale": 18.74
+        },
+        {
+            "createOn": 1511585195000,
+            "sale": 19.99
+        },
+        {
+            "createOn": 1511933351000,
+            "sale": 24.99
+        },
+        {
+            "createOn": 1513140160000,
+            "sale": 18.74
+        },
+        {
+            "createOn": 1515300402000,
+            "sale": 24.99
+        },
+        {
+            "createOn": 1515991292000,
+            "sale": 24.99
+        },
+        {
+            "createOn": 1516163824000,
+            "sale": 24.99
+        },
+        {
+            "createOn": 1520741860000,
+            "sale": 24.99
+        },
+        {
+            "createOn": 1520829178000,
+            "sale": 24.99
+        },
+        {
+            "createOn": 1521505361000,
+            "sale": 24.99
+        },
+        {
+            "createOn": 1521529901000,
+            "sale": 24.99
+        },
+        {
+            "createOn": 1521773721000,
+            "sale": 24.99
+        },
+        {
+            "createOn": 1522074252000,
+            "sale": 24.99
+        },
+        {
+            "createOn": 1527580588000,
+            "sale": 15.0
+        }
+    ],
+    "lifeCycle": 1
+}

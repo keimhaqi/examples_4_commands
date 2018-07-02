@@ -1,6 +1,6 @@
-curl -XGET 'localhost:9200/search_b/_analyze?pretty' -d '
+curl -XGET '192.168.1.106:9201/fuzzy_a/_analyze?pretty' -d '
 {
-  "analyzer": "my_analyzer",
-  "text": "bloomingdale&#039;s"
+  "analyzer": "fuzzy_analyzer",
+  "text": "3.1 phillip lim"
 }
 '

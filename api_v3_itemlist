@@ -203,6 +203,15 @@ curl -k -H 'Content-Type: application/json' -d '
 }
 ' http://192.168.1.106:9123/api/v3/metrics/product
 
+
+
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "fields":[{"name": "productId", "values":[10583819]}, {"name": "vendorId", "values":[3184]}]
+}
+' http://192.168.1.106:9123/api/v3/metrics/product
+
 curl -k -H 'Content-Type: application/json' -d '
 {
   "fields":[{"name": "productId", "values":[10629040]}, {"name": "vendorId", "values":[3]}]
@@ -211,7 +220,7 @@ curl -k -H 'Content-Type: application/json' -d '
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "fields":[{"name": "productId", "values":[79558]}, {"name": "vendorId", "values":[1237]}]
+  "fields":[{"name": "productId", "values":[211892]}, {"name": "vendorId", "values":[3184]}]
 }
 ' http://192.168.1.106:9124/api/v3/metrics/product
 

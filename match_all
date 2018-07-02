@@ -28,12 +28,35 @@ curl -XGET '172.18.0.2:9200/.monitoring-es-6-2018.05.14/doc/_search?pretty' -H '
 '
 
 
-
-curl -XGET '192.168.1.192:9200/.watcher-history-3-2018.06.22/watch_record/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET '192.168.1.106:9201/fuzzy_a/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
-    "size":1,
+    "size": 1,
     "query": {
        "match_all" : {}
+    }
+}
+'
+
+
+
+curl -XGET '192.168.1.103:9201/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size":13,
+    "query": {
+      "bool":{
+        "must":[
+          {
+            "match":{
+            "sourceProductId" : "5249834"
+            }
+          },
+          {
+            "match":{
+              "vendorId": 3184
+            }
+          }
+        ]
+      }
     }
 }
 '
@@ -49,7 +72,7 @@ curl -XGET 'localhost:9201/search/items/_search?pretty' -H 'Content-Type: applic
 '
 
 
-curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type: application/json' -d'
 {
   "size":200,
   "query" : {
@@ -64,7 +87,7 @@ curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Typ
                   {
                     "match" : {
                       "sourceProductId" : {
-                        "query" : "4635219",
+                        "query" : "B078GVMVRH",
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,
@@ -88,7 +111,7 @@ curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Typ
                   {
                     "match" : {
                       "vendorId" : {
-                        "query" : 1237,
+                        "query" : 3,
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,

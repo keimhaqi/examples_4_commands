@@ -1,0 +1,560 @@
+{
+    "took" : 1,
+    "timed_out" : false,
+    "_shards" : {
+      "total" : 1,
+      "successful" : 1,
+      "skipped" : 0,
+      "failed" : 0
+    },
+    "hits" : {
+      "total" : 13,
+      "max_score" : 11.7218895,
+      "hits" : [
+        {
+          "_index" : "linkshare",
+          "_type" : "product",
+          "_id" : "3184_5249834_11292017132911",
+          "_score" : 11.7218895,
+          "_source" : {
+            "id" : "3184_5249834_11292017132911",
+            "productTitle" : "Nike Women's Featherlight Cap",
+            "productUrl" : "http://click.linksynergy.com/link?id=ryHxRa8tGxs&offerid=486109.885178763823&type=15&murl=https%3A%2F%2Fwww.macys.com%2Fshop%2Fproduct%2Fnike-womens-featherlight-cap%3FID%3D5249834%26PartnerID%3DLINKSHARE%26cm_mmc%3DLINKSHARE-_-91-_-67-_-MP9167",
+            "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/8960049_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+            "productShortDescription" : "",
+            "productLongDescription" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "productKeywords" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "width" : 300,
+            "height" : 367,
+            "categoryStr" : "Women's - Handbags & Accessories>Accessories - Hats & Hair Accessories",
+            "availability" : "in-stock",
+            "brand" : "Nike",
+            "createOn" : 1511933351000,
+            "updateTime" : 1527843748379,
+            "productSale" : "$24.99",
+            "productPrice" : "$24.99",
+            "sourceProductId" : "5249834",
+            "vendorId" : 3184,
+            "lastChecked" : null,
+            "sourceType" : 1,
+            "skus" : [
+              {
+                "sale" : 24.99,
+                "size" : "Adjustable",
+                "material" : "Polyester",
+                "color" : "Purple/White",
+                "gender" : "Women",
+                "skuNumber" : "885178763823",
+                "upc" : "885178763823",
+                "currency" : "USD",
+                "productType" : "HAT",
+                "age" : "Adult",
+                "misc" : "New"
+              }
+            ]
+          }
+        },
+        {
+          "_index" : "linkshare",
+          "_type" : "product",
+          "_id" : "3184_5249834_12132017124240",
+          "_score" : 11.7218895,
+          "_source" : {
+            "id" : "3184_5249834_12132017124240",
+            "productTitle" : "Nike Women's Featherlight Cap",
+            "productUrl" : "http://click.linksynergy.com/link?id=ryHxRa8tGxs&offerid=486109.885178763823&type=15&murl=https%3A%2F%2Fwww.macys.com%2Fshop%2Fproduct%2Fnike-womens-featherlight-cap%3FID%3D5249834%26PartnerID%3DLINKSHARE%26cm_mmc%3DLINKSHARE-_-91-_-67-_-MP9167",
+            "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/8960049_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+            "productShortDescription" : "",
+            "productLongDescription" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "productKeywords" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "width" : 300,
+            "height" : 367,
+            "categoryStr" : "Women's - Handbags & Accessories>Accessories - Hats & Hair Accessories",
+            "availability" : "in-stock",
+            "brand" : "Nike",
+            "createOn" : 1513140160000,
+            "updateTime" : 1527843629485,
+            "productSale" : "$18.74",
+            "productPrice" : "$24.99",
+            "sourceProductId" : "5249834",
+            "vendorId" : 3184,
+            "lastChecked" : null,
+            "sourceType" : 1,
+            "skus" : [
+              {
+                "sale" : 18.74,
+                "size" : "Adjustable",
+                "material" : "Polyester",
+                "color" : "Purple/White",
+                "gender" : "Women",
+                "skuNumber" : "885178763823",
+                "upc" : "885178763823",
+                "currency" : "USD",
+                "productType" : "HAT",
+                "age" : "Adult",
+                "misc" : "New"
+              }
+            ]
+          }
+        },
+        {
+          "_index" : "linkshare",
+          "_type" : "product",
+          "_id" : "3184_5249834_03202018151141",
+          "_score" : 11.7218895,
+          "_source" : {
+            "id" : "3184_5249834_03202018151141",
+            "productTitle" : "Nike Women's Featherlight Cap",
+            "productUrl" : "http://click.linksynergy.com/link?id=ryHxRa8tGxs&offerid=486109.885178763823&type=15&murl=https%3A%2F%2Fwww.macys.com%2Fshop%2Fproduct%2Fnike-womens-featherlight-cap%3FID%3D5249834%26PartnerID%3DLINKSHARE%26cm_mmc%3DLINKSHARE-_-91-_-67-_-MP9167",
+            "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/8960049_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+            "productShortDescription" : "",
+            "productLongDescription" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "productKeywords" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "width" : 300,
+            "height" : 367,
+            "categoryStr" : "Women's - Handbags & Accessories>Accessories - Hats & Hair Accessories",
+            "availability" : "in-stock",
+            "brand" : "Nike",
+            "createOn" : 1521529901000,
+            "updateTime" : 1527843742634,
+            "productSale" : "$24.99",
+            "productPrice" : "$24.99",
+            "sourceProductId" : "5249834",
+            "vendorId" : 3184,
+            "lastChecked" : null,
+            "sourceType" : 1,
+            "skus" : [
+              {
+                "sale" : 24.99,
+                "size" : "Adjustable",
+                "material" : "Polyester",
+                "color" : "Purple/White",
+                "gender" : "Women",
+                "skuNumber" : "885178763823",
+                "upc" : "885178763823",
+                "currency" : "USD",
+                "productType" : "HAT",
+                "age" : "Adult",
+                "misc" : "New"
+              }
+            ]
+          }
+        },
+        {
+          "_index" : "linkshare",
+          "_type" : "product",
+          "_id" : "3184_5249834_03262018222412",
+          "_score" : 11.7218895,
+          "_source" : {
+            "id" : "3184_5249834_03262018222412",
+            "productTitle" : "Nike Women's Featherlight Cap",
+            "productUrl" : "http://click.linksynergy.com/link?id=ryHxRa8tGxs&offerid=486109.885178763823&type=15&murl=https%3A%2F%2Fwww.macys.com%2Fshop%2Fproduct%2Fnike-womens-featherlight-cap%3FID%3D5249834%26PartnerID%3DLINKSHARE%26cm_mmc%3DLINKSHARE-_-91-_-67-_-MP9167",
+            "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/8960049_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+            "productShortDescription" : "",
+            "productLongDescription" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "productKeywords" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "width" : 300,
+            "height" : 367,
+            "categoryStr" : "Women's - Handbags & Accessories>Accessories - Hats & Hair Accessories",
+            "availability" : "in-stock",
+            "brand" : "Nike",
+            "createOn" : 1522074252000,
+            "updateTime" : 1527843744177,
+            "productSale" : "$24.99",
+            "productPrice" : "$24.99",
+            "sourceProductId" : "5249834",
+            "vendorId" : 3184,
+            "lastChecked" : null,
+            "sourceType" : 1,
+            "skus" : [
+              {
+                "sale" : 24.99,
+                "size" : "Adjustable",
+                "material" : "Polyester",
+                "color" : "Purple/White",
+                "gender" : "Women",
+                "skuNumber" : "885178763823",
+                "upc" : "885178763823",
+                "currency" : "USD",
+                "productType" : "HAT",
+                "age" : "Adult",
+                "misc" : "New"
+              }
+            ]
+          }
+        },
+        {
+          "_index" : "linkshare",
+          "_type" : "product",
+          "_id" : "3184_5249834_11212017135804",
+          "_score" : 11.7218895,
+          "_source" : {
+            "id" : "3184_5249834_11212017135804",
+            "productTitle" : "Nike Women's Featherlight Cap",
+            "productUrl" : "http://click.linksynergy.com/link?id=ryHxRa8tGxs&offerid=486109.885178763823&type=15&murl=https%3A%2F%2Fwww.macys.com%2Fshop%2Fproduct%2Fnike-womens-featherlight-cap%3FID%3D5249834%26PartnerID%3DLINKSHARE%26cm_mmc%3DLINKSHARE-_-91-_-67-_-MP9167",
+            "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/8960049_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+            "productShortDescription" : "",
+            "productLongDescription" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "productKeywords" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "width" : 300,
+            "height" : 367,
+            "categoryStr" : "Women's - Handbags & Accessories>Accessories - Hats & Hair Accessories",
+            "availability" : "in-stock",
+            "brand" : "Nike",
+            "createOn" : 1511243884000,
+            "updateTime" : 1527843738061,
+            "productSale" : "$18.74",
+            "productPrice" : "$24.99",
+            "sourceProductId" : "5249834",
+            "vendorId" : 3184,
+            "lastChecked" : null,
+            "sourceType" : 1,
+            "skus" : [
+              {
+                "sale" : 18.74,
+                "size" : "Adjustable",
+                "material" : "Polyester",
+                "color" : "Purple/White",
+                "gender" : "Women",
+                "skuNumber" : "885178763823",
+                "upc" : "885178763823",
+                "currency" : "USD",
+                "productType" : "HAT",
+                "age" : "Adult",
+                "misc" : "New"
+              }
+            ]
+          }
+        },
+        {
+          "_index" : "linkshare",
+          "_type" : "product",
+          "_id" : "3184_5249834_03202018082241",
+          "_score" : 11.7218895,
+          "_source" : {
+            "id" : "3184_5249834_03202018082241",
+            "productTitle" : "Nike Women's Featherlight Cap",
+            "productUrl" : "http://click.linksynergy.com/link?id=ryHxRa8tGxs&offerid=486109.885178763823&type=15&murl=https%3A%2F%2Fwww.macys.com%2Fshop%2Fproduct%2Fnike-womens-featherlight-cap%3FID%3D5249834%26PartnerID%3DLINKSHARE%26cm_mmc%3DLINKSHARE-_-91-_-67-_-MP9167",
+            "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/8960049_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+            "productShortDescription" : "",
+            "productLongDescription" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "productKeywords" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "width" : 300,
+            "height" : 367,
+            "categoryStr" : "Women's - Handbags & Accessories>Accessories - Hats & Hair Accessories",
+            "availability" : "in-stock",
+            "brand" : "Nike",
+            "createOn" : 1521505361000,
+            "updateTime" : 1527843737848,
+            "productSale" : "$24.99",
+            "productPrice" : "$24.99",
+            "sourceProductId" : "5249834",
+            "vendorId" : 3184,
+            "lastChecked" : null,
+            "sourceType" : 1,
+            "skus" : [
+              {
+                "sale" : 24.99,
+                "skuNumber" : "885178763823",
+                "upc" : "885178763823",
+                "currency" : "USD"
+              }
+            ]
+          }
+        },
+        {
+          "_index" : "linkshare",
+          "_type" : "product",
+          "_id" : "3184_5249834_03232018105521",
+          "_score" : 11.7218895,
+          "_source" : {
+            "id" : "3184_5249834_03232018105521",
+            "productTitle" : "Nike Women's Featherlight Cap",
+            "productUrl" : "http://click.linksynergy.com/link?id=ryHxRa8tGxs&offerid=486109.885178763823&type=15&murl=https%3A%2F%2Fwww.macys.com%2Fshop%2Fproduct%2Fnike-womens-featherlight-cap%3FID%3D5249834%26PartnerID%3DLINKSHARE%26cm_mmc%3DLINKSHARE-_-91-_-67-_-MP9167",
+            "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/8960049_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+            "productShortDescription" : "",
+            "productLongDescription" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "productKeywords" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "width" : 300,
+            "height" : 367,
+            "categoryStr" : "Women's - Handbags & Accessories>Accessories - Hats & Hair Accessories",
+            "availability" : "out-of-stock",
+            "brand" : "Nike",
+            "createOn" : 1521773721000,
+            "updateTime" : 1527843743003,
+            "productSale" : "$24.99",
+            "productPrice" : "$24.99",
+            "sourceProductId" : "5249834",
+            "vendorId" : 3184,
+            "lastChecked" : null,
+            "sourceType" : 1,
+            "skus" : [
+              {
+                "sale" : 24.99,
+                "size" : "Adjustable",
+                "material" : "Polyester",
+                "color" : "Purple/White",
+                "gender" : "Women",
+                "skuNumber" : "885178763823",
+                "upc" : "885178763823",
+                "currency" : "USD",
+                "productType" : "HAT",
+                "age" : "Adult",
+                "misc" : "New"
+              }
+            ]
+          }
+        },
+        {
+          "_index" : "linkshare",
+          "_type" : "product",
+          "_id" : "3184_5249834_11252017124635",
+          "_score" : 11.7218895,
+          "_source" : {
+            "id" : "3184_5249834_11252017124635",
+            "productTitle" : "Nike Women's Featherlight Cap",
+            "productUrl" : "http://click.linksynergy.com/link?id=ryHxRa8tGxs&offerid=486109.885178763823&type=15&murl=https%3A%2F%2Fwww.macys.com%2Fshop%2Fproduct%2Fnike-womens-featherlight-cap%3FID%3D5249834%26PartnerID%3DLINKSHARE%26cm_mmc%3DLINKSHARE-_-91-_-67-_-MP9167",
+            "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/8960049_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+            "productShortDescription" : "",
+            "productLongDescription" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "productKeywords" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "width" : 300,
+            "height" : 367,
+            "categoryStr" : "Women's - Handbags & Accessories>Accessories - Hats & Hair Accessories",
+            "availability" : "in-stock",
+            "brand" : "Nike",
+            "createOn" : 1511585195000,
+            "updateTime" : 1527843743263,
+            "productSale" : "$19.99",
+            "productPrice" : "$24.99",
+            "sourceProductId" : "5249834",
+            "vendorId" : 3184,
+            "lastChecked" : null,
+            "sourceType" : 1,
+            "skus" : [
+              {
+                "sale" : 19.99,
+                "size" : "Adjustable",
+                "material" : "Polyester",
+                "color" : "Purple/White",
+                "gender" : "Women",
+                "skuNumber" : "885178763823",
+                "upc" : "885178763823",
+                "currency" : "USD",
+                "productType" : "HAT",
+                "age" : "Adult",
+                "misc" : "New"
+              }
+            ]
+          }
+        },
+        {
+          "_index" : "linkshare",
+          "_type" : "product",
+          "_id" : "3184_5249834_01072018124642",
+          "_score" : 11.7218895,
+          "_source" : {
+            "id" : "3184_5249834_01072018124642",
+            "productTitle" : "Nike Women's Featherlight Cap",
+            "productUrl" : "http://click.linksynergy.com/link?id=ryHxRa8tGxs&offerid=486109.885178763823&type=15&murl=https%3A%2F%2Fwww.macys.com%2Fshop%2Fproduct%2Fnike-womens-featherlight-cap%3FID%3D5249834%26PartnerID%3DLINKSHARE%26cm_mmc%3DLINKSHARE-_-91-_-67-_-MP9167",
+            "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/8960049_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+            "productShortDescription" : "",
+            "productLongDescription" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "productKeywords" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "width" : 300,
+            "height" : 367,
+            "categoryStr" : "Women's - Handbags & Accessories>Accessories - Hats & Hair Accessories",
+            "availability" : "in-stock",
+            "brand" : "Nike",
+            "createOn" : 1515300402000,
+            "updateTime" : 1527843673204,
+            "productSale" : "$24.99",
+            "productPrice" : "$24.99",
+            "sourceProductId" : "5249834",
+            "vendorId" : 3184,
+            "lastChecked" : null,
+            "sourceType" : 1,
+            "skus" : [
+              {
+                "sale" : 24.99,
+                "size" : "Adjustable",
+                "material" : "Polyester",
+                "color" : "Purple/White",
+                "gender" : "Women",
+                "skuNumber" : "885178763823",
+                "upc" : "885178763823",
+                "currency" : "USD",
+                "productType" : "HAT",
+                "age" : "Adult",
+                "misc" : "New"
+              }
+            ]
+          }
+        },
+        {
+          "_index" : "linkshare",
+          "_type" : "product",
+          "_id" : "3184_5249834_01152018124132",
+          "_score" : 11.7218895,
+          "_source" : {
+            "id" : "3184_5249834_01152018124132",
+            "productTitle" : "Nike Women's Featherlight Cap",
+            "productUrl" : "http://click.linksynergy.com/link?id=ryHxRa8tGxs&offerid=486109.885178763823&type=15&murl=https%3A%2F%2Fwww.macys.com%2Fshop%2Fproduct%2Fnike-womens-featherlight-cap%3FID%3D5249834%26PartnerID%3DLINKSHARE%26cm_mmc%3DLINKSHARE-_-91-_-67-_-MP9167",
+            "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/8960049_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+            "productShortDescription" : "",
+            "productLongDescription" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "productKeywords" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "width" : 300,
+            "height" : 367,
+            "categoryStr" : "Women's - Handbags & Accessories>Accessories - Hats & Hair Accessories",
+            "availability" : "in-stock",
+            "brand" : "Nike",
+            "createOn" : 1515991292000,
+            "updateTime" : 1527843676045,
+            "productSale" : "$24.99",
+            "productPrice" : "$24.99",
+            "sourceProductId" : "5249834",
+            "vendorId" : 3184,
+            "lastChecked" : null,
+            "sourceType" : 1,
+            "skus" : [
+              {
+                "sale" : 24.99,
+                "size" : "Adjustable",
+                "material" : "Polyester",
+                "color" : "Purple/White",
+                "gender" : "Women",
+                "skuNumber" : "885178763823",
+                "upc" : "885178763823",
+                "currency" : "USD",
+                "productType" : "HAT",
+                "misc" : "New"
+              }
+            ]
+          }
+        },
+        {
+          "_index" : "linkshare",
+          "_type" : "product",
+          "_id" : "3184_5249834_01172018123704",
+          "_score" : 11.7218895,
+          "_source" : {
+            "id" : "3184_5249834_01172018123704",
+            "productTitle" : "Nike Women's Featherlight Cap",
+            "productUrl" : "http://click.linksynergy.com/link?id=ryHxRa8tGxs&offerid=486109.885178763823&type=15&murl=https%3A%2F%2Fwww.macys.com%2Fshop%2Fproduct%2Fnike-womens-featherlight-cap%3FID%3D5249834%26PartnerID%3DLINKSHARE%26cm_mmc%3DLINKSHARE-_-91-_-67-_-MP9167",
+            "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/8960049_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+            "productShortDescription" : "",
+            "productLongDescription" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "productKeywords" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "width" : 300,
+            "height" : 367,
+            "categoryStr" : "Women's - Handbags & Accessories>Accessories - Hats & Hair Accessories",
+            "availability" : "in-stock",
+            "brand" : "Nike",
+            "createOn" : 1516163824000,
+            "updateTime" : 1527843683081,
+            "productSale" : "$24.99",
+            "productPrice" : "$24.99",
+            "sourceProductId" : "5249834",
+            "vendorId" : 3184,
+            "lastChecked" : null,
+            "sourceType" : 1,
+            "skus" : [
+              {
+                "sale" : 24.99,
+                "size" : "Adjustable",
+                "material" : "Polyester",
+                "color" : "Purple/White",
+                "gender" : "Women",
+                "skuNumber" : "885178763823",
+                "upc" : "885178763823",
+                "currency" : "USD",
+                "productType" : "HAT",
+                "age" : "Adult",
+                "misc" : "New"
+              }
+            ]
+          }
+        },
+        {
+          "_index" : "linkshare",
+          "_type" : "product",
+          "_id" : "3184_5249834_03112018121740",
+          "_score" : 11.7218895,
+          "_source" : {
+            "id" : "3184_5249834_03112018121740",
+            "productTitle" : "Nike Women's Featherlight Cap",
+            "productUrl" : "http://click.linksynergy.com/link?id=ryHxRa8tGxs&offerid=486109.885178763823&type=15&murl=https%3A%2F%2Fwww.macys.com%2Fshop%2Fproduct%2Fnike-womens-featherlight-cap%3FID%3D5249834%26PartnerID%3DLINKSHARE%26cm_mmc%3DLINKSHARE-_-91-_-67-_-MP9167",
+            "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/8960049_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+            "productShortDescription" : "",
+            "productLongDescription" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "productKeywords" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "width" : 300,
+            "height" : 367,
+            "categoryStr" : "Women's - Handbags & Accessories>Accessories - Hats & Hair Accessories",
+            "availability" : "in-stock",
+            "brand" : "Nike",
+            "createOn" : 1520741860000,
+            "updateTime" : 1527843713542,
+            "productSale" : "$24.99",
+            "productPrice" : "$24.99",
+            "sourceProductId" : "5249834",
+            "vendorId" : 3184,
+            "lastChecked" : null,
+            "sourceType" : 1,
+            "skus" : [
+              {
+                "sale" : 24.99,
+                "skuNumber" : "885178763823",
+                "upc" : "885178763823",
+                "currency" : "USD"
+              }
+            ]
+          }
+        },
+        {
+          "_index" : "linkshare",
+          "_type" : "product",
+          "_id" : "3184_5249834_03122018123258",
+          "_score" : 11.7218895,
+          "_source" : {
+            "id" : "3184_5249834_03122018123258",
+            "productTitle" : "Nike Women's Featherlight Cap",
+            "productUrl" : "http://click.linksynergy.com/link?id=ryHxRa8tGxs&offerid=486109.885178763823&type=15&murl=https%3A%2F%2Fwww.macys.com%2Fshop%2Fproduct%2Fnike-womens-featherlight-cap%3FID%3D5249834%26PartnerID%3DLINKSHARE%26cm_mmc%3DLINKSHARE-_-91-_-67-_-MP9167",
+            "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/8960049_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+            "productShortDescription" : "",
+            "productLongDescription" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "productKeywords" : "Nike Women's Featherlight Cap Women's - Handbags & Accessories Accessories - Hats & Hair Accessories",
+            "width" : 300,
+            "height" : 367,
+            "categoryStr" : "Women's - Handbags & Accessories>Accessories - Hats & Hair Accessories",
+            "availability" : "in-stock",
+            "brand" : "Nike",
+            "createOn" : 1520829178000,
+            "updateTime" : 1527843716720,
+            "productSale" : "$24.99",
+            "productPrice" : "$24.99",
+            "sourceProductId" : "5249834",
+            "vendorId" : 3184,
+            "lastChecked" : null,
+            "sourceType" : 1,
+            "skus" : [
+              {
+                "sale" : 24.99,
+                "size" : "Adjustable",
+                "material" : "Polyester",
+                "color" : "Purple/White",
+                "gender" : "Women",
+                "skuNumber" : "885178763823",
+                "upc" : "885178763823",
+                "currency" : "USD",
+                "productType" : "HAT",
+                "age" : "Adult",
+                "misc" : "New"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
