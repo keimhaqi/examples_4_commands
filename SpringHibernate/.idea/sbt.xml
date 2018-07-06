@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaSbtSettings">
+    <option name="customLauncherPath" value="$USER_HOME$/scala/sbt/bin/sbt-launch.jar" />
+    <option name="vmParameters" value="-Dplay.version=2.2.1 -Dsbt.repository.config=~/.sbt/repositories" />
+  </component>
+</project>
