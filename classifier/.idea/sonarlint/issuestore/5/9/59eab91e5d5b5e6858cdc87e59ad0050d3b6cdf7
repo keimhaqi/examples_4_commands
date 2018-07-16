@@ -1,0 +1,7 @@
+
+Ksquid:S1068"*Remove this unused "logger" private field.(’Ò¢¼ıÿÿÿÿ8€¥ÈèÇ,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(ç¾æÌşÿÿÿÿ8“õÅèÇ,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ØŸ±Á8“õÅèÇ,
+Rsquid:S1068"1Remove this unused "withdrawRules" private field.(æËé±ùÿÿÿÿ8“õÅèÇ,
