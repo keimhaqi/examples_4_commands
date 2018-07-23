@@ -11,10 +11,10 @@ bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 -
 bin/kafka-topics.sh --list --zookeeper localhost:2181
 
 启动kafka producer
-bin/kafka-console-producer.sh --broker-list 192.168.1.103:9092 --topic bi.merge
+bin/kafka-console-producer.sh --broker-list 192.168.1.103:9092 --topic demo
 
 启动kafka consumer
-bin/kafka-console-consumer.sh --bootstrap-server 192.168.1.103:9092 --topic bi.merge
+bin/kafka-console-consumer.sh --bootstrap-server 192.168.1.103:9092 --topic demo2
 
 bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --topic linkshare_search --zookeeper 192.168.1.103:2181 --group piwikDataMove
 bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --topic linkshare_update --zookeeper localhost:2181 --group linkshare_search
@@ -22,11 +22,41 @@ bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --topic linkshare_searc
 
 
 //使用最新的脚本获取所有topic的offset信息
-./bin/kafka-consumer-groups.sh --bootstrap-server 192.168.1.103:9092 --new-consumer --group piwikDataMove --describe
+./bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --new-consumer --group pro --describe
 
 bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --topic linkshare_search --zookeeper localhost:2181 --group pro
 
 
+curl -X GET "192.168.1.106:9201/search_b/items/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+    "query" : {
+        "match": { "productTitle": "nike" }
+    },
+    "highlight" : {
+        "pre_tags":["<tag1>"],
+        "post_tags":["</tag1>"],
+        "fields" : {
+            "productTitle" : {"type" : "plain"}
+        }
+    }
+}
+'
+
+
+curl -X GET "192.168.1.106:9201/search_b/items/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+    "query" : {
+        "match": { "_all": "nike" }
+    },
+    "highlight" : {
+        "pre_tags":["<tag1>"],
+        "post_tags":["</tag1>"],
+        "fields" : {
+            "productTitle" : {"type" : "plain"}
+        }
+    }
+}
+'
 
 
 

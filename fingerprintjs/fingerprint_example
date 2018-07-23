@@ -1,0 +1,43 @@
+Your browser fingerprint:
+55d99e907eea048d3176043821ba04a9
+
+Time took to calculate the fingerprint: 262ms
+
+
+
+Detailed information:
+
+user_agent = Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0
+language = zh-CN
+color_depth = 24
+pixel_ratio = 1
+hardware_concurrency = 4
+resolution = 1920,1080
+available_resolution = 1920,1056
+timezone_offset = -480
+session_storage = 1
+local_storage = 1
+indexed_db = 1
+cpu_class = unknown
+navigator_platform = Linux x86_64
+do_not_track = unspecified
+regular_plugins = Shockwave Flash::Shockwave Flash 30.0 r0::application/x-shockwave-flash~swf,application/futuresplash
+canvas = canvas winding:yes~canvas fp:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB9AAAADICAYAAACwGnoBAAAgA
+webgl = data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAARcklEQVR4nO3c/2vbi37f8eefsR82uD
+adblock = false
+has_lied_languages = false
+has_lied_resolution = false
+has_lied_os = false
+has_lied_browser = false
+touch_support = 0,false,false
+js_fonts = Andale Mono,Arial,Arial Black,Arial Narrow,Bitstream Vera Sans Mono,Comic Sans MS,Courier,Courier Ne
+
+
+
+
+In [135]: ts = pd.Series(np.random.randn(1000), index=pd.date_range('1/1/2000', periods=1000))
+
+In [136]: ts = ts.cumsum()
+
+In [137]: ts.plot()
+Out[137]: <matplotlib.axes._subplots.AxesSubplot at 0x10e4fbeb8>

@@ -1,0 +1,46 @@
+curl -X POST "192.168.1.106:9201/brochure/items/12/_update" -H 'Content-Type: application/json' -d'
+{
+    "doc" : {
+        "test": ["NO"]
+    },
+    "doc_as_upsert" : true
+}
+'
+
+
+
+curl -X POST "localhost:9200/test/type1/1/_update" -H 'Content-Type: application/json' -d'
+{
+    "doc" : {
+        "name" : "new_name"
+    },
+    "doc_as_upsert" : true
+}
+'
+
+
+Nmap scan report for 192.168.1.99
+Host is up (0.00046s latency).
+Nmap scan report for 192.168.1.110
+Host is up (0.00067s latency).
+Nmap scan report for 192.168.1.127
+Host is up (0.00029s latency).
+Nmap scan report for 192.168.1.150
+Host is up (0.0096s latency).
+Nmap scan report for 192.168.1.189
+Host is up (0.00030s latency).
+Nmap scan report for master1 (192.168.1.191)
+Host is up (0.00061s latency).
+Nmap scan report for slave1 (192.168.1.192)
+Host is up (0.00057s latency).
+Nmap scan report for slave2 (192.168.1.193)
+Host is up (0.00053s latency).
+Nmap scan report for master2 (192.168.1.194)
+Host is up (0.00049s latency).
+Nmap scan report for rectest1.maui.jinbag.com (192.168.1.195)
+Host is up (0.00046s latency).
+Nmap scan report for 192.168.1.197
+Host is up (0.00037s latency).
+Nmap scan report for 192.168.1.198
+Host is up (0.00040s latency).
+Nmap scan report for worker2.maui.jinbag.com (192.168.1.199)

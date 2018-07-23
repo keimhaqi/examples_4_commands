@@ -191,3 +191,36 @@
     },
     "lifeCycle": 1
 }
+
+
+
+{
+    "items": [
+        {
+            "item": {
+                "originalLink": "http://forums.huaren.us/archiver/showtopic.aspx?topicid=2268492",
+                "inTime": 1527753370000,
+                "shareCount": 0,
+                "productId": [
+                    10651980
+                ],
+                "follow_count": 0,
+                "viewCount": 0,
+                "id": 22,
+                "title": "来问问自己家里吃火锅用什么炉子好？",
+                "userId": 797,
+                "user": {
+                    "nickName": "Cora’s Mom",
+                    "userId": 811,
+                    "logoUrl": "Q09SQVNfTU9NQEpJTkJBRy5DT00=.jpg"
+                },
+                "content": "[{\"index\":\"1\",\"content\":[{\"index\":\"1\",\"content\":\"我用的这个。开得挺快的。用了6年了，不坏。我家通常我和老公还有父母4个大人吃没问题。非常简单洗\",\"type\":\"text\"}],\"jinbagId\":10651980,\"type\":\"product\"}]",
+                "tags": "Multi-Cooker,多功能电锅"
+            },
+            "score": 3.0,
+            "type": "brochure"
+        }
+    ],
+    "num": 1,
+    "lifeCycle": 1
+}

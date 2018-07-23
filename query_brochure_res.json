@@ -1,0 +1,96 @@
+{
+  "took" : 5,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 9,
+    "max_score" : 4.0,
+    "hits" : [
+      {
+        "_index" : "brochure_b",
+        "_type" : "items",
+        "_id" : "5",
+        "_score" : 4.0,
+        "_source" : {
+          "products" : "1 2 3 4 5"
+        }
+      },
+      {
+        "_index" : "brochure_b",
+        "_type" : "items",
+        "_id" : "8",
+        "_score" : 4.0,
+        "_source" : {
+          "products" : "1 2 3 4 5 6 7 8"
+        }
+      },
+      {
+        "_index" : "brochure_b",
+        "_type" : "items",
+        "_id" : "9",
+        "_score" : 4.0,
+        "_source" : {
+          "products" : "1 2 3 4 5 6 7 8 9"
+        }
+      },
+      {
+        "_index" : "brochure_b",
+        "_type" : "items",
+        "_id" : "4",
+        "_score" : 4.0,
+        "_source" : {
+          "products" : "1 2 3 4"
+        }
+      },
+      {
+        "_index" : "brochure_b",
+        "_type" : "items",
+        "_id" : "6",
+        "_score" : 4.0,
+        "_source" : {
+          "products" : "1 2 3 4 5 6"
+        }
+      },
+      {
+        "_index" : "brochure_b",
+        "_type" : "items",
+        "_id" : "7",
+        "_score" : 4.0,
+        "_source" : {
+          "products" : "1 2 3 4 5 6 7"
+        }
+      },
+      {
+        "_index" : "brochure_b",
+        "_type" : "items",
+        "_id" : "3",
+        "_score" : 3.0,
+        "_source" : {
+          "products" : "1 2 3"
+        }
+      },
+      {
+        "_index" : "brochure_b",
+        "_type" : "items",
+        "_id" : "2",
+        "_score" : 2.0,
+        "_source" : {
+          "products" : "1 2"
+        }
+      },
+      {
+        "_index" : "brochure_b",
+        "_type" : "items",
+        "_id" : "1",
+        "_score" : 1.0,
+        "_source" : {
+          "products" : "1"
+        }
+      }
+    ]
+  }
+}

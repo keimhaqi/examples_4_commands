@@ -77,9 +77,7 @@ curl -X PUT "192.168.1.106:9200/jinbagsearch/items/9652035" -H 'Content-Type: ap
 
 
 
-curl -X PUT "localhost:9200/twitter/tweet/1" -H Content-Type: application/json -d
+curl -X PUT "192.168.1.106:9201/twitter/tweet/1" -H Content-Type: application/json -d
 {
-    "user" : "kimchy",
-    "post_date" : "2009-11-15T14:12:12",
-    "message" : "trying out Elasticsearch"
+    "prd" : [1]
 }

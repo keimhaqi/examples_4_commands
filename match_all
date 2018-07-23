@@ -18,7 +18,14 @@ curl -X GET "localhost:9200/_nodes/stats/indices/request_cache?human"
 V3SearchLinkStartTime|Mon May 14 05:20:15 UTC 2018|V3SearchLinkEndTime|Mon May 14 05:20:21 UTC 2018|V3SEARCHLinkTIME|6108
 
 
-curl -XGET '172.18.0.2:9200/.monitoring-es-6-2018.05.14/doc/_search?pretty' -H 'Content-Type: application/json' -d'
+
+
+curl -XGET '192.168.1.106:9201/brochure/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{"query": {"bool": {"should": {"match": {"products": "1 2"}}}}, "size": 10}
+'
+
+
+curl -XGET '192.168.1.106:9201/article_b/post/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 1,
     "query": {
@@ -28,31 +35,60 @@ curl -XGET '172.18.0.2:9200/.monitoring-es-6-2018.05.14/doc/_search?pretty' -H '
 '
 
 
-curl -XGET '192.168.1.106:9201/fuzzy_a/items/_search?pretty' -H 'Content-Type: application/json' -d'
-{
-    "size": 1,
-    "query": {
-       "match_all" : {}
-    }
-}
-'
 
-
-
-curl -XGET '192.168.1.103:9201/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET '192.168.1.106:9201/brochure/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size":13,
     "query": {
       "bool":{
-        "must":[
+        "should":[
           {
-            "match":{
-            "sourceProductId" : "5249834"
+            "constant_score":{
+              "query":{
+                  "match":{
+                    "products" : {
+                      "query":"1",
+                      "boost" : 1.0
+                  }
+                }
+              }
             }
           },
           {
-            "match":{
-              "vendorId": 3184
+            "constant_score":{
+              "query":{
+                "match":{
+                  "products": {
+                    "query":"2",
+                    "boost" : 1.0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "constant_score":{
+              "query":{
+                "match":{
+                  "products": {
+                    "query":"3",
+                    "boost" : 1.0
+                  }
+                }
+              }
+            }
+            
+          },
+          {
+            "constant_score":{
+              "query":{
+                "match":{
+                  "products": {
+                    "query":"4",
+                    "boost" : 1.0
+                  }
+                }
+              }
             }
           }
         ]

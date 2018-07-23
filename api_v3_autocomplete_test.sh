@@ -46,7 +46,7 @@ curl -i -H "Content-type:application/json" -X POST -d '
 
 curl -i -H "Content-type:application/json" -X POST -d '  
 {
-    "searchword":"ni",
+    "searchword":"nike",
     "language":"en"         
 }                                                 
 ' http://localhost:9123/api/v3/autocomplete

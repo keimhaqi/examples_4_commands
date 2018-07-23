@@ -1,0 +1,4 @@
+|  16183 | url         | localhost:42319     | jinbag_data | Query       |      4 | Sending data                                                  | SELECT
+            c.id,
+            c.domain_id       AS "domainEntity.id",
+            c.discount_ |

@@ -1,0 +1,4 @@
+$ jps | grep Elasticsearch
+# $ cat /tmp/elasticsearch-pid && echo
+15516
+$ kill -SIGTERM 15516

@@ -148,6 +148,14 @@ curl -k -H 'Content-Type: application/json' -d '
   ' http://192.168.1.106:9123/api/v3/itemlistPersonal
 
 
+curl -k -H 'Content-Type: application/json' -d '
+{
+	"searchword": "book",
+	"whitelist": ["10554946", "699868", "10848672", "9652038", "10843168", "10648434", "10694350", "10848638", "10780234", "10641392", "10646284", "10298988", "10643974", "10648440", "10695988", "10843164", "10716208", "10601458", "10610428", "10598680", "6531336", "224432", "946702", "9583742", "10589480", "10589484", "10584836", "8394650", "10164710", "10585528", "10078154", "10321442", "10583730", "10583602", "10352050", "10188090", "10486844", "6236614", "10335894", "9198406", "10393934", "159804", "135200", "8398514", "9973952", "9978718", "10059180", "10063448", "10063454", "10064624", "10065094", "10076374", "10076592", "10080388", "10081032", "10081038", "10081456", "10093284", "10128090", "10154462", "10154464", "10228070", "3933124", "10182988", "10226550", "10226364", "10171742", "10172902", "10226538", "10139978", "10226536", "10226534", "10150128", "10215304", "10070738", "6330404", "151464", "82372", "7872154", "7722570", "7045860", "6834538", "842012", "814820", "447411", "6355402", "6821020", "6821022", "6228688", "239865", "6106002", "4709120", "64637", "142912", "195430", "1117278", "2640430", "4791006", "4791004", "4784244", "47029", "717418", "444136", "3898460", "4738150", "47012", "214250", "122232", "458954", "167422", "201404", "1582270", "1397386", "1567630", "43214", "203520", "204390", "234614", "260020", "1471914", "336908", "200470", "446000", "484726", "1471908", "439928", "1453558", "1453556", "1243648", "195442", "140858", "164050", "174302", "219368", "223218", "230686", "297530", "298292", "330986", "373614", "553432", "594594", "723612", "799168", "804164", "804598", "1404554", "77494", "411236", "806726", "374744", "143004", "170514", "1287052", "1303416", "808382", "1359416", "176620", "207750", "209326", "322616", "462998", "484536", "685658", "798268", "806734", "835344", "9926", "9555", "806728", "328652", "324268", "201834", "199956", "204504", "6051872", "10165668", "10310094", "10310144", "10310146", "10310180"],
+	"blacklist": [],
+	"num": 1000
+}
+  ' http://96.90.248.213:9123/api/v3/itemlistPersonal
 
 curl -k -H 'Content-Type: application/json' -d '
 {
@@ -182,6 +190,13 @@ curl -k -H 'Content-Type: application/json' -d '
 curl -k -H 'Content-Type: application/json' -d '
 {
   "num": 10,
+  "fields":[{"name": "vendors", "values":["amazon"]}]
+}
+' http://96.90.248.211:9124/api/v3/todayPicks
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "num": 10,
   "fields":[{"name": "brands", "values":["gerber"]}, {"name": "categories", "values":["books"]}],
   "must":[{"name": "sources", "values":["add-on item", "add-on items prime"]}]
 }
@@ -208,9 +223,20 @@ curl -k -H 'Content-Type: application/json' -d '
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "fields":[{"name": "productId", "values":[10583819]}, {"name": "vendorId", "values":[3184]}]
+  "fields":[{"name": "productId", "values":[10621342]}, {"name": "vendorId", "values":[3]}],
+  "saleRange":{"min":10, "max":30}
 }
-' http://192.168.1.106:9123/api/v3/metrics/product
+' http://96.90.248.211:9124/api/v3/metrics/product
+
+
+
+
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "fields":[{"name": "productId", "values":[1190670]}, {"name": "vendorId", "values":[3]}]
+}
+' http://96.90.248.211:9124/api/v3/metrics/product
 
 curl -k -H 'Content-Type: application/json' -d '
 {
@@ -232,14 +258,22 @@ curl -k -H 'Content-Type: application/json' -d '
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "fields":[{"name": "productId", "values":[10583819]}, {"name": "vendorId", "values":[3184]}],
-  "dateRange":{"min":1521505361000, "max":1522074252000}
+  "fields":[{"name": "productId", "values":[280255]}, {"name": "vendorId", "values":[3184]}]
 }
-' http://192.168.1.106:9125/api/v3/metrics/product
+' http://96.90.248.211:9124/api/v3/metrics/product
 
 curl -k -H 'Content-Type: application/json' -d '
 {
   "fields":[{"name": "vendors", "values":["amazon"]}, {"name": "sources", "values":["bestsellers"]}, {"name": "categories", "values":["home & kitchen"]}],
+  "stringOption":["brands"]
+}
+' http://96.90.248.211:9124/api/v3/todayPicks/option
+
+
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "fields":[{"name": "vendors", "values":["amazon"]}, {"name": "sources", "values":["bestsellers"]}, {"name": "categories", "values":["books"]}],
   "stringOption":["brands"]
 }
 ' http://96.90.248.211:9124/api/v3/todayPicks/option
@@ -285,20 +319,26 @@ curl -k -H 'Content-Type: application/json' -d '
     }
   ]
 }
-' http://192.168.1.106:9124/api/v3/todayPicks/productUnderTag
+' http://96.90.248.211:9124/api/v3/todayPicks/productUnderTag
 
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "params":[
-    {
-    "num": 10,
-    "fields":[{"name":"sources", "values":[""]}],
-    "superTag": "amazon\'s choice "
-    }
-  ]
+  "user": 219,
+  "num": 10,
+  "dateRange":{
+    "name": "inTime",
+    "before":1527753371000,
+    "after": 1527753360000
+  },
+  "fields":[
+    {"name": "userId", "values":[797]}
+  ],
+  "from": 1,
+  "blacklistItems":["24"],
+  "num": 1
 }
-' http://96.90.248.211:9124/api/v3/todayPicks/productUnderTag
+' http://192.168.1.106:9124/api/v3/ur/brochure
 
 
 
