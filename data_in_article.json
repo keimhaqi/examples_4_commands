@@ -1,0 +1,51 @@
+curl -XGET '192.168.1.106:9201/article/post/_search?pretty' -H 'Content-Type: application/json' -d'
+> {
+>     "size": 1,
+>     "query": {
+>        "match_all" : {}
+>     }
+> }
+> '
+{
+  "took" : 2,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 88,
+    "max_score" : 1.0,
+    "hits" : [
+      {
+        "_index" : "article_a",
+        "_type" : "post",
+        "_id" : "29",
+        "_score" : 1.0,
+        "_source" : {
+          "viewCount" : 0,
+          "title" : "最近看电影多，谈谈我搞起来的家庭影院吧！希望大家可以借鉴，哈哈",
+          "follow_count" : 0,
+          "userId" : 811,
+          "content" : "[{\"index\":\"1\",\"content\":[{\"index\":\"1\",\"content\":\"我还有非常梦想弄的就是 moving head,  已经看好几个了, 准备下单了， moving head 可以通过 DMX 512协议，自己写软件控制\",\"type\":\"text\"}],\"jinbagId\":10651998,\"type\":\"product\"},{\"index\":\"2\",\"content\":[{\"index\":\"2\",\"content\":\"4个渲染用的灯， 当然也是要支持 DMX的，，$69\",\"type\":\"text\"}],\"jinbagId\":10651986,\"type\":\"product\"},{\"index\":\"3\",\"content\":[{\"index\":\"3\",\"content\":\"还有，啊哈哈，非常土气的 Party Light，用于老年迪士高,$19\",\"type\":\"text\"}],\"jinbagId\":10651988,\"type\":\"product\"},{\"index\":\"4\",\"content\":[{\"index\":\"4\",\"content\":\"音箱发烧友女ID，一再劝我，不要冲动，真的，几百刀的音箱现在可以了，有个Subwoofer，低音炮轰轰，足够有效果了！然后说， 再说，你家也没有那么大的房间装太高大上的音箱啊。哎呀，一语刺中人家的心尖尖啊！ 考虑到整体预算只有800刀，的确也只能买个几百刀的音箱系统了， 就选来选去，买了logitech这款。我个人还是很喜欢logitch这个牌子的！\\n\",\"type\":\"text\"}],\"jinbagId\":10554012,\"type\":\"product\"}]",
+          "articleId" : 29,
+          "user" : {
+            "nickName" : "Cora’s Mom",
+            "userId" : 811,
+            "logoUrl" : "Q09SQVNfTU9NQEpJTkJBRy5DT00=.jpg"
+          },
+          "shareCount" : 0,
+          "inTime" : 1527753370000,
+          "originalLink" : "http://forums.huaren.us/archiver/showtopic.aspx?topicid=2261263",
+          "productId" : [
+            10554012,
+            10651986,
+            10651988,
+            10651998
+          ]
+        }
+      }
+    ]
+  }
+}

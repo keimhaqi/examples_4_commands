@@ -7,13 +7,19 @@ curl -XGET '192.168.1.106:9201/article/post/_search?pretty' -H 'Content-Type: ap
           {
             "constant_score":{
               "filter":{
-                  "match":{
-                    "productId" : {
-                      "query":10554012,
-                      "boost" : 1.0
+                "nested":{
+                  "path": "product",
+                  "query":{
+                    "match":{
+                      "productId" : {
+                        "query":10554012,
+                        "boost" : 1.0
+                      }
+                    }
                   }
-                }
-              }
+                }  
+              },
+              "boost" : 1.0
             }
           },
           {

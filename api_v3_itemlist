@@ -18,7 +18,7 @@
   curl -k -H 'Content-Type: application/json' -d '
   {
     "num": 10,
-    "searchword":"amazon",
+    "searchword":"Cora’s Mom",
     "blacklist":[111, 222, 333, 444, 555],
     "fields":
     [
@@ -26,15 +26,14 @@
     ]
     
   }
-  ' http://192.168.1.106:9124/api/v3/itemlist
+  ' http://192.168.1.106:9124/api/v3/search/brochure
 
 
 
   curl -k -H 'Content-Type: application/json' -d '
   {
     "num": 10,
-    "searchword":"nike 5 men",
-    "blacklist":[111, 222, 333, 444, 555],
+    "searchword":"sak",
     "fields":
     [
         
@@ -240,7 +239,7 @@ curl -k -H 'Content-Type: application/json' -d '
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "fields":[{"name": "productId", "values":[10629040]}, {"name": "vendorId", "values":[3]}]
+  "fields":[{"name": "productId", "values":[281981]}, {"name": "vendorId", "values":[3184]}]
 }
 ' http://96.90.248.211:9124/api/v3/metrics/product
 
@@ -341,7 +340,20 @@ curl -k -H 'Content-Type: application/json' -d '
 ' http://192.168.1.106:9124/api/v3/ur/brochure
 
 
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "user": 219,
+  "num": 10
+}
+' http://192.168.1.106:9124/api/v3/ur/brochure
 
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "searchword": "Multi-Cooker",
+  "blacklistItems":[22]
+}
+' http://192.168.1.106:9125/api/v3/search/brochure
 
 
 curl -k -H 'Content-Type: application/json' -d '
