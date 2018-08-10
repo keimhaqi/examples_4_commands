@@ -130,7 +130,7 @@ curl -XGET 'localhost:9201/search/items/_search?pretty' -H 'Content-Type: applic
 '
 
 
-curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
 {
   "size":200,
   "query" : {
@@ -145,7 +145,7 @@ curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type:
                   {
                     "match" : {
                       "sourceProductId" : {
-                        "query" : "B078GVMVRH",
+                        "query" : "552571",
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,
@@ -169,7 +169,7 @@ curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type:
                   {
                     "match" : {
                       "vendorId" : {
-                        "query" : 3,
+                        "query" : 3184,
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,

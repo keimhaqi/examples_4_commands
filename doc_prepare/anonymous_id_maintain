@@ -1,0 +1,37 @@
+维护匿名用户id
+
+需求如下：
+
+    用户以未登录身份访问我们的服务时，我们需要能够搜集该用户的行为信息;
+    对未登录的用户提供唯一标识;
+
+
+可以使用piwik实现上述需求，piwik提供了如下功能：
+
+    对已登录的用户：
+        对该用户生成一个visitorId:
+            此visitorId与该用户未作登录时生成的visitorId不同;
+        使用userId绑定该visitorId;
+            对应关系被记录在了piwik_log_visit表中;
+        所有用户行为均使用userID做绑定;
+        后续所有用户行为均可以通过userID进行追踪;
+        支持跨设备追踪;
+    对于未登录的用户：
+        使用唯一的visitorId标识匿名用户;
+            根据文档可看到piwik是根据fingerprint等信息来生成visitorId的，所以能够对不同设备的匿名用户生成不同的visitorId;
+        后续该匿名用户的所有行为信息均使用visitorId进行标识;
+
+因此，当用户访问我们的网站时前端(web、mobile、APP)应执行如下动作：
+
+    若用户做了登录操作：
+        使用piwik提供的tracking client中的接口setUserId设置用户的userId;
+        使用userId和对应的接口追踪并记录用户的行为信息;
+    若用户未作登录操作：
+        使用piwik提供的tracking client中的接口getVisitorId获取由piwik生成的visitorId;
+        使用visitorId和对应的接口追踪和记录用户的行为信息;
+
+具体可参考文档：https://matomo.org/docs/user-id/
+
+
+
+

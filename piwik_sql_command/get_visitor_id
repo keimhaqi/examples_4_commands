@@ -1,0 +1,7 @@
+14722227560944467884
+
+// select visitorId
+SELECT inet_ntoa(conv(hex(location_ip), 16, 10)) as ip, conv(hex(idvisitor), 16, 10) as visitorId FROM matomo_log_visit;
+
+// select config_id
+SELECT inet_ntoa(conv(hex(location_ip), 16, 10)) as ip, conv(hex(config_id), 16, 10) as configId FROM matomo_log_visit;

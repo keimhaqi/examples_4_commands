@@ -1,5 +1,5 @@
 curl -XGET '172.18.0.2:9200/_cat/indices?v&pretty'
-curl -XGET '192.168.1.106:9201/_cat/indices?human&v&pretty'
+curl -XGET '192.168.1.104:9201/_cat/indices?human&v&pretty'
 
 curl -XGET '192.168.1.103:9201/_cat/indices?human&v&pretty'
 es = Elasticsearch(hosts='localhost:9201', cluster='es-cluster' )

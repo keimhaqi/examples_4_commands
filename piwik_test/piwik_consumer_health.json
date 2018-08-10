@@ -1,0 +1,13 @@
+{
+    "status": "UP",
+    "details": {
+        "diskSpace": {
+            "status": "UP",
+            "details": {
+                "total": 967548751872,
+                "free": 783731134464,
+                "threshold": 10485760
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "status": "UP",
+    "details": {
+        "db": {
+            "status": "UP",
+            "details": {
+                "getBackendJinbagDataSource": {
+                    "status": "UP",
+                    "details": {
+                        "database": "MySQL",
+                        "hello": 1
+                    }
+                },
+                "getFrontendJinbagDataSource": {
+                    "status": "UP",
+                    "details": {
+                        "database": "MySQL",
+                        "hello": 1
+                    }
+                },
+                "getFrontendPiwikDataSource": {
+                    "status": "UP",
+                    "details": {
+                        "database": "MySQL",
+                        "hello": 1
+                    }
+                }
+            }
+        },
+        "diskSpace": {
+            "status": "UP",
+            "details": {
+                "total": 967548751872,
+                "free": 783816155136,
+                "threshold": 10485760
+            }
+        }
+    }
+}

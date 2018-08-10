@@ -265,11 +265,11 @@ curl -k -H 'Content-Type: application/json' -d '
   ]
   
 }
-' http://192.168.1.106:9124/api/v4/search/itemlist
+' http://192.168.1.104:9124/api/v4/search/itemlist
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "fields":[{"name": "productId", "values":[280255]}, {"name": "vendorId", "values":[3184]}]
+  "fields":[{"name": "productId", "values":[276049]}, {"name": "vendorId", "values":[3184]}]
 }
 ' http://96.90.248.211:9124/api/v3/metrics/product
 
@@ -362,10 +362,13 @@ curl -k -H 'Content-Type: application/json' -d '
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "searchword": "storage",
-  "blacklistItems":[22]
+  "fields":[
+    {"name": "status", "values":[0]},
+    {"name": "userId", "values":[811]}
+  ],
+  "blacklist":[22]
 }
-' http://96.90.248.211:9124/api/v3/search/brochure
+' http://192.168.1.104:9124/api/v3/search/brochure/personal
 
 
 curl -k -H 'Content-Type: application/json' -d '
