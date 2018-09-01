@@ -1,0 +1,275 @@
+{
+    "items": [
+        {
+            "item": {
+                "inTime": 1533896581597,
+                "product": [
+                    {
+                        "productImageUrl": "https://images-na.ssl-images-amazon.com/images/I/71iVHuI-TeL._SY355_.jpg",
+                        "productId": 6467258
+                    }
+                ],
+                "resourceUrl": [
+                    "/pic/pictures/c007f8625442480fb5a2d91e5d67145f.png",
+                    "/pic/pictures/a0d6ff86c4ae4c028a4ef3ad8c44f77e.png",
+                    "/pic/pictures/272243e30bd64632a49474195ebe19b3.png",
+                    "https://images-na.ssl-images-amazon.com/images/I/71iVHuI-TeL._SY355_.jpg"
+                ],
+                "productId": [
+                    6467258
+                ],
+                "articleId": 183,
+                "viewCount": 4,
+                "title": "胜多负少的",
+                "userId": 23,
+                "user": {
+                    "nickName": "胡11",
+                    "active": true,
+                    "id": 23,
+                    "userId": 23,
+                    "email": "HUIQIAN_HU@JINBAG.COM"
+                },
+                "content": "[{\"index\":0,\"type\":\"image\",\"jinbagId\":null,\"content\":\"/pic/pictures/a0d6ff86c4ae4c028a4ef3ad8c44f77e.png\"},{\"index\":1,\"type\":\"product\",\"jinbagId\":6467258,\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"搜索\"}]},{\"index\":2,\"type\":\"image\",\"jinbagId\":null,\"content\":\"/pic/pictures/272243e30bd64632a49474195ebe19b3.png\"}]",
+                "status": 0
+            },
+            "score": 2.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "inTime": 1533892149193,
+                "articleId": 188,
+                "viewCount": 0,
+                "title": "第一位",
+                "userId": 23,
+                "user": {
+                    "nickName": "胡11",
+                    "active": true,
+                    "id": 23,
+                    "userId": 23,
+                    "email": "HUIQIAN_HU@JINBAG.COM"
+                },
+                "content": "[{\"index\":0,\"type\":\"text\",\"jinbagId\":null,\"content\":\"第一位中\"}]",
+                "status": 0
+            },
+            "score": 2.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "lastCmtTime": 1533802711000,
+                "upCount": 0,
+                "articleId": 176,
+                "weight": 0.0,
+                "title": "这是一个测试标题",
+                "good": 0,
+                "userId": 23,
+                "content": "[{\"index\":0,\"type\":\"text\",\"jinbagId\":null,\"content\":\"这是测试文字\"}]",
+                "commentCount": 1,
+                "inTime": 1533802711000,
+                "downCount": 0,
+                "top": 0,
+                "viewCount": 0,
+                "user": {
+                    "nickName": "胡11",
+                    "active": 1,
+                    "id": 23,
+                    "userId": 23,
+                    "email": "HUIQIAN_HU@JINBAG.COM"
+                },
+                "status": 0
+            },
+            "score": 2.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "lastCmtTime": 1533802601000,
+                "upCount": 0,
+                "articleId": 175,
+                "weight": 0.0,
+                "title": "测试8",
+                "good": 0,
+                "userId": 23,
+                "content": "[{\"index\":0,\"type\":\"text\",\"jinbagId\":null,\"content\":\"测试8\"}]",
+                "commentCount": 1,
+                "inTime": 1533802601000,
+                "downCount": 0,
+                "top": 0,
+                "viewCount": 0,
+                "user": {
+                    "nickName": "胡11",
+                    "active": 1,
+                    "id": 23,
+                    "userId": 23,
+                    "email": "HUIQIAN_HU@JINBAG.COM"
+                },
+                "status": 0
+            },
+            "score": 2.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "upCount": 0,
+                "articleId": 172,
+                "weight": 0.0,
+                "title": "测试54",
+                "good": 0,
+                "userId": 23,
+                "content": "[{\"index\":0,\"type\":\"text\",\"jinbagId\":null,\"content\":\"测试5\"}]",
+                "commentCount": 0,
+                "inTime": 1533801848000,
+                "downCount": 0,
+                "top": 0,
+                "viewCount": 24,
+                "user": {
+                    "nickName": "胡11",
+                    "active": true,
+                    "id": 23,
+                    "userId": 23,
+                    "email": "HUIQIAN_HU@JINBAG.COM"
+                },
+                "status": 0
+            },
+            "score": 2.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "upCount": 0,
+                "articleId": 170,
+                "weight": 0.0,
+                "title": "测试3",
+                "good": 0,
+                "userId": 23,
+                "content": "[{\"index\":0,\"type\":\"text\",\"jinbagId\":null,\"content\":\"测试3\"}]",
+                "commentCount": 0,
+                "inTime": 1533801690000,
+                "downCount": 0,
+                "top": 0,
+                "viewCount": 18,
+                "user": {
+                    "nickName": "胡11",
+                    "active": true,
+                    "id": 23,
+                    "userId": 23,
+                    "email": "HUIQIAN_HU@JINBAG.COM"
+                },
+                "status": 0
+            },
+            "score": 2.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "upCount": 0,
+                "articleId": 168,
+                "weight": 0.0,
+                "title": "测试10",
+                "good": 0,
+                "userId": 23,
+                "content": "[{\"index\":0,\"type\":\"text\",\"jinbagId\":null,\"content\":\"测试1\"}]",
+                "commentCount": 0,
+                "inTime": 1533801058000,
+                "downCount": 0,
+                "top": 0,
+                "viewCount": 4,
+                "user": {
+                    "nickName": "胡11",
+                    "active": true,
+                    "id": 23,
+                    "userId": 23,
+                    "email": "HUIQIAN_HU@JINBAG.COM"
+                },
+                "status": 0
+            },
+            "score": 2.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "lastCmtTime": 1533787680000,
+                "upCount": 0,
+                "articleId": 164,
+                "weight": 0.0,
+                "title": "888888",
+                "good": 0,
+                "userId": 23,
+                "content": "[{\"index\":0,\"type\":\"text\",\"jinbagId\":null,\"content\":\"88888\"},{\"index\":1,\"type\":\"image\",\"jinbagId\":null,\"content\":\"/pic/pictures/934f765e8a5947c5b62bd1e7d09ba888.png\"}]",
+                "commentCount": 1,
+                "inTime": 1533784161000,
+                "downCount": 0,
+                "resourceUrl": [
+                    "/pic/pictures/934f765e8a5947c5b62bd1e7d09ba888.png"
+                ],
+                "top": 0,
+                "viewCount": 1,
+                "user": {
+                    "nickName": "胡11",
+                    "active": 1,
+                    "id": 23,
+                    "userId": 23,
+                    "email": "HUIQIAN_HU@JINBAG.COM"
+                },
+                "status": 0
+            },
+            "score": 2.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "upCount": 0,
+                "articleId": 163,
+                "weight": 0.0,
+                "title": "tttttttt1",
+                "good": 0,
+                "userId": 23,
+                "content": "[{\"index\":0,\"type\":\"text\",\"jinbagId\":null,\"content\":\"tttttt\"},{\"index\":1,\"type\":\"image\",\"jinbagId\":null,\"content\":\"/pic/pictures/63eaf96541cf4d8e94870523b1c12ce3.png\"}]",
+                "commentCount": 0,
+                "inTime": 1533783886000,
+                "downCount": 0,
+                "top": 0,
+                "viewCount": 4,
+                "user": {
+                    "nickName": "胡11",
+                    "active": true,
+                    "id": 23,
+                    "userId": 23,
+                    "email": "HUIQIAN_HU@JINBAG.COM"
+                },
+                "status": 0
+            },
+            "score": 2.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "upCount": 0,
+                "articleId": 162,
+                "weight": 0.0,
+                "title": "rrr1",
+                "good": 0,
+                "userId": 23,
+                "content": "[{\"index\":0,\"type\":\"image\",\"jinbagId\":null,\"content\":\"/pic/pictures/8ed6d2cb572747fea8a898f0afd5394d.png\"},{\"index\":1,\"type\":\"text\",\"jinbagId\":null,\"content\":\"rrr\"}]",
+                "commentCount": 0,
+                "inTime": 1533783828000,
+                "downCount": 0,
+                "top": 0,
+                "viewCount": 4,
+                "user": {
+                    "nickName": "胡11",
+                    "active": true,
+                    "id": 23,
+                    "userId": 23,
+                    "email": "HUIQIAN_HU@JINBAG.COM"
+                },
+                "status": 0
+            },
+            "score": 2.0,
+            "type": "brochure"
+        }
+    ],
+    "num": 10,
+    "lifeCycle": 1
+}

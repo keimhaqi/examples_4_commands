@@ -1,0 +1,132 @@
+[
+    {
+        "item": {
+            "badCount": 71,
+            "followCount": 1,
+            "createTime": 1532662143000,
+            "goodCount": 95,
+            "articleId": 5,
+            "updateTime": 1533094143000,
+            "window": 1
+        },
+        "score": 168.93123581053192,
+        "type": "brochure"
+    },
+    {
+        "item": {
+            "badCount": 62,
+            "followCount": 2,
+            "createTime": 1530070143000,
+            "goodCount": 46,
+            "articleId": 0,
+            "updateTime": 1530415743000,
+            "window": 5
+        },
+        "score": 111.16098005672616,
+        "type": "brochure"
+    },
+    {
+        "item": {
+            "badCount": 76,
+            "followCount": 7,
+            "createTime": 1517023743000,
+            "goodCount": 21,
+            "articleId": 3,
+            "updateTime": 1517455743000,
+            "window": 1
+        },
+        "score": 105.91100435099709,
+        "type": "brochure"
+    },
+    {
+        "item": {
+            "badCount": 70,
+            "followCount": 4,
+            "createTime": 1524799743000,
+            "goodCount": 30,
+            "articleId": 6,
+            "updateTime": 1525145343000,
+            "window": 9
+        },
+        "score": 105.03925471230143,
+        "type": "brochure"
+    },
+    {
+        "item": {
+            "badCount": 76,
+            "followCount": 5,
+            "createTime": 1522121343000,
+            "goodCount": 22,
+            "articleId": 4,
+            "updateTime": 1522553343000,
+            "window": 1
+        },
+        "score": 104.91757634222434,
+        "type": "brochure"
+    },
+    {
+        "item": {
+            "badCount": 20,
+            "followCount": 9,
+            "createTime": 1511753343000,
+            "goodCount": 73,
+            "articleId": 8,
+            "updateTime": 1512098943000,
+            "window": 9
+        },
+        "score": 103.02244921551079,
+        "type": "brochure"
+    },
+    {
+        "item": {
+            "badCount": 67,
+            "followCount": 6,
+            "createTime": 1519702143000,
+            "goodCount": 25,
+            "articleId": 4,
+            "updateTime": 1519874943000,
+            "window": 5
+        },
+        "score": 99.14756655437832,
+        "type": "brochure"
+    },
+    {
+        "item": {
+            "badCount": 62,
+            "followCount": 3,
+            "createTime": 1527391743000,
+            "goodCount": 17,
+            "articleId": 2,
+            "updateTime": 1527823743000,
+            "window": 2
+        },
+        "score": 83.00942255735403,
+        "type": "brochure"
+    },
+    {
+        "item": {
+            "badCount": 34,
+            "followCount": 10,
+            "createTime": 1509074943000,
+            "goodCount": 22,
+            "articleId": 5,
+            "updateTime": 1509506943000,
+            "window": 6
+        },
+        "score": 67.5791492328913,
+        "type": "brochure"
+    },
+    {
+        "item": {
+            "badCount": 4,
+            "followCount": 8,
+            "createTime": 1514345343000,
+            "goodCount": 14,
+            "articleId": 3,
+            "updateTime": 1514777343000,
+            "window": 2
+        },
+        "score": 26.992588370238238,
+        "type": "brochure"
+    }
+]

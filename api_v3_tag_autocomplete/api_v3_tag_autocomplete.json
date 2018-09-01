@@ -1,0 +1,34 @@
+{
+    "life_cycle": 1,
+    "correctness": true,
+    "autoComplete": [
+        {
+            "word": "set makeup"
+        },
+        {
+            "word": "sff"
+        },
+        {
+            "word": "sunscreen"
+        },
+        {
+            "word": "skin care"
+        },
+        {
+            "word": "sneakers"
+        },
+        {
+            "word": "skin mist"
+        },
+        {
+            "word": "cora’s mom"
+        },
+        {
+            "word": "sleep mask"
+        },
+        {
+            "word": "body smoother"
+        }
+    ],
+    "num": 9
+}

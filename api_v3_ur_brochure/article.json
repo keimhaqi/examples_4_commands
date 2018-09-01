@@ -1,0 +1,88 @@
+{
+    "items": [
+        {
+            "item": {
+                "followCount": 1,
+                "upCount": 0,
+                "description": "之前被一大批网红、明星集体种草了HR黑绷带。尤其是看了张韶涵、韩雪这种典型逆龄女明星的分享更是想买到不行。买了一瓶真的非常好用，但是也是真的非常贵非常不好买。于是自己做了下功课，想找一些平价替代品。首先黑绷带面霜是主打修复及抗老的一款产品，主打成分是30%玻色因，而且HR这个品牌隶属于欧莱雅集团，这个集团有品牌技术共享策略，所以我找了一些欧莱雅集团其他品牌含有玻色因成分的产品。",
+                "title": "HR赫莲娜黑绷带面霜替代品",
+                "good": 0,
+                "content": "[{\"index\":0,\"type\":\"product\",\"jinbagId\":10721506,\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"这款面霜和黑绷带一样添加了30%的波色因。而且成分表前十位的成分和黑绷带面霜一模一样。\"}]},{\"index\":1,\"type\":\"product\",\"jinbagId\":10848922,\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"这款精华的波色因浓度是10%。\"}]},{\"index\":2,\"type\":\"product\",\"jinbagId\":10848924,\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"这款精华乳的波色因含量是6%。\"}]}]",
+                "shareCount": 0,
+                "resourceUrl": [
+                    "https://images-na.ssl-images-amazon.com/images/I/71UH%2Bg3v5fL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/71AU0Rj70AL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/61iURg1WxFL._SX355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/51SHeduEwBL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/712CCnlzDVL._SY355_.jpg"
+                ],
+                "top": 0,
+                "viewCount": 113,
+                "lastCmtTime": 1533183226000,
+                "product": [
+                    {
+                        "productTitle": "Dyson V8 Absolute Cord-Free Vacuum",
+                        "productSale": "$859.99",
+                        "sale": {
+                            "min": 859.99,
+                            "max": 859.99
+                        },
+                        "productId": 239865,
+                        "productImageLink": "https://slimages.macysassets.com/is/image/MCY/products/7/optimized/3859757_fpx.tif?wid=300&fmt=jpeg&qlt=100"
+                    },
+                    {
+                        "productId": 2657924
+                    },
+                    {
+                        "productId": 10122712
+                    },
+                    {
+                        "productId": 10848922
+                    },
+                    {
+                        "productId": 10848924
+                    }
+                ],
+                "productId": [
+                    239865,
+                    2657924,
+                    10122712,
+                    10848922,
+                    10848924
+                ],
+                "articleId": 113,
+                "weight": 0.0,
+                "userId": 803,
+                "commentCount": 6,
+                "tags": "黑绷带,波色因",
+                "inTime": 1532419258000,
+                "downCount": 0,
+                "style": 2,
+                "window": {
+                    "productTitle": "Dyson V8 Absolute Cord-Free Vacuum",
+                    "productSale": "$859.99",
+                    "sale": {
+                        "min": 859.99,
+                        "max": 859.99
+                    },
+                    "productId": 239865,
+                    "productImageLink": "https://slimages.macysassets.com/is/image/MCY/products/7/optimized/3859757_fpx.tif?wid=300&fmt=jpeg&qlt=100"
+                },
+                "position": 0,
+                "user": {
+                    "nickName": "Day Day Make-up",
+                    "active": 1,
+                    "id": 803,
+                    "userId": 803,
+                    "logoUrl": "REFZX0RBWV9NQUtFX1VQQEpJTkJBRy5DT00=.jpg",
+                    "email": "DAY_DAY_MAKE_UP@JINBAG.COM"
+                },
+                "status": 0
+            },
+            "score": 1.0,
+            "type": "brochure"
+        }
+    ],
+    "num": 1,
+    "lifeCycle": 1
+}

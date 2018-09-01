@@ -1,0 +1,83 @@
+[
+    {
+        "productId": 10609449,
+        "brandId": 6969,
+        "categoryTypeId": 0,
+        "categoryTypePriority": 0,
+        "height": 355,
+        "availability": "in_stock",
+        "productDescription": [
+            
+        ],
+        "productDetail": [
+            "We designed Dr. Scholl’s Pain Relief Orthotics for Arch Pain specifically for people who suffer from arch pain due to stress and strain on their arch. They have Shock Guard Technology to treat pain at the source for immediate, all-day relief. The package contains one pair of insoles to fit men's shoe sizes 8-12. Dr. Scholl's has been a trusted brand in foot care since 1904 when Dr. William Mathias Scholl, grandson of a cobbler, launched the company under the name Dr. Scholl Inc."
+        ],
+        "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/81S9z9ZXkcL._SY355_.jpg",
+        "productPrice": "$20.00",
+        "productSale": "$10.10",
+        "productTitle": "Dr. Scholl's Dr. Scholl’s Pain Relief Orthotics for Arch Pain for Men, 1 Pair, Size 8-12",
+        "sourceId": [
+            3
+        ],
+        "sourceProductId": "B014EX3672",
+        "width": 355,
+        "morePictures": 0,
+        "hasSmartPrice": 0,
+        "brandName": "Dr. Scholl's",
+        "lastCheckedTime": 1529970797000,
+        "numOfReviews": 76,
+        "score": 4.1,
+        "deleted": 0,
+        "categories": [
+            "Health & Household"
+        ],
+        "sources": [
+            "subscribe and save"
+        ],
+        "vendors": [
+            "Amazon"
+        ],
+        "topProductPromoInfoVendor": {
+            "id": {
+                "id": 10609449,
+                "vendorId": 3
+            },
+            "taskId": 6800960,
+            "titleEn": "Amazon - $10.10 ($20.00) Dr. Scholl's Dr. Scholl’s Pain Relief Orthotics for Arch Pain for Men, 1 Pair, Size 8-12",
+            "shareTitleEn": "$10.10 ($20.00) Dr. Scholl's Dr. Scholl’s Pain Relief Orthotics for Arch Pain for Men, 1 Pair, Size 8-12",
+            "price": "$10.10",
+            "startDate": 1530161601000,
+            "authorId": 99,
+            "confirmed": 1,
+            "createdTime": 1534405090000,
+            "confirmedTime": 1534405090000,
+            "confirmerId": 99,
+            "postedTime": 1530161601000,
+            "vendorLogoUrl": "amazon.png",
+            "vendorLogoWidth": 109,
+            "vendorLogoHeight": 33
+        },
+        "price": {
+            "min": 20.0,
+            "max": 20.0
+        },
+        "currency": "$",
+        "sale": {
+            "min": 10.1,
+            "max": 10.1
+        },
+        "discount": {
+            "min": 49.5,
+            "max": 49.5,
+            "discountStr": "49.5%"
+        },
+        "language": [
+            "en"
+        ],
+        "brands": [
+            "Dr. Scholl's"
+        ],
+        "channel": 1,
+        "updateESTime": 1534405622206
+    }
+]

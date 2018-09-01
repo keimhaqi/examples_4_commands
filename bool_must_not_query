@@ -1,0 +1,25 @@
+curl -X GET "192.168.1.104:9201/article/post/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "bool": {
+      "must_not": {
+        "match": {"productId":6467258}
+      }
+    }
+  }
+}
+'
+
+
+
+curl -X GET "192.168.1.104:9201/article/post/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "bool": {
+      "must": {
+        "match": {"productId":6467258}
+      }
+    }
+  }
+}
+'

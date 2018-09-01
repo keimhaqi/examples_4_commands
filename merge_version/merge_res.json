@@ -1,0 +1,450 @@
+{
+    "took": 1,
+    "timed_out": false,
+    "_shards": {
+        "total": 1,
+        "successful": 1,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": 1,
+        "max_score": null,
+        "hits": [
+            {
+                "_index": "merger",
+                "_type": "version",
+                "_id": "eaa3b64e04a695ca7f207ba3d97da063",
+                "_version": 16,
+                "_score": null,
+                "_source": {
+                    "id": "eaa3b64e04a695ca7f207ba3d97da063",
+                    "upcs": [
+                        "885719056209",
+                        "888738602433",
+                        "191797711542",
+                        "700289380779",
+                        "191797459000",
+                        "191797579951",
+                        "191797854454",
+                        "190466194983",
+                        "190466171267",
+                        "700289404178",
+                        "191797852290",
+                        "191797801489",
+                        "190466194969",
+                        "191797845926",
+                        "190466228312",
+                        "190466800518",
+                        "888738602426",
+                        "190466194990",
+                        "191797801472",
+                        "191797579944",
+                        "190466194976",
+                        "190466172608",
+                        "190466800532",
+                        "190466092685",
+                        "190466800679"
+                    ],
+                    "createOn": 1534819453817,
+                    "updateOn": 1534837767565,
+                    "identifications": [
+                        {
+                            "spid": "B0721VXN6M",
+                            "vid": 3,
+                            "fpid": 10583821,
+                            "bpid": 603525
+                        },
+                        {
+                            "spid": "2951645",
+                            "vid": 3184,
+                            "fpid": null,
+                            "bpid": 68851
+                        },
+                        {
+                            "spid": "B073X5WVS5",
+                            "vid": 3,
+                            "fpid": null,
+                            "bpid": null
+                        },
+                        {
+                            "spid": "4921780",
+                            "vid": 3184,
+                            "fpid": null,
+                            "bpid": 77455
+                        },
+                        {
+                            "spid": "5759370",
+                            "vid": 3184,
+                            "fpid": null,
+                            "bpid": null
+                        },
+                        {
+                            "spid": "B00MXI3BL2",
+                            "vid": 3,
+                            "fpid": null,
+                            "bpid": 603524
+                        },
+                        {
+                            "spid": "1777760",
+                            "vid": 3184,
+                            "fpid": null,
+                            "bpid": 90771
+                        },
+                        {
+                            "spid": "5221561",
+                            "vid": 3184,
+                            "fpid": null,
+                            "bpid": null
+                        }
+                    ],
+                    "skuInfoDetail": {
+                        "skuInfos": {
+                            "885719056209": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "885719056209",
+                                    "upc": "885719056209",
+                                    "color": "Black Lamb",
+                                    "size": null
+                                },
+                                {
+                                    "sourceProductId": "4921780",
+                                    "vendorId": 3184,
+                                    "skuId": "885719056209",
+                                    "upc": "885719056209",
+                                    "color": "Black Lamb",
+                                    "size": null
+                                }
+                            ],
+                            "888738602433": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "888738602433",
+                                    "upc": "888738602433",
+                                    "color": "Black/Grey",
+                                    "size": "One Size"
+                                },
+                                {
+                                    "sourceProductId": "B00MXI3BL2",
+                                    "vendorId": 3,
+                                    "skuId": "B00MXI3BL2",
+                                    "upc": "888738602433",
+                                    "color": "Black/Grey",
+                                    "size": "One Size"
+                                }
+                            ],
+                            "191797711542": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "191797711542",
+                                    "upc": "191797711542",
+                                    "color": "Leaf",
+                                    "size": null
+                                }
+                            ],
+                            "700289380779": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "700289380779",
+                                    "upc": "700289380779",
+                                    "color": "Black Lamb",
+                                    "size": null
+                                }
+                            ],
+                            "191797459000": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "191797459000",
+                                    "upc": "191797459000",
+                                    "color": "Dusty Lilac",
+                                    "size": null
+                                }
+                            ],
+                            "191797579951": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "191797579951",
+                                    "upc": "191797579951",
+                                    "color": "Black Combo",
+                                    "size": null
+                                },
+                                {
+                                    "sourceProductId": "5759370",
+                                    "vendorId": 3184,
+                                    "skuId": "191797579951",
+                                    "upc": "191797579951",
+                                    "color": "Black Combo",
+                                    "size": null
+                                }
+                            ],
+                            "191797854454": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "191797854454",
+                                    "upc": "191797854454",
+                                    "color": "Dahlia/mahogany",
+                                    "size": null
+                                },
+                                {
+                                    "sourceProductId": "B073X5WVS5",
+                                    "vendorId": 3,
+                                    "skuId": "B073X5WVS5",
+                                    "upc": "191797854454",
+                                    "color": "Dahlia/mahogany",
+                                    "size": null
+                                },
+                                {
+                                    "sourceProductId": "1777760",
+                                    "vendorId": 3184,
+                                    "skuId": "191797854454",
+                                    "upc": "191797854454",
+                                    "color": "Dahlia/mahogany",
+                                    "size": null
+                                }
+                            ],
+                            "190466194983": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "190466194983",
+                                    "upc": "190466194983",
+                                    "color": "Cashew",
+                                    "size": null
+                                }
+                            ],
+                            "190466171267": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "190466171267",
+                                    "upc": "190466171267",
+                                    "color": "Maraschino",
+                                    "size": null
+                                }
+                            ],
+                            "191797852290": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "191797852290",
+                                    "upc": "191797852290",
+                                    "color": "Wheat/luggage",
+                                    "size": null
+                                },
+                                {
+                                    "sourceProductId": "1777760",
+                                    "vendorId": 3184,
+                                    "skuId": "191797852290",
+                                    "upc": "191797852290",
+                                    "color": "Wheat/luggage",
+                                    "size": null
+                                }
+                            ],
+                            "700289404178": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "700289404178",
+                                    "upc": "700289404178",
+                                    "color": "Oak/Black",
+                                    "size": null
+                                }
+                            ],
+                            "191797801489": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "191797801489",
+                                    "upc": "191797801489",
+                                    "color": "Blush",
+                                    "size": null
+                                },
+                                {
+                                    "sourceProductId": "5221561",
+                                    "vendorId": 3184,
+                                    "skuId": "191797801489",
+                                    "upc": "191797801489",
+                                    "color": "Blush",
+                                    "size": null
+                                }
+                            ],
+                            "190466228312": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "190466228312",
+                                    "upc": "190466228312",
+                                    "color": "Antique Bronze",
+                                    "size": null
+                                }
+                            ],
+                            "191797845926": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "191797845926",
+                                    "upc": "191797845926",
+                                    "color": "Berry/black",
+                                    "size": null
+                                }
+                            ],
+                            "190466194969": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "190466194969",
+                                    "upc": "190466194969",
+                                    "color": "Navy",
+                                    "size": null
+                                }
+                            ],
+                            "190466800518": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "190466800518",
+                                    "upc": "190466800518",
+                                    "color": "Pink",
+                                    "size": null
+                                }
+                            ],
+                            "888738602426": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "888738602426",
+                                    "upc": "888738602426",
+                                    "color": "Luggage/Black",
+                                    "size": null
+                                }
+                            ],
+                            "191797801472": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "191797801472",
+                                    "upc": "191797801472",
+                                    "color": "White",
+                                    "size": null
+                                },
+                                {
+                                    "sourceProductId": "5221561",
+                                    "vendorId": 3184,
+                                    "skuId": "191797801472",
+                                    "upc": "191797801472",
+                                    "color": "White",
+                                    "size": null
+                                }
+                            ],
+                            "190466194990": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "190466194990",
+                                    "upc": "190466194990",
+                                    "color": "Rum Rasin",
+                                    "size": null
+                                }
+                            ],
+                            "191797579944": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "191797579944",
+                                    "upc": "191797579944",
+                                    "color": "Neutral Combo",
+                                    "size": null
+                                },
+                                {
+                                    "sourceProductId": "5759370",
+                                    "vendorId": 3184,
+                                    "skuId": "191797579944",
+                                    "upc": "191797579944",
+                                    "color": "Neutral Combo",
+                                    "size": null
+                                }
+                            ],
+                            "190466194976": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "190466194976",
+                                    "upc": "190466194976",
+                                    "color": "Smoke",
+                                    "size": null
+                                }
+                            ],
+                            "190466800532": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "190466800532",
+                                    "upc": "190466800532",
+                                    "color": "Peri Silver",
+                                    "size": null
+                                }
+                            ],
+                            "190466172608": [
+                                {
+                                    "sourceProductId": "B0721VXN6M",
+                                    "vendorId": 3,
+                                    "skuId": "B0721VXN6M",
+                                    "upc": "190466172608",
+                                    "color": "Aubergine/Black",
+                                    "size": null
+                                },
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "190466172608",
+                                    "upc": "190466172608",
+                                    "color": "Aubergine/Black",
+                                    "size": null
+                                }
+                            ],
+                            "190466092685": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "190466092685",
+                                    "upc": "190466092685",
+                                    "color": "Cypress/Black",
+                                    "size": null
+                                }
+                            ],
+                            "190466800679": [
+                                {
+                                    "sourceProductId": "2951645",
+                                    "vendorId": 3184,
+                                    "skuId": "190466800679",
+                                    "upc": "190466800679",
+                                    "color": "Red",
+                                    "size": null
+                                }
+                            ]
+                        }
+                    },
+                    "projectVersion": 1,
+                    "brand": "Calvin-Klein",
+                    "category": [
+                        "Clothing, Shoes & Jewelry",
+                        "Women",
+                        "Handbags & Wallets",
+                        "Shoulder Bags"
+                    ]
+                },
+                "sort": [
+                    1534819453817
+                ]
+            }
+        ]
+    }
+}

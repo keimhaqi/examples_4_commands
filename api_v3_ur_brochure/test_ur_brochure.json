@@ -1,0 +1,221 @@
+{
+    "items": [
+        {
+            "item": {
+                "lastCmtTime": 1533182769000,
+                "product": [
+                    {
+                        "productImageUrl": "https://images-na.ssl-images-amazon.com/images/I/81Aqiib%2B7uL._SY355_.jpg",
+                        "productId": 135200
+                    },
+                    {
+                        "productImageUrl": "http://www.zappos.com/images/z/3/2/1/3/2/5/3213257-p-MULTIVIEW.jpg",
+                        "productId": 159804
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 6467258
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 10070998
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 10554946
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 10562824
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 10769530
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 10850094
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 10850562
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 10850564
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 10850642
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 10850642
+                    }
+                ],
+                "followCount": 0,
+                "productId": [
+                    135200,
+                    159804,
+                    6467258,
+                    10070998,
+                    10554946,
+                    10562824,
+                    10769530,
+                    10850094,
+                    10850562,
+                    10850564,
+                    10850642,
+                    10850642
+                ],
+                "upCount": 0,
+                "articleId": 123,
+                "weight": 0.0,
+                "title": "11",
+                "good": 0,
+                "userId": 23,
+                "content": "[{\"index\":0,\"type\":\"text\",\"jinbagId\":null,\"content\":\"22<br><br>11\"},{\"index\":1,\"type\":\"product\",\"jinbagId\":6467258,\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"44<br><br>33\"}]}]",
+                "commentCount": 34,
+                "inTime": 1532938285000,
+                "downCount": 0,
+                "shareCount": 0,
+                "resourceUrl": [
+                    "/pic/pictures/952d02b029a64733b7a9a6776b5405da.jpeg",
+                    "/pic/pictures/a69ad8938ac6440fbcfb813714cc85d4.jpeg",
+                    "/pic/pictures/1f30227e410044d8a36169143bcc3063.jpeg",
+                    "/pic/pictures/9a5b3dd41f2a4507ac7dcc40a3fc30b2.jpeg",
+                    "/pic/pictures/bdbb7270050f4b9ca1819257878500e1.jpeg",
+                    "/pic/pictures/ce55a520e3c0419e93a2efc4aceacc1d.jpeg",
+                    "/pic/pictures/b28da57f20bf4725b5e1a4110f143c9a.jpeg",
+                    "/pic/pictures/12f0c07c14c04ad1a2742f41c0b12c21.jpeg",
+                    "/pic/pictures/102526a8bce645719db139dc5387bb2b.jpeg",
+                    "/pic/pictures/890eedffaa734678997712e70967d742.jpeg",
+                    "https://images.bloomingdalesassets.com/is/image/BLM/products/1/optimized/8132231_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+                    "http://www.zappos.com/images/z/3/2/1/3/2/5/3213257-p-MULTIVIEW.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/71iVHuI-TeL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/61ixOy-uhgL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/71zN-SbE0lL._SX355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/81KKIAv8JPL._SX355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/51nnYGq964L._SX381_BO1,204,203,200_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/91wCzebqPAL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/71viCMCynKL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/81H9H%2BCJzzL._SX355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/41vDx07et5L._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/41vDx07et5L._SY355_.jpg"
+                ],
+                "top": 0,
+                "viewCount": 247,
+                "window": 159804,
+                "position": 1,
+                "user": {
+                    "nickName": "胡11",
+                    "active": true,
+                    "id": 23,
+                    "userId": 23,
+                    "email": "HUIQIAN_HU@JINBAG.COM"
+                },
+                "status": 3
+            },
+            "score": 0.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "lastCmtTime": 1532918228000,
+                "product": [
+                    {
+                        "productImageUrl": null,
+                        "productId": 4551
+                    },
+                    {
+                        "productImageUrl": "https://slimages.macysassets.com/is/image/MCY/products/7/optimized/3859757_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+                        "productId": 239865
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 6467258
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 6467258
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 6467258
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 6467258
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 6467258
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 10585970
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 10747690
+                    },
+                    {
+                        "productImageUrl": null,
+                        "productId": 10747690
+                    }
+                ],
+                "productId": [
+                    4551,
+                    239865,
+                    6467258,
+                    6467258,
+                    6467258,
+                    6467258,
+                    6467258,
+                    10585970,
+                    10747690,
+                    10747690
+                ],
+                "upCount": 0,
+                "articleId": 110,
+                "description": "ddddd",
+                "weight": 0.0,
+                "title": "sdfsdfdf",
+                "good": 0,
+                "userId": 23,
+                "content": "[{\"index\":0,\"type\":\"product\",\"jinbagId\":6467258,\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"sd1\"}]},{\"index\":1,\"type\":\"product\",\"jinbagId\":4551,\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"dddd\"}]},{\"index\":2,\"type\":\"product\",\"jinbagId\":10747690,\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"sddfsdf\"}]},{\"index\":3,\"type\":\"product\",\"jinbagId\":10747690,\"content\":[]}]",
+                "commentCount": 67,
+                "inTime": 1532328559000,
+                "downCount": 0,
+                "resourceUrl": [
+                    "https://image.s5a.com/is/image/saks/0445373594495_500x500.jpg",
+                    "https://image.s5a.com/is/image/saks/0445373594495_500x500.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/71iVHuI-TeL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/71iVHuI-TeL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/71iVHuI-TeL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/71iVHuI-TeL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/71iVHuI-TeL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/61a-U22DMAL._SX355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/71N84epQiCL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/71N84epQiCL._SY355_.jpg"
+                ],
+                "top": 0,
+                "viewCount": 326,
+                "window": 239865,
+                "position": 1,
+                "user": {
+                    "nickName": "胡11",
+                    "active": true,
+                    "id": 23,
+                    "userId": 23,
+                    "email": "HUIQIAN_HU@JINBAG.COM"
+                },
+                "status": 3
+            },
+            "score": 0.0,
+            "type": "brochure"
+        }
+    ],
+    "num": 2,
+    "lifeCycle": 1
+}
