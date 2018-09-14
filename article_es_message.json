@@ -1,0 +1,139 @@
+{
+    "_index" : "article_b",
+    "_type" : "post",
+    "_id" : "6664",
+    "_version" : 1,
+    "found" : true,
+    "_source" : {
+      "product" : [
+        {
+          "productTitle" : "Dyson V8 Absolute Cord-Free Vacuum",
+          "productSale" : "$859.99",
+          "sale" : {
+            "min" : 859.99,
+            "max" : 859.99
+          },
+          "productId" : 239865,
+          "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/7/optimized/3859757_fpx.tif?wid=300&fmt=jpeg&qlt=100"
+        }
+      ],
+      "followCount" : 0,
+      "productId" : [
+        239865
+      ],
+      "upCount" : 0,
+      "articleId" : 6664,
+      "weight" : 0.0,
+      "type" : "share",
+      "title" : "dddd",
+      "good" : 0,
+      "userId" : 23,
+      "content" : "[{\"index\":0,\"type\":\"link\",\"jinbagId\":17217,\"content\":17217},{\"index\":1,\"type\":\"product\",\"jinbagId\":239865,\"content\":[{\"index\":1,\"type\":\"text\",\"content\":\"\"}]}]",
+      "tags" : [
+        "锦囊征求"
+      ],
+      "commentCount" : 0,
+      "inTime" : 1529662250000,
+      "downCount" : 0,
+      "shareCount" : 0,
+      "resourceUrl" : [
+        "https://images-na.ssl-images-amazon.com/images/I/914uix8pg0L._SY355_.jpg"
+      ],
+      "top" : 0,
+      "viewCount" : 4,
+      "window" : {
+        "productSale" : "$10.10",
+        "sourceId" : [
+          3
+        ],
+        "sources" : [
+          "subscribe and save"
+        ],
+        "channel" : 1,
+        "discount" : {
+          "min" : 49.5,
+          "max" : 49.5,
+          "discountStr" : "49.5%"
+        },
+        "language" : [
+          "en"
+        ],
+        "availability" : "in_stock",
+        "score" : 4.1,
+        "price" : {
+          "min" : 20.0,
+          "max" : 20.0
+        },
+        "updateESTime" : 1535940667776,
+        "productImageLink" : "https://images-na.ssl-images-amazon.com/images/I/81S9z9ZXkcL._SY355_.jpg",
+        "hasSmartPrice" : 0,
+        "currency" : "$",
+        "categories" : [
+          "Health & Household"
+        ],
+        "vendors" : [
+          "Amazon"
+        ],
+        "productDescription" : [ ],
+        "height" : 355,
+        "numOfReviews" : 76,
+        "brandName" : "Dr. Scholl's",
+        "brands" : [
+          "Dr. Scholl's"
+        ],
+        "productId" : 239865,
+        "productDetail" : [
+          "We designed Dr. Scholl’s Pain Relief Orthotics for Arch Pain specifically for people who suffer from arch pain due to stress and strain on their arch. They have Shock Guard Technology to treat pain at the source for immediate, all-day relief. The package contains one pair of insoles to fit men's shoe sizes 8-12. Dr. Scholl's has been a trusted brand in foot care since 1904 when Dr. William Mathias Scholl, grandson of a cobbler, launched the company under the name Dr. Scholl Inc."
+        ],
+        "lastCheckedTime" : 1529970797000,
+        "categoryTypePriority" : 0,
+        "sourceProductId" : "B014EX3672",
+        "productTitle" : "Dr. Scholl's Dr. Scholl’s Pain Relief Orthotics for Arch Pain for Men, 1 Pair, Size 8-12",
+        "sale" : {
+          "min" : 10.1,
+          "max" : 10.1
+        },
+        "deleted" : 0,
+        "brandId" : 6969,
+        "width" : 355,
+        "categoryTypeId" : 0,
+        "morePictures" : 0,
+        "productPrice" : "$20.00",
+        "topProductPromoInfoVendor" : {
+          "shareTitleEn" : "$10.10 ($20.00) Dr. Scholl's Dr. Scholl’s Pain Relief Orthotics for Arch Pain for Men, 1 Pair, Size 8-12",
+          "postedTime" : 1530161601000,
+          "confirmerId" : 99,
+          "authorId" : 99,
+          "confirmed" : 1,
+          "vendorLogoHeight" : 33,
+          "titleEn" : "Amazon - $10.10 ($20.00) Dr. Scholl's Dr. Scholl’s Pain Relief Orthotics for Arch Pain for Men, 1 Pair, Size 8-12",
+          "price" : "$10.10",
+          "confirmedTime" : 1535940666013,
+          "createdTime" : 1535940666013,
+          "vendorLogoUrl" : "amazon.png",
+          "id" : {
+            "vendorId" : 3,
+            "id" : 239865
+          },
+          "taskId" : 6800960,
+          "startDate" : 1530161601000,
+          "vendorLogoWidth" : 109
+        }
+      },
+      "user" : {
+        "nickName" : "胡11",
+        "active" : 1,
+        "id" : 23,
+        "userId" : 23,
+        "email" : "HUIQIAN_HU@JINBAG.COM"
+      },
+      "status" : 0,
+      "resourceUrlUltimate" : [
+        {
+          "imageUrl" : "https://images-na.ssl-images-amazon.com/images/I/914uix8pg0L._SY355_.jpg"
+        }
+      ],
+      "updateTime" : 1536120144320,
+      "createTime" : 1536120144320
+    }
+  }

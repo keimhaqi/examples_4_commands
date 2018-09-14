@@ -25,7 +25,7 @@ curl -XGET '192.168.1.106:9201/brochure/items/_search?pretty' -H 'Content-Type: 
 '
 
 
-curl -XGET 'http://192.168.1.106:9201/article/post/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.104:9201/article/post/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 10,
     "query": {
@@ -33,6 +33,17 @@ curl -XGET 'http://192.168.1.106:9201/article/post/_search?pretty' -H 'Content-T
     }
 }
 '
+
+
+curl -XGET 'http://192.168.1.104:9201/tag/word/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 10,
+    "query": {
+       "match_all" : {}
+    }
+}
+'
+
 
 
 423595
@@ -47,7 +58,7 @@ curl -XGET 'http://192.168.1.106:9201/article/post/_search?pretty' -H 'Content-T
 
 
 
-curl -XGET 'http://172.18.0.2:9200/jinbagsearch/items/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.104:9201/article/post/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 1,
     "query": {
@@ -130,7 +141,7 @@ curl -XGET 'localhost:9201/search/items/_search?pretty' -H 'Content-Type: applic
 '
 
 
-curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type: application/json' -d'
 {
   "size":200,
   "query" : {
@@ -145,7 +156,7 @@ curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Typ
                   {
                     "match" : {
                       "sourceProductId" : {
-                        "query" : "552571",
+                        "query" : "3816255",
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,
@@ -169,7 +180,7 @@ curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Typ
                   {
                     "match" : {
                       "vendorId" : {
-                        "query" : 3184,
+                        "query" : 1237,
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,

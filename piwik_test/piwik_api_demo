@@ -33,12 +33,12 @@ http://52.42.165.126/analytics/maui/index.php?
 ) 
 
 
-http://52.42.165.126/analytics/maui/index.php?module=API&method=Live.getLastVisitsDetails&idSite=1&period=day&date=yesterday&format=xml&token_auth=2a981214e5e88f104cf67d32f4e77619
+http://52.42.165.126/analytics/maui/index.php?module=API&method=Live.getLastVisitsDetails&idSite=1&period=day&date=today&format=xml&token_auth=2a981214e5e88f104cf67d32f4e77619&countVisitorsToFetch=10
 
 
 
 
-http://192.168.1.104:5050/analytics/maui/index.php?module=API&method=Live.getLastVisitsDetails&idSite=1&period=day&date=today&format=xml&token_auth=d0464917f85ec98578b0c26231f7f891&minTimestamp=1535505541&filter_limit=-1
+http://192.168.1.104:5050/index.php?module=API&method=Live.getLastVisitsDetails&idSite=1&period=day&date=today&format=xml&token_auth=d0464917f85ec98578b0c26231f7f891&minTimestamp=1535505541&filter_limit=-1
 
 http://52.42.165.126/analytics/maui/index.php?
 module=API&

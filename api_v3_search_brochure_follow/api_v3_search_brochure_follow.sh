@@ -1,6 +1,6 @@
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "whitelist":[14777]
+  "whitelist":[14777,183,188,176,175,172,170,168,164,163,162]
 }
 ' http://192.168.1.104:9124/api/v3/search/brochure/follow
 

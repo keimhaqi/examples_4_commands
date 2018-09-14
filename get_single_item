@@ -20,7 +20,8 @@ curl -XGET '172.18.0.2:9200/todayspicks/items/10404410?pretty'
 
 <iframe src="http://localhost:5601/app/kibana#/visualize/create?embed=true&type=line&indexPattern=todayspicks&_g=()&_a=(filters:!(('$state':(store:appState),exists:(field:sale.max),meta:(alias:!n,disabled:!f,index:todayspicks,key:sale.max,negate:!f,type:exists,value:exists))),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(spy:(mode:(fill:!f,name:table))),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:sale.max,ranges:!((from:0,to:1),(from:1,to:2),(from:2,to:3),(from:3,to:4),(from:4,to:5),(from:5,to:6),(from:6,to:7),(from:10,to:20),(from:20,to:30),(from:30,to:40))),schema:segment,type:range)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(text:'sale.max+ranges'),type:category)),grid:(categoryLines:!f,style:(color:%23eee)),legendPosition:right,seriesParams:!((data:(id:'1',label:Count),drawLinesBetweenPoints:!t,mode:normal,show:true,showCircles:!t,type:line,valueAxis:ValueAxis-1)),times:!(),valueAxes:!((id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(text:Count),type:value))),title:'New+Visualization',type:line))" height="600" width="800"></iframe>
 
-curl -XGET '192.168.1.104:9201/article/post/42?pretty'
+curl -XGET '172.18.0.2:9200/article/post/14?pretty'
+curl -XGET '192.168.1.104:9201/article/post/624?pretty'
 curl -XGET '192.168.1.106:9201/jinbagsearch/items/313001?pretty'
 curl -XGET '192.168.1.106:9201/jinbagsearch/items/271189?pretty'
 curl -XGET '192.168.1.106:9201/jinbagsearch/items/275926?pretty'
@@ -34,7 +35,7 @@ curl -XGET '192.168.1.106:9201/jinbagsearch/items/288580?pretty'
 
 
 curl -XGET '172.18.0.2:9200/todayspicks/items/239865?pretty'
-curl -XGET '192.168.1.106:9200/todayspicks/items/10583819?pretty'
+curl -XGET '192.168.1.104:9201/todayspicks/items/239865?pretty'
 curl -XGET '192.168.1.106:9200/todayspicks/items/10601600?pretty'
 curl -XGET '192.168.1.106:9200/todayspicks/items/10585274?pretty'
 
@@ -220,6 +221,123 @@ curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty'  -H 'Content-Type
 '
 
 
+curl -XGET '192.168.1.103:9201/merger/version/_search?pretty'  -H 'Content-Type: application/json' -d'
+{
+  "from" : 0,
+  "size" : 1,
+  "query" : {
+    "bool" : {
+      "must" : [
+        {
+          "match" : {
+            "identifications.spid" : {
+              "query" : "1618942",
+              "operator" : "AND",
+              "prefix_length" : 0,
+              "max_expansions" : 50,
+              "fuzzy_transpositions" : true,
+              "lenient" : false,
+              "zero_terms_query" : "NONE",
+              "boost" : 1.0
+            }
+          }
+        },
+        {
+          "match" : {
+            "identifications.vid" : {
+              "query" : 13867,
+              "operator" : "AND",
+              "prefix_length" : 0,
+              "max_expansions" : 50,
+              "fuzzy_transpositions" : true,
+              "lenient" : false,
+              "zero_terms_query" : "NONE",
+              "boost" : 1.0
+            }
+          }
+        },
+        {
+          "match" : {
+            "projectVersion" : {
+              "query" : 2,
+              "operator" : "AND",
+              "prefix_length" : 0,
+              "max_expansions" : 50,
+              "fuzzy_transpositions" : true,
+              "lenient" : false,
+              "zero_terms_query" : "NONE",
+              "boost" : 1.0
+            }
+          }
+        }
+      ],
+      "disable_coord" : false,
+      "adjust_pure_negative" : true,
+      "boost" : 1.0
+    }
+  },
+  "version" : true,
+  "sort" : [
+    {
+      "createOn" : {
+        "order" : "desc"
+      }
+    }
+  ]
+}}'
+
+
+
+curl -XGET '192.168.1.103:9201/merger/version/_search?pretty'  -H 'Content-Type: application/json' -d'
+{
+  "from" : 0,
+  "size" : 100,
+  "query" : {
+    "bool" : {
+      "must" : [
+        {
+          "match" : {
+            "identifications.spid" : {
+              "query" : "1618942",
+              "operator" : "AND",
+              "prefix_length" : 0,
+              "max_expansions" : 50,
+              "fuzzy_transpositions" : true,
+              "lenient" : false,
+              "zero_terms_query" : "NONE",
+              "boost" : 1.0
+            }
+          }
+        },
+        {
+          "match" : {
+            "identifications.vid" : {
+              "query" : 13867,
+              "operator" : "AND",
+              "prefix_length" : 0,
+              "max_expansions" : 50,
+              "fuzzy_transpositions" : true,
+              "lenient" : false,
+              "zero_terms_query" : "NONE",
+              "boost" : 1.0
+            }
+          }
+        }
+      ],
+      "disable_coord" : false,
+      "adjust_pure_negative" : true,
+      "boost" : 1.0
+    }
+  },
+  "version" : true,
+  "sort" : [
+    {
+      "createOn" : {
+        "order" : "desc"
+      }
+    }
+  ]
+}}'
 
 
 

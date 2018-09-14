@@ -12,7 +12,7 @@
     "blacklist":[111, 222, 333, 444, 555]
     
   }
-  ' http://localhost:9125/api/v3/itemlist
+  ' http://localhost:9124/api/v3/itemlist
 
 
   curl -k -H 'Content-Type: application/json' -d '
@@ -26,41 +26,41 @@
     ]
     
   }
-  ' http://192.168.1.106:9124/api/v3/search/brochure
+  ' http://192.168.1.104:9124/api/v3/search/brochure
 
 
 
   curl -k -H 'Content-Type: application/json' -d '
   {
     "num": 10,
-    "searchword":"sak",
+    "searchword":"amazon",
     "fields":
     [
         
     ]
     
   }
-  ' http://192.168.1.106:9124/api/v3/itemlist
+  ' http://96.90.248.211:9124/api/v3/itemlist
 
 
 {"event":"search","entityType":"user","entityId":"0","targetEntityType":"items","targetEntityId":"dyson","properties":{}}
 
 curl -i -X POST http://localhost:7070/events.json?accessKey=dkobjAiA3Kzuur0-i1JrWpd1i6TvVAnhjhoAXkwW9TuaUI53ejrbWuQr-gm12oXY -H "Content-Type: application/json" -d '{"event":"search","entityType":"user","entityId":"0","targetEntityType":"items","targetEntityId":"dyson","properties":{},"eventTime":"2018-06-01T12:08:21.928+08:00"}'
 
-    curl -k -H 'Content-Type: application/json' -d '
-  {
-    "user":23,
-    "num": 10,
-    "fields":
-    [
-        {"name": "categories", "values":["shoes", "skirt"]},
-        {"name": "vendors", "values":["amazon", "macys"]}
-    ]
-    ,
-    "blacklist":[111, 222, 333, 444, 555]
-    
-  }
-  ' http://localhost:9123/api/v3/myStore
+curl -k -H 'Content-Type: application/json' -d '
+{
+"user":23,
+"num": 10,
+"fields":
+[
+    {"name": "categories", "values":["shoes", "skirt"]},
+    {"name": "vendors", "values":["amazon", "macys"]}
+]
+,
+"blacklist":[111, 222, 333, 444, 555]
+
+}
+' http://localhost:9124/api/v3/myStore
 
 
 curl -i -X POST http://localhost:7070/events.json?accessKey=8PG09wgyjdq6d9_e67uoL2ivt73UQqTN0XangeWx8aks-SA3Cz0Op3Ubne3hKQ_J \
@@ -108,10 +108,10 @@ curl -i -X POST http://localhost:7070/events.json?accessKey=8PG09wgyjdq6d9_e67uo
     "searchword": "Saks",
     "scope": ["vendors"],
     "blacklist":[111, 222, 333, 444, 555],
-    "wishlist":[60, 119]
+    "whitelist":[60, 119]
     
   }
-  ' http://localhost:9123/api/v3/itemlistPersonal
+  ' http://localhost:9124/api/v3/itemlistPersonal
 
 curl -k -H 'Content-Type: application/json' -d '
   {
@@ -120,7 +120,7 @@ curl -k -H 'Content-Type: application/json' -d '
     "blacklist":[129, 60, 333, 444, 555]
     
   }
-  ' http://localhost:9123/api/v3/itemlistPersonal
+  ' http://localhost:9124/api/v3/itemlistPersonal
 
 
 es-1.7.5
@@ -212,10 +212,9 @@ curl -k -H 'Content-Type: application/json' -d '
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "fields":[{"name": "productId", "values":[10583819]}, {"name": "vendorId", "values":[3184]}],
-  "saleRange":{"min":10, "max":30}
+  "fields":[{"name": "productId", "values":[137721]}, {"name": "vendorId", "values":[1237]}]
 }
-' http://192.168.1.106:9123/api/v3/metrics/product
+' http://96.90.248.211:9124/api/v3/metrics/product
 
 
 
@@ -287,7 +286,7 @@ curl -k -H 'Content-Type: application/json' -d '
   "fields":[{"name": "vendors", "values":["amazon"]}, {"name": "sources", "values":["bestsellers"]}, {"name": "categories", "values":["books"]}],
   "stringOption":["brands"]
 }
-' http://96.90.248.211:9124/api/v3/todayPicks/option
+' http://localhost:9124/api/v3/todayPicks/option
 
 
 curl -k -H 'Content-Type: application/json' -d '
@@ -295,14 +294,14 @@ curl -k -H 'Content-Type: application/json' -d '
   "fields":[{"name": "vendors", "values":["amazon"]}],
   "stringOption":["brands"]
 }
-' http://localhost:9123/api/v3/todayPicks/option
+' http://localhost:9124/api/v3/todayPicks/option
 
 
 curl -k -H 'Content-Type: application/json' -d '
 {
   "fields":[{"name": "brands", "values":["LEGO"]}]
 }
-' http://localhost:9123/api/v3/todayPicks
+' http://localhost:9124/api/v3/todayPicks
 
 
 curl -k -H 'Content-Type: application/json' -d '
@@ -330,26 +329,18 @@ curl -k -H 'Content-Type: application/json' -d '
     }
   ]
 }
-' http://96.90.248.211:9124/api/v3/todayPicks/productUnderTag
+' http://192.168.1.104:9124/api/v3/todayPicks/productUnderTag
 
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "user": 219,
-  "num": 10,
-  "dateRange":{
-    "name": "inTime",
-    "before":1527753371000,
-    "after": 1527753360000
-  },
-  "fields":[
-    {"name": "userId", "values":[797]}
-  ],
-  "from": 1,
-  "blacklistItems":["24"],
-  "num": 1
+  "user": "1",
+  "num": 10
 }
-' http://192.168.1.106:9124/api/v3/ur/brochure
+' http://192.168.1.104:9124/api/v3/ur/brochure
+
+
+setNewVisitorId
 
 
 curl -k -H 'Content-Type: application/json' -d '
@@ -376,15 +367,15 @@ curl -k -H 'Content-Type: application/json' -d '
   "num": 1,
   "fields":[{"name": "sources", "values":["bestsellers"]}, {"name":"vendors", "values":["amazon"]}, {"name":"categories", "values":["toys & games"]}]
 }
-' http://192.168.1.106:9123/api/v3/todayPicks
+' http://96.90.248.211:9124/api/v3/todayPicks
 
 
 curl -k -H 'Content-Type: application/json' -d '
 {
   "num": 20,
-  "fields":[{"name":"vendors", "values":["amazon"]}, {"name":"brands", "values":["LEGO"]}]
+  "fields":[{"name":"vendors", "values":["amazon"]}]
 }
-' http://192.168.1.106:9125/api/v3/todayPicks
+' http://96.90.248.211:9124/api/v3/todayPicks
 
 curl -k -H 'Content-Type: application/json' -d '
 {

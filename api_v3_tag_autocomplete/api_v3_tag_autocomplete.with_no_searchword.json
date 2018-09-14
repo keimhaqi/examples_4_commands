@@ -1,0 +1,22 @@
+{
+    "life_cycle": 1,
+    "correctness": true,
+    "autoComplete": [
+        {
+            "word": "好物推荐"
+        },
+        {
+            "word": "锦囊征求"
+        },
+        {
+            "word": "HOME"
+        },
+        {
+            "word": "Fashion"
+        },
+        {
+            "word": "Beauty"
+        }
+    ],
+    "num": 5
+}

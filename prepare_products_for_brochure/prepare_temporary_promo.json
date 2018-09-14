@@ -1,0 +1,25 @@
+{
+    "consequence": [
+        {
+            "promo": {
+                "productId": 55,
+                "shareTitleEn": "$125.00 Printed Short-Sleeve Polo",
+                "titleEn": "Saks Fifth Avenue - $125.00 Printed Short-Sleeve Polo",
+                "productImageLink": "https://image.s5a.com/is/image/saks/0400095747459_500x500.jpg"
+            },
+            "product": {
+                "productId": 55,
+                "lastCheckedTime": 1483250400000,
+                "productSale": "$125.00",
+                "productPrice": "$125.00",
+                "sourceProductId": "",
+                "sourceId": 13816,
+                "productTitle": "Printed Short-Sleeve Polo",
+                "productImageLink": "https://image.s5a.com/is/image/saks/0400095747459_500x500.jpg",
+                "width": 300,
+                "height": 400
+            }
+        }
+    ],
+    "lifeCycle": 1
+}

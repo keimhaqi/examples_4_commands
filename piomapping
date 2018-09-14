@@ -289,12 +289,12 @@ curl -XPOST 'localhost:9200/_analyze?pretty' -H 'Content-Type: application/json'
 
 
 
-curl -XPOST "http://192.168.1.110:9200/testauto/_search?pretty" -d'
+curl -XPOST "http://192.168.1.104:9201/tag/word/_search?pretty" -d'
 {
    "size": 10,
    "query": {
       "multi_match": {
-         "query":"pol",
+         "query":"l",
          "fields":["words"]
       }
    },
@@ -1184,7 +1184,7 @@ curl -k -H 'Content-Type: application/json' -d '
 {"itemScores":[{"item":"117","score":0.0},{"item":"81","score":0.0},{"item":"52","score":0.0},{"item":"29","score":0.0}]}
 curl -k -H 'Content-Type: application/json' -d '{"fields": [{"name":"field", "values": ["vendor"],"bias": -1, "num":20}]}' http://localhost:8123/queries.json
 {"itemScores":[{"item":"751","score":2.6200063228607178},{"item":"13874","score":2.5609118938446045},{"item":"13333","score":0.9681894183158875},{"item":"13831","score":0.9022342562675476}]}
-  curl -H "Content-Type: application/json" -d '{ "user": 23, "num": 4, "userBias":-1 }' http://192.168.1.111:8001/queries.json
+  curl -H "Content-Type: application/json" -d '{ "user": 776, "userBias":-1 }' http://96.90.248.213:8000/queries.json
 curl -k -H 'Content-Type: application/json' -d '{"fields": [{"name":"brand", "values": ["42"],"bias": -1}]}' http://96.90.248.213:8000/queries.json
 
 AV3vQrzOEl1fmCl8E7zr

@@ -1,0 +1,929 @@
+{
+    "search_a" : {
+      "settings" : {
+        "index" : {
+          "creation_date_string" : "2018-05-02T09:10:00.047Z",
+          "refresh_interval" : "30s",
+          "number_of_shards" : "5",
+          "provided_name" : "search_a",
+          "merge" : {
+            "scheduler" : {
+              "max_thread_count" : "1"
+            }
+          },
+          "creation_date" : "1525252200047",
+          "analysis" : {
+            "filter" : {
+              "my_stemmer" : {
+                "type" : "stemmer",
+                "language" : "english"
+              },
+              "english_stemmer" : {
+                "type" : "stemmer",
+                "language" : "english"
+              },
+              "english_possessive_stemmer" : {
+                "type" : "stemmer",
+                "language" : "possessive_english"
+              },
+              "english_stop" : {
+                "type" : "stop",
+                "stopwords" : "_english_"
+              }
+            },
+            "analyzer" : {
+              "analyzer_keyword" : {
+                "filter" : "lowercase",
+                "type" : "custom",
+                "tokenizer" : "keyword"
+              },
+              "my_analyzer" : {
+                "filter" : [
+                  "english_possessive_stemmer",
+                  "lowercase",
+                  "english_stop",
+                  "english_stemmer"
+                ],
+                "type" : "custom",
+                "tokenizer" : "my_tokenizer"
+              },
+              "default" : {
+                "filter" : [
+                  "english_possessive_stemmer",
+                  "lowercase",
+                  "english_stop",
+                  "english_stemmer"
+                ],
+                "type" : "custom",
+                "tokenizer" : "my_tokenizer"
+              }
+            },
+            "tokenizer" : {
+              "my_tokenizer" : {
+                "token_chars" : [
+                  "letter",
+                  "digit"
+                ],
+                "type" : "standard"
+              }
+            }
+          },
+          "number_of_replicas" : "1",
+          "uuid" : "SrkaAbn1Sw6wXd5Jkw1mBQ",
+          "version" : {
+            "created_string" : "5.5.1",
+            "created" : "5050199"
+          }
+        }
+      },
+      "mappings" : {
+        "link" : {
+          "properties" : {
+            "cLongDesc" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "cShortDesc" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "cTitle" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "cardHeight" : {
+              "type" : "long"
+            },
+            "cardImg" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "cardWidth" : {
+              "type" : "long"
+            },
+            "dataType" : {
+              "type" : "long"
+            },
+            "displayType" : {
+              "type" : "long"
+            },
+            "endDate" : {
+              "type" : "long"
+            },
+            "id" : {
+              "type" : "long"
+            },
+            "longDesc" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "shortDesc" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "startDate" : {
+              "type" : "long"
+            },
+            "title" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "visible" : {
+              "type" : "long"
+            }
+          }
+        },
+        "items" : {
+          "include_in_all" : false,
+          "_all" : {
+            "enabled" : true
+          },
+          "properties" : {
+            "attribute" : {
+              "type" : "nested",
+              "properties" : {
+                "attrsPrice" : {
+                  "properties" : {
+                    "max" : {
+                      "type" : "float"
+                    },
+                    "min" : {
+                      "type" : "float"
+                    }
+                  }
+                },
+                "color" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "currency" : {
+                  "type" : "text"
+                },
+                "gender" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "id" : {
+                  "type" : "long"
+                },
+                "price" : {
+                  "type" : "text"
+                },
+                "productType" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "size" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "vendors" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                }
+              }
+            },
+            "attribute_combination" : {
+              "type" : "text",
+              "analyzer" : "my_analyzer",
+              "include_in_all" : true
+            },
+            "availability" : {
+              "type" : "text",
+              "term_vector" : "with_positions_offsets",
+              "norms" : false,
+              "analyzer" : "my_analyzer",
+              "include_in_all" : true
+            },
+            "brand" : {
+              "type" : "text",
+              "term_vector" : "with_positions_offsets",
+              "norms" : false,
+              "copy_to" : [
+                "full_brand"
+              ],
+              "analyzer" : "my_analyzer",
+              "include_in_all" : true
+            },
+            "brandId" : {
+              "type" : "long"
+            },
+            "brandName" : {
+              "type" : "text",
+              "term_vector" : "with_positions_offsets",
+              "norms" : false,
+              "copy_to" : [
+                "brand"
+              ],
+              "analyzer" : "my_analyzer",
+              "include_in_all" : true
+            },
+            "brands" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "categories" : {
+              "type" : "text",
+              "term_vector" : "with_positions_offsets",
+              "norms" : false,
+              "analyzer" : "my_analyzer",
+              "include_in_all" : true
+            },
+            "categoryTypeId" : {
+              "type" : "text",
+              "term_vector" : "with_positions_offsets",
+              "norms" : false,
+              "analyzer" : "my_analyzer"
+            },
+            "categoryTypePriority" : {
+              "type" : "long"
+            },
+            "channel" : {
+              "type" : "long"
+            },
+            "confirmedMsrp" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "coupon" : {
+              "properties" : {
+                "max" : {
+                  "type" : "float"
+                },
+                "min" : {
+                  "type" : "float"
+                }
+              }
+            },
+            "couponPrice" : {
+              "type" : "text"
+            },
+            "currency" : {
+              "type" : "text"
+            },
+            "deleted" : {
+              "type" : "long"
+            },
+            "discount" : {
+              "properties" : {
+                "discountStr" : {
+                  "type" : "text"
+                },
+                "max" : {
+                  "type" : "double"
+                },
+                "min" : {
+                  "type" : "double"
+                }
+              }
+            },
+            "full_brand" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "full_product_keywords" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "hasSmartPrice" : {
+              "type" : "long"
+            },
+            "height" : {
+              "type" : "long"
+            },
+            "historyLow" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "historyLowPrice" : {
+              "properties" : {
+                "historyLowPrice" : {
+                  "type" : "text"
+                },
+                "max" : {
+                  "type" : "double"
+                },
+                "min" : {
+                  "type" : "double"
+                }
+              }
+            },
+            "id" : {
+              "type" : "long"
+            },
+            "language" : {
+              "type" : "text"
+            },
+            "lastCheckedTime" : {
+              "type" : "date",
+              "format" : "epoch_millis"
+            },
+            "link" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "missedTime" : {
+              "type" : "date",
+              "format" : "epoch_millis"
+            },
+            "morePictures" : {
+              "type" : "long"
+            },
+            "numOfReviews" : {
+              "type" : "long"
+            },
+            "onSale" : {
+              "type" : "text"
+            },
+            "pageTitle" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "price" : {
+              "properties" : {
+                "max" : {
+                  "type" : "float"
+                },
+                "min" : {
+                  "type" : "float"
+                }
+              }
+            },
+            "productDescription" : {
+              "type" : "text",
+              "term_vector" : "with_positions_offsets",
+              "norms" : false,
+              "analyzer" : "my_analyzer",
+              "include_in_all" : true
+            },
+            "productDetail" : {
+              "type" : "text",
+              "term_vector" : "with_positions_offsets",
+              "norms" : false,
+              "analyzer" : "my_analyzer",
+              "include_in_all" : true
+            },
+            "productId" : {
+              "type" : "long"
+            },
+            "productImageLink" : {
+              "type" : "text"
+            },
+            "productKeywords" : {
+              "type" : "text",
+              "term_vector" : "with_positions_offsets",
+              "norms" : false,
+              "copy_to" : [
+                "full_product_keywords"
+              ],
+              "analyzer" : "my_analyzer",
+              "include_in_all" : true
+            },
+            "productLink" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "productPrice" : {
+              "type" : "text"
+            },
+            "productSale" : {
+              "type" : "text"
+            },
+            "productTitle" : {
+              "type" : "text",
+              "term_vector" : "with_positions_offsets",
+              "norms" : false,
+              "analyzer" : "my_analyzer",
+              "include_in_all" : true
+            },
+            "promo" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "sale" : {
+              "properties" : {
+                "max" : {
+                  "type" : "float"
+                },
+                "min" : {
+                  "type" : "float"
+                }
+              }
+            },
+            "score" : {
+              "type" : "float"
+            },
+            "sourceId" : {
+              "type" : "long"
+            },
+            "sourceProductId" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "topProduct" : {
+              "type" : "boolean"
+            },
+            "topProductPromoInfo" : {
+              "properties" : {
+                "cardHeight" : {
+                  "type" : "long"
+                },
+                "cardWidth" : {
+                  "type" : "long"
+                },
+                "confirmed" : {
+                  "type" : "long"
+                },
+                "confirmedTime" : {
+                  "type" : "date",
+                  "format" : "epoch_millis"
+                },
+                "createdTime" : {
+                  "type" : "date",
+                  "format" : "epoch_millis"
+                },
+                "deletedTime" : {
+                  "type" : "date",
+                  "format" : "epoch_millis"
+                },
+                "descCh" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "descEn" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "id" : {
+                  "type" : "long"
+                },
+                "imgUrl" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer"
+                },
+                "productId" : {
+                  "type" : "long"
+                },
+                "shareDescCh" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "shareDescEn" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "shareTitleCh" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "shareTitleEn" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "titleCh" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "titleEn" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "vendorLogoUrl" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                }
+              }
+            },
+            "topProductPromoInfoVendor" : {
+              "properties" : {
+                "authorId" : {
+                  "type" : "long"
+                },
+                "cardHeight" : {
+                  "type" : "long"
+                },
+                "cardWidth" : {
+                  "type" : "long"
+                },
+                "confirmed" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer"
+                },
+                "confirmedTime" : {
+                  "type" : "date",
+                  "format" : "epoch_millis"
+                },
+                "confirmerId" : {
+                  "type" : "long"
+                },
+                "createdTime" : {
+                  "type" : "date",
+                  "format" : "epoch_millis"
+                },
+                "deletedTime" : {
+                  "type" : "date",
+                  "format" : "epoch_millis"
+                },
+                "descCh" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "descEn" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "endDate" : {
+                  "type" : "date",
+                  "format" : "epoch_millis"
+                },
+                "id" : {
+                  "type" : "long"
+                },
+                "imgUrl" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer"
+                },
+                "keywords" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "missedTime" : {
+                  "type" : "date",
+                  "format" : "epoch_millis"
+                },
+                "price" : {
+                  "type" : "text"
+                },
+                "productId" : {
+                  "type" : "long"
+                },
+                "shareDescCh" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "shareDescEn" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "shareTitleCh" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "shareTitleEn" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "startDate" : {
+                  "type" : "date",
+                  "format" : "epoch_millis"
+                },
+                "taskId" : {
+                  "type" : "long"
+                },
+                "titleCh" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "titleEn" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "topPrice" : {
+                  "properties" : {
+                    "max" : {
+                      "type" : "float"
+                    },
+                    "min" : {
+                      "type" : "float"
+                    }
+                  }
+                },
+                "vendorId" : {
+                  "type" : "long"
+                },
+                "vendorLogoUrl" : {
+                  "type" : "text"
+                }
+              }
+            },
+            "topProductPromoInfoVendorHistory" : {
+              "type" : "nested",
+              "properties" : {
+                "authorId" : {
+                  "type" : "long"
+                },
+                "cardHeight" : {
+                  "type" : "long"
+                },
+                "cardWidth" : {
+                  "type" : "long"
+                },
+                "confirmed" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer"
+                },
+                "confirmedTime" : {
+                  "type" : "date",
+                  "format" : "epoch_millis"
+                },
+                "confirmerId" : {
+                  "type" : "long"
+                },
+                "createdTime" : {
+                  "type" : "date",
+                  "format" : "epoch_millis"
+                },
+                "deletedTime" : {
+                  "type" : "date",
+                  "format" : "epoch_millis"
+                },
+                "descCh" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "descEn" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "endDate" : {
+                  "type" : "date",
+                  "format" : "epoch_millis"
+                },
+                "id" : {
+                  "type" : "long"
+                },
+                "imgUrl" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer"
+                },
+                "keywords" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "missedTime" : {
+                  "type" : "date",
+                  "format" : "epoch_millis"
+                },
+                "price" : {
+                  "type" : "text"
+                },
+                "shareDescCh" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "shareDescEn" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "shareTitleCh" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "shareTitleEn" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "startDate" : {
+                  "type" : "date",
+                  "format" : "epoch_millis"
+                },
+                "taskId" : {
+                  "type" : "long"
+                },
+                "titleCh" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "titleEn" : {
+                  "type" : "text",
+                  "term_vector" : "with_positions_offsets",
+                  "norms" : false,
+                  "analyzer" : "my_analyzer",
+                  "include_in_all" : true
+                },
+                "topPrice" : {
+                  "properties" : {
+                    "max" : {
+                      "type" : "float"
+                    },
+                    "min" : {
+                      "type" : "float"
+                    }
+                  }
+                },
+                "vendorId" : {
+                  "type" : "long"
+                },
+                "vendorLogoUrl" : {
+                  "type" : "text"
+                }
+              }
+            },
+            "updateESTime" : {
+              "type" : "date",
+              "format" : "epoch_millis"
+            },
+            "vendors" : {
+              "type" : "text",
+              "norms" : false,
+              "analyzer" : "my_analyzer",
+              "include_in_all" : true
+            },
+            "width" : {
+              "type" : "long"
+            }
+          }
+        }
+      }
+    }
+  }

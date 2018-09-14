@@ -5,3 +5,4 @@ SELECT inet_ntoa(conv(hex(location_ip), 16, 10)) as ip, conv(hex(idvisitor), 16,
 
 // select config_id
 SELECT inet_ntoa(conv(hex(location_ip), 16, 10)) as ip, conv(hex(config_id), 16, 10) as configId FROM matomo_log_visit;
+

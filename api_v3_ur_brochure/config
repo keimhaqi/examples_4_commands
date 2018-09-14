@@ -1,0 +1,77 @@
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "user": "23",
+  "num": 8,
+  "searchword": "s",
+  "text": "1"
+}
+' http://192.168.1.104:9124/api/v3/autocomplete/tag
+
+
+
+#Location Record
+#Thu Sep 06 04:13:45 UTC 2018
+num=9
+startLocation=752951
+
+# elasticsearchConfiguration.properties
+HOSTA=172.18.0.2
+PORTA=9300
+index=jinbagsearch
+docType=items
+mergeIndex=mergeidx
+mergeType=merge
+mergeAttr=mergeattr
+linkType=link
+autoIndex=autojinbag
+autoTagDocType=tags
+todaysPicksIndex=todayspicks
+todaysPicksDocType=items
+clusterName=es-cluster
+
+
+
+# application.properties 
+server.port=9099
+#spring.kafka.bootstrap-servers=192.168.1.102:9092
+#spring.kafka.consumer.group-id=linkshare_search
+#jinbag.kafka.searchTopic=linkshare_search
+kafka.add.topic=linkshare_search
+kafka.update.topic=linkshare_update
+#kafka.update.topic.pro=update
+kafka.promolink.search=prod.backend
+kafka.promolink.search.pro=prod.backend.pro
+kafka.product.renovate=renovate_product
+kafka.delete.topic=product.delete
+kafka.tag.add=tag.backend
+kafka.link.add=link_list
+kafka.tag.op=tag.search
+
+kafka.producer.topic=change_data
+kafka.partition.num=3
+#kafka.bi.topic=bi
+
+data_read_cron=0 */30 * * * *
+bi.cron.scout.delay=5000
+bi.cron.check.after.delay=5000
+bi.cron.check.before.delay=5000
+
+bi.crawl.topic=bi.crawl
+bi.hotproduct.topic=bi.ur
+bi.merge.topic=bi.merge
+bi.algorithm.upgrade=false
+bi.module.init=false
+
+kafka.article.topic=brochure
+
+#merge module api endpoing
+merge.module.endpoint=http://192.168.1.188:8080/search/v1/product
+
+bi.record.location=/home/jinbag/searchengine-datasource/src/main/resources/startLocation.properties
+#bi.record.location=/home/zhenping/gitlab/searchengine-datasource/src/main/resources/startLocation.properties
+
+bi.confirmer.id=99
+
+bi.missedtime.delay=72
+bi.missedtime.h=72
+bi.crawlInterval.h=12

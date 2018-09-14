@@ -20,3 +20,6 @@ insert into product_amazon_price (product_vendor_id, currency, product_price, pr
 
 
 select * from (select product_id, count(*) as c from top_product_promo_info_vendor_history group by product_id) t where t.c > 1
+
+// 列出分组group by内的所有信息
+select product_id, article_id from article_product ap where (select count(product_id) from article_product where product_id=ap.product_id) order by product_id;

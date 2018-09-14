@@ -1,0 +1,170 @@
+{
+    "items": [
+        {
+            "item": {
+                "productSale": "$21.69",
+                "sourceId": [
+                    3
+                ],
+                "sources": [
+                    "camelcamelcamel"
+                ],
+                "channel": 1,
+                "discount": {
+                    "min": 24.001402,
+                    "max": 24.001402,
+                    "discountStr": "24.001402%"
+                },
+                "language": [
+                    "en"
+                ],
+                "availability": "in_stock",
+                "score": 4.3,
+                "price": {
+                    "min": 28.54,
+                    "max": 28.54
+                },
+                "updateESTime": 1536543989125,
+                "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/61xsyif4fyL._SY355_PIbundle-6,TopRight,0,0_AA355SH20_.jpg",
+                "hasSmartPrice": 0,
+                "currency": "$",
+                "categories": [
+                    "Tools & Home Improvement"
+                ],
+                "vendors": [
+                    "Amazon"
+                ],
+                "productDescription": [
+                    
+                ],
+                "height": 355,
+                "numOfReviews": 721,
+                "brandName": "Philips",
+                "brands": [
+                    "Philips"
+                ],
+                "productId": 10855616,
+                "productDetail": [
+                    "Color: Soft White  |  Size: 6 Pack  |  Style: 100-Watt Equivalent   Philips A19 LED light bulbs provide 1500 lumens of soft white light, equivalent to 100-watt incandescents with 80% less energy use. These bulbs fit standard medium base (E26) fixtures with the look and feel of a classic bulb. Not for use with Philips HUE products. At 2700-Kelvin, these soft white bulbs offer warm and comfortable lighting with high CRI (color rendering index) to deliver bright, crisp color ideal for whole room ambient light as well as in area lamps. These high-value Philips LEDs offer durable, shatter-free plastic construction. Philips LEDs turn on instantly with energy-efficient flicker-free, natural light that won't degrade over time. Unlike cheaper imitations, Philips LED offers clean, natural lighting with exceptional clarity. LED light bulbs last up to 10X longer than incandescent and halogen bulbs. Unlike fluorescent and compact fluorescent bulbs, Philips LEDs are mercury-free so they don't contribute to hazardous waste. Each bulb in this pack of 6 A19 Philips LEDs is expected to deliver a lifetime of up to 10,950 hours and over 10 years (based on three hours per day), saving you the cost and hassle of frequent bulb replacement."
+                ],
+                "lastCheckedTime": 1536543007000,
+                "categoryTypePriority": 0,
+                "sourceProductId": "B01HC7BHUK",
+                "productTitle": "Philips 461995 LED Non-Dimmable A19 Frosted Light Bulb: 1500-Lumen, 2700-Kelvin, 14.5-Watt (100-Watt Equivalent), E26 Base, Soft White, 6-Pack",
+                "sale": {
+                    "min": 21.69,
+                    "max": 21.69
+                },
+                "brandId": 5149,
+                "width": 355,
+                "categoryTypeId": 0,
+                "morePictures": 0,
+                "productPrice": "$28.54",
+                "topProductPromoInfoVendor": {
+                    "shareTitleEn": "$21.69 ($28.54) Philips 461995 LED Non-Dimmable A19 Frosted Light Bulb: 1500-Lumen, 2700-Kelvin, 14.5-Watt (100-Watt Equivalent), E26 Base, Soft White, 6-Pack",
+                    "postedTime": 1536543009000,
+                    "confirmerId": 99,
+                    "authorId": 99,
+                    "confirmed": 1,
+                    "vendorLogoHeight": 33,
+                    "titleEn": "Amazon - $21.69 ($28.54) Philips 461995 LED Non-Dimmable A19 Frosted Light Bulb: 1500-Lumen, 2700-Kelvin, 14.5-Watt (100-Watt Equivalent), E26 Base, Soft White, 6-Pack",
+                    "price": "$21.69",
+                    "confirmedTime": 1536543986823,
+                    "createdTime": 1536543986823,
+                    "vendorLogoUrl": "amazon.png",
+                    "id": {
+                        "vendorId": 3,
+                        "id": 10855616
+                    },
+                    "taskId": 7332752,
+                    "startDate": 1536543009000,
+                    "vendorLogoWidth": 109
+                }
+            },
+            "score": 3.001087022246793
+        },
+        {
+            "item": {
+                "productSale": "$101.08",
+                "sourceId": [
+                    3
+                ],
+                "sources": [
+                    "camelcamelcamel",
+                    "amazon's choice"
+                ],
+                "channel": 1,
+                "discount": {
+                    "min": 16.669416,
+                    "max": 16.669416,
+                    "discountStr": "16.669416%"
+                },
+                "language": [
+                    "en"
+                ],
+                "availability": "in_stock",
+                "score": 4.5,
+                "price": {
+                    "min": 121.3,
+                    "max": 121.3
+                },
+                "updateESTime": 1536543987270,
+                "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/61TaBGTsvbL._SX355_.jpg",
+                "hasSmartPrice": 0,
+                "currency": "$",
+                "vendors": [
+                    "Amazon"
+                ],
+                "productDescription": [
+                    
+                ],
+                "height": 258,
+                "numOfReviews": 417,
+                "brandName": "Keekaroo",
+                "brands": [
+                    "keekaroo"
+                ],
+                "productId": 10855614,
+                "productDetail": [
+                    "Color: Grey   Peanut Changer from Keekaroo is the clean and safe way diaper changing pad to change your ‘little peanut’. Impermeable to fluids, the soft-to-the-touch Keekaroo Peanut Changer needs no additional sheets or pads commonly required for other diaper changing pads.  The solid surface wipes clean and limits the chance for bacterial growth.  Made from our unique soft and cushy material that was designed and tested for hospital use, the Keekaroo Peanut Changer provides a clean, safe and comfortable diaper changer surface for diaper changes."
+                ],
+                "lastCheckedTime": 1536543003000,
+                "categoryTypePriority": 0,
+                "sourceProductId": "B017UJ5MYM",
+                "productTitle": "Keekaroo Peanut Changer, Grey, One Size",
+                "sale": {
+                    "min": 101.08,
+                    "max": 101.08
+                },
+                "brandId": 14895,
+                "width": 355,
+                "categoryTypeId": 1,
+                "morePictures": 0,
+                "productPrice": "$121.30",
+                "topProductPromoInfoVendor": {
+                    "shareTitleEn": "$101.08 ($121.30) Keekaroo Peanut Changer, Grey, One Size",
+                    "postedTime": 1536543004000,
+                    "confirmerId": 99,
+                    "authorId": 99,
+                    "confirmed": 1,
+                    "vendorLogoHeight": 33,
+                    "titleEn": "Amazon - $101.08 ($121.30) Keekaroo Peanut Changer, Grey, One Size",
+                    "price": "$101.08",
+                    "confirmedTime": 1536543985204,
+                    "createdTime": 1536543985204,
+                    "vendorLogoUrl": "amazon.png",
+                    "id": {
+                        "vendorId": 3,
+                        "id": 10855614
+                    },
+                    "taskId": 7332751,
+                    "startDate": 1536543004000,
+                    "vendorLogoWidth": 109
+                }
+            },
+            "score": 2.501087022246793
+        }
+    ],
+    "num": 2,
+    "lifeCycle": 1
+}

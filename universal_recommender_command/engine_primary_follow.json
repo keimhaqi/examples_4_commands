@@ -1,0 +1,43 @@
+{
+    "comment":" This config file uses default settings for all but the required values see README.md for docs",
+    "id": "default",
+    "description": "Default settings",
+    "engineFactory": "com.jinbag.RecommendationEngine",
+    "datasource": {
+      "params" : {
+        "appName": "receng",
+        "eventNames": ["follow", "view"],
+        "eventWindow": {
+           "duration": "180 days",
+           "removeDuplicates": false,
+           "compressProperties": false 
+        }
+      }
+    },
+    "sparkConf": {
+      "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+      "spark.kryo.registrator": "org.apache.mahout.sparkbindings.io.MahoutKryoRegistrator",
+      "spark.kryo.referenceTracking": "false",
+      "spark.kryoserializer.buffer": "300m",
+      "spark.executor.memory": "4g",
+      "spark.executor.cores": "2",
+      "spark.task.cpus": "2",
+      "spark.default.parallelism": "4",
+      "es.index.auto.create": "true"
+    },
+    "algorithms": [
+      {
+        "comment": "simplest setup where all values are default, popularity based backfill, must add eventsNames",
+        "name": "ur",
+        "params": {
+          "appName": "receng",
+          "indexName": "recidx1",
+          "typeName": "items",
+          "eventNames": ["follow", "view"],
+          "comment": "must have data for the first event or the model will not build, other events are optional",
+          "num": 10
+        }
+      }
+    ]
+  }
+  
