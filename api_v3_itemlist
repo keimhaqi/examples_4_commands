@@ -33,14 +33,17 @@
   curl -k -H 'Content-Type: application/json' -d '
   {
     "num": 10,
-    "searchword":"amazon",
+    "searchword":"Featuring",
     "fields":
     [
         
     ]
     
   }
-  ' http://96.90.248.211:9124/api/v3/itemlist
+  ' http://localhost:9124/api/v3/itemlist
+
+
+4737838
 
 
 {"event":"search","entityType":"user","entityId":"0","targetEntityType":"items","targetEntityId":"dyson","properties":{}}
@@ -221,18 +224,23 @@ curl -k -H 'Content-Type: application/json' -d '
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "fields":[{"name": "productId", "values":[10621342]}, {"name": "vendorId", "values":[3]}],
-  "saleRange":{"min":10, "max":30}
+  "fields":[{"name": "productId", "values":[1]}, {"name": "vendorId", "values":[3184]}, {"name": "spec", "values":[""]}]
 }
-' http://96.90.248.211:9124/api/v3/metrics/product
-
-
+' http://localhost:9124/api/v3/metrics/product
 
 
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "fields":[{"name": "productId", "values":[1190670]}, {"name": "vendorId", "values":[3]}]
+  "fields":[{"name": "productId", "values":[1]}, {"name": "vendorId", "values":[3184]}]
+}
+' http://localhost:9124/api/v3/metrics/product
+
+
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "fields":[{"name": "productId", "values":[327442]}, {"name": "vendorId", "values":[3]}]
 }
 ' http://96.90.248.211:9124/api/v3/metrics/product
 

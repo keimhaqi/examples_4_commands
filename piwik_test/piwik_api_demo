@@ -33,7 +33,7 @@ http://52.42.165.126/analytics/maui/index.php?
 ) 
 
 
-http://52.42.165.126/analytics/maui/index.php?module=API&method=Live.getLastVisitsDetails&idSite=1&period=day&date=today&format=xml&token_auth=2a981214e5e88f104cf67d32f4e77619&countVisitorsToFetch=10
+http://52.42.165.126/analytics/maui/index.php?module=API&method=Live.getLastVisitsDetails&idSite=1&period=day&date=today&format=xml&token_auth=2a981214e5e88f104cf67d32f4e77619&minTimestamp=1536913113
 
 
 

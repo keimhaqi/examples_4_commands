@@ -2,251 +2,75 @@
     "items": [
         {
             "item": {
-                "lastCmtTime": 1536257792000,
-                "product": [
-                    {
-                        "productTitle": "Freestyle Hooded Jacket",
-                        "productSale": "$98.00",
-                        "sale": {
-                            "min": 98.0,
-                            "max": 98.0
-                        },
-                        "productId": 9652038,
-                        "productImageLink": "https://image.s5a.com/is/image/saks/0400095781896_500x500.jpg"
+                "lastCmtTime": 1536935860000,
+                "followCount": 0,
+                "articleId": 1084,
+                "upCount": 0,
+                "description": "",
+                "weight": 0.0,
+                "title": "Amazon Subscribe & Save",
+                "good": 0,
+                "userId": 99,
+                "commentCount": 544,
+                "tags": "",
+                "resourceUrlUltimate": [
+                    
+                ],
+                "inTime": 1524060192000,
+                "downCount": 0,
+                "shareCount": 0,
+                "top": 0,
+                "upIds": "",
+                "style": 4,
+                "text": "",
+                "viewCount": 0,
+                "window": {
+                    "productId": 10576720,
+                    "lastCheckedTime": 1536311698000,
+                    "productTitle": "Healths Harmony Best Blood Pressure Support Supplement (NON-GMO) - Premium Natural Herbs, Vitamins & Berries - High Dosage of Hawthorn Extract – Naturally Widen Blood Vessels – Berry Lower Pills – 90 Capsules",
+                    "productSale": "$18.28",
+                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/71229MCyBiL._SY355_.jpg",
+                    "width": 355,
+                    "height": 355,
+                    "availability": "in_stock",
+                    "sourceProductId": "B00XBNB0IY",
+                    "sourceId": 3,
+                    "vendor": {
+                        "vendorId": 3,
+                        "vendorNameEn": "Amazon",
+                        "vendorNameCh": "Amazon",
+                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+                        "vendorDescCh": "全球著名购物平台",
+                        "vendorLogoUrl": "amazon.png",
+                        "readable": 1,
+                        "vendorLogoWidth": 109,
+                        "vendorLogoHeight": 33,
+                        "vendorDomain": "amazon.com",
+                        "currency": "U",
+                        "language": "en"
                     },
-                    {
-                        "productTitle": "Printed Swim Trunks",
-                        "productSale": "$151.25",
-                        "sale": {
-                            "min": 151.25,
-                            "max": 151.25
+                    "topProductPromoInfoVendor": {
+                        "id": {
+                            "id": 10576720,
+                            "vendorId": 3
                         },
-                        "productId": 10183072,
-                        "productImageLink": "https://image.s5a.com/is/image/saks/0400095252942_500x500.jpg"
+                        "taskId": 6893086,
+                        "titleEn": "Amazon - $18.28 Healths Harmony Best Blood Pressure Support Supplement (NON-GMO) - Premium Natural Herbs, Vitamins & Berries - High Dosage of Hawthorn Extract – Naturally Widen Blood Vessels – Berry Lower Pills – 90 Capsules",
+                        "shareTitleEn": "$18.28 Healths Harmony Best Blood Pressure Support Supplement (NON-GMO) - Premium Natural Herbs, Vitamins & Berries - High Dosage of Hawthorn Extract – Naturally Widen Blood Vessels – Berry Lower Pills – 90 Capsules",
+                        "price": "$18.28",
+                        "startDate": 1524010139000,
+                        "authorId": 99,
+                        "confirmed": 1,
+                        "createdTime": 1524927006000,
+                        "confirmedTime": 1524927006000,
+                        "confirmerId": 99
                     }
-                ],
-                "followCount": 0,
-                "productId": [
-                    9652038,
-                    10183072
-                ],
-                "upCount": 0,
-                "articleId": 44,
-                "weight": 0.0,
-                "title": "Amazon - $54.99 ($89.99) after $15 Off Coupon, Philips Sonicare ProtectiveClean 5100 Plaque Control, Rechargeable electric toothbrush with pressure sensor, White Mint HX6857/11",
-                "type": "share",
-                "userId": 217,
-                "content": "[{\"index\":\"1\",\"content\":[{\"index\":\"1\",\"content\":\"这款是专业的牙龈护理牙刷，Philips Sonicare ProtectiveClean 5100这个是新款，多了美白和清洁功能，我觉得这款在它家的电动牙刷中性价比比较高的，diamond clean那一系列多了抛光和敏感两个选项，如果不需要这两种功能买这款足够了。\",\"type\":\"text\"}],\"jinbagId\":10437782,\"type\":\"product\"}]",
-                "commentCount": 3,
-                "resourceUrlUltimate": [
-                    {
-                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51Mq5mxCmAL._SX355_.jpg"
-                    }
-                ],
-                "inTime": 1527392368000,
-                "downCount": 0,
-                "shareCount": 0,
-                "resourceUrl": [
-                    "https://images-na.ssl-images-amazon.com/images/I/51Mq5mxCmAL._SX355_.jpg"
-                ],
-                "style": 4,
-                "viewCount": 50,
-                "window": {
-                    "productId": 9652038,
-                    "lastCheckedTime": 1483250400000,
-                    "productTitle": "Freestyle Hooded Jacket",
-                    "productSale": "$98.00",
-                    "productImageLink": "https://image.s5a.com/is/image/saks/0400095781896_500x500.jpg",
-                    "width": 300,
-                    "height": 400
                 },
                 "user": {
-                    "nickName": "sff",
+                    "id": 99,
+                    "nickName": "Genie",
                     "active": 1,
-                    "id": 217,
-                    "userId": 217,
-                    "email": "FANGFEI_SUN@JINBAG.COM"
-                },
-                "status": 0
-            },
-            "score": 3.0,
-            "type": "brochure"
-        },
-        {
-            "item": {
-                "product": [
-                    {
-                        "productTitle": "Printed Swim Trunks",
-                        "productSale": "$151.25",
-                        "sale": {
-                            "min": 151.25,
-                            "max": 151.25
-                        },
-                        "productId": 10183072,
-                        "productImageLink": "https://image.s5a.com/is/image/saks/0400095252942_500x500.jpg"
-                    }
-                ],
-                "followCount": 0,
-                "productId": [
-                    10183072
-                ],
-                "upCount": 0,
-                "articleId": 42,
-                "weight": 0.0,
-                "title": "Amazon - $9.96 ($19.99) Intex Flamingo Inflatable Ride-On, 56",
-                "type": "share",
-                "userId": 217,
-                "content": "[{\"index\":\"1\",\"content\":[{\"index\":\"1\",\"content\":\"网红度假拍照凹造型神器！泳池或沙滩配上这个随随便便就可以拍出美美的照片，虽然很多酒店和沙滩都提供这种东西的租赁，但是自己带一个卫生还便宜，现在的价格和租一个的价格差不多。\",\"type\":\"text\"}],\"jinbagId\":10587466,\"type\":\"product\"}]",
-                "commentCount": 0,
-                "resourceUrlUltimate": [
-                    {
-                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/71o1nPIcw7L._SY355_.jpg"
-                    }
-                ],
-                "inTime": 1527377821000,
-                "downCount": 0,
-                "shareCount": 0,
-                "resourceUrl": [
-                    "https://images-na.ssl-images-amazon.com/images/I/71o1nPIcw7L._SY355_.jpg"
-                ],
-                "style": 4,
-                "viewCount": 3,
-                "window": {
-                    "productId": 10183072,
-                    "lastCheckedTime": 1483250400000,
-                    "productTitle": "Printed Swim Trunks",
-                    "productSale": "$151.25",
-                    "productImageLink": "https://image.s5a.com/is/image/saks/0400095252942_500x500.jpg",
-                    "width": 300,
-                    "height": 400
-                },
-                "user": {
-                    "nickName": "sff",
-                    "active": 1,
-                    "id": 217,
-                    "userId": 217,
-                    "email": "FANGFEI_SUN@JINBAG.COM"
-                },
-                "status": 0
-            },
-            "score": 3.0,
-            "type": "brochure"
-        },
-        {
-            "item": {
-                "product": [
-                    {
-                        "productTitle": "Graphic Baseball Cap",
-                        "productSale": "$45.00",
-                        "sale": {
-                            "min": 45.0,
-                            "max": 45.0
-                        },
-                        "productId": 6467258,
-                        "productImageLink": "https://image.s5a.com/is/image/saks/0400095753328_500x500.jpg"
-                    }
-                ],
-                "followCount": 0,
-                "productId": [
-                    6467258
-                ],
-                "upCount": 0,
-                "articleId": 46,
-                "weight": 0.0,
-                "title": "Amazon - $46.99 ($69.99) after $10 Off Coupon, Omron 7 Series Bluetooth Wireless Wrist Blood Pressure Monitor (100 Reading Memory)- Compatible with Alexa\r\n",
-                "type": "share",
-                "userId": 217,
-                "content": "[{\"index\":\"1\",\"content\":[{\"index\":\"1\",\"content\":\"Omron是医生首选推荐的临床电子血压计品牌，可记录多达100个读数，并自动显示过去10分钟内最后3次读数的平均值。其自带的应用程序提供收缩期，舒张期和脉搏读数，监测您的趋势，并可分享与他人，支持Alexa。\",\"type\":\"text\"}],\"jinbagId\":10618290,\"type\":\"product\"}]",
-                "commentCount": 0,
-                "resourceUrlUltimate": [
-                    {
-                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/9167pyBsScL._SX355_.jpg"
-                    }
-                ],
-                "inTime": 1527135036000,
-                "downCount": 0,
-                "shareCount": 0,
-                "resourceUrl": [
-                    "https://images-na.ssl-images-amazon.com/images/I/9167pyBsScL._SX355_.jpg"
-                ],
-                "style": 4,
-                "viewCount": 2,
-                "window": {
-                    "productId": 6467258,
-                    "lastCheckedTime": 1483250400000,
-                    "productTitle": "Graphic Baseball Cap",
-                    "productSale": "$45.00",
-                    "productImageLink": "https://image.s5a.com/is/image/saks/0400095753328_500x500.jpg",
-                    "width": 300,
-                    "height": 400
-                },
-                "user": {
-                    "nickName": "sff",
-                    "active": 1,
-                    "id": 217,
-                    "userId": 217,
-                    "email": "FANGFEI_SUN@JINBAG.COM"
-                },
-                "status": 0
-            },
-            "score": 1.0,
-            "type": "brochure"
-        },
-        {
-            "item": {
-                "product": [
-                    {
-                        "productTitle": "Chasing Birdies Cotton Baseball Cap",
-                        "productSale": "$45.00",
-                        "sale": {
-                            "min": 45.0,
-                            "max": 45.0
-                        },
-                        "productId": 10651992,
-                        "productImageLink": "https://image.s5a.com/is/image/saks/0400095753466_500x500.jpg"
-                    }
-                ],
-                "followCount": 0,
-                "productId": [
-                    10651992
-                ],
-                "upCount": 0,
-                "articleId": 26,
-                "weight": 0.0,
-                "title": "求Dior Dream Skin妆前乳平价代替品",
-                "type": "share",
-                "userId": 805,
-                "content": "[{\"index\":\"1\",\"content\":[{\"index\":\"1\",\"content\":\"我自己用这个Dior Dream Skin妆前乳真的很爱这个颜色和擦脸上的感觉，但是除了颜色和擦脸上的感觉真的觉得它就没啥别的功效了，关键它还很贵，有没有小伙伴用过和它颜色很像比它便宜的妆前隔离，求推荐！\",\"type\":\"text\"}],\"jinbagId\":423917,\"type\":\"product\"}]",
-                "commentCount": 0,
-                "resourceUrlUltimate": [
-                    {
-                        "imageUrl": "https://n.nordstrommedia.com/imagegallery/store/product/large/15/_100116215.jpg"
-                    }
-                ],
-                "inTime": 1527061032000,
-                "downCount": 0,
-                "shareCount": 0,
-                "resourceUrl": [
-                    "https://n.nordstrommedia.com/imagegallery/store/product/large/15/_100116215.jpg"
-                ],
-                "style": 4,
-                "viewCount": 15,
-                "window": {
-                    "productId": 10651992,
-                    "lastCheckedTime": 1483250400000,
-                    "productTitle": "Chasing Birdies Cotton Baseball Cap",
-                    "productSale": "$45.00",
-                    "productImageLink": "https://image.s5a.com/is/image/saks/0400095753466_500x500.jpg",
-                    "width": 300,
-                    "height": 400
-                },
-                "user": {
-                    "nickName": "Beauty Lab",
-                    "active": 1,
-                    "id": 805,
-                    "userId": 805,
-                    "logoUrl": "QkVBVVRZX0xBQkBKSU5CQUcuQ09N.jpg",
-                    "email": "BEAUTY_LAB@JINBAG.COM"
+                    "userId": 99
                 },
                 "status": 0
             },
@@ -255,59 +79,691 @@
         },
         {
             "item": {
-                "product": [
-                    {
-                        "productTitle": "Cotton Baseball Cap",
-                        "productSale": "$35.00",
-                        "sale": {
-                            "min": 35.0,
-                            "max": 35.0
-                        },
-                        "productId": 10651980,
-                        "productImageLink": "https://image.s5a.com/is/image/saks/0400095752972_500x500.jpg"
-                    }
-                ],
+                "lastCmtTime": 1536935847000,
                 "followCount": 0,
-                "productId": [
-                    10651980
-                ],
+                "articleId": 1086,
                 "upCount": 0,
-                "articleId": 22,
+                "description": "",
                 "weight": 0.0,
-                "title": "Maybelline细头眉笔下午会不会掉色?",
-                "type": "share",
-                "userId": 803,
-                "content": "[{\"index\":\"1\",\"content\":[{\"index\":\"1\",\"content\":\"我自己夏天皮肤比较爱出油出汗，之前用的Shu Uemura 2号自动款的眉笔，但是这款的那个笔尖太粗了，眉尾不太好画\",\"type\":\"text\"}],\"jinbagId\":10596548,\"type\":\"product\"}]",
-                "commentCount": 0,
+                "title": "Amazon Today’s Deals",
+                "good": 0,
+                "userId": 99,
+                "commentCount": 152,
+                "tags": "",
                 "resourceUrlUltimate": [
-                    {
-                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/415ZCMIZtML._SY679_.jpg"
-                    }
+                    
                 ],
-                "inTime": 1527058576000,
+                "inTime": 1524486517000,
                 "downCount": 0,
                 "shareCount": 0,
-                "resourceUrl": [
-                    "https://images-na.ssl-images-amazon.com/images/I/415ZCMIZtML._SY679_.jpg"
-                ],
+                "top": 0,
+                "upIds": "",
                 "style": 4,
-                "viewCount": 15,
+                "text": "",
+                "viewCount": 0,
                 "window": {
-                    "productId": 10651980,
-                    "lastCheckedTime": 1483250400000,
-                    "productTitle": "Cotton Baseball Cap",
-                    "productSale": "$35.00",
-                    "productImageLink": "https://image.s5a.com/is/image/saks/0400095752972_500x500.jpg",
-                    "width": 300,
-                    "height": 400
+                    "productId": 10579300,
+                    "lastCheckedTime": 1536310582000,
+                    "productTitle": "D'Addario Kaplan Premium Rosin with Case, Dark",
+                    "productSale": "$8.49",
+                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/71%2BokF7mkLL._SX355_.jpg",
+                    "width": 355,
+                    "height": 353,
+                    "availability": "in_stock",
+                    "sourceProductId": "B0038XUDW6",
+                    "sourceId": 3,
+                    "vendor": {
+                        "vendorId": 3,
+                        "vendorNameEn": "Amazon",
+                        "vendorNameCh": "Amazon",
+                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+                        "vendorDescCh": "全球著名购物平台",
+                        "vendorLogoUrl": "amazon.png",
+                        "readable": 1,
+                        "vendorLogoWidth": 109,
+                        "vendorLogoHeight": 33,
+                        "vendorDomain": "amazon.com",
+                        "currency": "U",
+                        "language": "en"
+                    },
+                    "topProductPromoInfoVendor": {
+                        "id": {
+                            "id": 10579300,
+                            "vendorId": 3
+                        },
+                        "taskId": 6895931,
+                        "titleEn": "Amazon - $8.49 D'Addario Kaplan Premium Rosin with Case, Dark",
+                        "shareTitleEn": "$8.49 D'Addario Kaplan Premium Rosin with Case, Dark",
+                        "price": "$8.49",
+                        "startDate": 1524486517000,
+                        "authorId": 99,
+                        "confirmed": 1,
+                        "createdTime": 1525503034000,
+                        "confirmedTime": 1525503034000,
+                        "confirmerId": 99
+                    }
                 },
                 "user": {
-                    "nickName": "Day Day Make-up",
+                    "id": 99,
+                    "nickName": "Genie",
                     "active": 1,
-                    "id": 803,
-                    "userId": 803,
-                    "logoUrl": "REFZX0RBWV9NQUtFX1VQQEpJTkJBRy5DT00=.jpg",
-                    "email": "DAY_DAY_MAKE_UP@JINBAG.COM"
+                    "userId": 99
+                },
+                "status": 0
+            },
+            "score": 0.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "lastCmtTime": 1536935892000,
+                "followCount": 0,
+                "articleId": 1072,
+                "upCount": 0,
+                "description": "",
+                "weight": 0.0,
+                "title": "Amazon Best Sellers in Baby Products",
+                "good": 0,
+                "userId": 99,
+                "commentCount": 292,
+                "tags": "",
+                "resourceUrlUltimate": [
+                    
+                ],
+                "inTime": 1523459317000,
+                "downCount": 0,
+                "shareCount": 0,
+                "top": 0,
+                "upIds": "",
+                "style": 4,
+                "text": "",
+                "viewCount": 0,
+                "window": {
+                    "productId": 10550646,
+                    "lastCheckedTime": 1536321682000,
+                    "productTitle": "VELCRO Brand 90075 - Sticky Back - 3 1/2\" x 3/4\" Strips, 4 Sets - Black",
+                    "productSale": "$2.98",
+                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/51Ip6a88-WL._SY355_.jpg",
+                    "width": 355,
+                    "height": 355,
+                    "availability": "in_stock",
+                    "sourceProductId": "B000TGSPV6",
+                    "sourceId": 3,
+                    "vendor": {
+                        "vendorId": 3,
+                        "vendorNameEn": "Amazon",
+                        "vendorNameCh": "Amazon",
+                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+                        "vendorDescCh": "全球著名购物平台",
+                        "vendorLogoUrl": "amazon.png",
+                        "readable": 1,
+                        "vendorLogoWidth": 109,
+                        "vendorLogoHeight": 33,
+                        "vendorDomain": "amazon.com",
+                        "currency": "U",
+                        "language": "en"
+                    },
+                    "topProductPromoInfoVendor": {
+                        "id": {
+                            "id": 10550646,
+                            "vendorId": 3
+                        },
+                        "taskId": 6886394,
+                        "titleEn": "Amazon - $2.98 VELCRO Brand 90075 - Sticky Back - 3 1/2\" x 3/4\" Strips, 4 Sets - Black",
+                        "shareTitleEn": "$2.98 VELCRO Brand 90075 - Sticky Back - 3 1/2\" x 3/4\" Strips, 4 Sets - Black",
+                        "price": "$2.98",
+                        "startDate": 1523459317000,
+                        "authorId": 99,
+                        "confirmed": 1,
+                        "createdTime": 1524929974000,
+                        "confirmedTime": 1524929974000,
+                        "confirmerId": 99
+                    }
+                },
+                "user": {
+                    "id": 99,
+                    "nickName": "Genie",
+                    "active": 1,
+                    "userId": 99
+                },
+                "status": 0
+            },
+            "score": 0.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "lastCmtTime": 1536935898000,
+                "followCount": 0,
+                "articleId": 1064,
+                "upCount": 0,
+                "description": "",
+                "weight": 0.0,
+                "title": "Camelcamelcamel",
+                "good": 0,
+                "userId": 99,
+                "commentCount": 653,
+                "tags": "",
+                "resourceUrlUltimate": [
+                    
+                ],
+                "inTime": 1524263664000,
+                "downCount": 0,
+                "shareCount": 0,
+                "top": 0,
+                "upIds": "",
+                "style": 4,
+                "text": "",
+                "viewCount": 1,
+                "window": {
+                    "productId": 10584570,
+                    "lastCheckedTime": 1536193662000,
+                    "productTitle": "The New Father: A Dad's Guide to the First Year (New Father Series)",
+                    "productSale": "$7.03",
+                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/51%2B9cCBZmFL._SX331_BO1,204,203,200_.jpg",
+                    "width": 333,
+                    "height": 499,
+                    "availability": "in_stock",
+                    "sourceProductId": "0789211777",
+                    "sourceId": 3,
+                    "vendor": {
+                        "vendorId": 3,
+                        "vendorNameEn": "Amazon",
+                        "vendorNameCh": "Amazon",
+                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+                        "vendorDescCh": "全球著名购物平台",
+                        "vendorLogoUrl": "amazon.png",
+                        "readable": 1,
+                        "vendorLogoWidth": 109,
+                        "vendorLogoHeight": 33,
+                        "vendorDomain": "amazon.com",
+                        "currency": "U",
+                        "language": "en"
+                    },
+                    "topProductPromoInfoVendor": {
+                        "id": {
+                            "id": 10584570,
+                            "vendorId": 3
+                        },
+                        "taskId": 6901848,
+                        "titleEn": "Amazon - $7.03 ($13.95) The New Father: A Dad's Guide to the First Year (New Father Series)",
+                        "shareTitleEn": "$7.03 ($13.95) The New Father: A Dad's Guide to the First Year (New Father Series)",
+                        "price": "$7.03",
+                        "startDate": 1524517129000,
+                        "authorId": 99,
+                        "confirmed": 1,
+                        "createdTime": 1524927409000,
+                        "confirmedTime": 1524927409000,
+                        "confirmerId": 99
+                    }
+                },
+                "user": {
+                    "id": 99,
+                    "nickName": "Genie",
+                    "active": 1,
+                    "userId": 99
+                },
+                "status": 0
+            },
+            "score": 0.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "lastCmtTime": 1536935892000,
+                "followCount": 0,
+                "articleId": 1072,
+                "upCount": 0,
+                "description": "",
+                "weight": 0.0,
+                "title": "Amazon Best Sellers in Baby Products",
+                "good": 0,
+                "userId": 99,
+                "commentCount": 292,
+                "tags": "",
+                "resourceUrlUltimate": [
+                    
+                ],
+                "inTime": 1523459317000,
+                "downCount": 0,
+                "shareCount": 0,
+                "top": 0,
+                "upIds": "",
+                "style": 4,
+                "text": "",
+                "viewCount": 0,
+                "window": {
+                    "productId": 10553660,
+                    "lastCheckedTime": 1536322407000,
+                    "productTitle": "ColorBok 73490A Designer Paper Pad Mint Julip, 12\" x 12\"",
+                    "productSale": "$5.00",
+                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/912g3uxWnCL._SY355_.jpg",
+                    "width": 334,
+                    "height": 355,
+                    "availability": "in_stock",
+                    "sourceProductId": "B01KI4EMQA",
+                    "sourceId": 3,
+                    "vendor": {
+                        "vendorId": 3,
+                        "vendorNameEn": "Amazon",
+                        "vendorNameCh": "Amazon",
+                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+                        "vendorDescCh": "全球著名购物平台",
+                        "vendorLogoUrl": "amazon.png",
+                        "readable": 1,
+                        "vendorLogoWidth": 109,
+                        "vendorLogoHeight": 33,
+                        "vendorDomain": "amazon.com",
+                        "currency": "U",
+                        "language": "en"
+                    },
+                    "topProductPromoInfoVendor": {
+                        "id": {
+                            "id": 10553660,
+                            "vendorId": 3
+                        },
+                        "taskId": 6743344,
+                        "titleEn": "Amazon - $5.00 ($6.09) ColorBok 73490A Designer Paper Pad Mint Julip, 12\" x 12\"",
+                        "shareTitleEn": "$5.00 ($6.09) ColorBok 73490A Designer Paper Pad Mint Julip, 12\" x 12\"",
+                        "price": "$5.00",
+                        "startDate": 1523907028000,
+                        "authorId": 99,
+                        "confirmed": 1,
+                        "createdTime": 1524926595000,
+                        "confirmedTime": 1524926595000,
+                        "confirmerId": 99
+                    }
+                },
+                "user": {
+                    "id": 99,
+                    "nickName": "Genie",
+                    "active": 1,
+                    "userId": 99
+                },
+                "status": 0
+            },
+            "score": 0.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "lastCmtTime": 1536935898000,
+                "followCount": 0,
+                "articleId": 1064,
+                "upCount": 0,
+                "description": "",
+                "weight": 0.0,
+                "title": "Camelcamelcamel",
+                "good": 0,
+                "userId": 99,
+                "commentCount": 653,
+                "tags": "",
+                "resourceUrlUltimate": [
+                    
+                ],
+                "inTime": 1524263664000,
+                "downCount": 0,
+                "shareCount": 0,
+                "top": 0,
+                "upIds": "",
+                "style": 4,
+                "text": "",
+                "viewCount": 1,
+                "window": {
+                    "productId": 10583820,
+                    "lastCheckedTime": 1536311052000,
+                    "productTitle": "Wonderbag Non-Electric Portable Slow Cooker with Recipe Cookbook, Red Batik",
+                    "productSale": "$39.98",
+                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/71T-e0-k1sL._SX355_.jpg",
+                    "width": 355,
+                    "height": 224,
+                    "availability": "in_stock",
+                    "sourceProductId": "B00ESI96SW",
+                    "sourceId": 3,
+                    "vendor": {
+                        "vendorId": 3,
+                        "vendorNameEn": "Amazon",
+                        "vendorNameCh": "Amazon",
+                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+                        "vendorDescCh": "全球著名购物平台",
+                        "vendorLogoUrl": "amazon.png",
+                        "readable": 1,
+                        "vendorLogoWidth": 109,
+                        "vendorLogoHeight": 33,
+                        "vendorDomain": "amazon.com",
+                        "currency": "U",
+                        "language": "en"
+                    },
+                    "topProductPromoInfoVendor": {
+                        "id": {
+                            "id": 10583820,
+                            "vendorId": 3
+                        },
+                        "taskId": 6900739,
+                        "titleEn": "Amazon - $39.98 Wonderbag Non-Electric Portable Slow Cooker with Recipe Cookbook, Red Batik",
+                        "shareTitleEn": "$39.98 Wonderbag Non-Electric Portable Slow Cooker with Recipe Cookbook, Red Batik",
+                        "price": "$39.98",
+                        "startDate": 1524263664000,
+                        "authorId": 99,
+                        "confirmed": 1,
+                        "createdTime": 1524927310000,
+                        "confirmedTime": 1524927310000,
+                        "confirmerId": 99
+                    }
+                },
+                "user": {
+                    "id": 99,
+                    "nickName": "Genie",
+                    "active": 1,
+                    "userId": 99
+                },
+                "status": 0
+            },
+            "score": 0.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "lastCmtTime": 1536935892000,
+                "followCount": 0,
+                "articleId": 1072,
+                "upCount": 0,
+                "description": "",
+                "weight": 0.0,
+                "title": "Amazon Best Sellers in Baby Products",
+                "good": 0,
+                "userId": 99,
+                "commentCount": 292,
+                "tags": "",
+                "resourceUrlUltimate": [
+                    
+                ],
+                "inTime": 1523459317000,
+                "downCount": 0,
+                "shareCount": 0,
+                "top": 0,
+                "upIds": "",
+                "style": 4,
+                "text": "",
+                "viewCount": 0,
+                "window": {
+                    "productId": 10552366,
+                    "lastCheckedTime": 1536318403000,
+                    "productTitle": "Kate Blanc Cosmetics Castor Oil (2oz) USDA Certified Organic, 100% Pure, Cold Pressed, Hexane Free by Kate Blanc. Stimulate Growth for Eyelashes, Eyebrows, Hair. Lash Growth Serum. Brow Treatment. FREE Mascara Starter Kit",
+                    "productSale": "$9.99",
+                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/51lT2wUZ3iL._SY355_.jpg",
+                    "width": 308,
+                    "height": 355,
+                    "availability": "in_stock",
+                    "sourceProductId": "B01NALN8Q9",
+                    "sourceId": 3,
+                    "vendor": {
+                        "vendorId": 3,
+                        "vendorNameEn": "Amazon",
+                        "vendorNameCh": "Amazon",
+                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+                        "vendorDescCh": "全球著名购物平台",
+                        "vendorLogoUrl": "amazon.png",
+                        "readable": 1,
+                        "vendorLogoWidth": 109,
+                        "vendorLogoHeight": 33,
+                        "vendorDomain": "amazon.com",
+                        "currency": "U",
+                        "language": "en"
+                    },
+                    "topProductPromoInfoVendor": {
+                        "id": {
+                            "id": 10552366,
+                            "vendorId": 3
+                        },
+                        "taskId": 171586,
+                        "titleEn": "Amazon - $9.99 Kate Blanc Cosmetics Castor Oil (2oz) USDA Certified Organic, 100% Pure, Cold Pressed, Hexane Free by Kate Blanc. Stimulate Growth for Eyelashes, Eyebrows, Hair. Lash Growth Serum. Brow Treatment. FREE Mascara Starter Kit",
+                        "shareTitleEn": "$9.99 Kate Blanc Cosmetics Castor Oil (2oz) USDA Certified Organic, 100% Pure, Cold Pressed, Hexane Free by Kate Blanc. Stimulate Growth for Eyelashes, Eyebrows, Hair. Lash Growth Serum. Brow Treatment. FREE Mascara Starter Kit",
+                        "price": "$9.99",
+                        "startDate": 1523574075000,
+                        "authorId": 99,
+                        "confirmed": 1,
+                        "createdTime": 1524926522000,
+                        "confirmedTime": 1524926522000,
+                        "confirmerId": 99
+                    }
+                },
+                "user": {
+                    "id": 99,
+                    "nickName": "Genie",
+                    "active": 1,
+                    "userId": 99
+                },
+                "status": 0
+            },
+            "score": 0.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "lastCmtTime": 1536935898000,
+                "followCount": 0,
+                "articleId": 1064,
+                "upCount": 0,
+                "description": "",
+                "weight": 0.0,
+                "title": "Camelcamelcamel",
+                "good": 0,
+                "userId": 99,
+                "commentCount": 653,
+                "tags": "",
+                "resourceUrlUltimate": [
+                    
+                ],
+                "inTime": 1524263664000,
+                "downCount": 0,
+                "shareCount": 0,
+                "top": 0,
+                "upIds": "",
+                "style": 4,
+                "text": "",
+                "viewCount": 1,
+                "window": {
+                    "productId": 10587054,
+                    "lastCheckedTime": 1536312858000,
+                    "productTitle": "Canon EOS 5D Mark IV Full Frame Digital SLR Camera Body",
+                    "productSale": "$3,099.00",
+                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/81UdZ2CMsQL._SX355_.jpg",
+                    "width": 355,
+                    "height": 281,
+                    "availability": "in_stock",
+                    "sourceProductId": "B01KURGS9E",
+                    "sourceId": 3,
+                    "vendor": {
+                        "vendorId": 3,
+                        "vendorNameEn": "Amazon",
+                        "vendorNameCh": "Amazon",
+                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+                        "vendorDescCh": "全球著名购物平台",
+                        "vendorLogoUrl": "amazon.png",
+                        "readable": 1,
+                        "vendorLogoWidth": 109,
+                        "vendorLogoHeight": 33,
+                        "vendorDomain": "amazon.com",
+                        "currency": "U",
+                        "language": "en"
+                    },
+                    "topProductPromoInfoVendor": {
+                        "id": {
+                            "id": 10587054,
+                            "vendorId": 3
+                        },
+                        "taskId": 6904312,
+                        "titleEn": "Amazon - $3,099.00 ($3,499.00) Canon EOS 5D Mark IV Full Frame Digital SLR Camera Body",
+                        "shareTitleEn": "$3,099.00 ($3,499.00) Canon EOS 5D Mark IV Full Frame Digital SLR Camera Body",
+                        "price": "$3,099.00",
+                        "startDate": 1525093688000,
+                        "authorId": 99,
+                        "confirmed": 1,
+                        "createdTime": 1525094410000,
+                        "confirmedTime": 1525094410000,
+                        "confirmerId": 99
+                    }
+                },
+                "user": {
+                    "id": 99,
+                    "nickName": "Genie",
+                    "active": 1,
+                    "userId": 99
+                },
+                "status": 0
+            },
+            "score": 0.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "lastCmtTime": 1536935860000,
+                "followCount": 0,
+                "articleId": 1084,
+                "upCount": 0,
+                "description": "",
+                "weight": 0.0,
+                "title": "Amazon Subscribe & Save",
+                "good": 0,
+                "userId": 99,
+                "commentCount": 544,
+                "tags": "",
+                "resourceUrlUltimate": [
+                    
+                ],
+                "inTime": 1524060192000,
+                "downCount": 0,
+                "shareCount": 0,
+                "top": 0,
+                "upIds": "",
+                "style": 4,
+                "text": "",
+                "viewCount": 0,
+                "window": {
+                    "productId": 10577918,
+                    "lastCheckedTime": 1536313328000,
+                    "productTitle": "BRI Nutrition Odorless Garlic - 120 Softgels - 1000mg Pure And Potent Garlic Allium Sativum Supplement (Maximum Strength) - 60 Day Supply",
+                    "productSale": "$12.88",
+                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/515N8Eun1pL._SY355_.jpg",
+                    "width": 355,
+                    "height": 355,
+                    "availability": "in_stock",
+                    "sourceProductId": "B06XH5VVXG",
+                    "sourceId": 3,
+                    "vendor": {
+                        "vendorId": 3,
+                        "vendorNameEn": "Amazon",
+                        "vendorNameCh": "Amazon",
+                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+                        "vendorDescCh": "全球著名购物平台",
+                        "vendorLogoUrl": "amazon.png",
+                        "readable": 1,
+                        "vendorLogoWidth": 109,
+                        "vendorLogoHeight": 33,
+                        "vendorDomain": "amazon.com",
+                        "currency": "U",
+                        "language": "en"
+                    },
+                    "topProductPromoInfoVendor": {
+                        "id": {
+                            "id": 10577918,
+                            "vendorId": 3
+                        },
+                        "taskId": 6889628,
+                        "titleEn": "Amazon - $12.88 BRI Nutrition Odorless Garlic - 120 Softgels - 1000mg Pure And Potent Garlic Allium Sativum Supplement (Maximum Strength) - 60 Day Supply",
+                        "shareTitleEn": "$12.88 BRI Nutrition Odorless Garlic - 120 Softgels - 1000mg Pure And Potent Garlic Allium Sativum Supplement (Maximum Strength) - 60 Day Supply",
+                        "price": "$12.88",
+                        "startDate": 1524016053000,
+                        "authorId": 99,
+                        "confirmed": 1,
+                        "createdTime": 1524927039000,
+                        "confirmedTime": 1524927039000,
+                        "confirmerId": 99
+                    }
+                },
+                "user": {
+                    "id": 99,
+                    "nickName": "Genie",
+                    "active": 1,
+                    "userId": 99
+                },
+                "status": 0
+            },
+            "score": 0.0,
+            "type": "brochure"
+        },
+        {
+            "item": {
+                "lastCmtTime": 1536935860000,
+                "followCount": 0,
+                "articleId": 1084,
+                "upCount": 0,
+                "description": "",
+                "weight": 0.0,
+                "title": "Amazon Subscribe & Save",
+                "good": 0,
+                "userId": 99,
+                "commentCount": 544,
+                "tags": "",
+                "resourceUrlUltimate": [
+                    
+                ],
+                "inTime": 1524060192000,
+                "downCount": 0,
+                "shareCount": 0,
+                "top": 0,
+                "upIds": "",
+                "style": 4,
+                "text": "",
+                "viewCount": 0,
+                "window": {
+                    "productId": 10583070,
+                    "lastCheckedTime": 1536322240000,
+                    "productTitle": "Rael Certified Organic Cotton Panty Liners, Regular - 4Pack/80 total - Unscented Pantiliners - Natural Daily Pantyliners (4 Pack)",
+                    "productSale": "$16.35",
+                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/61a6Lhy2jfL._SY355_.jpg",
+                    "width": 355,
+                    "height": 355,
+                    "availability": "in_stock",
+                    "sourceProductId": "B072BG2V5V",
+                    "sourceId": 3,
+                    "vendor": {
+                        "vendorId": 3,
+                        "vendorNameEn": "Amazon",
+                        "vendorNameCh": "Amazon",
+                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+                        "vendorDescCh": "全球著名购物平台",
+                        "vendorLogoUrl": "amazon.png",
+                        "readable": 1,
+                        "vendorLogoWidth": 109,
+                        "vendorLogoHeight": 33,
+                        "vendorDomain": "amazon.com",
+                        "currency": "U",
+                        "language": "en"
+                    },
+                    "topProductPromoInfoVendor": {
+                        "id": {
+                            "id": 10583070,
+                            "vendorId": 3
+                        },
+                        "taskId": 6891452,
+                        "titleEn": "Amazon - $16.35 Rael Certified Organic Cotton Panty Liners, Regular - 4Pack/80 total - Unscented Pantiliners - Natural Daily Pantyliners (4 Pack)",
+                        "shareTitleEn": "$16.35 Rael Certified Organic Cotton Panty Liners, Regular - 4Pack/80 total - Unscented Pantiliners - Natural Daily Pantyliners (4 Pack)",
+                        "price": "$16.35",
+                        "startDate": 1524060192000,
+                        "authorId": 99,
+                        "confirmed": 1,
+                        "createdTime": 1524927270000,
+                        "confirmedTime": 1524927270000,
+                        "confirmerId": 99
+                    }
+                },
+                "user": {
+                    "id": 99,
+                    "nickName": "Genie",
+                    "active": 1,
+                    "userId": 99
                 },
                 "status": 0
             },
@@ -315,6 +771,6 @@
             "type": "brochure"
         }
     ],
-    "num": 5,
+    "num": 10,
     "lifeCycle": 1
 }

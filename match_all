@@ -25,17 +25,19 @@ curl -XGET '192.168.1.106:9201/brochure/items/_search?pretty' -H 'Content-Type: 
 '
 
 
-curl -XGET 'http://192.168.1.104:9201/article/post/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.103:9201/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 10,
     "query": {
-       "match_all" : {}
+       "match" : {"sourceProductId": "2881361"}
     }
 }
 '
 
+2881361
 
-curl -XGET 'http://192.168.1.104:9201/tag/word/_search?pretty' -H 'Content-Type: application/json' -d'
+
+curl -XGET 'http://192.168.1.104:9201/jinbagsearch_hot/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 10,
     "query": {
@@ -69,62 +71,39 @@ curl -XGET 'http://192.168.1.104:9201/article/post/_search?pretty' -H 'Content-T
 
 
 
-curl -XGET '192.168.1.106:9201/brochure/items/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET '192.168.1.104:9201/jinbagsearch_hot/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size":13,
     "query": {
-      "bool":{
-        "should":[
+      "bool" : {
+        "must" : [
           {
-            "constant_score":{
-              "query":{
-                  "match":{
-                    "products" : {
-                      "query":"1",
-                      "boost" : 1.0
-                  }
-                }
-              }
-            }
-          },
-          {
-            "constant_score":{
-              "query":{
-                "match":{
-                  "products": {
-                    "query":"2",
-                    "boost" : 1.0
-                  }
-                }
-              }
-            }
-          },
-          {
-            "constant_score":{
-              "query":{
-                "match":{
-                  "products": {
-                    "query":"3",
-                    "boost" : 1.0
-                  }
-                }
-              }
-            }
-            
-          },
-          {
-            "constant_score":{
-              "query":{
-                "match":{
-                  "products": {
-                    "query":"4",
-                    "boost" : 1.0
-                  }
-                }
+            "match" : {
+              "all" : {
+                "query" : "Featuring",
+                "operator" : "AND",
+                "prefix_length" : 0,
+                "max_expansions" : 50,
+                "fuzzy_transpositions" : true,
+                "lenient" : false,
+                "zero_terms_query" : "NONE",
+                "boost" : 1.0
               }
             }
           }
-        ]
+        ],
+        "must_not" : [
+          {
+            "ids" : {
+              "type" : [ ],
+              "values" : [ ],
+              "boost" : 1.0
+            }
+          }
+        ],
+        "disable_coord" : false,
+        "adjust_pure_negative" : true,
+        "boost" : 1.0
       }
     }
 }

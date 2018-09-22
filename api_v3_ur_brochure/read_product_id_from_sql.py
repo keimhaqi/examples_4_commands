@@ -69,7 +69,21 @@ def get_article_id_from_article(pool):
     cnx.close()
     return article_ids
 
+def get_article_id_from_article_product(pool):
+    sql = "select distinct(product_id) from article_product as ap right join (select id, in_time from comment as co order by co.in_time) as inner_query on (ap.comment_id=inner_query.id) "
+    cnx = pool.connection()
+    cursor = cnx.cursor()
+    cursor.execute(sql)
 
+    product_ids = []
+    if cursor.rowcount != 0:
+        for product_id in cursor:
+            if judge_none(product_id[0]):
+                product_ids.append(int(product_id[0]))
+    
+    cursor.close()
+    cnx.close()
+    return product_ids
 
 if __name__ == '__main__':
     t1 = datetime.datetime.now()
@@ -83,8 +97,8 @@ if __name__ == '__main__':
     # parser.add_argument('--vendordbport', default='3306')
 
     parser.add_argument('--vendordbuser', default='root')
-    parser.add_argument('--vendordbpassword', default='liadahao')
-    parser.add_argument('--vendordbhost', default='192.168.1.188')
+    parser.add_argument('--vendordbpassword', default='admin')
+    parser.add_argument('--vendordbhost', default='localhost')
     parser.add_argument('--vendordbdatabase', default='jinbag')
     parser.add_argument('--vendordbport', default='3306')
 
@@ -103,9 +117,12 @@ if __name__ == '__main__':
     # product_ids = get_product_id_from_article_product(pool)
     # p_ids = ','.join(product_ids)
     # print(p_ids)
-    article_ids = get_article_id_from_article(pool)
-    a_ids = '\npreference.brochure.'.join(article_ids)
-    print(a_ids)
+    # article_ids = get_article_id_from_article(pool)
+    product_ids = get_article_id_from_article_product(pool)
+    # a_ids = '\npreference.brochure.'.join(article_ids)
+    # for item in product_ids:
+    #     print('preference.brochure.{}=0.0'.format(item))
+    print(product_ids)
     pool.close()
 
 

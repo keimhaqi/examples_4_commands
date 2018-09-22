@@ -1,0 +1,67 @@
+{
+    "items": [
+        {
+            "item": {
+                "lastCmtTime": 1536935892000,
+                "followCount": 0,
+                "articleId": 1072,
+                "upCount": 0,
+                "description": "",
+                "weight": 0.0,
+                "title": "Amazon Best Sellers in Baby Products",
+                "good": 0,
+                "userId": 99,
+                "commentCount": 292,
+                "tags": "",
+                "resourceUrlUltimate": [
+                    
+                ],
+                "inTime": 1523459317000,
+                "downCount": 0,
+                "shareCount": 0,
+                "top": 0,
+                "upIds": "",
+                "style": 4,
+                "text": "",
+                "viewCount": 0,
+                "window": {
+                    "productId": 10550646,
+                    "lastCheckedTime": 1536321682000,
+                    "productTitle": "VELCRO Brand 90075 - Sticky Back - 3 1/2\" x 3/4\" Strips, 4 Sets - Black",
+                    "productSale": "$2.98",
+                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/51Ip6a88-WL._SY355_.jpg",
+                    "width": 355,
+                    "height": 355,
+                    "availability": "in_stock",
+                    "topProductPromoInfoVendor": {
+                        "id": {
+                            "id": 10550646,
+                            "vendorId": 3
+                        },
+                        "taskId": 6886394,
+                        "titleEn": "Amazon - $2.98 VELCRO Brand 90075 - Sticky Back - 3 1/2\" x 3/4\" Strips, 4 Sets - Black",
+                        "shareTitleEn": "$2.98 VELCRO Brand 90075 - Sticky Back - 3 1/2\" x 3/4\" Strips, 4 Sets - Black",
+                        "price": "$2.98",
+                        "startDate": 1523459317000,
+                        "authorId": 99,
+                        "confirmed": 1,
+                        "createdTime": 1524929974000,
+                        "confirmedTime": 1524929974000,
+                        "confirmerId": 99
+                    }
+                },
+                "user": {
+                    "id": 99,
+                    "nickName": "Genie",
+                    "active": 1,
+                    "userId": 99
+                },
+                "status": 0
+            },
+            "score": 0.0,
+            "type": "brochure"
+        }
+    ],
+    "num": 1,
+    "lifeCycle": 1
+}
