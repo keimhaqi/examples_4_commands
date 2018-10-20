@@ -41,10 +41,23 @@ curl -i -k -H 'Content-Type: application/json' -d '
 
 curl -i -k -H 'Content-Type: application/json' -d '
 {
-  "user": "289",
-  "num": 1,
-  "blacklistItems":[52,40,60,84],
-  "blacklist":[10651560,10665990,10759370],
+  "user": "dbcae0ceadd49336",
+  "num": 10,
+  "blacklistItems":[1088,1086,1064,1084,1090,1082,1080,1078,1076,1072,1074,1068,1070,1066,1058,624,622,1060,1056,1054,1052,1050,1048,1046,1044,1042,1040,1038,1036,1034,1032,1030,1028,1026,1024,1022,1020,1018,1016,1014,1012,1010,1008,1006,1004,1002,1000,998,996,994,992,990,988,986,984,982,980,978,976,974,972,970,968,966,964,962,960,958,956,954,952,950,948,946,944,942,940,938,936,934,932,930,928,926,924,922,920,918,916,914,912,910,908,906,904,902,900,898,896,894,892,890,888,886,884,882,880,878,876,874],
+  "blacklist":[],
+  "fields":[
+    {"name": "status", "values":[0]}
+  ]
+}
+' http://localhost:9124/api/v3/ur/brochure
+
+
+curl -i -k -H 'Content-Type: application/json' -d '
+{
+  "user": "299",
+  "num": 10,
+  "blacklistItems":[],
+  "blacklist":[],
   "fields":[
     {"name": "status", "values":[0]}
   ]
@@ -246,3 +259,24 @@ select major.article_id as major_article_id, major.product_id as major_product_i
 
 
 10851766
+
+4737822,10857940,10853476,239127,237942,4737838,239865,239662
+
+
+SELECT * FROM `article_product` WHERE `product_id` IN (4737822,10857940,10853476,239127,237942,4737838,239865,239662) and article_id=322 
+
+
+select distinct(comment_id), max(update_time) as update_time from article_product group by comment_id order by update_time desc 
+
+
+select product_id, comment_id, max(update_time) as update_time from article_product group by product_id, comment_id order by update_time desc 
+
+select distinct(product_id), max(comment_id), max(update_time) as update_time from article_product group by product_id order by update_time desc 
+
+select distinct(comment_id), distinct(product_id), max(update_time) as update_time from article_product group by comment_id order by update_time desc 
+
+select product_id,max(update_time) as update_time from article_product where comment_id in (select DISTINCT(comment_id) from article_product order by update_time desc) group_by product_id order by update_time desc
+
+select product_id, comment_id, max(update_time) as update_time from article_product group by product_id, comment_id order by update_time desc 
+
+select DISTINCT(product_id) from article_product WHERE (comment_id,update_time) in (select comment_id, max(update_time) as update_time from article_product group by comment_id order by update_time desc)

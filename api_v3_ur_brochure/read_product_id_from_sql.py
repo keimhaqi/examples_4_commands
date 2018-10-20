@@ -54,7 +54,7 @@ def get_product_id_from_article_product(pool):
     return product_ids
 
 def get_article_id_from_article(pool):
-    sql = "SELECT `id` FROM `article` WHERE `id`> 320"
+    sql = "SELECT `id` FROM `article`"
     cnx = pool.connection()
     cursor = cnx.cursor()
     cursor.execute(sql)
@@ -85,6 +85,24 @@ def get_article_id_from_article_product(pool):
     cnx.close()
     return product_ids
 
+
+def get_product_id_only_from_product(pool):
+    sql = "select distinct(product_id) from `product`"
+    cnx = pool.connection()
+    cursor = cnx.cursor()
+    cursor.execute(sql)
+
+    product_ids = []
+    if cursor.rowcount != 0:
+        for product_id in cursor:
+            if judge_none(product_id[0]):
+                product_ids.append(int(product_id[0]))
+    
+    cursor.close()
+    cnx.close()
+    return product_ids
+
+
 if __name__ == '__main__':
     t1 = datetime.datetime.now()
     logging.basicConfig(filename='read_product_id_from_sql.log', level=logging.DEBUG,
@@ -99,7 +117,7 @@ if __name__ == '__main__':
     parser.add_argument('--vendordbuser', default='root')
     parser.add_argument('--vendordbpassword', default='admin')
     parser.add_argument('--vendordbhost', default='localhost')
-    parser.add_argument('--vendordbdatabase', default='jinbag')
+    parser.add_argument('--vendordbdatabase', default='pro_jinbag')
     parser.add_argument('--vendordbport', default='3306')
 
     args = parser.parse_args()
@@ -114,15 +132,15 @@ if __name__ == '__main__':
         charset='utf8'
     )
 
-    # product_ids = get_product_id_from_article_product(pool)
-    # p_ids = ','.join(product_ids)
-    # print(p_ids)
+
     # article_ids = get_article_id_from_article(pool)
-    product_ids = get_article_id_from_article_product(pool)
     # a_ids = '\npreference.brochure.'.join(article_ids)
-    # for item in product_ids:
+    # for item in article_ids:
     #     print('preference.brochure.{}=0.0'.format(item))
-    print(product_ids)
+
+    product_ids = get_product_id_only_from_product(pool)
+    for it in product_ids:
+        print(it)
     pool.close()
 
 

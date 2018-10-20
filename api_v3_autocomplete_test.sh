@@ -1,6 +1,6 @@
 curl -i -H "Content-type:application/json" -X POST -d '  
 {
-    "searchword":"niek",
+    "searchword":"n",
     "language":"en"         
 }                                                 
 ' http://localhost:9123/api/v3/autocomplete

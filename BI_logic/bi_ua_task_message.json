@@ -1,0 +1,27 @@
+[
+    {
+        "priority": 88,
+        "url": "https://www.bloomingdales.com/shop/product?ID=2588093",
+        "frequency": 95
+    },
+    {
+        "priority": 88,
+        "url": "https://www.bloomingdales.com/shop/product?ID=1357129",
+        "frequency": 95
+    },
+    {
+        "priority": 88,
+        "url": "https://www.amazon.com/dp/1423160932",
+        "frequency": 95
+    },
+    {
+        "priority": 88,
+        "url": "https://www.amazon.com/dp/B01CU9WLEG",
+        "frequency": 95
+    },
+    {
+        "priority": 88,
+        "url": "https://www.amazon.com/dp/B00KMHXFAI",
+        "frequency": 95
+    }
+]

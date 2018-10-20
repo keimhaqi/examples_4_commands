@@ -2,18 +2,18 @@ curl -k -H 'Content-Type: application/json' -d '
 {
   "params":[
     {
-      "searchword":"storage",
+      "searchword":"a",
       "type": "product",
       "blacklist":[],
-      "num": 1
+      "num": 5
     },
     {
-      "searchword":"storage",
+      "searchword":"a",
       "type": "article",
       "blacklistItems":[12],
-      "num": 1
+      "num": 5
     }
   ]
  
 }
-' http://localhost:9124/api/v4/search/itemlist
+' http://localhost:9124/api/v4/autocomplete

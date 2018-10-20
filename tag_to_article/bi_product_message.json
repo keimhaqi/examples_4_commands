@@ -1,0 +1,35 @@
+[
+    {
+        "productId": 1049570,
+        "brandId": 6969,
+        "categoryTypeId": 0,
+        "categoryTypePriority": 0,
+        "height": 355,
+        "availability": 0,
+        "productDescription": "[]",
+        "productDetail": "[\"We designed Dr. Scholl’s Pain Relief Orthotics for Arch Pain specifically for people who suffer from arch pain due to stress and strain on their arch. They have Shock Guard Technology to treat pain at the source for immediate, all-day relief. The package contains one pair of insoles to fit men's shoe sizes 8-12. Dr. Scholl's has been a trusted brand in foot care since 1904 when Dr. William Mathias Scholl, grandson of a cobbler, launched the company under the name Dr. Scholl Inc.\"]",
+        "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/81S9z9ZXkcL._SY355_.jpg",
+        "productPrice": "$20.00",
+        "productSale": "$10.10",
+        "productTitle": "Dr. Scholl's Dr. Scholl’s Pain Relief Orthotics for Arch Pain for Men, 1 Pair, Size 8-12",
+        "sourceId": 3,
+        "sourceProductId": "B014EX3672",
+        "width": 355,
+        "morePictures": 0,
+        "hasSmartPrice": 0,
+        "brandName": "Dr. Scholl's",
+        "lastCheckedTime": 1529970797000,
+        "numOfReviews": 76,
+        "score": 4.1,
+        "deleted": 0,
+        "categories": [
+            "health & household"
+        ],
+        "sources": [
+            "subscribe and save"
+        ],
+        "vendors": [
+            "amazon"
+        ]
+    }
+]

@@ -1,0 +1,48 @@
+[
+    {
+        "productId": 10495708,
+        "categoryId": 1,
+        "parentId": 2,
+        "brandId": 5599,
+        "depotId": 603545,
+        "height": 606,
+        "availability": 0,
+        "productDescription": "[\"Model is 6' 2\\\" and wearing a size Large,Slim fit\",\"Machine Wash Cold, Tumble Dry Low, Do Not Bleach\",\"Lightweight fabrication and dip dyed\",\"52%LINEN 48%COTTON\",\"Imported\",\"An Amazon brand\",\"Front button placket ,spread collar, left chest pocket\"]",
+        "productDetail": "[\"An Amazon brand- A dip dye shirt made with linen cotton blend for beach or dinner date, long walk on a beach, morning coffee, a Hawaiian lunch, Florida evening, LA celebrity sighting, or even a Seattle summer afternoon. Our unique Linen fabric is a natural woven fiber that's lightweight, comfortable, and smooth to the touch ,even in hot,humid weather could make you comfortable.Isle Bay Linens would be a perfect choice to take on a tropical vacation or to wear as business casual in muggy weather.\"]",
+        "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/71EF80OY8AL._SX466_.jpg",
+        "productPrice": "$28.00",
+        "productSale": "$8.92",
+        "confirmedMsrp": "$27.00",
+        "productTitle": "Isle-Bay-Linens Isle Bay Linens Men’s Slim Fit Dip Dye Short Sleeve Shirt",
+        "sourceId": 3,
+        "sourceProductId": "145217380X",
+        "width": 466,
+        "hasSmartPrice": 0,
+        "brandName": "Isle-Bay-Linens",
+        "version": "225dfb5ce5ef9d9bb20d4cfafe93f096",
+        "lastCheckedTime": 1537341625000,
+        "numOfReviews": 14,
+        "score": 4.1,
+        "topProductPromoInfoVendor": {
+            "id": {
+                "id": 10495708,
+                "vendorId": 3
+            },
+            "taskId": 1844,
+            "titleEn": "Amazon - $8.92 ($20.00) Dr. Scholl's Dr. Scholl’s Pain Relief Orthotics for Arch Pain for Men, 1 Pair, Size 8-12",
+            "shareTitleEn": "$8.92 ($20.00) Dr. Scholl's Dr. Scholl’s Pain Relief Orthotics for Arch Pain for Men, 1 Pair, Size 8-12",
+            "price": "$8.92",
+            "startDate": 1542754110000,
+            "authorId": 99,
+            "confirmed": 1,
+            "createdTime": 1539143397000,
+            "confirmedTime": 1539143397000,
+            "confirmerId": 99,
+            "product_id": 10495708,
+            "start_date": 1542754110000,
+            "articleProductId": 7759,
+            "repeat": true,
+            "articleId": 1124
+        }
+    }
+]

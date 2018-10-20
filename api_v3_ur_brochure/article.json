@@ -1,776 +1,736 @@
 {
-    "items": [
-        {
-            "item": {
-                "lastCmtTime": 1536935860000,
-                "followCount": 0,
-                "articleId": 1084,
-                "upCount": 0,
-                "description": "",
-                "weight": 0.0,
-                "title": "Amazon Subscribe & Save",
-                "good": 0,
-                "userId": 99,
-                "commentCount": 544,
-                "tags": "",
-                "resourceUrlUltimate": [
-                    
-                ],
-                "inTime": 1524060192000,
-                "downCount": 0,
-                "shareCount": 0,
-                "top": 0,
-                "upIds": "",
-                "style": 4,
-                "text": "",
-                "viewCount": 0,
-                "window": {
-                    "productId": 10576720,
-                    "lastCheckedTime": 1536311698000,
-                    "productTitle": "Healths Harmony Best Blood Pressure Support Supplement (NON-GMO) - Premium Natural Herbs, Vitamins & Berries - High Dosage of Hawthorn Extract – Naturally Widen Blood Vessels – Berry Lower Pills – 90 Capsules",
-                    "productSale": "$18.28",
-                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/71229MCyBiL._SY355_.jpg",
-                    "width": 355,
-                    "height": 355,
-                    "availability": "in_stock",
-                    "sourceProductId": "B00XBNB0IY",
-                    "sourceId": 3,
-                    "vendor": {
-                        "vendorId": 3,
-                        "vendorNameEn": "Amazon",
-                        "vendorNameCh": "Amazon",
-                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
-                        "vendorDescCh": "全球著名购物平台",
-                        "vendorLogoUrl": "amazon.png",
-                        "readable": 1,
-                        "vendorLogoWidth": 109,
-                        "vendorLogoHeight": 33,
-                        "vendorDomain": "amazon.com",
-                        "currency": "U",
-                        "language": "en"
-                    },
-                    "topProductPromoInfoVendor": {
-                        "id": {
-                            "id": 10576720,
-                            "vendorId": 3
-                        },
-                        "taskId": 6893086,
-                        "titleEn": "Amazon - $18.28 Healths Harmony Best Blood Pressure Support Supplement (NON-GMO) - Premium Natural Herbs, Vitamins & Berries - High Dosage of Hawthorn Extract – Naturally Widen Blood Vessels – Berry Lower Pills – 90 Capsules",
-                        "shareTitleEn": "$18.28 Healths Harmony Best Blood Pressure Support Supplement (NON-GMO) - Premium Natural Herbs, Vitamins & Berries - High Dosage of Hawthorn Extract – Naturally Widen Blood Vessels – Berry Lower Pills – 90 Capsules",
-                        "price": "$18.28",
-                        "startDate": 1524010139000,
-                        "authorId": 99,
-                        "confirmed": 1,
-                        "createdTime": 1524927006000,
-                        "confirmedTime": 1524927006000,
-                        "confirmerId": 99
-                    }
-                },
-                "user": {
-                    "id": 99,
-                    "nickName": "Genie",
-                    "active": 1,
-                    "userId": 99
-                },
-                "status": 0
-            },
-            "score": 0.0,
-            "type": "brochure"
-        },
-        {
-            "item": {
-                "lastCmtTime": 1536935847000,
-                "followCount": 0,
-                "articleId": 1086,
-                "upCount": 0,
-                "description": "",
-                "weight": 0.0,
-                "title": "Amazon Today’s Deals",
-                "good": 0,
-                "userId": 99,
-                "commentCount": 152,
-                "tags": "",
-                "resourceUrlUltimate": [
-                    
-                ],
-                "inTime": 1524486517000,
-                "downCount": 0,
-                "shareCount": 0,
-                "top": 0,
-                "upIds": "",
-                "style": 4,
-                "text": "",
-                "viewCount": 0,
-                "window": {
-                    "productId": 10579300,
-                    "lastCheckedTime": 1536310582000,
-                    "productTitle": "D'Addario Kaplan Premium Rosin with Case, Dark",
-                    "productSale": "$8.49",
-                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/71%2BokF7mkLL._SX355_.jpg",
-                    "width": 355,
-                    "height": 353,
-                    "availability": "in_stock",
-                    "sourceProductId": "B0038XUDW6",
-                    "sourceId": 3,
-                    "vendor": {
-                        "vendorId": 3,
-                        "vendorNameEn": "Amazon",
-                        "vendorNameCh": "Amazon",
-                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
-                        "vendorDescCh": "全球著名购物平台",
-                        "vendorLogoUrl": "amazon.png",
-                        "readable": 1,
-                        "vendorLogoWidth": 109,
-                        "vendorLogoHeight": 33,
-                        "vendorDomain": "amazon.com",
-                        "currency": "U",
-                        "language": "en"
-                    },
-                    "topProductPromoInfoVendor": {
-                        "id": {
-                            "id": 10579300,
-                            "vendorId": 3
-                        },
-                        "taskId": 6895931,
-                        "titleEn": "Amazon - $8.49 D'Addario Kaplan Premium Rosin with Case, Dark",
-                        "shareTitleEn": "$8.49 D'Addario Kaplan Premium Rosin with Case, Dark",
-                        "price": "$8.49",
-                        "startDate": 1524486517000,
-                        "authorId": 99,
-                        "confirmed": 1,
-                        "createdTime": 1525503034000,
-                        "confirmedTime": 1525503034000,
-                        "confirmerId": 99
-                    }
-                },
-                "user": {
-                    "id": 99,
-                    "nickName": "Genie",
-                    "active": 1,
-                    "userId": 99
-                },
-                "status": 0
-            },
-            "score": 0.0,
-            "type": "brochure"
-        },
-        {
-            "item": {
-                "lastCmtTime": 1536935892000,
-                "followCount": 0,
-                "articleId": 1072,
-                "upCount": 0,
-                "description": "",
-                "weight": 0.0,
-                "title": "Amazon Best Sellers in Baby Products",
-                "good": 0,
-                "userId": 99,
-                "commentCount": 292,
-                "tags": "",
-                "resourceUrlUltimate": [
-                    
-                ],
-                "inTime": 1523459317000,
-                "downCount": 0,
-                "shareCount": 0,
-                "top": 0,
-                "upIds": "",
-                "style": 4,
-                "text": "",
-                "viewCount": 0,
-                "window": {
-                    "productId": 10550646,
-                    "lastCheckedTime": 1536321682000,
-                    "productTitle": "VELCRO Brand 90075 - Sticky Back - 3 1/2\" x 3/4\" Strips, 4 Sets - Black",
-                    "productSale": "$2.98",
-                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/51Ip6a88-WL._SY355_.jpg",
-                    "width": 355,
-                    "height": 355,
-                    "availability": "in_stock",
-                    "sourceProductId": "B000TGSPV6",
-                    "sourceId": 3,
-                    "vendor": {
-                        "vendorId": 3,
-                        "vendorNameEn": "Amazon",
-                        "vendorNameCh": "Amazon",
-                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
-                        "vendorDescCh": "全球著名购物平台",
-                        "vendorLogoUrl": "amazon.png",
-                        "readable": 1,
-                        "vendorLogoWidth": 109,
-                        "vendorLogoHeight": 33,
-                        "vendorDomain": "amazon.com",
-                        "currency": "U",
-                        "language": "en"
-                    },
-                    "topProductPromoInfoVendor": {
-                        "id": {
-                            "id": 10550646,
-                            "vendorId": 3
-                        },
-                        "taskId": 6886394,
-                        "titleEn": "Amazon - $2.98 VELCRO Brand 90075 - Sticky Back - 3 1/2\" x 3/4\" Strips, 4 Sets - Black",
-                        "shareTitleEn": "$2.98 VELCRO Brand 90075 - Sticky Back - 3 1/2\" x 3/4\" Strips, 4 Sets - Black",
-                        "price": "$2.98",
-                        "startDate": 1523459317000,
-                        "authorId": 99,
-                        "confirmed": 1,
-                        "createdTime": 1524929974000,
-                        "confirmedTime": 1524929974000,
-                        "confirmerId": 99
-                    }
-                },
-                "user": {
-                    "id": 99,
-                    "nickName": "Genie",
-                    "active": 1,
-                    "userId": 99
-                },
-                "status": 0
-            },
-            "score": 0.0,
-            "type": "brochure"
-        },
-        {
-            "item": {
-                "lastCmtTime": 1536935898000,
-                "followCount": 0,
-                "articleId": 1064,
-                "upCount": 0,
-                "description": "",
-                "weight": 0.0,
-                "title": "Camelcamelcamel",
-                "good": 0,
-                "userId": 99,
-                "commentCount": 653,
-                "tags": "",
-                "resourceUrlUltimate": [
-                    
-                ],
-                "inTime": 1524263664000,
-                "downCount": 0,
-                "shareCount": 0,
-                "top": 0,
-                "upIds": "",
-                "style": 4,
-                "text": "",
-                "viewCount": 1,
-                "window": {
-                    "productId": 10584570,
-                    "lastCheckedTime": 1536193662000,
-                    "productTitle": "The New Father: A Dad's Guide to the First Year (New Father Series)",
-                    "productSale": "$7.03",
-                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/51%2B9cCBZmFL._SX331_BO1,204,203,200_.jpg",
-                    "width": 333,
-                    "height": 499,
-                    "availability": "in_stock",
-                    "sourceProductId": "0789211777",
-                    "sourceId": 3,
-                    "vendor": {
-                        "vendorId": 3,
-                        "vendorNameEn": "Amazon",
-                        "vendorNameCh": "Amazon",
-                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
-                        "vendorDescCh": "全球著名购物平台",
-                        "vendorLogoUrl": "amazon.png",
-                        "readable": 1,
-                        "vendorLogoWidth": 109,
-                        "vendorLogoHeight": 33,
-                        "vendorDomain": "amazon.com",
-                        "currency": "U",
-                        "language": "en"
-                    },
-                    "topProductPromoInfoVendor": {
-                        "id": {
-                            "id": 10584570,
-                            "vendorId": 3
-                        },
-                        "taskId": 6901848,
-                        "titleEn": "Amazon - $7.03 ($13.95) The New Father: A Dad's Guide to the First Year (New Father Series)",
-                        "shareTitleEn": "$7.03 ($13.95) The New Father: A Dad's Guide to the First Year (New Father Series)",
-                        "price": "$7.03",
-                        "startDate": 1524517129000,
-                        "authorId": 99,
-                        "confirmed": 1,
-                        "createdTime": 1524927409000,
-                        "confirmedTime": 1524927409000,
-                        "confirmerId": 99
-                    }
-                },
-                "user": {
-                    "id": 99,
-                    "nickName": "Genie",
-                    "active": 1,
-                    "userId": 99
-                },
-                "status": 0
-            },
-            "score": 0.0,
-            "type": "brochure"
-        },
-        {
-            "item": {
-                "lastCmtTime": 1536935892000,
-                "followCount": 0,
-                "articleId": 1072,
-                "upCount": 0,
-                "description": "",
-                "weight": 0.0,
-                "title": "Amazon Best Sellers in Baby Products",
-                "good": 0,
-                "userId": 99,
-                "commentCount": 292,
-                "tags": "",
-                "resourceUrlUltimate": [
-                    
-                ],
-                "inTime": 1523459317000,
-                "downCount": 0,
-                "shareCount": 0,
-                "top": 0,
-                "upIds": "",
-                "style": 4,
-                "text": "",
-                "viewCount": 0,
-                "window": {
-                    "productId": 10553660,
-                    "lastCheckedTime": 1536322407000,
-                    "productTitle": "ColorBok 73490A Designer Paper Pad Mint Julip, 12\" x 12\"",
-                    "productSale": "$5.00",
-                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/912g3uxWnCL._SY355_.jpg",
-                    "width": 334,
-                    "height": 355,
-                    "availability": "in_stock",
-                    "sourceProductId": "B01KI4EMQA",
-                    "sourceId": 3,
-                    "vendor": {
-                        "vendorId": 3,
-                        "vendorNameEn": "Amazon",
-                        "vendorNameCh": "Amazon",
-                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
-                        "vendorDescCh": "全球著名购物平台",
-                        "vendorLogoUrl": "amazon.png",
-                        "readable": 1,
-                        "vendorLogoWidth": 109,
-                        "vendorLogoHeight": 33,
-                        "vendorDomain": "amazon.com",
-                        "currency": "U",
-                        "language": "en"
-                    },
-                    "topProductPromoInfoVendor": {
-                        "id": {
-                            "id": 10553660,
-                            "vendorId": 3
-                        },
-                        "taskId": 6743344,
-                        "titleEn": "Amazon - $5.00 ($6.09) ColorBok 73490A Designer Paper Pad Mint Julip, 12\" x 12\"",
-                        "shareTitleEn": "$5.00 ($6.09) ColorBok 73490A Designer Paper Pad Mint Julip, 12\" x 12\"",
-                        "price": "$5.00",
-                        "startDate": 1523907028000,
-                        "authorId": 99,
-                        "confirmed": 1,
-                        "createdTime": 1524926595000,
-                        "confirmedTime": 1524926595000,
-                        "confirmerId": 99
-                    }
-                },
-                "user": {
-                    "id": 99,
-                    "nickName": "Genie",
-                    "active": 1,
-                    "userId": 99
-                },
-                "status": 0
-            },
-            "score": 0.0,
-            "type": "brochure"
-        },
-        {
-            "item": {
-                "lastCmtTime": 1536935898000,
-                "followCount": 0,
-                "articleId": 1064,
-                "upCount": 0,
-                "description": "",
-                "weight": 0.0,
-                "title": "Camelcamelcamel",
-                "good": 0,
-                "userId": 99,
-                "commentCount": 653,
-                "tags": "",
-                "resourceUrlUltimate": [
-                    
-                ],
-                "inTime": 1524263664000,
-                "downCount": 0,
-                "shareCount": 0,
-                "top": 0,
-                "upIds": "",
-                "style": 4,
-                "text": "",
-                "viewCount": 1,
-                "window": {
-                    "productId": 10583820,
-                    "lastCheckedTime": 1536311052000,
-                    "productTitle": "Wonderbag Non-Electric Portable Slow Cooker with Recipe Cookbook, Red Batik",
-                    "productSale": "$39.98",
-                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/71T-e0-k1sL._SX355_.jpg",
-                    "width": 355,
-                    "height": 224,
-                    "availability": "in_stock",
-                    "sourceProductId": "B00ESI96SW",
-                    "sourceId": 3,
-                    "vendor": {
-                        "vendorId": 3,
-                        "vendorNameEn": "Amazon",
-                        "vendorNameCh": "Amazon",
-                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
-                        "vendorDescCh": "全球著名购物平台",
-                        "vendorLogoUrl": "amazon.png",
-                        "readable": 1,
-                        "vendorLogoWidth": 109,
-                        "vendorLogoHeight": 33,
-                        "vendorDomain": "amazon.com",
-                        "currency": "U",
-                        "language": "en"
-                    },
-                    "topProductPromoInfoVendor": {
-                        "id": {
-                            "id": 10583820,
-                            "vendorId": 3
-                        },
-                        "taskId": 6900739,
-                        "titleEn": "Amazon - $39.98 Wonderbag Non-Electric Portable Slow Cooker with Recipe Cookbook, Red Batik",
-                        "shareTitleEn": "$39.98 Wonderbag Non-Electric Portable Slow Cooker with Recipe Cookbook, Red Batik",
-                        "price": "$39.98",
-                        "startDate": 1524263664000,
-                        "authorId": 99,
-                        "confirmed": 1,
-                        "createdTime": 1524927310000,
-                        "confirmedTime": 1524927310000,
-                        "confirmerId": 99
-                    }
-                },
-                "user": {
-                    "id": 99,
-                    "nickName": "Genie",
-                    "active": 1,
-                    "userId": 99
-                },
-                "status": 0
-            },
-            "score": 0.0,
-            "type": "brochure"
-        },
-        {
-            "item": {
-                "lastCmtTime": 1536935892000,
-                "followCount": 0,
-                "articleId": 1072,
-                "upCount": 0,
-                "description": "",
-                "weight": 0.0,
-                "title": "Amazon Best Sellers in Baby Products",
-                "good": 0,
-                "userId": 99,
-                "commentCount": 292,
-                "tags": "",
-                "resourceUrlUltimate": [
-                    
-                ],
-                "inTime": 1523459317000,
-                "downCount": 0,
-                "shareCount": 0,
-                "top": 0,
-                "upIds": "",
-                "style": 4,
-                "text": "",
-                "viewCount": 0,
-                "window": {
-                    "productId": 10552366,
-                    "lastCheckedTime": 1536318403000,
-                    "productTitle": "Kate Blanc Cosmetics Castor Oil (2oz) USDA Certified Organic, 100% Pure, Cold Pressed, Hexane Free by Kate Blanc. Stimulate Growth for Eyelashes, Eyebrows, Hair. Lash Growth Serum. Brow Treatment. FREE Mascara Starter Kit",
-                    "productSale": "$9.99",
-                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/51lT2wUZ3iL._SY355_.jpg",
-                    "width": 308,
-                    "height": 355,
-                    "availability": "in_stock",
-                    "sourceProductId": "B01NALN8Q9",
-                    "sourceId": 3,
-                    "vendor": {
-                        "vendorId": 3,
-                        "vendorNameEn": "Amazon",
-                        "vendorNameCh": "Amazon",
-                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
-                        "vendorDescCh": "全球著名购物平台",
-                        "vendorLogoUrl": "amazon.png",
-                        "readable": 1,
-                        "vendorLogoWidth": 109,
-                        "vendorLogoHeight": 33,
-                        "vendorDomain": "amazon.com",
-                        "currency": "U",
-                        "language": "en"
-                    },
-                    "topProductPromoInfoVendor": {
-                        "id": {
-                            "id": 10552366,
-                            "vendorId": 3
-                        },
-                        "taskId": 171586,
-                        "titleEn": "Amazon - $9.99 Kate Blanc Cosmetics Castor Oil (2oz) USDA Certified Organic, 100% Pure, Cold Pressed, Hexane Free by Kate Blanc. Stimulate Growth for Eyelashes, Eyebrows, Hair. Lash Growth Serum. Brow Treatment. FREE Mascara Starter Kit",
-                        "shareTitleEn": "$9.99 Kate Blanc Cosmetics Castor Oil (2oz) USDA Certified Organic, 100% Pure, Cold Pressed, Hexane Free by Kate Blanc. Stimulate Growth for Eyelashes, Eyebrows, Hair. Lash Growth Serum. Brow Treatment. FREE Mascara Starter Kit",
-                        "price": "$9.99",
-                        "startDate": 1523574075000,
-                        "authorId": 99,
-                        "confirmed": 1,
-                        "createdTime": 1524926522000,
-                        "confirmedTime": 1524926522000,
-                        "confirmerId": 99
-                    }
-                },
-                "user": {
-                    "id": 99,
-                    "nickName": "Genie",
-                    "active": 1,
-                    "userId": 99
-                },
-                "status": 0
-            },
-            "score": 0.0,
-            "type": "brochure"
-        },
-        {
-            "item": {
-                "lastCmtTime": 1536935898000,
-                "followCount": 0,
-                "articleId": 1064,
-                "upCount": 0,
-                "description": "",
-                "weight": 0.0,
-                "title": "Camelcamelcamel",
-                "good": 0,
-                "userId": 99,
-                "commentCount": 653,
-                "tags": "",
-                "resourceUrlUltimate": [
-                    
-                ],
-                "inTime": 1524263664000,
-                "downCount": 0,
-                "shareCount": 0,
-                "top": 0,
-                "upIds": "",
-                "style": 4,
-                "text": "",
-                "viewCount": 1,
-                "window": {
-                    "productId": 10587054,
-                    "lastCheckedTime": 1536312858000,
-                    "productTitle": "Canon EOS 5D Mark IV Full Frame Digital SLR Camera Body",
-                    "productSale": "$3,099.00",
-                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/81UdZ2CMsQL._SX355_.jpg",
-                    "width": 355,
-                    "height": 281,
-                    "availability": "in_stock",
-                    "sourceProductId": "B01KURGS9E",
-                    "sourceId": 3,
-                    "vendor": {
-                        "vendorId": 3,
-                        "vendorNameEn": "Amazon",
-                        "vendorNameCh": "Amazon",
-                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
-                        "vendorDescCh": "全球著名购物平台",
-                        "vendorLogoUrl": "amazon.png",
-                        "readable": 1,
-                        "vendorLogoWidth": 109,
-                        "vendorLogoHeight": 33,
-                        "vendorDomain": "amazon.com",
-                        "currency": "U",
-                        "language": "en"
-                    },
-                    "topProductPromoInfoVendor": {
-                        "id": {
-                            "id": 10587054,
-                            "vendorId": 3
-                        },
-                        "taskId": 6904312,
-                        "titleEn": "Amazon - $3,099.00 ($3,499.00) Canon EOS 5D Mark IV Full Frame Digital SLR Camera Body",
-                        "shareTitleEn": "$3,099.00 ($3,499.00) Canon EOS 5D Mark IV Full Frame Digital SLR Camera Body",
-                        "price": "$3,099.00",
-                        "startDate": 1525093688000,
-                        "authorId": 99,
-                        "confirmed": 1,
-                        "createdTime": 1525094410000,
-                        "confirmedTime": 1525094410000,
-                        "confirmerId": 99
-                    }
-                },
-                "user": {
-                    "id": 99,
-                    "nickName": "Genie",
-                    "active": 1,
-                    "userId": 99
-                },
-                "status": 0
-            },
-            "score": 0.0,
-            "type": "brochure"
-        },
-        {
-            "item": {
-                "lastCmtTime": 1536935860000,
-                "followCount": 0,
-                "articleId": 1084,
-                "upCount": 0,
-                "description": "",
-                "weight": 0.0,
-                "title": "Amazon Subscribe & Save",
-                "good": 0,
-                "userId": 99,
-                "commentCount": 544,
-                "tags": "",
-                "resourceUrlUltimate": [
-                    
-                ],
-                "inTime": 1524060192000,
-                "downCount": 0,
-                "shareCount": 0,
-                "top": 0,
-                "upIds": "",
-                "style": 4,
-                "text": "",
-                "viewCount": 0,
-                "window": {
-                    "productId": 10577918,
-                    "lastCheckedTime": 1536313328000,
-                    "productTitle": "BRI Nutrition Odorless Garlic - 120 Softgels - 1000mg Pure And Potent Garlic Allium Sativum Supplement (Maximum Strength) - 60 Day Supply",
-                    "productSale": "$12.88",
-                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/515N8Eun1pL._SY355_.jpg",
-                    "width": 355,
-                    "height": 355,
-                    "availability": "in_stock",
-                    "sourceProductId": "B06XH5VVXG",
-                    "sourceId": 3,
-                    "vendor": {
-                        "vendorId": 3,
-                        "vendorNameEn": "Amazon",
-                        "vendorNameCh": "Amazon",
-                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
-                        "vendorDescCh": "全球著名购物平台",
-                        "vendorLogoUrl": "amazon.png",
-                        "readable": 1,
-                        "vendorLogoWidth": 109,
-                        "vendorLogoHeight": 33,
-                        "vendorDomain": "amazon.com",
-                        "currency": "U",
-                        "language": "en"
-                    },
-                    "topProductPromoInfoVendor": {
-                        "id": {
-                            "id": 10577918,
-                            "vendorId": 3
-                        },
-                        "taskId": 6889628,
-                        "titleEn": "Amazon - $12.88 BRI Nutrition Odorless Garlic - 120 Softgels - 1000mg Pure And Potent Garlic Allium Sativum Supplement (Maximum Strength) - 60 Day Supply",
-                        "shareTitleEn": "$12.88 BRI Nutrition Odorless Garlic - 120 Softgels - 1000mg Pure And Potent Garlic Allium Sativum Supplement (Maximum Strength) - 60 Day Supply",
-                        "price": "$12.88",
-                        "startDate": 1524016053000,
-                        "authorId": 99,
-                        "confirmed": 1,
-                        "createdTime": 1524927039000,
-                        "confirmedTime": 1524927039000,
-                        "confirmerId": 99
-                    }
-                },
-                "user": {
-                    "id": 99,
-                    "nickName": "Genie",
-                    "active": 1,
-                    "userId": 99
-                },
-                "status": 0
-            },
-            "score": 0.0,
-            "type": "brochure"
-        },
-        {
-            "item": {
-                "lastCmtTime": 1536935860000,
-                "followCount": 0,
-                "articleId": 1084,
-                "upCount": 0,
-                "description": "",
-                "weight": 0.0,
-                "title": "Amazon Subscribe & Save",
-                "good": 0,
-                "userId": 99,
-                "commentCount": 544,
-                "tags": "",
-                "resourceUrlUltimate": [
-                    
-                ],
-                "inTime": 1524060192000,
-                "downCount": 0,
-                "shareCount": 0,
-                "top": 0,
-                "upIds": "",
-                "style": 4,
-                "text": "",
-                "viewCount": 0,
-                "window": {
-                    "productId": 10583070,
-                    "lastCheckedTime": 1536322240000,
-                    "productTitle": "Rael Certified Organic Cotton Panty Liners, Regular - 4Pack/80 total - Unscented Pantiliners - Natural Daily Pantyliners (4 Pack)",
-                    "productSale": "$16.35",
-                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/61a6Lhy2jfL._SY355_.jpg",
-                    "width": 355,
-                    "height": 355,
-                    "availability": "in_stock",
-                    "sourceProductId": "B072BG2V5V",
-                    "sourceId": 3,
-                    "vendor": {
-                        "vendorId": 3,
-                        "vendorNameEn": "Amazon",
-                        "vendorNameCh": "Amazon",
-                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
-                        "vendorDescCh": "全球著名购物平台",
-                        "vendorLogoUrl": "amazon.png",
-                        "readable": 1,
-                        "vendorLogoWidth": 109,
-                        "vendorLogoHeight": 33,
-                        "vendorDomain": "amazon.com",
-                        "currency": "U",
-                        "language": "en"
-                    },
-                    "topProductPromoInfoVendor": {
-                        "id": {
-                            "id": 10583070,
-                            "vendorId": 3
-                        },
-                        "taskId": 6891452,
-                        "titleEn": "Amazon - $16.35 Rael Certified Organic Cotton Panty Liners, Regular - 4Pack/80 total - Unscented Pantiliners - Natural Daily Pantyliners (4 Pack)",
-                        "shareTitleEn": "$16.35 Rael Certified Organic Cotton Panty Liners, Regular - 4Pack/80 total - Unscented Pantiliners - Natural Daily Pantyliners (4 Pack)",
-                        "price": "$16.35",
-                        "startDate": 1524060192000,
-                        "authorId": 99,
-                        "confirmed": 1,
-                        "createdTime": 1524927270000,
-                        "confirmedTime": 1524927270000,
-                        "confirmerId": 99
-                    }
-                },
-                "user": {
-                    "id": 99,
-                    "nickName": "Genie",
-                    "active": 1,
-                    "userId": 99
-                },
-                "status": 0
-            },
-            "score": 0.0,
-            "type": "brochure"
-        }
-    ],
-    "num": 10,
-    "lifeCycle": 1
+	"items": [{
+		"item": {
+			"lastCmtTime": 1536935894000,
+			"followCount": 0,
+			"articleId": 1088,
+			"upCount": 0,
+			"description": "",
+			"weight": 0.0,
+			"title": "Amazon's Choice",
+			"good": 0,
+			"userId": 99,
+			"commentCount": 1655,
+			"tags": "",
+			"resourceUrlUltimate": [],
+			"inTime": 1525384280000,
+			"downCount": 0,
+			"shareCount": 0,
+			"top": 0,
+			"upIds": "",
+			"style": 4,
+			"viewCount": 14,
+			"window": {
+				"productId": 10855780,
+				"lastCheckedTime": 1536803353000,
+				"productTitle": "Tucker: The Man And His Dream",
+				"productSale": "$9.69",
+				"productImageLink": "https://images-na.ssl-images-amazon.com/images/I/81HXbv+Z+nL._SX342_.jpg",
+				"width": 342,
+				"height": 408,
+				"availability": "in_stock",
+				"sourceProductId": "B07DXSK4XQ",
+				"sourceId": 3,
+				"vendor": {
+					"vendorId": 3,
+					"vendorNameEn": "Amazon",
+					"vendorNameCh": "Amazon",
+					"vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+					"vendorDescCh": "全球著名购物平台",
+					"vendorLogoUrl": "amazon.png",
+					"readable": 1,
+					"vendorLogoWidth": 109,
+					"vendorLogoHeight": 33,
+					"vendorDomain": "amazon.com",
+					"currency": "U",
+					"language": "en"
+				},
+				"topProductPromoInfoVendor": {
+					"id": {
+						"id": 10855780,
+						"vendorId": 3
+					},
+					"taskId": 7333098,
+					"titleEn": "Amazon - $9.69 ($14.99) Tucker: The Man And His Dream",
+					"shareTitleEn": "$9.69 ($14.99) Tucker: The Man And His Dream",
+					"price": "$9.69",
+					"startDate": 1524263664000,
+					"authorId": 99,
+					"confirmed": 1,
+					"createdTime": 1536804197000,
+					"confirmedTime": 1536804197000,
+					"confirmerId": 99
+				}
+			},
+			"user": {
+				"id": 99,
+				"nickName": "Genie",
+				"active": 1,
+				"userId": 99
+			},
+			"status": 0
+		},
+		"score": 1.9836151648652924,
+		"type": "brochure"
+	}, {
+		"item": {
+			"lastCmtTime": 1536935894000,
+			"followCount": 0,
+			"articleId": 1088,
+			"upCount": 0,
+			"description": "",
+			"weight": 0.0,
+			"title": "Amazon's Choice",
+			"good": 0,
+			"userId": 99,
+			"commentCount": 1655,
+			"tags": "",
+			"resourceUrlUltimate": [],
+			"inTime": 1525384280000,
+			"downCount": 0,
+			"shareCount": 0,
+			"top": 0,
+			"upIds": "",
+			"style": 4,
+			"viewCount": 14,
+			"window": {
+				"productId": 10855788,
+				"lastCheckedTime": 1536889584000,
+				"productTitle": "Oracal 651 Glossy Permanent Vinyl 12 inch x 6 Feet - Turquoise Blue",
+				"productSale": "$5.67",
+				"productImageLink": "https://images-na.ssl-images-amazon.com/images/I/51QwwaTZMEL._SY355_.jpg",
+				"width": 355,
+				"height": 355,
+				"availability": "in_stock",
+				"sourceProductId": "B01N6JTHB4",
+				"sourceId": 3,
+				"vendor": {
+					"vendorId": 3,
+					"vendorNameEn": "Amazon",
+					"vendorNameCh": "Amazon",
+					"vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+					"vendorDescCh": "全球著名购物平台",
+					"vendorLogoUrl": "amazon.png",
+					"readable": 1,
+					"vendorLogoWidth": 109,
+					"vendorLogoHeight": 33,
+					"vendorDomain": "amazon.com",
+					"currency": "U",
+					"language": "en"
+				},
+				"topProductPromoInfoVendor": {
+					"id": {
+						"id": 10855788,
+						"vendorId": 3
+					},
+					"taskId": 7333173,
+					"titleEn": "Amazon - $5.67 Oracal 651 Glossy Permanent Vinyl 12 inch x 6 Feet - Turquoise Blue",
+					"shareTitleEn": "$5.67 Oracal 651 Glossy Permanent Vinyl 12 inch x 6 Feet - Turquoise Blue",
+					"price": "$5.67",
+					"startDate": 1524263664000,
+					"authorId": 99,
+					"confirmed": 1,
+					"createdTime": 1536889917000,
+					"confirmedTime": 1536889917000,
+					"confirmerId": 99
+				}
+			},
+			"user": {
+				"id": 99,
+				"nickName": "Genie",
+				"active": 1,
+				"userId": 99
+			},
+			"status": 0
+		},
+		"score": 1.9836151648576181,
+		"type": "brochure"
+	}, {
+		"item": {
+			"lastCmtTime": 1536935894000,
+			"followCount": 0,
+			"articleId": 1088,
+			"upCount": 0,
+			"description": "",
+			"weight": 0.0,
+			"title": "Amazon's Choice",
+			"good": 0,
+			"userId": 99,
+			"commentCount": 1655,
+			"tags": "",
+			"resourceUrlUltimate": [],
+			"inTime": 1525384280000,
+			"downCount": 0,
+			"shareCount": 0,
+			"top": 0,
+			"upIds": "",
+			"style": 4,
+			"viewCount": 14,
+			"window": {
+				"productId": 10855516,
+				"lastCheckedTime": 1537430350000,
+				"productTitle": "JanSport Half Pint Classic Daypack",
+				"productSale": "$15.75",
+				"productImageLink": "https://images-na.ssl-images-amazon.com/images/I/91kIUpegyeL._UX342_.jpg",
+				"width": 342,
+				"height": 398,
+				"availability": "in_stock",
+				"sourceProductId": "B072L72PDL",
+				"sourceId": 3,
+				"vendor": {
+					"vendorId": 3,
+					"vendorNameEn": "Amazon",
+					"vendorNameCh": "Amazon",
+					"vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+					"vendorDescCh": "全球著名购物平台",
+					"vendorLogoUrl": "amazon.png",
+					"readable": 1,
+					"vendorLogoWidth": 109,
+					"vendorLogoHeight": 33,
+					"vendorDomain": "amazon.com",
+					"currency": "U",
+					"language": "en"
+				},
+				"topProductPromoInfoVendor": {
+					"id": {
+						"id": 10855516,
+						"vendorId": 3
+					},
+					"taskId": 7332617,
+					"titleEn": "Amazon - $16.50 ($25.00) JanSport Half Pint Classic Daypack",
+					"shareTitleEn": "$16.50 ($25.00) JanSport Half Pint Classic Daypack",
+					"price": "$16.50",
+					"startDate": 1524263664000,
+					"authorId": 99,
+					"confirmed": 1,
+					"createdTime": 1536809586000,
+					"confirmedTime": 1536809586000,
+					"confirmerId": 99
+				}
+			},
+			"user": {
+				"id": 99,
+				"nickName": "Genie",
+				"active": 1,
+				"userId": 99
+			},
+			"status": 0
+		},
+		"score": 1.9836151648525018,
+		"type": "brochure"
+	}, {
+		"item": {
+			"lastCmtTime": 1536935894000,
+			"followCount": 0,
+			"articleId": 1088,
+			"upCount": 0,
+			"description": "",
+			"weight": 0.0,
+			"title": "Amazon's Choice",
+			"good": 0,
+			"userId": 99,
+			"commentCount": 1655,
+			"tags": "",
+			"resourceUrlUltimate": [],
+			"inTime": 1525384280000,
+			"downCount": 0,
+			"shareCount": 0,
+			"top": 0,
+			"upIds": "",
+			"style": 4,
+			"viewCount": 14,
+			"window": {
+				"productId": 10855774,
+				"lastCheckedTime": 1536803342000,
+				"productTitle": "LEGO THE NINJAGO MOVIE Lloyd - Spinjitzu Master 70628 Building Kit (48 Piece)",
+				"productSale": "$7.89",
+				"productImageLink": "https://images-na.ssl-images-amazon.com/images/I/91-iPEbiT8L._SY355_.jpg",
+				"width": 355,
+				"height": 355,
+				"availability": "in_stock",
+				"sourceProductId": "B075R8ZR2L",
+				"sourceId": 3,
+				"vendor": {
+					"vendorId": 3,
+					"vendorNameEn": "Amazon",
+					"vendorNameCh": "Amazon",
+					"vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+					"vendorDescCh": "全球著名购物平台",
+					"vendorLogoUrl": "amazon.png",
+					"readable": 1,
+					"vendorLogoWidth": 109,
+					"vendorLogoHeight": 33,
+					"vendorDomain": "amazon.com",
+					"currency": "U",
+					"language": "en"
+				},
+				"topProductPromoInfoVendor": {
+					"id": {
+						"id": 10855774,
+						"vendorId": 3
+					},
+					"taskId": 7333064,
+					"titleEn": "Amazon - $7.89 ($9.99) LEGO THE NINJAGO MOVIE Lloyd - Spinjitzu Master 70628 Building Kit (48 Piece)",
+					"shareTitleEn": "$7.89 ($9.99) LEGO THE NINJAGO MOVIE Lloyd - Spinjitzu Master 70628 Building Kit (48 Piece)",
+					"price": "$7.89",
+					"startDate": 1524263664000,
+					"authorId": 99,
+					"confirmed": 1,
+					"createdTime": 1536804198000,
+					"confirmedTime": 1536804198000,
+					"confirmerId": 99
+				}
+			},
+			"user": {
+				"id": 99,
+				"nickName": "Genie",
+				"active": 1,
+				"userId": 99
+			},
+			"status": 0
+		},
+		"score": 1.9836151648448275,
+		"type": "brochure"
+	}, {
+		"item": {
+			"lastCmtTime": 1536935894000,
+			"followCount": 0,
+			"articleId": 1088,
+			"upCount": 0,
+			"description": "",
+			"weight": 0.0,
+			"title": "Amazon's Choice",
+			"good": 0,
+			"userId": 99,
+			"commentCount": 1655,
+			"tags": "",
+			"resourceUrlUltimate": [],
+			"inTime": 1525384280000,
+			"downCount": 0,
+			"shareCount": 0,
+			"top": 0,
+			"upIds": "",
+			"style": 4,
+			"viewCount": 14,
+			"window": {
+				"productId": 10855802,
+				"lastCheckedTime": 1536889612000,
+				"productTitle": "MSI Full HD RGB Gaming LED Non-Glare Super Narrow Bezel 1ms 2560 x 1440 144Hz Refresh Rate SteelSeries GameSense FreeSync 27” Curved Gaming Monitor (Optix MPG27CQ)",
+				"productSale": "$449.99",
+				"productImageLink": "https://images-na.ssl-images-amazon.com/images/I/61Ufg1-3V5L._SX355_.jpg",
+				"width": 355,
+				"height": 284,
+				"availability": "in_stock",
+				"sourceProductId": "B07C41W83V",
+				"sourceId": 3,
+				"vendor": {
+					"vendorId": 3,
+					"vendorNameEn": "Amazon",
+					"vendorNameCh": "Amazon",
+					"vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+					"vendorDescCh": "全球著名购物平台",
+					"vendorLogoUrl": "amazon.png",
+					"readable": 1,
+					"vendorLogoWidth": 109,
+					"vendorLogoHeight": 33,
+					"vendorDomain": "amazon.com",
+					"currency": "U",
+					"language": "en"
+				},
+				"topProductPromoInfoVendor": {
+					"id": {
+						"id": 10855802,
+						"vendorId": 3
+					},
+					"taskId": 7333149,
+					"titleEn": "Amazon - $449.99 ($499.99) MSI Full HD RGB Gaming LED Non-Glare Super Narrow Bezel 1ms 2560 x 1440 144Hz Refresh Rate SteelSeries GameSense FreeSync 27” Curved Gaming Monitor (Optix MPG27CQ)",
+					"shareTitleEn": "$449.99 ($499.99) MSI Full HD RGB Gaming LED Non-Glare Super Narrow Bezel 1ms 2560 x 1440 144Hz Refresh Rate SteelSeries GameSense FreeSync 27” Curved Gaming Monitor (Optix MPG27CQ)",
+					"price": "$449.99",
+					"startDate": 1524263664000,
+					"authorId": 99,
+					"confirmed": 1,
+					"createdTime": 1536889922000,
+					"confirmedTime": 1536889922000,
+					"confirmerId": 99
+				}
+			},
+			"user": {
+				"id": 99,
+				"nickName": "Genie",
+				"active": 1,
+				"userId": 99
+			},
+			"status": 0
+		},
+		"score": 1.9836151648422695,
+		"type": "brochure"
+	}, {
+		"item": {
+			"lastCmtTime": 1536935898000,
+			"followCount": 0,
+			"articleId": 1064,
+			"upCount": 0,
+			"description": "",
+			"weight": 0.0,
+			"title": "Camelcamelcamel",
+			"good": 0,
+			"userId": 99,
+			"commentCount": 653,
+			"tags": "",
+			"resourceUrlUltimate": [],
+			"inTime": 1524263664000,
+			"downCount": 0,
+			"shareCount": 0,
+			"top": 0,
+			"upIds": "",
+			"style": 4,
+			"viewCount": 1,
+			"window": {
+				"productId": 10855796,
+				"lastCheckedTime": 1536889600000,
+				"productTitle": "by PDP PDP SNES Classic Deluxe Carrying Case for the Super Nintendo Classic Console",
+				"productSale": "$19.99",
+				"productImageLink": "https://images-na.ssl-images-amazon.com/images/I/819p9M6qFwL._AC_SX215_.jpg",
+				"width": 215,
+				"height": 215,
+				"availability": "in_stock",
+				"sourceProductId": "B075MXXHCG",
+				"sourceId": 3,
+				"vendor": {
+					"vendorId": 3,
+					"vendorNameEn": "Amazon",
+					"vendorNameCh": "Amazon",
+					"vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+					"vendorDescCh": "全球著名购物平台",
+					"vendorLogoUrl": "amazon.png",
+					"readable": 1,
+					"vendorLogoWidth": 109,
+					"vendorLogoHeight": 33,
+					"vendorDomain": "amazon.com",
+					"currency": "U",
+					"language": "en"
+				},
+				"topProductPromoInfoVendor": {
+					"id": {
+						"id": 10855796,
+						"vendorId": 3
+					},
+					"taskId": 7333135,
+					"titleEn": "Amazon - $19.99 by PDP PDP SNES Classic Deluxe Carrying Case for the Super Nintendo Classic Console",
+					"shareTitleEn": "$19.99 by PDP PDP SNES Classic Deluxe Carrying Case for the Super Nintendo Classic Console",
+					"price": "$19.99",
+					"startDate": 1524263664000,
+					"authorId": 99,
+					"confirmed": 1,
+					"createdTime": 1536889920000,
+					"confirmedTime": 1536889920000,
+					"confirmerId": 99
+				}
+			},
+			"user": {
+				"id": 99,
+				"nickName": "Genie",
+				"active": 1,
+				"userId": 99
+			},
+			"status": 0
+		},
+		"score": 1.9821704797230382,
+		"type": "brochure"
+	}, {
+		"item": {
+			"lastCmtTime": 1536935898000,
+			"followCount": 0,
+			"articleId": 1064,
+			"upCount": 0,
+			"description": "",
+			"weight": 0.0,
+			"title": "Camelcamelcamel",
+			"good": 0,
+			"userId": 99,
+			"commentCount": 653,
+			"tags": "",
+			"resourceUrlUltimate": [],
+			"inTime": 1524263664000,
+			"downCount": 0,
+			"shareCount": 0,
+			"top": 0,
+			"upIds": "",
+			"style": 4,
+			"viewCount": 1,
+			"window": {
+				"productId": 10855782,
+				"lastCheckedTime": 1536803354000,
+				"productTitle": "iBUYPOWER Elite Gaming PC Desktop AMD Ryzen 7 1800X 3.6GHz, AMD Radeon RX 580 4GB Graphics, 16GB DDR4 RAM, 1TB HDD, 120GB SSD, Win 10 Home 64-bit, View21 035A",
+				"productSale": "$799.00",
+				"productImageLink": "https://images-na.ssl-images-amazon.com/images/I/71BvGJe4FkL._SY355_.jpg",
+				"width": 355,
+				"height": 355,
+				"availability": "in_stock",
+				"sourceProductId": "B07D5S3LZM",
+				"sourceId": 3,
+				"vendor": {
+					"vendorId": 3,
+					"vendorNameEn": "Amazon",
+					"vendorNameCh": "Amazon",
+					"vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+					"vendorDescCh": "全球著名购物平台",
+					"vendorLogoUrl": "amazon.png",
+					"readable": 1,
+					"vendorLogoWidth": 109,
+					"vendorLogoHeight": 33,
+					"vendorDomain": "amazon.com",
+					"currency": "U",
+					"language": "en"
+				},
+				"topProductPromoInfoVendor": {
+					"id": {
+						"id": 10855782,
+						"vendorId": 3
+					},
+					"taskId": 7333073,
+					"titleEn": "Amazon - $799.00 ($1,249.99) iBUYPOWER Elite Gaming PC Desktop AMD Ryzen 7 1800X 3.6GHz, AMD Radeon RX 580 4GB Graphics, 16GB DDR4 RAM, 1TB HDD, 120GB SSD, Win 10 Home 64-bit, View21 035A",
+					"shareTitleEn": "$799.00 ($1,249.99) iBUYPOWER Elite Gaming PC Desktop AMD Ryzen 7 1800X 3.6GHz, AMD Radeon RX 580 4GB Graphics, 16GB DDR4 RAM, 1TB HDD, 120GB SSD, Win 10 Home 64-bit, View21 035A",
+					"price": "$799.00",
+					"startDate": 1524263664000,
+					"authorId": 99,
+					"confirmed": 1,
+					"createdTime": 1536804200000,
+					"confirmedTime": 1536804200000,
+					"confirmerId": 99
+				}
+			},
+			"user": {
+				"id": 99,
+				"nickName": "Genie",
+				"active": 1,
+				"userId": 99
+			},
+			"status": 0
+		},
+		"score": 1.9821704797102662,
+		"type": "brochure"
+	}, {
+		"item": {
+			"lastCmtTime": 1536935898000,
+			"followCount": 0,
+			"articleId": 1064,
+			"upCount": 0,
+			"description": "",
+			"weight": 0.0,
+			"title": "Camelcamelcamel",
+			"good": 0,
+			"userId": 99,
+			"commentCount": 653,
+			"tags": "",
+			"resourceUrlUltimate": [],
+			"inTime": 1524263664000,
+			"downCount": 0,
+			"shareCount": 0,
+			"top": 0,
+			"upIds": "",
+			"style": 4,
+			"viewCount": 1,
+			"window": {
+				"productId": 10855776,
+				"lastCheckedTime": 1536825562000,
+				"productTitle": "GIR: Get It Right GIRFP2303RED Premium Silicone Ultimate Flipper / Turner, Ultimate - 13 IN, Red",
+				"productSale": "$11.99",
+				"productImageLink": "https://images-na.ssl-images-amazon.com/images/I/51Vh+SIHSOL._SY355_.jpg",
+				"width": 91,
+				"height": 355,
+				"availability": "in_stock",
+				"sourceProductId": "B0792V6BZN",
+				"sourceId": 3,
+				"vendor": {
+					"vendorId": 3,
+					"vendorNameEn": "Amazon",
+					"vendorNameCh": "Amazon",
+					"vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+					"vendorDescCh": "全球著名购物平台",
+					"vendorLogoUrl": "amazon.png",
+					"readable": 1,
+					"vendorLogoWidth": 109,
+					"vendorLogoHeight": 33,
+					"vendorDomain": "amazon.com",
+					"currency": "U",
+					"language": "en"
+				},
+				"topProductPromoInfoVendor": {
+					"id": {
+						"id": 10855776,
+						"vendorId": 3
+					},
+					"taskId": 7333106,
+					"titleEn": "Amazon - $11.99 ($14.95) GIR: Get It Right GIRFP2303RED Premium Silicone Ultimate Flipper / Turner, Ultimate - 13 IN, Red",
+					"shareTitleEn": "$11.99 ($14.95) GIR: Get It Right GIRFP2303RED Premium Silicone Ultimate Flipper / Turner, Ultimate - 13 IN, Red",
+					"price": "$11.99",
+					"startDate": 1524263664000,
+					"authorId": 217,
+					"confirmed": 1,
+					"createdTime": 1536819066000,
+					"confirmedTime": 1536819066000,
+					"confirmerId": 217
+				}
+			},
+			"user": {
+				"id": 99,
+				"nickName": "Genie",
+				"active": 1,
+				"userId": 99
+			},
+			"status": 0
+		},
+		"score": 1.982170479708989,
+		"type": "brochure"
+	}, {
+		"item": {
+			"lastCmtTime": 1536935898000,
+			"followCount": 0,
+			"articleId": 1064,
+			"upCount": 0,
+			"description": "",
+			"weight": 0.0,
+			"title": "Camelcamelcamel",
+			"good": 0,
+			"userId": 99,
+			"commentCount": 653,
+			"tags": "",
+			"resourceUrlUltimate": [],
+			"inTime": 1524263664000,
+			"downCount": 0,
+			"shareCount": 0,
+			"top": 0,
+			"upIds": "",
+			"style": 4,
+			"viewCount": 1,
+			"window": {
+				"productId": 10855772,
+				"lastCheckedTime": 1536825526000,
+				"productTitle": "LEM Products Stainless Steel Big Bite Electric Meat Grinder",
+				"productSale": "$250.79",
+				"productImageLink": "https://images-na.ssl-images-amazon.com/images/I/81WcjXhbIKL._SX355_.jpg",
+				"width": 355,
+				"height": 342,
+				"availability": "in_stock",
+				"sourceProductId": "B074F8PWVX",
+				"sourceId": 3,
+				"vendor": {
+					"vendorId": 3,
+					"vendorNameEn": "Amazon",
+					"vendorNameCh": "Amazon",
+					"vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+					"vendorDescCh": "全球著名购物平台",
+					"vendorLogoUrl": "amazon.png",
+					"readable": 1,
+					"vendorLogoWidth": 109,
+					"vendorLogoHeight": 33,
+					"vendorDomain": "amazon.com",
+					"currency": "U",
+					"language": "en"
+				},
+				"topProductPromoInfoVendor": {
+					"id": {
+						"id": 10855772,
+						"vendorId": 3
+					},
+					"taskId": 7333047,
+					"titleEn": "Amazon - $250.79 ($329.99) LEM Products Stainless Steel Big Bite Electric Meat Grinder",
+					"shareTitleEn": "$250.79 ($329.99) LEM Products Stainless Steel Big Bite Electric Meat Grinder",
+					"price": "$250.79",
+					"startDate": 1524263664000,
+					"authorId": 217,
+					"confirmed": 1,
+					"createdTime": 1536819234000,
+					"confirmedTime": 1536819234000,
+					"confirmerId": 217
+				}
+			},
+			"user": {
+				"id": 99,
+				"nickName": "Genie",
+				"active": 1,
+				"userId": 99
+			},
+			"status": 0
+		},
+		"score": 1.9821704796987718,
+		"type": "brochure"
+	}, {
+		"item": {
+			"lastCmtTime": 1536935898000,
+			"followCount": 0,
+			"articleId": 1064,
+			"upCount": 0,
+			"description": "",
+			"weight": 0.0,
+			"title": "Camelcamelcamel",
+			"good": 0,
+			"userId": 99,
+			"commentCount": 653,
+			"tags": "",
+			"resourceUrlUltimate": [],
+			"inTime": 1524263664000,
+			"downCount": 0,
+			"shareCount": 0,
+			"top": 0,
+			"upIds": "",
+			"style": 4,
+			"viewCount": 1,
+			"window": {
+				"productId": 10855790,
+				"lastCheckedTime": 1536889592000,
+				"productTitle": "AmazonBasics Microfiber Sheet Set - Cal King, Lavender Paisley",
+				"productSale": "$18.82",
+				"productImageLink": "https://images-na.ssl-images-amazon.com/images/I/A1ZhcZ7hOlL._SX355_.jpg",
+				"width": 355,
+				"height": 262,
+				"availability": "in_stock",
+				"sourceProductId": "B06X9TWHQX",
+				"sourceId": 3,
+				"vendor": {
+					"vendorId": 3,
+					"vendorNameEn": "Amazon",
+					"vendorNameCh": "Amazon",
+					"vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+					"vendorDescCh": "全球著名购物平台",
+					"vendorLogoUrl": "amazon.png",
+					"readable": 1,
+					"vendorLogoWidth": 109,
+					"vendorLogoHeight": 33,
+					"vendorDomain": "amazon.com",
+					"currency": "U",
+					"language": "en"
+				},
+				"topProductPromoInfoVendor": {
+					"id": {
+						"id": 10855790,
+						"vendorId": 3
+					},
+					"taskId": 7333168,
+					"titleEn": "Amazon - $18.82 ($24.99) AmazonBasics Microfiber Sheet Set - Cal King, Lavender Paisley",
+					"shareTitleEn": "$18.82 ($24.99) AmazonBasics Microfiber Sheet Set - Cal King, Lavender Paisley",
+					"price": "$18.82",
+					"startDate": 1524263664000,
+					"authorId": 99,
+					"confirmed": 1,
+					"createdTime": 1536889917000,
+					"confirmedTime": 1536889917000,
+					"confirmerId": 99
+				}
+			},
+			"user": {
+				"id": 99,
+				"nickName": "Genie",
+				"active": 1,
+				"userId": 99
+			},
+			"status": 0
+		},
+		"score": 1.9821704796974946,
+		"type": "brochure"
+	}],
+	"num": 10,
+	"lifeCycle": 1,
+	"productlist": []
 }

@@ -1,0 +1,54 @@
+{
+    "life_cycle": 1,
+    "correctness": false,
+    "autoComplete": [
+        {
+            "field": "brand",
+            "origin": "product",
+            "words": "alex and ani",
+            "channel": 1,
+            "language": "en"
+        },
+        {
+            "field": "brand",
+            "origin": "product",
+            "words": "aa de amaya arzuaga",
+            "channel": 1,
+            "language": "en"
+        },
+        {
+            "field": "brand",
+            "origin": "product",
+            "words": "ag adriano goldschmied",
+            "channel": 1,
+            "language": "en"
+        },
+        {
+            "field": "brand",
+            "origin": "product",
+            "words": "ab alberto biani",
+            "channel": 1,
+            "language": "en"
+        },
+        {
+            "field": "brand",
+            "origin": "product",
+            "words": "ac - alba conde",
+            "channel": 1,
+            "language": "en"
+        },
+        {
+            "origin": "article",
+            "words": "ampoule",
+            "channel": 1,
+            "language": "en"
+        },
+        {
+            "origin": "article",
+            "words": "airfryer",
+            "channel": 1,
+            "language": "en"
+        }
+    ],
+    "num": 7
+}

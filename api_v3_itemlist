@@ -15,18 +15,14 @@
   ' http://localhost:9124/api/v3/itemlist
 
 
-  curl -k -H 'Content-Type: application/json' -d '
+  curl -k -H "application/x-www-form-urlencoded" -d '
   {
-    "num": 10,
-    "searchword":"Cora’s Mom",
-    "blacklist":[111, 222, 333, 444, 555],
-    "fields":
-    [
-        
-    ]
-    
+    "url":"https://www.amazon.com/gp/product/B00CQGRZAE?pf_rd_p=a526cdf5-1d83-4a09-853e-0767afc685eb&pf_rd_r=6FH26V2H4GKSR4HGKMVK"    
   }
-  ' http://192.168.1.104:9124/api/v3/search/brochure
+  ' http://192.168.1.188:8080/api/v1/url
+
+
+curl http://192.168.1.188:8080/api/v1/url?url=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB00CQGRZAE%3Fpf_rd_p%3Da526cdf5-1d83-4a09-853e-0767afc685eb%26pf_rd_r%3D6FH26V2H4GKSR4HGKMVK
 
 
 
@@ -219,6 +215,16 @@ curl -k -H 'Content-Type: application/json' -d '
 }
 ' http://96.90.248.211:9124/api/v3/metrics/product
 
+
+
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "num": 100,
+  "should":[],
+  "fields":[{"name":"vendors", "values":["amazon"]}]
+}
+' http://96.90.248.211:9124/api/v3/todayPicks
 
 
 

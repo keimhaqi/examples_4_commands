@@ -37,7 +37,7 @@ curl -XGET 'http://192.168.1.103:9201/linkshare/product/_search?pretty' -H 'Cont
 2881361
 
 
-curl -XGET 'http://192.168.1.104:9201/jinbagsearch_hot/items/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://172.18.0.2:9200/jinbagsearch_hot/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 10,
     "query": {
@@ -60,7 +60,7 @@ curl -XGET 'http://192.168.1.104:9201/jinbagsearch_hot/items/_search?pretty' -H 
 
 
 
-curl -XGET 'http://192.168.1.104:9201/article/post/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.104:9201/tag/word/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 1,
     "query": {
@@ -120,7 +120,7 @@ curl -XGET 'localhost:9201/search/items/_search?pretty' -H 'Content-Type: applic
 '
 
 
-curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET '192.168.1.103:9201/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
 {
   "size":200,
   "query" : {
@@ -135,7 +135,7 @@ curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type:
                   {
                     "match" : {
                       "sourceProductId" : {
-                        "query" : "3816255",
+                        "query" : "2881361",
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,
@@ -159,7 +159,7 @@ curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type:
                   {
                     "match" : {
                       "vendorId" : {
-                        "query" : 1237,
+                        "query" : 3184,
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,
@@ -191,6 +191,16 @@ curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type:
 }
 }
 '
+
+
+BW8YZqn3OyGIBJzNNY3fWw==
+
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "fields":[{"name": "productId", "values":[1]}, {"name": "vendorId", "values":[3184]}, {"name": "spec", "values":["BW8YZqn3OyGIBJzNNY3fWw=="]}]
+}
+' http://localhost:9124/api/v3/metrics/product
 
 curl -XGET '192.168.1.106:9200/todayspicks/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
