@@ -60,7 +60,7 @@ curl -XGET 'http://172.18.0.2:9200/jinbagsearch_hot/items/_search?pretty' -H 'Co
 
 
 
-curl -XGET 'http://192.168.1.104:9201/tag/word/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.105:9201/article/post/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 1,
     "query": {

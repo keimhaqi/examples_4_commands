@@ -1,0 +1,36 @@
+[
+    {
+        "productId": 9845994,
+        "categoryId": -1,
+        "unionId": 0,
+        "parentId": 4642,
+        "depotId": 189093,
+        "height": 355,
+        "availability": 0,
+        "productDescription": "[]",
+        "productDetail": "[\"Size: 17.6 Ounce  |  Style: KFactor 16+   Wedderspoon Honey Raw Manuka Kfctr 16 . Raw, unpasteurized and Non-GMO Project Verified Manuka Honey. This product is manufactured in New Zealand. Freezing and Chilling Temperature of the product is Ambient: Room Temperature.\"]",
+        "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/710Q8FNz1SL._SY606_.jpg",
+        "productPrice": "$33.20",
+        "historyLowPrice": "$19.68 - $202.93",
+        "productSale": "$33.20",
+        "productTitle": "Wedderspoon Raw Premium Manuka Honey KFactor 16+, 17.6 Ounce",
+        "sourceId": 3,
+        "sourceProductId": "B014AP5JUG",
+        "width": 200,
+        "couponPrice": "$24.90",
+        "brandName": "Wedderspoon",
+        "lastCheckedTime": 1540180772000,
+        "numOfReviews": 1970,
+        "score": 4.5,
+        "categories": [
+            "grocery & gourmet food"
+        ],
+        "sources": [
+            "subscribe and save",
+            "amazon's choice"
+        ],
+        "vendors": [
+            "amazon"
+        ]
+    }
+]

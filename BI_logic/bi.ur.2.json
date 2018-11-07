@@ -1,0 +1,35 @@
+[
+    {
+        "productId": 21239,
+        "categoryId": 2,
+        "unionId": 0,
+        "parentId": 7099,
+        "brandId": 2362,
+        "depotId": 7927,
+        "height": 160,
+        "availability": 2,
+        "productImageLink": "http://ecx.images-amazon.com/images/I/41Ni6tdFg%2BL._SL160_.jpg",
+        "productTitle": "Levi's Juniors Authentic Vest, Cable Car Blue, Medium",
+        "sourceId": 3,
+        "productPrice": "$100.00",
+        "productSale": "$79.99",
+        "sourceProductId": "B00PDETN0G",
+        "width": 123,
+        "brandName": "Levis",
+        "attributeValue": "cable car blue (100% cotton)",
+        "lastCheckedTime": 1540366801000,
+        "numOfReviews": 18,
+        "score": 4.1,
+        "tagAttributeIds": [
+            12,
+            124,
+            1284
+        ],
+        "categories": [
+            "clothing, shoes & jewelry"
+        ],
+        "vendors": [
+            "amazon"
+        ]
+    }
+]

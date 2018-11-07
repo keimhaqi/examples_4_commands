@@ -1224,7 +1224,7 @@ curl -H "Content-Type: application/json" -d '{ "fields": [{"name":"out_of_stock"
 
 curl -i -H "Content-Type: application/json" -d '{ "item": "1", "num": 4 }' http://96.90.248.213:8000/queries.json
 
-  479  curl -H "Content-Type: application/json" -d '{ "user": "229", "num": 4, "userBias":-1 }' http://96.90.248.213:8000/queries.json
+  479  curl -H "Content-Type: application/json" -d '{ "user": "229", "num": 10, "userBias":-1 }' http://96.90.248.213:8100/queries.json
   480  curl -H "Content-Type: application/json" -d '{ "user": "0", "num": 4, "userBias":-1 }' http://localhost:8101/queries.json
   481  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":-1, "eventNames:["buy"] }' http://localhost:8000/queries.json
   482  curl -H "Content-Type: application/json" -d '{ "user": "200117", "num": 4, "userBias":-1, "eventNames":["buy"] }' http://localhost:8000/queries.json

@@ -3,7 +3,7 @@ curl -XGET '192.168.1.106:9200/todayspicks/_settings,_mappings?pretty'
 curl -XGET '192.168.1.106:9201/brochure/_settings,_mappings?pretty'
 
 curl -X GET "172.18.0.2:9200/jinbagsearch/_setting,_mapping?human&pretty"
-curl -X GET "192.168.1.104:9201/jinbagsearch_hot/_mapping?human&pretty"
+curl -X GET "192.168.1.105:9201/jinbagsearch_hot/_mapping?human&pretty"
 
 
 select product_id,start_date,end_date from top_product_promo_info_vendor where start_date < '2017-12-29 15:21:48' and end_date > '2017-12-29 15:21:48' 

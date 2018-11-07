@@ -34,14 +34,14 @@ curl -XGET '192.168.1.106:9201/jinbagsearch/items/288580?pretty'
 
 
 
-curl -XGET '172.18.0.2:9200/todayspicks/items/239865?pretty'
+curl -XGET '172.18.0.2:9200/jinbagsearch_hot/items/10860712?pretty'
 curl -XGET '192.168.1.104:9201/todayspicks/items/239865?pretty'
 curl -XGET '192.168.1.106:9200/todayspicks/items/10601600?pretty'
 curl -XGET '192.168.1.106:9200/todayspicks/items/10585274?pretty'
 
 
-curl -XGET '192.168.1.106:9200/articlesearch/post/10?pretty'
-curl -XGET '192.168.1.106:9200/jinbagsearch/items/1515674?pretty'
+curl -XGET '192.168.1.105:9201/article/post/1140?pretty'
+curl -XGET '192.168.1.105:9201/jinbagsearch_hot/items/10860992?pretty'
 curl -XGET 'localhost:9200/searchal/items/10?pretty'
 curl -XGET 'localhost:9200/autojinbag/tags/Zhongshan?pretty'
 
@@ -114,6 +114,19 @@ curl -XGET 'localhost:9200/autojinbag/tags/Zhongshan?pretty'
 }
 
 
+
+"query": {
+  "bool": {
+    "must": [
+      {
+        "match_all": {}
+      }
+    ],
+    "must_not": [1,2,3]
+  }
+}
+
+
 http://96.90.248.211:5601/app/kibana#/discover?_g=()&_a=(columns:!(_type),index:logs-scrapy-cluster,type:redis-monitor,interval:auto,query:(query_string:(analyze_wildcard:!t,query:'*')),sort:!(timestamp,desc),uiState:(spy:(mode:(fill:!f,name:request))))
 
 Mon May 07 01:43:21 UTC 2018
@@ -162,7 +175,7 @@ curl -XPUT 'localhost:9200/test?pretty' -H 'Content-Type: application/json' -d'
 
 curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty'  -H 'Content-Type: application/json' -d'
 {
-"size":30,
+"size":100,
 "query" :{
 "bool" : {
     "must" : [
@@ -175,7 +188,7 @@ curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty'  -H 'Content-Type
                   {
                     "match" : {
                       "sourceProductId" : {
-                        "query" : "2881671",
+                        "query" : "B075MXMXTY",
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,
@@ -196,7 +209,28 @@ curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty'  -H 'Content-Type
                   {
                     "match" : {
                       "vendorId" : {
-                        "query" : 3184,
+                        "query" : 3,
+                        "operator" : "AND",
+                        "prefix_length" : 0,
+                        "max_expansions" : 50,
+                        "fuzzy_transpositions" : true,
+                        "lenient" : false,
+                        "zero_terms_query" : "NONE",
+                        "boost" : 1.0
+                      }
+                    }
+                  }
+                ],
+                "minimum_should_match" : "1"
+              }
+            },
+            {
+              "bool" : {
+                "should" : [
+                  {
+                    "match" : {
+                      "skus.sale" : {
+                        "query" : 24.99,
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,

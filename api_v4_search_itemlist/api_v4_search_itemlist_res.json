@@ -32,8 +32,339 @@
                 "productPrice": "$22.00",
                 "height": 400
             },
-            "score": 5.516502857208252,
+            "score": 6.484889654888981,
             "type": "product"
+        },
+        {
+            "item": {
+                "productSale": "$110.00",
+                "productPriceValue": {
+                    "min": 110.0,
+                    "max": 110.0
+                },
+                "productId": 2071,
+                "productDetail": [
+                    "The Martha large briefcase is the perfect storage solution for the girl who has everything! Its roomy interior boasts three removable compartments and a large clear zip wall pocket allowing easy access to all of your precious cargo. Tall handles make it a cinch to carry or hang over a door. 3.5\\W X 9\\H X 10.5\\ D. Made in USA."
+                ],
+                "depotId": 0,
+                "lastCheckedTime": 1514440878000,
+                "availability": 2,
+                "sourceProductId": "845524447018386",
+                "productTitle": "Stephanie Johnson Martha Large Briefcase",
+                "productSaleValue": {
+                    "min": 110.0,
+                    "max": 110.0
+                },
+                "updateESTime": 1539254685000,
+                "width": 300,
+                "productImageLink": "https://image.s5a.com/is/image/saks/0400091939531_500x500.jpg",
+                "vendors": "Saks Fifth Avenue",
+                "productDescription": [
+                    "Martha Large Briefcase"
+                ],
+                "productPrice": "$110.00",
+                "height": 400
+            },
+            "score": 6.483126793278215,
+            "type": "product"
+        },
+        {
+            "item": {
+                "followCount": 0,
+                "upCount": 0,
+                "articleId": 1034,
+                "weight": 0.0,
+                "title": "Storage & Organization",
+                "good": 0,
+                "userId": 811,
+                "content": "[{\"index\":0,\"type\":\"text\",\"content\":\"Storage Bin, Food Storage Containers, Organizer Drawer…\"},{\"index\":0,\"type\":\"text\",\"content\":\"Tooletries Mighty Toothbrush Holder, Grey\"},{\"index\":0,\"jinbagId\":6209618,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Niche Cubo Foldable Fabric Storage Bins\"},{\"index\":0,\"jinbagId\":10516842,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"SONGMICS 2-tier Shoe Bench Organizing Rack Entryway Storage Shelf 100% Bamboo ULBS04N\"},{\"index\":0,\"jinbagId\":10291112,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Royal Air-Tight Food Storage Container Set - 5-Piece Set - Durable Plastic - BPA Free - Clear Plastic with Black Lids\"},{\"index\":0,\"jinbagId\":10097272,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Akro-Mils 10116 16 Drawer Plastic Parts Storage Hardware and Craft Cabinet, 10.5-Inch x 8.5-Inch x 6.5-Inch, Black\"},{\"index\":0,\"jinbagId\":10551082,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]}]",
+                "resourceUrlUltimate": [
+                    {
+                        "imageUrl": "https://i5.walmartimages.com/asr/0518cbe5-f3e6-4d23-a2a2-82ece4d74830_3.20cce797ca9a069782150be29d5dbc66.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff"
+                    },
+                    {
+                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/91BPqM5WH3L._SX355_.jpg"
+                    },
+                    {
+                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81F830a3LeL._SY514_.jpg"
+                    }
+                ],
+                "commentCount": 0,
+                "inTime": 1536535806000,
+                "downCount": 0,
+                "shareCount": 0,
+                "resourceUrl": [
+                    "https://i5.walmartimages.com/asr/0518cbe5-f3e6-4d23-a2a2-82ece4d74830_3.20cce797ca9a069782150be29d5dbc66.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff",
+                    "https://images-na.ssl-images-amazon.com/images/I/91BPqM5WH3L._SX355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/81F830a3LeL._SY514_.jpg"
+                ],
+                "top": 0,
+                "viewCount": 7,
+                "user": {
+                    "nickName": "Cora’s Mom",
+                    "active": 1,
+                    "id": 811,
+                    "userId": 811,
+                    "logoUrl": "Q09SQVNfTU9NQEpJTkJBRy5DT00=.jpg",
+                    "email": "CORAS_MOM@JINBAG.COM"
+                },
+                "status": 0
+            },
+            "score": 6.397219181060791,
+            "type": "article"
+        },
+        {
+            "item": {
+                "followCount": 0,
+                "upCount": 0,
+                "articleId": 380,
+                "weight": 0.0,
+                "title": "Food Storage Containers",
+                "good": 0,
+                "userId": 801,
+                "content": "[{\"index\":0,\"type\":\"text\",\"content\":\"These food storage containers also save space with a modular design that perfectly stacks in fridge or lunch bag.\"},{\"index\":0,\"type\":\"text\",\"content\":\"Bento Lunch Boxes,3-Compartment Meal Prep Containers with Lids,Food Storage Containers\"},{\"index\":0,\"jinbagId\":9648694,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Pyrex Food Storage Container Set\"},{\"index\":0,\"jinbagId\":233068,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Rubbermaid LunchBox Sandwich Kit\"},{\"index\":0,\"jinbagId\":10065092,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Anchor Hocking TrueSeal Glass Food Storage Containers\"},{\"index\":0,\"jinbagId\":10071152,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Rubbermaid Brilliance Food Storage Container\"},{\"index\":0,\"jinbagId\":10102112,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"IRIS Airtight Pet Food Storage Container\"},{\"index\":0,\"jinbagId\":10165668,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Greenco 6 Piece Refrigerator and Freezer Stackable Storage Organizer Bins with Handles\"},{\"index\":0,\"jinbagId\":10178080,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"jinbagId\":10183474,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Anchor Hocking Round Stainless Steel Airtight Canister\"},{\"index\":0,\"jinbagId\":10188142,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Enther Meal Prep Containers [20 Pack] 3 Compartment with Lids, Food Storage Bento Box | BPA Free | Stackable | Reusable Lunch Boxes, Microwave/Dishwasher/Freezer Safe,Portion Control (36 oz)\"},{\"index\":0,\"jinbagId\":10299068,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Progressive DKS-200 Prep Solutions by Brown Sugar Keeper\"},{\"index\":0,\"jinbagId\":10315496,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Royal Glass Food Storage Containers - 10-Piece Set - BPA Free and Microwave Safe with Lids - Perfect for Meal Prep\"},{\"index\":0,\"jinbagId\":10370412,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Snapware 24-Piece Airtight Food Storage Set, Plastic\"},{\"index\":0,\"jinbagId\":10372448,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Rubbermaid FreshWorks Produce Saver Food Storage Container, Large, 17.3 Cup, Green\"},{\"index\":0,\"jinbagId\":10393934,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Sistema Bake It Food Storage for Baking Ingredients, Multi Piece Containers, Set of 9\"},{\"index\":0,\"jinbagId\":10399042,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]}]",
+                "resourceUrlUltimate": [
+                    {
+                        "imageUrl": "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/3863149_fpx.tif?wid=300&fmt=jpeg&qlt=100"
+                    },
+                    {
+                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61hZtkrM5EL._SY355_.jpg"
+                    },
+                    {
+                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81wzuGmUVZL._SY514_.jpg"
+                    }
+                ],
+                "commentCount": 0,
+                "inTime": 1536534475000,
+                "downCount": 0,
+                "shareCount": 0,
+                "resourceUrl": [
+                    "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/3863149_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+                    "https://images-na.ssl-images-amazon.com/images/I/61hZtkrM5EL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/81wzuGmUVZL._SY514_.jpg"
+                ],
+                "top": 0,
+                "viewCount": 0,
+                "user": {
+                    "nickName": "Creative Chef",
+                    "active": 1,
+                    "id": 801,
+                    "userId": 801,
+                    "logoUrl": "Q1JFQVRJVkVfQ0hFRkBKSU5CQUcuQ09N.jpg",
+                    "email": "CREATIVE_CHEF@JINBAG.COM"
+                },
+                "status": 0
+            },
+            "score": 6.0544352531433105,
+            "type": "article"
+        },
+        {
+            "item": {
+                "followCount": 0,
+                "upCount": 0,
+                "articleId": 658,
+                "weight": 0.0,
+                "title": "Breastflow Milk Storage",
+                "good": 0,
+                "userId": 811,
+                "content": "[{\"index\":0,\"type\":\"text\",\"content\":\"Works with most brands of milk storage bags.\"},{\"index\":0,\"type\":\"text\",\"content\":\"The First Years Breastflow Milk Storage Organizer\"},{\"index\":0,\"jinbagId\":10093286,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Medela Breast Milk Freezer Pack, 2.7 oz (80ml) Bottles (Pack of 12)\"},{\"index\":0,\"jinbagId\":10152010,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]}]",
+                "resourceUrlUltimate": [
+                    {
+                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/71rmo5wSPfL._SY355_.jpg"
+                    },
+                    {
+                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/71HmbcwfN5L._SY355_.jpg"
+                    }
+                ],
+                "commentCount": 0,
+                "inTime": 1536535110000,
+                "downCount": 0,
+                "shareCount": 0,
+                "resourceUrl": [
+                    "https://images-na.ssl-images-amazon.com/images/I/71rmo5wSPfL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/71HmbcwfN5L._SY355_.jpg"
+                ],
+                "top": 0,
+                "viewCount": 0,
+                "user": {
+                    "nickName": "Cora’s Mom",
+                    "active": 1,
+                    "id": 811,
+                    "userId": 811,
+                    "logoUrl": "Q09SQVNfTU9NQEpJTkJBRy5DT00=.jpg",
+                    "email": "CORAS_MOM@JINBAG.COM"
+                },
+                "status": 0
+            },
+            "score": 5.952453136444092,
+            "type": "article"
+        },
+        {
+            "item": {
+                "followCount": 0,
+                "upCount": 0,
+                "articleId": 650,
+                "weight": 0.0,
+                "title": "Adjustable Bench",
+                "good": 0,
+                "userId": 811,
+                "content": "[{\"index\":0,\"type\":\"text\",\"content\":\"Can be folded for storage.\"},{\"index\":0,\"type\":\"text\",\"content\":\"Bowflex Adjustable Bench\"},{\"index\":0,\"jinbagId\":10093272,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]}]",
+                "resourceUrlUltimate": [
+                    {
+                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/71wRuf1k2xL._SX355_.jpg"
+                    }
+                ],
+                "commentCount": 0,
+                "inTime": 1536535099000,
+                "downCount": 0,
+                "shareCount": 0,
+                "resourceUrl": [
+                    "https://images-na.ssl-images-amazon.com/images/I/71wRuf1k2xL._SX355_.jpg"
+                ],
+                "top": 0,
+                "viewCount": 1,
+                "user": {
+                    "nickName": "Cora’s Mom",
+                    "active": 1,
+                    "id": 811,
+                    "userId": 811,
+                    "logoUrl": "Q09SQVNfTU9NQEpJTkJBRy5DT00=.jpg",
+                    "email": "CORAS_MOM@JINBAG.COM"
+                },
+                "status": 0
+            },
+            "score": 4.8445258140563965,
+            "type": "article"
+        },
+        {
+            "item": {
+                "productSale": "$89.00",
+                "productPriceValue": {
+                    "min": 89.0,
+                    "max": 89.0
+                },
+                "productId": 1256,
+                "productDetail": [
+                    "From straightening to curling",
+                    " the SinglePass Compact offers full styling capability in a portable size with the added convenience of a heat resistant cap for quick storage and ease of travel. This styling iron can be stored at the office for quick touch ups or inside your purse",
+                    " gym bag or carry-on luggage",
+                    " ensuring your tresses stay perfectly styled no matter where your busy schedule or travels take you. .T3 Tourmaline? SinglePass Technology:.Digital heating technology so advanced",
+                    " it takes the conventional styling iron into the realm of artificial intelligence. Regular irons test their plate temperatures in intervals",
+                    " causing heat fluctuation and damage due to over-styling. T3 SinglePass Irons have a microchip brain that constantly measures and adjusts the temperature across the plates for even heat with no hot spots and no damage the entire time you are styling. The result? A long-lasting",
+                    " smooth and shiny finish. .FEATURES & BENEFITS.0.8\\ Fixed",
+                    " Beveled Plates: Allow"
+                ],
+                "depotId": 0,
+                "lastCheckedTime": 1519116522000,
+                "availability": 0,
+                "sourceProductId": "845524446933822",
+                "productTitle": "T3 SinglePass Compact Flat Iron",
+                "productSaleValue": {
+                    "min": 89.0,
+                    "max": 89.0
+                },
+                "updateESTime": 1539254685000,
+                "width": 300,
+                "productImageLink": "https://image.s5a.com/is/image/saks/0400089228289_500x500.jpg",
+                "vendors": "Saks Fifth Avenue",
+                "productDescription": [
+                    "T3 SinglePass Compact Flat Iron"
+                ],
+                "productPrice": "$89.00",
+                "height": 400
+            },
+            "score": 4.3094545961716655,
+            "type": "product"
+        },
+        {
+            "item": {
+                "followCount": 0,
+                "upCount": 0,
+                "articleId": 474,
+                "weight": 0.0,
+                "title": "Stainless Steel Food Jar",
+                "good": 0,
+                "userId": 801,
+                "content": "[{\"index\":0,\"type\":\"text\",\"content\":\"Tiger, Thermos, ZOJIRUSHI...\"},{\"index\":0,\"type\":\"text\",\"content\":\"Zojirushi Stainless Steel Food Jar\"},{\"index\":0,\"jinbagId\":9846238,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Thermos Stainless Steel Food Jar\"},{\"index\":0,\"jinbagId\":10076382,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"kate spade new york All In Good Taste On the Go Deco Dot Food Storage Container\"},{\"index\":0,\"jinbagId\":232921,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]}]",
+                "resourceUrlUltimate": [
+                    {
+                        "imageUrl": "https://slimages.macysassets.com/is/image/MCY/products/3/optimized/8694933_fpx.tif?wid=300&fmt=jpeg&qlt=100"
+                    },
+                    {
+                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/71vngU%2BSpnL._SY355_.jpg"
+                    },
+                    {
+                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/41h%2BHt2ibXL._SY463_.jpg"
+                    }
+                ],
+                "commentCount": 0,
+                "inTime": 1536534760000,
+                "downCount": 0,
+                "shareCount": 0,
+                "resourceUrl": [
+                    "https://slimages.macysassets.com/is/image/MCY/products/3/optimized/8694933_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+                    "https://images-na.ssl-images-amazon.com/images/I/71vngU%2BSpnL._SY355_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/41h%2BHt2ibXL._SY463_.jpg"
+                ],
+                "top": 0,
+                "viewCount": 0,
+                "user": {
+                    "nickName": "Creative Chef",
+                    "active": 1,
+                    "id": 801,
+                    "userId": 801,
+                    "logoUrl": "Q1JFQVRJVkVfQ0hFRkBKSU5CQUcuQ09N.jpg",
+                    "email": "CREATIVE_CHEF@JINBAG.COM"
+                },
+                "status": 0
+            },
+            "score": 3.5992393493652344,
+            "type": "article"
+        },
+        {
+            "item": {
+                "followCount": 0,
+                "upCount": 0,
+                "articleId": 926,
+                "weight": 0.0,
+                "title": "Coffee Servers",
+                "good": 0,
+                "userId": 797,
+                "content": "[{\"index\":0,\"type\":\"text\",\"content\":\"Hiware, Carlisle, Coffmax…\"},{\"index\":0,\"type\":\"text\",\"content\":\"Coffee Gator Pour Over Brewer – Hand Drip Paperless Filter and Glass Carafe – Plus Hacks eBook – 14floz, 400ml\"},{\"index\":0,\"jinbagId\":10164202,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"Nespresso Vertuo Coffee and Espresso Machine by Breville, Matte Black\"},{\"index\":0,\"jinbagId\":10390336,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]},{\"index\":0,\"type\":\"text\",\"content\":\"LinsnField Milk Frother, Handheld Foam Maker, Portable Drink Mixer with 2 Whisks, 1 Storage Tube, Gray\"},{\"index\":0,\"jinbagId\":10233274,\"type\":\"product\",\"content\":[{\"index\":0,\"type\":\"text\",\"content\":\"\"}]}]",
+                "resourceUrlUltimate": [
+                    {
+                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/71PInJDdS2L._SY463_.jpg"
+                    },
+                    {
+                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61iAbahvckL._SY463_.jpg"
+                    },
+                    {
+                        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81qSlA2twYL._SY355_.jpg"
+                    }
+                ],
+                "commentCount": 0,
+                "inTime": 1536535649000,
+                "downCount": 0,
+                "shareCount": 0,
+                "resourceUrl": [
+                    "https://images-na.ssl-images-amazon.com/images/I/71PInJDdS2L._SY463_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/61iAbahvckL._SY463_.jpg",
+                    "https://images-na.ssl-images-amazon.com/images/I/81qSlA2twYL._SY355_.jpg"
+                ],
+                "top": 0,
+                "viewCount": 0,
+                "user": {
+                    "nickName": "Rice Bucket",
+                    "active": 1,
+                    "id": 797,
+                    "userId": 797,
+                    "logoUrl": "UklDRV9CVUNLRVRASklOQkFHLkNPTQ==.jpg",
+                    "email": "RICE_BUCKET@JINBAG.COM"
+                },
+                "status": 0
+            },
+            "score": 3.5992393493652344,
+            "type": "article"
         },
         {
             "item": {
@@ -77,10 +408,10 @@
                 },
                 "status": 0
             },
-            "score": "NaN",
+            "score": 3.0587000846862793,
             "type": "article"
         }
     ],
-    "num": 2,
+    "num": 10,
     "lifeCycle": 1
 }

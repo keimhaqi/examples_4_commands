@@ -1,0 +1,40 @@
+[
+    {
+        "productId": 10858858,
+        "categoryId": 1,
+        "unionId": 0,
+        "parentId": 2774,
+        "brandId": 10983,
+        "depotId": 611492,
+        "height": 0,
+        "availability": 0,
+        "productDescription": "[]",
+        "productDetail": "[\"Size: 2' x 4'  |  Color: Navy   Make a chic contemporary designer statement with Safavieh’s Milan Shag Collection. Expertly designed with an eye toward style, this easy-care rug is both attractive and plush underfoot. Create an intimate atmosphere with a fluffy shag rug, perfect for the living room, dining room, home office, bedroom, foyer, or nursery.\",\"Ultra-soft, long-wearing polypropylene yarn is used for this collection of multi-level power-loomed rugs. These fibers are virtually non-shedding to provide a year round beautiful space even in high-traffic areas of the home. Indulge and invest in a rug made for its supreme durability and luxurious comfort.\",\"Contemporary shag rug works beautifully in any home  Refined power-loomed construction  Enhanced polypropylene fibers for low shedding  Soft and plush 1.18-inch pile height  Jute backing  Perfect for any Room: Living Room, Bedroom, Dining Room, Nursery, Foyer, or Home Office  Crafted in Turkey  A rug pad is recommended\"]",
+        "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/A1M76iR97YL._SX679_.jpg",
+        "productPrice": "$549.00",
+        "productSale": "$549.00",
+        "productTitle": "Safavieh Milan Shag Collection SG180-1212 Ivory Area Rug (11' x 16')",
+        "sourceId": 3,
+        "sourceProductId": "B01GS3LBZK",
+        "width": 0,
+        "brandName": "Safavieh",
+        "lastCheckedTime": 1540004567000,
+        "numOfReviews": 1989,
+        "score": 4.8,
+        "topProductPromoInfoVendor": {
+            "productId": 10858858,
+            "vendorId": 3,
+            "vendorLogoUrl": "amazon.png",
+            "taskId": 7336207,
+            "missedTime": 1539889743000,
+            "titleEn": "Amazon - $530.00 Safavieh Milan Shag Collection SG180-1212 Ivory Area Rug (11' x 16')",
+            "shareTitleEn": "$530.00 Safavieh Milan Shag Collection SG180-1212 Ivory Area Rug (11' x 16')",
+            "price": "$530.00",
+            "cardWidth": 0,
+            "cardHeight": 0,
+            "startDate": 1539414470000,
+            "confirmed": 1,
+            "confirmedTime": 1539414540000
+        }
+    }
+]
