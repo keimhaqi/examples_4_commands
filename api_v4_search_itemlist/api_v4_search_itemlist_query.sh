@@ -2,16 +2,17 @@ curl -k -H 'Content-Type: application/json' -d '
 {
   "params":[
     {
-      "searchword":"canada 24",
+      "searchword":"nike",
       "type": "product",
-      "blacklist":[],
-      "num": 1
+      "blacklist":[]
     },
     {
-      "searchword":"canada 24",
+      "searchword":"nike",
       "type": "article",
       "blacklistItems":[],
-      "num": 1
+      "fields":[
+        {"name": "status", "values":[0]}
+      ]
     }
   ],
   "num": 15
@@ -24,21 +25,60 @@ curl -k -H 'Content-Type: application/json' -d '
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "params":[
-    {
-      "searchword":"nike",
-      "type": "product",
-      "blacklist": []
-    }
-  ],
-  "num": 10
- 
+    "params":[
+        {
+            "user":"0",
+            "from":0,
+            "num":10,
+            "searchword":"canada",
+            "articleFilter":[],
+            "type":"article",
+            "language":"en",
+            "fields":[
+              {"name": "status", "values":[0]}
+            ]
+        }
+    ],
+    "num":18
+}
+' http://localhost:9124/api/v4/search/itemlist
+
+
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+    "params":[
+        {
+            "user":"0",
+            "from":0,
+            "num":10,
+            "searchword":"Radley London",
+            "articleFilter":[],
+            "type":"article",
+            "language":"en"
+        }
+    ],
+    "num":18
 }
 ' http://96.90.248.211:9124/api/v4/search/itemlist
 
 
-
-
+curl -k -H 'Content-Type: application/json' -d '
+{
+    "params":[
+        {
+            "user":"0",
+            "from":0,
+            "num":10,
+            "searchword":"sandro",
+            "articleFilter":[],
+            "type":"product",
+            "language":"en"
+        }
+    ],
+    "num":10
+}
+' http://localhost:9124/api/v4/search/itemlist
 
 
 

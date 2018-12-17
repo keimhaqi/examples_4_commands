@@ -37,7 +37,7 @@ curl -XGET 'http://192.168.1.103:9201/linkshare/product/_search?pretty' -H 'Cont
 2881361
 
 
-curl -XGET 'http://172.18.0.2:9200/jinbagsearch_hot/items/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://172.18.0.2:9200/article/post/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 10,
     "query": {
@@ -47,20 +47,24 @@ curl -XGET 'http://172.18.0.2:9200/jinbagsearch_hot/items/_search?pretty' -H 'Co
 '
 
 
-
-423595
-10651960
-9652038
-10183072
-10651992
-10651982
-10651980
-
-
-
+10860744
+10862202
+10866318
+10869366
+10871386
+10871388
+10871390
+10871392
+10871394
 
 
-curl -XGET 'http://192.168.1.105:9201/article/post/_search?pretty' -H 'Content-Type: application/json' -d'
+
+
+
+
+SELECT `product_id`, MAX(`update_time`) as update_time, GROUP_CONCAT(article_id) FROM `article_product` GROUP BY `product_id` ORDER BY update_time desc limit 40 
+
+curl -XGET 'http://192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 1,
     "query": {
@@ -120,9 +124,9 @@ curl -XGET 'localhost:9201/search/items/_search?pretty' -H 'Content-Type: applic
 '
 
 
-curl -XGET '192.168.1.103:9201/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
 {
-  "size":200,
+  "size":1,
   "query" : {
   "bool" : {
     "must" : [
@@ -135,7 +139,7 @@ curl -XGET '192.168.1.103:9201/linkshare/product/_search?pretty' -H 'Content-Typ
                   {
                     "match" : {
                       "sourceProductId" : {
-                        "query" : "2881361",
+                        "query" : "B06XSTJST6",
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,
@@ -153,6 +157,56 @@ curl -XGET '192.168.1.103:9201/linkshare/product/_search?pretty' -H 'Content-Typ
                 "boost" : 1.0
               }
             },
+            {
+              "bool" : {
+                "should" : [
+                  {
+                    "match" : {
+                      "vendorId" : {
+                        "query" : 3,
+                        "operator" : "AND",
+                        "prefix_length" : 0,
+                        "max_expansions" : 50,
+                        "fuzzy_transpositions" : true,
+                        "lenient" : false,
+                        "zero_terms_query" : "NONE",
+                        "boost" : 1.0
+                      }
+                    }
+                  }
+                ],
+                "disable_coord" : false,
+                "adjust_pure_negative" : true,
+                "minimum_should_match" : "1",
+                "boost" : 1.0
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      }
+    ],
+    "disable_coord" : false,
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
+}
+'
+
+
+
+curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "size":10,
+  "query" : {
+  "bool" : {
+    "must" : [
+      {
+        "bool" : {
+          "must" : [
             {
               "bool" : {
                 "should" : [
@@ -191,6 +245,9 @@ curl -XGET '192.168.1.103:9201/linkshare/product/_search?pretty' -H 'Content-Typ
 }
 }
 '
+
+
+
 
 
 BW8YZqn3OyGIBJzNNY3fWw==

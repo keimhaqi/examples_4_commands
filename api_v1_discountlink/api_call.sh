@@ -1,9 +1,18 @@
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "operation": "query",
-  "num": 1
+  "operation": "query"
 }
-' http://localhost:9099/api/v1/discountlink/available
+' http://96.90.248.211:9099/api/v1/discountlink/available
+
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "operation": "query",
+  "num": 1,
+  "startPosition": 1
+}
+' http://192.168.1.105:9099/api/v1/discountlink/available
+
 
 operation: query表示查询;
 
@@ -59,7 +68,7 @@ available: 1表示更新此链接为不可用;
 当运营人员进入某个link之后，调用如下接口返回link包含的商品列表;
 curl -k -H 'Content-Type: application/json' -d '
 {
-      "linkListTaskId": 1352
+      "linkListTaskId": 6688
 }
 ' http://96.90.248.211:9099/api/v1/discountlink/product
 
@@ -88,3 +97,22 @@ linkListTaskId: 对应后端记录的主键值;
     "lifeCycle": 1
 }
 
+
+
+curl -k -H  'Content-Type: application/json' -d '
+{
+    "promoLinkId":46,
+    "productList":["10871398","10871396"],
+    "articleList":["1426"],
+    "startDate":1542105699000
+}' http://192.168.1.105:9099/api/v1/article/promoLink
+
+
+
+
+
+
+
+
+
+discover.task.updatetime=1542021272000

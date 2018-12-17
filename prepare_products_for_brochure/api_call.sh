@@ -1,18 +1,19 @@
 curl -i -k -H 'Content-Type: application/json' -d '
 {
   "param":[
-    {"productId": 31717}
-  ]
+    {"productId": 10610866}
+  ],
+  "user": 289
 }
-' http://localhost:9099/api/v1/prepare/promo/temporary
+' http://96.90.248.211:9099/api/v1/prepare/promo/temporary
 
 
 curl -i -k -H 'Content-Type: application/json' -d '
 {
   "param":[
-    {"productId": 31717}
+    {"productId": 10610866}
   ],
-  "user": 2
+  "user": 217
 }
 ' http://localhost:9099/api/v1/prepare/promo/persist
 

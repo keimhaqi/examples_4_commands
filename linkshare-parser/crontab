@@ -1,0 +1,56 @@
+0 */3 * * * python /home/zhenping/rakuten/ftpclient_1.1.py
+0 0 */1 * * python /home/zhenping/rakuten/ftpclient_1.1.py
+
+我重新统计了linkshare-parser从昨天到现在写入3、4级表的商品数量，看到saks、saksoff、nordstrom没有新商品被写入到3、4级表，walmart有41098、
+
+
+
+统计了从昨天部署linkshare-parser到现在为止，各商家新商品进入我们的后端3级表的商品个数：
+saks: 0， saksoff: 0， nordstrom: 0, bloomingdales: 0, walmart: 41098, lastcall: 60
+
+
+
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_102970131_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941855_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941879_cmp.xml.gz
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_135984794_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941856_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941880_cmp.xml.gz
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_149468924_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941858_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_28104374_cmp.xml.gz
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_161392032_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941859_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_54739225_cmp.xml.gz
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_162194907_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941860_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_54739226_cmp.xml.gz
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_162194908_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941861_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_54739227_cmp.xml.gz
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941843_cmp.xml.gz   
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941862_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_54739228_cmp.xml.gz
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941844_cmp.xml.gz   
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941863_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_85828645_cmp.xml.gz
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941846_cmp.xml.gz   
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941866_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_85828647_cmp.xml.gz
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941847_cmp.xml.gz   
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941869_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_85828648_cmp.xml.gz
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941848_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941871_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_85828649_cmp.xml.gz
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941850_cmp.xml.gz   
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941873_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_85828650_cmp.xml.gz
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941852_cmp.xml.gz   
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941874_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_97114764_cmp.xml.gz
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941853_cmp.xml.gz   
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941875_cmp.xml.gz  
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_97343981_cmp.xml.gz
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941854_cmp.xml.gz   
+curl localhost:8089/parser?filename=/home/zhenping/linkshare_ftp/saks/13816/13816_3281764_26941878_cmp.xml.gz

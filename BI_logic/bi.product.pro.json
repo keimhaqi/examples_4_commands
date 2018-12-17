@@ -1,48 +1,20 @@
-[
-    {
-        "productId": 10495708,
-        "categoryId": 1,
-        "parentId": 2,
-        "brandId": 5599,
-        "depotId": 603545,
-        "height": 606,
-        "availability": 0,
-        "productDescription": "[\"Model is 6' 2\\\" and wearing a size Large,Slim fit\",\"Machine Wash Cold, Tumble Dry Low, Do Not Bleach\",\"Lightweight fabrication and dip dyed\",\"52%LINEN 48%COTTON\",\"Imported\",\"An Amazon brand\",\"Front button placket ,spread collar, left chest pocket\"]",
-        "productDetail": "[\"An Amazon brand- A dip dye shirt made with linen cotton blend for beach or dinner date, long walk on a beach, morning coffee, a Hawaiian lunch, Florida evening, LA celebrity sighting, or even a Seattle summer afternoon. Our unique Linen fabric is a natural woven fiber that's lightweight, comfortable, and smooth to the touch ,even in hot,humid weather could make you comfortable.Isle Bay Linens would be a perfect choice to take on a tropical vacation or to wear as business casual in muggy weather.\"]",
-        "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/71EF80OY8AL._SX466_.jpg",
-        "productPrice": "$28.00",
-        "productSale": "$8.92",
-        "confirmedMsrp": "$27.00",
-        "productTitle": "Isle-Bay-Linens Isle Bay Linens Men’s Slim Fit Dip Dye Short Sleeve Shirt",
-        "sourceId": 3,
-        "sourceProductId": "145217380X",
-        "width": 466,
-        "hasSmartPrice": 0,
-        "brandName": "Isle-Bay-Linens",
-        "version": "225dfb5ce5ef9d9bb20d4cfafe93f096",
-        "lastCheckedTime": 1537341625000,
-        "numOfReviews": 14,
-        "score": 4.1,
-        "topProductPromoInfoVendor": {
-            "id": {
-                "id": 10495708,
-                "vendorId": 3
-            },
-            "taskId": 1844,
-            "titleEn": "Amazon - $8.92 ($20.00) Dr. Scholl's Dr. Scholl’s Pain Relief Orthotics for Arch Pain for Men, 1 Pair, Size 8-12",
-            "shareTitleEn": "$8.92 ($20.00) Dr. Scholl's Dr. Scholl’s Pain Relief Orthotics for Arch Pain for Men, 1 Pair, Size 8-12",
-            "price": "$8.92",
-            "startDate": 1542754110000,
-            "authorId": 99,
-            "confirmed": 1,
-            "createdTime": 1539143397000,
-            "confirmedTime": 1539143397000,
-            "confirmerId": 99,
-            "product_id": 10495708,
-            "start_date": 1542754110000,
-            "articleProductId": 7759,
-            "repeat": true,
-            "articleId": 1124
-        }
-    }
-]
+17号BI接收的商品135200的kafka消息如下：
+
+
+2018-11-17 17:53:09,996 INFO [org.springframework.kafka.KafkaListenerEndpointContainer#3-1-kafka-listener-1] j.d.s.kafka.kafkaConfig.Listener [Listener.java : 100] kafka.product.update : [{"productId":135200,"categoryId":0,"categoryStrId":0,"unionId":0,"parentId":100035200,"brandId":7263,"depotId":0,"height":375,"availability":0,"productDescription":"[]","productDetail":"[\"Sk-ii Essential Power Rich Cream-Beauty\"]","productImageLink":"https://images.bloomingdalesassets.com/is/image/BLM/products/1/optimized/8132231_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg","productPrice":"$260.00","productSale":"$260.00","productTitle":"Sk-ii Essential Power Rich Cream","sourceId":3184,"sourceProductId":"819288","width":300,"brandName":"SK-II","lastCheckedTime":1542367190000,"attributeIdList":[1334385,1388007,1334619,1334618,1334617,907698]}]
+
+
+通过kafka通知锦囊模块的消息信息如下：
+
+
+2018-11-17 17:53:11,723 INFO [kafka-producer-network-thread | producer-2] j.d.s.kafka.kafkaConfig.KafkaUtils [KafkaUtils.java : 95] Send To Backend bi.product.pro Success:[{"productId":135200,"categoryId":0,"categoryStrId":0,"unionId":0,"parentId":100035200,"brandId":7263,"depotId":0,"height":375,"availability":0,"productDescription":"[]","productDetail":"[\"Sk-ii Essential Power Rich Cream-Beauty\"]","productImageLink":"https://images.bloomingdalesassets.com/is/image/BLM/products/1/optimized/8132231_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg","productPrice":"$260.00","productSale":"$260.00","productTitle":"Sk-ii Essential Power Rich Cream","sourceId":3184,"sourceProductId":"819288","width":300,"brandName":"SK-II","lastCheckedTime":1542367190000,"attributeIdList":[1334385,1388007,1334619,1334618,1334617,907698],"articleId":{"1396":1,"780":1},"topProductPromoInfoVendor":{"id":{"id":135200,"vendorId":3184},"taskId":330494,"titleEn":"Macy's - $260.00 Sk-ii Essential Power Rich Cream","shareTitleEn":"$260.00 Sk-ii Essential Power Rich Cream","imgUrl":"https://images.bloomingdalesassets.com/is/image/BLM/products/1/optimized/8132231_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg","price":"$260.00","startDate":1542367191000,"authorId":99,"confirmed":1,"createdTime":1542477190304,"confirmedTime":1542477190304,"confirmerId":99,"product_id":135200,"start_date":1542367191000,"articleProductId":13302,"repeat":false}}]
+
+
+19号BI接收的商品135200的kafka消息如下：
+
+2018-11-19 01:06:11,005 INFO [org.springframework.kafka.KafkaListenerEndpointContainer#3-0-kafka-listener-1] j.d.s.kafka.kafkaConfig.Listener [Listener.java : 100] kafka.product.update : [{"productId":135200,"categoryId":0,"categoryStrId":0,"unionId":0,"parentId":100035200,"brandId":7263,"depotId":0,"height":375,"availability":0,"productDescription":"[]","productDetail":"[\"Sk-ii Essential Power Rich Cream-Beauty\"]","productImageLink":"https://images.bloomingdalesassets.com/is/image/BLM/products/1/optimized/8132231_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg","productPrice":"$260.00","productSale":"$260.00","productTitle":"Sk-ii Essential Power Rich Cream","sourceId":3184,"sourceProductId":"819288","width":300,"brandName":"SK-II","lastCheckedTime":1542589509000,"attributeIdList":[1334385,1388007,1334619,1334618,1334617,907698]}].
+
+
+通过kafka通知锦囊模块的消息如下：
+
+2018-11-19 01:06:12,357 INFO [kafka-producer-network-thread | producer-2] j.d.s.kafka.kafkaConfig.KafkaUtils [KafkaUtils.java : 95] Send To Backend bi.product.pro Success:[{"productId":135200,"categoryId":0,"categoryStrId":0,"unionId":0,"parentId":100035200,"brandId":7263,"depotId":0,"height":375,"availability":0,"productDescription":"[]","productDetail":"[\"Sk-ii Essential Power Rich Cream-Beauty\"]","productImageLink":"https://images.bloomingdalesassets.com/is/image/BLM/products/1/optimized/8132231_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg","productPrice":"$260.00","productSale":"$260.00","productTitle":"Sk-ii Essential Power Rich Cream","sourceId":3184,"sourceProductId":"819288","width":300,"brandName":"SK-II","lastCheckedTime":1542589509000,"attributeIdList":[1334385,1388007,1334619,1334618,1334617,907698],"articleId":{"1396":1,"780":1},"topProductPromoInfoVendor":{"id":{"id":135200,"vendorId":3184},"taskId":330494,"titleEn":"Macy's - $260.00 Sk-ii Essential Power Rich Cream","shareTitleEn":"$260.00 Sk-ii Essential Power Rich Cream","imgUrl":"https://images.bloomingdalesassets.com/is/image/BLM/products/1/optimized/8132231_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg","price":"$260.00","startDate":1542367191000,"authorId":99,"confirmed":1,"createdTime":1542477190000,"confirmedTime":1542477190000,"confirmerId":99,"product_id":135200,"start_date":1542367191000,"articleProductId":13302,"repeat":true}}]

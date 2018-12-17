@@ -1,0 +1,148 @@
+{
+  "took" : 57,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 2,
+    "max_score" : 11.062899,
+    "hits" : [
+      {
+        "_index" : "crawler",
+        "_type" : "product",
+        "_id" : "3_B075MXMXTY_06292018171845",
+        "_score" : 11.062899,
+        "_source" : {
+          "id" : "3_B075MXMXTY_06292018171845",
+          "productTitle" : null,
+          "productUrl" : null,
+          "productImageLink" : null,
+          "productShortDescription" : null,
+          "productLongDescription" : null,
+          "productKeywords" : null,
+          "width" : null,
+          "height" : null,
+          "categoryStr" : null,
+          "availability" : "onsale",
+          "brand" : "Philips",
+          "createOn" : 1530292725000,
+          "updateTime" : null,
+          "productSale" : "$24.95",
+          "productPrice" : null,
+          "sourceProductId" : "B075MXMXTY",
+          "vendorId" : 3,
+          "lastChecked" : null,
+          "sourceType" : 2,
+          "skus" : [
+            {
+              "sale" : 24.95,
+              "skuNumber" : "B075MXMXTY",
+              "currency" : "USD"
+            }
+          ]
+        }
+      },
+      {
+        "_index" : "crawler",
+        "_type" : "product",
+        "_id" : "3_B075MXMXTY_06242018014736",
+        "_score" : 11.062899,
+        "_source" : {
+          "id" : "3_B075MXMXTY_06242018014736",
+          "productTitle" : null,
+          "productUrl" : null,
+          "productImageLink" : null,
+          "productShortDescription" : null,
+          "productLongDescription" : null,
+          "productKeywords" : null,
+          "width" : null,
+          "height" : null,
+          "categoryStr" : null,
+          "availability" : "onsale",
+          "brand" : "Philips",
+          "createOn" : 1529804856000,
+          "updateTime" : null,
+          "productSale" : "$24.95",
+          "productPrice" : null,
+          "sourceProductId" : "B075MXMXTY",
+          "vendorId" : 3,
+          "lastChecked" : null,
+          "sourceType" : 2,
+          "skus" : [
+            {
+              "sale" : 24.95,
+              "skuNumber" : "B075MXMXTY",
+              "currency" : "USD"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "took" : 1,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 1,
+    "max_score" : 11.062899,
+    "hits" : [
+      {
+        "_index" : "crawler",
+        "_type" : "product",
+        "_id" : "3_B075MXMXTY_06242018140145",
+        "_score" : 11.062899,
+        "_source" : {
+          "id" : "3_B075MXMXTY_06242018140145",
+          "productTitle" : null,
+          "productUrl" : null,
+          "productImageLink" : null,
+          "productShortDescription" : null,
+          "productLongDescription" : null,
+          "productKeywords" : null,
+          "width" : null,
+          "height" : null,
+          "categoryStr" : null,
+          "availability" : "onsale",
+          "brand" : "Philips",
+          "createOn" : 1529848905000,
+          "updateTime" : null,
+          "productSale" : "$24.99",
+          "productPrice" : null,
+          "sourceProductId" : "B075MXMXTY",
+          "vendorId" : 3,
+          "lastChecked" : null,
+          "sourceType" : 2,
+          "skus" : [
+            {
+              "sale" : 24.99,
+              "skuNumber" : "B075MXMXTY",
+              "currency" : "USD"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,1 +1,1 @@
-curl -XDELETE '192.168.1.106:9201/brochure_b?pretty'
+curl -XDELETE '192.168.1.105:9201/linkshare?pretty'

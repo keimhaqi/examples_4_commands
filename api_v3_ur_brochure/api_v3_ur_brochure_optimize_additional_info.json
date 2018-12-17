@@ -1,0 +1,157 @@
+{
+    "items": [
+        {
+            "item": {
+                "lastCmtTime": 1540345966000,
+                "followCount": 0,
+                "articleId": 328,
+                "upCount": 0,
+                "description": "",
+                "weight": 0.0,
+                "titleCh": "耳机折扣合集",
+                "title": "Headphone",
+                "good": 0,
+                "userId": 99,
+                "commentCount": 1,
+                "tags": "",
+                "resourceUrlUltimate": [
+                    
+                ],
+                "inTime": 1536534349000,
+                "downCount": 0,
+                "shareCount": 0,
+                "top": 0,
+                "upIds": "",
+                "style": 4,
+                "viewCount": 22,
+                "window": {
+                    "productSale": "$194.00",
+                    "sourceId": 3,
+                    "productId": 10599846,
+                    "lastCheckedTime": 1534203690000,
+                    "availability": "in_stock",
+                    "sourceProductId": "B00M1NEUKK",
+                    "productTitle": "Bose QuietComfort 25 Acoustic Noise Cancelling Headphones for Apple devices - Black (wired, 3.5mm)",
+                    "vendor": {
+                        "vendorId": 3,
+                        "vendorNameEn": "Amazon",
+                        "vendorNameCh": "Amazon",
+                        "vendorDescEn": "Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & accessories, shoes...",
+                        "vendorDescCh": "全球著名购物平台",
+                        "vendorLogoUrl": "amazon.png",
+                        "readable": 1,
+                        "vendorLogoWidth": 109,
+                        "vendorLogoHeight": 33,
+                        "vendorDomain": "amazon.com",
+                        "currency": "U",
+                        "language": "en"
+                    },
+                    "width": 355,
+                    "productImageLink": "https://images-na.ssl-images-amazon.com/images/I/71kgntub7mL._SY355_.jpg",
+                    "productDescription": "[\"Designed specifically for use with select iPod, iPhone and iPad models\",\"Significant Noise Reduction For Travel.Headphones:19.1 cm H x 15.2 cm W x 2.3 cm D (195.6 g)\",\"Deep, Powerful Sound For The Music You Love\",\"These headphones are compatible with most Android, Windows and BlackBerry smartphones Refer user manual below.\",\"Inline Mic/remote For Music And Calls\"]",
+                    "productPrice": "$299.00",
+                    "height": 355,
+                    "topProductPromoInfoVendor": {
+                        "shareTitleEn": "$109.99 ($299.95) Bose QuietComfort 25 Acoustic Noise Cancelling Headphones for Apple devices - Black (wired, 3.5mm)",
+                        "confirmerId": 99,
+                        "authorId": 99,
+                        "confirmed": 1,
+                        "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/71kgntub7mL._SY355_.jpg",
+                        "titleEn": "Amazon - $109.99 ($299.95) Bose QuietComfort 25 Acoustic Noise Cancelling Headphones for Apple devices - Black (wired, 3.5mm)",
+                        "price": "$109.99",
+                        "confirmedTime": 1543193346000,
+                        "createdTime": 1543193346000,
+                        "id": {
+                            "id": 10599846,
+                            "vendorId": 3
+                        },
+                        "taskId": 3122199,
+                        "startDate": 1543194231000
+                    }
+                },
+                "user": {
+                    "id": 99,
+                    "nickName": "Genie",
+                    "active": 1,
+                    "userId": 99
+                },
+                "status": 0
+            },
+            "score": 0.9996285265256352,
+            "type": "article"
+        },
+        {
+            "item": {
+                "lastCmtTime": 1541550115000,
+                "followCount": 0,
+                "articleId": 1400,
+                "upCount": 0,
+                "description": "这个锦囊包含Burberry, Gucci, LV等经典款围巾。",
+                "weight": 0.0,
+                "titleCh": "经典款围巾大盘点及折扣信息分享",
+                "title": "经典款围巾大盘点及折扣信息分享",
+                "good": 0,
+                "userId": 217,
+                "commentCount": 1,
+                "tags": "",
+                "resourceUrlUltimate": [
+                    
+                ],
+                "inTime": 1541550115000,
+                "downCount": 0,
+                "shareCount": 0,
+                "top": 0,
+                "upIds": "",
+                "style": 4,
+                "viewCount": 48,
+                "window": {
+                    "productSale": "$435.00",
+                    "sourceId": 13816,
+                    "productId": 10873842,
+                    "lastCheckedTime": 1519201115000,
+                    "availability": "in_stock",
+                    "sourceProductId": "845524446744245",
+                    "productTitle": "Burberry Classic Giant Check Cashmere Scarf",
+                    "vendor": {
+                        "vendorId": 13816,
+                        "vendorNameEn": "Saks Fifth Avenue",
+                        "vendorNameCh": "Saks Fifth Avenue",
+                        "vendorDescEn": "Saks Fifth Avenue is a world famous luxury brand store,includes men's and women's wear, handbags, shoes and other international brands.",
+                        "vendorDescCh": "Saks Fifth Avenue是世界著名的奢侈品百货，提供品牌男装、女装、国际名牌女包、女鞋等。",
+                        "vendorLogoUrl": "Saks_Fifth_Avenue.png",
+                        "readable": 1,
+                        "vendorLogoWidth": 54,
+                        "vendorLogoHeight": 54,
+                        "vendorDomain": "saksfifthavenue.com",
+                        "currency": "U",
+                        "language": "en"
+                    },
+                    "width": 300,
+                    "productImageLink": "https://image.s5a.com/is/image/saks/0402602915278_500x500.jpg",
+                    "productDescription": "[\"Classic Giant Check Cashmere Scarf\"]",
+                    "productPrice": "$435.00",
+                    "height": 400
+                },
+                "user": {
+                    "id": 217,
+                    "nickName": "sff",
+                    "active": 1,
+                    "email": "FANGFEI_SUN@JINBAG.COM",
+                    "userId": 217
+                },
+                "status": 0
+            },
+            "score": 0.0,
+            "type": "article"
+        }
+    ],
+    "num": 2,
+    "lifeCycle": 1,
+    "hasMoreData": true,
+    "blacklistProduct": [
+        
+    ],
+    "blacklistComment": [
+        
+    ]
+}
