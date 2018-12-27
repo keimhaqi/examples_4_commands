@@ -1,0 +1,62 @@
+curl -X GET "172.18.0.2:9200/_stats"
+curl -X GET "172.18.0.2:9200/search_hot_a/_stats?human&pretty"
+
+curl -X GET "http://172.18.0.2:9200/_cat/shards"
+
+curl -X GET "http://172.18.0.2:9200/_nodes/process?"
+
+curl -X GET "http://172.18.0.2:9200/_cat/master?v="
+
+curl -X GET http://172.18.0.2:9200/_cluster/settings?include_defaults=true
+
+
+curl -X POST -d '{
+    "commands" : [ {
+      "allocate" : {
+          "index" : "search_hot_a",
+          "shard" : 0,
+          "node" : "ien8yNpFRqGP4dNDbSTjcg",
+          "allow_primary" : true
+      }
+    }]
+}' "http://172.18.0.2:9200/_cluster/reroute"
+
+
+curl -X POST "172.18.0.2:9200/_cluster/reroute" -H 'Content-Type: application/json' -d'
+{
+    "commands" : [
+        {
+          "allocate_replica" : {
+                "index" : "search_hot_a", 
+                "shard" : 0,
+                "node" : "ien8yNpFRqGP4dNDbSTjcg"
+          }
+        }
+    ]
+}
+'
+
+curl -XPOST '172.18.0.3:9200/_cluster/reroute' -d '{
+    "commands" : [ {
+            "allocate" : {
+                "index" : "products_in_brochures_a",
+                "shard" : 0,
+                "node" : "ien8yNpFRqGP4dNDbSTjcg",
+                "allow_primary" : true
+            }
+        }
+    ] 
+}'
+
+
+
+
+curl -XGET 'http://172.18.0.2:9200/search_hot_a/_shard_stores?pretty'
+
+
+curl -XGET 'http://172.18.0.2:9200/search_hot_a/_segments'
+
+
+curl -XGET 172.18.0.3:9200/_cat/shards?h=index,shard,prirep,state,unassigned.reason| grep UNASSIGNED
+
+curl -XGET 172.18.0.2:9200/_cluster/allocation/explain?pretty

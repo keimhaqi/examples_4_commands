@@ -1,7 +1,7 @@
 curl -i -k -H 'Content-Type: application/json' -d '
 {
   "param":[
-    {"productId": 10610866}
+    {"productId": 10904960}
   ],
   "user": 289
 }

@@ -37,7 +37,7 @@ def call_parser_api(fileName):
     #     logging.info("Call Linkshare API is over.")
     redis_key_value = {}
     # file_dir_on_dest = "/home/zhenping/weekNewData/{}".format(fileName)
-    file_dir_on_dest = "/home/zhenping/linkshare_ftp/nordstrom/new/1237_new/{}".format(fileName)
+    file_dir_on_dest = "/home/zhenping/linkshare_ftp/bloomingdales/{}".format(fileName)
     serial_number = get_serial_number_in_redis()
     original_date = du_parser.parse(str(datetime.datetime.now()))
     upload_time = original_date.strftime('%Y-%m-%d %H:%M:%S.%f')
@@ -76,9 +76,12 @@ redis_conn = redis.Redis(host=settings['REDIS_HOST'],
     # time.sleep( 5 )
     # print "End : %s" % time.ctime()
 # call_parser_api('24285_3281764_98931637_2018_11_28_12_06_12_cmp.xml.gz')
-linkshare_parser_queue = '1237.wait'
-call_parser_api('1237_3281764_165094843_cmp_delta.xml.gz')
-# call_parser_api('1237_3281764_165094843_cmp_delta.xml.gz')
+
+linkshare_parser_queue = '13867.wait'
+call_parser_api('13867_3281764_26659471_Dec-19-18-12-01-39_cmp_delta.xml.gz')
+# for item in range(1, 1000):
+#     linkshare_parser_queue = '38606.wait'
+#     call_parser_api('38606_3281764_100815_cmp.xml.gz')
 # call_parser_api('1237_3281764_165094843_cmp_delta.xml.gz')
 # call_parser_api('1237_3281764_165094843_cmp_delta.xml.gz')
 # call_parser_api('1237_3281764_165094843_cmp_delta.xml.gz')

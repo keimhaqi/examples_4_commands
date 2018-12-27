@@ -1,0 +1,4 @@
+PUT /INDEX_NAME/_settings
+{
+"number_of_replicas": 0
+}
