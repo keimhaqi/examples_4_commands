@@ -96,3 +96,12 @@ def judge_decimal_only(value):
         return True
     else:
         return False
+
+
+def compare_str(string1, string2):
+    flag = False
+    if judge_text_only(string1) and judge_text_only(string2):
+        if string1.strip() == string2.strip():
+            flag = True
+    
+    return flag

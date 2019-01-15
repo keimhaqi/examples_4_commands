@@ -21,6 +21,52 @@ curl -k -H 'Content-Type: application/json' -d '
 ' http://96.90.248.211:9124/api/v4/search/itemlist
 
 
+com.fasterxml.jackson.databind.JsonMappingException:
+
+
+2019-01-14 07:34:04.980  WARN 164524 --- [eduler_Worker-1] jinbagIO.util.json.JsonMapper            : write to json string error:JobDetail 'traceWhenFinish.6962023_1547391844762':  jobClass: 'jinbagIO.core.service.quartz.JinbagJobTraceFinished concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: true requestsRecovers: false
+
+
+com.fasterxml.jackson.databind.JsonMappingException: No serializer found for class org.quartz.JobBuilder and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: org.quartz.impl.JobDetailImpl["jobBuilder"])
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:275)
+	at com.fasterxml.jackson.databind.SerializerProvider.mappingException(SerializerProvider.java:1110)
+	at com.fasterxml.jackson.databind.SerializerProvider.reportMappingProblem(SerializerProvider.java:1135)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:69)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:32)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:704)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:690)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:155)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:292)
+	at com.fasterxml.jackson.databind.ObjectMapper._configAndWriteValue(ObjectMapper.java:3672)
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValueAsString(ObjectMapper.java:3048)
+	at jinbagIO.util.json.JsonMapper.toJson(JsonMapper.java:72)
+	at jinbagIO.core.service.quartz.JinbagQuartzService.scheduleJob(JinbagQuartzService.java:180)
+	at jinbagIO.core.service.quartz.JinbagQuartzService.addScheduleJobOnSpecificTimeForDiscoverTaskResponseForever(JinbagQuartzService.java:175)
+	at jinbagIO.core.service.quartz.JinbagJob.execute(JinbagJob.java:104)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+
+ No serializer found for class org.quartz.JobBuilder and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: org.quartz.impl.JobDetailImpl["jobBuilder"])
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:275)
+	at com.fasterxml.jackson.databind.SerializerProvider.mappingException(SerializerProvider.java:1110)
+	at com.fasterxml.jackson.databind.SerializerProvider.reportMappingProblem(SerializerProvider.java:1135)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:69)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:32)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:704)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:690)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:155)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:292)
+	at com.fasterxml.jackson.databind.ObjectMapper._configAndWriteValue(ObjectMapper.java:3672)
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValueAsString(ObjectMapper.java:3048)
+	at jinbagIO.util.json.JsonMapper.toJson(JsonMapper.java:72)
+	at jinbagIO.core.service.quartz.JinbagQuartzService.scheduleJob(JinbagQuartzService.java:180)
+	at jinbagIO.core.service.quartz.JinbagQuartzService.addScheduleJobOnSpecificTimeForDiscoverTaskResponseForever(JinbagQuartzService.java:175)
+	at jinbagIO.core.service.quartz.JinbagJob.execute(JinbagJob.java:104)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+
+
+
 
 
 curl -k -H 'Content-Type: application/json' -d '
@@ -52,7 +98,7 @@ curl -k -H 'Content-Type: application/json' -d '
             "user":"0",
             "from":0,
             "num":10,
-            "searchword":"Radley London",
+            "searchword":"goose",
             "articleFilter":[],
             "type":"article",
             "language":"en"

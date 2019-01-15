@@ -1,0 +1,104 @@
+2019-01-11 02:02:05.225 ERROR 22578 --- [ntainer#0-0-C-1] o.s.kafka.listener.LoggingErrorHandler   : Error while processing: ConsumerRecord(topic = product_merge, partition = 2, offset = 1462235, CreateTime = 1547130692692, serialized key size = -1, serialized value size = 592, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = {"id":53244,"productId":10897764,"categoryId":-1,"productTitle":"adidas Performance Men's Crazy Smooth Shorts","productUrl":"https://www.amazon.com/dp/B00ONB1NBC","productImageLink":"https://images-na.ssl-images-amazon.com/images/I/81MlalE5y2L._SY355_.jpg","productShortDescription":"[\"Imported\",\"100% polyester jacquard.\",\"Contrast Side And Back Hem Inserts\"]","width":273,"height":355,"availability":"0","brand":"adidas","attributeStr":"1205717,907185","updateTime":1508169692000,"productSale":"$9.95","productPrice":"$9.95","sourceProductId":"B00ONB1NBC","vendorId":3,"orphan":false})
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void com.jinbag.listener.Listener.listen(java.lang.String)' threw exception; nested exception is java.lang.IllegalArgumentException: Date may not be null
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:267)
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:80)
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:51)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:1071)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:1051)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:998)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:866)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:724)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: Date may not be null
+	at org.apache.http.util.Args.notNull(Args.java:54)
+	at org.apache.http.client.utils.DateUtils.formatDate(DateUtils.java:173)
+	at com.jinbag.esimport.AbstractMysql2ESImport.importOne(AbstractMysql2ESImport.java:164)
+	at com.jinbag.service.Mysql2ESImportService.importOne(Mysql2ESImportService.java:62)
+	at com.jinbag.service.Mysql2ESImportService$$FastClassBySpringCGLIB$$6c69891.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:684)
+	at com.jinbag.service.Mysql2ESImportService$$EnhancerBySpringCGLIB$$21ef7a75.importOne(<generated>)
+	at com.jinbag.listener.Listener.listen(Listener.java:31)
+	at sun.reflect.GeneratedMethodAccessor41.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:181)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:114)
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:48)
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:248)
+	... 10 common frames omitted
+
+
+
+Error while processing: ConsumerRecord(topic = product_merge, partition = 1, offset = 1462141, CreateTime = 1547129881390, serialized key size = -1, serialized value size = 568, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = {"id":18340,"productId":10891736,"productTitle":"Nike SQ/Show X2/Tailwind Rx Clip Sunglasses, Clear, Clear Lens","productUrl":"https://www.amazon.com/dp/B005942C44","productImageLink":"https://images-na.ssl-images-amazon.com/images/I/41GTJisA5zL._SX355_.jpg","productShortDescription":"[\"Composite\",\"Includes pouch\",\"Frame color: clear\",\"Lens color: clear\"]","width":355,"height":236,"availability":"0","attributeStr":"907185","updateTime":1508165323000,"productSale":"$48.39","productPrice":"$48.39","sourceProductId":"B005942C44","vendorId":3,"orphan":false})
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void com.jinbag.listener.Listener.listen(java.lang.String)' threw exception; nested exception is java.lang.IllegalArgumentException: Date may not be null
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:267)
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:80)
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:51)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:1071)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:1051)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:998)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:866)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:724)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: Date may not be null
+	at org.apache.http.util.Args.notNull(Args.java:54)
+	at org.apache.http.client.utils.DateUtils.formatDate(DateUtils.java:173)
+	at com.jinbag.esimport.AbstractMysql2ESImport.importOne(AbstractMysql2ESImport.java:164)
+	at com.jinbag.service.Mysql2ESImportService.importOne(Mysql2ESImportService.java:62)
+	at com.jinbag.service.Mysql2ESImportService$$FastClassBySpringCGLIB$$6c69891.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:684)
+	at com.jinbag.service.Mysql2ESImportService$$EnhancerBySpringCGLIB$$21ef7a75.importOne(<generated>)
+	at com.jinbag.listener.Listener.listen(Listener.java:31)
+	at sun.reflect.GeneratedMethodAccessor41.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:181)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:114)
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:48)
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:248)
+	... 10 common frames omitted
+
+
+
+
+
+2019-01-11 02:03:26.417 ERROR 22578 --- [ntainer#0-0-C-1] o.s.kafka.listener.LoggingErrorHandler   : Error while processing: ConsumerRecord(topic = product_merge, partition = 1, offset = 1462095, CreateTime = 1547129330716, serialized key size = -1, serialized value size = 797, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = {"id":21864,"productId":10891796,"productTitle":"adidas Performance Women's Response Boost 2 Techfit W Running Shoe","productUrl":"https://www.amazon.com/dp/B00RW5HNX8","productImageLink":"https://images-na.ssl-images-amazon.com/images/I/91gCCwMdRDL._UX395_.jpg","productShortDescription":"[\"TORSION SYSTEM for mid-foot integrity\",\"Flex grooves at outsole for flexibility\",\"Running shoe with techfit upper featuring flexible and seamless design for sock-free comfort\",\"Imported\",\"boost midsole\",\"Rubber sole\",\"Fabric/Synthetic\"]","width":395,"height":233,"availability":"in-stock","brand":"adidas","attributeStr":"1205717,907185","updateTime":1511412526000,"productSale":"$70.00 - $104.90","productPrice":"$70.00 - $104.90","sourceProductId":"B00RW5HNX8","vendorId":3,"orphan":false})
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void com.jinbag.listener.Listener.listen(java.lang.String)' threw exception; nested exception is java.lang.IllegalArgumentException: Date may not be null
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:267)
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:80)
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:51)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:1071)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:1051)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:998)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:866)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:724)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: Date may not be null
+	at org.apache.http.util.Args.notNull(Args.java:54)
+	at org.apache.http.client.utils.DateUtils.formatDate(DateUtils.java:173)
+	at com.jinbag.esimport.AbstractMysql2ESImport.importOne(AbstractMysql2ESImport.java:164)
+	at com.jinbag.service.Mysql2ESImportService.importOne(Mysql2ESImportService.java:62)
+	at com.jinbag.service.Mysql2ESImportService$$FastClassBySpringCGLIB$$6c69891.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:684)
+	at com.jinbag.service.Mysql2ESImportService$$EnhancerBySpringCGLIB$$21ef7a75.importOne(<generated>)
+	at com.jinbag.listener.Listener.listen(Listener.java:31)
+	at sun.reflect.GeneratedMethodAccessor41.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:181)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:114)
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:48)
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:248)
+	... 10 common frames omitted

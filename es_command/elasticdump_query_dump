@@ -1,0 +1,43 @@
+elasticdump \
+  --input=http://192.168.1.192:9200/linkshare \
+  --output=finishline.json \
+  --searchBody='{"query":{"bool" : {
+    "must" : [
+      {
+        "bool" : {
+          "must" : [
+            {
+              "bool" : {
+                "should" : [
+                  {
+                    "match" : {
+                      "vendorId" : {
+                        "query" : 37731,
+                        "operator" : "AND",
+                        "prefix_length" : 0,
+                        "max_expansions" : 50,
+                        "fuzzy_transpositions" : true,
+                        "lenient" : false,
+                        "zero_terms_query" : "NONE",
+                        "boost" : 1.0
+                      }
+                    }
+                  }
+                ],
+                "disable_coord" : false,
+                "adjust_pure_negative" : true,
+                "minimum_should_match" : "1",
+                "boost" : 1.0
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      }
+    ],
+    "disable_coord" : false,
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }}}'
