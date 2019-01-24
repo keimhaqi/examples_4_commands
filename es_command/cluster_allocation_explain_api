@@ -1,6 +1,6 @@
-curl -X GET "172.18.0.2:9200/_cluster/allocation/explain" -H 'Content-Type: application/json' -d'
+curl -X GET "172.18.0.3:9200/_cluster/allocation/explain" -H 'Content-Type: application/json' -d'
 {
-  "index": "products_in_brochures_a",
+  "index": "search_hot_a",
   "shard": 0,
   "primary": true
 }

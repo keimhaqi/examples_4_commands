@@ -1,0 +1,384 @@
+{
+    "allParsingQueue": {
+        "42156": {
+            "counter": 0
+        },
+        "42157": {
+            "counter": 0
+        },
+        "38650": {
+            "counter": 0
+        },
+        "38651": {
+            "counter": 0
+        },
+        "36310": {
+            "merchandiser": "dyson",
+            "counter": 0
+        },
+        "counterMax": 22,
+        "25003": {
+            "merchandiser": "neiman marcus",
+            "fileInfo": {
+                "/home/zhenping/weekNewData/25003_3281764_26659850_Jan-22-19-12-00-09_0_cmp_delta.xml.gz": {
+                    "uploadTime": "2019-01-22 12:00:09.792517",
+                    "serialNumber": 963,
+                    "filename": "/home/zhenping/weekNewData/25003_3281764_26659850_Jan-22-19-12-00-09_0_cmp_delta.xml.gz",
+                    "startParseTime": "2019-01-23 00:00:00.000272"
+                }
+            },
+            "counter": 1
+        },
+        "24895": {
+            "merchandiser": "dillards",
+            "fileInfo": {
+                "/home/zhenping/weekNewData/24895_3281764_88637038_Jan-22-19-18-37-34_cmp_delta.xml.gz": {
+                    "uploadTime": "2019-01-22 18:37:35.185719",
+                    "serialNumber": 437,
+                    "filename": "/home/zhenping/weekNewData/24895_3281764_88637038_Jan-22-19-18-37-34_cmp_delta.xml.gz",
+                    "startParseTime": "2019-01-23 01:52:21.000695"
+                }
+            },
+            "counter": 1
+        },
+        "42666": {
+            "counter": 0
+        },
+        "3184": {
+            "merchandiser": "macys",
+            "fileInfo": {
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_15_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_15_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-23 00:14:01.000978"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_10_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_10_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-23 00:40:10.000722"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_8_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_8_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-23 00:52:12.000204"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_18_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_18_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-23 00:05:00.000834"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_13_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_13_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-23 00:22:03.000057"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_0_cmp_delta.xml.gz": {
+                    "startParseTime": "2019-01-23 01:48:20.000804",
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_0_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041192_Dec-09-18-15-00-10_5_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041192_Dec-09-18-15-00-10_5_cmp_delta.xml.gz",
+                    "serialNumber": 193,
+                    "uploadTime": "2018-12-09 15:00:10.826045",
+                    "startParseTime": "2019-01-22 22:21:42.000732"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_11_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_11_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-23 00:31:05.000841"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_6_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_6_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-23 01:00:12.000751"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041192_Dec-09-18-15-00-10_7_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041192_Dec-09-18-15-00-10_7_cmp_delta.xml.gz",
+                    "serialNumber": 193,
+                    "uploadTime": "2018-12-09 15:00:10.826045",
+                    "startParseTime": "2019-01-22 22:19:42.000392"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_4_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_4_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-23 01:10:14.000509"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_7_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_7_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-23 00:59:12.000615"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_14_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_14_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-23 00:18:02.000551"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_9_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_9_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-23 00:43:11.000128"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_16_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_16_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-23 00:07:01.000180"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_5_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_5_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-23 01:04:13.000018"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_12_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_12_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-23 00:24:03.000437"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041192_Dec-09-18-15-00-10_8_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041192_Dec-09-18-15-00-10_8_cmp_delta.xml.gz",
+                    "serialNumber": 193,
+                    "uploadTime": "2018-12-09 15:00:10.826045",
+                    "startParseTime": "2019-01-22 22:18:42.000120"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_21_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_21_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-22 23:43:57.000509"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_1_cmp_delta.xml.gz": {
+                    "startParseTime": "2019-01-23 01:48:20.000806",
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_1_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793"
+                },
+                "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_3_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/3184_3281764_147041288_Dec-09-18-15-00-17_3_cmp_delta.xml.gz",
+                    "serialNumber": 195,
+                    "uploadTime": "2018-12-09 15:00:17.603793",
+                    "startParseTime": "2019-01-23 01:31:16.000009"
+                }
+            },
+            "counter": 21
+        },
+        "13816": {
+            "merchandiser": "saks",
+            "fileInfo": {
+                "/home/zhenping/weekNewData/13816_3281764_26941843_Jan-22-19-21-00-29_2_cmp_delta.xml.gz": {
+                    "uploadTime": "2019-01-22 21:00:31.886786",
+                    "serialNumber": 2359,
+                    "filename": "/home/zhenping/weekNewData/13816_3281764_26941843_Jan-22-19-21-00-29_2_cmp_delta.xml.gz",
+                    "startParseTime": "2019-01-23 01:41:17.000466"
+                }
+            },
+            "counter": 1
+        },
+        "1237": {
+            "merchandiser": "nordstrom",
+            "fileInfo": {
+                "/home/zhenping/weekNewData/1237_3281764_99864629_Dec-01-18-00-00-21_0_cmp_delta.xml.gz": {
+                    "startParseTime": "2019-01-23 00:30:05.000698",
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99864629_Dec-01-18-00-00-21_0_cmp_delta.xml.gz",
+                    "serialNumber": 119,
+                    "uploadTime": "2018-12-01 00:00:22.095330"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_3_cmp_delta.xml.gz": {
+                    "startParseTime": "2019-01-23 00:38:10.000566",
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_3_cmp_delta.xml.gz",
+                    "serialNumber": 127,
+                    "uploadTime": "2018-12-01 00:00:35.184017"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_14_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_14_cmp_delta.xml.gz",
+                    "serialNumber": 127,
+                    "uploadTime": "2018-12-01 00:00:35.184017",
+                    "startParseTime": "2019-01-23 00:53:12.000373"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_13_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_13_cmp_delta.xml.gz",
+                    "serialNumber": 127,
+                    "uploadTime": "2018-12-01 00:00:35.184017",
+                    "startParseTime": "2019-01-23 01:04:13.000096"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_1_cmp_delta.xml.gz": {
+                    "startParseTime": "2019-01-23 00:38:10.000566",
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_1_cmp_delta.xml.gz",
+                    "serialNumber": 127,
+                    "uploadTime": "2018-12-01 00:00:35.184017"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_100399977_Dec-01-18-00-00-18_0_cmp_delta.xml.gz": {
+                    "startParseTime": "2019-01-23 00:28:04.000904",
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_100399977_Dec-01-18-00-00-18_0_cmp_delta.xml.gz",
+                    "serialNumber": 117,
+                    "uploadTime": "2018-12-01 00:00:19.387041"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_5_cmp_delta.xml.gz": {
+                    "startParseTime": "2019-01-23 00:38:10.000566",
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_5_cmp_delta.xml.gz",
+                    "serialNumber": 127,
+                    "uploadTime": "2018-12-01 00:00:35.184017"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_11_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_11_cmp_delta.xml.gz",
+                    "serialNumber": 127,
+                    "uploadTime": "2018-12-01 00:00:35.184017",
+                    "startParseTime": "2019-01-23 01:24:15.000550"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_15_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_15_cmp_delta.xml.gz",
+                    "serialNumber": 127,
+                    "uploadTime": "2018-12-01 00:00:35.184017",
+                    "startParseTime": "2019-01-23 00:50:12.000045"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_9_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_9_cmp_delta.xml.gz",
+                    "serialNumber": 127,
+                    "uploadTime": "2018-12-01 00:00:35.184017",
+                    "startParseTime": "2019-01-23 01:51:21.000331"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_4_cmp_delta.xml.gz": {
+                    "startParseTime": "2019-01-23 00:38:10.000567",
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_4_cmp_delta.xml.gz",
+                    "serialNumber": 127,
+                    "uploadTime": "2018-12-01 00:00:35.184017"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99864751_Dec-01-18-00-00-24_cmp_delta.xml.gz": {
+                    "uploadTime": "2018-12-01 00:00:25.004903",
+                    "serialNumber": 121,
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99864751_Dec-01-18-00-00-24_cmp_delta.xml.gz",
+                    "startParseTime": "2019-01-23 00:32:06.000475"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99864672_Dec-01-18-00-00-23_cmp_delta.xml.gz": {
+                    "uploadTime": "2018-12-01 00:00:23.582459",
+                    "serialNumber": 120,
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99864672_Dec-01-18-00-00-23_cmp_delta.xml.gz",
+                    "startParseTime": "2019-01-23 00:31:06.000248"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_12_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_12_cmp_delta.xml.gz",
+                    "serialNumber": 127,
+                    "uploadTime": "2018-12-01 00:00:35.184017",
+                    "startParseTime": "2019-01-23 01:19:15.000207"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_0_cmp_delta.xml.gz": {
+                    "startParseTime": "2019-01-23 00:38:10.000564",
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_0_cmp_delta.xml.gz",
+                    "serialNumber": 127,
+                    "uploadTime": "2018-12-01 00:00:35.184017"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_2_cmp_delta.xml.gz": {
+                    "startParseTime": "2019-01-23 00:38:10.000566",
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_2_cmp_delta.xml.gz",
+                    "serialNumber": 127,
+                    "uploadTime": "2018-12-01 00:00:35.184017"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_8_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_8_cmp_delta.xml.gz",
+                    "serialNumber": 127,
+                    "uploadTime": "2018-12-01 00:00:35.184017",
+                    "startParseTime": "2019-01-23 01:53:21.000852"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_100399977_Dec-01-18-00-00-18_1_cmp_delta.xml.gz": {
+                    "startParseTime": "2019-01-23 00:28:04.000907",
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_100399977_Dec-01-18-00-00-18_1_cmp_delta.xml.gz",
+                    "serialNumber": 117,
+                    "uploadTime": "2018-12-01 00:00:19.387041"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_6_cmp_delta.xml.gz": {
+                    "startParseTime": "2019-01-23 00:38:10.000567",
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_6_cmp_delta.xml.gz",
+                    "serialNumber": 127,
+                    "uploadTime": "2018-12-01 00:00:35.184017"
+                },
+                "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_10_cmp_delta.xml.gz": {
+                    "filename": "/home/zhenping/weekNewData/1237_3281764_99865287_Dec-01-18-00-00-34_10_cmp_delta.xml.gz",
+                    "serialNumber": 127,
+                    "uploadTime": "2018-12-01 00:00:35.184017",
+                    "startParseTime": "2019-01-23 01:28:15.000796"
+                }
+            },
+            "counter": 20
+        },
+        "24285": {
+            "merchandiser": "yoox.com",
+            "fileInfo": {
+                "/home/zhenping/weekNewData/24285_3281764_26660413_Jan-21-19-21-30-05_3_cmp_delta.xml.gz": {
+                    "uploadTime": "2019-01-21 21:30:07.509922",
+                    "serialNumber": 1831,
+                    "filename": "/home/zhenping/weekNewData/24285_3281764_26660413_Jan-21-19-21-30-05_3_cmp_delta.xml.gz",
+                    "startParseTime": "2019-01-23 01:03:12.000888"
+                }
+            },
+            "counter": 1
+        },
+        "36025": {
+            "merchandiser": "lastcall",
+            "counter": 0
+        },
+        "38655": {
+            "merchandiser": "striderite",
+            "counter": 0
+        },
+        "37731": {
+            "merchandiser": "finish line",
+            "counter": 0
+        },
+        "38733": {
+            "counter": 0
+        },
+        "39757": {
+            "merchandiser": "joes new balance outlet",
+            "counter": 0
+        },
+        "39756": {
+            "counter": 0
+        },
+        "39558": {
+            "counter": 0
+        },
+        "38801": {
+            "merchandiser": "saksoff5th",
+            "fileInfo": {
+                "/home/zhenping/weekNewData/38801_3281764_103298327_Jan-11-19-03-03-42_cmp_delta.xml.gz": {
+                    "uploadTime": "2019-01-11 03:03:42.937777",
+                    "serialNumber": 11344,
+                    "filename": "/home/zhenping/weekNewData/38801_3281764_103298327_Jan-11-19-03-03-42_cmp_delta.xml.gz",
+                    "startParseTime": "2019-01-23 01:53:22.000123"
+                }
+            },
+            "counter": 1
+        },
+        "13867": {
+            "merchandiser": "bloomingdales",
+            "fileInfo": {
+                "/home/zhenping/weekNewData/13867_3281764_26659427_14_cmp_delta.xml.gz": {
+                    "uploadTime": "2019-01-21 15:08:37.866366",
+                    "serialNumber": 675,
+                    "filename": "/home/zhenping/weekNewData/13867_3281764_26659427_14_cmp_delta.xml.gz",
+                    "startParseTime": "2019-01-23 00:49:11.000887"
+                }
+            },
+            "counter": 1
+        },
+        "38606": {
+            "merchandiser": "bestbuy",
+            "counter": 0
+        }
+    },
+    "serverTime": "2019-01-23 01:55:56.000411"
+}

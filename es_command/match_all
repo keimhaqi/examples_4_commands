@@ -126,7 +126,7 @@ curl -XGET 'localhost:9201/search/items/_search?pretty' -H 'Content-Type: applic
 
 curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
 {
-  "size":20000,
+  "size":5,
   "query" : {
   "bool" : {
     "must" : [
@@ -139,7 +139,7 @@ curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Typ
                   {
                     "match" : {
                       "sourceProductId" : {
-                        "query" : "prod2783011",
+                        "query" : "B07C8SR1DS",
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,
@@ -163,7 +163,79 @@ curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Typ
                   {
                     "match" : {
                       "vendorId" : {
-                        "query" : 37731,
+                        "query" : 3,
+                        "operator" : "AND",
+                        "prefix_length" : 0,
+                        "max_expansions" : 50,
+                        "fuzzy_transpositions" : true,
+                        "lenient" : false,
+                        "zero_terms_query" : "NONE",
+                        "boost" : 1.0
+                      }
+                    }
+                  }
+                ],
+                "disable_coord" : false,
+                "adjust_pure_negative" : true,
+                "minimum_should_match" : "1",
+                "boost" : 1.0
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      }
+    ],
+    "disable_coord" : false,
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
+}
+'
+
+curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "size":10,
+  "query" : {
+  "bool" : {
+    "must" : [
+      {
+        "bool" : {
+          "must" : [
+            {
+              "bool" : {
+                "should" : [
+                  {
+                    "match" : {
+                      "sourceProductId" : {
+                        "query" : "B008CDR7LW",
+                        "operator" : "AND",
+                        "prefix_length" : 0,
+                        "max_expansions" : 50,
+                        "fuzzy_transpositions" : true,
+                        "lenient" : false,
+                        "zero_terms_query" : "NONE",
+                        "boost" : 1.0
+                      }
+                    }
+                  }
+                ],
+                "disable_coord" : false,
+                "adjust_pure_negative" : true,
+                "minimum_should_match" : "1",
+                "boost" : 1.0
+              }
+            },
+            {
+              "bool" : {
+                "should" : [
+                  {
+                    "match" : {
+                      "vendorId" : {
+                        "query" : 3,
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,
@@ -198,9 +270,16 @@ curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Typ
 
 
 
-curl -XGET '192.168.1.105:9201/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
+
+
+
+
+
+
+
+curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
 {
-  "size":91,
+  "size":1,
   "query" : {
   "bool" : {
     "must" : [
@@ -213,7 +292,7 @@ curl -XGET '192.168.1.105:9201/linkshare/product/_search?pretty' -H 'Content-Typ
                   {
                     "match" : {
                       "vendorId" : {
-                        "query" : 37731,
+                        "query" : 3,
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,

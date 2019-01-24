@@ -1,5 +1,5 @@
 curl -X GET "172.18.0.3:9200/_stats"
-curl -X GET "172.18.0.2:9200/search_hot_a/_stats?human&pretty"
+curl -X GET "172.18.0.3:9200/search_hot_a/_stats?human&pretty"
 
 
 curl -X GET "192.168.1.192:9200/_stats"
@@ -54,12 +54,12 @@ curl -XPOST '172.18.0.3:9200/_cluster/reroute' -d '{
 
 
 
-curl -XGET 'http://172.18.0.2:9200/search_hot_a/_shard_stores?pretty'
+curl -XGET 'http://172.18.0.3:9200/search_hot_a/_shard_stores?pretty'
 
 
-curl -XGET 'http://172.18.0.2:9200/search_hot_a/_segments'
+curl -XGET 'http://172.18.0.3:9200/search_hot_a/_segments?human&pretty'
 
 
 curl -XGET 172.18.0.3:9200/_cat/shards?h=index,shard,prirep,state,unassigned.reason| grep UNASSIGNED
 
-curl -XGET 172.18.0.2:9200/_cluster/allocation/explain?pretty
+curl -XGET 172.18.0.3:9200/_cluster/allocation/explain?pretty

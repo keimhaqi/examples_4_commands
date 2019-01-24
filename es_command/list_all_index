@@ -4,7 +4,7 @@ curl -XGET '192.168.1.192:9200/_cat/indices?human&v&pretty'
 curl -XGET '192.168.1.192:9200/_cat/indices?human&v&pretty'
 es = Elasticsearch(hosts='localhost:9201', cluster='es-cluster' )
 
-curl -XGET '192.168.1.105:9200/_cat/indices?human&v&pretty'
+curl -XGET '192.168.1.105:9201/_cat/indices?human&v&pretty'
 
 0 */1 * * * python /home/zhenping/rakuten/ftpclient_1.1.py
 

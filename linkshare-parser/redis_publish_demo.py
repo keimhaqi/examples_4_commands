@@ -37,7 +37,7 @@ def call_parser_api(fileName):
     #     logging.info("Call Linkshare API is over.")
     redis_key_value = {}
     # file_dir_on_dest = "/home/zhenping/weekNewData/{}".format(fileName)
-    file_dir_on_dest = "/home/zhenping/linkshare_ftp/FinishLine/37731/{}".format(fileName)
+    file_dir_on_dest = "/home/zhenping/linkshare_ftp/saksoff/{}".format(fileName)
     serial_number = get_serial_number_in_redis()
     original_date = du_parser.parse(str(datetime.datetime.now()))
     upload_time = original_date.strftime('%Y-%m-%d %H:%M:%S.%f')
@@ -77,8 +77,21 @@ redis_conn = redis.Redis(host=settings['REDIS_HOST'],
     # print "End : %s" % time.ctime()
 # call_parser_api('24285_3281764_98931637_2018_11_28_12_06_12_cmp.xml.gz')
 
-linkshare_parser_queue = '37731.wait'
-call_parser_api('37731_3281764_100400967_cmp.xml.gz')
+linkshare_parser_queue = '38801.wait'
+# call_parser_api('37731_3281764_83345565_0_cmp_delta.xml.gz')
+# call_parser_api('37731_3281764_83345565_1_cmp_delta.xml.gz')
+call_parser_api('38801_3281764_102416765_Jan-11-19-03-01-59_cmp_delta.xml.gz')
+
+# call_parser_api('24285_3281764_98931637_2018_11_28_12_06_12_81_cmp.xml.gz')
+# call_parser_api('24285_3281764_98931637_2018_11_28_12_06_12_0_cmp.xml.gz')
+# call_parser_api('24285_3281764_98931637_2018_11_28_12_06_12_127_cmp.xml.gz')
+# call_parser_api('24285_3281764_98931637_2018_11_28_12_06_12_162_cmp.xml.gz')
+
+
+
+# parsingQueue = "{\"42156\":{\"counter\":0},\"42157\":{\"counter\":0},\"38650\":{\"counter\":0},\"38651\":{\"counter\":0},\"36310\":{\"merchandiser\":\"dyson\",\"counter\":0},\"counterMax\":5,\"25003\":{\"merchandiser\":\"neiman marcus\",\"counter\":0},\"24895\":{\"merchandiser\":\"dillards\",\"counter\":0},\"42666\":{\"counter\":0},\"3184\":{\"merchandiser\":\"macys\",\"fileInfo\":{\"/home/zhenping/weekNewData/3184_3281764_25993792_Dec-08-18-15-00-37_cmp_delta.xml.gz\":{\"uploadTime\":\"2018-12-08 15:00:38.146421\",\"serialNumber\":189,\"filename\":\"/home/zhenping/weekNewData/3184_3281764_25993792_Dec-08-18-15-00-37_cmp_delta.xml.gz\",\"startParseTime\":\"2019-01-21 08:23:41.000825\"},\"/home/zhenping/weekNewData/3184_3281764_25993782_Dec-08-18-15-00-35_cmp_delta.xml.gz\":{\"uploadTime\":\"2018-12-08 15:00:36.180252\",\"serialNumber\":188,\"filename\":\"/home/zhenping/weekNewData/3184_3281764_25993782_Dec-08-18-15-00-35_cmp_delta.xml.gz\",\"startParseTime\":\"2019-01-21 08:20:41.000702\"},\"/home/zhenping/weekNewData/3184_3281764_25993830_Dec-08-18-15-00-47_cmp_delta.xml.gz\":{\"uploadTime\":\"2018-12-08 15:00:48.812884\",\"serialNumber\":190,\"filename\":\"/home/zhenping/weekNewData/3184_3281764_25993830_Dec-08-18-15-00-47_cmp_delta.xml.gz\",\"startParseTime\":\"2019-01-21 08:32:42.000119\"},\"/home/zhenping/weekNewData/3184_3281764_147041288_Dec-08-18-15-00-22_cmp_delta.xml.gz\":{\"uploadTime\":\"2018-12-08 15:00:23.470903\",\"serialNumber\":180,\"filename\":\"/home/zhenping/weekNewData/3184_3281764_147041288_Dec-08-18-15-00-22_cmp_delta.xml.gz\",\"startParseTime\":\"2019-01-21 06:26:37.000950\"},\"/home/zhenping/weekNewData/3184_3281764_147041192_Dec-08-18-15-00-13_cmp_delta.xml.gz\":{\"uploadTime\":\"2018-12-08 15:00:13.912006\",\"serialNumber\":178,\"filename\":\"/home/zhenping/weekNewData/3184_3281764_147041192_Dec-08-18-15-00-13_cmp_delta.xml.gz\",\"startParseTime\":\"2019-01-21 06:23:37.000830\"}},\"counter\":5},\"13816\":{\"merchandiser\":\"saks\",\"counter\":0},\"1237\":{\"merchandiser\":\"nordstrom\",\"fileInfo\":{\"/home/zhenping/weekNewData/1237_3281764_99865888_Nov-30-18-12-01-32_cmp_delta.xml.gz\":{\"uploadTime\":\"2018-11-30 12:01:33.130229\",\"serialNumber\":114,\"filename\":\"/home/zhenping/weekNewData/1237_3281764_99865888_Nov-30-18-12-01-32_cmp_delta.xml.gz\",\"startParseTime\":\"2019-01-20 03:46:44.000158\"}},\"counter\":1},\"24285\":{\"merchandiser\":\"yoox.com\",\"counter\":0},\"36025\":{\"merchandiser\":\"lastcall\",\"counter\":0},\"38655\":{\"merchandiser\":\"striderite\",\"counter\":0},\"37731\":{\"merchandiser\":\"finish line\",\"counter\":0},\"39757\":{\"merchandiser\":\"joes new balance outlet\",\"counter\":0},\"38733\":{\"counter\":0},\"39558\":{\"counter\":0},\"39756\":{\"counter\":0},\"38801\":{\"merchandiser\":\"saksoff5th\",\"fileInfo\":{\"/home/zhenping/weekNewData/38801_3281764_102416765_Jan-11-19-03-01-59_cmp_delta.xml.gz\":{\"uploadTime\":\"2019-01-11 03:02:00.155925\",\"serialNumber\":11260,\"filename\":\"/home/zhenping/weekNewData/38801_3281764_102416765_Jan-11-19-03-01-59_cmp_delta.xml.gz\",\"startParseTime\":\"2019-01-17 10:11:35.000658\"}},\"counter\":1},\"13867\":{\"merchandiser\":\"bloomingdales\",\"counter\":0},\"38606\":{\"merchandiser\":\"bestbuy\",\"counter\":0}}"
+# redis_conn.set("parsingQueue", parsingQueue)
+# 37731_3281764_83345565_cmp_delta.xml.gz
 # for item in range(1, 1000):
 # linkshare_parser_queue = '38606.wait'
 # call_parser_api('38606_3281764_1_cmp.xml.gz')

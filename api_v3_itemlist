@@ -256,13 +256,13 @@ curl -k -H 'Content-Type: application/json' -d '
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "fields":[{"name": "productId", "values":[327442]}, {"name": "vendorId", "values":[3]}]
+  "fields":[{"name": "productId", "values":[10993088]}, {"name": "vendorId", "values":[3]}]
 }
-' http://96.90.248.211:9124/api/v3/metrics/product
+' http://localhost:9124/api/v3/metrics/product
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "fields":[{"name": "productId", "values":[10979870]}, {"name": "vendorId", "values":[37731]}]
+  "fields":[{"name": "productId", "values":[10993810]}, {"name": "vendorId", "values":[3]}]
 }
 ' http://96.90.248.211:9124/api/v3/metrics/product
 
