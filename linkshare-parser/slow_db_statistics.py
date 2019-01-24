@@ -16,7 +16,7 @@ def judge_list_only(value):
 
 
 if __name__ == '__main__':
-    slow_log = open("./linkshare-parser/slow_log.log")
+    slow_log = open("./linkshare-parser/fast_log.log")
 
     line = slow_log.readline()
 

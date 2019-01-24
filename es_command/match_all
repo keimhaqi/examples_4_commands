@@ -277,7 +277,7 @@ curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type:
 
 
 
-curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET '192.168.1.105:9201/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
 {
   "size":1,
   "query" : {
