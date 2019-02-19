@@ -1,0 +1,17 @@
+To change the number of file descriptors in Linux, do the following as the root user:
+
+Edit the following line in the /etc/sysctl.conf file:
+
+    fs.file-max = value
+value is the new file descriptor limit that you want to set.
+
+Apply the change by running the following command:
+
+# /sbin/sysctl -p
+
+
+
+don't understand:
+When the file descriptor limit is set to a very high value, auto-configuration of unspecified parameters can cause Oracle Traffic Director instances to consume excessive amount of memory or can result in sub-optimal configurations. To avoid these issues, specify values for these parameters explicitly on systems that have a high file-descriptor limit.
+
+For instance, max-threads * 4 should ideally be less than the maximum number of file descriptors available to the process. For example, if the file descriptor limit is set to 65536, then setting max-threads to 20000 will cause sub-optimal tuning as 80000 (20000*4=80000) will exhaust/reserve file descriptors for the worker threads, which does not leave much for other subsystems. Hence a high value should be set for max-threads only after some experimentation.

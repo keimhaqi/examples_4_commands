@@ -1,0 +1,10 @@
+curl -X PUT "192.168.219.105:9200/crawler/_mapping/product" -H 'Content-Type: application/json' -d'
+{
+  "properties": {
+    "skus.upc": { 
+      "type":     "text",
+      "fielddata": true
+    }
+  }
+}
+'

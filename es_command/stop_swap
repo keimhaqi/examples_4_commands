@@ -1,0 +1,13 @@
+# 停止换内存的memory中的页以提高ES的性能
+sudo swapoff -a
+
+# To disable it permanently, you’ll likely need to edit your /etc/fstab. Consult the documentation for your OS.
+
+vm.swappiness=1 
+
+
+A swappiness of 1 is better than 0, since on some kernel versions a swappiness of 0 can invoke the OOM-killer.
+
+Finally, if neither approach is possible, you should enable mlockall. file. This allows the JVM to lock its memory and prevent it from being swapped by the OS. In your elasticsearch.yml, set this:
+
+bootstrap.mlockall: true

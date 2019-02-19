@@ -196,7 +196,7 @@ curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Typ
 }
 '
 
-curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
 {
   "size":10,
   "query" : {
@@ -211,7 +211,7 @@ curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type:
                   {
                     "match" : {
                       "sourceProductId" : {
-                        "query" : "B008CDR7LW",
+                        "query" : "0400099633828",
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,
@@ -235,7 +235,7 @@ curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type:
                   {
                     "match" : {
                       "vendorId" : {
-                        "query" : 3,
+                        "query" : 13816,
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,

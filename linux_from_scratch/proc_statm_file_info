@@ -1,0 +1,8 @@
+That file contains 7 numerical fields: 
+size (mapped to VIRT), 
+resident (mapped to RES), 
+share (mapped to SHR), 
+text (mapped to CODE), 
+lib (always 0 on Linux 2.6+), 
+data (mapped to DATA) and 
+dt (always 0 on Linux 2.6+, mapped to nDrt)
