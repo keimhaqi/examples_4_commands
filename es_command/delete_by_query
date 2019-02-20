@@ -1,4 +1,4 @@
-curl -XPOST '192.168.1.105:9201/linkshare/product/_delete_by_query?pretty' -H 'Content-Type: application/json' -d'
+curl -XPOST '192.168.1.105:9201/merger_tree/tree/_delete_by_query?pretty' -H 'Content-Type: application/json' -d'
 {
   "query": {
     "match_all": {}

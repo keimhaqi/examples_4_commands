@@ -1,0 +1,83 @@
+// update an index's mapping
+curl -XPUT '192.168.1.105:9201/merger_tree?pretty&pretty'
+curl -XPUT '192.168.1.105:9201/merger_tree?pretty' -H 'Content-Type: application/json' -d'
+{
+    "settings" : {
+      "index": {
+                "analysis": {
+                    "analyzer": {
+                        "analyzer_keyword": {
+                            "type": "custom",
+                            "tokenizer": "keyword",
+                            "filter": "lowercase"
+                        },
+                        "my_analyzer": {
+                            "type": "custom",
+                            "tokenizer": "my_tokenizer",
+                            "filter": ["english_possessive_stemmer", "lowercase", "english_stop", "english_stemmer"]
+                        },
+                        "default": {
+                            "type": "custom",
+                            "tokenizer": "my_tokenizer",
+                            "filter": ["english_possessive_stemmer", "lowercase", "english_stop", "english_stemmer"]
+                        }
+                    },
+                    "tokenizer": {
+                        "my_tokenizer": {
+                            "token_chars": ["letter", "digit"],
+                            "type": "standard"
+                        },
+                        "my_tokenizer_integer": {
+                            "token_chars": ["letter"],
+                            "type": "standard"
+                        }
+                    },
+                    "filter": {
+                        "english_stop": {
+                            "type": "stop",
+                            "stopwords": "_english_"
+                        },
+                        "english_stemmer": {
+                            "type": "stemmer",
+                            "language": "english"
+                        },
+                        "english_possessive_stemmer": {
+                            "type": "stemmer",
+                            "language": "possessive_english"
+                        },
+                        "my_stemmer": {
+                            "type": "stemmer",
+                            "language": "english"
+                        }
+                    }
+
+                },
+                "number_of_replicas": 0
+            }
+    },
+    "mappings" : {
+      "tree" : {
+        "properties" : {
+          "date":{
+              "type": "date",
+              "format": "epoch_millis"
+          },
+          "productIds":{
+              "type": "text",
+              "analyzer": "my_analyzer",
+              "boost": 1
+          },
+          "sourceProductIds":{
+              "type": "text",
+              "analyzer": "my_analyzer",
+              "boost": 1
+          },
+          "tree":{
+              "type": "text",
+              "index": "not_analyzed"
+          }
+        }
+      }
+    }
+}
+'

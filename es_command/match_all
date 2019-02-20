@@ -64,7 +64,7 @@ curl -XGET 'http://172.18.0.2:9200/article/post/_search?pretty' -H 'Content-Type
 
 SELECT `product_id`, MAX(`update_time`) as update_time, GROUP_CONCAT(article_id) FROM `article_product` GROUP BY `product_id` ORDER BY update_time desc limit 40 
 
-curl -XGET 'http://192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.192:9200/merger_tree/tree/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 1,
     "query": {
@@ -74,6 +74,63 @@ curl -XGET 'http://192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Cont
 '
 
 
+
+
+
+curl -XGET 'http://192.168.1.105:9201/merger_tree/tree/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 1,
+    "query": {
+        "bool" : {
+          "should" : [
+            {
+              "match" : {
+                "productIds" : {
+                  "query" : "10978984",
+                  "operator" : "AND",
+                  "prefix_length" : 0,
+                  "max_expansions" : 50,
+                  "fuzzy_transpositions" : true,
+                  "lenient" : false,
+                  "zero_terms_query" : "NONE",
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+    }
+}
+'
+
+curl -XGET 'http://192.168.1.105:9201/merger_tree/tree/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 1,
+    "query": {
+        "multi_match":{
+          "query": "10875266,9312100,10876222,10876558,10978984",
+          "fields":["productIds"]
+        }
+    }
+}
+'
+
+curl -XGET 'http://192.168.1.105:9201/merger_tree/tree/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 1,
+    "query": {
+        "match":{
+          "productIds": {
+            "query":"10875266,9312100,10876222,10876558,10978984",
+            "operator" : "OR"
+          }
+        }
+    }
+}
+'
 
 curl -XGET '192.168.1.104:9201/jinbagsearch_hot/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
@@ -139,7 +196,7 @@ curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Typ
                   {
                     "match" : {
                       "sourceProductId" : {
-                        "query" : "B07C8SR1DS",
+                        "query" : "2929283",
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,
@@ -163,7 +220,7 @@ curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Typ
                   {
                     "match" : {
                       "vendorId" : {
-                        "query" : 3,
+                        "query" : 3184,
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,
@@ -211,7 +268,11 @@ curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Typ
                   {
                     "match" : {
                       "sourceProductId" : {
+<<<<<<< Updated upstream
                         "query" : "0400099633828",
+=======
+                        "query" : "B0019KCUMG",
+>>>>>>> Stashed changes
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,
