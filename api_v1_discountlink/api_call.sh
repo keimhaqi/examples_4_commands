@@ -68,7 +68,7 @@ available: 1表示更新此链接为不可用;
 当运营人员进入某个link之后，调用如下接口返回link包含的商品列表;
 curl -k -H 'Content-Type: application/json' -d '
 {
-      "linkListTaskId": 6688
+      "linkListTaskId": 14402
 }
 ' http://96.90.248.211:9099/api/v1/discountlink/product
 

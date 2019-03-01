@@ -25,11 +25,11 @@ curl -XGET '192.168.1.106:9201/brochure/items/_search?pretty' -H 'Content-Type: 
 '
 
 
-curl -XGET 'http://192.168.1.103:9201/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.105:9201/amazon/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 10,
     "query": {
-       "match" : {"sourceProductId": "2881361"}
+       "match" : {"sourceProductId": "B00J331BYO"}
     }
 }
 '
@@ -37,7 +37,7 @@ curl -XGET 'http://192.168.1.103:9201/linkshare/product/_search?pretty' -H 'Cont
 2881361
 
 
-curl -XGET 'http://172.18.0.2:9200/article/post/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.192:9200/merger_tree_v1/tree/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 10,
     "query": {
@@ -64,9 +64,9 @@ curl -XGET 'http://172.18.0.2:9200/article/post/_search?pretty' -H 'Content-Type
 
 SELECT `product_id`, MAX(`update_time`) as update_time, GROUP_CONCAT(article_id) FROM `article_product` GROUP BY `product_id` ORDER BY update_time desc limit 40 
 
-curl -XGET 'http://192.168.1.192:9200/merger_tree/tree/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.105:9201/anntayloroutlet/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
-    "size": 1,
+    "size": 2,
     "query": {
        "match_all" : {}
     }
@@ -118,14 +118,13 @@ curl -XGET 'http://192.168.1.105:9201/merger_tree/tree/_search?pretty' -H 'Conte
 }
 '
 
-curl -XGET 'http://192.168.1.105:9201/merger_tree/tree/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.105:9201/search_unpopular_finishline/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
-    "size": 1,
+    "size": 1000,
     "query": {
         "match":{
-          "productIds": {
-            "query":"10875266,9312100,10876222,10876558,10978984",
-            "operator" : "OR"
+          "upc": {
+            "query":"191886507247"
           }
         }
     }
@@ -268,11 +267,7 @@ curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Typ
                   {
                     "match" : {
                       "sourceProductId" : {
-<<<<<<< Updated upstream
                         "query" : "0400099633828",
-=======
-                        "query" : "B0019KCUMG",
->>>>>>> Stashed changes
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,

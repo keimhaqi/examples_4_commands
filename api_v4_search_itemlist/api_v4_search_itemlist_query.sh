@@ -115,14 +115,14 @@ curl -k -H 'Content-Type: application/json' -d '
         {
             "user":"0",
             "from":0,
-            "num":10,
-            "searchword":"sandro",
+            "num":1000,
+            "searchword":"nike",
             "articleFilter":[],
             "type":"product",
             "language":"en"
         }
     ],
-    "num":10
+    "num":1000
 }
 ' http://localhost:9124/api/v4/search/itemlist
 
