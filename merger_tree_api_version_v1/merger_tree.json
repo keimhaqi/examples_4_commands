@@ -1,0 +1,919 @@
+{
+    "level": 3,
+    "upcAttrValues": {
+        "801688294404": [
+            "small (2-4)",
+            "graphite"
+        ],
+        "801688820979": [
+            "medium (6-8)",
+            "spruce"
+        ],
+        "801688235674": [
+            "navy",
+            "large (10-12)"
+        ],
+        "801688348671": [
+            "red",
+            "medium (6-8)"
+        ],
+        "801688280711": [
+            "black",
+            "large (10-12)"
+        ],
+        "801688235667": [
+            "navy",
+            "medium (6-8)"
+        ],
+        "801688743292": [
+            "mid grey",
+            "xx-small (000-00)"
+        ],
+        "801688743094": [
+            "x-small (0)",
+            "admiral blue"
+        ],
+        "801688281244": [
+            "redwood",
+            "small (2-4)"
+        ],
+        "801688280674": [
+            "xx-small (000-00)",
+            "black"
+        ],
+        "801688743131": [
+            "x-large (14-16)",
+            "admiral blue"
+        ],
+        "801688348640": [
+            "red",
+            "xx-small (000-00)"
+        ],
+        "801688348688": [
+            "red",
+            "large (10-12)"
+        ],
+        "801688820948": [
+            "xx-small (000-00)",
+            "spruce"
+        ],
+        "801688605118": [
+            "limestone",
+            "medium (6-8)"
+        ],
+        "801688280728": [
+            "x-large (14-16)",
+            "black"
+        ],
+        "801688235643": [
+            "x-small (0)",
+            "navy"
+        ],
+        "801688294398": [
+            "x-small (0)",
+            "graphite"
+        ],
+        "801688235681": [
+            "navy",
+            "x-large (14-16)"
+        ],
+        "801688294435": [
+            "x-large (14-16)",
+            "graphite"
+        ],
+        "801688605231": [
+            "limestone",
+            "x-large (14-16)"
+        ],
+        "801688743322": [
+            "mid grey",
+            "medium (6-8)"
+        ],
+        "801688743124": [
+            "admiral blue",
+            "large (10-12)"
+        ],
+        "801688235636": [
+            "xx-small (000-00)",
+            "navy"
+        ],
+        "801688281251": [
+            "redwood",
+            "medium (6-8)"
+        ],
+        "801688280681": [
+            "x-small (0)",
+            "black"
+        ],
+        "801688820993": [
+            "x-large (14-16)",
+            "spruce"
+        ],
+        "801688348695": [
+            "red",
+            "x-large (14-16)"
+        ],
+        "801688820955": [
+            "x-small (0)",
+            "spruce"
+        ],
+        "801688294428": [
+            "graphite",
+            "large (10-12)"
+        ],
+        "801688348657": [
+            "red",
+            "x-small (0)"
+        ],
+        "801688743308": [
+            "x-small (0)",
+            "mid grey"
+        ],
+        "801688250486": [
+            "x-small (0)",
+            "military green"
+        ],
+        "801688605064": [
+            "limestone",
+            "large (10-12)"
+        ],
+        "801688250493": [
+            "military green",
+            "small (2-4)"
+        ],
+        "801688280698": [
+            "black",
+            "small (2-4)"
+        ],
+        "801688743315": [
+            "mid grey",
+            "small (2-4)"
+        ],
+        "801688743117": [
+            "admiral blue",
+            "medium (6-8)"
+        ],
+        "801688820962": [
+            "small (2-4)",
+            "spruce"
+        ],
+        "801688281268": [
+            "redwood",
+            "large (10-12)"
+        ],
+        "801688250516": [
+            "military green",
+            "large (10-12)"
+        ],
+        "801688250479": [
+            "xx-small (000-00)",
+            "military green"
+        ],
+        "801688604562": [
+            "xx-small (000-00)",
+            "limestone"
+        ],
+        "801688294411": [
+            "graphite",
+            "medium (6-8)"
+        ],
+        "801688605170": [
+            "limestone",
+            "small (2-4)"
+        ],
+        "801688281237": [
+            "x-small (0)",
+            "redwood"
+        ],
+        "801688743100": [
+            "admiral blue",
+            "small (2-4)"
+        ],
+        "801688605293": [
+            "x-small (0)",
+            "limestone"
+        ],
+        "801688294381": [
+            "xx-small (000-00)",
+            "graphite"
+        ],
+        "801688743346": [
+            "mid grey",
+            "x-large (14-16)"
+        ],
+        "801688280704": [
+            "black",
+            "medium (6-8)"
+        ],
+        "801688281275": [
+            "x-large (14-16)",
+            "redwood"
+        ]
+    },
+    "attrValues": {
+        "Small (2-4)": {
+            "publicAttrs": true,
+            "attrId": 4,
+            "attrValueEn": "Small (2-4)",
+            "hot": false
+        },
+        "military green": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "military green",
+            "hot": false
+        },
+        "navy": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "navy",
+            "hot": false
+        },
+        "Medium (6-8)": {
+            "publicAttrs": true,
+            "attrId": 4,
+            "attrValueEn": "Medium (6-8)",
+            "hot": false
+        },
+        "redwood": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "redwood",
+            "hot": false
+        },
+        "admiral blue": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "admiral blue",
+            "hot": false
+        },
+        "black": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "black",
+            "hot": false
+        },
+        "X-Small (0)": {
+            "publicAttrs": true,
+            "attrId": 4,
+            "attrValueEn": "X-Small (0)",
+            "hot": false
+        },
+        "graphite": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "graphite",
+            "hot": false
+        },
+        "large (10-12)": {
+            "publicAttrs": true,
+            "attrId": 4,
+            "attrValueEn": "large (10-12)",
+            "hot": false
+        },
+        "red": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "red",
+            "hot": false
+        },
+        "mid grey": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "mid grey",
+            "hot": false
+        },
+        "limestone": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "limestone",
+            "hot": false
+        },
+        "x-large (14-16)": {
+            "publicAttrs": true,
+            "attrId": 4,
+            "attrValueEn": "x-large (14-16)",
+            "hot": false
+        },
+        "XX-Small (000-00)": {
+            "publicAttrs": true,
+            "attrId": 4,
+            "attrValueEn": "XX-Small (000-00)",
+            "hot": false
+        },
+        "spruce": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "spruce",
+            "hot": false
+        }
+    },
+    "upcs": [
+        "801688348671",
+        "801688348640",
+        "801688348688",
+        "801688348695",
+        "801688348657",
+        "801688743292",
+        "801688743322",
+        "801688743308",
+        "801688743315",
+        "801688743346",
+        "801688250486",
+        "801688250493",
+        "801688250516",
+        "801688250479",
+        "801688235674",
+        "801688235667",
+        "801688235643",
+        "801688235681",
+        "801688235636",
+        "801688605118",
+        "801688605231",
+        "801688605064",
+        "801688604562",
+        "801688605170",
+        "801688605293",
+        "801688281244",
+        "801688281251",
+        "801688281268",
+        "801688281237",
+        "801688281275",
+        "801688743094",
+        "801688743131",
+        "801688743124",
+        "801688743117",
+        "801688743100",
+        "801688280711",
+        "801688280674",
+        "801688280728",
+        "801688280681",
+        "801688280698",
+        "801688280704",
+        "801688294404",
+        "801688294398",
+        "801688294435",
+        "801688294428",
+        "801688294411",
+        "801688294381",
+        "801688820979",
+        "801688820948",
+        "801688820993",
+        "801688820955",
+        "801688820962"
+    ],
+    "attrs": [
+        {
+            "attrNameCh": "颜色",
+            "id": 2,
+            "attrNameEn": "Color"
+        },
+        {
+            "attrNameCh": "尺寸",
+            "id": 4,
+            "attrNameEn": "Size"
+        }
+    ],
+    "upcdepots": [
+        {
+            "upc": "801688280728",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 310516,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_6C_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688743346",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 320239,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_06_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688294435",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 320721,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_06_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688280704",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 236432,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_01_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688281275",
+            "vendorId": 25003,
+            "unionId": 100045,
+            "depotId": 394113,
+            "sourceProductId": "prod219370417",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_6C_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Parka with Fur Hood",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688235674",
+            "vendorId": 1237,
+            "unionId": 94428,
+            "depotId": 1203307,
+            "sourceProductId": "3771594",
+            "imgUrl": "https://n.nordstrommedia.com/id/c0d4b05c-ed4c-498e-9f90-7f060061f8fa.jpeg",
+            "titleEn": "Canada Goose Women's Shelburne Genuine Coyote Fur Trim Down Parka",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688820955",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 286152,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_3D_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688281251",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 313603,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_3D_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688235681",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 298557,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_41_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688294411",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 362882,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_06_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688820979",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 252866,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_3D_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688235667",
+            "vendorId": 25003,
+            "unionId": 100045,
+            "depotId": 407121,
+            "sourceProductId": "prod219370417",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_41_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Parka with Fur Hood",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688235643",
+            "vendorId": 25003,
+            "unionId": 100045,
+            "depotId": 407122,
+            "sourceProductId": "prod219370417",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_41_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Parka with Fur Hood",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688743308",
+            "vendorId": 25003,
+            "unionId": 100045,
+            "depotId": 399674,
+            "sourceProductId": "prod219370417",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_0M_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Parka with Fur Hood",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688743100",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 313535,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_47_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688743124",
+            "vendorId": 25003,
+            "unionId": 100045,
+            "depotId": 372547,
+            "sourceProductId": "prod219370417",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_47_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Parka with Fur Hood",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688280711",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 313246,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_6C_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688280698",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 230774,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_01_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688743117",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 355278,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_6C_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688294404",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 548260,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_06_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688294428",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 313361,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_6C_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688235674",
+            "vendorId": 25003,
+            "unionId": 100045,
+            "depotId": 407120,
+            "sourceProductId": "prod219370417",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_41_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Parka with Fur Hood",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688281237",
+            "vendorId": 1237,
+            "unionId": 94428,
+            "depotId": 431052,
+            "sourceProductId": "3771594",
+            "imgUrl": "https://n.nordstrommedia.com/id/7e457463-47af-441d-9a1d-a9f723a7bf63.jpeg",
+            "titleEn": "Canada Goose Women's Shelburne Genuine Coyote Fur Trim Down Parka",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688281244",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 286531,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_6C_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688280681",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 246454,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_01_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688820962",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 286100,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_3D_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        },
+        {
+            "upc": "801688743131",
+            "vendorId": 25003,
+            "unionId": 66896,
+            "depotId": 298747,
+            "sourceProductId": "prod212050183",
+            "imgUrl": "https://neimanmarcus.scene7.com/is/image/NeimanMarcus/NMTX7R9_47_m?&wid=1200&height=1500",
+            "titleEn": "Canada Goose Shelburne Slim-Fit Parka w/ Removable Fur Trim",
+            "titleCh": null,
+            "descEn": "",
+            "descCh": null,
+            "availabilityStr": null,
+            "availability": 1,
+            "productPrice": "$950.00",
+            "productSale": "$950.00",
+            "updatedTime": "2019-03-04T06:14:55.000+0000",
+            "createdTime": "2019-03-04T06:14:55.000+0000",
+            "productId": null,
+            "availabilityInt": null
+        }
+    ]
+}

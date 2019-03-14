@@ -1,0 +1,120 @@
+# 一个合并结果：
+10871134
+10871136
+
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=2468576&vendorId=13867'
+2468576
+
+13867 
+source_product_id: 2468576, 2468576
+# 一个合并结果：
+10871138
+# 一个合并结果：
+10876312
+10909468
+ Full texts 	product_id 	source_id 	source_product_id
+	Edit Edit 	Copy Copy 	Delete Delete 	10876312 	13867 	2770520
+	Edit Edit 	Copy Copy 	Delete Delete 	10909468 	13867 	2651985
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=731346&vendorId=13867'
+# 一个合并结果：
+10859106,
+10862514,
+10984398
+ 	Edit Edit 	Copy Copy 	Delete Delete 	10859106 	3184 	147374
+	Edit Edit 	Copy Copy 	Delete Delete 	10862514 	13867 	668196
+	Edit Edit 	Copy Copy 	Delete Delete 	10984398 	25003 	prod202930077
+    curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=147374&vendorId=3184'
+# 一个合并结果：
+10876262,
+10859408,
+10859424,
+10876514,
+10876556,
+10876220,
+10875550,
+10859406,
+10876490,
+10861674,
+13867:
+    3000578,1068587,3000578,1068587
+1237:
+    3236693,3236693,
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=3236693&vendorId=1237'
+
+# 一个合并结果：
+10871142
+# 一个合并结果：
+10863032
+# 一个合并结果：
+10880914
+# 一个合并结果：
+10903542,
+10863072
+# 一个合并结果：
+10888908,
+10881354,
+10881352,
+10888920
+ Full texts 	product_id 	source_id 	source_product_id
+	Edit Edit 	Copy Copy 	Delete Delete 	10881352 	13867 	1070751
+	Edit Edit 	Copy Copy 	Delete Delete 	10881354 	1237 	3771594
+	Edit Edit 	Copy Copy 	Delete Delete 	10888908 	13867 	1070751
+	Edit Edit 	Copy Copy 	Delete Delete 	10888920 	13867 	1070751
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=3771594&vendorId=1237'
+
+# 一个合并结果：
+10871144
+# 一个合并结果：
+10876328,
+10980984,
+10876330
+ 	Edit Edit 	Copy Copy 	Delete Delete 	10876328 	13867 	3067922
+	Edit Edit 	Copy Copy 	Delete Delete 	10876330 	13867 	3067922
+	Edit Edit 	Copy Copy 	Delete Delete 	10980984 	13867 	3067922
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=3067922&vendorId=13867'
+# 一个合并结果：
+10890400,
+10890398
+     Full texts 	product_id 	source_id 	source_product_id
+	Edit Edit 	Copy Copy 	Delete Delete 	10890398 	1237 	4979560
+	Edit Edit 	Copy Copy 	Delete Delete 	10890400 	1237 	4979560
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=4979560&vendorId=1237'
+# 一个合并结果：
+10871140
+# 一个合并结果：
+10881632
+# 一个合并结果：
+10904816,
+10904814
+# 一个合并结果：
+10863622
+# 一个合并结果：
+10890994
+# 一个合并结果：
+10996416
+# 一个合并结果：
+11005116
+	sourceProductId = 5065306
+	curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=5065306&vendorId=1237'
+# 一个合并结果：
+10981444
+	upc = 613000521910 macys属性错误;
+	upc = 613000521927 macys属性错误;
+
+
+# 一个合并结果：
+10890836
+	属性没有错误
+
+# 一个合并结果：
+10871124
+10871126
+	属性错误
+	upc = 5054103340551
+	upc = 5054103340575
+
+     Full texts 	product_id 	source_id 	source_product_id
+	Edit Edit 	Copy Copy 	Delete Delete 	10871124 	1237 	5160524
+	Edit Edit 	Copy Copy 	Delete Delete 	10871126 	1237 	5160524
+
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=5160524&vendorId=1237'

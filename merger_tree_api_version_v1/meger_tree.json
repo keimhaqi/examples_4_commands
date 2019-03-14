@@ -1,0 +1,678 @@
+{
+    "level": 3,
+    "upcAttrValues": {
+        "801688667093": [
+            "x small",
+            "redwood"
+        ],
+        "773289433196": [
+            "red",
+            "large"
+        ],
+        "773289433592": [
+            "black",
+            "xx small"
+        ],
+        "801688667376": [
+            "xx-small",
+            "limestone"
+        ],
+        "801688666881": [
+            "black",
+            "medium"
+        ],
+        "801688666843": [
+            "military green",
+            "x large"
+        ],
+        "801688667338": [
+            "large",
+            "limestone"
+        ],
+        "801688825271": [
+            "admiral blue",
+            "large (10-12)"
+        ],
+        "801688667017": [
+            "small",
+            "graphite"
+        ],
+        "801688666836": [
+            "small",
+            "military green"
+        ],
+        "801688743650": [
+            "x small",
+            "charred wood"
+        ],
+        "773289433622": [
+            "black",
+            "medium"
+        ],
+        "801688666911": [
+            "x small",
+            "black"
+        ],
+        "801688825196": [
+            "red",
+            "3"
+        ],
+        "801688825394": [
+            "xx-small (000-00)",
+            "volcano"
+        ],
+        "801688825158": [
+            "red",
+            "3"
+        ],
+        "801688825356": [
+            "large",
+            "spruce"
+        ],
+        "801688666959": [
+            "redwood",
+            "medium"
+        ],
+        "773289433745": [
+            "large",
+            "black"
+        ],
+        "801688825431": [
+            "volcano",
+            "large (10-12)"
+        ],
+        "801688807246": [
+            "2",
+            "navy"
+        ],
+        "801688825318": [
+            "xx small",
+            "spruce"
+        ],
+        "773289638867": [
+            "small",
+            "graphite"
+        ],
+        "801688666850": [
+            "x small",
+            "military green"
+        ],
+        "773289773599": [
+            "small",
+            "military green"
+        ],
+        "801688667024": [
+            "4",
+            "graphite"
+        ],
+        "801688666898": [
+            "small",
+            "black"
+        ],
+        "773289433189": [
+            "red",
+            "medium"
+        ],
+        "801688666973": [
+            "x large",
+            "redwood"
+        ],
+        "801688825165": [
+            "0",
+            "red"
+        ],
+        "801688825363": [
+            "x large",
+            "spruce"
+        ],
+        "801688666966": [
+            "small",
+            "redwood"
+        ],
+        "801688825240": [
+            "x-small (0)",
+            "admiral blue"
+        ],
+        "801688666928": [
+            "military green",
+            "xx small"
+        ],
+        "801688825202": [
+            "red",
+            "5"
+        ],
+        "801688825400": [
+            "x-small (0)",
+            "volcano"
+        ],
+        "801688743643": [
+            "charred wood",
+            "xx small"
+        ],
+        "773289433615": [
+            "small",
+            "black"
+        ],
+        "801688666805": [
+            "military green",
+            "xx large"
+        ],
+        "801688825288": [
+            "x-large (14-16)",
+            "admiral blue"
+        ],
+        "801688825448": [
+            "x-large (14-16)",
+            "volcano"
+        ],
+        "801688616312": [
+            "large",
+            "ink blue"
+        ],
+        "801688825325": [
+            "x small",
+            "spruce"
+        ],
+        "801688807239": [
+            "small",
+            "navy"
+        ],
+        "773289564708": [
+            "3",
+            "navy"
+        ],
+        "773289773605": [
+            "military green",
+            "medium"
+        ],
+        "801688807260": [
+            "4",
+            "navy"
+        ],
+        "801688667154": [
+            "redwood",
+            "xx small"
+        ],
+        "801688667031": [
+            "0",
+            "graphite"
+        ],
+        "801688667475": [
+            "x-large",
+            "limestone"
+        ],
+        "773289433172": [
+            "small",
+            "red"
+        ],
+        "801688666942": [
+            "large",
+            "redwood"
+        ],
+        "801688825172": [
+            "red",
+            "1"
+        ],
+        "801688667314": [
+            "limestone",
+            "small (2-4)"
+        ],
+        "801688666935": [
+            "black",
+            "xx small"
+        ],
+        "801688666812": [
+            "large",
+            "military green"
+        ],
+        "801688667109": [
+            "5",
+            "graphite"
+        ],
+        "801688743674": [
+            "charred wood",
+            "medium"
+        ],
+        "801688825257": [
+            "admiral blue",
+            "small (2-4)"
+        ],
+        "773289433769": [
+            "6",
+            "black"
+        ],
+        "801688825332": [
+            "small",
+            "spruce"
+        ],
+        "773289564678": [
+            "0",
+            "navy"
+        ],
+        "801688807222": [
+            "0",
+            "navy"
+        ],
+        "773289433608": [
+            "x small",
+            "black"
+        ],
+        "801688825219": [
+            "red",
+            "xx-large"
+        ],
+        "801688825417": [
+            "small (2-4)",
+            "volcano"
+        ],
+        "801688667000": [
+            "medium",
+            "graphite"
+        ],
+        "801688807253": [
+            "3",
+            "navy"
+        ],
+        "773289638881": [
+            "large",
+            "graphite"
+        ],
+        "773289773575": [
+            "xx-small",
+            "military green"
+        ],
+        "801688667321": [
+            "limestone",
+            "medium (6-8)"
+        ],
+        "801688666997": [
+            "large",
+            "graphite"
+        ],
+        "801688666799": [
+            "black",
+            "xx large"
+        ],
+        "801688666874": [
+            "large",
+            "black"
+        ],
+        "773289433165": [
+            "red",
+            "x small"
+        ],
+        "773289564692": [
+            "3",
+            "navy"
+        ],
+        "801688825264": [
+            "admiral blue",
+            "medium (6-8)"
+        ],
+        "773289433158": [
+            "red",
+            "xx small"
+        ],
+        "773289433752": [
+            "x large",
+            "black"
+        ],
+        "801688666829": [
+            "military green",
+            "medium"
+        ],
+        "801688666904": [
+            "x large",
+            "black"
+        ],
+        "773289773582": [
+            "x small",
+            "military green"
+        ],
+        "801688825189": [
+            "red",
+            "3"
+        ],
+        "801688743667": [
+            "0",
+            "new"
+        ],
+        "801688825349": [
+            "medium",
+            "spruce"
+        ],
+        "801688825424": [
+            "volcano",
+            "medium (6-8)"
+        ],
+        "801688807215": [
+            "navy",
+            "xx small"
+        ]
+    },
+    "attrValues": {
+        "small": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "small",
+            "hot": false
+        },
+        "Small (2-4)": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "Small (2-4)",
+            "hot": false
+        },
+        "ink blue": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "ink blue",
+            "hot": false
+        },
+        "military green": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "military green",
+            "hot": false
+        },
+        "navy": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "navy",
+            "hot": false
+        },
+        "Medium (6-8)": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "Medium (6-8)",
+            "hot": false
+        },
+        "admiral blue": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "admiral blue",
+            "hot": false
+        },
+        "medium": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "medium",
+            "hot": false
+        },
+        "xx-large": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "xx-large",
+            "hot": false
+        },
+        "graphite": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "graphite",
+            "hot": false
+        },
+        "large (10-12)": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "large (10-12)",
+            "hot": false
+        },
+        "x-small": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "x-small",
+            "hot": false
+        },
+        "red": {
+            "publicAttrs": true,
+            "attrId": 4,
+            "attrValueEn": "red",
+            "hot": false
+        },
+        "x small": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "x small",
+            "hot": false
+        },
+        "charred wood": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "charred wood",
+            "hot": false
+        },
+        "limestone": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "limestone",
+            "hot": false
+        },
+        "x-large (14-16)": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "x-large (14-16)",
+            "hot": false
+        },
+        "volcano": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "volcano",
+            "hot": false
+        },
+        "spruce": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "spruce",
+            "hot": false
+        },
+        "new": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "new",
+            "hot": false
+        },
+        "large": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "large",
+            "hot": false
+        },
+        "redwood": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "redwood",
+            "hot": false
+        },
+        "black": {
+            "publicAttrs": true,
+            "attrId": 2,
+            "attrValueEn": "black",
+            "hot": false
+        },
+        "xx large": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "xx large",
+            "hot": false
+        },
+        "X-Small (0)": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "X-Small (0)",
+            "hot": false
+        },
+        "0": {
+            "publicAttrs": false,
+            "attrId": 2,
+            "attrValueEn": "0",
+            "hot": false
+        },
+        "xx-small": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "xx-small",
+            "hot": false
+        },
+        "1": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "1",
+            "hot": false
+        },
+        "2": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "2",
+            "hot": false
+        },
+        "x-large": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "x-large",
+            "hot": false
+        },
+        "3": {
+            "publicAttrs": false,
+            "attrId": 2,
+            "attrValueEn": "3",
+            "hot": false
+        },
+        "4": {
+            "publicAttrs": false,
+            "attrId": 2,
+            "attrValueEn": "4",
+            "hot": false
+        },
+        "5": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "5",
+            "hot": false
+        },
+        "x large": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "x large",
+            "hot": false
+        },
+        "6": {
+            "publicAttrs": false,
+            "attrId": 2,
+            "attrValueEn": "6",
+            "hot": false
+        },
+        "XX-Small (000-00)": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "XX-Small (000-00)",
+            "hot": false
+        },
+        "xx small": {
+            "publicAttrs": false,
+            "attrId": 4,
+            "attrValueEn": "xx small",
+            "hot": false
+        }
+    },
+    "upcs": [
+        "801688616312",
+        "773289773575",
+        "773289433745",
+        "773289638867",
+        "801688825202",
+        "801688825165",
+        "801688825158",
+        "801688825196",
+        "801688825172",
+        "801688825219",
+        "801688825189",
+        "801688666928",
+        "801688666843",
+        "801688666836",
+        "801688666829",
+        "801688666812",
+        "801688667338",
+        "801688667475",
+        "801688667376",
+        "801688667314",
+        "801688667321",
+        "801688807222",
+        "801688807253",
+        "801688807246",
+        "801688807239",
+        "801688666942",
+        "801688667093",
+        "801688666959",
+        "801688666973",
+        "801688666966",
+        "801688667154",
+        "801688825271",
+        "801688825288",
+        "801688825257",
+        "801688825264",
+        "801688825240",
+        "801688666881",
+        "801688666935",
+        "801688666911",
+        "801688666874",
+        "801688666904",
+        "801688825394",
+        "801688825431",
+        "801688825448",
+        "801688825417",
+        "801688825424",
+        "801688825400",
+        "801688667000",
+        "801688667024",
+        "801688667031",
+        "801688666997",
+        "801688825318",
+        "801688825325",
+        "801688825356",
+        "801688825363",
+        "801688825332",
+        "801688825349",
+        "773289433196",
+        "773289433189",
+        "773289433172",
+        "773289433165",
+        "773289433158",
+        "801688743650",
+        "801688743643",
+        "801688743674",
+        "801688743667",
+        "801688666805",
+        "801688666850",
+        "773289773599",
+        "773289773605",
+        "773289773582",
+        "773289564708",
+        "801688807215",
+        "801688807260",
+        "773289564678",
+        "773289564692",
+        "773289433592",
+        "773289433622",
+        "801688666898",
+        "773289433615",
+        "773289433608",
+        "801688666799",
+        "773289433769",
+        "773289433752",
+        "801688667109",
+        "773289638881",
+        "801688667017"
+    ],
+    "attrs": [
+        {
+            "attrNameCh": "颜色",
+            "id": 2,
+            "attrNameEn": "Color"
+        },
+        {
+            "attrNameCh": "尺寸",
+            "id": 4,
+            "attrNameEn": "Size"
+        }
+    ]
+}
