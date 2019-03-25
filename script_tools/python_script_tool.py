@@ -190,3 +190,9 @@ def large_text_handler(value, field_es, properties):
             properties[field_es] = escaped_value[1:-1].replace('"', '').split(',')
     
     return properties
+
+def judge_datetime_only(value):
+    if value is not None and isinstance(value, datetime.datetime):
+        return True
+    else:
+        return False

@@ -2,7 +2,7 @@ curl -XGET '172.18.0.2:9200/.monitoring-es-6-2018.05.14/_settings,_mappings?pret
 curl -XGET '192.168.1.106:9200/todayspicks/_settings,_mappings?pretty'
 curl -XGET '192.168.1.106:9201/brochure/_settings,_mappings?pretty'
 
-curl -X GET "192.168.1.105:9201/macys/_mapping?human&pretty"
+curl -X GET "192.168.1.192:9200/search_unpopular_*/_settings?human&pretty"
 curl -X GET "192.168.1.105:9201/merger_tree/_settings?human&pretty"
 
 curl -X GET "192.168.1.105:9201/products_in_brochures_b/_settings,_mapping?human&pretty"

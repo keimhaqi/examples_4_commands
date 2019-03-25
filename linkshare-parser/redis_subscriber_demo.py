@@ -1,4 +1,5 @@
 import redis
+import time
 settings = {
     "REDIS_HOST": "localhost",
     "REDIS_PORT": 6379,
@@ -12,7 +13,8 @@ redis_conn = redis.Redis(host=settings['REDIS_HOST'],
 
 
 while True:
-    res = redis_conn.brpop("2149.wait")
+    res = redis_conn.brpop("13867.wait")
+    # time.sleep(1)
     print(res)
 # res = redis_conn.llen('linkshare.parser.onwait.queue')
 # print(res)

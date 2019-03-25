@@ -1,5 +1,5 @@
 curl -XDELETE 'localhost:9200/search/link/16813?pretty'
-curl -XDELETE 'localhost:9200/search/link/16815?pretty'
+curl -XDELETE '192.168.1.105:9201/merger_tree_v1/tree/AWlcQeusv19D_QpXSq0E?pretty'
 curl -XDELETE 'localhost:9200/search/link/?pretty'
 curl -XDELETE 'localhost:9200/search/link/?pretty'
 curl -XDELETE '192.168.1.192:9200/crawler/product/3_B075MXMXTY_06242018140145?pretty'

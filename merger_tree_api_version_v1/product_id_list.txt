@@ -1,6 +1,5 @@
 # 一个合并结果：
-10871134
-10871136
+10871136 OK
 
 curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=2468576&vendorId=13867'
 2468576
@@ -8,33 +7,72 @@ curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProduct
 13867 
 source_product_id: 2468576, 2468576
 # 一个合并结果：
-10871138
+10871138 OK, 属性数量对不上;
+	sourceProductId = 731346
+	curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=731346&vendorId=13867'
+
+808618956067 black leather 7.5对应的upc
+需要找black suede 7.5对应的upc
+
+MySQL [jinbag_data]> select * from attribute_value where id in (57,5702,3092,76,73,2477122,36934,1634046);
++---------+------------------------------------------------------------+--------------------+--------------+
+| id      | attribute_value_en                                         | attribute_value_cn | attribute_id |
++---------+------------------------------------------------------------+--------------------+--------------+
+|      57 | 6                                                          | NULL               |            2 |
+|      73 | adult                                                      | NULL               |            6 |
+|      76 | new                                                        | NULL               |            7 |
+|    3092 | female                                                     | NULL               |            4 |
+|    5702 | boots                                                      | NULL               |            5 |
+|   36934 | black leather                                              | NULL               |            1 |
+| 1634046 | Boots,Heel,Pull-On                                         | NULL               |            9 |
+| 2477122 | Leather/fabric or suede upper, leather lining, rubber sole | NULL               |            8 |
++---------+------------------------------------------------------------+--------------------+--------------+
+8 rows in set (0.00 sec)
+
+MySQL [jinbag_data]> select * from product_bloomingdales_price where id = 177854:
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':' at line 1
+MySQL [jinbag_data]> select * from product_bloomingdales_price where id = 177854;
++--------+-------------------+----------+---------------+--------------+---------------------+---------------------+-------------+--------------+--------------+------------------------------------------------------------------------------------------+------------------------------------------+--------------+--------------+------------+-------------+
+| id     | product_vendor_id | currency | product_price | product_sale | create_time         | update_time         | final_price | discount_ids | availability | image_url                                                                                | attribute_combination                    | sku_id       | upc          | product_id | category_id |
++--------+-------------------+----------+---------------+--------------+---------------------+---------------------+-------------+--------------+--------------+------------------------------------------------------------------------------------------+------------------------------------------+--------------+--------------+------------+-------------+
+| 177854 |             61262 | USD      |      695.0000 |     695.0000 | 2018-03-28 10:31:37 | 2019-02-07 03:23:28 |        NULL | NULL         |            1 | https://images.bloomingdalesassets.com/is/image/BLM/products/6/optimized/8332986_fpx.tif | 57,5702,3092,76,73,2477122,36934,1634046 | 808618955954 | 808618955954 |   10871138 |           3 |
++--------+-------------------+----------+---------------+--------------+---------------------+---------------------+-------------+--------------+--------------+------------------------------------------------------------------------------------------+------------------------------------------+--------------+--------------+------------+-------------+
+1 row in set (0.00 sec)
+
+
+
+select * from product_bloomingdales_price where product_vendor_id = 61262 and availability = 2;
+
+
 # 一个合并结果：
-10876312
-10909468
+10909468 OK
  Full texts 	product_id 	source_id 	source_product_id
 	Edit Edit 	Copy Copy 	Delete Delete 	10876312 	13867 	2770520
 	Edit Edit 	Copy Copy 	Delete Delete 	10909468 	13867 	2651985
 curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=731346&vendorId=13867'
 # 一个合并结果：
-10859106,
-10862514,
-10984398
+10859106, OK
+10862514, OK
+10984398, OK
  	Edit Edit 	Copy Copy 	Delete Delete 	10859106 	3184 	147374
 	Edit Edit 	Copy Copy 	Delete Delete 	10862514 	13867 	668196
 	Edit Edit 	Copy Copy 	Delete Delete 	10984398 	25003 	prod202930077
     curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=147374&vendorId=3184'
 # 一个合并结果：
-10876262,
-10859408,
-10859424,
-10876514,
-10876556,
-10876220,
-10875550,
-10859406,
-10876490,
-10861674,
+没有表格			10876262,
+没有表格			10859408,
+没有表格			10859424,
+没有表格			10876514,
+没有表格			10859406,
+没有表格			10876490
+没有表格			10861674
+10876556 OK
+10876220, ok
+10875550, ok
+
+,
+,
 13867:
     3000578,1068587,3000578,1068587
 1237:
@@ -43,18 +81,33 @@ curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProduct
 
 # 一个合并结果：
 10871142
+	1065094
+	curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=1065094&vendorId=13867'
+	触发合并失败;
+
 # 一个合并结果：
-10863032
+10863032 ok
+source_product_id: 3053420
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=3053420&vendorId=13867'
 # 一个合并结果：
-10880914
+10880914 OK
+
+2013972
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=2013972&vendorId=13867'
+
 # 一个合并结果：
-10903542,
-10863072
+	10903542, 无效
+	10863072, 无效
+	10877424 ， 属性错误
+
+3184536
+触发合并成功;
+
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=3184536&vendorId=13867'
 # 一个合并结果：
-10888908,
-10881354,
-10881352,
-10888920
+看不到表格			10888908,10881352,10888920
+10881354, OK
+
  Full texts 	product_id 	source_id 	source_product_id
 	Edit Edit 	Copy Copy 	Delete Delete 	10881352 	13867 	1070751
 	Edit Edit 	Copy Copy 	Delete Delete 	10881354 	1237 	3771594
@@ -63,11 +116,14 @@ curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProduct
 curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=3771594&vendorId=1237'
 
 # 一个合并结果：
-10871144
+10871144 OK
+1759604
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=1759604&vendorId=13867'
+
 # 一个合并结果：
-10876328,
-10980984,
-10876330
+10876328, OK
+10980984, OK
+看不到表格		10876330
  	Edit Edit 	Copy Copy 	Delete Delete 	10876328 	13867 	3067922
 	Edit Edit 	Copy Copy 	Delete Delete 	10876330 	13867 	3067922
 	Edit Edit 	Copy Copy 	Delete Delete 	10980984 	13867 	3067922
@@ -75,40 +131,72 @@ curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProduct
 # 一个合并结果：
 10890400,
 10890398
+触发合并失败
      Full texts 	product_id 	source_id 	source_product_id
 	Edit Edit 	Copy Copy 	Delete Delete 	10890398 	1237 	4979560
 	Edit Edit 	Copy Copy 	Delete Delete 	10890400 	1237 	4979560
 curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=4979560&vendorId=1237'
 # 一个合并结果：
 10871140
+
+126415
+触发合并失败
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=126415&vendorId=13867'
 # 一个合并结果：
-10881632
+10881632 OK
+
+5166170
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=5166170&vendorId=1237'
+
 # 一个合并结果：
-10904816,
-10904814
+看不到表格		10904816,
+看不到表格		10904814
+
+3676976 属性错误
+	详情页异常
+
+
+5202708
+	curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=5202708&vendorId=1237'
 # 一个合并结果：
-10863622
+10863622 OK
+
+
+2862531
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=2862531&vendorId=13867'
 # 一个合并结果：
-10890994
+10890994 OK
+
+
+5020400
+	curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=5020400&vendorId=1237'
 # 一个合并结果：
-10996416
+看不到表格 : 10996416
+
+5046495
+	curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=5046495&vendorId=1237'
 # 一个合并结果：
-11005116
+11005116 属性错误
 	sourceProductId = 5065306
 	curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=5065306&vendorId=1237'
 # 一个合并结果：
-10981444
+10981444 OK
 	upc = 613000521910 macys属性错误;
 	upc = 613000521927 macys属性错误;
 
+3097363
+
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=3097363&vendorId=13867'
 
 # 一个合并结果：
-10890836
+10890836 OK
 	属性没有错误
+	3141994
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=3141994&vendorId=13867'
 
 # 一个合并结果：
-10871124
-10871126
+10871124 属性错误
+10871126 属性错误
 	属性错误
 	upc = 5054103340551
 	upc = 5054103340575
@@ -118,3 +206,56 @@ curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProduct
 	Edit Edit 	Copy Copy 	Delete Delete 	10871126 	1237 	5160524
 
 curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=5160524&vendorId=1237'
+
+
+
+### Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1,814,577 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+; ]; Communications link failure
+
+The last packet successfully received from the server was 1,814,577 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1,814,577 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.] with root cause
+java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+        at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3014)
+        at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3472)
+        at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3462)
+        at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3903)
+        at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+        at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+        at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2486)
+        at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+        at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1197)
+        at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+        at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+        at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+        at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+        at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+        at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+        at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+        at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+        at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+        at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+        at sun.reflect.GeneratedMethodAccessor85.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+        at com.sun.proxy.$Proxy95.selectList(Unknown Source)
+        at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+        at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137)
+        at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
+        at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+        at com.sun.proxy.$Proxy100.selectAllProductInSourceProductIds(Unknown Source)
+        at com.jinbag.processor.version.BaseWebsiteMergerVersionProcessor.loadCompletedWebsiteProducts(BaseWebsiteMergerVersionProcessor.java:263)
+        at com.jinbag.processor.version.BaseWebsiteMergerVersionProcessor.process(BaseWebsiteMergerVersionProcessor.java:182)
+        at com.jinbag.processor.version.MergerVersionProcessorManager.lambda$process$2(MergerVersionProcessorManager.java:141)
+        at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+        at java.util.HashMap$KeySpliterator.forEachRemaining(HashMap.java:1548)
+        at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+        at java.util.stream.ForEachOps$ForEachTask.compute(ForEachOps.java:291)
+        at java.util.concurrent.CountedCompleter.exec(CountedCompleter.java:731)
+        at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+        at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+        at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+        at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)

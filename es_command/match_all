@@ -25,11 +25,11 @@ curl -XGET '192.168.1.106:9201/brochure/items/_search?pretty' -H 'Content-Type: 
 '
 
 
-curl -XGET 'http://192.168.1.105:9201/amazon/items/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.192:9200/bloomingdales/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 10,
     "query": {
-       "match" : {"sourceProductId": "B00J331BYO"}
+       "match" : {"upc": "3603679210465"}
     }
 }
 '
@@ -37,14 +37,22 @@ curl -XGET 'http://192.168.1.105:9201/amazon/items/_search?pretty' -H 'Content-T
 2881361
 
 
-curl -XGET 'http://192.168.1.192:9200/merger_tree_v1/tree/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.105:9201/amazon/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
-    "size": 10,
+    "size": 1,
     "query": {
        "match_all" : {}
     }
 }
 '
+
+
+2019-03-04 08:05:43,084
+2019-03-04 06:28:34,422
+
+
+
+"upcs\":[\"801688817788\",\"773289717289\",\"773289738321\",\"801688817764\",\"773289738284\",\"773289773148\",\"773289738307\",\"773289572307\",\"773289731353\",\"801688817801\",\"773289731377\",\"801688741571\",\"801688741595\",\"773289773155\",\"773289773131\",\"773289572291\",\"773289572277\",\"801688817795\",\"773289572314\",\"801688817771\",\"801688741557\",\"773289738338\",\"773289731360\",\"773289773179\",\"773289738314\",\"773289773162\",\"801688741540\",\"801688741564\",\"773289773186\",\"773289738291\",\"773289572260\",\"773289572284\",\"773289717258\",\"801688741588\",\"801688076406\",\"801688076390\"
 
 
 10860744
@@ -64,7 +72,7 @@ curl -XGET 'http://192.168.1.192:9200/merger_tree_v1/tree/_search?pretty' -H 'Co
 
 SELECT `product_id`, MAX(`update_time`) as update_time, GROUP_CONCAT(article_id) FROM `article_product` GROUP BY `product_id` ORDER BY update_time desc limit 40 
 
-curl -XGET 'http://192.168.1.105:9201/anntayloroutlet/items/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.194:9200/.kibana/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 2,
     "query": {
@@ -75,18 +83,152 @@ curl -XGET 'http://192.168.1.105:9201/anntayloroutlet/items/_search?pretty' -H '
 
 
 
+1952
 
-
-curl -XGET 'http://192.168.1.105:9201/merger_tree/tree/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.192:9200/merger_tree_v1/tree/_search?pretty' -H 'Content-Type: application/json' -d'
 {
-    "size": 1,
+    "size": 100,
     "query": {
         "bool" : {
           "should" : [
             {
               "match" : {
-                "productIds" : {
-                  "query" : "10978984",
+                "sourceProductIds" : {
+                  "query" : "2468576",
+                  "operator" : "OR",
+                  "prefix_length" : 0,
+                  "max_expansions" : 50,
+                  "fuzzy_transpositions" : true,
+                  "lenient" : false,
+                  "zero_terms_query" : "NONE",
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      }
+}
+'
+
+curl -XGET 'http://192.168.1.105:9201/bloomingdales,neimanmarcus,nordstrom/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 120,
+    "query": {
+  "bool" : {
+    "should" : [
+      {
+        "bool" : {
+          "must" : [
+            {
+              "match" : {
+                "parentId" : {
+                  "query" : 66893,
+                  "operator" : "OR",
+                  "prefix_length" : 0,
+                  "max_expansions" : 50,
+                  "fuzzy_transpositions" : true,
+                  "lenient" : false,
+                  "zero_terms_query" : "NONE",
+                  "boost" : 1.0
+                }
+              }
+            },
+            {
+              "match" : {
+                "vendorId" : {
+                  "query" : 25003,
+                  "operator" : "OR",
+                  "prefix_length" : 0,
+                  "max_expansions" : 50,
+                  "fuzzy_transpositions" : true,
+                  "lenient" : false,
+                  "zero_terms_query" : "NONE",
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      },
+      {
+        "bool" : {
+          "must" : [
+            {
+              "match" : {
+                "parentId" : {
+                  "query" : 94345,
+                  "operator" : "OR",
+                  "prefix_length" : 0,
+                  "max_expansions" : 50,
+                  "fuzzy_transpositions" : true,
+                  "lenient" : false,
+                  "zero_terms_query" : "NONE",
+                  "boost" : 1.0
+                }
+              }
+            },
+            {
+              "match" : {
+                "vendorId" : {
+                  "query" : 1237,
+                  "operator" : "OR",
+                  "prefix_length" : 0,
+                  "max_expansions" : 50,
+                  "fuzzy_transpositions" : true,
+                  "lenient" : false,
+                  "zero_terms_query" : "NONE",
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "disable_coord" : false,
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      },
+      {
+        "bool" : {
+          "must" : [
+            {
+              "match" : {
+                "availability" : {
+                  "query" : "in-stock",
+                  "operator" : "AND",
+                  "prefix_length" : 0,
+                  "max_expansions" : 50,
+                  "fuzzy_transpositions" : true,
+                  "lenient" : false,
+                  "zero_terms_query" : "NONE",
+                  "boost" : 1.0
+                }
+              }
+            },
+            {
+              "match" : {
+                "parentId" : {
+                  "query" : 158050,
+                  "operator" : "AND",
+                  "prefix_length" : 0,
+                  "max_expansions" : 50,
+                  "fuzzy_transpositions" : true,
+                  "lenient" : false,
+                  "zero_terms_query" : "NONE",
+                  "boost" : 1.0
+                }
+              }
+            },
+            {
+              "match" : {
+                "vendorId" : {
+                  "query" : 13867,
                   "operator" : "AND",
                   "prefix_length" : 0,
                   "max_expansions" : 50,
@@ -102,29 +244,24 @@ curl -XGET 'http://192.168.1.105:9201/merger_tree/tree/_search?pretty' -H 'Conte
           "adjust_pure_negative" : true,
           "boost" : 1.0
         }
-    }
+      }
+    ],
+    "disable_coord" : false,
+    "adjust_pure_negative" : true,
+    "minimum_should_match" : "1",
+    "boost" : 1.0
+  }
+}
 }
 '
 
-curl -XGET 'http://192.168.1.105:9201/merger_tree/tree/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.192:9200/bloomingdales/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 1,
     "query": {
-        "multi_match":{
-          "query": "10875266,9312100,10876222,10876558,10978984",
-          "fields":["productIds"]
-        }
-    }
-}
-'
-
-curl -XGET 'http://192.168.1.105:9201/search_unpopular_finishline/items/_search?pretty' -H 'Content-Type: application/json' -d'
-{
-    "size": 1000,
-    "query": {
         "match":{
-          "upc": {
-            "query":"191886507247"
+          "upcs": {
+            "query":"3603679210618"
           }
         }
     }
@@ -180,9 +317,9 @@ curl -XGET 'localhost:9201/search/items/_search?pretty' -H 'Content-Type: applic
 '
 
 
-curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type: application/json' -d'
 {
-  "size":5,
+  "size":17,
   "query" : {
   "bool" : {
     "must" : [
@@ -195,7 +332,7 @@ curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Typ
                   {
                     "match" : {
                       "sourceProductId" : {
-                        "query" : "2929283",
+                        "query" : "B01N9FZDV2",
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,
@@ -219,7 +356,7 @@ curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Typ
                   {
                     "match" : {
                       "vendorId" : {
-                        "query" : 3184,
+                        "query" : 3,
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,

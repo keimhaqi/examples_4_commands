@@ -4,9 +4,9 @@ curl -k -H 'Content-Type: application/json' -d '
 }
 ' http://localhost:8094/version/v1/queryMergerTreeByProductId
 
-curl -X GET 'http://96.90.248.210:8094/version/v1/queryMergerTreeByProductId?productId=10909468'
+curl -X GET 'http://96.90.248.210:8094/version/v1/queryMergerTreeByProductId?productId=10862900'
 
-curl -X GET 'http://192.168.1.105:8094/version/v1/queryMergerTreeBySourceProductId?sourceProductId=5098965'
+curl -X GET 'http://96.90.248.210:8094/version/v1/queryMergerTreeBySourceProductId?sourceProductId=B00BKOBCVQ'
 
 
 curl -X GET 'http://localhost:8094/version/v1/queryBackendMergerResultByFrontendProductIdBatch?frontendProductId=10978984'
@@ -96,3 +96,14 @@ curl -k -H 'Content-Type: application/json' -d '
 
 
 curl -X POST 'http://96.90.248.210:8094/version/v1/save?sourceProductId=3236693&vendorId=1237'
+
+
+
+
+2019-03-14 15:46:56,526
+
+4153468
+
+
+
+2019-03-16 09:07:00,617 - PID: 100962 - INFO - fix_attribute_combination_by_old_ftp.py - lineno:273, 剩余upc : 567905
