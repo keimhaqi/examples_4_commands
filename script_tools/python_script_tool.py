@@ -196,3 +196,8 @@ def judge_datetime_only(value):
         return True
     else:
         return False
+
+def judge_datetime(value, field_es, properties):
+    if judge_datetime_only(value):
+        properties[field_es] = value
+    return properties
