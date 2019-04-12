@@ -1,0 +1,1 @@
+ls --full-time weekNewData/36025_3281764_* | sed -n '/2019-04-11/p'

@@ -56,7 +56,7 @@ delete from article_product where update_time > '2018-11-08 07:50:51';
 curl -i -k -H 'Content-Type: application/json' -d '
 {
   "user": "dbcae0ceadd49336",
-  "num": 2,
+  "num": 20,
   "blacklistItems":[],
   "blacklist":[],
   "fields":[

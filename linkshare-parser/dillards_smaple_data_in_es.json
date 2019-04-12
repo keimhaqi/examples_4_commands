@@ -1,0 +1,473 @@
+{
+  "took" : 383,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 10,
+    "successful" : 10,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 152446,
+    "max_score" : 1.0,
+    "hits" : [
+      {
+        "_index" : "search_unpopular_dillards_a",
+        "_type" : "items",
+        "_id" : "dillards==>11319",
+        "_score" : 1.0,
+        "_source" : {
+          "productTitle" : "MAC Pro Longwear Water-Resistant Powder/Pressed",
+          "updateTime" : 1550464941000,
+          "vendor" : "dillards",
+          "attr" : {
+            "color" : "medium dark",
+            "style" : "PRLONG POW&#047;PRESSED",
+            "misc" : "04494015-2384014",
+            "size" : "one"
+          },
+          "categoryStr" : "Beauty>Makeup~~Face~~Foundations",
+          "productLongDescription" : [
+            "For a sweat- and humidity-resistant velvety matte finish, try MAC Pro Longwear Powder/Pressed, which promises zero shine with sheer to medium coverage for up to 12 hours in any climate.Key Claims & Benefits:long-wearing: 12 hourscontrols oiloil-freenon-dryingstay-true colordermatologist-testedsweat- and humidity-resistantphoto-friendlynon-acnegenicfor all skin typesHow to Use: Apply to face with a leatherette puff or brush.0.39 oz."
+          ],
+          "brand" : "MAC",
+          "upc" : [
+            "773602310234"
+          ],
+          "productShortDescription" : [
+            "MAC Pro Longwear Water-Resistant Powder/Pressed"
+          ],
+          "priceId" : 11319,
+          "productPriceValue" : {
+            "max" : 29.0,
+            "min" : 29.0
+          },
+          "width" : 520,
+          "productSaleValue" : {
+            "max" : 29.0,
+            "min" : 29.0
+          },
+          "sourceProductId" : "505366206",
+          "productSale" : "$29.0000",
+          "productPrice" : "$29.0000",
+          "height" : 603,
+          "productImageLink" : "https://dimg.dillards.com/is/image/DillardsZoom/zoom/mac-pro-longwear-powderpressed/04494015_zi_medium.jpg",
+          "availability" : "in-stock",
+          "productKeywords" : "04494015",
+          "skuNumber" : "773602310234"
+        }
+      },
+      {
+        "_index" : "search_unpopular_dillards_a",
+        "_type" : "items",
+        "_id" : "dillards==>81207",
+        "_score" : 1.0,
+        "_source" : {
+          "productTitle" : "MAC Dazzleshadow Liquid",
+          "updateTime" : 1548392055000,
+          "vendor" : "dillards",
+          "attr" : {
+            "color" : "Diamond Crumbles",
+            "style" : "DAZZLESHADOW LIQUID",
+            "misc" : "05492518-3877241",
+            "size" : "one"
+          },
+          "categoryStr" : "Beauty>Makeup~~Eyes~~Eyeshadows",
+          "productLongDescription" : [
+            "Get lost in eyes that tantalize, mesmerize and glamorize. Available in a range of beaming finishes from glaring glitter to subtle sparkle and cool chrome this ultra-shiny liquid eye shadow glides across lids for a wash of brilliant color that keeps its splendor. Its cooling formula sets quickly for the ultimate second-skin texture that feels ultra-soft on lids. These panache-filled hues range from unicorn-holographic white to oil slick-iridescent purple.Key Claims and Benefits:Long-wearing, 8 hoursProvides even color payoffProvides stay-true colorFeatures a silky smooth textureAdheres to skin with one strokeNon-creasingOphthalmologist testedSafe for contact lens wearersUsage:Apply directly to eyes using the applicator and blend with a brush or fingertip.0.16-oz."
+          ],
+          "brand" : "MAC",
+          "upc" : [
+            "773602516537"
+          ],
+          "productShortDescription" : [
+            "MAC Dazzleshadow Liquid(DAZZLESHADOW LIQUID)"
+          ],
+          "priceId" : 81207,
+          "productPriceValue" : {
+            "max" : 22.0,
+            "min" : 22.0
+          },
+          "width" : 520,
+          "productSaleValue" : {
+            "max" : 22.0,
+            "min" : 22.0
+          },
+          "sourceProductId" : "508263652",
+          "productSale" : "$22.0000",
+          "productPrice" : "$22.0000",
+          "height" : 603,
+          "productImageLink" : "https://dimg.dillards.com/is/image/DillardsZoom/zoom/mac-dazzleshadow-liquid/05492518_zi_stars_in_my_eyes.jpg",
+          "availability" : "in-stock",
+          "productKeywords" : "05449590",
+          "skuNumber" : "773602516537"
+        }
+      },
+      {
+        "_index" : "search_unpopular_dillards_a",
+        "_type" : "items",
+        "_id" : "dillards==>83453",
+        "_score" : 1.0,
+        "_source" : {
+          "productTitle" : "Vera Bradley Iconic Large Cosmetic Case",
+          "updateTime" : 1548650315000,
+          "vendor" : "dillards",
+          "attr" : {
+            "color" : "Vines Floral",
+            "style" : "ICN LRG COSMETIC",
+            "misc" : "05165298-4294277",
+            "size" : "one"
+          },
+          "categoryStr" : "Beauty>Makeup~~Bags, Compacts, Containers",
+          "productLongDescription" : [
+            "From Vera Bradley, the Iconic Large Cosmetic Case features:lightweight signature cottonzip closurePVC-lined main compartmentfront zip pocket outsideapprox. 10\"W x 7.25\"H x 4.25\"Dspot cleanImported."
+          ],
+          "brand" : "Vera Bradley",
+          "upc" : [
+            "886003538890"
+          ],
+          "productShortDescription" : [
+            "Vera Bradley Iconic Large Cosmetic Case(ICN LRG COSMETIC)"
+          ],
+          "priceId" : 83453,
+          "productPriceValue" : {
+            "max" : 38.0,
+            "min" : 38.0
+          },
+          "width" : 520,
+          "productSaleValue" : {
+            "max" : 38.0,
+            "min" : 38.0
+          },
+          "sourceProductId" : "507460033",
+          "productSale" : "$38.0000",
+          "productPrice" : "$38.0000",
+          "height" : 603,
+          "productImageLink" : "https://dimg.dillards.com/is/image/DillardsZoom/zoom/vera-bradley-iconic-large-cosmetic-case/05165298_zi_pretty_poises.jpg",
+          "availability" : "in-stock",
+          "skuNumber" : "886003538890"
+        }
+      },
+      {
+        "_index" : "search_unpopular_dillards_a",
+        "_type" : "items",
+        "_id" : "dillards==>137434",
+        "_score" : 1.0,
+        "_source" : {
+          "productTitle" : "Vera Bradley Iconic Large Cosmetic Case",
+          "updateTime" : 1548650315000,
+          "vendor" : "dillards",
+          "attr" : {
+            "color" : "cotton",
+            "style" : "ICN LRG COSMETIC",
+            "size" : "one"
+          },
+          "categoryStr" : "Beauty>Makeup~~Bags, Compacts, Containers",
+          "productLongDescription" : [
+            "From Vera Bradley, the Iconic Large Cosmetic Case features:lightweight signature cottonzip closurePVC-lined main compartmentfront zip pocket outsideapprox. 10\"W x 7.25\"H x 4.25\"Dspot cleanImported."
+          ],
+          "brand" : "Vera Bradley",
+          "upc" : [
+            "886003572177"
+          ],
+          "productShortDescription" : [
+            "Vera Bradley Iconic Large Cosmetic Case(ICN LRG COSMETIC)"
+          ],
+          "priceId" : 137434,
+          "productPriceValue" : {
+            "max" : 40.0,
+            "min" : 40.0
+          },
+          "width" : 520,
+          "productSaleValue" : {
+            "max" : 40.0,
+            "min" : 40.0
+          },
+          "sourceProductId" : "507460033",
+          "productSale" : "$40.0000",
+          "productPrice" : "$40.0000",
+          "height" : 603,
+          "productImageLink" : "https://dimg.dillards.com/is/image/DillardsZoom/zoom/vera-bradley-iconic-large-cosmetic-case/05165298_zi_pretty_poises.jpg",
+          "availability" : "in-stock",
+          "skuNumber" : "886003572177"
+        }
+      },
+      {
+        "_index" : "search_unpopular_dillards_a",
+        "_type" : "items",
+        "_id" : "dillards==>95919",
+        "_score" : 1.0,
+        "_source" : {
+          "productTitle" : "Silver Jeans Co. Suki Slim Mid-Rise Bootcut Jeans",
+          "updateTime" : 1549255059000,
+          "vendor" : "dillards",
+          "attr" : {
+            "style" : "SUKI SLIM BOOT",
+            "color" : "indigo",
+            "gender" : "female",
+            "material" : "Cotton,Denim,Elastane",
+            "misc" : "05044747-9980472",
+            "size" : "32 31"
+          },
+          "categoryStr" : "Juniors>Jeans~~Bootcut",
+          "productLongDescription" : [
+            "From Silver Jeans Co., these jeans feature:Super soft Denimmotion fabric5-pocket stylingMid riseFront button/zip flyBelt loopsCurve-flattering styleApprox. 31\" inseamCotton/polyester/elastaneMachine washImported."
+          ],
+          "brand" : "Silver Jeans Co.",
+          "upc" : [
+            "629227758053"
+          ],
+          "productShortDescription" : [
+            "Silver Jeans Co. Suki Slim Mid-Rise Bootcut Jeans(SUKI SLIM BOOT)"
+          ],
+          "priceId" : 95919,
+          "productPriceValue" : {
+            "max" : 89.0,
+            "min" : 89.0
+          },
+          "width" : 520,
+          "productSaleValue" : {
+            "max" : 89.0,
+            "min" : 89.0
+          },
+          "sourceProductId" : "507179133",
+          "productSale" : "$89.0000",
+          "productPrice" : "$89.0000",
+          "height" : 603,
+          "productImageLink" : "https://dimg.dillards.com/is/image/DillardsZoom/zoom/silver-jeans-co.-suki-slim-bootcut-jeans/05044747_zi_indigo.jpg",
+          "availability" : "in-stock",
+          "productKeywords" : "05012216",
+          "skuNumber" : "629227758053"
+        }
+      },
+      {
+        "_index" : "search_unpopular_dillards_a",
+        "_type" : "items",
+        "_id" : "dillards==>14",
+        "_score" : 1.0,
+        "_source" : {
+          "productTitle" : "Cabernet Plus Chopper Half Lace Slip",
+          "updateTime" : 1548392055000,
+          "vendor" : "dillards",
+          "attr" : {
+            "style" : "CHOPPER 1&#047;2 LACE SLI",
+            "color" : "Whiteness",
+            "gender" : "female",
+            "material" : "Lace,Nylon",
+            "misc" : "03680452-1288534",
+            "size" : "1x"
+          },
+          "categoryStr" : "Lingerie>Bridal~~Bridal Lingerie & Sleepwear",
+          "productLongDescription" : [
+            "A romantic layering piece, this Cabernet Plus half slip features a comfortable adjustable waist, side slit and lace detail at the hem. 24\" longnylonmachine washableImported. Only at Dillard's."
+          ],
+          "brand" : "Cabernet",
+          "upc" : [
+            "758796098021"
+          ],
+          "productShortDescription" : [
+            "Cabernet Plus Chopper Half Lace Slip"
+          ],
+          "priceId" : 14,
+          "productPriceValue" : {
+            "max" : 18.0,
+            "min" : 18.0
+          },
+          "width" : 520,
+          "productSaleValue" : {
+            "max" : 18.0,
+            "min" : 18.0
+          },
+          "sourceProductId" : "503001220",
+          "productSale" : "$18.0000",
+          "productPrice" : "$18.0000",
+          "height" : 603,
+          "productImageLink" : "https://dimg.dillards.com/is/image/DillardsZoom/zoom/cabernet-plus-chopper-half-lace-slip/03680452_zi_blackness.jpg",
+          "availability" : "in-stock",
+          "productKeywords" : "03680452",
+          "skuNumber" : "758796098021"
+        }
+      },
+      {
+        "_index" : "search_unpopular_dillards_a",
+        "_type" : "items",
+        "_id" : "dillards==>15",
+        "_score" : 1.0,
+        "_source" : {
+          "productTitle" : "UGG Men's Freamon Hyperweave Chukka Boots",
+          "updateTime" : 1543295630000,
+          "vendor" : "dillards",
+          "attr" : {
+            "style" : "FREAMON HYPERWEAVE",
+            "color" : "navy",
+            "gender" : "male",
+            "material" : "Cotton,Lace,Leather,Suede,Synthetic",
+            "misc" : "05240351-1007603",
+            "size" : "8m"
+          },
+          "categoryStr" : "Shoes>Men's Shoes~~Boots~~Casual Boots",
+          "productLongDescription" : [
+            "From UGG , the Men's Freamon Hyperweave Chukka Boots feature: Engineered hyperweave upperSynthetic lining Suede heel overlay2-eyelet design Flexfit comfort system Cotton laces that match upper colorsRear pull tab with stripe detailEmbossed UGG logo on heel enerG comfort system insole with built-in arch support; additional layer of open cell PU foam for breathable, moisture-wicking, anti-microbial comfort; lined with leatherTreadlite by UGG outsole Imported."
+          ],
+          "brand" : "UGG",
+          "upc" : [
+            "191142379168"
+          ],
+          "productShortDescription" : [
+            "UGG Men's Freamon Hyperweave Chukka Boots(FREAMON HYPERWEAVE)"
+          ],
+          "priceId" : 15,
+          "productPriceValue" : {
+            "max" : 150.0,
+            "min" : 150.0
+          },
+          "width" : 520,
+          "productSaleValue" : {
+            "max" : 100.5,
+            "min" : 100.5
+          },
+          "sourceProductId" : "507658666",
+          "productSale" : "$100.5000",
+          "productPrice" : "$150.0000",
+          "height" : 603,
+          "productImageLink" : "https://dimg.dillards.com/is/image/DillardsZoom/zoom/ugg-mens-freamon-hyperweave-chukka-boots/05240351_zi_navy.jpg",
+          "availability" : "in-stock",
+          "productKeywords" : "05112496",
+          "skuNumber" : "191142379168"
+        }
+      },
+      {
+        "_index" : "search_unpopular_dillards_a",
+        "_type" : "items",
+        "_id" : "dillards==>129877",
+        "_score" : 1.0,
+        "_source" : {
+          "productTitle" : "MAC Powder Blush",
+          "updateTime" : 1549860397000,
+          "vendor" : "dillards",
+          "attr" : {
+            "color" : "harmony",
+            "size" : "one"
+          },
+          "categoryStr" : "Beauty>Makeup~~Face~~Blush",
+          "productLongDescription" : [
+            "Designed by and for professionals, formulated to provide fantastic colour with ease and consistency. Applies evenly, adheres lightly to skin to achieve a natural-looking application of colour that stays put all day. Choose appropriate brush and glide brush over the blush. Tap off excess powder and apply blush to skin using sweeping strokes and blend well. Choose appropriate brush and glide brush over the blush. Tap off excess powder and apply blush to skin using sweeping strokes and blend well."
+          ],
+          "brand" : "MAC",
+          "upc" : [
+            "773602000746"
+          ],
+          "productShortDescription" : [
+            "MAC Powder Blush"
+          ],
+          "priceId" : 129877,
+          "productPriceValue" : {
+            "max" : 24.0,
+            "min" : 24.0
+          },
+          "width" : 520,
+          "productSaleValue" : {
+            "max" : 24.0,
+            "min" : 24.0
+          },
+          "sourceProductId" : "501579996",
+          "productSale" : "$24.0000",
+          "productPrice" : "$24.0000",
+          "height" : 603,
+          "productImageLink" : "https://dimg.dillards.com/is/image/DillardsZoom/zoom/mac-powder-blush/02845597_zi_pinch_me.jpg",
+          "availability" : "in-stock",
+          "productKeywords" : "01065299",
+          "skuNumber" : "773602000746"
+        }
+      },
+      {
+        "_index" : "search_unpopular_dillards_a",
+        "_type" : "items",
+        "_id" : "dillards==>129760",
+        "_score" : 1.0,
+        "_source" : {
+          "productTitle" : "MAC Powder Blush",
+          "updateTime" : 1549860397000,
+          "vendor" : "dillards",
+          "attr" : {
+            "color" : "peaches",
+            "style" : "SHEERTONE BLUSH",
+            "size" : "one"
+          },
+          "categoryStr" : "Beauty>Makeup~~Face~~Blush",
+          "productLongDescription" : [
+            "Designed by and for professionals, formulated to provide fantastic colour with ease and consistency. Applies evenly, adheres lightly to skin to achieve a natural-looking application of colour that stays put all day. Choose appropriate brush and glide brush over the blush. Tap off excess powder and apply blush to skin using sweeping strokes and blend well. Choose appropriate brush and glide brush over the blush. Tap off excess powder and apply blush to skin using sweeping strokes and blend well."
+          ],
+          "brand" : "MAC",
+          "upc" : [
+            "773602037612"
+          ],
+          "productShortDescription" : [
+            "MAC Powder Blush"
+          ],
+          "priceId" : 129760,
+          "productPriceValue" : {
+            "max" : 24.0,
+            "min" : 24.0
+          },
+          "width" : 520,
+          "productSaleValue" : {
+            "max" : 24.0,
+            "min" : 24.0
+          },
+          "sourceProductId" : "501579996",
+          "productSale" : "$24.0000",
+          "productPrice" : "$24.0000",
+          "height" : 603,
+          "productImageLink" : "https://dimg.dillards.com/is/image/DillardsZoom/zoom/mac-powder-blush/02845597_zi_pinch_me.jpg",
+          "availability" : "in-stock",
+          "productKeywords" : "01065299",
+          "skuNumber" : "773602037612"
+        }
+      },
+      {
+        "_index" : "search_unpopular_dillards_a",
+        "_type" : "items",
+        "_id" : "dillards==>129441",
+        "_score" : 1.0,
+        "_source" : {
+          "productTitle" : "MAC Powder Blush",
+          "updateTime" : 1549860397000,
+          "vendor" : "dillards",
+          "attr" : {
+            "color" : "POWDER BLUSH",
+            "size" : "one"
+          },
+          "categoryStr" : "Beauty>Makeup~~Face~~Blush",
+          "productLongDescription" : [
+            "Designed by and for professionals, formulated to provide fantastic colour with ease and consistency. Applies evenly, adheres lightly to skin to achieve a natural-looking application of colour that stays put all day. Choose appropriate brush and glide brush over the blush. Tap off excess powder and apply blush to skin using sweeping strokes and blend well. Choose appropriate brush and glide brush over the blush. Tap off excess powder and apply blush to skin using sweeping strokes and blend well."
+          ],
+          "brand" : "MAC",
+          "upc" : [
+            "773602358038"
+          ],
+          "productShortDescription" : [
+            "MAC Powder Blush"
+          ],
+          "priceId" : 129441,
+          "productPriceValue" : {
+            "max" : 24.0,
+            "min" : 24.0
+          },
+          "width" : 520,
+          "productSaleValue" : {
+            "max" : 24.0,
+            "min" : 24.0
+          },
+          "sourceProductId" : "501579996",
+          "productSale" : "$24.0000",
+          "productPrice" : "$24.0000",
+          "height" : 603,
+          "productImageLink" : "https://dimg.dillards.com/is/image/DillardsZoom/zoom/mac-powder-blush/02845597_zi_pinch_me.jpg",
+          "availability" : "in-stock",
+          "productKeywords" : "01065299",
+          "skuNumber" : "773602358038"
+        }
+      }
+    ]
+  }
+}

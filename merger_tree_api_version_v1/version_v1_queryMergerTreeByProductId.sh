@@ -11,7 +11,7 @@ curl -X GET 'http://96.90.248.210:8094/version/v1/queryMergerTreeBySourceProduct
 
 curl -X GET 'http://localhost:8094/version/v1/queryBackendMergerResultByFrontendProductIdBatch?frontendProductId=10978984'
 
-curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=2770520&vendorId=13867'
+curl -X POST 'http://96.90.248.210:8094/version/v1/save2MergerTree?sourceProductId=2127ed3ac9f94241901f5c02a83d2b87&vendorId=41098'
 
 curl -k -H 'Content-Type: application/json' -d '
 {

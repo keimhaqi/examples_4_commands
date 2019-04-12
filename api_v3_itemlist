@@ -221,12 +221,24 @@ curl -k -H 'Content-Type: application/json' -d '
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "fields":[{"name": "productId", "values":[10890450]}, {"name": "vendorId", "values":[3]}]
+  "fields":[{"name": "productId", "values":[10862336]}, {"name": "vendorId", "values":[1237]}]
 }
 ' http://96.90.248.211:9124/api/v3/metrics/product
 
 
-
+{
+  "fields":[
+    {"name": "tags", "values":["Nike的鞋子7折", "Adidas鞋子6折"]}
+  ],
+  "priceRange":{
+    "max": 100.00,
+    "min": 20.00
+  },
+  "discountRange":{
+    "max": 100.00,
+    "min": 40.00
+  }
+}
 
 curl -k -H 'Content-Type: application/json' -d '
 {
@@ -240,9 +252,9 @@ curl -k -H 'Content-Type: application/json' -d '
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "fields":[{"name": "productId", "values":[1]}, {"name": "vendorId", "values":[3184]}, {"name": "spec", "values":[""]}]
+  "fields":[{"name": "productId", "values":[11025044]}, {"name": "vendorId", "values":[3184]}, {"name": "spec", "values":[""]}]
 }
-' http://localhost:9124/api/v3/metrics/product
+' http://96.90.248.211:9124/api/v3/metrics/product
 
 
 

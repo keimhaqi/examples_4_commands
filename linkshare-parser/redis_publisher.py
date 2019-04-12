@@ -2,6 +2,10 @@
 # -*- coding: UTF-8 -*-
 import redis
 import time
+import json
+from dateutil import parser as du_parser
+import datetime
+redis_conn = None
 
 # 链接redis的配置信息
 settings = {
@@ -12,12 +16,10 @@ settings = {
 
 redis_conn = redis.Redis(host=settings['REDIS_HOST'],
                                       port=settings['REDIS_PORT'],
-                                      db=settings.get('REDIS_DB'),
+                                      db=settings["REDIS_DB"],
                                       password="onepeace")
 
-
-while True:
-    # 13867.wait是队列名称，表示从这个队列拿数据;
-    res = redis_conn.brpop("13867.wait")
-    # time.sleep(1)
-    print(res)
+# 13867.wait表示队列名称
+linkshare_parser_queue = '13867.wait'
+for item in range(100):
+    redis_conn.lpush(linkshare_parser_queue, json.dumps(item))

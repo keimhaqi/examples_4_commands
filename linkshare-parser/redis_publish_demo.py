@@ -39,7 +39,8 @@ def call_parser_api(fileName):
     #     logging.info("Call Linkshare API is over.")
     redis_key_value = {}
     # file_dir_on_dest = "/home/zhenping/weekNewData/{}".format(fileName)
-    file_dir_on_dest = "/home/zhenping/github/examples_4_commands/linkshare-parser/{}".format(fileName)
+    file_dir_on_dest = "/home/zhenping/github/examples_4_commands/linkshare-parser/single_demo/{}".format(fileName)
+    # file_dir_on_dest = "/home/zhenping/linkshare_ftp/{}".format(fileName)
     serial_number = get_serial_number_in_redis()
     original_date = du_parser.parse(str(datetime.datetime.now()))
     upload_time = original_date.strftime('%Y-%m-%d %H:%M:%S.%f')
@@ -79,10 +80,14 @@ redis_conn = redis.Redis(host=settings['REDIS_HOST'],
     # print "End : %s" % time.ctime()
 # call_parser_api('24285_3281764_98931637_2018_11_28_12_06_12_cmp.xml.gz')
 
-linkshare_parser_queue = '13867.wait'
-# call_parser_api('37731_3281764_83345565_0_cmp_delta.xml.gz')
-# call_parser_api('37731_3281764_83345565_1_cmp_delta.xml.gz')
-call_parser_api('demo4.xml.gz')# -- 发解析文件的任务;
+# linkshare_parser_queue = '13867.wait'
+# call_parser_api('bloomingdales_13867.xml.gz')
+
+
+linkshare_parser_queue = '36025.wait'
+call_parser_api('lastcall_missing.xml.gz')
+# linkshare_parser_queue = "38606.wait"
+# call_parser_api('bestbuy_38606.xml.gz')
 # for item in range(0 , 100):
 #     redis_conn.lpush(linkshare_parser_queue, json.dumps(item))
 

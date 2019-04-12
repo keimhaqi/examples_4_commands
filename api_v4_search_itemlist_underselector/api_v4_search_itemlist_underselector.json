@@ -1,0 +1,61 @@
+{
+    "itemlist": [
+        {
+            "productSale": "$35.00 - $64.98",
+            "productPriceValue": {
+                "min": 79.99,
+                "max": 79.99
+            },
+            "productId": 1,
+            "vendorId": 37731,
+            "updateTime": "2019-02-18 08:22:36",
+            "availability": "in-stock",
+            "sourceProductId": "prod2782507",
+            "parentId": 1577,
+            "productSaleValue": {
+                "min": 35.0,
+                "max": 64.98
+            },
+            "productDiscountValue": {
+                "min": 18.76,
+                "max": 56.24
+            },
+            "spu": "3k46efpgg",
+            "productPrice": "$79.99",
+            "isHot": 1,
+            "upc": [
+                "192491117531",
+                "192491117548",
+                "192491117555",
+                "192491117562",
+                "192491117579",
+                "192491117586",
+                "192491117760",
+                "192491117777",
+                "192491117784",
+                "192491117791",
+                "192491117807",
+                "192491117814",
+                "192491117852",
+                "192491117869",
+                "192491117876",
+                "192491117883",
+                "192491117890",
+                "192491117906"
+            ],
+            "productTitle": "Big Kids' Champion 93Eighteen Casual Shoes, Red",
+            "productLongDescription": [
+                "Large embroidered Champion logo at the side Chunky midsole Easy pull on with heel pull tab Cushioned tongue and collar Traction pattern on the sole for grip Lace-up silhouette The Champion 93Eighteen is imported. Heritage style and plush comfort team up on the Kids' Champion 93Eighteen Casual Sneakers. On-trend and featuring low-key performance, these sneakers are a must-have for active kiddos. Size: 6.0. Color: Red. Age Group: Kids."
+            ],
+            "vendor": "finishline",
+            "productKeywords": "MS10004Y-600",
+            "width": 610,
+            "productImageLink": "https://images.finishline.com/is/image/FinishLine/MS10004Y_600?$Main$",
+            "categoryStr": "Apparel & Accessories>Shoes",
+            "brand": "Champion",
+            "height": 610
+        }
+    ],
+    "num": 1,
+    "lifeCycle": 1
+}
