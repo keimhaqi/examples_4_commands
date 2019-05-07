@@ -22,8 +22,8 @@ curl -XGET '172.18.0.2:9200/todayspicks/items/10250648?pretty'
 
 curl -XGET '172.18.0.3:9200/jinbagsearch_hot/items/1898?pretty'
 curl -XGET '172.18.0.3:9200/article/items/1952?pretty'
-curl -XGET '192.168.1.105:9201/search_unpopular_walmart_b/items/walmart.6397346?pretty'
-curl -XGET '192.168.1.192:9200/bloomingdales/items/bloomingdales.529010?pretty'
+curl -XGET '192.168.1.192:9200/bloomingdales_dynamic/items/bloomingdales.240001?pretty'
+curl -XGET '192.168.1.192:9200/macys_static/items/macys.454155?pretty'
 curl -XGET '192.168.1.104:9201/todayspicks/items/10583820?pretty'
 curl -XGET '192.168.1.105:9201/article/post/1410?pretty'
 curl -XGET '192.168.1.106:9201/jinbagsearch/items/275926?pretty'
@@ -32,9 +32,9 @@ curl -XGET '192.168.1.106:9201/jinbagsearch/items/293078?pretty'
 curl -XGET '192.168.1.106:9201/jinbagsearch/items/294977?pretty'
 curl -XGET '192.168.1.106:9201/jinbagsearch/items/261072?pretty'
 curl -XGET '192.168.1.106:9201/jinbagsearch/items/270997?pretty'
-curl -XGET '192.168.1.105:9201/nordstrom/items/nordstrom.274948?pretty'
+curl -XGET '192.168.1.192:9200/macys_static/items/macys.204625?pretty'
 
-
+curl -XGET '192.168.1.192:9200/nordstrom_dynamic/items/nordstrom.509250?pretty'
 
 curl -XGET '172.18.0.3:9200/jinbagsearch_hot/items/10984624?pretty'
 curl -XGET '192.168.1.104:9201/todayspicks/items/239865?pretty'
@@ -42,7 +42,7 @@ curl -XGET '192.168.1.106:9200/todayspicks/items/10601600?pretty'
 curl -XGET '192.168.1.106:9200/todayspicks/items/10585274?pretty'
 
 
-curl -XGET '192.168.1.105:9201/search_unpopular_finishline_a/items/dillards==>153681?pretty'
+curl -XGET '192.168.1.105:9201/amazon_dynamic/items/amazon.996673?pretty'
 curl -XGET '192.168.1.105:9201/jinbagsearch_hot/items/10860992?pretty'
 curl -XGET 'localhost:9200/searchal/items/10?pretty'
 curl -XGET 'localhost:9200/autojinbag/tags/Zhongshan?pretty'

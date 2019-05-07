@@ -1,0 +1,55 @@
+selector_id = 3;
+
+MySQL [jinbag_data]> select id, attribute_value_ids, vendor_id from product_group where id in (22,21,20,19);
++----+---------------------+-----------+
+| id | attribute_value_ids | vendor_id |
++----+---------------------+-----------+
+| 19 | 1334383             |      1237 |    ==> nordstrom:vendor sandro:brand 
+| 20 | 1334586,1334383     |     13867 |    ==> bloomingdales:vendor sandro:brand 
+| 21 | 1334663,1334586     |     13867 |    ==> bloomingdales:vendor maje:brand 
+| 22 | 1334663             |      1237 |    ==> nordstrom:vendor maje:brand
++----+---------------------+-----------+
+
+nordstrom = 4个商品, 原网站有23个满足折扣20%的商品
+nordstrom的商品source_product_id = 4944612, 原网站有满足折扣20%，系统中有这个商品，但是没有被推出来;
+
+
+selector_id = 2
+MySQL [jinbag_data]> select id, attribute_value_ids, vendor_id from product_group where id in (3,4,5,6,7,8,9,10,18,17,16,15,14,13,12);
++----+-------------------------+-----------+
+| id | attribute_value_ids     | vendor_id |
++----+-------------------------+-----------+
+|  3 | 1334385,1633153,1633142 |      1237 |    ==> nordstrom:vendor dl:brand categoryStr:bottoms~~pant
+|  4 | 1633153,1334601,2386246 |      3184 |    ==> macys:vendor dl:brand categoryStr:juniors' clothing - jeans
+|  5 | 907698,1334586,1334599  |     13867 |    ==> bloomingdales:vendor dl1961:brand categoryStr:women
+|  6 | 1633153,2026099,9998309 |     25003 |    ==> neiman marcus:vendor dl:brand categoryStr:clothing~~pants
+|  7 | 1633142,1334628         |      1237 |    ==> nordstrom:vendor ag:brand categoryStr:bottoms~~pant
+|  8 | 1916437,1334601         |      3184 |    ==> macys:vendor ag jeans:brand
+|  9 | 1334586,1364011,1394592 |     13867 |    ==> bloomingdales:vendor ag adriano goldschmied kids:brand categoryStr:kids
+| 10 | 1334796,2620164,2026099 |     25003 |    ==> neimanmarcus:vendor ag adriano goldschmied:brand categoryStr:clothing~~pants
+| 12 | 1633142,1619587,1334385 |      1237 |    ==> nordstrom:vendor mother:brand categoryStr:bottoms~~pant
+| 13 | 1619587,1334586         |     13867 |    ==> bloomingdales:vendor mother:brand
+| 14 | 1813168,1633142,1334385 |      1237 |    ==> nordstrom:vendor citizens of humanity :brand categoryStr:bottoms~~pant
+| 15 | 1813168,1334601,2386246 |      3184 |    ==> macys:vendor citizens of humanity:brand categoryStr:juniors' clothing - jeans
+| 16 | 1437783,1633142,1334385 |      1237 |    ==> nordstrom:vendor j brand:brand categoryStr:bottoms~~pant
+| 17 | 1334586,1378776         |     13867 |    ==> bloomingdales:vendor rag & bone/jean:brand
+| 18 | 1334385,1633142,1501960 |      1237 |    ==> nordstrom:vendor rag & bone:brand categoryStr:bottoms~~pant 原网站有2个商品满足条件,系统中有商品source_product_id = 5136960满足条件，但是没有推荐出来;
++----+-------------------------+-----------+    ==> 30%
+15 rows in set (0.00 sec)
+
+
+
+selector_id = 4
+MySQL [jinbag_data]> select id, attribute_value_ids, vendor_id from product_group where id in (29,28,27,26,25,24,23);
++----+-------------------------+-----------+
+| id | attribute_value_ids     | vendor_id |
++----+-------------------------+-----------+
+| 23 | 1330378,1234941         |         3 |    ==> amazon:vendor puma:brand categoryStr:backpacks
+| 24 | 1364392,1240892         |      1237 |    ==> nordstrom:vendor adidas originals:brand categoryStr:handbags & wallets 原网站满足条件的有2个, 系统中有商品source_product_id=4565600的商品，但是没有推荐出来
+| 25 | 2731988,1205717         |     37731 |    ==> finishline:vendor adidas:brand categoryStr:handbags, wallets & cases~~handbags
+| 26 | 1234941,1364392         |         3 |    ==> amazon:vendor adidas originals:brand categoryStr:backpacks
+| 27 | 1330623,1973705,9988511 |     37731 |    ==> finishline:vendor nike:brand categoryStr:luggage & bags
+| 28 | 1330623,1633150         |      1237 |    ==> nordstrom:vendor nike:brand categoryStr:bags~~backpack
+| 29 | 1330623,1234941         |         3 |    ==> amazon:vendor nike:brand categoryStr:backpacks
++----+-------------------------+-----------+    ==> 30%
+7 rows in set (0.01 sec)

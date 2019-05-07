@@ -1,0 +1,2 @@
+org.elasticsearch.transport.RemoteTransportException: [initial-data][192.168.1.192:9300][indices:data/read/search[phase/dfs]]
+Caused by: org.elasticsearch.common.util.concurrent.EsRejectedExecutionException: rejected execution of org.elasticsearch.transport.TransportService$7@7b2ded1b on EsThreadPoolExecutor[search, queue capacity = 1000, org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor@2c411306[Running, pool size = 19, active threads = 19, queued tasks = 1000, completed tasks = 752040]]

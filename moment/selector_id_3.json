@@ -1,0 +1,2291 @@
+{
+    "itemlist": [
+        {
+            "productId": 10863372,
+            "vendorId": 13867,
+            "updateTime": "2018-03-11 10:21:55",
+            "sourceProductId": "2824039",
+            "parentId": 148348,
+            "productTitle": "Sandro Theora Printed Single-Button Blazer",
+            "productLongDescription": [
+                "Fits true to size",
+                " order your normal size",
+                "Designed for a slim fit",
+                "Notched lapels",
+                " stand collar",
+                " seamed long sleeves",
+                "Vented cuffs",
+                " exposed front logo-button closure",
+                " two side flap pockets",
+                "Allover dot print",
+                " seam details",
+                " lined",
+                "Model measurements: 5'10\\ height",
+                " 33.5\\ bust",
+                " 23.5\\ waist",
+                " 34.5\\ hips",
+                " wearing a Sandro size 36",
+                "Please use the following size conversions when ordering this item: 34=XS; 36=S; 38=M; 40=L",
+                "Viscose/polyester; lining: viscose; pocket lining: cotton",
+                "Dry clean",
+                "Imported"
+            ],
+            "productShortDescription": [
+                "Sandro Theora Printed Single-Button Blazer"
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Sandro Theora Printed Single-Button Blazer~Women",
+            "width": 300,
+            "spu": "pypykcrxej",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/8/optimized/9816488_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Women",
+            "brand": "Sandro",
+            "isHot": 1,
+            "height": 375,
+            "productSale": "$260.00 - $520.00",
+            "productPriceValue": {
+                "min": 520.0,
+                "max": 520.0
+            },
+            "availability": "out-of-stock",
+            "productSaleValue": {
+                "min": 260.0,
+                "max": 520.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 50.0
+            },
+            "productPrice": "$520.00"
+        },
+        {
+            "productId": 10863382,
+            "vendorId": 13867,
+            "updateTime": "2018-03-10 11:24:16",
+            "sourceProductId": "2824027",
+            "parentId": 148042,
+            "productTitle": "Sandro Eve Frayed Collar Denim Jacket",
+            "productLongDescription": [
+                "Fits true to size",
+                " order your normal size",
+                "Designed for a slim fit",
+                "Round neck",
+                " frayed stand collar",
+                " subtle drop shoulders",
+                "Long sleeves",
+                " button cuffs",
+                " exposed front-button closure",
+                "Two chest flap pockets",
+                " subtly cropped silhouette",
+                "Gunmetal-tone logo hardware",
+                " contrast stitching",
+                "Model measurements: 5'10\\ height",
+                " 33.5\\ bust",
+                " 23.5\\ waist",
+                " 34.5\\ hips",
+                " wearing a Sandro size 36",
+                "Please use the following size conversions when ordering this item: 34=XS; 36=S; 38=M; 40=L",
+                "Self & pocket lining: cotton",
+                "Hand wash",
+                "Made in Turkey"
+            ],
+            "productShortDescription": [
+                "Sandro Eve Frayed Collar Denim Jacket"
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Sandro Eve Frayed Collar Denim Jacket~Women",
+            "width": 300,
+            "spu": "75v5g0x5qx",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/8/optimized/9816538_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Women",
+            "brand": "Sandro",
+            "isHot": 1,
+            "height": 375,
+            "productSale": "$228.00 - $570.00",
+            "productPriceValue": {
+                "min": 570.0,
+                "max": 570.0
+            },
+            "availability": "out-of-stock",
+            "productSaleValue": {
+                "min": 228.0,
+                "max": 570.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 60.0
+            },
+            "productPrice": "$570.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "navy blue",
+                    "gender": "female",
+                    "material": "68% cotton/32% linen; braid: 100% polyester; bias binding & pocket lining: 100% cotton",
+                    "size": "34 fr/0 us",
+                    "style": "bootcut & straight,cropped",
+                    "priceId": 607085,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "navy blue",
+                    "gender": "female",
+                    "material": "68% cotton/32% linen; braid: 100% polyester; bias binding & pocket lining: 100% cotton",
+                    "size": "36 fr/2-4 us",
+                    "style": "bootcut & straight,cropped",
+                    "priceId": 607105,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "pants"
+                },
+                {
+                    "color": "navy blue",
+                    "gender": "female",
+                    "material": "68% cotton/32% linen; braid: 100% polyester; bias binding & pocket lining: 100% cotton",
+                    "size": "38 fr/4-6 us",
+                    "style": "bootcut & straight,cropped",
+                    "priceId": 607126,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "pants"
+                },
+                {
+                    "color": "navy blue",
+                    "gender": "female",
+                    "material": "68% cotton/32% linen; braid: 100% polyester; bias binding & pocket lining: 100% cotton",
+                    "size": "40 fr/8 us",
+                    "style": "bootcut & straight,cropped",
+                    "priceId": 607073,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "pants"
+                }
+            ],
+            "vendorId": 13867,
+            "upc": [
+                "3607171438655",
+                "3607171438662",
+                "3607171438679",
+                "3607171438686"
+            ],
+            "updateTime": "2019-04-16 10:18:45",
+            "sourceProductId": "3237019",
+            "parentId": 230013,
+            "productTitle": "Sandro Blanche Striped Cropped Pants",
+            "productLongDescription": [
+                "Sandro Blanche Striped Cropped Pants-Women"
+            ],
+            "productShortDescription": [
+                "Sandro Blanche Striped Cropped Pants"
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Sandro Blanche Striped Cropped Pants~Women",
+            "width": 300,
+            "spu": "oj8jkhx4lp",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/0/optimized/10207140_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Women",
+            "brand": "Sandro",
+            "isHot": 0,
+            "height": 375,
+            "productSale": "$238.00 - $340.00",
+            "productPriceValue": {
+                "min": 340.0,
+                "max": 340.0
+            },
+            "productSaleValue": {
+                "min": 238.0,
+                "max": 340.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 30.0
+            },
+            "availability": "in-stock",
+            "productPrice": "$340.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "7.5 D",
+                    "priceId": 216370,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "8 D",
+                    "priceId": 216373,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "8.5 D",
+                    "priceId": 216372,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "9 D",
+                    "priceId": 216369,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "9.5 D",
+                    "priceId": 216379,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "10 D",
+                    "priceId": 216378,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "10.5 D",
+                    "priceId": 216375,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "11 D",
+                    "priceId": 216374,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "11.5 D",
+                    "priceId": 216377,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "12 D",
+                    "priceId": 216376,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "13 D",
+                    "priceId": 216371,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "7.5 D",
+                    "priceId": 219255,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "8 D",
+                    "priceId": 219262,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "8.5 D",
+                    "priceId": 219260,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "9 D",
+                    "priceId": 219269,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "9.5 D",
+                    "priceId": 219273,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "10 D",
+                    "priceId": 219270,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "10.5 D",
+                    "priceId": 219265,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "11 D",
+                    "priceId": 219263,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "11.5 D",
+                    "priceId": 219267,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "12 D",
+                    "priceId": 219266,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "13 D",
+                    "priceId": 219258,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "7.5 D",
+                    "priceId": 739522,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "8 D",
+                    "priceId": 739661,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "8.5 D",
+                    "priceId": 739620,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "9 D",
+                    "priceId": 739507,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "9.5 D",
+                    "priceId": 739855,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "10 D",
+                    "priceId": 739838,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "10.5 D",
+                    "priceId": 739735,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "11 D",
+                    "priceId": 739697,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "11.5 D",
+                    "priceId": 739812,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "12 D",
+                    "priceId": 739771,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black leather",
+                    "gender": "male",
+                    "size": "13 D",
+                    "priceId": 739566,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "7.5 D",
+                    "priceId": 739545,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "8 D",
+                    "priceId": 739674,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "8.5 D",
+                    "priceId": 739642,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "9 D",
+                    "priceId": 739826,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "9.5 D",
+                    "priceId": 739863,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "10 D",
+                    "priceId": 739849,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "10.5 D",
+                    "priceId": 739755,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "11 D",
+                    "priceId": 739716,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "11.5 D",
+                    "priceId": 739820,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "12 D",
+                    "priceId": 739783,
+                    "misc": "1",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "brown leather",
+                    "gender": "male",
+                    "size": "13 D",
+                    "priceId": 739587,
+                    "misc": "1",
+                    "producttype": "shoes"
+                }
+            ],
+            "productId": 369444,
+            "vendorId": 1237,
+            "upc": [
+                "665016940605",
+                "665016940612",
+                "665016940629",
+                "665016940636",
+                "665016940643",
+                "665016940650",
+                "665016940667",
+                "665016940674",
+                "665016940681",
+                "665016940698",
+                "665016940704",
+                "665016940728",
+                "665016940735",
+                "665016940742",
+                "665016940759",
+                "665016940766",
+                "665016940773",
+                "665016940780",
+                "665016940797",
+                "665016940803",
+                "665016940810",
+                "665016940827",
+                "665016940605",
+                "665016940612",
+                "665016940629",
+                "665016940636",
+                "665016940643",
+                "665016940650",
+                "665016940667",
+                "665016940674",
+                "665016940681",
+                "665016940698",
+                "665016940704",
+                "665016940728",
+                "665016940735",
+                "665016940742",
+                "665016940759",
+                "665016940766",
+                "665016940773",
+                "665016940780",
+                "665016940797",
+                "665016940803",
+                "665016940810",
+                "665016940827"
+            ],
+            "updateTime": "2019-02-23 10:14:10",
+            "sourceProductId": "4503240",
+            "parentId": 18728,
+            "productTitle": "Sandro Moscoloni Men's Garda Bit Loafer, Size 8.5 D - Brown",
+            "productLongDescription": [
+                "A sleek bridle bit tops off a charming Spanish loafer hand-sewn from richly grained leather for eye-catching texture. Style Name: Sandro Moscoloni Garda Bit Loafer (Men). Style Number: 5279149. Available in stores."
+            ],
+            "productShortDescription": [
+                "A sleek bridle bit tops off a charming Spanish loafer hand-sewn from richly grained leather for eye-catching texture. Style Name: Sandro Moscoloni Garda Bit Loafer (Men). Style Number: 5279149. Available in stores."
+            ],
+            "vendor": "nordstrom",
+            "productKeywords": "Men~~Shoes~~Slip on",
+            "width": 350,
+            "spu": "5wdjiyoao",
+            "productImageLink": "https://n.nordstrommedia.com/id/0643f3ba-7fe4-41a2-b425-6d71e7bc0038.jpeg",
+            "categoryStr": "Men>Shoes~~Slip On",
+            "brand": "Sandro Moscoloni",
+            "isHot": 0,
+            "height": 537,
+            "productSale": "$107.20 - $160.00",
+            "productPriceValue": {
+                "min": 160.0,
+                "max": 160.0
+            },
+            "availability": "in-stock",
+            "productSaleValue": {
+                "min": 107.2,
+                "max": 160.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 33.0
+            },
+            "productPrice": "$160.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "sky blue",
+                    "gender": "female",
+                    "material": "80% wool/20% polyester; lining: 100% polyester",
+                    "size": "34 fr/0 us",
+                    "style": "Single Breasted",
+                    "priceId": 684055,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "sky blue",
+                    "gender": "female",
+                    "material": "80% wool/20% polyester; lining: 100% polyester",
+                    "size": "36 fr/2-4 us",
+                    "style": "Single Breasted",
+                    "priceId": 684025,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "coat"
+                },
+                {
+                    "color": "sky blue",
+                    "gender": "female",
+                    "material": "80% wool/20% polyester; lining: 100% polyester",
+                    "size": "38 fr/4-6 us",
+                    "style": "Single Breasted",
+                    "priceId": 684051,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "coat"
+                },
+                {
+                    "color": "sky blue",
+                    "gender": "female",
+                    "material": "80% wool/20% polyester; lining: 100% polyester",
+                    "size": "40 fr/8 us",
+                    "style": "Single Breasted",
+                    "priceId": 684039,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "coat"
+                },
+                {
+                    "color": "sky blue",
+                    "gender": "female",
+                    "material": "80% wool/20% polyester; lining: 100% polyester",
+                    "size": "42 fr/10 us",
+                    "style": "Single Breasted",
+                    "priceId": 684013,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "coat"
+                }
+            ],
+            "vendorId": 13867,
+            "upc": [
+                "3607171454310",
+                "3607171454327",
+                "3607171454334",
+                "3607171454341",
+                "3607171454358"
+            ],
+            "updateTime": "2019-04-16 10:18:45",
+            "sourceProductId": "3236999",
+            "parentId": 243820,
+            "productTitle": "Sandro Emilie Single-Button Coat",
+            "productLongDescription": [
+                "Sandro Emilie Single-Button Coat-Women"
+            ],
+            "productShortDescription": [
+                "Sandro Emilie Single-Button Coat"
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Sandro Emilie Single-Button Coat~Women",
+            "width": 300,
+            "spu": "wrprkcejdn",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/7/optimized/10269317_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Women",
+            "brand": "Sandro",
+            "isHot": 0,
+            "height": 375,
+            "productSale": "$448.00 - $640.00",
+            "productPriceValue": {
+                "min": 640.0,
+                "max": 640.0
+            },
+            "productSaleValue": {
+                "min": 448.0,
+                "max": 640.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 30.0
+            },
+            "availability": "in-stock",
+            "productPrice": "$640.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "9.5 D",
+                    "priceId": 183570,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "10.5 D",
+                    "priceId": 183571,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "11 D",
+                    "priceId": 183562,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "11.5 D",
+                    "priceId": 183563,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "13 D",
+                    "priceId": 183564,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "7 D",
+                    "priceId": 183565,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "7.5 D",
+                    "priceId": 183566,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "8 D",
+                    "priceId": 183567,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "8.5 D",
+                    "priceId": 183568,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "9 D",
+                    "priceId": 183569,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "7 D",
+                    "priceId": 183572,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "7.5 D",
+                    "priceId": 183573,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "8 D",
+                    "priceId": 183574,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "9 D",
+                    "priceId": 183576,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "9.5 D",
+                    "priceId": 183577,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "10.5 D",
+                    "priceId": 183578,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "12 D",
+                    "priceId": 204511,
+                    "misc": "0.68",
+                    "producttype": "shoes"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "11 D",
+                    "priceId": 722025,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "11.5 D",
+                    "priceId": 722031,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "12 D",
+                    "priceId": 2774426,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "13 D",
+                    "priceId": 722028,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "7 D",
+                    "priceId": 722030,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "7.5 D",
+                    "priceId": 722036,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "8 D",
+                    "priceId": 722033,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "8.5 D",
+                    "priceId": 722029,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "9 D",
+                    "priceId": 722035,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "9.5 D",
+                    "priceId": 722037,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "10 D",
+                    "priceId": 2774431,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "size": "10.5 D",
+                    "priceId": 1871978,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "7 D",
+                    "priceId": 722026,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "7.5 D",
+                    "priceId": 722027,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "8 D",
+                    "priceId": 722023,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "8.5 D",
+                    "priceId": 183575,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "9 D",
+                    "priceId": 722032,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "9.5 D",
+                    "priceId": 722034,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "10 D",
+                    "priceId": 2774422,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "10.5 D",
+                    "priceId": 2460218,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "11 D",
+                    "priceId": 2774429,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "11.5 D",
+                    "priceId": 183579,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "12 D",
+                    "priceId": 1849455,
+                    "misc": "0.68"
+                },
+                {
+                    "color": "tan",
+                    "gender": "male",
+                    "size": "13 D",
+                    "priceId": 2774428,
+                    "misc": "0.68"
+                }
+            ],
+            "productId": 368321,
+            "vendorId": 1237,
+            "upc": [
+                "665016923738",
+                "665016923752",
+                "665016923769",
+                "665016923776",
+                "665016923790",
+                "665016924155",
+                "665016924162",
+                "665016924179",
+                "665016924186",
+                "665016924193",
+                "665016932853",
+                "665016932860",
+                "665016932877",
+                "665016932891",
+                "665016932907",
+                "665016932921",
+                "665016932952",
+                "665016923769",
+                "665016923776",
+                "665016923783",
+                "665016923790",
+                "665016924155",
+                "665016924162",
+                "665016924179",
+                "665016924186",
+                "665016924193",
+                "665016923738",
+                "665016923745",
+                "665016923752",
+                "665016932853",
+                "665016932860",
+                "665016932877",
+                "665016932884",
+                "665016932891",
+                "665016932907",
+                "665016932914",
+                "665016932921",
+                "665016932938",
+                "665016932945",
+                "665016932952",
+                "665016932969"
+            ],
+            "updateTime": "2019-04-13 09:29:41",
+            "sourceProductId": "4271516",
+            "parentId": 17554,
+            "productTitle": "Sandro Moscoloni Men's 'Barrett' Cap Toe Oxford, Size 11.5 D - Brown",
+            "productLongDescription": [
+                "Classic Baroque embossing defines a sophisticated cap-toe oxford shaped from sumptuous burnished leather. Style Name: Sandro Moscoloni 'Barrett' Cap Toe Oxford (Men). Style Number: 5107072. Available in stores."
+            ],
+            "productShortDescription": [
+                "Classic Baroque embossing defines a sophisticated cap-toe oxford shaped from sumptuous burnished leather. Style Name: Sandro Moscoloni 'Barrett' Cap Toe Oxford (Men). Style Number: 5107072. Available in stores."
+            ],
+            "vendor": "nordstrom",
+            "productKeywords": "Men~~Shoes~~Oxfords",
+            "width": 350,
+            "spu": "nqv91y7wk",
+            "productImageLink": "https://n.nordstrommedia.com/id/18529fca-d3e6-4e3a-9419-6a47c2332a7c.jpeg",
+            "categoryStr": "Men>Shoes~~Oxfords",
+            "brand": "Sandro Moscoloni",
+            "isHot": 0,
+            "height": 537,
+            "productSale": "$86.90 - $145.00",
+            "productPriceValue": {
+                "min": 145.0,
+                "max": 145.0
+            },
+            "availability": "in-stock",
+            "productSaleValue": {
+                "min": 86.9,
+                "max": 145.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 40.07
+            },
+            "productPrice": "$145.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "grey",
+                    "gender": "female",
+                    "size": "4 US / 36 FR",
+                    "priceId": 168523,
+                    "misc": "0.75",
+                    "producttype": "bottoms"
+                },
+                {
+                    "color": "grey",
+                    "gender": "female",
+                    "size": "6 US / 38 FR",
+                    "priceId": 168524,
+                    "misc": "0.75",
+                    "producttype": "bottoms"
+                },
+                {
+                    "color": "grey",
+                    "gender": "female",
+                    "size": "8 US / 40 FR",
+                    "priceId": 168525,
+                    "misc": "0.75",
+                    "producttype": "bottoms"
+                },
+                {
+                    "color": "grey",
+                    "gender": "female",
+                    "size": "2 US / 34 FR",
+                    "priceId": 1285576,
+                    "misc": "0.75",
+                    "producttype": "bottoms"
+                },
+                {
+                    "color": "grey",
+                    "gender": "female",
+                    "size": "2 US / 34 FR",
+                    "priceId": 168526,
+                    "misc": "0.75",
+                    "producttype": "bottoms"
+                }
+            ],
+            "vendorId": 1237,
+            "upc": [
+                "3661601623905",
+                "3661601623912",
+                "3661601623929",
+                "3661601623899",
+                "3661601623899"
+            ],
+            "updateTime": "2019-01-12 10:55:41",
+            "sourceProductId": "5034390",
+            "parentId": 307436,
+            "productTitle": "maje Women's Paola Distressed Raw Hem Jeans, Size 2 US / 34 FR - Grey",
+            "productLongDescription": [
+                "Weathered and worn in the most wondrous way, these cropped jeans with a relaxed fit and ravaged hemline are just right, right now. Style Name: Maje Paola Distressed Raw Hem Jeans. Style Number: 5676391. Available in stores."
+            ],
+            "productShortDescription": [
+                "Weathered and worn in the most wondrous way, these cropped jeans with a relaxed fit and ravaged hemline are just right, right now. Style Name: Maje Paola Distressed Raw Hem Jeans. Style Number: 5676391. Available in stores."
+            ],
+            "vendor": "nordstrom",
+            "productKeywords": "Women~~Bottoms~~Pant",
+            "width": 350,
+            "spu": "9q6319o62",
+            "productImageLink": "https://n.nordstrommedia.com/id/cd9072cd-a032-4673-8d7c-22ee278ee6c3.jpeg",
+            "categoryStr": "Women>Bottoms~~Pant",
+            "brand": "maje",
+            "isHot": 0,
+            "height": 537,
+            "productSale": "$132.49 - $265.00",
+            "productPriceValue": {
+                "min": 265.0,
+                "max": 265.0
+            },
+            "productSaleValue": {
+                "min": 132.49,
+                "max": 265.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 50.0
+            },
+            "availability": "in-stock",
+            "productPrice": "$265.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "red",
+                    "gender": "female",
+                    "material": "75% cotton/17% acrylic/5% polyester/3% polyamide; lining: 98% cotton/2% elastane",
+                    "size": "34 fr/0 us",
+                    "priceId": 644176,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "red",
+                    "gender": "female",
+                    "material": "75% cotton/17% acrylic/5% polyester/3% polyamide; lining: 98% cotton/2% elastane",
+                    "size": "36 fr/2-4 us",
+                    "priceId": 644141,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "shorts"
+                },
+                {
+                    "color": "red",
+                    "gender": "female",
+                    "material": "75% cotton/17% acrylic/5% polyester/3% polyamide; lining: 98% cotton/2% elastane",
+                    "size": "38 fr/4-6 us",
+                    "priceId": 644110,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "shorts"
+                },
+                {
+                    "color": "red",
+                    "gender": "female",
+                    "material": "75% cotton/17% acrylic/5% polyester/3% polyamide; lining: 98% cotton/2% elastane",
+                    "size": "40 fr/8 us",
+                    "priceId": 644208,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "shorts"
+                }
+            ],
+            "vendorId": 13867,
+            "upc": [
+                "3661601645013",
+                "3661601645020",
+                "3661601645037",
+                "3661601645044"
+            ],
+            "updateTime": "2019-04-16 10:18:45",
+            "sourceProductId": "3237313",
+            "parentId": 236457,
+            "productTitle": "Maje Iveri Tweed Shorts",
+            "productLongDescription": [
+                "Maje Iveri Tweed Shorts-Women"
+            ],
+            "productShortDescription": [
+                "Maje Iveri Tweed Shorts"
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Maje Iveri Tweed Shorts~Women",
+            "width": 300,
+            "spu": "r8o8k1g9rx",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/4/optimized/10223924_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Women",
+            "brand": "Maje",
+            "isHot": 0,
+            "height": 375,
+            "productSale": "$157.50 - $225.00",
+            "productPriceValue": {
+                "min": 225.0,
+                "max": 225.0
+            },
+            "productSaleValue": {
+                "min": 157.5,
+                "max": 225.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 30.0
+            },
+            "availability": "in-stock",
+            "productPrice": "$225.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "material": "Lamb leather; main lining: acetate/viscose; pocket lining: cotton",
+                    "size": "medium",
+                    "style": "biker/moto,moto & biker,short length",
+                    "priceId": 340057,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "jacket"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "material": "Lamb leather; main lining: acetate/viscose; pocket lining: cotton",
+                    "size": "large",
+                    "style": "biker/moto,moto & biker,short length",
+                    "priceId": 618240,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "jacket"
+                }
+            ],
+            "vendorId": 13867,
+            "upc": [
+                "3607171308057",
+                "3607171308064"
+            ],
+            "updateTime": "2019-02-02 11:10:52",
+            "sourceProductId": "3045048",
+            "parentId": 179654,
+            "productTitle": "Sandro Trucker Leather Jacket",
+            "productLongDescription": [
+                "Sandro Trucker Leather Jacket-Men"
+            ],
+            "productShortDescription": [
+                "Sandro Trucker Leather Jacket"
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Sandro Trucker Leather Jacket~Men",
+            "width": 300,
+            "spu": "68v8y1e4l3",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/7/optimized/9937967_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Men",
+            "brand": "Sandro",
+            "isHot": 0,
+            "height": 375,
+            "productSale": "$369.60 - $1155.00",
+            "productPriceValue": {
+                "min": 1155.0,
+                "max": 1155.0
+            },
+            "productSaleValue": {
+                "min": 369.6,
+                "max": 1155.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 68.0
+            },
+            "availability": "in-stock",
+            "productPrice": "$1155.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "navy",
+                    "gender": "male",
+                    "material": "wool/polyurethane",
+                    "size": "36 eu / 26 us",
+                    "style": "dress pant",
+                    "priceId": 47599,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "pants"
+                },
+                {
+                    "color": "navy",
+                    "gender": "male",
+                    "material": "wool/polyurethane",
+                    "size": "38 eu / 28 us",
+                    "style": "dress pant",
+                    "priceId": 47598,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "pants"
+                },
+                {
+                    "color": "navy",
+                    "gender": "male",
+                    "material": "wool/polyurethane",
+                    "size": "44 eu / 34 us",
+                    "style": "dress pant",
+                    "priceId": 47594,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "navy",
+                    "gender": "male",
+                    "material": "wool/polyurethane",
+                    "size": "46 eu / 36 us",
+                    "style": "dress pant",
+                    "priceId": 47597,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "pants"
+                }
+            ],
+            "vendorId": 13867,
+            "upc": [
+                "3607171078240",
+                "3607171078257",
+                "3607171078288",
+                "3607171078295"
+            ],
+            "updateTime": "2019-04-05 10:18:37",
+            "sourceProductId": "2444515",
+            "parentId": 59489,
+            "productTitle": "Sandro Berkeley Slim Fit Dress Pants",
+            "productLongDescription": [
+                "Sandro Berkeley Slim Fit Dress Pants-Men"
+            ],
+            "productShortDescription": [
+                "Slim and streamlined, these dress pants from Sandro are a modern update for any workweek rotation."
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Sandro Berkeley Slim Fit Dress Pants~Men",
+            "width": 300,
+            "spu": "x8e8k183kg",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/8/optimized/9403938_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Men",
+            "brand": "Sandro",
+            "isHot": 0,
+            "height": 375,
+            "productSale": "$136.00 - $340.00",
+            "productPriceValue": {
+                "min": 345.0,
+                "max": 345.0
+            },
+            "productSaleValue": {
+                "min": 136.0,
+                "max": 340.0
+            },
+            "productDiscountValue": {
+                "min": 1.45,
+                "max": 60.58
+            },
+            "availability": "in-stock",
+            "productPrice": "$345.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "black",
+                    "gender": "female",
+                    "material": "polyester/viscose/elastane; lining: polyester/elastane",
+                    "size": "2/m",
+                    "style": "above the knee,fit & flare",
+                    "priceId": 175692,
+                    "age": "adult"
+                }
+            ],
+            "vendorId": 13867,
+            "upc": [
+                "3661601597435"
+            ],
+            "updateTime": "2018-11-13 11:18:58",
+            "sourceProductId": "2824218",
+            "parentId": 145532,
+            "productTitle": "Maje Rozane Bodice Overlay A-line Dress",
+            "productLongDescription": [
+                "Maje Rozane Bodice Overlay A-line Dress-Women"
+            ],
+            "productShortDescription": [
+                "Maje Rozane Bodice Overlay A-line Dress"
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Maje Rozane Bodice Overlay A-line Dress~Women",
+            "width": 300,
+            "spu": "avgv603e2y",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/6/optimized/9792056_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Women",
+            "brand": "Maje",
+            "isHot": 0,
+            "height": 375,
+            "productSale": "$188.00 - $470.00",
+            "productPriceValue": {
+                "min": 470.0,
+                "max": 470.0
+            },
+            "productSaleValue": {
+                "min": 188.0,
+                "max": 470.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 60.0
+            },
+            "availability": "in-stock",
+            "productPrice": "$470.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "ecru",
+                    "gender": "female",
+                    "size": "0",
+                    "priceId": 1861263,
+                    "misc": "0"
+                },
+                {
+                    "color": "ecru",
+                    "gender": "female",
+                    "size": "1",
+                    "priceId": 1861272,
+                    "misc": "0"
+                },
+                {
+                    "color": "ecru",
+                    "gender": "female",
+                    "size": "2",
+                    "priceId": 1861282,
+                    "misc": "0"
+                },
+                {
+                    "color": "ecru",
+                    "gender": "female",
+                    "size": "3",
+                    "priceId": 1861294,
+                    "misc": "0"
+                }
+            ],
+            "vendorId": 1237,
+            "upc": [
+                "3607171414192",
+                "3607171414208",
+                "3607171414215",
+                "3607171414222"
+            ],
+            "updateTime": "2019-04-15 09:26:41",
+            "sourceProductId": "5198487",
+            "parentId": 420928,
+            "productTitle": "sandro Women's Luce Cardigan, Size 1 - Ivory",
+            "productLongDescription": [
+                "Vivid, exquisitely embroidered trim accentuates the preppy style of a long, open-front cardi designed for stylish layering. Style Name: Sandro Luce Cardigan. Style Number: 5792597. Available in stores."
+            ],
+            "productShortDescription": [
+                "Vivid, exquisitely embroidered trim accentuates the preppy style of a long, open-front cardi designed for stylish layering. Style Name: Sandro Luce Cardigan. Style Number: 5792597. Available in stores."
+            ],
+            "vendor": "nordstrom",
+            "productKeywords": "Women~~Tops~~Sweater",
+            "width": 350,
+            "spu": "8qdj1yo4xe",
+            "productImageLink": "https://n.nordstrommedia.com/id/d1b474bb-1748-4e82-9f36-0f8f6f772242.jpeg",
+            "categoryStr": "Women>Tops~~Sweater",
+            "brand": "sandro",
+            "isHot": 0,
+            "height": 537,
+            "productSale": "$333.75 - $445.00",
+            "productPriceValue": {
+                "min": 445.0,
+                "max": 445.0
+            },
+            "productSaleValue": {
+                "min": 333.75,
+                "max": 445.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 25.0
+            },
+            "availability": "in-stock",
+            "productPrice": "$445.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "material": "merino wool",
+                    "size": "x small",
+                    "style": "turtleneck",
+                    "priceId": 748828,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "material": "merino wool",
+                    "size": "small",
+                    "style": "turtleneck",
+                    "priceId": 544882,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "material": "merino wool",
+                    "size": "medium",
+                    "style": "turtleneck",
+                    "priceId": 748833,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "material": "merino wool",
+                    "size": "large",
+                    "style": "turtleneck,turtlenecks",
+                    "priceId": 339922,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "sweater"
+                },
+                {
+                    "color": "black",
+                    "gender": "male",
+                    "material": "merino wool",
+                    "size": "x large",
+                    "style": "turtleneck",
+                    "priceId": 339923,
+                    "age": "adult",
+                    "misc": "new"
+                }
+            ],
+            "vendorId": 13867,
+            "upc": [
+                "3607171163083",
+                "3607171163090",
+                "3607171163106",
+                "3607171163113",
+                "3607171163120"
+            ],
+            "updateTime": "2019-04-12 10:13:55",
+            "sourceProductId": "2672167",
+            "parentId": 90677,
+            "productTitle": "Sandro Turtleneck Sweater",
+            "productLongDescription": [
+                "Sandro Turtleneck Sweater-Men"
+            ],
+            "productShortDescription": [
+                "Crafted from Merino wool, this classic turtleneck sweater from Sandro is a versatile way to refresh your cold weather repertoire."
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Sandro Turtleneck Sweater~Men",
+            "width": 300,
+            "spu": "pypykcaer6",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/6/optimized/9613996_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Men",
+            "brand": "Sandro",
+            "isHot": 0,
+            "height": 375,
+            "productSale": "$172.50 - $295.00",
+            "productPriceValue": {
+                "min": 345.0,
+                "max": 345.0
+            },
+            "productSaleValue": {
+                "min": 172.5,
+                "max": 295.0
+            },
+            "productDiscountValue": {
+                "min": 14.49,
+                "max": 50.0
+            },
+            "availability": "out-of-stock",
+            "productPrice": "$345.00"
+        },
+        {
+            "vendorId": 13867,
+            "updateTime": "2018-03-03 11:21:05",
+            "sourceProductId": "2672134",
+            "parentId": 132947,
+            "productTitle": "Sandro Notch Flannel Slim Fit Trousers",
+            "productLongDescription": [
+                "Sandro Notch Flannel Slim Fit Trousers-Men"
+            ],
+            "productShortDescription": [
+                "Sandro Notch Flannel Slim Fit Trousers"
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Sandro Notch Flannel Slim Fit Trousers~Men",
+            "width": 300,
+            "spu": "8vevo0d263",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/2/optimized/9753852_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Men",
+            "brand": "Sandro",
+            "isHot": 0,
+            "height": 375,
+            "productSale": "$172.50 - $345.00",
+            "productPriceValue": {
+                "min": 345.0,
+                "max": 345.0
+            },
+            "productSaleValue": {
+                "min": 172.5,
+                "max": 345.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 50.0
+            },
+            "availability": "out-of-stock",
+            "productPrice": "$345.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "red",
+                    "gender": "female",
+                    "material": "100% cotton",
+                    "size": "0/xs",
+                    "style": "graphic",
+                    "priceId": 703476,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "red",
+                    "gender": "female",
+                    "material": "100% cotton",
+                    "size": "1/s",
+                    "style": "graphic",
+                    "priceId": 696785,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "red",
+                    "gender": "female",
+                    "material": "100% cotton",
+                    "size": "2/m",
+                    "style": "graphic",
+                    "priceId": 696248,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "tees"
+                },
+                {
+                    "color": "red",
+                    "gender": "female",
+                    "material": "100% cotton",
+                    "size": "3/l",
+                    "style": "graphic",
+                    "priceId": 703482,
+                    "age": "adult",
+                    "misc": "new"
+                }
+            ],
+            "vendorId": 13867,
+            "upc": [
+                "3607171413720",
+                "3607171413737",
+                "3607171413744",
+                "3607171413751"
+            ],
+            "updateTime": "2019-04-16 10:18:45",
+            "sourceProductId": "3237166",
+            "parentId": 246036,
+            "productTitle": "Sandro Marion World Lovers Graphic Tee",
+            "productLongDescription": [
+                "Sandro Marion World Lovers Graphic Tee-Women"
+            ],
+            "productShortDescription": [
+                "Sandro Marion World Lovers Graphic Tee"
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Sandro Marion World Lovers Graphic Tee~Women",
+            "width": 300,
+            "spu": "x8e8k1g4nl",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/7/optimized/10205017_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Women",
+            "brand": "Sandro",
+            "isHot": 0,
+            "height": 375,
+            "productSale": "$87.50 - $125.00",
+            "productPriceValue": {
+                "min": 125.0,
+                "max": 125.0
+            },
+            "productSaleValue": {
+                "min": 87.5,
+                "max": 125.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 30.0
+            },
+            "availability": "in-stock",
+            "productPrice": "$125.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "multi",
+                    "gender": "female",
+                    "material": "88% cotton/7% acrylic/3% polyester/1% polyamide/1% viscose; grosgrain: 100% cotton; lining: 100% viscose",
+                    "size": "34 fr/0 us",
+                    "style": "lightweight",
+                    "priceId": 611223,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "jacket"
+                },
+                {
+                    "color": "multi",
+                    "gender": "female",
+                    "material": "88% cotton/7% acrylic/3% polyester/1% polyamide/1% viscose; grosgrain: 100% cotton; lining: 100% viscose",
+                    "size": "36 fr/2-4 us",
+                    "style": "lightweight",
+                    "priceId": 611141,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "jacket"
+                },
+                {
+                    "color": "multi",
+                    "gender": "female",
+                    "material": "88% cotton/7% acrylic/3% polyester/1% polyamide/1% viscose; grosgrain: 100% cotton; lining: 100% viscose",
+                    "size": "38 fr/4-6 us",
+                    "style": "lightweight",
+                    "priceId": 611022,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "jacket"
+                },
+                {
+                    "color": "multi",
+                    "gender": "female",
+                    "material": "88% cotton/7% acrylic/3% polyester/1% polyamide/1% viscose; grosgrain: 100% cotton; lining: 100% viscose",
+                    "size": "40 fr/8 us",
+                    "style": "lightweight",
+                    "priceId": 611027,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "jacket"
+                },
+                {
+                    "color": "multi",
+                    "gender": "female",
+                    "material": "88% cotton/7% acrylic/3% polyester/1% polyamide/1% viscose; grosgrain: 100% cotton; lining: 100% viscose",
+                    "size": "42 fr/10 us",
+                    "style": "lightweight",
+                    "priceId": 611015,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "jacket"
+                }
+            ],
+            "vendorId": 13867,
+            "upc": [
+                "3607171415151",
+                "3607171415168",
+                "3607171415175",
+                "3607171415182",
+                "3607171424825"
+            ],
+            "updateTime": "2019-04-17 10:13:05",
+            "sourceProductId": "3215553",
+            "parentId": 230631,
+            "productTitle": "Sandro Idaline Tweed Check Jacket",
+            "productLongDescription": [
+                "Sandro Idaline Tweed Check Jacket-Women"
+            ],
+            "productShortDescription": [
+                "Sandro Idaline Tweed Check Jacket"
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Sandro Idaline Tweed Check Jacket~Women",
+            "width": 300,
+            "spu": "x8e8k1jj9d",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/6/optimized/10173576_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Women",
+            "brand": "Sandro",
+            "isHot": 0,
+            "height": 375,
+            "productSale": "$381.50 - $545.00",
+            "productPriceValue": {
+                "min": 545.0,
+                "max": 545.0
+            },
+            "productSaleValue": {
+                "min": 381.5,
+                "max": 545.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 30.0
+            },
+            "availability": "in-stock",
+            "productPrice": "$545.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "blue",
+                    "gender": "female",
+                    "material": "viscose/polyamide/elastane",
+                    "size": "1/s",
+                    "style": "a-line,midi",
+                    "priceId": 68602,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "skirt"
+                }
+            ],
+            "vendorId": 13867,
+            "upc": [
+                "3607171280155"
+            ],
+            "updateTime": "2018-11-16 11:24:29",
+            "sourceProductId": "2823851",
+            "parentId": 147806,
+            "productTitle": "Sandro Ricarda Banded Midi Skirt",
+            "productLongDescription": [
+                "Sandro Ricarda Banded Midi Skirt-Women"
+            ],
+            "productShortDescription": [
+                "Sandro Ricarda Banded Midi Skirt"
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Sandro Ricarda Banded Midi Skirt~Women",
+            "width": 300,
+            "spu": "4y5ypcpv99",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/5/optimized/9816365_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Women",
+            "brand": "Sandro",
+            "isHot": 0,
+            "height": 375,
+            "productSale": "$140.00 - $280.00",
+            "productPriceValue": {
+                "min": 280.0,
+                "max": 280.0
+            },
+            "productSaleValue": {
+                "min": 140.0,
+                "max": 280.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 50.0
+            },
+            "availability": "in-stock",
+            "productPrice": "$280.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "burgundy",
+                    "gender": "male",
+                    "material": "wool/acrylic",
+                    "size": "medium",
+                    "style": "crewneck,pullovers",
+                    "priceId": 603034,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "burgundy",
+                    "gender": "male",
+                    "material": "wool/acrylic",
+                    "size": "x large",
+                    "style": "crewneck,pullovers",
+                    "priceId": 603031,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "camel",
+                    "gender": "male",
+                    "material": "wool/acrylic",
+                    "size": "small",
+                    "style": "crewneck,pullovers",
+                    "priceId": 603029,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "camel",
+                    "gender": "male",
+                    "material": "wool/acrylic",
+                    "size": "medium",
+                    "style": "crewneck,pullovers",
+                    "priceId": 603032,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "camel",
+                    "gender": "male",
+                    "material": "wool/acrylic",
+                    "size": "large",
+                    "style": "crewneck,pullovers",
+                    "priceId": 603033,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "camel",
+                    "gender": "male",
+                    "material": "wool/acrylic",
+                    "size": "x large",
+                    "style": "crewneck,pullovers",
+                    "priceId": 603030,
+                    "age": "adult",
+                    "misc": "new"
+                }
+            ],
+            "vendorId": 13867,
+            "upc": [
+                "3607171324590",
+                "3607171324613",
+                "3607171336418",
+                "3607171336425",
+                "3607171336432",
+                "3607171336449"
+            ],
+            "updateTime": "2019-04-08 10:13:32",
+            "sourceProductId": "3241398",
+            "parentId": 229436,
+            "productTitle": "Sandro Flash Sweater",
+            "productLongDescription": [
+                "Sandro Flash Sweater-Men"
+            ],
+            "productShortDescription": [
+                "Add a little texture to this season's layers with this versatile crew neck sweater from Sandro."
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Sandro Flash Sweater~Men",
+            "width": 300,
+            "spu": "v8r8k1p6wl",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/4/optimized/9937998_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Men",
+            "brand": "Sandro",
+            "isHot": 0,
+            "height": 375,
+            "productSale": "$147.50 - $295.00",
+            "productPriceValue": {
+                "min": 345.0,
+                "max": 345.0
+            },
+            "productSaleValue": {
+                "min": 147.5,
+                "max": 295.0
+            },
+            "productDiscountValue": {
+                "min": 14.49,
+                "max": 57.25
+            },
+            "availability": "in-stock",
+            "productPrice": "$345.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "green",
+                    "gender": "female",
+                    "material": "silk; lining: polyester",
+                    "size": "36 fr/2-4 us",
+                    "style": "a-line,mini",
+                    "priceId": 184504,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "dress"
+                }
+            ],
+            "vendorId": 13867,
+            "upc": [
+                "3607171279791"
+            ],
+            "updateTime": "2018-11-13 11:18:58",
+            "sourceProductId": "2838306",
+            "parentId": 153248,
+            "productTitle": "Sandro Rikka Floral Print Silk Dress",
+            "productLongDescription": [
+                "Sandro Rikka Floral Print Silk Dress-Women"
+            ],
+            "productShortDescription": [
+                "Sandro Rikka Floral Print Silk Dress"
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Sandro Rikka Floral Print Silk Dress~Women",
+            "width": 300,
+            "spu": "8vevo03vyk",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/6/optimized/9837096_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Women",
+            "brand": "Sandro",
+            "isHot": 0,
+            "height": 375,
+            "productSale": "$235.00 - $470.00",
+            "productPriceValue": {
+                "min": 470.0,
+                "max": 470.0
+            },
+            "productSaleValue": {
+                "min": 235.0,
+                "max": 470.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 50.0
+            },
+            "availability": "in-stock",
+            "productPrice": "$470.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "mustard",
+                    "gender": "male",
+                    "material": "wool/acrylic",
+                    "size": "x small",
+                    "style": "crewneck",
+                    "priceId": 616299,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "sweater"
+                },
+                {
+                    "color": "mustard",
+                    "gender": "male",
+                    "material": "wool/acrylic",
+                    "size": "small",
+                    "style": "crewneck",
+                    "priceId": 340177,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "mustard",
+                    "gender": "male",
+                    "material": "wool/acrylic",
+                    "size": "medium",
+                    "style": "crewneck",
+                    "priceId": 618250,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "mustard",
+                    "gender": "male",
+                    "material": "wool/acrylic",
+                    "size": "large",
+                    "style": "crewneck,pullovers",
+                    "priceId": 340176,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "sweater"
+                }
+            ],
+            "vendorId": 13867,
+            "upc": [
+                "3607171365494",
+                "3607171365500",
+                "3607171365517",
+                "3607171365524"
+            ],
+            "updateTime": "2019-04-15 10:18:37",
+            "sourceProductId": "3056377",
+            "parentId": 179683,
+            "productTitle": "Sandro Electric Crewneck Sweater - 100% Exclusive",
+            "productLongDescription": [
+                "Sandro Electric Crewneck Sweater - 100% Exclusive-Men"
+            ],
+            "productShortDescription": [
+                "Sandro Electric Crewneck Sweater - 100% Exclusive"
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Sandro Electric Crewneck Sweater - 100% Exclusive~Men",
+            "width": 300,
+            "spu": "68v8y1e46o",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/3/optimized/9954843_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Men",
+            "brand": "Sandro",
+            "isHot": 0,
+            "height": 375,
+            "productSale": "$118.00 - $295.00",
+            "productPriceValue": {
+                "min": 295.0,
+                "max": 295.0
+            },
+            "productSaleValue": {
+                "min": 118.0,
+                "max": 295.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 60.0
+            },
+            "availability": "in-stock",
+            "productPrice": "$295.00"
+        },
+        {
+            "skus": [
+                {
+                    "color": "red",
+                    "gender": "female",
+                    "material": "75% cotton/17% acrylic/5% polyester/3% polyamide; lining: 100% polyester",
+                    "size": "36 fr/2-4 us",
+                    "style": "lightweight",
+                    "priceId": 644076,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "red",
+                    "gender": "female",
+                    "material": "75% cotton/17% acrylic/5% polyester/3% polyamide; lining: 100% polyester",
+                    "size": "38 fr/4-6 us",
+                    "style": "lightweight",
+                    "priceId": 644019,
+                    "age": "adult",
+                    "misc": "new"
+                },
+                {
+                    "color": "red",
+                    "gender": "female",
+                    "material": "75% cotton/17% acrylic/5% polyester/3% polyamide; lining: 100% polyester",
+                    "size": "40 fr/8 us",
+                    "style": "lightweight",
+                    "priceId": 644032,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "jacket"
+                },
+                {
+                    "color": "red",
+                    "gender": "female",
+                    "material": "75% cotton/17% acrylic/5% polyester/3% polyamide; lining: 100% polyester",
+                    "size": "42 fr/10 us",
+                    "style": "lightweight",
+                    "priceId": 644052,
+                    "age": "adult",
+                    "misc": "new",
+                    "producttype": "jacket"
+                }
+            ],
+            "vendorId": 13867,
+            "upc": [
+                "3661601644931",
+                "3661601644948",
+                "3661601644955",
+                "3661601644962"
+            ],
+            "updateTime": "2019-04-19 10:15:13",
+            "sourceProductId": "3237524",
+            "parentId": 236436,
+            "productTitle": "Maje Vivor Tweed Jacket",
+            "productLongDescription": [
+                "Maje Vivor Tweed Jacket-Women"
+            ],
+            "productShortDescription": [
+                "Maje Vivor Tweed Jacket"
+            ],
+            "vendor": "bloomingdales",
+            "productKeywords": "Maje Vivor Tweed Jacket~Women",
+            "width": 300,
+            "spu": "x8e8k1gpal",
+            "productImageLink": "https://images.bloomingdalesassets.com/is/image/BLM/products/5/optimized/10224395_fpx.tif?wid=300&qlt=100,0&layer=comp&op_sharpen=0&resMode=bilin&op_usm=0.7,1.0,0.5,0&fmt=jpeg&4msn=.jpg",
+            "categoryStr": "Women",
+            "brand": "Maje",
+            "isHot": 0,
+            "height": 375,
+            "productSale": "$311.50 - $445.00",
+            "productPriceValue": {
+                "min": 445.0,
+                "max": 445.0
+            },
+            "productSaleValue": {
+                "min": 311.5,
+                "max": 445.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 30.0
+            },
+            "availability": "in-stock",
+            "productPrice": "$445.00"
+        }
+    ],
+    "num": 21,
+    "lifeCycle": 1
+}

@@ -1,0 +1,44 @@
+{
+        "_index" : "linkshare",
+        "_type" : "product",
+        "_id" : "3184_2881361_06012018120522",
+        "_score" : 12.557158,
+        "_source" : {
+          "id" : "3184_2881361_06012018120522",
+          "productTitle" : "Tommy Hilfiger Men's Relaxed-Fit Jeans, Created for Macy's",
+          "productUrl" : "http://click.linksynergy.com/link?id=ryHxRa8tGxs&offerid=486109.719220107740&type=15&murl=https%3A%2F%2Fwww.macys.com%2Fshop%2Fproduct%2Ftommy-hilfiger-mens-relaxed-fit-jeans-created-for-macys%3FID%3D2881361%26PartnerID%3DLINKSHARE%26cm_mmc%3DLINKSHARE-_-5-_-5-_-MP55",
+          "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/0/optimized/3841931_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+          "productShortDescription" : "When you sport these relaxed-fit jeans from Tommy Hilfiger, you know you're maximizing your comfort and style.",
+          "productLongDescription" : "Tommy Hilfiger Men's Relaxed-Fit Jeans, Created for Macy's Men Men's Clothing - Jeans",
+          "productKeywords" : "Tommy Hilfiger Men's Relaxed-Fit Jeans, Created for Macy's Men Men's Clothing - Jeans",
+          "width" : 300,
+          "height" : 367,
+          "categoryStr" : "Men>Men's Clothing - Jeans",
+          "availability" : "out-of-stock",
+          "brand" : "Tommy Hilfiger",
+          "createOn" : 1527854722000,
+          "updateTime" : 1528258535883,
+          "productSale" : "$39.99",
+          "productPrice" : "$59.50",
+          "sourceProductId" : "2881361",
+          "vendorId" : 3184,
+          "lastChecked" : null,
+          "sourceType" : 1,
+          "skus" : [
+            {
+              "sale" : 39.99,
+              "size" : "42x32",
+              "material" : "100% cotton",
+              "color" : "Hamilton",
+              "gender" : "Men",
+              "skuNumber" : "719220107740",
+              "upc" : "719220107740",
+              "style" : "Denim",
+              "currency" : "USD",
+              "productType" : "JEANS",
+              "age" : "Adult, Teen",
+              "misc" : "New"
+            }
+          ]
+        }
+      }

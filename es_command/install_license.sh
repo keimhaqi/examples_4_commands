@@ -1,0 +1,1 @@
+curl -XPUT -u elastic 'http://192.168.1.105:9201/_xpack/license?acknowledge=true' -H "Content-Type: application/json" -d @/home/zhenping/github/examples_4_commands/es_command/jiang-zhenping-69b68010-f81e-40b9-bc1d-3ca6dc72fe86-v5.json

@@ -268,9 +268,15 @@ curl -k -H 'Content-Type: application/json' -d '
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "fields":[{"name": "productId", "values":[11010404]}, {"name": "vendorId", "values":[3]}]
+  "fields":[{"name": "productId", "values":[11010404]}, {"name": "vendorId", "values":[41098]}]
 }
-' http://96.90.248.211:9124/api/v3/metrics/product
+' http://localhost:9124/api/v3/metrics/product
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+  "fields":[{"name": "spu", "values":["2g5x7cn88ww"]}]
+}
+' http://localhost:9124/api/v3/metrics/product
 
 curl -k -H 'Content-Type: application/json' -d '
 {

@@ -4,6 +4,7 @@ from elasticsearch import Elasticsearch
 import datetime
 import argparse
 import MySQLdb
+from MySQLdb import escape_string
 from DBUtils.PooledDB import PooledDB
 import logging
 import sys

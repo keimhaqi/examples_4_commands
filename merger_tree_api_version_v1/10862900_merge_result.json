@@ -1,0 +1,722 @@
+{
+    "productInfo": {
+        "1237": [
+            {
+                "productId": null,
+                "categoryId": -1,
+                "parentId": 108845,
+                "publicAttrs": null,
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 1580347,
+                        "sourceProductId": "3024784",
+                        "upc": "612025885267",
+                        "attrs": null,
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            },
+            {
+                "productId": null,
+                "categoryId": -1,
+                "parentId": 108845,
+                "publicAttrs": null,
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 829776,
+                        "sourceProductId": "3024784",
+                        "upc": "612025885304",
+                        "attrs": null,
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            },
+            {
+                "productId": null,
+                "categoryId": -1,
+                "parentId": 108845,
+                "publicAttrs": null,
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 2288806,
+                        "sourceProductId": "3024784",
+                        "upc": "612025885557",
+                        "attrs": null,
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            },
+            {
+                "productId": null,
+                "categoryId": -1,
+                "parentId": 108845,
+                "publicAttrs": null,
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 829508,
+                        "sourceProductId": "3024784",
+                        "upc": "612025885564",
+                        "attrs": null,
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            },
+            {
+                "productId": null,
+                "categoryId": -1,
+                "parentId": 108845,
+                "publicAttrs": null,
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 400622,
+                        "sourceProductId": "3024784",
+                        "upc": "612025885533",
+                        "attrs": null,
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            },
+            {
+                "productId": null,
+                "categoryId": -1,
+                "parentId": 108845,
+                "publicAttrs": null,
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 2255299,
+                        "sourceProductId": "3024784",
+                        "upc": "808618965526",
+                        "attrs": null,
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            },
+            {
+                "productId": null,
+                "categoryId": -1,
+                "parentId": 108845,
+                "publicAttrs": [
+                    {
+                        "color": "black suede",
+                        "id": "39649"
+                    }
+                ],
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 427488,
+                        "sourceProductId": "3024784",
+                        "upc": "808618963607",
+                        "attrs": {
+                            "size": "6",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 1436188,
+                        "sourceProductId": "3024784",
+                        "upc": "808618963706",
+                        "attrs": {
+                            "size": "9.5",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 2179852,
+                        "sourceProductId": "3024784",
+                        "upc": "808618963713",
+                        "attrs": {
+                            "size": "10",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 1190284,
+                        "sourceProductId": "3024784",
+                        "upc": "808618963720",
+                        "attrs": {
+                            "size": "10.5",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 1929065,
+                        "sourceProductId": "3024784",
+                        "upc": "808618963737",
+                        "attrs": {
+                            "size": "11",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 1453811,
+                        "sourceProductId": "3024784",
+                        "upc": "808618963690",
+                        "attrs": {
+                            "size": "9",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 400621,
+                        "sourceProductId": "3024784",
+                        "upc": "808618963614",
+                        "attrs": {
+                            "size": "6.5",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 860816,
+                        "sourceProductId": "3024784",
+                        "upc": "808618963676",
+                        "attrs": {
+                            "size": "8",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 1119524,
+                        "sourceProductId": "3024784",
+                        "upc": "808618963683",
+                        "attrs": {
+                            "size": "8.5",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 1558202,
+                        "sourceProductId": "3024784",
+                        "upc": "808618963607",
+                        "attrs": {
+                            "size": "6",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 1602754,
+                        "sourceProductId": "3024784",
+                        "upc": "808618963614",
+                        "attrs": {
+                            "size": "6.5",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 2270833,
+                        "sourceProductId": "3024784",
+                        "upc": "808618963652",
+                        "attrs": {
+                            "size": "7",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            },
+            {
+                "productId": null,
+                "categoryId": -1,
+                "parentId": 108845,
+                "publicAttrs": [
+                    {
+                        "color": "black leather"
+                    }
+                ],
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 1318005,
+                        "sourceProductId": "3024784",
+                        "upc": "808618955947",
+                        "attrs": {
+                            "size": "5.5",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 828170,
+                        "sourceProductId": "3024784",
+                        "upc": "808618955930",
+                        "attrs": {
+                            "size": "5",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 400439,
+                        "sourceProductId": "3024784",
+                        "upc": "808618956128",
+                        "attrs": {
+                            "size": "10.5",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 427489,
+                        "sourceProductId": "3024784",
+                        "upc": "808618955930",
+                        "attrs": {
+                            "size": "5",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 2179354,
+                        "sourceProductId": "3024784",
+                        "upc": "808618956104",
+                        "attrs": {
+                            "size": "9.5",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 1215176,
+                        "sourceProductId": "3024784",
+                        "upc": "808618956128",
+                        "attrs": {
+                            "size": "10.5",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 1182784,
+                        "sourceProductId": "3024784",
+                        "upc": "808618956067",
+                        "attrs": {
+                            "size": "7.5",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 833793,
+                        "sourceProductId": "3024784",
+                        "upc": "808618956074",
+                        "attrs": {
+                            "size": "8",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 1298527,
+                        "sourceProductId": "3024784",
+                        "upc": "808618956081",
+                        "attrs": {
+                            "size": "8.5",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            },
+            {
+                "productId": null,
+                "categoryId": -1,
+                "parentId": 108845,
+                "publicAttrs": null,
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 1215175,
+                        "sourceProductId": "3024784",
+                        "upc": "612025885458",
+                        "attrs": null,
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            },
+            {
+                "productId": null,
+                "categoryId": -1,
+                "parentId": 108845,
+                "publicAttrs": null,
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 1807681,
+                        "sourceProductId": "3024784",
+                        "upc": "808618955961",
+                        "attrs": null,
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            }
+        ],
+        "25003": [
+            {
+                "productId": null,
+                "categoryId": -1,
+                "parentId": 71181,
+                "publicAttrs": null,
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 381806,
+                        "sourceProductId": "prod179930392",
+                        "upc": "827928307420",
+                        "attrs": null,
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            },
+            {
+                "productId": null,
+                "categoryId": -1,
+                "parentId": 71181,
+                "publicAttrs": null,
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 381803,
+                        "sourceProductId": "prod179930392",
+                        "upc": "808618545223",
+                        "attrs": null,
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            },
+            {
+                "productId": null,
+                "categoryId": -1,
+                "parentId": 71181,
+                "publicAttrs": [
+                    {
+                        "color": "black suede"
+                    }
+                ],
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 515408,
+                        "sourceProductId": "prod179930392",
+                        "upc": "808618963706",
+                        "attrs": {
+                            "size": "9.5",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 508522,
+                        "sourceProductId": "prod179930392",
+                        "upc": "808618963652",
+                        "attrs": {
+                            "size": "7",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 371412,
+                        "sourceProductId": "prod179930392",
+                        "upc": "808618963720",
+                        "attrs": {
+                            "size": "10.5",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 224867,
+                        "sourceProductId": "prod179930392",
+                        "upc": "808618963690",
+                        "attrs": {
+                            "size": "9",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            }
+        ],
+        "13867": [
+            {
+                "productId": null,
+                "categoryId": 3,
+                "parentId": 61262,
+                "publicAttrs": [
+                    {
+                        "color": "black suede",
+                        "id": "39649"
+                    }
+                ],
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 323473,
+                        "sourceProductId": "731346",
+                        "upc": "808618963683",
+                        "attrs": {
+                            "size": "8.5",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 249250,
+                        "sourceProductId": "731346",
+                        "upc": "808618963690",
+                        "attrs": {
+                            "size": "9",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 249247,
+                        "sourceProductId": "731346",
+                        "upc": "808618963737",
+                        "attrs": {
+                            "size": "11",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 249248,
+                        "sourceProductId": "731346",
+                        "upc": "808618963706",
+                        "attrs": {
+                            "size": "9.5",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 529012,
+                        "sourceProductId": "731346",
+                        "upc": "808618963607",
+                        "attrs": {
+                            "size": "6",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 249246,
+                        "sourceProductId": "731346",
+                        "upc": "808618963713",
+                        "attrs": {
+                            "size": "10",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 521095,
+                        "sourceProductId": "731346",
+                        "upc": "808618963614",
+                        "attrs": {
+                            "size": "6.5",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 529013,
+                        "sourceProductId": "731346",
+                        "upc": "808618963652",
+                        "attrs": {
+                            "size": "7",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 529011,
+                        "sourceProductId": "731346",
+                        "upc": "808618963003",
+                        "attrs": {
+                            "size": "5.5",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 249249,
+                        "sourceProductId": "731346",
+                        "upc": "808618963720",
+                        "attrs": {
+                            "size": "10.5",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 323474,
+                        "sourceProductId": "731346",
+                        "upc": "808618963676",
+                        "attrs": {
+                            "size": "8",
+                            "color": "black suede"
+                        },
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            },
+            {
+                "productId": 10871138,
+                "categoryId": 3,
+                "parentId": 61262,
+                "publicAttrs": [
+                    {
+                        "color": "black leather",
+                        "id": "36934"
+                    }
+                ],
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 177853,
+                        "sourceProductId": "731346",
+                        "upc": "808618955947",
+                        "attrs": {
+                            "size": "5.5",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 234641,
+                        "sourceProductId": "731346",
+                        "upc": "808618956128",
+                        "attrs": {
+                            "size": "10.5",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 155245,
+                        "sourceProductId": "731346",
+                        "upc": "808618955930",
+                        "attrs": {
+                            "size": "5",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 234640,
+                        "sourceProductId": "731346",
+                        "upc": "808618956104",
+                        "attrs": {
+                            "size": "9.5",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 235694,
+                        "sourceProductId": "731346",
+                        "upc": "808618956067",
+                        "attrs": {
+                            "size": "7.5",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 235471,
+                        "sourceProductId": "731346",
+                        "upc": "808618956074",
+                        "attrs": {
+                            "size": "8",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    },
+                    {
+                        "productId": null,
+                        "innerSkuId": 234639,
+                        "sourceProductId": "731346",
+                        "upc": "808618956081",
+                        "attrs": {
+                            "size": "8.5",
+                            "color": "black leather"
+                        },
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            }
+        ]
+    },
+    "versionNumber": "40a37b7e06c5aec75602bfa1338e1ca5"
+}

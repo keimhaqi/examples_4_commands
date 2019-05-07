@@ -1,0 +1,8 @@
+select product_id, source_product_id from product where product_id in (SELECT distinct(product_id) FROM `article_product` WHERE product_id in (select product_id from product where source_id = 13816))
+
+被添加到锦囊的商品中属于saks的有286个;
+
+
+
+select product_id, source_product_id from product where product_id in (SELECT distinct(product_id) FROM `user_collection` WHERE product_id in (select product_id from product where source_id = 13816))
+被用户收藏的商品中属于saks的有99个;

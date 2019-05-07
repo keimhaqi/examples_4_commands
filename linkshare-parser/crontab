@@ -1,6 +1,8 @@
 0 */3 * * * python /home/zhenping/rakuten/ftpclient_1.1.py
 0 0 */1 * * python /home/zhenping/rakuten/ftpclient_1.1.py
 
+0 */4 * * * python /home/zhenping/rakuten/parser_status_statistic.py
+
 我重新统计了linkshare-parser从昨天到现在写入3、4级表的商品数量，看到saks、saksoff、nordstrom没有新商品被写入到3、4级表，walmart有41098、
 
 

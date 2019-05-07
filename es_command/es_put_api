@@ -1,83 +1,1062 @@
-curl -X PUT "192.168.1.106:9200/jinbagsearch/items/9652035" -H 'Content-Type: application/json' -d'
+curl -X PUT "192.168.1.104:9201/bloomingdales_dynamic/items/bloomingdales.240001" -H 'Content-Type: application/json' -d'
 {
-    
-    "productTitle" : "Nike Womens Free Run 2017 Running Sneakers from FinishLine",
-    "attribute" : [ ],
-    "height" : 367,
-    "morePictures" : 0,
-    "availability" : "out_of_stock",
-    "productDescription" : [ ],
-    "width" : 300,
-    "vendors" : [
-      "Macys"
-    ],
-    "productDetail" : [
-      "Nike Womens Free Run 2017 Running Sneakers from Finish Line Shoes SHOES"
-    ],
-    "updateESTime" : 1526498121740,
-    "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/2/optimized/8478412_fpx.tif?wid=300&fmt=jpeg&qlt=100",
-    "channel" : 1,
-    "productId" : 9652035,
-    "brand" : "dyson",
-    "lastCheckedTime" : 1526498120000,
-    "discount" : {
-      "max" : 0.0,
-      "discountStr" : "$0.0",
-      "min" : 0.0
+    "vendorId" : 13867,
+    "updateTime" : "2019-02-27 10:36:07",
+    "productPrice" : "$550.00",
+    "productDiscountValue" : {
+      "max" : 40.0,
+      "min" : 40.0
     },
-    "hasSmartPrice" : 0,
-    "categories" : [
-      "shoes",
-      "shopping"
-    ],
-    "onSale" : "0",
-    "categoryTypeId" : 3,
-    "language" : "en",
-    "sourceId" : [
-      3184
-    ],
-    "promo" : [
-      "promo_v"
-    ],
-    "id" : 9652034,
-    "brandName" : "Nike",
-    "missedTime" : 1525953336177,
-    "topProduct" : true,
-    "categoryTypePriority" : 0,
-    "sourceProductId" : "4565575",
-    "deleted" : 0,
-    "brandId" : 2943,
-    "topProductPromoInfoVendor" : {
-      "productId" : 9652034,
-      "missedTime" : 1525953336177,
-      "shareTitleEn" : "$50.00 $99.99 Nike Womens Free Run 2017 Running Sneakers from Finish Line ",
-      "endDate" : 1515905999000,
-      "vendorId" : 3184,
-      "titleCh" : "Macys梅西百货现有Nike 2017款女款跑鞋仅售$50.00 $99.99",
-      "confirmed" : 1,
-      "imgUrl" : "1514446030_9652034card_img.jpg",
-      "cardHeight" : 290,
-      "descEn" : "Discount price shows in cart. Free shipping with order over $49. ",
-      "shareDescEn" : "Discount price shows in cart. Free shipping with order over $49. ",
-      "titleEn" : "Macys - $50.00 $99.99 Nike Womens Free Run 2017 Running Sneakers from Finish Line ",
-      "price" : "$50.00",
-      "confirmedTime" : 1514446030000,
-      "vendorLogoUrl" : "macys.png",
-      "shareTitleCh" : "Nike 2017款女款跑鞋仅售$50.00 $99.99",
-      "cardWidth" : 290,
-      "taskId" : 343744,
-      "startDate" : 1514437200000,
-      "descCh" : "加入购物车后会看到折扣价格。美国境内订单满$49免运费。",
-      "shareDescCh" : "加入购物车后会看到折扣价格。美国境内订单满$49免运费。"
-    }
-  
-}
+    "isHot" : 1,
+    "spu" : "krqrkc9vjo",
+    "productSaleValue" : {
+      "max" : 330.0,
+      "min" : 330.0
+    },
+    "productPriceValue" : {
+      "max" : 550.0,
+      "min" : 550.0
+    },
+    "productSale" : "$330.00",
+    "sourceProductId" : "3202877",
+    "parentId" : 240001,
+    "availability" : "in-stock",
+    "productId" : 11005892
+  }
 '
 
 
 
-
-curl -X PUT "192.168.1.106:9201/twitter/tweet/1" -H Content-Type: application/json -d
+curl -XGET '192.168.1.192:9200/macys_static/items/macys.204625?pretty'
 {
-    "prd" : [1]
+  "_index" : "search_unpopular_macys_static_b",
+  "_type" : "items",
+  "_id" : "macys.204625",
+  "_version" : 1,
+  "found" : true,
+  "_source" : {
+    "productTitle" : "Guess Flutter-Sleeve Love Logo T-Shirt, Big Girls (7-16), a Macy's Exclusive Style",
+    "updateTime" : "2018-03-04 12:45:23",
+    "vendor" : "macys",
+    "categoryStr" : "Other>Kids' & Baby Clothing - Shirts & Tees",
+    "vendorId" : 3184,
+    "productLongDescription" : [
+      "Guess Flutter-Sleeve Love Logo T-Shirt, Big Girls, a Macy's Exclusive Style Other Kids' & Baby Clothing - Shirts & Tees"
+    ],
+    "brand" : "Guess",
+    "isHot" : 0,
+    "spu" : "qn2du2oed",
+    "productShortDescription" : [
+      "Our comfy hip-length Guess logo T-shirt features fun double-layer flutter sleeves and a glittery double graphic-print at the front."
+    ],
+    "height" : 367,
+    "width" : 300,
+    "sourceProductId" : "5250377",
+    "producttype" : "T-SHIRT",
+    "parentId" : 204625,
+    "productImageLink" : "https://slimages.macysassets.com/is/image/MCY/products/8/optimized/9096103_fpx.tif?wid=300&fmt=jpeg&qlt=100",
+    "productKeywords" : "Guess Flutter-Sleeve Love Logo T-Shirt, Big Girls, a Macy's Exclusive Style Other Kids' & Baby Clothing - Shirts & Tees",
+    "productId" : 6829356
+  }
+}
+
+
+
+
+
+curl -XGET '192.168.1.192:9200/bloomingdales_dynamic/items/bloomingdales.240001?pretty'
+{
+  "_index" : "search_unpopular_bloomingdales_dynamic_b",
+  "_type" : "items",
+  "_id" : "bloomingdales.240001",
+  "_version" : 1,
+  "found" : true,
+  "_source" : {
+    "vendorId" : 13867,
+    "updateTime" : "2019-02-27 10:36:07",
+    "productPrice" : "$550.00",
+    "productDiscountValue" : {
+      "max" : 40.0,
+      "min" : 40.0
+    },
+    "isHot" : 1,
+    "spu" : "krqrkc9vjo",
+    "productSaleValue" : {
+      "max" : 330.0,
+      "min" : 330.0
+    },
+    "productPriceValue" : {
+      "max" : 550.0,
+      "min" : 550.0
+    },
+    "productSale" : "$330.00",
+    "sourceProductId" : "3202877",
+    "parentId" : 240001,
+    "availability" : "in-stock",
+    "productId" : 11005892
+  }
+}
+
+
+
+
+
+
+curl -X PUT "192.168.1.105:9201/nordstrom_static/items/nordstrom.509250" -H Content-Type: application/json -d'
+{
+    "productTitle" : "Linea Paolo Womens Edyta Wedge Sandal, Size 6 M - Black",
+    "updateTime" : "2019-04-27 21:05:25",
+    "vendor" : "nordstrom",
+    "categoryStr" : "Women>Shoes~~Sandals/Slides",
+    "vendorId" : 1237,
+    "productLongDescription" : [
+      "Crisscrossed straps and a sporty sole style a chic warm-weather sandal set on a steep covered wedge. Style Name: Linea Paolo Edyta Wedge Sandal (Women). Style Number: 5795515. Available in stores."
+    ],
+    "brand" : "Linea Paolo",
+    "isHot" : 0,
+    "spu" : "3kejh9xope",
+    "productShortDescription" : [
+      "Crisscrossed straps and a sporty sole style a chic warm-weather sandal set on a steep covered wedge. Style Name: Linea Paolo Edyta Wedge Sandal (Women). Style Number: 5795515. Available in stores."
+    ],
+    "height" : 537,
+    "width" : 350,
+    "sourceProductId" : "5203001",
+    "skus" : [
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "priceId" : 2938684,
+        "misc" : "0",
+        "size" : "4 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "priceId" : 2938687,
+        "misc" : "0.74",
+        "size" : "4.5 M"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938693,
+        "producttype" : "shoes",
+        "size" : "5 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938699,
+        "producttype" : "shoes",
+        "size" : "5.5 M"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938633,
+        "producttype" : "shoes",
+        "size" : "6 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938636,
+        "producttype" : "shoes",
+        "size" : "6.5 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938639,
+        "producttype" : "shoes",
+        "size" : "7 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938643,
+        "producttype" : "shoes",
+        "size" : "7.5 M"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938651,
+        "producttype" : "shoes",
+        "size" : "8 M"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938657,
+        "producttype" : "shoes",
+        "size" : "8.5 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938668,
+        "producttype" : "shoes",
+        "size" : "9 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938675,
+        "producttype" : "shoes",
+        "size" : "9.5 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938769,
+        "producttype" : "shoes",
+        "size" : "10 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938773,
+        "producttype" : "shoes",
+        "size" : "10.5 M"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938780,
+        "producttype" : "shoes",
+        "size" : "11 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938786,
+        "producttype" : "shoes",
+        "size" : "12 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938790,
+        "producttype" : "shoes",
+        "size" : "6 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938801,
+        "producttype" : "shoes",
+        "size" : "6.5 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938804,
+        "producttype" : "shoes",
+        "size" : "7 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938820,
+        "producttype" : "shoes",
+        "size" : "7.5 M"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938710,
+        "producttype" : "shoes",
+        "size" : "8 M"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938719,
+        "producttype" : "shoes",
+        "size" : "8.5 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938723,
+        "producttype" : "shoes",
+        "size" : "9 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938729,
+        "producttype" : "shoes",
+        "size" : "9.5 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938735,
+        "producttype" : "shoes",
+        "size" : "10 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938740,
+        "producttype" : "shoes",
+        "size" : "10.5 M"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "priceId" : 2938752,
+        "misc" : "0",
+        "size" : "4 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938760,
+        "producttype" : "shoes",
+        "size" : "4.5 M"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938894,
+        "producttype" : "shoes",
+        "size" : "5 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938899,
+        "producttype" : "shoes",
+        "size" : "5.5 M"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938902,
+        "producttype" : "shoes",
+        "size" : "11 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938904,
+        "producttype" : "shoes",
+        "size" : "12 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "priceId" : 2938914,
+        "misc" : "0",
+        "size" : "4 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "priceId" : 2938929,
+        "misc" : "0",
+        "size" : "4.5 M"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938948,
+        "producttype" : "shoes",
+        "size" : "5 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938963,
+        "producttype" : "shoes",
+        "size" : "5.5 M"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938837,
+        "producttype" : "shoes",
+        "size" : "6 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938846,
+        "producttype" : "shoes",
+        "size" : "6.5 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938849,
+        "producttype" : "shoes",
+        "size" : "7 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938859,
+        "producttype" : "shoes",
+        "size" : "7.5 M"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938865,
+        "producttype" : "shoes",
+        "size" : "8 M"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938877,
+        "producttype" : "shoes",
+        "size" : "8.5 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938883,
+        "producttype" : "shoes",
+        "size" : "9 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938891,
+        "producttype" : "shoes",
+        "size" : "9.5 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938976,
+        "producttype" : "shoes",
+        "size" : "10 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938982,
+        "producttype" : "shoes",
+        "size" : "10.5 M"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938987,
+        "producttype" : "shoes",
+        "size" : "11 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938999,
+        "producttype" : "shoes",
+        "size" : "12 m"
+      }
+    ],
+    "producttype" : "Shoes",
+    "parentId" : 509250,
+    "upc" : [
+      "821588145439",
+      "821588145446",
+      "821588145453",
+      "821588145460",
+      "821588145477",
+      "821588145484",
+      "821588145491",
+      "821588145507",
+      "821588145514",
+      "821588145521",
+      "821588145538",
+      "821588145545",
+      "821588145552",
+      "821588145569",
+      "821588145576",
+      "821588145583",
+      "821588145644",
+      "821588145651",
+      "821588145668",
+      "821588145675",
+      "821588145682",
+      "821588145699",
+      "821588145705",
+      "821588145712",
+      "821588145729",
+      "821588145736",
+      "821588145606",
+      "821588145613",
+      "821588145620",
+      "821588145637",
+      "821588145743",
+      "821588145750",
+      "821588145774",
+      "821588145781",
+      "821588145798",
+      "821588145804",
+      "821588145811",
+      "821588145828",
+      "821588145835",
+      "821588145842",
+      "821588145859",
+      "821588145866",
+      "821588145873",
+      "821588145880",
+      "821588145897",
+      "821588145903",
+      "821588145910",
+      "821588145927"
+    ],
+    "productImageLink" : "https://n.nordstrommedia.com/id/sr2/cd7a5641-dfb1-4b04-b909-aee77e9c254e.jpeg",
+    "productKeywords" : "Women~~Shoes~~Sandals/Slides"
+  }'
+
+
+
+
+
+
+
+
+
+
+
+
+curl -X PUT "192.168.1.105:9201/nordstrom_dynamic/items/nordstrom.509250" -H Content-Type: application/json -d'
+{
+    "vendorId" : 1237,
+    "updateTime" : "2019-04-27 21:05:25",
+    "productPrice" : "$129.95",
+    "productDiscountValue" : {
+      "max" : 0.0,
+      "min" : 0.0
+    },
+    "isHot" : 0,
+    "spu" : "3kejh9xope",
+    "productSaleValue" : {
+      "max" : 129.95,
+      "min" : 129.95
+    },
+    "productPriceValue" : {
+      "max" : 129.95,
+      "min" : 129.95
+    },
+    "productSale" : "$129.95",
+    "sourceProductId" : "5203001",
+    "parentId" : 509250,
+    "availability" : "in-stock"
+  }
+  '
+
+
+
+
+curl -XGET '192.168.1.192:9200/nordstrom_static/items/nordstrom.509250?pretty'
+{
+  "_index" : "search_unpopular_nordstrom_static_a",
+  "_type" : "items",
+  "_id" : "nordstrom.509250",
+  "_version" : 1,
+  "found" : true,
+  "_source" : {
+    "productTitle" : "Linea Paolo Women's Edyta Wedge Sandal, Size 6 M - Black",
+    "updateTime" : "2019-04-27 21:05:25",
+    "vendor" : "nordstrom",
+    "categoryStr" : "Women>Shoes~~Sandals/Slides",
+    "vendorId" : 1237,
+    "productLongDescription" : [
+      "Crisscrossed straps and a sporty sole style a chic warm-weather sandal set on a steep covered wedge. Style Name: Linea Paolo Edyta Wedge Sandal (Women). Style Number: 5795515. Available in stores."
+    ],
+    "brand" : "Linea Paolo",
+    "isHot" : 0,
+    "spu" : "3kejh9xope",
+    "productShortDescription" : [
+      "Crisscrossed straps and a sporty sole style a chic warm-weather sandal set on a steep covered wedge. Style Name: Linea Paolo Edyta Wedge Sandal (Women). Style Number: 5795515. Available in stores."
+    ],
+    "height" : 537,
+    "width" : 350,
+    "sourceProductId" : "5203001",
+    "skus" : [
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "priceId" : 2938684,
+        "misc" : "0",
+        "size" : "4 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "priceId" : 2938687,
+        "misc" : "0.74",
+        "size" : "4.5 M"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938693,
+        "producttype" : "shoes",
+        "size" : "5 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938699,
+        "producttype" : "shoes",
+        "size" : "5.5 M"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938633,
+        "producttype" : "shoes",
+        "size" : "6 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938636,
+        "producttype" : "shoes",
+        "size" : "6.5 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938639,
+        "producttype" : "shoes",
+        "size" : "7 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938643,
+        "producttype" : "shoes",
+        "size" : "7.5 M"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938651,
+        "producttype" : "shoes",
+        "size" : "8 M"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938657,
+        "producttype" : "shoes",
+        "size" : "8.5 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938668,
+        "producttype" : "shoes",
+        "size" : "9 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938675,
+        "producttype" : "shoes",
+        "size" : "9.5 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938769,
+        "producttype" : "shoes",
+        "size" : "10 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938773,
+        "producttype" : "shoes",
+        "size" : "10.5 M"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938780,
+        "producttype" : "shoes",
+        "size" : "11 m"
+      },
+      {
+        "color" : "black leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938786,
+        "producttype" : "shoes",
+        "size" : "12 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938790,
+        "producttype" : "shoes",
+        "size" : "6 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938801,
+        "producttype" : "shoes",
+        "size" : "6.5 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938804,
+        "producttype" : "shoes",
+        "size" : "7 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938820,
+        "producttype" : "shoes",
+        "size" : "7.5 M"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938710,
+        "producttype" : "shoes",
+        "size" : "8 M"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938719,
+        "producttype" : "shoes",
+        "size" : "8.5 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938723,
+        "producttype" : "shoes",
+        "size" : "9 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938729,
+        "producttype" : "shoes",
+        "size" : "9.5 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938735,
+        "producttype" : "shoes",
+        "size" : "10 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938740,
+        "producttype" : "shoes",
+        "size" : "10.5 M"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "priceId" : 2938752,
+        "misc" : "0",
+        "size" : "4 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938760,
+        "producttype" : "shoes",
+        "size" : "4.5 M"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938894,
+        "producttype" : "shoes",
+        "size" : "5 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938899,
+        "producttype" : "shoes",
+        "size" : "5.5 M"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938902,
+        "producttype" : "shoes",
+        "size" : "11 m"
+      },
+      {
+        "color" : "cognac leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938904,
+        "producttype" : "shoes",
+        "size" : "12 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "priceId" : 2938914,
+        "misc" : "0",
+        "size" : "4 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "priceId" : 2938929,
+        "misc" : "0",
+        "size" : "4.5 M"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938948,
+        "producttype" : "shoes",
+        "size" : "5 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938963,
+        "producttype" : "shoes",
+        "size" : "5.5 M"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938837,
+        "producttype" : "shoes",
+        "size" : "6 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938846,
+        "producttype" : "shoes",
+        "size" : "6.5 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938849,
+        "producttype" : "shoes",
+        "size" : "7 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938859,
+        "producttype" : "shoes",
+        "size" : "7.5 M"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938865,
+        "producttype" : "shoes",
+        "size" : "8 M"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938877,
+        "producttype" : "shoes",
+        "size" : "8.5 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938883,
+        "producttype" : "shoes",
+        "size" : "9 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938891,
+        "producttype" : "shoes",
+        "size" : "9.5 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938976,
+        "producttype" : "shoes",
+        "size" : "10 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938982,
+        "producttype" : "shoes",
+        "size" : "10.5 M"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938987,
+        "producttype" : "shoes",
+        "size" : "11 m"
+      },
+      {
+        "color" : "Dessert Leather",
+        "gender" : "female",
+        "misc" : "0.64",
+        "priceId" : 2938999,
+        "producttype" : "shoes",
+        "size" : "12 m"
+      }
+    ],
+    "producttype" : "Shoes",
+    "parentId" : 509250,
+    "upc" : [
+      "821588145439",
+      "821588145446",
+      "821588145453",
+      "821588145460",
+      "821588145477",
+      "821588145484",
+      "821588145491",
+      "821588145507",
+      "821588145514",
+      "821588145521",
+      "821588145538",
+      "821588145545",
+      "821588145552",
+      "821588145569",
+      "821588145576",
+      "821588145583",
+      "821588145644",
+      "821588145651",
+      "821588145668",
+      "821588145675",
+      "821588145682",
+      "821588145699",
+      "821588145705",
+      "821588145712",
+      "821588145729",
+      "821588145736",
+      "821588145606",
+      "821588145613",
+      "821588145620",
+      "821588145637",
+      "821588145743",
+      "821588145750",
+      "821588145774",
+      "821588145781",
+      "821588145798",
+      "821588145804",
+      "821588145811",
+      "821588145828",
+      "821588145835",
+      "821588145842",
+      "821588145859",
+      "821588145866",
+      "821588145873",
+      "821588145880",
+      "821588145897",
+      "821588145903",
+      "821588145910",
+      "821588145927"
+    ],
+    "productImageLink" : "https://n.nordstrommedia.com/id/sr2/cd7a5641-dfb1-4b04-b909-aee77e9c254e.jpeg",
+    "productKeywords" : "Women~~Shoes~~Sandals/Slides"
+  }
 }

@@ -103,10 +103,10 @@ create table user_search_euphemism( searchwords varchar(512), searchID int(20) u
 | searchID    | int(20) unsigned | NO   | PRI | NULL    | auto_increment |
 | userID      | int(20)          | YES  |     | NULL    |                |
 +-------------+------------------+------+-----+---------+----------------+
-curl -XGET 'localhost:9200/autojinbag/_analyze?pretty' -d '
+curl -XGET '192.168.1.105:9201/amazon_static/_analyze?pretty' -d '
 {
   "analyzer": "my_analyzer",
-  "text": "1"
+  "text": "Clothing, Shoes & Jewelry>Women>Shoes>Outdoor>Snow Boots"
 }
 '
 
@@ -280,10 +280,18 @@ curl -XPOST "http://localhost:9200/actidx/_search?pretty" -d'
   }
 }'
 
-curl -XPOST 'localhost:9200/_analyze?pretty' -H 'Content-Type: application/json' -d'
+curl -X GET '192.168.1.105:9201/nordstrom_static/_analyze?pretty' -H 'Content-Type: application/json' -d'
 {
-  "analyzer": "standard",
-  "text": "The 2 QUICK Brown-Foxes jumped over the lazy dog\u0027s bone."
+  "analyzer": "my_analyzer",
+  "text": "Clothing, Shoes & Jewelry>Women>Shoes>Outdoor>Snow Boots"
+}
+'
+
+
+curl -X GET "localhost:9200/_analyze" -H 'Content-Type: application/json' -d'
+{
+  "analyzer" : "standard",
+  "text" : "this is a test"
 }
 '
 
@@ -1015,9 +1023,7 @@ commit 666a0b14546af25277eb1ad8216553f31733a324
   ' http://localhost:9123/api/v2/myStore
   curl -XGET 'localhost:9200/search/link/713?pretty'
   
-curl -XGET 'localhost:9200/search/_analyze?analyzer=my_analyzer&pretty' -H 'Content-Type: application/json' -d'
-Macys
-'
+curl -XGET '192.168.1.105:9201/amazon_static/_analyze?analyzer=my_analyzer&pretty' -H 'Content-Type: application/json' -d '{"text":Macys}'
 
   {"productList":[]}
 {"productList":[]}

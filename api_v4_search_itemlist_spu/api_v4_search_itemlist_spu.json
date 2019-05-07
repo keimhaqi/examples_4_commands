@@ -1,0 +1,47 @@
+{
+    "itemlist": [
+        {
+            "vendorId": 37731,
+            "upc": [
+                "191480962787",
+                "191480962831",
+                "191480962848",
+                "191480962855",
+                "191480962862"
+            ],
+            "updateTime": "2019-04-12 17:53:03",
+            "sourceProductId": "prod2779631",
+            "parentId": 26,
+            "productTitle": "Under Armour Men's Unstoppable/MOVE Jogger Pants, Grey",
+            "productLongDescription": [
+                "3-layer construction has air pockets inside that trap warmth without losing breathability Double-knit insulation Minimal branding at the right thigh Elastic waistband with drawstring allows for custom comfort Tapered legs for a tailored look and feel Open hand pockets for convenient storage Fitted design for a next-to-skin fit Machine wash The Under Armour Unstoppable/MOVE Jogger Pants are imported With the Men's Under Armour Unstoppable/MOVE Jogger Pants you've got pants that are going to work for you, ensuring premium comfort and a sleek look. Size: Large. Color: Grey. Gender: Male. Age Group: Adult."
+            ],
+            "vendor": "finishline",
+            "productKeywords": "1320707-035",
+            "width": 610,
+            "spu": "dnvrecne",
+            "productImageLink": "https://images.finishline.com/is/image/FinishLine/1320707_035?$Main$",
+            "categoryStr": "Apparel & Accessories>Clothing~~Pants",
+            "brand": "Under Armour",
+            "isHot": 0,
+            "height": 610,
+            "productSale": "$$35.00 - $$80.00",
+            "productPriceValue": {
+                "min": 80.0,
+                "max": 80.0
+            },
+            "productSaleValue": {
+                "min": 35.0,
+                "max": 80.0
+            },
+            "productDiscountValue": {
+                "min": 0.0,
+                "max": 56.25
+            },
+            "availability": "in-stock",
+            "productPrice": "$80.00"
+        }
+    ],
+    "num": 1,
+    "lifeCycle": 1
+}

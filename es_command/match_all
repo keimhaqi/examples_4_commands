@@ -25,7 +25,7 @@ curl -XGET '192.168.1.106:9201/brochure/items/_search?pretty' -H 'Content-Type: 
 '
 
 
-curl -XGET 'http://192.168.1.192:9200/bloomingdales/items/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.105:9201/macys_static/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 10,
     "query": {
@@ -37,9 +37,19 @@ curl -XGET 'http://192.168.1.192:9200/bloomingdales/items/_search?pretty' -H 'Co
 2881361
 
 
-curl -XGET 'http://192.168.1.105:9201/amazon/items/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://172.18.0.2:9200/jinbagsearch_hot/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
-    "size": 1,
+    "size": 3,
+    "query": {
+       "match_all" : {}
+    }
+}
+'
+
+
+curl -XGET 'http://192.168.1.104:9201/bloomingdales_dynamic/items/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+    "size": 10,
     "query": {
        "match_all" : {}
     }
@@ -72,12 +82,10 @@ curl -XGET 'http://192.168.1.105:9201/amazon/items/_search?pretty' -H 'Content-T
 
 SELECT `product_id`, MAX(`update_time`) as update_time, GROUP_CONCAT(article_id) FROM `article_product` GROUP BY `product_id` ORDER BY update_time desc limit 40 
 
-curl -XGET 'http://192.168.1.194:9200/.kibana/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.104:9201/macys_static/items/_search?pretty=true' -H 'Content-Type: application/json' -d'
 {
     "size": 2,
-    "query": {
-       "match_all" : {}
-    }
+    "query": {  "bool" : {    "must" : [      {        "nested" : {          "query" : {            "bool" : {              "must" : [                {                  "match" : {                    "skus.style" : {                      "query" :                         "lace up, running"                      ,                      "operator" : "OR",                      "prefix_length" : 0,                      "max_expansions" : 50,                      "fuzzy_transpositions" : true,                      "lenient" : false,                      "zero_terms_query" : "NONE",                      "boost" : 1.0                    }                  }                }              ],              "disable_coord" : false,              "adjust_pure_negative" : true,              "boost" : 1.0            }          },          "path" : "skus",          "ignore_unmapped" : false,          "score_mode" : "avg",          "boost" : 1.0        }      },      {        "bool" : {          "must" : [            {              "bool" : {                "should" : [                  {                    "match" : {                      "vendor.keyword" : {                        "query" : "macys",                        "operator" : "AND",                        "prefix_length" : 0,                        "max_expansions" : 50,                        "fuzzy_transpositions" : true,                        "lenient" : false,                        "zero_terms_query" : "NONE",                        "boost" : 1.0                      }                    }                  }                ],                "disable_coord" : false,                "adjust_pure_negative" : true,                "minimum_should_match" : "1",                "boost" : 1.0              }            },            {              "bool" : {                "should" : [                  {                    "match" : {                      "brand.keyword" : {                        "query" : "nike",                        "operator" : "AND",                        "prefix_length" : 0,                        "max_expansions" : 50,                        "fuzzy_transpositions" : true,                        "lenient" : false,                        "zero_terms_query" : "NONE",                        "boost" : 1.0                      }                    }                  }                ],                "disable_coord" : false,                "adjust_pure_negative" : true,                "minimum_should_match" : "1",                "boost" : 1.0              }            }          ],          "disable_coord" : false,          "adjust_pure_negative" : true,          "boost" : 1.0        }      }    ],    "should" : [      {        "match" : {          "isHot" : {            "query" : 1,            "operator" : "OR",            "prefix_length" : 0,            "max_expansions" : 50,            "fuzzy_transpositions" : true,            "lenient" : false,            "zero_terms_query" : "NONE",            "boost" : 10.0          }        }      }    ],    "disable_coord" : false,    "adjust_pure_negative" : true,    "boost" : 1.0  }}
 }
 '
 
@@ -85,34 +93,46 @@ curl -XGET 'http://192.168.1.194:9200/.kibana/_search?pretty' -H 'Content-Type: 
 
 1952
 
-curl -XGET 'http://192.168.1.192:9200/merger_tree_v1/tree/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.192:9200/*_dynamic/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 100,
     "query": {
-        "bool" : {
-          "should" : [
-            {
-              "match" : {
-                "sourceProductIds" : {
-                  "query" : "2468576",
-                  "operator" : "OR",
-                  "prefix_length" : 0,
-                  "max_expansions" : 50,
-                  "fuzzy_transpositions" : true,
-                  "lenient" : false,
-                  "zero_terms_query" : "NONE",
-                  "boost" : 1.0
+        "nested" : {
+            "path" : "skus",
+            "score_mode" : "avg",
+            "query" : {
+                "bool" : {
+                    "must" : [
+                    { "match" : {"skus.gender" : "female"} }
+                    ]
                 }
-              }
             }
-          ],
-          "disable_coord" : false,
-          "adjust_pure_negative" : true,
-          "boost" : 1.0
         }
-      }
+    }
 }
 '
+
+
+curl -X GET "http://192.168.1.105:9201/nordstrom_static/items/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+    "query": {
+        "nested" : {
+            "path" : "skus",
+            "score_mode" : "avg",
+            "query" : {
+                "bool" : {
+                    "must" : [
+                    { "match" : {"skus.gender" : "female"} }
+                    ]
+                }
+            }
+        }
+    }
+}
+'
+
+
+
 
 curl -XGET 'http://192.168.1.105:9201/bloomingdales,neimanmarcus,nordstrom/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
@@ -255,16 +275,51 @@ curl -XGET 'http://192.168.1.105:9201/bloomingdales,neimanmarcus,nordstrom/items
 }
 '
 
-curl -XGET 'http://192.168.1.192:9200/bloomingdales/items/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET 'http://192.168.1.105:9201/nordstrom_dynamic/items/_search?pretty' -H 'Content-Type: application/json' -d'
 {
     "size": 1,
     "query": {
-        "match":{
-          "upcs": {
-            "query":"3603679210618"
-          }
-        }
+    "bool": {
+        "must": [
+            {
+                "bool": {
+                    "must": [
+                        {
+                            "bool": {
+                                "should": [
+                                    {
+                                        "match": {
+                                            "availability": {
+                                                "query": "in-stock",
+                                                "operator": "AND",
+                                                "analyzer": "my_analyzer",
+                                                "prefix_length": 0,
+                                                "max_expansions": 50,
+                                                "fuzzy_transpositions": true,
+                                                "lenient": false,
+                                                "zero_terms_query": "NONE",
+                                                "boost": 1.0
+                                            }
+                                        }
+                                    }
+                                ],
+                                "disable_coord": false,
+                                "adjust_pure_negative": true,
+                                "boost": 1.0
+                            }
+                        }
+                    ],
+                    "disable_coord": false,
+                    "adjust_pure_negative": true,
+                    "boost": 1.0
+                }
+            }
+        ],
+        "disable_coord": false,
+        "adjust_pure_negative": true,
+        "boost": 1.0
     }
+}
 }
 '
 
@@ -317,7 +372,7 @@ curl -XGET 'localhost:9201/search/items/_search?pretty' -H 'Content-Type: applic
 '
 
 
-curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type: application/json' -d'
+curl -XGET '192.168.1.192:9200/linkshare/product/_search?pretty' -H 'Content-Type: application/json' -d'
 {
   "size":17,
   "query" : {
@@ -332,7 +387,7 @@ curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type:
                   {
                     "match" : {
                       "sourceProductId" : {
-                        "query" : "B01N9FZDV2",
+                        "query" : "7270658",
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,
@@ -356,7 +411,7 @@ curl -XGET '192.168.1.192:9200/crawler/product/_search?pretty' -H 'Content-Type:
                   {
                     "match" : {
                       "vendorId" : {
-                        "query" : 3,
+                        "query" : 3184,
                         "operator" : "AND",
                         "prefix_length" : 0,
                         "max_expansions" : 50,

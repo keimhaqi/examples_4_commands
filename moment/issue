@@ -1,0 +1,150 @@
+
+mysql> select id, product_groups from selector;
++----+---------------------------------------+
+| id | product_groups                        |
++----+---------------------------------------+
+|  1 | 1,2,32,31                             |
+|  2 | 3,4,5,6,7,8,9,10,18,17,16,15,14,13,12 |
+|  3 | 22,21,20,19                           |
+|  4 | 29,28,27,26,25,24,23                  |
+|  6 | 37,36,35,34,33                        |
+|  7 | 38                                    |
++----+---------------------------------------+
+
+
+mysql> select attribute_value_ids, vendor_id from product_group where id in (1,2,32,31);
++-------------------------+-----------+
+| attribute_value_ids     | vendor_id |
++-------------------------+-----------+
+| 1334546,1234846         |         3 | ==> amazon:vendor shoes: categoryStr ugg: brand
+| 1548404,1234846         |      1237 | ==> nordstrom:vendor shoes: categoryStr ugg®: brand
+| 1334586,1548404,1234846 |     13867 | ==> bloomingdales:vendor shoes: categoryStr ugg®: brand
+| 1334546,1334601,1234846 |      3184 | ==> macys:vendor shoes: categoryStr ugg: brand
++-------------------------+-----------+
+4 rows in set (0.00 sec)
+
+
++----+-------------------------+-----------+
+| id | attribute_value_ids     | vendor_id |
++----+-------------------------+-----------+
+|  1 | 1334546,1234846         |         3 |    ==> amazon:vendor shoes: categoryStr ugg: brand
+|  2 | 1548404,1234846         |      1237 |    ==> nordstrom:vendor shoes: categoryStr ugg®: brand
+| 31 | 1334586,1548404,1234846 |     13867 |    ==> bloomingdales:vendor shoes: categoryStr ugg®: brand
+| 32 | 1334546,1334601,1234846 |      3184 |    ==> macys:vendor shoes: categoryStr ugg: brand
++----+-------------------------+-----------+
+
+
+
+MySQL [jinbag_data]> select id, attribute_value_ids, vendor_id from product_group where id in (33,34,35,36,37);
++----+---------------------+-----------+
+| id | attribute_value_ids | vendor_id |
++----+---------------------+-----------+
+| 33 | 1538537,1334385     |      1237 |    ==> nordstrom:vendor theory:brand
+| 34 | 1538537,1334586     |     13867 |    ==> bloomingdales:vendor theory:brand
+| 35 | 1638814,1334586     |     13867 |    ==> bloomingdales:vendor equipment:brand
+| 36 | 1638814,1334385     |      1237 |    ==> nordstrom:vendor equipment:brand
+| 37 | 1806691,1334385     |      1237 |    ==> nordstrom:vendor club monaco:brand 
++----+---------------------+-----------+    ==> 30%
+nordstrom = 26个, bloomingdales = 58个
+原网站: nordstrom = 45个
+
+
+selector_id = 3; ==> moment_id = 250
+
+MySQL [jinbag_data]> select id, attribute_value_ids, vendor_id from product_group where id in (52,53,55,54);
++----+------------------------+-----------+
+| id | attribute_value_ids    | vendor_id |
++----+------------------------+-----------+
+| 52 | 1334383,907698,1334586 |     13867 |     ==> categoryStr: women, brand: sandro, vendor: bloomingdales
+| 53 | 1334383,1334385,907698 |      1237 |     ==> categoryStr: women, brand: sandro, vendor: nordstrom
+| 54 | 1334663,1334586,907698 |     13867 |     ==> categoryStr: women, brand: maje, vendor: bloomingdales
+| 55 | 1334385,1334663,907698 |      1237 |     ==> categoryStr: women, brand: maje, vendor: nordstrom
++----+------------------------+-----------+
+4 rows in set (0.00 sec)
+
+
+nordstrom = 4个商品, 原网站有23个满足折扣20%的商品
+nordstrom的商品source_product_id = 4944612, 原网站有满足折扣20%，系统中有这个商品，但是没有被推出来;
+
+
+selector_id = 2
+MySQL [jinbag_data]> select id, attribute_value_ids, vendor_id from product_group where id in (3,4,5,6,7,8,9,10,18,17,16,15,14,13,12);
++----+-------------------------+-----------+
+| id | attribute_value_ids     | vendor_id |
++----+-------------------------+-----------+
+|  3 | 1334385,1633153,1633142 |      1237 |    ==> nordstrom:vendor dl:brand categoryStr:bottoms~~pant
+|  4 | 1633153,1334601,2386246 |      3184 |    ==> macys:vendor dl:brand categoryStr:juniors' clothing - jeans
+|  5 | 907698,1334586,1334599  |     13867 |    ==> bloomingdales:vendor dl1961:brand categoryStr:women
+|  6 | 1633153,2026099,9998309 |     25003 |    ==> neiman marcus:vendor dl:brand categoryStr:clothing~~pants
+|  7 | 1633142,1334628         |      1237 |    ==> nordstrom:vendor ag:brand categoryStr:bottoms~~pant
+|  8 | 1916437,1334601         |      3184 |    ==> macys:vendor ag jeans:brand
+|  9 | 1334586,1364011,1394592 |     13867 |    ==> bloomingdales:vendor ag adriano goldschmied kids:brand categoryStr:kids
+| 10 | 1334796,2620164,2026099 |     25003 |    ==> neimanmarcus:vendor ag adriano goldschmied:brand categoryStr:clothing~~pants
+| 12 | 1633142,1619587,1334385 |      1237 |    ==> nordstrom:vendor mother:brand categoryStr:bottoms~~pant
+| 13 | 1619587,1334586         |     13867 |    ==> bloomingdales:vendor mother:brand
+| 14 | 1813168,1633142,1334385 |      1237 |    ==> nordstrom:vendor citizens of humanity :brand categoryStr:bottoms~~pant
+| 15 | 1813168,1334601,2386246 |      3184 |    ==> macys:vendor citizens of humanity:brand categoryStr:juniors' clothing - jeans
+| 16 | 1437783,1633142,1334385 |      1237 |    ==> nordstrom:vendor j brand:brand categoryStr:bottoms~~pant
+| 17 | 1334586,1378776         |     13867 |    ==> bloomingdales:vendor rag & bone/jean:brand
+| 18 | 1334385,1633142,1501960 |      1237 |    ==> nordstrom:vendor rag & bone:brand categoryStr:bottoms~~pant 原网站有2个商品满足条件,系统中有商品source_product_id = 5136960满足条件，但是没有推荐出来;
++----+-------------------------+-----------+    ==> 30%
+15 rows in set (0.00 sec)
+
+
+
+selector_id = 4
+MySQL [jinbag_data]> select id, attribute_value_ids, vendor_id from product_group where id in (29,28,27,26,25,24,23);
++----+-------------------------+-----------+
+| id | attribute_value_ids     | vendor_id |
++----+-------------------------+-----------+
+| 23 | 1330378,1234941         |         3 |    ==> amazon:vendor puma:brand categoryStr:backpacks
+| 24 | 1364392,1240892         |      1237 |    ==> nordstrom:vendor adidas originals:brand categoryStr:handbags & wallets 原网站满足条件的有2个, 系统中有商品source_product_id=4565600的商品，但是没有推荐出来
+| 25 | 2731988,1205717         |     37731 |    ==> finishline:vendor adidas:brand categoryStr:handbags, wallets & cases~~handbags
+| 26 | 1234941,1364392         |         3 |    ==> amazon:vendor adidas originals:brand categoryStr:backpacks
+| 27 | 1330623,1973705,9988511 |     37731 |    ==> finishline:vendor nike:brand categoryStr:luggage & bags
+| 28 | 1330623,1633150         |      1237 |    ==> nordstrom:vendor nike:brand categoryStr:bags~~backpack
+| 29 | 1330623,1234941         |         3 |    ==> amazon:vendor nike:brand categoryStr:backpacks
++----+-------------------------+-----------+    ==> 30%
+7 rows in set (0.01 sec)
+
+
+
+
+裙子: qn2du933w
+
+
+
+select * from product_group where spu_list = '{"unpopular":[],"popular":[]}';
++----+-----------+-------------------------------+-------------+----------------------------------------+---------+---------+-------------------------------+---------+---------------------+
+| id | vendor_id | attribute_value_ids           | category_id | name_en                                | name_ch | tag_ids | spu_list                      | creator | created_time        |
++----+-----------+-------------------------------+-------------+----------------------------------------+---------+---------+-------------------------------+---------+---------------------+
+| 11 |     36025 | 1334796,1234646,1334881       |        NULL | AG Jeans (Neiman Marcus Last Call)     | NULL    | NULL    | {"unpopular":[],"popular":[]} |     217 | 2019-04-18 08:11:20 |
+| 24 |      1237 | 1364392,1240892               |        NULL | Adidas Originals Backpacks (Nordstrom) | NULL    | NULL    | {"unpopular":[],"popular":[]} |     217 | 2019-04-19 07:38:00 |
+| 26 |         3 | 1234941,1364392               |        NULL | Adidas Originals backpacks (amazon)    | NULL    | NULL    | {"unpopular":[],"popular":[]} |     217 | 2019-04-19 07:48:37 |
+| 50 |      1237 | 1334385,907698,1806691,907697 |        NULL | Club Monaco - Women - Nordstrom        | NULL    | NULL    | {"unpopular":[],"popular":[]} |     217 | 2019-04-23 09:39:45 |
++----+-----------+-------------------------------+-------------+----------------------------------------+---------+---------+-------------------------------+---------+---------------------+
+4 rows in set (0.00 sec)
+
+
+
+
+
+moment_id = 342, selector_id = 8
+MySQL [jinbag_data]> select id, product_groups, moment_id from selector where moment_id = 342;
++----+----------------+-----------+
+| id | product_groups | moment_id |
++----+----------------+-----------+
+|  8 | 35,36,46,47,50 |       342 |
++----+----------------+-----------+
+
+MySQL [jinbag_data]> select id, attribute_value_ids, vendor_id from product_group where id in (35,36,46,47,50);
++----+-------------------------------+-----------+
+| id | attribute_value_ids           | vendor_id |
++----+-------------------------------+-----------+
+| 35 | 1638814,1334586               |     13867 |  ==> vendor: bloomingdales, brand: equipment
+| 36 | 1638814,1334385               |      1237 |  ==> vendor: nordstrom, brand: equipment
+| 46 | 1334385,907698,1538537        |      1237 |  ==> vendor: nordstrom, brand: theory, categoryStr: women
+| 47 | 1538537,1334586,907698        |     13867 |  ==> vendor: bloomingdales, brand: theory, categoryStr: women
+| 50 | 1334385,907698,1806691,907697 |      1237 |  ==> vendor: nordstrom, brand: club monaco, categoryStr: women, clothing
++----+-------------------------------+-----------+
+5 rows in set (0.00 sec)

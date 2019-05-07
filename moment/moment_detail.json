@@ -1,0 +1,107 @@
+{
+    "code" : 200,
+    "description" : "success",
+    "detail" : {
+      "moment" : {
+        "id" : 75082,
+        "type" : 2,
+        "downCount" : 0,
+        "createTime" : 1555579382000,
+        "updateTime" : 1555579382000,
+        "upCount" : 0,
+        "userId" : 99,
+        "status" : 0,
+        "commentCount" : 0,
+        "forwardCount" : 0,
+        "collectCount" : 0,
+        "viewCount" : 0,
+        "anonymous" : 0,
+        "content" : "{\"options\":{\"version\":\"0.3\",\"type\":\"BI\"},\"editorState\":{\"blocks\":[{\"entityMap\":{},\"depth\":0,\"inlineStyleRanges\":[],\"text\":\"ARE YOU OK?\",\"type\":\"unstyled\",\"key\":\"aj5o0\",\"entityRanges\":[]}],\"entityMap\":{}},\"resource\":{\"productList\":[],\"mediaList\":[]},\"selectors\":[{\"id\":3}]}",
+        "downIds" : null,
+        "upIds" : null,
+        "tags" : "FCUK",
+        "isEssence" : null
+      },
+      "mediaList" : [ {
+        "id" : null,
+        "momentId" : 75082,
+        "productId" : null,
+        "resourceUrl" : "https://images.finishline.com/is/image/FinishLine/CM1001_30M?$Main$",
+        "resourceType" : 1,
+        "topicId" : null,
+        "status" : null,
+        "updateTime" : null,
+        "createTime" : null
+      }, {
+        "id" : null,
+        "momentId" : 75082,
+        "productId" : null,
+        "resourceUrl" : "https://images.finishline.com/is/image/FinishLine/MS10004Y_600?$Main$",
+        "resourceType" : 1,
+        "topicId" : null,
+        "status" : null,
+        "updateTime" : null,
+        "createTime" : null
+      }, {
+        "id" : null,
+        "momentId" : 75082,
+        "productId" : null,
+        "resourceUrl" : "https://images.finishline.com/is/image/FinishLine/CMS10009_001?$Main$",
+        "resourceType" : 1,
+        "topicId" : null,
+        "status" : null,
+        "updateTime" : null,
+        "createTime" : null
+      } ],
+      "productList" : [ {
+        "id" : null,
+        "topicId" : null,
+        "momentId" : 75082,
+        "productId" : 10999568,
+        "userId" : null,
+        "productTitle" : "Men's Champion IPO Metallic Slide Sandals, Yellow",
+        "description" : "[Metallic Big Champion C on the band Supple, lightweight band Molded footbed EVA midsole Rubber outsole The Champion IPO Metallic is imported Rock Champion from head to toe with the Men's Champion IPO Metallic Slide Sandals. Whether you're heading to the pool or just chilling, these stylish slides will make sure you're drawing attention from onlookers. Size: 10.0. Color: Yellow. Gender: Male. Age Group: Adult.]",
+        "status" : null,
+        "updateTime" : null,
+        "createTime" : null
+      }, {
+        "id" : null,
+        "topicId" : null,
+        "momentId" : 75082,
+        "productId" : 1,
+        "userId" : null,
+        "productTitle" : "Big Kids' Champion 93Eighteen Casual Shoes, Red",
+        "description" : "[Large embroidered Champion logo at the side Chunky midsole Easy pull on with heel pull tab Cushioned tongue and collar Traction pattern on the sole for grip Lace-up silhouette The Champion 93Eighteen is imported. Heritage style and plush comfort team up on the Kids' Champion 93Eighteen Casual Sneakers. On-trend and featuring low-key performance, these sneakers are a must-have for active kiddos. Size: 6.0. Color: Red. Age Group: Kids.]",
+        "status" : null,
+        "updateTime" : null,
+        "createTime" : null
+      }, {
+        "id" : null,
+        "topicId" : null,
+        "momentId" : 75082,
+        "productId" : 1,
+        "userId" : null,
+        "productTitle" : "Men's Champion Court Classic Casual Shoes, White",
+        "description" : "[Supple leather uppers Foam cushioning absorbs shock Heel pull tab allows for easy on-and-off Lace-up design Bold Champion C logo on the sides and tongue Traction pattern outsole The Champion Court Classic is imported With the simplicity of heritage design and durable, action-ready detailing, the Men's Champion Court Classic Casual Shoes are built with trendy guys in mind. From the streets and beyond, experience the comfort you need and the iconic design you crave. Size: 11.0. Color: White. Gender: Male. Age Group: Adult.]",
+        "status" : null,
+        "updateTime" : null,
+        "createTime" : null
+      } ],
+      "promoList" : [ ],
+      "tagList" : [ {
+        "tagId" : 681,
+        "createTime" : 1555579382000,
+        "tagName" : "FCUK",
+        "type" : 2
+      } ],
+      "user" : {
+        "id" : 99,
+        "exp" : 0,
+        "point" : 0,
+        "active" : true,
+        "email" : null,
+        "nickName" : "Genie",
+        "logoUrl" : "R0VOSUVASklOQkFHLkNPTQ==.png"
+      }
+    }
+  }

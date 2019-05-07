@@ -1,0 +1,4 @@
+# 查看jvm在不同系统配置下的模拟人Xms和Xmx
+# InitialHeapSize -> Xms
+# MaxHeapSize -> Xmx
+java -XX:+PrintFlagsFinal -version | grep HeapSize

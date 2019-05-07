@@ -2,7 +2,7 @@ curl -X GET "172.18.0.3:9200/_stats"
 curl -X GET "172.18.0.3:9200/search_hot_a/_stats?human&pretty"
 
 
-curl -X GET "192.168.1.192:9200/_stats"
+curl -X GET "localhost:9201/_stats"
 
 curl -X GET "http://172.18.0.2:9200/_cat/shards"
 

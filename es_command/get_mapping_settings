@@ -2,17 +2,17 @@ curl -XGET '172.18.0.2:9200/.monitoring-es-6-2018.05.14/_settings,_mappings?pret
 curl -XGET '192.168.1.106:9200/todayspicks/_settings,_mappings?pretty'
 curl -XGET '192.168.1.106:9201/brochure/_settings,_mappings?pretty'
 
-curl -X GET "192.168.1.192:9200/search_unpopular_*/_settings?human&pretty"
-curl -X GET "192.168.1.105:9201/merger_tree/_settings?human&pretty"
+curl -X GET "192.168.1.192:9200/macys_dynamic/_settings?human&pretty"
+curl -X GET "192.168.1.105:9201/jinbagsearch_hot/_settings,_mappings?human&pretty"
 
-curl -X GET "192.168.1.105:9201/products_in_brochures_b/_settings,_mapping?human&pretty"
+curl -X GET "192.168.1.192:9200/macys_dynamic/_settings,_mapping?human&pretty"
 
 
 select product_id,start_date,end_date from top_product_promo_info_vendor where start_date < '2017-12-29 15:21:48' and end_date > '2017-12-29 15:21:48' 
 
 select product_id,start_date,end_date from top_product_promo_info_vendor where start_date < now() and end_date > now();
 
-curl -X GET "192.168.1.192:9200/linkshare/_settings,_mappings?human&pretty"
+curl -X GET "192.168.1.192:9200/search_unpopular_nordstrom_static_a/_settings,_mappings?human&pretty"
 
 predictionioUrl=http://192.168.1.195:7070/events.json?accessKey=-YsrnI8A89GZ8AUmxfvr3oGvaeJVdGrSHQmO0ZMb0Hhl0p3SwWVBgMGApUWrN8NN
 

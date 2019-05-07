@@ -1,0 +1,101 @@
+{
+    "productInfo": {
+        "1237": [
+            {
+                "productId": 10881354,
+                "categoryId": -1,
+                "parentId": 94428,
+                "publicAttrs": [
+                    {
+                        "color": "red",
+                        "id": "191"
+                    }
+                ],
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 3178,
+                        "sourceProductId": "3383085",
+                        "upc": "027131969686",
+                        "attrs": null,
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            }
+        ],
+        "3184": [
+            {
+                "productId": 10881354,
+                "categoryId": -1,
+                "parentId": 94428,
+                "publicAttrs": [
+                    {
+                        "color": "red",
+                        "id": "191"
+                    }
+                ],
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 321466,
+                        "sourceProductId": "147374",
+                        "upc": "027131969686",
+                        "attrs": null,
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            }
+        ],
+        "13867": [
+            {
+                "productId": 10881354,
+                "categoryId": -1,
+                "parentId": 94428,
+                "publicAttrs": [
+                    {
+                        "color": "red",
+                        "id": "191"
+                    }
+                ],
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 269965,
+                        "sourceProductId": "668196",
+                        "upc": "027131969686",
+                        "attrs": null,
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            }
+        ],
+        "25003": [
+            {
+                "productId": 10881354,
+                "categoryId": -1,
+                "parentId": 94428,
+                "publicAttrs": [
+                    {
+                        "color": "red",
+                        "id": "191"
+                    }
+                ],
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 29193,
+                        "sourceProductId": "prod212050183",
+                        "upc": "027131969686",
+                        "attrs": null,
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            }
+        ]
+    },
+    "versionNumber": "3945671b3b220f116446d1ca96a2317b"
+}

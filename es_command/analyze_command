@@ -1,0 +1,16 @@
+curl -X GET '192.168.1.105:9201/nordstrom_static/_analyze?pretty' -H 'Content-Type: application/json' -d'
+{
+  "analyzer": "my_analyzer",
+  "text": "Clothing, Shoes & Jewelry>Women>Shoes>Outdoor>Snow Boots"
+}
+'
+
+UGG®
+
+
+curl -X GET '192.168.1.105:9201/nordstrom_static/_analyze?pretty' -H 'Content-Type: application/json' -d'
+{
+  "analyzer": "my_analyzer",
+  "text": "UGGR"
+}
+'

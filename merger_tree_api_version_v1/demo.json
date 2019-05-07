@@ -1,0 +1,32 @@
+{
+    "productInfo": {
+        "1237": [
+            {
+                "productId": null,
+                "categoryId": -1,
+                "parentId": 94345,
+                "publicAttrs": [
+                    {
+                        "color": "navy",
+                        "id": "220"
+                    }
+                ],
+                "privateProducts": [
+                    {
+                        "productId": null,
+                        "innerSkuId": 1643669,
+                        "sourceProductId": "3236693",
+                        "upc": "801688807246",
+                        "attrs": {
+                            "size": "medium (6-8)",
+                            "color": "navy"
+                        },
+                        "amazonApiLoaded": true
+                    }
+                ],
+                "exact": true
+            }
+        ]
+    },
+    "versionNumber": "7491fbc00c87016e6f1d5b9c3c6d8582"
+}

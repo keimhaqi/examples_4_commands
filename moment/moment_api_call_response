@@ -1,0 +1,92 @@
+调用接口新建moment(创建结果: {
+  "code" : 200,
+  "description" : "success",
+  "detail" : {
+    "moment" : {
+      "id" : 75077,
+      "type" : 2,
+      "downCount" : null,
+      "createTime" : 1555552452291,
+      "updateTime" : 1555552452291,
+      "upCount" : null,
+      "userId" : 99,
+      "status" : 0,
+      "commentCount" : null,
+      "forwardCount" : null,
+      "collectCount" : null,
+      "viewCount" : null,
+      "anonymous" : null,
+      "content" : "{\"options\":{\"version\":\"0.3\",\"type\":\"BI\"},\"editorState\":{\"blocks\":[],\"entityMap\":{}},\"resource\":{\"productList\":[],\"mediaList\":[]},\"selectors\":[]}",
+      "downIds" : null,
+      "upIds" : null,
+      "tags" : "",
+      "isEssence" : null
+    },
+    "mediaList" : [ ],
+    "productList" : [ ],
+    "promoList" : [ ],
+    "tagList" : [ ],
+    "user" : {
+      "id" : 99,
+      "exp" : 0,
+      "point" : 0,
+      "active" : true,
+      "email" : null,
+      "nickName" : "Genie",
+      "logoUrl" : "R0VOSUVASklOQkFHLkNPTQ==.png"
+    }
+  }
+}) 一共消耗 179毫秒
+
+
+
+
+调用接口更新moment(创建结果: {
+  "code" : 200,
+  "description" : "success",
+  "detail" : {
+    "moment" : {
+      "id" : 75077,
+      "type" : 2,
+      "downCount" : 0,
+      "createTime" : 1555552452000,
+      "updateTime" : 1555552802318,
+      "upCount" : 0,
+      "userId" : 99,
+      "status" : 0,
+      "commentCount" : 0,
+      "forwardCount" : 0,
+      "collectCount" : 0,
+      "viewCount" : 0,
+      "anonymous" : 0,
+      "content" : "{\"options\":{\"version\":\"0.3\",\"type\":\"BI\"},\"editorState\":{\"blocks\":[],\"entityMap\":{}},\"resource\":{\"productList\":[],\"mediaList\":[]},\"selectors\":[]}",
+      "downIds" : null,
+      "upIds" : null,
+      "tags" : "WHAT IS PERFECT?",
+      "isEssence" : null
+    },
+    "mediaList" : [ ],
+    "productList" : [ ],
+    "promoList" : [ ],
+    "tagList" : [ {
+      "tagId" : 680,
+      "createTime" : 1555552802403,
+      "tagName" : "WHAT IS PERFECT?",
+      "type" : 2
+    } ],
+    "user" : {
+      "id" : 99,
+      "exp" : 0,
+      "point" : 0,
+      "active" : true,
+      "email" : null,
+      "nickName" : "Genie",
+      "logoUrl" : "R0VOSUVASklOQkFHLkNPTQ==.png"
+    }
+  }
+}) 一共消耗 351毫秒
+
+
+
+
+{"unpopular":["ww4xo1l","gya4jcn9l","xra2xs8rl","ww4xo1n3l","ryd4rcw5","ey2x5cww","6k7w6fgg6","8q8pdsnn2","nqy4vso","p7o4acw","5wq7d194","8q8pdsn4p","jdw4vfr6q","apd5wtnxv","ypq2ytv5","6k7w6fw8l","ey2x5c6q5","7pw8kteav","ryd4rcnq3","apd5wtqgn","ypq2ytggj","ong4ecn58","ey2x5c6a","p7o4acpa","ryd4rc7ap","2g2dah99g","ryd4rc9o9","9qpe6sylv","v72l6cjq6","nqy4vsdev","9qpe6syd6","47arqce5k","jdw4vf8ej","gya4jc7d7","lrp4as2d","xra2xsax","jdw4vf36","ypq2yt7lg","ryd4rc9jr","ww4xo1q5a","apd5wtnkw","nqy4vsg7l","ey2x5c42d","3k46ef8j","8q8pds35","p7o4acn4","dnvrecno5","3k46ef9r9","5wq7d1p6v","7pw8ktejl","5wq7d1va7","ypq2ytgd5","ryd4rc9n","ypq2yte8","ey2x5crq","5wq7d1ydp","9qpe6s5o4","2g2dahdvv","gya4jc38x","ong4ecrxx","lrp4ase53","jdw4vfr2p","2g2dahnaj","qw52e1878","3k46efdl9","ryd4rcav7","7pw8kt2on","7pw8kt85","nqy4vsxy","7pw8ktkj","ww4xo1g7","qw52e1kx","jdw4vfrkp","ey2x5c6dd","2g2dahnka","ypq2ytrvo","ryd4rc94r","7pw8ktend","v72l6cjv6","dnvrecdl9","ww4xo15vg","v72l6col","ww4xo1r36","47arqcxvv","ryd4rcnyx","v72l6cxew","lrp4as4","k984jtg","v72l6cya","47arqcro","lrp4as665","2g2dah2eq","ypq2ytg7j","5wq7d1vgj","qw52e1wnv","3k46ef3d","nqy4vsynl","xra2xsorq","ong4ecgd5","7pw8kte3d"],"popular":["7pw8ktdvx"]} 
