@@ -16,6 +16,7 @@ from elasticsearch import helpers
 from decimal import Decimal
 from decimal import getcontext
 from dateutil import parser as du_parser
+import os
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -202,3 +203,14 @@ def judge_datetime(value, field_es, properties):
     if judge_datetime_only(value):
         properties[field_es] = value
     return properties
+
+
+# 获取系统中文件的mtime, f表示文件的完整路径名称, 例如: /home/zhenping/weekNewData/macys/3184_3281764_94_Apr-04-19-18-11-47_3_cmp_delta.xml.gz
+f = "/home/zhenping/weekNewData/macys/3184_3281764_94_Apr-04-19-18-11-47_3_cmp_delta.xml.gz"
+file_time = os.path.getmtime(f) # file_time类型为long
+
+# 对系统中指定目录下的文件根据mtime做排序, 可以是正序或者逆序:
+# files表示文件列表, 类型为list, directory_backup表示文件列表中的文件所在路径, reverse表示是否以逆序排序, True表示逆序, Fales表示正序
+files = ["/home/zhenping/weekNewData/macys/3184_3281764_94_Apr-04-19-18-11-47_3_cmp_delta.xml.gz"]
+directory_backup = "/home/zhenping/weekNewData/macys"
+dir_list = sorted(files, key=lambda x: os.path.getmtime(os.path.join(directory_backup, x)), reverse=True)
