@@ -1,0 +1,10 @@
+# return just process
+curl -X GET "192.168.1.194:9200/_nodes/process"
+# same as above
+curl -X GET "localhost:9200/_nodes/_all/process"
+# return just jvm and process of only nodeId1 and nodeId2
+curl -X GET "localhost:9200/_nodes/nodeId1,nodeId2/jvm,process"
+# same as above
+curl -X GET "localhost:9200/_nodes/nodeId1,nodeId2/info/jvm,process"
+# return all the information of only nodeId1 and nodeId2
+curl -X GET "192.168.1.104:9201/_nodes/_all?pretty=true"

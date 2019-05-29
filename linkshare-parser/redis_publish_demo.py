@@ -40,9 +40,10 @@ def call_parser_api(fileName):
     redis_key_value = {}
     # file_dir_on_dest = "/home/zhenping/weekNewData/{}".format(fileName)
     file_dir_on_dest = "/home/zhenping/github/examples_4_commands/linkshare-parser/single_demo/{}".format(fileName)
+    # file_dir_on_dest = "/home/zhenping/weekNewData/tmp/{}".format(fileName)
     # file_dir_on_dest = "/home/zhenping/linkshare_ftp/{}".format(fileName)
     serial_number = get_serial_number_in_redis()
-    original_date = du_parser.parse(str(datetime.datetime.now()))
+    original_date = du_parser.parse(str(datetime.datetime.now() - datetime.timedelta(days=10)))
     upload_time = original_date.strftime('%Y-%m-%d %H:%M:%S.%f')
 
     redis_key_value["uploadTime"] = upload_time
@@ -84,8 +85,41 @@ redis_conn = redis.Redis(host=settings['REDIS_HOST'],
 # call_parser_api('bloomingdales_13867.xml.gz')
 
 
-linkshare_parser_queue = '36025.wait'
-call_parser_api('lastcall_missing.xml.gz')
+linkshare_parser_queue = '13867.wait'
+# call_parser_api('13867_3281764_1489_Apr-14-19-00-05-39_4_cmp_delta.xml.gz')
+# call_parser_api('13867_3281764_26659427_Jul-04-18-11-01-58_2_cmp_delta.xml.gz') # 849683046482
+# call_parser_api('13867_3281764_26659427_Feb-05-18-16-31-11_3_cmp_delta.xml.gz')
+# call_parser_api('13867_3281764_26659427_Feb-05-18-16-31-11_3_cmp_delta.xml.gz')
+# call_parser_api('13867_3281764_26659427_Mar-22-18-10-30-36_3_cmp_delta.xml.gz')
+# call_parser_api('13867_3281764_26659427_Aug-04-18-22-02-48_6_cmp_delta.xml.gz')
+
+linkshare_parser_queue = '3184.wait'
+# call_parser_api('macys_3184.xml.gz')
+# call_parser_api('3184_3281764_6_May-08-19-21-01-09_1_cmp_delta.xml.gz')
+# call_parser_api('3184_3281764_6_May-08-19-21-01-09_1_cmp_delta.xml.gz')
+# call_parser_api('3184_3281764_79_May-08-19-21-01-11_0_cmp_delta.xml.gz')
+# call_parser_api('3184_3281764_79_May-08-19-21-01-11_1_cmp_delta.xml.gz')
+# call_parser_api('3184_3281764_94_May-08-19-21-01-13_0_cmp_delta.xml.gz')
+# call_parser_api('3184_3281764_94_May-08-19-21-01-13_1_cmp_delta.xml.gz')
+
+
+linkshare_parser_queue = '41098.wait'
+call_parser_api('41098_3281764_9230_May-06-19-23-58-20_cmp_delta.xml.gz')
+# call_parser_api('1237_3281764_1_273_cmp.xml.gz')
+
+
+# 3184_3281764_99533_May-08-19-21-01-14_cmp_delta.xml.gz
+
+
+# /home/zhenping/weekNewData/tmp/13867_3281764_26659427_Jul-04-18-11-01-58_2_cmp_delta.xml.gz
+# /home/zhenping/weekNewData/tmp/13867_3281764_26659427_Nov-25-17-11-30-39_4_cmp_delta.xml.gz
+# /home/zhenping/weekNewData/tmp/13867_3281764_26659427_Feb-05-18-16-31-11_3_cmp_delta.xml.gz
+# /home/zhenping/weekNewData/tmp/13867_3281764_26659427_Feb-05-18-16-31-11_3_cmp_delta.xml.gz
+# /home/zhenping/weekNewData/tmp/13867_3281764_26659427_Mar-22-18-10-30-36_3_cmp_delta.xml.gz
+# /home/zhenping/weekNewData/tmp/13867_3281764_26659427_Aug-04-18-22-02-48_6_cmp_delta.xml.gz
+
+
+
 # linkshare_parser_queue = "38606.wait"
 # call_parser_api('bestbuy_38606.xml.gz')
 # for item in range(0 , 100):

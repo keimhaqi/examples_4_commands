@@ -11,10 +11,10 @@ bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 -
 bin/kafka-topics.sh --list --zookeeper localhost:2181
 
 启动kafka producer
-bin/kafka-console-producer.sh --broker-list localhost:9092 --topic bi.link.pro
+bin/kafka-console-producer.sh --broker-list 192.168.1.103:9092 --topic demo
 
 启动kafka consumer
-bin/kafka-console-consumer.sh --bootstrap-server 192.168.1.103:9092 --topic cron_crawl_task
+bin/kafka-console-consumer.sh --bootstrap-server 192.168.1.103:9092 --topic demo
 
 bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --topic linkshare_search --zookeeper 192.168.1.103:2181 --group piwikDataMove
 bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --topic linkshare_update --zookeeper localhost:2181 --group linkshare_search

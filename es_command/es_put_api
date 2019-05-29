@@ -64,38 +64,31 @@ curl -XGET '192.168.1.192:9200/macys_static/items/macys.204625?pretty'
 
 
 
-curl -XGET '192.168.1.192:9200/bloomingdales_dynamic/items/bloomingdales.240001?pretty'
+curl -X PUT '192.168.1.104:9201/nordstrom_dynamic/items/nordstrom.78218?pretty' -H 'Content-Type: application/json' -d'
 {
-  "_index" : "search_unpopular_bloomingdales_dynamic_b",
-  "_type" : "items",
-  "_id" : "bloomingdales.240001",
-  "_version" : 1,
-  "found" : true,
-  "_source" : {
-    "vendorId" : 13867,
-    "updateTime" : "2019-02-27 10:36:07",
-    "productPrice" : "$550.00",
+    "vendorId" : 1237,
+    "updateTime" : "2019-05-14 21:08:13",
+    "productPrice" : "$149.95",
     "productDiscountValue" : {
-      "max" : 40.0,
-      "min" : 40.0
+      "max" : 46.72,
+      "min" : 46.72
     },
-    "isHot" : 1,
-    "spu" : "krqrkc9vjo",
+    "isHot" : 0,
+    "spu" : "dne7to87e",
     "productSaleValue" : {
-      "max" : 330.0,
-      "min" : 330.0
+      "max" : 79.9,
+      "min" : 79.9
     },
     "productPriceValue" : {
-      "max" : 550.0,
-      "min" : 550.0
+      "max" : 149.95,
+      "min" : 149.95
     },
-    "productSale" : "$330.00",
-    "sourceProductId" : "3202877",
-    "parentId" : 240001,
-    "availability" : "in-stock",
-    "productId" : 11005892
-  }
+    "productSale" : "$79.90",
+    "sourceProductId" : "4598218",
+    "parentId" : 78218,
+    "availability" : "in-stock"
 }
+'
 
 
 

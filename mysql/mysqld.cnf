@@ -1,0 +1,56 @@
+[zhenping@master01 my.cnf.d]$ cat mysqld.cnf
+# For advice on how to change settings please see
+# http://dev.mysql.com/doc/refman/5.7/en/server-configuration-defaults.html
+
+[mysqld]
+#
+# Remove leading # and set to the amount of RAM for the most important data
+# cache in MySQL. Start at 70% of total RAM for dedicated server, else 10%.
+# innodb_buffer_pool_size = 128M
+#
+# Remove leading # to turn on a very important data integrity option: logging
+# changes to the binary log between backups.
+# log_bin
+#
+# Remove leading # to set options mainly useful for reporting servers.
+# The server defaults are faster for transactions and fast SELECTs.
+# Adjust sizes as needed, experiment to find the optimal values.
+# join_buffer_size = 128M
+# sort_buffer_size = 2M
+# read_rnd_buffer_size = 2M
+server-id               = 550
+log_bin         = /binlog/mysql-bin.log
+expire_logs_days        = 10
+max_binlog_size         = 100M
+#binlog_do_db            = jinbag_data
+binlog_ignore_db        = mysql,information_schema,performance_schema
+log_slave_updates = 1
+slave-skip-errors=1022,1032,1062,1677
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+bind-address=0.0.0.0
+skip-name-resolve
+
+max-connect-errors = 10000
+max_connections = 1000
+wait_timeout = 1800
+back_log = 1024
+table_open_cache = 8192
+thread_stack = 1M
+key_buffer_size = 256M
+max_allowed_packet = 16M
+tmp_table_size = 256M
+max_heap_table_size = 64M
+myisam_sort_buffer_size=32M
+bulk_insert_buffer_size = 128M
+innodb_buffer_pool_size = 8G
+innodb_log_file_size = 256M
+innodb_log_buffer_size = 16M
+slow_query_log = 1
+long_query_time = 1
+
+# Disabling symbolic-links is recommended to prevent assorted security risks
+symbolic-links=0
+
+log-error=/var/log/mysql/mysqld.log
+pid-file=/var/run/mysqld/mysqld.pid

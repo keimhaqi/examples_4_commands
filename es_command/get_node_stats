@@ -1,0 +1,2 @@
+curl -X GET "192.168.1.104:9201/_nodes/stats"
+curl -X GET "localhost:9200/_nodes/nodeId1,nodeId2/stats"

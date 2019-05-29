@@ -3,7 +3,7 @@ curl -XGET '192.168.1.106:9200/todayspicks/_settings,_mappings?pretty'
 curl -XGET '192.168.1.106:9201/brochure/_settings,_mappings?pretty'
 
 curl -X GET "192.168.1.192:9200/macys_dynamic/_settings?human&pretty"
-curl -X GET "192.168.1.105:9201/jinbagsearch_hot/_settings,_mappings?human&pretty"
+curl -X GET "192.168.1.104:9201/search_unpopular_macys_dynamic_b/_settings,_mappings?human&pretty"
 
 curl -X GET "192.168.1.192:9200/macys_dynamic/_settings,_mapping?human&pretty"
 

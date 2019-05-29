@@ -1,0 +1,5 @@
+curl -X GET "localhost:9200/_cluster/state/{metrics}"
+curl -X GET "192.168.1.104:9201/_cluster/state/nodes,metadata/jet?pretty=true"
+
+
+curl -X GET "localhost:9200/_cluster/state"
