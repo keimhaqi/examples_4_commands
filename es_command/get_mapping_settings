@@ -5,7 +5,7 @@ curl -XGET '192.168.1.106:9201/brochure/_settings,_mappings?pretty'
 curl -X GET "192.168.1.192:9200/macys_dynamic/_settings?human&pretty"
 curl -X GET "192.168.1.104:9201/search_unpopular_macys_dynamic_b/_settings,_mappings?human&pretty"
 
-curl -X GET "192.168.1.192:9200/macys_dynamic/_settings,_mapping?human&pretty"
+curl -X GET "192.168.1.192:9200/linkshare/_settings,_mapping?human&pretty"
 
 
 select product_id,start_date,end_date from top_product_promo_info_vendor where start_date < '2017-12-29 15:21:48' and end_date > '2017-12-29 15:21:48' 

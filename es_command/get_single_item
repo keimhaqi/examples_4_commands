@@ -34,7 +34,7 @@ curl -XGET '192.168.1.106:9201/jinbagsearch/items/261072?pretty'
 curl -XGET '192.168.1.106:9201/jinbagsearch/items/270997?pretty'
 curl -XGET '192.168.1.192:9200/macys_static/items/macys.204625?pretty'
 
-curl -XGET '192.168.1.194:9200/jet_dynamic/items/jet.1950839?pretty'
+curl -XGET '192.168.1.194:9200/amazon_dynamic/items/amazon.9899?pretty'
 
 curl -XGET '172.18.0.3:9200/jinbagsearch_hot/items/10984624?pretty'
 curl -XGET '192.168.1.104:9201/macys_dynamic/items/macys.229650?pretty'
