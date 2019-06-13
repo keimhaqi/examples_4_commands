@@ -8,11 +8,11 @@ curl POST -k -H 'Content-Type: application/json' -d '
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-    "selectorId":11,
+    "selectorId":17,
     "num": 10,
-    "spuBlacklist":[]
+    "uniqueIdBlacklist":[1554]
 }
-' http://96.90.248.211:9124/api/v4/search/itemlist/underselector
+' http://localhost:9124/api/v4/search/itemlist/underselector
 curl -k -H 'Content-Type: application/json' -d '
 {
     "selectorId": 3,

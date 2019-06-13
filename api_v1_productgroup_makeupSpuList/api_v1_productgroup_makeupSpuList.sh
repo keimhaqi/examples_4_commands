@@ -1,7 +1,7 @@
 curl -k -H 'Content-Type: application/json' -d '
 {
-    "productGroupId": 63,
-    "attributeValueIds": "1334927,1334385",
+    "productGroupId": 79,
+    "attributeValueIds": "10240663,1334898,1334385",
     "vendorId":1237
 }
 ' http://96.90.248.211:9099/api/v1/productgroup/makeupspulist

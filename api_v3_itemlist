@@ -310,7 +310,7 @@ curl -k -H 'Content-Type: application/json' -d '
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-  "fields":[{"name": "productId", "values":[276049]}, {"name": "vendorId", "values":[3184]}]
+  "fields":[{"name": "productId", "values":[1547540]}, {"name": "vendorId", "values":[3184]}]
 }
 ' http://96.90.248.211:9124/api/v3/metrics/product
 

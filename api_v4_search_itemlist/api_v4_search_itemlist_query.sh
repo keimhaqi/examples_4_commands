@@ -141,6 +141,17 @@ curl -k -H 'Content-Type: application/json' -d '
 ' http://localhost:9124/api/v4/search/itemlist/product
 
 
+
+
+curl -k -H 'Content-Type: application/json' -d '
+{
+    "productId4":3514632,
+    "vendorId":3
+}
+' http://96.90.248.211:9124/api/v4/metrics/product
+
+
+
 curl -k -H 'Content-Type: application/json' -d '
 {
     "params":[
@@ -178,7 +189,7 @@ curl -k -H 'Content-Type: application/json' -d '
 curl -k -H 'Content-Type: application/json' -d '
 {
     "vendorId": 1237,
-    "attributeValueIds": "1334385,907698,1806691,907697"
+    "attributeValueIds": "1334385"
 }
 ' http://localhost:9124/api/v4/search/itemlist/productbygroup
 
@@ -190,7 +201,7 @@ curl -k -H 'Content-Type: application/json' -d '
     "vendorId": 1237,
     "attributeValueIds": "1334927,1334385"
 }
-' http://96.90.248.211:9124/api/v4/search/itemlist/productbygroup
+' http://localhost:9124/api/v4/search/itemlist/productbygroup
 
 
 
@@ -230,9 +241,9 @@ curl -k -H 'Content-Type: application/json' -d '
 
 curl -k -H 'Content-Type: application/json' -d '
 {
-    "spuList": ["pj45f68p","rq49ik2wp"]
+    "uniqueIdList": [1416,1427,1429,1444,1445,1456,1477,1479,1487,1516,1543,1600,1604,1618,1619,1417,1418,1423,1432,1451,1459,1463,1478,1492,1495,1526,1528,1547,1562,1565,1567,1602,1606,1433,1449,1474,1481,1489,1509,1511,1551,1558,1559,1571,1578,1583,1590,1605,1413,1414,1421,1422,1435,1440,1460,1471,1476,1482,1496,1502,1522,1544,1560,1584,1589,1599,1608,1611,1613,1431,1453,1462,1468,1470,1472,1473,1490,1512,1529,1534,1538,1545,1550,1553,1570,1579,1580,1588,1594,1597,1601,1610,1612,1409,1426,1437,1441,1454,1484,1485,1491,1498,1505,1507,1515,1519,1575,1581,1592,1607,1616,1410,1411,1412,1415,1425,1430,1439,1450,1483,1493,1497,1499,1510,1513,1521,1532,1541,1548,1549,1555,1556,1561,1569,1572,1585,1586,1591,1603,1609,1615,1434,1436,1446,1447,1457,1458,1466,1467,1486,1500,1504,1506,1514,1517,1520,1524,1525,1527,1546,1573,1582,1598,1614,1419,1442,1448,1452,1455,1465,1469,1475,1503,1518,1531,1536,1537,1539,1540,1542,1554,1557,1563,1564,1566,1576,1593,1595,1617,1420,1424,1428,1438,1443,1461,1464,1480,1488,1494,1501,1508,1523,1530,1533,1535,1552,1568,1574,1577,1587,1596]
 }
-' http://96.90.248.211:9124/api/v4/screen/itemlist/productbyselector
+' http://localhost:9124/api/v4/screen/itemlist/productbyselector
 
 
 

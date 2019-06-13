@@ -1,6 +1,6 @@
 curl -k -H 'Content-Type: application/json' -d '
 {
-    "selectorId": 24
+    "selectorId": 6
 }
 ' http://96.90.248.211:9099/api/v1/selector/makeupspulist
 

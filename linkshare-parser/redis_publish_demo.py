@@ -103,8 +103,8 @@ linkshare_parser_queue = '3184.wait'
 # call_parser_api('3184_3281764_94_May-08-19-21-01-13_1_cmp_delta.xml.gz')
 
 
-linkshare_parser_queue = '41098.wait'
-call_parser_api('41098_3281764_9230_May-06-19-23-58-20_cmp_delta.xml.gz')
+linkshare_parser_queue = '3184.wait'
+call_parser_api('demo.xml.gz')
 # call_parser_api('1237_3281764_1_273_cmp.xml.gz')
 
 
