@@ -17,4 +17,10 @@ df = pd.DataFrame(np.random.randn(6, 4), index=dates, columns=list('ABCD'))
 
 # print(df.columns)
 
-print(df.to_numpy())
+# print(df.describe())
+
+# print(df.T)
+
+print(df)
+
+print(df.sort_index(axis=1, ascending=False))
