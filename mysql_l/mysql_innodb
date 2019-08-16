@@ -1,0 +1,452 @@
+关键特性:
+1. Insert Buffer;
+
+处理脏页的流程:
+    Write Ahead Log:
+        当事务提交时, 先写重做日志, 再修改页;
+        写重做日志的流程:
+            先写redo log buffer;
+            之后再写入redo log files:
+                redo log files有多个文件, 循环使用;
+        写共享表空间的流程(当磁盘中保存数据的页发生损坏时, 可以做恢复):
+            先把脏页写到double write buffer中(memcpy);
+            把double write buffer中的信息写入共享表空间中, 并调用fsync保证OS层中的信息落到磁盘中;
+            在把double write buffer中的信息刷到磁盘中;
+
+一个页: 16K
+
+MySql InnoDB逻辑存储结构:
+
+表空间(Tablespace):
+    |__段(Segment): 数据段,是B+树的叶子节点, 索引段, 是B+树的非索引节点;
+        |__区(Extent): 由连续的页组成, 每隔区大小: 1MB, 每次从磁盘中读取4~5个区;
+            |__页(Page): InnoDB中页的大小为16KB, 一个区中有约64个连续的页;
+                |__行(Row):
+
+索引文件:
+    1) ISAM: 静态索引: 使用多叉树来实现
+    2) VSAM: 动态索引: 使用B树或变体来实现
+
+聚集索引: 
+    1) 按照每张表的主键构造一棵B+树;
+    2) 叶子节点存放表中一行的数据;
+    3) 叶子节点是一个双向链表;
+    4) 聚集索引能够在叶子节点上直接找到数据;
+    5) 页是通过双向链表链接, 页按照主键的顺序排序;
+    6) 每个页中记录是通过双向链表维护的, 物理存储上可以同样不按照主键存储;
+辅助索引:
+    1) 非聚集索引:
+        1.1) 叶节点只有指向主键的指针, 而不包含整行数据;
+        1.2) 叶节点除了包含键值以外, 每个叶子节点中的索引行中包含一个书签(bookmark)L:
+            1.2.1) bookmark告诉InnoDB可以在哪里找到与索引相对应的行数据;
+
+InnoDB的Page Header中保存插入的顺序信息:
+    1) PAGE_LAST_INSERT
+    2) PAGE_DIRECTION
+    3) PAGE_N_DIRECTION
+索引管理:
+    B+树索引管理:
+        ALTER TABLE tbl_name
+        | ADD {INDEX|KEY} [index_name]
+        [index_type] (index_col_name, ...) [index_option] ...
+
+        ALTER TABLE tbl_name
+        DROP PRIMARY KEY
+        | DROP {INDEX|KEY} index_name
+
+        CREATE [UNIQUE] INDEX index_name
+        [index_type]
+        ON tbl_name (index_col_name, ...)
+
+        DROP INDEX index_name ON tbl_name
+
+    Eg:
+        alter table t add key idx_b(b(100));    // 只索引字段b得前100个字符
+索引创建InnoDB内部实现流程:
+    对表加主键的操作的InnoDB内部实现流程:
+        1) 创建临时表(在参数tmpdir指定的目录小)(使用alter对表结构做了调整);
+        2) 把原表中的数据导入到临时表中;
+        3) 删除原表;
+        4) 最后把临时表崇明为原来的表;
+        5) 缺陷:
+            5.1) 不能做读写操作, 这些操作都会被阻塞;
+
+    FIC(Fast Index Creation):
+        1) 只能用来添加辅助索引;
+        2) 对原表添加S锁;
+        3) 不创建临时表;
+        4) 缺点:
+            4.1) 当有多个写事务提交到该表上时, 这些事务会被阻塞;
+
+    删除辅助索引:
+        1) InnoDB更新内部视图, 把辅助索引空间标记为可用;
+        2) 删除MySql内部视图上对该表的索引的定义;
+
+Online Schema Change:
+    1) 缺点:
+        1.1) 使用php来实现, 因此本身有局限;
+        1.2) 被修改的表必须有主键;
+        1.3) 表本身不能有外键和触发器;
+        1.4) 由于OSC执行过程中允许set_sql_bin_log=0, 动作不会同步到slave, 因此会出现数据不同步;
+
+Online DDL:
+    1) 如果出现innodb_online_after_log_max_size的错误, 解决方法:
+        1.1) 调大 innodb_online_after_log_max_size的参数值;
+        1.2) 把ALTER TABLE的LOCK模式改为SHARE模式或者更严格的共享模式;
+
+
+
+什么时候添加索引:
+    1.1) 通过在where语句中添加条件进行查询, 从而查询结果只占整个表中所有数据的很少一部分时, 添加B+树索引才有意义;
+判断索引是否有高选择性:
+    充要条件: Cardinality / n_rows_in_table ≈ 1
+    查看Cardinality: 
+        SHOW INDEX FROM Profile\G;
+
+联合索引的好处:
+    1) 对多个列构成的键值做了排序;
+    2) 对第二个键值进行了排序处理;
+
+
+覆盖索引(索引覆盖, covering index): 从辅助索引中可以得到查询的记录, 不需要再查一次聚集索引中的信息;
+    1) 优点:
+        辅助索引不包含整行记录, 存储空间小于聚集索引, 可以减少IO操作;
+    2) 做统计操作时, InnoDB会使用覆盖索引;
+
+不使用索引的情况:
+    1) 执行范围查询;
+    2) JOIN链接操作;
+    3) Eg:
+        3.1) 查询大量的整行数据时, 由于辅助索引或者覆盖索引都不包含整行数据,
+        3.2) 所以先查询一次之后, 还需要根据书签再次查询聚集索引, 
+        3.3) 此时是离散查询, 因此会消耗大量的时间, 
+        3.4) 莫不如直接查询聚集索引, 因为聚集索引是顺序存储到磁盘上的, 
+        3.5) 顺序查询比离散查询要快很多,
+        3.6) 由于磁盘的硬性限制导致的;
+
+        3.7) 如果使用固态硬盘, 则可以强制使用辅助索引(覆盖索引):
+            3.7.1) SELECT * FROM orderdetails FORCE INDEX(OrderID) WHERE orderid > 10000 AND orderid < 102000;
+
+
+MRR(Multi-Range Read):
+    1) MRR是数据访问变的较为顺序化;
+        1) 在查询辅助索引(覆盖索引)时, 首先根据得到的查询结果, 对主键进行排序;
+            1) 用到缓冲池;
+        2) 最后按照主键排序的顺序进行书签查找;
+    2) 减少缓冲池中页被替换的次数;
+    3) 批量处理对键值的查询操作;
+    4) 可以对部分范围查询进行拆分键值对, 从而过滤掉不满足查询条件的数据;
+    例如:
+        SELECT * FROM t WHERE key_part1 >= 1000 AND key_part1 < 2000 AND key_part2 = 1000;
+        能够对此查询进行拆分的依据是: 表t中有联合索引(key_part1, key_part2), 因为在一个B+树的索引中同时包含key_part1和key_part2的信息, 所以在辅助索引B+树中能够做分拆的动作;
+
+
+
+ICP(Index Condition Pushdown):
+    1) 首先根据辅助索引查找记录;
+    2) 之后根据WHERE条件来过滤记录;
+        2.1) WHERE条件能够过滤的前提是WHERE中指定的条件所指定的字段被包含在构成辅助索引的列字段中;
+        SELECT * FROM salaries WHERE
+        (from_date between '1986-01-01' AND '1995-01-01')
+        AND (salary between 38000 and 40000);
+
+        能够进行ICP优化是因为表salaries的主键是联合主键, 如下:
+        +-----------+---------+------+-----+---------+-------+
+        | Field     | Type    | Null | Key | Default | Extra |
+        +-----------+---------+------+-----+---------+-------+
+        | emp_no    | int(11) | NO   | PRI | NULL    |       |
+        | salary    | int(11) | NO   |     | NULL    |       |
+        | from_date | date    | NO   | PRI | NULL    |       |
+        | to_date   | date    | NO   |     | NULL    |       |
+        +-----------+---------+------+-----+---------+-------+
+        4 rows in set (0.01 sec)
+        所以在辅助索引的书签中包含from_date字段, 因此能够使用ICP;
+
+InnoDB哈希算法:
+    1) InnoDB存储引擎的表空间有一个space_id;
+    2) 用户查询的某个表空间的某个连续的16KB的页;
+    3) 即偏移量offset;
+    4) InnoDB存储引擎将space_id左移20位;
+    5) 然后加上space_id和offset:
+        5.1) 关键字K = space_id << 20 + space_id + offset;
+    6) 使用K做除法三列到某个槽中;
+    冲突解决方法: 
+    1) 链接法: 同一个哈希值被放在同一个链表下Mysql_InnoDB哈希表示例.png;
+
+全文索引:
+    1) 使用倒排索引来实现:
+        1.1) inverted file index: {单词, 单词所在文档的ID}
+        1.2) full inverted index: {单词, (单词所在的文档ID, 在具体文档中的位置)}
+    2) 计算相关性依据:
+        2.1) word是否出现在文档;
+        2.2) word在文档中出现的次数;
+        2.3) word在索引列中的数量;
+        2.4) 多少个文档包含该word;
+    3) InnoDB会自行补充FTS_DOC_ID, 以用作与Axuiliary Table的word列进行映射;
+        3.1) 如果显示定义了FTS_DOC_ID, InnoDB不会补充定义:
+        CREATE TABLE fts_a(
+            FTS_DOC_ID BIGINT UNSIGNED AUTO_INCREMENT NOT NULL,
+            body TEXT,
+            PRIMARY KEY(FTS_DOC_ID)
+        );
+    Auxiliary Table(辅助表):
+        倒排索引把word(单词)放在Auxiliary Table中;
+    FTS Index Cache(全文检索索引缓存):
+        提高全文检索的性能;
+        1) 所以新增的单词或者文本被添加到FTS Index Cache中;
+        2) InnoDB定期的把FTS Index Cache中的内容刷新到磁盘中;
+        3) 当数据库关闭时, FTS Index Cache中的数据会同步到磁盘上的Auxiliary Table中;
+        4) 当数据库宕机时, 一些FTS Index Cache中的数据可能没有被同步到Auxiliary Table中;
+            4.1) 下次重启数据库是, 当用户对表进行全文检索(查询或者插入)时, InnoDB会自动读取未完成
+                 的文档, 然后进行分析操作, 再将分词的结果放入到FTS Index Cache中;
+    缺陷:
+        1) 每张表只能有一个全文检索的索引;
+        2) 由多列组合而成的全文检索的索引列必须使用相同的字符集与排序规则;
+        3) 不支持没有单词界定符(delimiter)的语言, 如中文, 日语, 韩语等;
+    全文检索的SQL示例:
+        select * from articles where match(title, body) against('database' in natural language mode);
+
+    建全文检索表的SQL示例:
+    CREATE TABLE articles (
+        id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        title VARCHAR(200),
+        body TEXT,
+        FULLTEXT (title, body)
+    )ENGINE=InnoDB;
+
+    INSERT INTO articles (title, body) VALUES
+    ('MySQL Tutorial', 'DBMS stands for DataBase    ...'),
+    ('How To Use MySQL Well', 'After you went through a ...');
+
+    stopword创建语句:
+        create table user_stopword(
+            value varchar(30)
+        )engine=innodb charset=utf8;
+
+        set global innodb_ft_server_stopword_table = "sakila/user_stopword";
+    
+
+
+lock和latch的区别:
+    lock和latch的区别.png
+锁:
+    共享锁(S):  允许事务读一行数据;
+    排它锁(X):  允许事务删除或更新一行数据;
+    意向共享锁(S):  事务想要获得一张表中某几行的共享锁;
+    意向排它锁(X):  事务想要获得一张表中某几行的排它锁;
+一致性非锁定读:
+    当读取数据时, 如果某行被添加了X锁, 则直接读取该行记录的先前版本;
+    InnoDB在事务隔离级别READ COMMITTED和REPEATABLE READ中使用非锁定一致性读, 但是对于快照数据的定义不同:
+        READ COMMITTED: 读取被锁定行的最新一份快照数据;
+        REPEATABLE READ: 读取事务开始时的行数据版本;
+一致性锁定读:
+    读取时, 对行添加X或者S锁, 以获取逻辑上一致性的数据;
+    SQL语句加锁:
+        BEGIN;
+        START TRANSACTION;
+        SELECT ...... FOR UPDATE;
+        SELECT ...... LOCK IN SHARE MODE;
+        或者SET AUTOCOMMIT=0;
+
+
+一致性非锁定表 & 一致性锁定表:
+    当有外键约束的业务时, 在添加外键时, 如果此时父表正在进行删除id=3的操作;
+    这时候如果在另一个事务中对子表添加外键约束是如果使用"一致性非锁定表", 则会出现父表和字表的外键约束不一致的情况;
+    因为此时另一个事务所读取的是id=3这条数据的snapshot;
+    应该使用"一致性锁定表";
+
+
+MVCC: 一个行记录可能有不止一个快照数据, 该技术被称为行多版本技术, 使用此带来的并发控制, 称为多版本并发控制;
+
+
+行锁的3中算法:
+    1) Record Lock: 单个记录上的锁;
+    2) Gap Lock: 间隙锁, 锁定一个范围, 但不包含记录本身;
+    3) Next-Key Lock: Gap Lock + Record Lock, 锁定一个范围, 并且锁定记录本身;
+
+Phantom Problem:
+    Phantom Problem 是指在同一事务下, 连续执行两次同样的SQL语句可能导致不同的结果, 第二次
+    的SQL语句可能会返回之前不存在的行;
+
+    InnoDB使用Next Key Locking来避免发生Phantom Problem, 当对某一个主键进行操作从而产生对这个主键
+    的一行数据加排他锁时, InnoDB会产生(id, +∞)的锁, 从而避免了发生Phantom Problem的情况;
+
+锁导致的问题:
+    1) 脏读:
+        同一事务在连续的两次读取的结果不同, 读取的是另一个事务修改但是未提交的数据;
+        脏数据: 指事务对缓冲池中行记录的修改, 并且还没有被提交(commit);
+    2) 不可重复读:
+        同一事务的连续两次读取的结果不同, 读取的是另一个事务修改并提交的数据;
+        与脏读的区别:
+            脏读: 读取的是修改但是未提交的数据;
+            不可重复读: 读取的是修改并已经提交的数据;
+    3) 丢失更新:
+        1) 事务T1查询一行数据, 放入本地内存, 并显示给一个终端用户User1;
+        2) 事务T2也查询该行数据, 并将取得的数据显示给终端用户User2;
+        3) User1修改这行记录, 更新数据库并提交;
+        4) User2修改这行记录, 更新数据库并提交;
+        5) 这种情况下, User1的修改记录会丢失;
+        在数据库层面基本不会发生丢失更细的问题;
+        但是在应用层面会发生丢失更新的问题;
+        解决方法:
+            在查询时添加排它锁:
+            BEGIN;
+            SELECT cash into @cash
+            FROM account
+            WHERE user = pUser FOR UPDATE;
+
+            ....
+            UPDATE account
+            SET cash=@cash-9000
+            WHERE user=pUser;
+            COMMIT
+
+NOTE:
+    1205异常: 表示等待锁资源时超时了, InnoDB会做Rollback或者Commit的操作;
+
+死锁:
+    是指两个或两个以上的事务在执行过程中, 因争夺锁资源而造成的一种互相等待的现象;
+    解决死锁的方法:
+        使用等待图(wait-for graph)解决死锁: 主动监测死锁, 如果有死锁, 则把undo量最小的事务进行回滚;
+        在等待图中使用深度优先的非递归算法来检测是否有环;
+
+第7章: 事务
+
+事务: 把数据库从一种一致的状态转换为另一种一致的状态;
+事务符合ACID:
+    1) 原子性(atomicity): 一个事务要么所有操作都发生, 要么所有操作都不发生;
+    2) 一致性(consistency): 事务将数据库从一个状态转变为下一种一致的状态;
+    3) 隔离性(isolation): 事务在提交前, 其他事务看不到该事物的操作结果;
+    4) 持久性(durability): 事务一旦提交, 结果就是永久性的, 及时发生宕机等故障, 数据库也能将数据恢复;
+InnoDB支持的事务: 
+    1) 扁平事务: 
+    2) 带有保存点的事务;
+    3) 链事务;
+    4) 分布式事务;
+
+binlog和redo log之间的区别:
+    1) redolog是在InnoDB的引擎层产生的, 而binlog是在MySQL数据库的上层产生的, 并且binlog不仅仅针对于InnoDB存储引擎;
+        , MySQL数据库中的任何存储引擎对于数据库的更改都会产生binlog
+    2) redolog和binlog的内容形式不同, MySQL数据库上层的binlog是一种逻辑日志, 记录的是SQL语句, 而redolog中保存的是
+        物理格式的日志, 其记录的是对于每一个物理页的修改;
+    3) redolog和binlog写入磁盘的时间不同, binlog只在事物提交完成后进行一次写入, 而InnoDB存储引擎的redolog在事物的执行中
+        不断的被写入;
+
+redo:
+    重做日志用来实现事务的持久性, D(ACID);
+    由两部分组成:
+        1) redo log buffer;
+        2) redo log file;
+    由于以log block为单位把缓冲区中的内容写入log file, 而磁盘每次操作的单位是log block.size == 512字节, 因此不需要做double write;
+
+log block: 512字节;
+
+undo:
+    undo中对页的重用:
+        当事务提交时, 首先将undo log放入链表中, 然后判断undo页的使用空间是否小于3/4, 若是则表示该undo页可以被重用;
+        之后新的undo log记录在当前undo log的后面;
+        由于存放undo log的列表是以记录进行组织的, 而undo页可能存放着不同事务的undo log, 因此purge操作需要涉及磁盘的离散
+        读取操作, 比较缓慢;
+    insert undo log: insert 操作中产生的undo log;
+    update undo log: update 和delete操作产生的undo log;
+purge:
+    delete和update操作可能不直接删除原有的数据, 而是对主键的delete flag设置为1, 记录仍然存在于B+树中;
+    辅助索引上对应的记录仍然没有做任何处理, 也没有产生undo log;
+    真正的删除操作有purge完成 -- 为了支持MVCC;
+    purge做实际的delete和update操作 -- 清理之前行记录的版本;
+
+    history 列表: InnoDB根据事务的提交顺序把undo log链接起来;
+
+    purge处理很多的undo page时, cpu和磁盘IO会过度集中undo log的处理, 使性能下降;
+    参数innodb_max_purge_log: 该参数的值与history list的长度做比较, 如果前者小于history list的长度时, 
+    会延缓DML操作, 延缓算法:
+        delay = ((length(history_list) - innodb_max_purge_lag) * 10 ) - 5(毫秒)
+    delay应用于每一行数据的操作;
+group commit:
+    通过该操作在一次fsync中可以刷新确保多个事务日志被写入文件
+
+事务控制:
+    1) START TRANSACTION | BEGIN: 显式开启一个事务;
+        1.1) 在存储的过程中MySQL会把begin自动识别为begin...end, 因此在存储过程中只能使用START TRANSACTION;
+    2) COMMIT: 提交事务, 并使已对数据库做的所有修改成为永久性的;
+        2.1) 当completion_type=1时, COMMIT WORK等价于COMMIT AND CHAIN, 表示马上开启一个相同隔离级别的事务;
+        2.2) 当completion_type=0时, COMMIT与COMMIT WORK等价;
+    3) ROLLBACK: 回滚, 结束用户的事务, 并撤销正在进行的所有未提交的修改, 与ROLLBACK WORK等价;
+    4) SAVEPOINT identifier : SAVEPOINT允许在事物中创建保存点, 一个事务可以有多个SAVEPOINT;
+    5) RELEASE SAVEPOINT identifier: 删除一个事务的保存点, 当删除一个不存在的保存点时会抛出异常;
+    6) ROLLBBACK TO [SAVEPOINT] identifier: 可以把事务回滚到指定的标记点;
+    7) SET TRANSACTION: 设置隔离级别;
+NOTE:
+    1.) 当执行SQL语句出现错误时, 不会马上回滚, 此时需要显式的执行COMMIT或者ROLLBACK;
+    2.) 当执行ROLLBACK TO SAVEPOINT之后, 事务不会马上回滚, 因此需要显式的执行COMMIT或者ROLLBACK;
+
+对于事务操作的统计:
+    TPS: Transaction Per Second, 表示每秒事务处理的能力;
+    TPS = (com_commit + com_rollback) /time
+    Sql query: SHOW GLOBAL STATUS LIKE 'com_commit'\G;
+
+事务的隔离级别:
+    1) READ UNCOMMITTED: 浏览访问;
+    2) READ COMMITTED: 游标稳定, 只有在唯一性约束检查和外键约束的检查需要gap lock;
+    3) REPEATABLE READ: 
+    4) SERIALIZABLE: 在每一个select语句后自动加上LOCK IN SHARE MODE, 对一致性的非锁定读不再支持;
+        4.1) 一般在InnoDB存储引擎的分布式事务中使用;
+
+InnoDB默认的事务隔离级别是: REPEATABLE READ, 使用Next-Key Lock锁算法避免幻读的产生;
+
+设置事务隔离级别:
+    SET [GLOBAL | SESSION] TRANSACTION ISOLATION LEVEL
+    {
+        READ UNCOMMITTED
+        | READ COMMITTED
+        | REPEATABLE READ
+        | SERIALIZABLE
+    }
+
+
+分布式事务(XA):
+	XA由一个或多个资源管理器, 一个事务管理器, 一个应用程序组成:
+		1) 资源管理器: 提供访问事务资源的方法, 通常一个数据库就是一个资源管理器;
+		2) 事务管理器: 协调参与全局事务中的各个事务, 需要和参与全局事务的所有资源管理器进行通信;
+		3) 应用程序: 定义事务的边界, 是定全局事务中的操作;
+	XA分布式事务的两段式提交(属于外部事务, 因为资源管理器是MySQL数据库本身):
+		1) 第一阶段: 所有参与全局事务的节点都开始准备(PREPARE), 告诉事务管理器它们准备好提交了;
+		2) 第二阶段: 事务管理器告诉资源管理器执行ROLLBACK还是COMMIT:
+			2.1) 任何一个节点显示不能提交, 则所有节点都被告知需要回滚;
+	XA内部事务: 存储引擎与插件之间, 或者存储引擎与存储引擎之间:
+		事务提交基于分布式事务的流程:
+		Master事务提交:
+		|__write binlog @1
+		|__把binlog信息发送给slave db @2
+		|____________________|__relay log
+		|____________________|__disk
+		|__innodb write redo log @3
+		当@2之后发生宕机, 则主从数据会不一致;
+		解决方法:
+		在binlog与InnoDB之间使用XA事务:
+		1) 当事物提交时, InnoDB会先做一个PREPARE操作, 把xid写入;
+		2) 接着在进行二进制日志的写入;
+		3) 如果在InnoDB提交前, MySQL宕机了, 那么MySQL在重启之后会先检查准备的UXID事务是否提交:
+			3.1) 如果没有, 则InnoDB在进行一次提交操作;
+	
+长事务:
+	执行时间较长的事务:
+		解决方法:
+		把长事务分成小批量事务, 并且每执行完一个小批量事务, 就记录执行进度, 以便当数据库宕机时从最近的进度开始继续执行;
+		特别注意:
+			每执行一个小批量并记录进度时, 认为的加上一个共享锁, 保证事务在处理的过程中, 没有其他事务可以来更新表中的数据;
+	例如: 银行里更新1亿个用户的账户信息: 计算, 更新利息:
+		每次更新1亿个用于的利息信息很费时, 硬件还是软件都会比较费时, 无法避免, 但是如果发生错误回滚和重新执行代价很大;
+		解决方法:
+			把1亿个用户的更新操作分成小批量更新操作, 每次更新1000万个用户, 并且在其他表中记录每次更新的最大用户id, 当宕机时
+			可以从最大用户id开始重新事务, 代价很低, 并且还能够记录进度, 同时添加一个共享锁, 以便避免在更新时有其他事务修改数据;	
+
+
+
+
+    
+
+
+
+
+

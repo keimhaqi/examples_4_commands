@@ -1,0 +1,235 @@
+Thread
+More exactly it is Thread of Execution which is the smallest unit of processing.
+
+1) It is scheduled by an OS.
+2) In general, it is contained in a process.
+   So, multiple threads can exist within the same process.
+3) It shares the resources with the process: The memory, code (instructions), and global variable (context - the values that its variables reference at any given moment).
+4) On a single processor, each thread has its turn by multiplexing based on time. On a multiple processor, each thread is running at the same time with each processor/core running a particular thread.
+
+Identifying Multithread Opportunities
+So, multithreading is a good thing. How can we identify multithreading oppurtinities in codes?
+
+1) We need runtime profile data of our application. 
+    Then, we can identify the bottleneck of code.
+2) Eaxmine the region, and check for dependencies. 
+    Then, determine whether the dependencies can be broken into either
+    2.1) multiple parallel task, or
+    2.2) loop over multiple parallel iteration.
+3) At this stage, we may consider a different algorithm.
+4) We need to estimate the overhead and performance gains. 
+    Will it give us linear scaling with the number of thread?
+5) If the scaling does not look promising, we may have to broaden the scope of our analysis.
+
+
+How to avoid deadlock
+
+1) Don't request another resource while holding one resource.
+2) If you ever need to acquire two locks at once acquire locks in a fixed order.
+3) Don't wait for another thread if there's a chance it's waiting for you.
+4) Try to avoid holding locks for longer than we need to.
+
+Livelock:
+1) A thread often acts in response to the action of another thread. 
+    If the other thread's action is also a response to the action of another thread, 
+    then livelock may result.
+
+Mutex (Mutual Exclusion): 互斥
+有两种实现方式:
+    1) Mutual Exclusion: Mutual exclusion ensures that a group of atomic actions 
+        (critical section cannot be executed by more than one thread at a time). 
+        优点: self-consistent view of the shared data;
+        缺点: 可能会产生死锁;
+    2) Condition Synchronization: 
+        在有互斥量的前提下, 针对于临界区, 需要满足部分条件才可以进行对应的操作, 例如:
+            银行账户的例子中, 余额要大于0并且要同时拥有互斥量的锁;
+
+Critical section(临界区): 每个线程中访问临界资源的那段代码，不论是硬件临界资源，还是软件临界资源，多个线程必须互斥地对它进行访问;
+                OS对临界区提供如下原子操作: 
+                    1) compare-and-swap, 
+                    2) test-and-set, 
+                    3) test-and-clear 
+
+Spinlock: 自旋锁是“原地等待”的方式解决资源冲突的，
+        即，一个线程获取了一个自旋锁后，另外一个线程期望获取该自旋锁，获取不到，只能够原地“打转”（忙等待）。
+        由于自旋锁的这个忙等待的特性，注定了它使用场景上的限制 —— 自旋锁不应该被长时间的持有（消耗 CPU 资源）
+    
+adaptive mutex lock:
+
+
+进入或者离开临界区需要满足三个条件:
+    1) Mutual exclusion 
+        When a thread is executing in its critical section, 
+        no other threads can be executing in their critical sections.
+    2) Progress 
+        If no thread is executing in its critical section and there are threads that 
+        wish to enter their critical sections, only the threads that are executing in their 
+        entry- or exit-sections can participate in the decision about which 
+        thread will enter its critical section next, and this decision cannot be postponed indefinitely.
+    3) Bounded waiting 
+        After a thread makes a request to enter its critical section, 
+        there is a bound on the number of times that 
+        other threads are allowed to enter their critical sections before this thread's request is granted.
+
+
+Slim Reader/Writer Locks:
+    对于临界区的数据, 多个线程可并发读, 但是当有一个线程在写临界区中的数据时, 其他线程无法进入该临界区;
+    在同一个进程内的线程里可共享, 不能跨进程共享: Slim reader/write locks cannot be shared across processes.
+
+Semaphores(信号量):
+
+Monitors: 用来查看一个程序中, 信号量是如何被使用的;
+
+
+Synchronization - Semaphore vs. Monitor
+
+Memory Barrier: 
+    A memory barrier is a type of nonblocking synchronization tool used to ensure that 
+    memory operations occur in the correct order. 
+
+
+Volatile Variable: Applying the volatile keyword to a variable forces the compiler to load that variable from memory each time it is used.
+    1) The volatile keyword does not ensure that the variable is accessed correctly by our code
+
+Thread Safe: A code is thread safe if it functions correctly in concurrent executions by multiple threads.
+
+判断代码是否线程安全的依据:
+To check if a piece of code is safe:
+    1) When it accesses global variable.
+    2) Alloc/realloc/freeing resources of global scope.
+    3) Indirect access through handles or pointers.
+
+是代码线程安全的方法:
+    1) Atomic operations - available runtime library (machine language instructions).
+    2) Mutex
+    3) Using Re-entrancy.
+
+Re-entrancy: A code is re-entrant if it can be safely called again.
+    若一个程序或子程序可以「在任意时刻被中断然后操作系统调度执行另外一段代码，
+    这段代码又调用了该子程序不会出错」，则称其为可重入（reentrant或re-entrancy）的
+    the re-entrant section of code usually use local variables only in such a way that 
+    each and every call to the code gets its own unique copy of data
+
+
+Thread Safty and Signals:
+    The first rule for implementing signal handlers in applications is to 
+    avoid assumptions about which thread is handling the signal. 
+    If a specific thread wants to handle a given signal, 
+    we need to work out some way of notifying that thread when the signal arrives. 
+    We cannot just assume that installation of a signal handler from that 
+    thread will result in the signal being delivered to the same thread.
+
+原子操作: An atomic operation is one that will either successfully complete or fail. 
+
+
+Join
+A thread can execute a thread join to wait until the other thread terminates
+
+线程个数:
+    1) 一个机器可以有多少个线程:
+    swap / stack
+    swap: size of the virtual space
+    stack: stack size
+
+The important parameters are:
+
+processor : 0-15
+physical id : 0-1
+siblings : 8
+cpu cores : 4
+
+
+The machine is using hyper-thread. 
+We know this because the siblings (8) is double the number of cpu cores (4). 
+If not hyper-thread, siblings should be equal to cpu cores. 
+So, we have 8 processors (4 cores x hyperthread(2) = 8) for each cpu package (physical id = 0, 1), 
+which give us 8 x 2 = 16 processors.
+
+
+Kernel-level and User-level Threads:
+1) OS scheduling ensures apps use host CPU/core resources appropriately.
+2) Modern OS platforms provide various models for scheduling threads.
+3) A key difference between the models is the contention scope in which threads compete for system resources, such as CPU time.
+    3.1) System contention scope (kernel threading)
+        3.1.1) Threads compete directly with other system scope threads regardless of what process they're in.
+        3.1.2) 1:1 mapping between user and kernel threads.
+        3.1.3) Pros:: Can leverage hardware parallelism effectively.
+        3.1.4) Cons:: Higher thread creation and Context switching overhead.
+    3.2) Process contention scope (user threading)
+        3.2.1) Threads in the same process compete with each other though not directly with threads in other processes.
+        3.2.2) N:1 mapping between user and kernel threads.
+        3.2.3) Pros:: Lower thread creation and context switching overhead.
+        3.2.4) Cons:: Can't leverage hardware parallelism effectively and has odd blocking semantics.
+
+OS Multithreading Mechanisms:
+    Multithreading mechanisms are provided by the OS to handle lifetime management, synchronization, properties, and thread-specific storage. The thread lifetime operations include operations to
+
+    1) Create threads
+        1.1) pthread_create() (PThreads)
+        1.2) CreateThread() (WindowsO
+    2) Terminate threads
+        2.1) Voluntarily- by reaching the end point of the thread entry function
+            or calling pthread_exit()(PThreads) or ExitThread()(Windows).
+        2.2) Involuntarily- by being killed via a signal or an asynchronous thread cancellation operations
+            pthread_cancel()(PThreads) or TerminateThread()(Windows).
+    3) Thread synchronization operations that enable created threads to be
+        3.1) Detached - where the OS reclaims storage used for the thread's state and exit status after it has exited.
+        3.2) Joinable where the OS retains identity and exit status of a terminating thread so other threads can synchronize with it.
+    4) Thread property operations include 
+        operations to set and get thread properties, such as priority and scheduling class.
+    5) Thread-specific storage 
+        This is similar to global data except that the data is only global in the scope of the executing thread.
+    6) (Note) Developing concurrent apps using native OS concurrency mechanisms can cause portability and reliability problems.
+
+Socket:
+    A socket connection means the two machines have information about each other, including network location (IP address) and TCP port.
+
+    1) Stream Sockets:
+        Stream sockets provide reliable two-way communication similar to when we call someone on the phone. One side initiates the connection to the other, and after the connection is established, either side can communicate to the other.
+        In addition, there is immediate confirmation that what we said actually reached its destination. 
+        Stream sockets use a Transmission Control Protocol (TCP), which exists on the transport layer of the Open Systems Interconnection (OSI) model. The data is usually transmitted in packets. TCP is designed so that the packets of data will arrive without errors and in sequence. 
+        Webservers, mail servers, and their respective client applications all use TCP and stream socket to communicate.
+
+    2) Datagram Sockets:
+        Communicating with a datagram socket is more like mailing a letter than making a phone call. The connection is one-way only and unreliable. 
+        If we mail several letters, we can't be sure that they arrive in the same order, or even that they reached their destination at all. Datagram sockets use User Datagram Protocol (UDP). Actually, it's not a real connection, just a basic method for sending data from one point to another.
+        Datagram sockets and UDP are commonly used in networked games and streaming media.
+
+
+
+TCP vs. UDP
+What's the difference between TCP and UDP?
+
+1) TCP (Transmission Control Protocol) 
+    TCP is a connection-oriented protocol. A connection can be made from client to server, and from then on any data can be sent along that connection.
+    1.1) Reliable 
+        When we send a message along a TCP socket, we know it will get there unless the connection fails completely. If it gets lost along the way, the server will re-request the lost part. This means complete integrity. In other words, the data will not get corrupted.
+    1.2) Ordered 
+        If we send two messages along a connection, one after the other, we know the first message will get there first. We don't have to worry about data arriving in the wrong order.
+    1.3) Heavyweight 
+        When the low level parts of the TCP stream arrive in the wrong order, resend requests have to be sent. All the out of sequence parts must be put back together, which requires a bit of work.
+
+2) UDP (User Datagram Protocol) 
+    UDP is connectionless protocol. With UDP we send messages (packets) across the network in chunks.
+    2.1) Unreliable 
+        When we send a message, we don't know if it'll get there. It could get lost on the way.
+    2.2) Not ordered 
+        If we send two messages out, we don't know what order they'll arrive in.
+    2.3) Lightweight 
+        No ordering of messages, no tracking connections, etc. It's just fire and forget! This means it's a lot quicker, and the network card/OS have to do very little work to translate the data back from the packets.
+
+
+
+Circuit Switching vs. Packet Switching
+    1) Circuit Switching
+        In a circuit-switched network, before communication can occur between two devices, a circuit is established between them. Once it's setup, all communication between these devices takes place over this circuit, even though there are othr possible ways between them.
+    2) Packet Switching
+        In a packet-switched network, no circuit is set up before exchanging data between devices. Any data, even from the same file or communication, may take place any number of paths as they travel from one device to another. 
+        The data is broken up into packets and sent over the network. We can route, combine, or fragment the the packets as required to get them to their destination. On the receiving end, the process is reversed-the data is read from the packets and reassembled to form the original data.
+        Advantages:
+        2.1) No per-flow state required : packet switches don't need state for each flow. In other words, each packet is self-contained. So, no per-flow state to be added/removed/stored and changed upon failure.
+        2.2) Efficient sharing of links: If we reserved a fraction of links for each flow, the links would be used inefficiently. Packet switching allows flows to use all available link capacity.
+        2.3) Actually, the packet switching enables us to utilize the burst of network traffic. For example, while we are talking with another person on the phone, there are more silent periods than actual talking periods. So, for those silent periods we do not have to send packets, and we end up reducing the traffic by using pack switching.
+
+
+

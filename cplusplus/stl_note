@@ -1,0 +1,156 @@
+stl六大组件的关系:
+    1) Container 通过Allocator取得数据的存储空间, 
+    2) Algorithm 通过 iterator 存取 Container内容, 
+    3) Functor可以协助Algorithm完成不同的策略变化,
+    4) Adapter可以修饰或桃姐Functor
+
+stl空间配置器:
+    1) stl容器在申请空间和释放空间的时候使用空间配置器来实现对应的功能:
+        1) 空间配置器所控制的存储空间可以是内存, 也可以是外存(硬盘);
+    2) new, operator new, placement new:
+        1) new : 通常使用的关键字, 用来向堆申请空间并做对应的初始化;
+            1.1) 对应delete
+        2) operator new: 申请内存空间, 但不做任何初始化; // #include<new.h>
+            2.1) 对应operator delete
+        3) placement new: 向指定的指针使用指定的初值做初始化;
+            3.1) new (p) int(4) // p为指针, 指向未初始化的存储空间, 调用对应类型的constructor 
+            3.2) 对应析构函数;
+
+    3) 配置器的次配置力(sub-allocation)
+        1) std::allocator
+            对operator new和operator delete做了一层包装;
+        2) #include<stl_alloc.h>
+            使用alloc::allocate()申请未做初始化的空间;
+            使用alloc::deallocate()释放已经析构的空间;
+        3) #include<stl_construct.h>
+            3.1) std::construct调用对应的类型在未初始化的空间做初始化;
+            3.2) std::destroy调用对应类型的析构函数对空间做析构的动作;
+
+            |--<stl_construct.h>
+<memory>----|--<stl_alloc.h>
+            |--<stl_uninitialized.h>
+
+    4) 构造&析构工具: construct() & destroy()
+        4.1) construct使用placement new来调用指定类型的构造函数,进而调用指定类型的构造函数和指定的初始值做初始化;
+        4.2) destroy: 3个版本;
+            4.2.1) 普通的destroy(), 调用对象的析构函数;
+            4.2.2) 接收迭代器参数, 析构迭代器范围的对象:
+                4.2.2.1) 如果类型有nontrivial destructor, 则需要一个一个对象调用析构函数;
+                4.2.2.2) 如果类型没有nontrivial destructor, 可以批量删除(实际什么都不做);
+    5) 空间的配置与释放(std::alloc)
+        5.1) 双层配置器:
+            5.2.1) 一级配置器使用malloc和free；
+            5.2.2) 二级配置器:
+                5.2.2.1) if 配置区块 > 128B: 使用一级配置器;
+                5.2.2.2) if 配置区块 < 128B: 使用memory pool;   // 使用链表处理内存碎片;
+
+                    精彩代码:
+                    static void * allocate(size_t n){
+                        void * result = malloc(n);
+                        if(0 == result) result = oom_malloc(n);
+                        return result;
+                    }
+
+                    template<int inst>
+                    void * __malloc_alloc_template<inst>::oom_malloc(size_t n){
+                        void (* my_alloc_handler)();
+                        void * result;
+                        for(;;){ //不断尝试释放, 配置, 再释放, 再配置;
+                            my_alloc_handler = __malloc_alloc_oom_handler;
+                            if(0 == my_alloc_handler) {__THROW_BAD_ALLOC;}
+                            (*my_alloc_handler)();  // 调用处理例程, 企图释放内存;
+                            result = malloc(n); // 再次尝试配置内存;
+                            if(result) return (result);
+                        }
+                    }
+                5.2.2.2.1) 二级配置器:
+                    1) 对申请的内存空间上调至8的倍数;
+                        enum {__ALIGN = 8};
+                        enum {__MAX_BYTES = 128};
+                        enum {__NFREELISTS = __MAX_BYTES / __ALIGN};    // free-lists个数;
+                        static size_t ROUND_UP(size_t bytes){
+                            return (((bytes) + __ALIGH - 1) & ~(__ALIGN - 1));
+                        }
+
+                        精彩设计:
+                        union obj{
+                            union obj * free_list_link;
+                            char client_data[1];    // 用户的角度看, 该字段存放用户数据所在的内存地址;
+                        }
+                    2) 空间配置allocate;
+                    3) 空间释放deallocate;
+                    4) 重新free-lists填充;
+                    5) 内存池管理;
+    6) 内存基本处理工具: uninitialized_copy, uninitialized_fill, uninitialized_fill_n:
+        6.1) uninitialized_copy:
+            template <class InputIterator, class ForwardIterator>
+            ForwardIterator
+            uninitialized_copy(InputIterator first, InputIterator last, 
+                ForwardIterator result);
+            6.1.1) 把迭代器范围[first, last)的每个对象都拷贝到从result开始的连续内存中, 对于每一个对象调用
+                    construct(&*(result + (i - first)), *i);
+            6.1.2) 满足commit or fallback;
+        6.2) uninitialized_fill:
+            template <class ForwardIterator, class T>
+            void uninitialized_fill(ForwardIterator first, ForwardIterator last, const T& x);
+            6.2.1) 在迭代器范围[first, last)的未初始化内存中, 生成x的复制品(调用construct(&*i, x));
+            6.2.2) 满足commit or fallback;
+        6.3) uninitialized_fill_n:
+            template <class ForwardIterator, class Size, class T>
+            ForwardIterator
+            uninitialized_fill_n(ForwardIterator first, Size n, const T& x);
+            6.3.1) 在迭代器范围[first, last)的未初始化内存中, 调用T的copy constructor
+                    产生x的复制品;
+            6.3.2) 满足commit or fallback;
+    7) uninitialized_copy, uninitialized_fill, uninitialized_fill_n:
+        7.1) 对于大规模元素初值设置很有帮助;
+        7.2) 在最坏情况使用construct();
+        7.3) 在最佳情况使用C标准函数memmove()直接进行内存数据的移动;
+                
+Chapter3: Iterators & traits skills
+    1) Partial Specialization(偏特化)的意义:
+        定义1: 如果class template拥有一个以上的template参数, 我们可以针对其中的某个(或数个, 但非全部)template参数进行
+            特化工作(将泛华版本中的某些template参数赋予明确的指定);
+        定义2: 针对(任何)template参数更进一步的条件限制所涉及出来的一个特化版本;
+        示例:
+        template<typename T>
+        class C {......};
+
+        特化:
+        template<typename T>
+        class C<T*> {......};
+        指针不能使用内嵌类型来解决的原因: 原生指针不是class;
+
+        精彩代码设计:
+            // 如果类型T自定义了一个内嵌类型表示value_type, 则iterator_traits直接使用该value_type;
+            template<class T>
+            struct iterator_traits{
+                typedef typename T::value_type value_type;
+                typedef typename T::iterator_category iterator_category;
+                typedef typename T::difference_type difference_type;
+                typedef typename T::pointer pointer;
+                typedef typename T::reference reference;
+            }
+            // 提供特化版, 如果提供的是一个指针, 则返回指针实际指向的类型;
+            template<class T>
+            struct iterator_traits<T*>{
+                typedef T value_type;
+            }
+            // 提供特化版, 如果提供的是指向常量的指针, 则返回非常量的类型;
+            template<class T>
+            struct iterator_traits<const T*>{
+                typedef T value_type;
+            }
+    2) 迭代器分类:
+        2.1) Input Iterator: 这种迭代器所指的对象, 不允许外界的改变, 只读(read only);
+        2.2) Outpu Iterator: 只写(write only);
+        2.3) Forward Iterator: 允许"写入型"算法(例如replace())在此种迭代器所形成的区间上进行读写操作;
+        2.4) Bidirectional Iterator: 可双向移动, 某些算法需要逆向走访某个迭代器区间(例如逆向拷贝某范围内的元素), 可以使用Bidirectional Iterator;
+        2.5) Random Access Iterator: 可任意访问迭代器中的内容, p+n, p-n, p[n], p1 - p2, p1 < p2;
+        
+
+
+
+
+        
+

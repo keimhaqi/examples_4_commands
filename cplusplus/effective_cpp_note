@@ -1,0 +1,366 @@
+条款2: 使用const替换#define
+    1) 形似函数的宏(macros), 最好改用inline函数替换#define:
+    #define CALL_WITH_MAX(a, b) f((a) > (b) ? (a) : (b))    // 有表达式副作用
+    优化方案:
+        template<typename T>
+        inline void callWithMax(const T & a, const T & b){
+            f(a > b ? a : b)
+        }
+
+条款3: 尽量使用const
+    1) 将某些变量声明为const可帮助编译器侦测出错误的用法, 例如对函数的返回值做赋值操作的错误:
+        1.1) const可被施加于任何作用域内的对象, 函数参数, 函数返回类型, 成员函数本体;
+    2) 编译器强制实施bitwise constness, 但是你编写程序时应该使用"概念上的常量性":
+        2.1) 例如，类有指针类型的成员变量, 当满足bitwise constness时会出现指针值没有变, 但是指针所指向的对象的内容发生了变化;
+            2.1.1) 虽然在规则上违反了bitwise constness, 但是这种仍然可以接受;
+    3) 当const和non-const成员函数(我认为普通函数也可以)有着实质等价的实现时, 令non-const版本调用const版本可避免代码重复:
+        3.1) 使用const_cast把变量的const属性拿掉;
+        3.2) 使用static_cast把对对象或者变量强制添加const属性;
+            char & operator[](std::size_t position){
+                return 
+                const_cast<char&>(
+                    static_cast<const TextBlock&>(*this)[position]
+                )
+            }
+
+条款4: 不同编译单元共享声明、定义的变量:
+    1) 对内置对象进行手工初始化，因为C++不保证初始化它们, 例如int, long, double;
+    2) 构造函数最好使用成员初值列，而不是在构造函数内部使用赋值操作对成员变量做初始化的动作; 
+        2.1)初值列列出的成员变量, 其排列次序应该和它们在class内部的声明次序相同;
+    3) 为免除"垮编译单元之初始化次序"问题, 使用local static 替换non-local static 对象(单例模式):
+        3.1) 思想: 不同的编译单元, 使用共享的变量时, 确保在每一个单元中只有一个实体, 并且每隔实体对于每一个编译单元的作用域仅限于编译单元;
+        单例模式示例:
+            FileSystem & tfs(){
+                static FileSystem fs;
+                return fs;
+            }
+        单例模式依据:
+            C++保证, 在函数内的local static会在"该函数被调用期间", "首次遇上该对象只定义式"时初始化;
+            如果"以函数调用"替换"直接访问non-local-static对象", 你就获得了经过初始化的对象;
+            如果不调用该函数, 就绝对不会触发构造函数和析构函数的调用;
+            全局的static对象则会在整个程序运行时直接调用构造函数做初始化, 有性能上的浪费;
+            使用单例模式是为了保证不同的编译单元在互相使用依赖的对象时, 避免由于初始化顺序的因素所导致的程序有未定义行为;
+
+
+条款5: 编译器可以自动为class创建default构造函数, copy构造函数, copy assignment操作符, 析构函数;
+    1) 当代码中这些函数被调用时才会被创建;
+    2) 对于class中有引用, const类型的对象时, 编译器自动生成的copy构造函数和copy assignment操作符不会对这种类型的成员变量赋值, 即不会生成做赋值操作的代码;
+    3) 析构函数会自动调用non-static成员变量的析构函数(无论是自定义的还是编译器生成的默认的析构函数);
+
+条款6: 为避免编译器生成的构造函数, 拷贝构造函数, 赋值操作符:
+    1) 可以把构造函数, 拷贝构造函数, 赋值操作符声明为private并不提供实现;
+    2) 这样能保证编译器不会生成对应的函数;
+    3) 也能避免其他模块或者友元函数尝试调用这几个函数, 否则在调用时会出现错误;
+    4) 当业务逻辑中部分实体不应该有复制的动作的时候, 需要避免拷贝构造函数, 构造函数, 赋值操作符的生成;
+        4.1) 可以取而代之使用factory函数;
+    class Uncopyalble{
+        protected:
+            Uncopyalble(){} // 允许derived对象构造和析构;
+            ~Uncopyalble() {}
+        private:
+            Uncopyalble(const Uncopyalble&);    // 不允许derived对象复制和赋值;
+            Uncopyalble& operator=(const Uncopyalble&);
+    };
+
+    class HomeForSale: private Uncopyalble{
+        ...
+    };
+
+条款7: 多态性质的base classes应该声明一个virtual 函数:
+    1) 如果class带有任何virtual函数, 它就应该拥有一个virtual 析构函数;
+    2) class的设计目的如果不是作为base classes, 或不是为了具备多太性, 就不应该声明virtual析构函数;
+    3) 如果需要一个抽象类, 但是这个抽象类里不需要任何接口(virtual 类型的成员函数), 那么可以把析构函数声明为纯析构函数;
+    4) 标准库STL中的类都不提供虚析构函数;
+    5) 使用工厂函数:
+        5.1) 为了使程序员不需要考虑base class和derived class之间的关系, 只是单纯的通过factory function来获取指定类型的由
+            基类指针指向指定派生类对象的实例;
+
+NOTE:
+    如果某个操作可能在失败时抛出异常, 而又存在某种需要必须处理该异常, 那么这个异常必须来自析构函数之外的某个函数;
+条款8: 析构函数绝对不能抛出异常:
+    1) 如果一个析构函数调用的函数可能抛出异常, 析构函数应该捕捉任何异常, 然后吞下他们(不传播)或结束程序;
+    2) 如果客户需要对某个操作函数运行期间抛出的异常做出反应, 那么class 应该提供一个普通的(而非在析构函数中)执行该操作;
+
+条款9: 绝不在构造和析构过程中调用virtual函数;
+    1) base class 构造函数在执行期间如果调用virtual函数, 则没有多太效果, 调用的virtual函数的作用也仅限于base class内;
+    2) 在derived class 对象的base class 构造期间, 对象的类型是base class, 而不是derived class;
+    3) 如果在base class的构造函数执行期间想保证派生类的多太行为, 则可以直接向base class的构造函数把对应多太的信息作为参数传递过去;
+    4) 如果在base class的构造函数执行期间, derived class内想通过执行函数来生成若干派生类独有的内容, 则可以在derived class声明一个private static方法:
+        4.1) 由于是private static函数, 所以不可能意外指向"初期未成熟之BuyTransaction对象内尚未初始化的成员变量";
+
+条款10: 令 operator=返回一个reference to *this
+    1) Widget& operator=(const Widget& rhs){... return *this;}
+
+
+条款11: 在operator=中处理"自我赋值"
+    1) 确保当对象自我赋值时operator有良好的行为. 其中技术包括比较"来源对象"和"目标对象"的地址, 精心周到的语句顺序以及copy-and-swap.
+    2) 确定任何函数如果操作一个以上的对象, 而其中多个对象是同一个对象时, 起行为仍然正确;
+    Tips) CPU: Prefetching, caching, pipeling
+
+条款12: 复制对象时勿忘其每一个成分
+    1) 不能在copy assignment操作符调用copy 构造函数, vise versa;
+    2) 当copy constructor和copy assignment有相近的代码时, 单独声明private init函数来做共同的部分逻辑;
+    3) Copying 函数应该确保复制"对象内的所有成员变量"及"所有base class成分";
+    4) 不要尝试以某个copying函数实现另一个copying函数, 应该讲共同机能放进第三个函数中, 并由两个copying函数共同调用;
+    5) 如果要自己撰写copying函数和copy assignment操作符, 则需要小心的复制其base class成分, 并调用base class 的copying 函数;
+
+条款13: 以对象管理资源, 
+    基本思想: 
+        1.) 获得资源后立刻放进管理对象(managing object)内;
+        2.) 把资源放进对象, 我们便可依赖C++的"析构函数自动调用机制"确保资源被释放;
+    1) 使用auto_ptr:
+        void f(){
+            std::auto_ptr<Investment> pInv(createInvestment());
+            ...
+        }
+    2) 为防止资源泄漏, 请使用RAII(Resource Acquisition Is Initialization: 资源取得时机便是初始化时机)对象,
+        在构造函数中获得资源, 在析构函数中释放资源;
+    3) 常用的RAII classes: tr1::shared_ptr和auto_ptr;
+        3.1) 推荐使用tr1::shared_ptr, 有正常的复制行为;
+    NOTE: 
+        1) 避免让多个auto_ptr指向同一个对象
+        2) 使用copy 构造函数或者copy assignment操作符赋值它们, 它们会变成null, 而复制所得的指针将取得资源的唯一拥有权;
+            std::auto_ptr<Investment> pInv1(createInvestment());
+            std::auto_ptr<Investment> pInv2(pInv1); // pInv1 becomes NULL, pInv2指向对象;
+        3) STL容器要求元素能够有正常的复制行为
+
+条款14: 在资源管理类中小心coping 行为
+    1) 禁止复制, 某些资源例如锁被多个实体共同拥有是一个错误的逻辑;
+    2) 对底层资源祭出"引用计数法"(reference-count), like tr1::shared_ptr, 但是shared_ptr在计数为0时删除指针指向的对象, 因此需要单独指定删除其deleter, 从而禁止删除对象,转而释放对象;
+    3) 复制底部资源, 深复制, 例如类中有指向字符串的指针, 此时要做深复制, 否则一个指针会在析构函数中被释放两次, 从而导致失败;
+    4) 转移底部资源的拥有权, like tr1::auto_ptr;
+    5) 复制RAII对象必须一并复制它所管理的资源, 所以资源的copying行为决定RAII对象的copying行为;
+    6) 普遍而常见的RAII class copying行为是: 抑制copying, 施行应用计数法(reference counting);
+
+条款15: 在资源管理类中提供对原始资源的访问;
+    1) APIs往往要求访问原始资源(raw resources), 所以每一个RAII class应该提供一个"取得其所管理之资源"的办法;
+    2) 对原始资源的访问可能经由显示转换或隐式转换, 一般而言显示转换比较安全, 但是隐式转换对客户比较方便;
+
+条款16:
+    1) 如果在new是使用[], 则在delete的时候使用[]
+    2) 如果在new时没有使用[], 则在delete的时候也不使用[];
+    NOTE:
+        typedef std::string AddressName[4]; // AddressName是类型, 表示string[4]的类型;
+
+条款17: 
+    1) 以独立语句将newed对象存储于(置入)智能指针内, 如果不这样做, 一旦异常被抛出, 有可能导致那一察觉的资源泄漏;
+
+条款18: 让接口容易被使用, 不易被误用:
+    1) 好的接口很容易被正确使用, 不容易被误用, 我们应该在所有接口中努力达成这些性质;
+    2) "促进正确使用"的办法包括接口的一致性, 以及与内置类型的行为兼容;
+    3) "阻止误用"的办法包括建立新类型, 限制类型上的操作, 束缚对象值, 以及消除客户的资源管理责任;
+    4) tr1::shared_ptr支持定制型删除其, 这可防范DLL问题, 可被用来自动解除互斥锁(mutexes);
+    5) 接口返回指针时, 应该返回智能指针tr1::shared_ptr;
+    6) 接口有多个类型相同的参数时, 分别声明不同的class或者struct来对这几个类型进行封装, 避免用户传错参数;
+    7) 根据6), 有了具体类型之后, 可以对参数值添加限制;
+    精彩代码:
+        // 依据6) 
+        struct Day{
+            explicit Day(int d): val(d){}
+            int val;
+        };
+
+        struct Month{
+            explicit Month(int m): val(m){}
+            int val;
+        };
+
+        struct Year{
+            explicit Day(int y): val(y){}
+            int val;
+        };
+
+        class Date{
+            public:
+                Date(const Month & m, const Day& d, const Year & y);
+                ...
+        }
+        // 依据7)
+        class Month{
+            public:
+                static Month Jan(){ return Month(1);}
+                static Month Feb(){ return Month(1);}
+                static Month Mar(){ return Month(1);}
+                ....
+                static Month Dec(){ return Month(1);}
+            private:
+                explicit Month(int m);  // 阻止生成新的月份, 不提供函数定义;
+        }
+
+
+条款19: 设计class犹如设计type, 考虑如下几个问题:
+    1) 新type的对象应该如何被创建和销毁: 构造函数, 析构函数, 内存分配和释放(operator new, operator new[], operator delete, operator delete[]);
+    2) 对象的初始化和对象的赋值该有什么样的差别: 构造函数和赋值构造函数(assignment操作符);
+    3) 新type的对象如果被passed by value, 意味着什么: copy constructor用来定义一个type的pass-by-value应该如何实现;
+    4) 什么是type的"合法值": 对class添加必要的约束条件, 在构造函数, assignment操作符和setter中的错误检查, 异常和异常列表;
+    5) 你的新type需要配合某个继承图系吗: 从别的类继承, 受到这些类的约束; 作为其他类的基类, 考虑析构函数是否为virtual;
+    6) 你的新type需要什么样的转换: 是否需要与其他类型做转换的动作?显示转换(声明一个explicit函数来完成)和隐式转换(operator Type());
+    7) 什么样的操作符和函数对此新type而言是合理的: 需要声明多少个成员函数;
+    8) 什么样的标准函数应该驳回: 哪些函数需要声明为private;
+    9) 谁该取用新type的成员: 决定哪些函数时public, private和protected, 哪些class和function是friends;
+    10) 什么是新type的"未声明接口": 条款29;
+    11) 你的新type有多么一般化: 是否需要把class定义为template;
+    12) 你真的需要一个新type吗: 新type是否是为已有的class添加机能, 如果是, 或许可以通过添加几个non-member函数或者templates来解决;
+
+条款20:使用pass-by-reference-to-const替换pass-by-value:
+    1) 尽量以pass-by-reference-to-const替换pass-by-value, 前者通常比较搞笑,避免切割问题;
+    2) 以上规格不适用于内置类型, 以及STL的迭代器和函数对象, 对于这些, pass-by-value往往比较合适;
+
+条款21:必须返回对象时, 别妄想返回其reference:
+    1) 绝不要返回pointer或者reference指向一个local stack对象, 或返回reference指向一个heap-allocated, 或返回pointer
+        或reference指向一个local static对象而又可能《同时》需要多个这样的对象, 同时意味着同一时刻多个相同的对象参与了逻辑运算, 
+        例如==操作会导致该等式永久成立;
+
+条款22: 将成员变量生命为private:
+    1) 切记将成员变量生命为private, 这可赋予客户访问数据的一致性, 可细微划分访问控制,允诺约束条件获得保证, 并提供class作者以充分的实现弹性;
+    2) protected并不比public更具封装性;
+    3) 封装的目的: 理想状态下, 客户代码不需要做任何改变, 现实状态下, 客户代码的改动量要保持最低, 影响面要最低;
+
+条款23: 宁以non-member, non-friend替换member函数:
+    1) 封装性: 可以直接看到成员变量的函数格式, 通过对象调用成员函数来访问成员变量的不算在内;
+    2) 使用non-member non-friend函数替换member函数, 这样可以增加封装性, 包裹弹性(packaging flexibility)和机能扩充性;
+    3) 这样能够轻松扩充针对某个类的工具函数, 在namespace中添加若干工具函数来实现;
+
+条款24: 若所有参数皆需类型转换, 请为此采用non-member函数:
+    1) 如果你需要为某个函数的所有参数(包括被this指针所指的那个隐喻参数)进行类型转换,那么这个函数必须是non-member;
+
+条款25: 考虑写出一个不抛异常的swap函数
+    NOTE: C++只允许对class template偏特化, 在function templates身上偏特化是行不通的;
+    1) 当std::swap对你的类型效率不高时, 提供一个swap成员函数, 并确定这个函数不抛出异常;
+    2) 如果你提供一个member swap, 也该提供一个non-member swap用来调用前者, 对于classes(而非templates), 也请特化
+        std::swap;
+    3) 调用swap时应该针对std::swap使用using 声明式, 然后调用swap并且不带任何"命名空间资格修饰";
+    4) 为"用户定义类型"进行std template全特化是好的, 但千万不要尝试在std内加入某些对std而言全新的东西;
+
+条款26: 尽可能延后变量定义式的出现时间:
+    1) 尽可能延后变量定义式的出现, 这样可以增加程序的清晰度并改善程序的效率;
+    2) 在循环体内使用的变量, 要判断赋值操作比(构造函数和系统函数)的成本的大小:
+        2.1) 如果赋值操作比(构造函数和系统函数)的成本小, 则应该把对象的声明放在循环的外面;
+        2.2) 如果赋值操作比(构造函数和系统函数)的成本大, 则有应该在循环体中声明对象;
+
+条款27: 尽量少做转型动作:
+    1) 旧式转型: 
+        1.1) T(expression)
+        1.2) (T)expression
+    2) C++新式转型:
+        2.1) const_cast<T>(expression): 去除对象的const属性;
+        2.2) dynamic_cast<T>(expression): 执行"安全向下转型", 在class的继承体系中使用;
+        2.3) reinterpret_cast<T>(expression): 执行低级转型: 如把指针转换为int, 移植性比较差;
+        2.4) static_cast<T>(expression): 强迫隐式转换, 把non-const转换为const对象, 或者int转换为double;
+    3) 如果可以, 尽量避免转型, 特别是在注重效率的代码中避免dynamic_casts;
+        3.1) 如果有个设计需要转型的动作, 试着法阵无需转型的替代设计;
+    4) 如果转型是必要的, 试着将它隐藏于某个函数背后, 客户随后可以调用该函数而不需要将转型放进他们自己的代码内;
+    5) 宁可使用C++-style的转型,也不使用旧式转型;
+
+条款28: 避免返回handles指向对象内部成分
+    1) 成员变量的封装性最多只等于"返回其reference"的函数的访问级表;
+        1.1) 例如成员变量被声明为private, 但是通过public成员函数可返回该成员变量的引用, 则此成员变量相当于public;
+            解决方法:
+                把函数的返回值声明为const reference, 从而只读, 不可写;
+    2) bitwise constness: 如果const成员函数传出一个reference,后者所指数据与对象自身有关联, 而它又被存储于对象之外, 那么这个函数的调用者可以修改那笔数据;
+    3) 避免返回handles(包括refereces, 指针, 迭代器)指向对象内部, 遵守这个条款可增加封装性, 帮助const成员函数的行为
+        像个const, 并将发生"虚吊号码牌"(dangling handles)的可能性降至最低;
+条款29: 为"异常安全"而努力是值得的:
+    1) 异常安全性的函数满足如下两个性质:
+        1.1) 不泄漏任何资源;
+        1.2) 不允许数据败坏;
+    NOTE: 不要为了表示某个事情发生而改变对象状态, 除非那个事情真的发生了;
+    2) 异常安全函数(Exception-safe functions)提供一下三个保证之一:
+        2.1) 基本承诺: 如果异常被抛出, 程序内的任何事物仍然保持在有效的状态下, 没有任何对象或数据结构会因此而败坏, 所有
+            对象处于一种内部前后一致的状态(例如所有的class内部约束条件都继续获得满足);
+        2.2) 强烈承诺: 如果异常被抛出, 程序状态不改变, 即函数成功就是完全成功, 如果函数失败程序会回复到"调用函数之前"的状态;
+        2.3) 不抛掷保证(nothrow): 承诺绝不抛出异常, 作用域内置类型的所有操作都提供nothrow保证;
+    3) copy and swap: 为打算修改的对象做一个副本, 在副本上做所有修改的动作, 如果修改动作中任何一个动作发生异常;
+                    原对象仍然保持未改变状态, 当所有修改动作都成功后, 在将修改过的副本和原对象在不抛出异常的操作中置换(swap);
+    
+    4) 异常安全函数(Exception-safe functions)即使发生异常也不会泄露资源或允许任何数据结构的败坏, 这样的函数区分三种可能的保证: 基本型, 强烈性, 不抛异常性;
+    5) "强烈保证"往往能够以copy-and-swap实现出来, 但"强烈保证"并非对所有函数都可实现或具备现实意义;
+    6) 函数提供的"异常安全保证"通常最高只等于其所调用之各个函数的"异常安全保证"中最弱的;
+
+条款30: 透彻了解inlining的里里外外:
+    1) 过度inline会导致编译链接后的目标代码过大, 在内存较小的机器中跑程序时要经常做换页的操作, 所以反而导致执行效率下降;
+    2) class的non-virtual 成员函数默认都是inline;
+    3) class的virtual 成员函数, 编译器一般都会拒绝做inline;
+    4) 将大多数inlining限制在小型, 被频繁调用的函数身上, 
+        这可使日后的调试过程和2进制升级(binary upgradability)更容易, 
+        也可以使潜在的代码膨胀问题最小化, 使程序的速度提升机会最大化;
+    5) 不要只因为function templates出现在头文件, 就将他们声明为inline;
+    6) inline要保证被修饰的函数内部所调用的所有函数都适合做inline;
+
+条款31: 将文件间的编译依存关系降至最低:
+    1) 把class的实现细节放在class的定义中, 而没有做分离的原因:
+        1.1) 不应该尝试手工声明一部分标准程序库;
+        1.2) 编译器必须在编译期间知道对象的大小;
+    2) pimpl idion(pimpl: pointer to impelementation): 接口实现分离(使用声明的依赖性替换定义的依赖性);
+    示例代码:
+        #include<string>
+        #include<memory>
+        class PersonImpl;
+        class Date;
+        class Address;
+        class Person{
+            public:
+                Person(const std::string & name, const Date & birthday,
+                    const Address & addr);
+                std::string name() const;
+                std::string birthDate() const;
+                std::string address() const;
+                ...
+            private:
+                std::tr1::shared_ptr<PersonImpl> pImpl;
+        };
+    3) 如果使用object reference或者object pointers可以完成任务, 就不要使用objects;
+        可以只靠一个类型声明式就定义出指向该类型的reference和pointers, 但是如果定义某类型的objects, 
+        就需要用到该类型的定义式;
+    4) 如果能够, 尽量以class声明式替换class定义式;
+        当你声明一个函数而它用到某个class时, 你并不需要该class的定义, 纵使函数以by value方式传递该类型的参数
+        (或返回值)亦然;
+        4.1) 示例:
+            class Date;
+            Date today();
+            void clearAppointments(Date d);
+    5) 为声明式和定义式提供不同的头文件;
+    6) 支持"编译依赖性最小化"的一般构想是: 想依赖于声明式, 不要相依赖于定义式, 基于此构想的两个手段是: Handle classes和Interface classes;
+    7) 程序库头文件应该以"完全且仅有声明式(full and declaration-only forms)"的形式存在, 这种做法不论是否涉及
+        templates都适用;
+
+条款32: 确定你的public继承塑模出is-a关系:
+	1) public inheritance(公开继承)意味"is-a"(是一种)的关系;
+		1.1) public base class表示更一般化的事物, derived class表示更具体的事物;
+	2) "public继承"意味is-a, 适用于base classes身上的每一个事情一定也使用于derived classes, 因为每一个derived class对象
+		也都是base class对象;
+
+条款33: 避免遮掩继承而来的名称
+	1) 继承base class之后, 如果要屏蔽所有基类的同名的函数, 则在derived class中重写同名的函数即刻, 
+				此时屏蔽的是base class中同名的所有函数, 无论参数数目, 返回值类型是否相同;
+	2) 继承base class之后, 如果屏蔽同名函数中的部分函数, 则在复写需要覆盖的函数之后, 
+				使用using 关键词来使base class中的函数在derived class中可用才行;
+	3) derived classes内的名称会遮掩base classes内的名称, 在public继承下从来没有人希望如此;
+	4) 为了让被遮掩的名称能够可用, 可使用using声明式或转交函数(forwarding functions);
+
+条款34: 区分接口继承和实现继承
+	1) 声明一个pure virtual函数的目的是为了让derived classes只继承函数接口;
+	2) 声明简朴的(非纯)impure virtual 函数的目的, 是让derived classes继承该函数的接口和缺省实现;
+	3) 声明non-vritual函数的目的是为了令derived classes继承函数的接口及一份强制性实现;
+	4) 容易犯的错误:
+		4.1) 将所有函数声明为non-virtual;
+			4.1.1) 如果类被设计为非基类, 则可以这样做;
+			4.1.2) 否则不应该这样, 不然derived class很少有特化的空间;
+			4.1.3) base class一般都会有几个virtual functions;
+		4.2) 将所有函数声明为virtual;
+			4.2.1) 如果base class被设计为interface classes, 则可以这么设计;
+			4.2.3) 某些不该在derived classes中被重新定义的应该被声明为non-virtual;
+		4.3) 接口继承和实现继承不同, 在public继承下, derived classes总是继承base class的接口;
+		4.4) pure virtual 函数只具体制定接口继承;
+		4.5) 简朴的impure virtual函数具体制定接口继承及缺省实现继承;
+		4.6) non-virtual 函数具体指定接口以及强制性实现继承;
+
+条款35: 考虑virtual函数意外的其他选择:
+	
+
+    
+
+    
+
+
+    

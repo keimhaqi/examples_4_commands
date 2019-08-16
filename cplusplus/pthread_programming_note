@@ -1,0 +1,52 @@
+The Pthread API
+Pthreads API can be grouped into four:
+
+1) Thread management:
+Routines that work directly on threads - creating, detaching, joining, etc. They also include functions to set/query thread attributes such as joinable, scheduling etc.
+
+2) Mutexes:
+Routines that deal with synchronization, called a "mutex", which is an abbreviation for "mutual exclusion". Mutex functions provide for creating, destroying, locking and unlocking mutexes. These are supplemented by mutex attribute functions that set or modify attributes associated with mutexes.
+
+3) Condition variables:
+Routines that address communications between threads that share a mutex. Based upon programmer specified conditions. This group includes functions to create, destroy, wait and signal based upon specified variable values. Functions to set/query condition variable attributes are also included.
+
+4) Synchronization:
+Routines that manage read/write locks and barriers.
+
+Attributes of Threads:
+1) By default, a thread is created with certain attributes. 
+    Some of these attributes can be changed by the programmer via the thread attribute object.
+2) pthread_attr_init() and pthread_attr_destroy() are used to initialize/destroy the thread attribute object.
+3) Other routines are then used to query/set specific attributes in the thread attribute object.
+
+Terminating Threads:
+
+1) There are several ways in which a Pthread may be terminated:
+    1.1) The thread returns from its starting routine (the main routine for the initial thread).
+    1.2) The thread makes a call to the pthread_exit subroutine.
+    1.3) The thread is canceled by another thread via the pthread_cancel routine
+    1.4) The entire process is terminated due to a call to either the exec or exit subroutines.
+2) pthread_exit is used to explicitly exit a thread. Typically, the pthread_exit() routine is called after a thread has completed its work and is no longer required to exist. If main() finishes before the threads it has created, and exits with pthread_exit(), the other threads will continue to execute. Otherwise, they will be automatically terminated when main() finishes. 
+    So, if we comment out the line pthread_exit() in main() in the thread01.c of the previous example code, the threads created may not have a chance to execute their work before being terminated.
+3) The programmer may optionally specify a termination status, which is stored as a void pointer for any thread that may join the calling thread.
+4) Cleanup: the pthread_exit() routine does not close files; any files opened inside the thread will remain open after the thread is terminated.
+
+Join
+
+int pthread_join (pthread_t th, void **thread_return)
+1) The first parameter is the thread for which to wait, the identified that pthread_create filled in for us. The second argument is a pointer to a pointer that itself points to the return value from the thread. This function returns zero for success and an error code on failure.
+2) When a thread is created, one of its attributes defines whether the thread is joinable or detached. Only threads that are created as joinable can be joined. If a thread is created as detached, it can never be joined.
+3) The final draft of the POSIX standard specifies that threads should be created as joinable.
+4) To explicitly create a thread as joinable or detached, the attr argument in the pthread_create() routine is used. The typical 4 step process is:
+    4.1) Declare a pthread attribute variable of the pthread_attr_t data type.
+    4.2) Initialize the attribute variable with pthread_attr_init().
+    4.3) Set the attribute detached status with pthread_attr_setdetachstate()
+    4.4) When done, free library resources used by the attribute with pthread_attr_destroy()
+5) Here is the summary for the join related functions:
+    5.1) pthread_join (threadid,status)
+    5.2) pthread_detach (threadid)
+    5.3) pthread_attr_setdetachstate (attr,detachstate)
+    5.4) pthread_attr_getdetachstate (attr,detachstate)
+
+
+

@@ -8,3 +8,28 @@
     Remove the topic folder from ZooKeeper using rmr /brokers/topics/yourtopic
     Restart Kafka server
     Confirm if it was deleted or not by using this command kafka-topics.sh --list --zookeeper host:port
+
+
+本文档包含了通过zookeeper删除指定的kafka topic的详细步骤，如下步骤针对211服务器上的kafka的topic——linkshare_search为例，其他服务器可以根据实际情况对目录做一下调整：
+使用如下命令查看指定topic的lag是否存在堆积的情况：
+bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --topic linkshare_search --zookeeper localhost:2181 --group pro
+./bin/kafka-consumer-groups.sh --bootstrap-server 192.168.1.103:9092 --new-consumer --group pro --describe
+其中：
+--topic: 此参数值为linkshare_search，表示要查询topic为linkshare_search的lag情况;
+--group: 此参数值为pro，表示要查询的topic所属的组;
+停止kafka server：
+在/home/jinbag/kafka目录下以root用户执行脚本kafka-server-stop.sh:
+./bin/kafka-server-stop.sh
+删除目录/kafka/kafka-logs/下的所有名称中包含__consumer_offsets的目录:
+sudo rm -r __consumer_offsets*
+删除目录/kafka/kafka-logs/下的topic的所有partition目录，如下：
+sudo rm -r linkshare_search
+执行目录/home/jinbag/zookeeper/bin/下的脚本zkCli.sh，传递若干参数进入zookeeper客户端，如下：
+./zkCli.sh -server localhost:2181
+进入zookeeper client之后，执行如下命令查看当前所有的kafka topic：
+ls /brokers/topics
+根据上一个命令的执行结果，使用如下命令删除指定的kafka topic:
+rmr /brokers/topics/linkshare_search
+输入quit退出zookeeper client
+在目录/home/jinbag/kafka下执行如下命令重新启动kafka server:
+bin/kafka-server-start.sh -daemon config/server.properties
