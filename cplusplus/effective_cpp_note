@@ -329,6 +329,8 @@ NOTE:
 		1.1) public base class表示更一般化的事物, derived class表示更具体的事物;
 	2) "public继承"意味is-a, 适用于base classes身上的每一个事情一定也使用于derived classes, 因为每一个derived class对象
 		也都是base class对象;
+	NOTE:
+		判断何时使用is-a关系(继承关系), 应该考虑base class的操作是否都可应用于derived classes中;
 
 条款33: 避免遮掩继承而来的名称
 	1) 继承base class之后, 如果要屏蔽所有基类的同名的函数, 则在derived class中重写同名的函数即刻, 
@@ -461,9 +463,64 @@ NOTE:
 			1) tr1::function对象的行为就像一般函数指针, 这样的对象可接纳"与给定之目标签名式(target signature)兼容"的所有可调用物(callable entities);
 	4) 古典式Strategy模式:
 		4.1) 把健康计算函数做成一个分离的继承体系中的virtual member function;
+	NOTE:
+		derived class能够重新定义virtual函数, 即使它们不得调用它;
 
 条款36: 绝不重新定义继承而来的non-virtual函数:
-	
+
+条款37: 绝不重新定义继承而来的缺省参数值:
+	1) 绝对不要重新定义一个继承而来的缺省参数值, 因为缺省参数值都是静态绑定, 而virtual函数--你唯一应该复写的东西--却是动态绑定;
+
+条款38: 通过复合塑模出has-a或"根据某事物实现出", 需要从概念和实现上都考虑base class和derived class
+	1) 复合发生于应用域内的对象之间, 表现出has-a的关系:
+		1.1) 应用域: 使用对象表示人, 则人就是应用域;
+	2) 复合发生于实现域内则是表现is-implemented-in-terms-of的关:
+		2.1) 实现域: 表示某个实现细节需要多个不同类型的对象协作;
+	3) 复合(composition)的意义和Public继承完全不同;
+	4) 在应用域(application domain), 复合意味has-a(有一个), 在实现域(impelementation domain), 复合意味着
+				is-implemented-in-terms-of(根据某事物实现出);
+
+条款39: 明智而审慎地使用private继承:
+	1) private继承下, 编译器不会把derived class对象不能自动转换为base class对象;
+	2) private继承下, base class的所有成员在derived class都会成为private;
+	3) private继承意味着implemented-in-terms-of(根据某物实现出);
+	4) private继承只是一个实现技术;
+	5) 针对implemented-in-terms-of:
+		5.1) 尽可能的使用复合:
+		5.2) 少用private继承: 当protected成员和/或virtual函数牵扯进来的时候, 或者空间方面的厉害关系足以踢翻private
+							继承的支柱时;
+	6) 阻止derived class重新定义base class中的函数:
+		6.1) 在base class把成员函数声明为private;
+		6.2) EBO(empty base optimization, 空白基类最优化): 只在单一继承下有小;
+		class Widget{
+			private:
+				class WidgetTimer: public Timer{
+					public:
+						virtual void onTick() const;
+						...
+				}
+		};
+		阻止了Widget的derived class的重新定义onTick方法, 是implemented-in-terms-of;
+	7) Private继承意味着is-implemented-in-terms-of(根据某物实现出), 它通常比复合(composition)的级别低, 但是
+				当derived class需要访问protected base class的成员, 或需要重新定义继承而来的virtual函数时, 设么设计是合理的;
+	8) 和复合(composition)不同, private继承可以造成empty base最优化, 这对致力于"对象尺寸最小化"的程序开发者而言, 可能
+				很重要;
+
+条款40: 明智而审慎地使用多重继承:
+	1) 非必要不使用virtual bases class, 使用non-vritual继承;
+	2) 如果必须使用virtual base classes, 尽可能避免在其中放置数据;
+	3) 多重继承比单一继承复杂, 它可能导致新的歧义性, 以及对virtual继承的需要;
+	4) virtual继承会增加大小, 速度, 初始化(和赋值复杂度等等成本, 如果virtual base class不带任何数据, 将是最具有使用价值的情况;
+	5) 多重继承的确有正当用途, 其中一个情节涉及"public继承某个Interface class"和"private继承某个协助实现的class"的两相组合;
+	NOTE:
+		C++首先确认函数对此调用而言是否是最佳匹配, 找出最佳匹配之后才检验其可取用性;
+
+
+
+
+
+
+
 
 
 			 
