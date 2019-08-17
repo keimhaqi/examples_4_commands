@@ -356,6 +356,119 @@ NOTE:
 		4.6) non-virtual 函数具体指定接口以及强制性实现继承;
 
 条款35: 考虑virtual函数意外的其他选择:
+	1) 藉由Non-Virtual Interface手法实现Template Method(与C++ templates无关联)模式
+		1.1) NVI(Non-Virtual Interface): 令客户通过public non-virtual成员函数间接调用private virtual函数, 其中 public non-virtual函数被称为"外覆器"(wrapper);
+		class GameCharacter{
+			public:
+				// 指定virtual函数何时被调用;
+				int healthValue() const{									// derived class不重新定义它;
+					... 																												// 做一些事前工作;
+					int retValue = doHealthValue();	// 做真正的工作;
+					...																													// 做一些时候工作;
+					return retValue;
+				}
+				...
+			private:	// virtual函数不一定必须是private, 可以是protected, 但不能使public, public virtual function用于多态性质;
+				// 在derived class被重新定义, 从而赋予"如何实现机能"的控制能力;
+				virtual int doHealthValue() const{	// derived class可重新定义它;
+					...																															// 缺省算法, 计算健康指数;
+				}
+		}
+		优点:
+			1.1.1) 包含事前工作和事后工作:
+				1.1.1.1) 事前工作: 
+																				1) 锁定互斥器(locking a mutex);
+																				2) 制造运转日志记录项(log entry);
+																				3) 验证class约束条件;
+																				4) 验证函数先决条件;
+																				5) 等等;
+				1.1.1.2) 事后工作:
+																				1) 互斥器解除锁定(unlocking a mutex);
+																				2) 验证函数的事后条件;
+																				3) 再次验证class约束条件;
+																				4) 等等;
+	2) 藉由Functions Pointers实现Strategy模式;
+		2.1) 要求每个任务的构造函数接受一个指针, 指向一个健康计算函数:
+		class GameCharacter;	// 前置声明(forward declaration)
+		// 以下函数是计算健康指数的缺省算法;
+		int defaultHealthCalc(const GameCharacter & gc);
+		class GameCharacter{
+			public:
+				typedef int (*HealthCalcFunc)(const GameCharacter&);
+				explicit GameCharacter(HealthCalcFunc hcf = defaultHealthCalc)
+					: healthFunc(hcf){}
+				int healthValue() const{
+					return healthFunc(*this);
+				}
+				...
+			private:
+				HealthCalcFunc healthFunc;
+		};
+		优点:
+			1) 同一任务类型之不同实体可以有不同的健康计算函数:
+				class EvilBadGuy: public GameCharacter{
+					public:
+						explicit EvilBadGuy(HealthCalcFunc hcf = defaultHealthCalc): GameCharacter(hcf){}
+						...
+				};
+				int loseHealthQuickly(const GameCharacter&);
+				int loseHealthSlowly(const GameCharacter&);
+				EvilBadGuy edg1(loseHealthQuickly);
+				EvilBadGuy edg2(loseHealthSlowly);
+			2) 某已知任务之健康指数计算函数可在运行期变更;
+	3) 藉由tr1::function完成Strategy模式
+		3.1) 使用tr1::function改进2) 
+		class GameCharacter;
+		int defaultHealthCalc(const GameCharacter& gc);
+		class GameCharacter{
+			public:
+				// HealthCalcFunc 可以是任何"可调用物"(callable entity), 可被调用并接受
+				// 任何兼容于GameCharacter之物, 返回任何兼容于int的东西;
+				typedef std::tr1::function<int (const GameCharacter&)> HealthCalcFunc;
+				explicit GameCharacter(HealthCalcFunc hcf = defaultHealthCalc): healthFunc(hcf) {}
+				int healthValue() const { return healthFunc(*this);}
+				...
+			private:
+				HealthCalcFunc healthFunc;
+		}
+
+		short calcHealth(const GameCharacter &);
+		struct HealthCalculator{
+			int operator()(const GameCharacter&)const{...}
+		};
+		class GameLevel{
+			public:
+				float health(const GameCharacter&)const;
+				...
+		};
+
+		class EvilBadGuy: public GameCharacter{
+			...
+		};
+
+		class EyeCandyCharacter: public GameCharacter{
+			...
+		};
+
+		EvilBadGuy edg1(calcHealth);
+		EyeCandyCharacter ecc1(HealthCalculator());
+		GameLevel currentLevel;
+		...
+		EvilBadGuy ebg2(std::tr1::bind(&GameLevel::health, currentLevel, _1));
+		// std::tr1::bind可以使成员函数GameLevel::health转换为能够与HealthCalcFunc兼容的函数, 其中隐式
+		// 指针this由对象currentLevel提供, 其中_1表示函数GameLevel::health被调用时调起函数的对象时currentLevel;
+		优点:
+			1) tr1::function对象的行为就像一般函数指针, 这样的对象可接纳"与给定之目标签名式(target signature)兼容"的所有可调用物(callable entities);
+	4) 古典式Strategy模式:
+		4.1) 把健康计算函数做成一个分离的继承体系中的virtual member function;
+
+条款36: 绝不重新定义继承而来的non-virtual函数:
+	
+
+
+			 
+
+
 	
 
     
