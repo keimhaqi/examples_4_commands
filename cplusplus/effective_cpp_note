@@ -757,6 +757,76 @@ NOTE:
 		std::cout << Factorial<5>::value;
 		std::cout << Factorial<10>::value;
 	}
+
+
+条款49: 了解new-handler的行为
+	1) 设计良好的new-handler的若干规则:
+		1.1) 让更多内存可被使用: 为了使下一次内存分配动作可能成功;
+			1.1.1) 做法: 程序一开始就分配一大块内存, 而后当new-handler第一次被调用时, 把这一大块内存释放给程序使用;
+		1.2) 安装另一个new-handelr: 如果当前的new-handler无法取得更多的内存, 并且还有另一个new-handler能够提供更多的内存,
+							就使用另一个new-handler替换当前的new-handler;
+			1.2.1) 做法: 令new-handler修改"会影响new-handler行为"的static数据, namespace数据或global数据;
+		1.3) 卸除new-handler: 把null指针传递给set_new_handler, 此时new-handler会抛出异常;
+		1.4) 抛出bad_alloc(或派生自bad_alloc)的异常, 这样的异常不会被operator new捕捉, 因此会被传播到内存索求处;
+		1.5) 不返回, 通常调用abort或exit;
+	2) set_new_handler允许客户指定一个函数, 在内存分配无法获得满足时被调用;
+	3) Nothrow new是一个颇为具现的工具, 因为它只适用于内存分配, 后继的构造函数调用还是可能抛出异常;
+
+	namespace std{
+		typedef void (*new_handler)();
+		new_handler set_new_handler(new_handler p) throw();
+	};
+
+	std::new_handler Widget::currentHandler = 0;
+
+	template<typename T>
+	class NewHandlerSupport{
+		public:
+			static std::new_handler set_new_handler(std::new_handler p) throw();
+			static void* operator new(std::size_t size) throw(std::bad_alloc);
+			...
+		private:
+			static std::new_handler currentHandler;
+	};
+
+	template<typename T>
+	std::new_handler
+	NewHandlerSupport<T>::set_new_handler(std::new_handler p) throw(){
+		std::new_handler oldHandler = currentHandler;
+		currentHandler = p;
+		return oldHandler;
+	}
+
+	template<typename T>
+	void* NewHandlerSupport<T>::operator new(std::size_t size) throw(std::bad_alloc){
+		NewHandlerSupport h(std::set_new_handler(currentHandler));
+		return ::operator new(size);
+	}
+
+	template<typename T>
+	std::new_handler NewHandlerSupport<T>::currentHandler = 0;
+
+	class Widget: public NewHandlerSupport<Widget>{
+		public:
+			static std::new_handler set_new_handler(std::new_handler p) throw();
+			static void * operator new(std::size_t size) throw(std::bad_alloc);
+		private:
+			static std::new_handler currentHandler;
+	};
+
+	void outOfMem();
+
+	int main(){
+		
+		Widget::set_new_handler(outOfMem);	// 指定new-handler函数;
+		Widget* pw1 = new Widget;	// 申请空间, 如果申请失败,会调用函数outOfMem;
+		std::string * ps = new std::string;	// 申请空间, 如果失败, 会调用global new-handler
+
+		Widget::set_new_handler(0);	// 把Widget的new-handler设置为空;
+		Widget * pw2 = new Widget();	// 申请空间, 如果失败, 则会抛出异常;
+		return 0;
+	}
+
 	
 
 
