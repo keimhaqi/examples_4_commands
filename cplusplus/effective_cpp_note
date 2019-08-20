@@ -515,6 +515,250 @@ NOTE:
 	NOTE:
 		C++首先确认函数对此调用而言是否是最佳匹配, 找出最佳匹配之后才检验其可取用性;
 
+条款41: 了解隐式接口和编译期多态:
+	1) 显示接口: 由函数(函数名称, 参数类型, 返回类型)构成;
+	2) 隐式接口: 由有效表达式组成(valid expression);
+	3) classes和templates都支持接口(Interfaces)和多态(polymorphism);
+	4) 对classes而言接口时显式(explicit)的, 以函数签名为中心, 多态则是通过virtual 函数发生于运行期;
+	5) 对template而言, 接口是隐式的(implicit), 奠基于有效表达式, 多态则是通过template具现化
+				和函数重载解析(function overloading resolution)发生于编译期;
+	NOTE:
+		1) 以不同的template参数具现化function templates会导致调用不同的函数, 这便是
+					编译期多态(compile-time polymorphism);
+		
+
+条款42: 了解typename的双重意义:
+	1) template内出现的名称如果依赖于某个template参数, 称为从属名称(dependent names);
+		1.1) 如果从属名称在class内呈现嵌套状, 称为嵌套从属名称(nested dependent names);
+	2) 不依赖于template参数的名称, 称为非从属名称;
+	3) 解析器: 如果解析器在template中遇到一个嵌套从属名称, 解析器假设这个名称不是类型, 除非人为指定;
+	4) 任何时候当需要在template中指定一个嵌套从属类型名称, 就必须在紧临它的前一个位置上放关键字typename;
+	5) typename不可以出现在base classes list内的嵌套从属类型名称之前, 
+				也不可以在member Initialization list(成员初值列)中作为base class修饰符;
+	6) 声明template参数时, 前缀关键字class和typename可互换;
+	7) 请使用关键字typename表示嵌套从属类型名称, 但不得在base class lists(基类列)或member initialization list(成员初值列
+				内以它作为base class修饰符;
+
+条款43: 学习处理模板化基类内的名称:
+	1) 编译器知道base class templates有可能会被特化, 而特化的版本不一定会提供和一般性template相同的接口,
+				因此会拒绝在templatized base classes内寻找继承而来的名称;
+	2) 可在derived class templates内通过"this->"指涉base class templates内的成员,
+				或藉由一个明白写出的"base class 资格修饰符"完成;
+	3) template基类针对某个类型可能做特化, 而且做过特化之后的版本可能会不提供部分接口,
+				所以当某个类继承template基类时, 如果直接调用基类的函数, 编译器会不予支持, 因为基类的特化版本可能会发生变化;
+
+	Eg:
+
+	class CompanyA{
+		public:
+			...
+			void sendCleartext(const std::string& msg);
+			void sendEncrypted(const std::string& msg);
+			...
+	};
+
+	class CompanyB{
+		public:
+			...
+			void sendCleartext(const std::string& msg);
+			void sendEncrypted(const std::string& msg);
+			...
+	};
+
+	class CompanyZ{
+		public:
+			...
+			void sendEncrypted(const std::string& msg);
+			...
+	};
+
+	class MsgInfo{...};
+	template<typename Company>
+	class MsgSender{
+		public:
+			...
+			void sendClear(const MsgInfo & info){
+				std::string msg;
+				Company c;
+				c.sendCleartext(msg);
+			}
+	};
+
+	template<>
+	class MsgSender<CompanyZ>{
+		public:
+			...
+			void sendSecret(const MsgInfo& info){
+				...
+			}
+	};
+
+	// 类LoggingMsgSender编译不会通过, 因为基类MsgSender会有特化版本, 并且特化版本可能不提供函数sendClear;
+	template <typename Company>
+	class LoggingMsgSender: public MsgSender<Company>{
+		public:
+			...
+			void sendClearMsg(const MsgInfo & info){
+				将"传送前"的信息写到log;
+				sendClear(info);
+				将"传送后"的信息写到log;
+			}
+			...
+	};
+
+	// 解决方法1;
+	template <typename Company>
+	class LoggingMsgSender: public MsgSender<Company>{
+		public:
+			...
+			void sendClearMsg(const MsgInfo & info){
+				将"传送前"的信息写到log;
+				this->sendClear(info);	// 添加this->表示明确指定继承了基类的sendClear函数;
+				将"传送后"的信息写到log;
+			}
+			...
+	};
+
+	// 解决方法2;
+	template <typename Company>
+	class LoggingMsgSender: public MsgSender<Company>{
+		public:
+			using MsgSender<Company>::sendClear;	// 告诉编译器请它假设基类有提供函数sendClear
+			...
+			void sendClearMsg(const MsgInfo & info){
+				将"传送前"的信息写到log;
+				sendClear(info);	
+				将"传送后"的信息写到log;
+			}
+			...
+	};
+
+	// 解决方法3;
+	template <typename Company>
+	class LoggingMsgSender: public MsgSender<Company>{
+		public:
+			...
+			void sendClearMsg(const MsgInfo & info){
+				将"传送前"的信息写到log;
+				MsgSender<Company>::sendClear(info);	// 假设函数sendClear会被继承下来;
+				将"传送后"的信息写到log;
+			}
+			...
+	};
+
+	NOTE:	最后需要提供函数sendClear的定义;
+
+条款44: 将与参数无关的代码抽离templates
+	1) template可能会导致代码膨胀(code bloat): 其二进制码带着重复(几乎重复)的代码, 数据, 或两者;
+		1.1) 解决方法: 共性与变性分析(commanality and variability analysis);
+	2) derived class调用base class的函数时是inline方式调用;
+	3) working set: 指在一个"虚内存环境"下执行的进程(process)而言, 其所使用的那一组内存页;
+	4) 当实现某些成员函数, 而它们操作强型指针(strongly typed pointer, 即T*), 你应该令它们调用另一个操作
+				无类型指针(untyped pointers, 即void*)的函数, 由后者完成实际的工作;
+	5) Templates生成多个classes和多个函数, 所以任何template代码都不该与某个造成膨胀的template参数产生相依赖关系;
+	6) 因非类型模板参数(non-type template parameters)而造成的代码膨胀, 往往可消除, 做法是以函数参数或class成员变量
+				替换template参数;
+	7) 因类型参数(type parameters)而造成的代码膨胀, 往往可降低, 做法是让带有完全相同二进制表述(binary representation)的具现
+				类型(instantiation types)共享实现码;
+
+条款45: 运用成员函数模板接受所有兼容类型
+	1) Templates和泛型编程(Generic Programming)
+		1.1) 构造模板: member function templates(简称 member templates), 用来为class生成函数;
+	2) 请使用member function templates(成员函数模板)生成"可接受所有兼容类型"的函数
+	3) 如果你声明member templates 用于"泛化copy构造"或"泛化assignment操作", 你还是需要声明正常的copy
+				构造函数和copy assignment操作符;
+	template <typename T>
+	class SmartPtr{
+		public:
+			template<typename U>
+			SmartPtr(const SmartPtr<U>& other)
+				: heldPtr(other.get()){...}
+			T* get() const{ return heldPtr;}
+			...
+		private:
+			T* heldPtr;
+	}
+	// 编译器会自动生成一个非泛化版本的copy 构造函数;
+	// 当T和U之间确实有继承关系, 并且U能够隐式转换为T时才能编译通过;
+
+条款46: 需要类型转换时请为模板定义非成员函数;
+	1) template实参推导过程中, 从不将隐式类型转换函数(通过构造函数而发生的隐式类型转换)纳入考虑;
+	2) template class内的friend声明式可以指涉某个特定函数;
+	3) 定义于class内的函数都暗自称为inline, 包括像operator*这样的friend函数;
+	4) 实现技巧: 在friend函数的定义中调用class外部定义的non-member函数作为辅助函数, 从而减小inline声明所带来的冲击最小化;
+	5) 当我们编写一个class template, 而它所提供之"与此template相关的"函数支持"所有参数之隐式类型转换"时, 请将那些函数定义为
+				"class template内部的friend函数";
+
+条款47: 请使用traits classes表现类型信息:
+	1) traits允许在编译期间取得某些类型信息;
+	2) Traits classes使得"类型相关信息"在编译期间可用, 它们以templates和templates特化完成实现;
+	3) 整合重载技术(overloading)后, traits classes有可能在编译期对类型执行if...else测试;
+	4) 
+		4.1) input iterator: istream_iterators;
+		4.2) output iterator: ostream_iterators;
+		4.3) forward iterator: list;
+		4.4) bidirectional iterator: set, multiset, map, multimap;
+		4.5) random access iterator: vector, deque, string;
+
+		struct input_iterator_tag{};
+		struct output_iterator_tag {};
+		struct forward_iterator_tag: public input_iterator_tag{};
+		struct bidirectional_iterator_tag: public forward_iterator_tag{};
+		struct random_access_iterator_tag: public bidirectional_iterator_tag{};
+
+		template<typename IterT, typename DistT>
+		void doAdvance(IterT & iter, DistT d, std::random_access_iterator_tag){
+				iter += d;
+		}
+
+		template<typename IterT, typename DistT>
+		void doAdvance(IterT & iter, DistT d, std::bidirectional_iterator_tag){
+			if(d >= 0){while(d--)++iter;}
+			else {while(d++) --iter;}
+		}
+
+		template<typename IterT, typename DistT>
+		void doAdvance(IterT & iter, DistT d, std::input_iterator_tag){
+			if(d < 0){throw std::out_of_range("Negative distance");}
+			while(d--) ++iter;
+		}
+
+		template<typename IterT, typename DistT>
+		void advance(IterT & iter, DistT d){
+			doAdvance(
+				iter, d,
+				typename std::iterator_traits<IterT>::iterator_category()
+			);
+		}
+
+条款48: 认识template元编程:
+	1) TMP: 
+		1.1) 让某些事情更容易;
+		1.2) 由于template metaprogramming执行于C++编译期, 因此可将工作从运行期转移到编译期:
+			1.2.1) 可以把运行才会期出现的错误转移到编译期;
+			1.2.2) 生成较小的可执行文件, 较短的运行期, 较少的内存需求;
+			1.2.3) 编译时间较长;
+	2) TMP是图灵完全机器;
+	3) Template metaprogramming(TMP, 模板元变成)可将工作由运行期移往编译期, 因而得以实现早期错误侦测和
+				更高效的执行效率;
+	4) TMP可被用来生成"基于政策选择组合"(based on combination of policy choices)的客户定制代码,
+				也可用来避免生成对某些特殊类型并不适合的代码;
+	
+	template<unsigned n>
+	struct Factorial{
+		enum{value= n * Factorial<n-1>::value};
+	};
+	template<>
+	struct Factorial<0>{
+		enum {value = 1};
+	};
+
+	int main(){
+		std::cout << Factorial<5>::value;
+		std::cout << Factorial<10>::value;
+	}
+	
+
 
 
 
