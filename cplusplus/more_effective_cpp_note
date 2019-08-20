@@ -1,0 +1,9 @@
+条款6:
+	Distinguish between prefix and postfix forms of increment and decrement operators;
+
+条款22: 
+	Consider using op= instead of stand-alone op;
+	self operator+(difference_type n) const{
+		self tmp = *this;
+		return tmp += n;	// 调用operator+=
+	}
