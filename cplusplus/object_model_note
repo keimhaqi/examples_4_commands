@@ -349,8 +349,117 @@ NOTE:
 												如果既不是常量表达式, 也不是带有副作用的表达式, 那么直接替换;
 		4.5.3) 局部变量(Local Variables)
 			
+第五章: 构造, 析构, 拷贝语义学:
+	1) 一般而言, class的data member应该被初始化, 并且只在constructore中或是在class的其它member functions中指定初值;
+				其它任何操作都将破坏封装性质, 使class的维护和修改更加困难;
+	2) 纯虚函数的存在(Presence of a Pure Virtual Function):
+		2.1) 每一个derived class destructor会被编译器加以扩展, 以静态调用的方式调用其"每一个virtual base class"
+							以及"上一层 base class"的destructor,如果缺乏任何一个base class destructor的定义, 就会导致链接失败;
+	3) 虚拟规格的存在(Presence of a Virtual Specification):
+		3.1) 一般而言, 把所有的成员函数都声明为virtual function, 然后再靠编译器的优化操作把非必要的virtual invocation去除, 
+							并不是好的设计观念;
+	4) 虚拟规格中的const的存在:
+		需要考虑函数是否需要接受const reference或者const pointer, 亦或是否需要修改data member, 如果需要就不添加const, 否则添加;
+	5) 重新考虑class的声明;
 
-				
+5.1) "无继承"情况下的对象构造: Plain Of Data:
+	5.1.1) Plain Of Data示例: typedef struct { float x, y, z;} Point;
+								由于没有显示定义构造函数, 析构函数, 复制构造函数, 赋值操作符, 编译器不会生成这些函数, 因为Point只是一个Plain Of Data;
+	5.1.2) global在C++被视为完全定义(它会阻止第二个或更多的定义), C++中的所有全局对象都被当做"初始化过的数据"来对待;
+	5.1.3) Plain Of Data在全局下被声明一个对象时, 该对象经过了初始化, data member也经过了初始化;
+	5.1.4) Plain Of Data在局部声明下, 无论以任何方式创建, 都不会调用构造函数, 赋值只是对位的赋值, 复制只是对
+								位的复制, delete也不会调用析构函数;
+	5.1.5) 抽象数据类型(Abstract Data Type):
+		5.1.5.1) 如果对象被声明在全局域下, 初始化操作将延迟到程序激活(startup)时才开始;
+		5.1.5.2) 如果要对class中的所有成员都设定常量初值, 那么给予一个explicit initialization list会比较高效;
+		5.1.5.3) Explicit initialization list的三个缺点:
+			5.1.5.3.1) 只有当class member都是public时才有效;
+			5.1.5.3.2) 只能指定常量, 因为它们在编译时期可以被评估求值(evaluated);
+			5.1.5.3.3) 由于编译器没有自动施行, 所以初始化行为的失败的可能性会比较高;
+		5.1.5.4) ADT(Abstract Data Type): 对基本数据进行封装, 把数据封装在private中;
+	5.1.6) 为继承做准备:
+		5.1.6.1) 
+
+5.2) 继承体系下的对象构造: 对class object data member做初始化时需要对constructors进行必要的扩充;
+	5.2.1) 虚拟继承下derived class调用base class的constructor的语义:
+		5.2.1.1) 当derived class作为一个完整的object创建时, 会调用base class的constructor;
+		5.2.1.2) 当derived class作为一个不完整的object创建时, 不会调用base class的constructor;
+	5.2.2) vptr初始化语义学(The Semantics of the vptr Initialization):
+		5.2.2.1) 在一个class的constructor和destructor中, 经由构造中的对象来调用一个virtual function, 其函数
+											实体应该是在此class中有作用的那个;
+
+5.3) 对象复制语意学(Object Copy Semantics):
+	5.3.1) 一个class的copy assignment operator在以下情况下不会表现出bitwise copy语义:
+		1) 当class内带有一个member object, 而其class有一个copy assignment operator时;
+		2) 当一个class的base class有一个copy assignment operator时;
+		3) 当一个class声明了任何virtual functions(我们一定不能拷贝右端class object的vptr地址,
+					因为它可能是一个derived class object);
+		4) 当class继承自一个virtual base class(不论此base class有没好友copy operator)时;
+	5.3.2) 不要在任何virtual base class中声明任何数据;
+
+5.4) 对象的功能(Object Efficiency):
+5.5) 结构语意学(Semantics Of Destruction):
+	5.5.1) 如果class没有定义destructor, 那么只有在class内带的member object(或是class自己的base class)
+								拥有destructor的情况下, 编译器才会自动合成出一个destructor, 否则destructor会被视为trivial;
+	5.5.2) 由程序员定义的destructor被编译器扩展的内容:
+		1) 如果object内带一个vptr, 那么首先重设(reset)相关的virtual table;
+		2) destructor的函数本身现在被执行, 也就是说vptr会在程序员的码执行前被重设;
+		3) 如果class拥有member class objects, 而后者拥有destructor, 那么它们会以其生命顺序的相反顺序被调用;
+		4) 如果有任何直接的(上一层)nonvirtual base classes拥有destructor, 它们会以其生命顺序的相反顺序被调用;
+		5) 如果有任何vritual base classes拥有destructor, 而当前讨论的这个class是最尾端(most-derived)的class,
+					那么它们会以其原来的构造顺序的相反顺序被调用;
+	5.5.3) 对于destructor的最佳实现时维护两份destructor实体:
+		1) 一个complete object实体, 总是设定好vptr(s), 并调用virtual base class destructor;
+		2) 一个base class subobject实体, 除非在destructor函数中调用后一个virtual function, 否则它绝不会调用
+					virtual base destructors并设定vptr;
+	
+第六章: 执行期语意学(Runtime Semantics):
+	NOTE: 表达式的复杂度;
+	6.1) 对象的构造和结构(Object Construction and Destruction):
+		6.1.1) 一般而言, 会把object尽可能放置在使用它的那个程序区段附近, 这样做可以节省不必要的对象产生操作和摧毁操作;
+		6.1.2) 全局对象, 如果有constructor和destructor, 需要做静态的初始化操作和内存释放操作;
+		6.1.3) C++中所有的global objects都放置在data segments;
+		6.1.4) 全局object需要静态初始化的原因: 必须对一个"内置于program data segments中的object的初始化表达式"做评估(evaluated);
+		6.1.5) munch: 为了在不同的平台上做移植, 包含如下策略:
+			1) 为每一个需要静态初始化的档案产生一个__sti()函数, 内带必要的constructor调用操作和inline expansions;
+			2) 类似情况, 在每一个需要静态的内存释放操作(static deallocation)的文件中, 产生一个__std()函数(static deallocation), 内带必要的destructor调用操作;
+			3) 提供一组runtime library "munch"函数: 一个_main()函数(用来调用可执行文件中的所有__sti()函数), 以及一个exit()函数(以类似
+						方式调用所有的__std()函数);
+		6.1.6) 局部静态对象(Local Static Objects):
+			1) Local static class object的语意: 
+				1.1) 局部静态对象的constructor必须只能施行一次, 虽然函数可能被调用多次;
+				1.2) 局部静态对象的destructor必须只能施行一次, 虽然函数可能被调用多次;
+			2) 有条件的调用局部静态对象的constructor和destructor, 只有函数被调用时才需要调用constructor, 而且
+						只有局部静态对象被创建时才需要调用destructor, 通过判断指向局部静态对象的指针是否为空来完成--条件式析构:
+							2.1) 当指针为空, 表示对象没有被创建, 因此不需要调用destructor;
+							2.2) 当指针不为空, 表示对象已经被创建, 因此需要调用destructor;
+		6.1.7) 对象数组(Array of Objects):
+			1) 对于对象数组的初始化和析构, 编译器会使用vec_new和vec_delete来完成:
+				1.1) vec_new: 调用构造函数应用在每一个元素上, 对于该函数需要提供一个析构函数, 以避免当分配空间时出现异常;
+				1.2) vec_delete: 调用析构函数应用在每一个元素上;
+				1.3) 当数组中部分元素得到了明确的初始值, 那么对得到明确初始值的对象元素, 直接调用构造函数进行初始化, 其余则使用vec_new来初始化;
+		6.1.8) Default Constructors和数组
+	6.2) new和delete运算符:
+		6.2.1) 针对数组的new语意:
+			1) 使用new来申请一个连续的空间时, 只有当class或struct中声明有构造函数时, 才会调用vec_new(), 否则
+						仅仅会申请空间而已, 不会做其他的动作;
+			2) 最好避免以一个base class的指针指向一个derived class objects所组成的数组, 如果derived class object比其base
+						大的话;
+				2.1) 解决方法: 把base class的析构函数声明成virtual方式;
+		6.2.2) Placement Operator new的语意:
+			1) operator new: 对某一指针指向的内存里执行指针指向的类型的构造函数, 并返回该指针;
+	6.3) 临时性对象(Temporary Objects):
+		6.3.1) 临时性对象的被摧毁, 应该是对完整表达式(full-expression)求值过程中的最后一个步骤, 该完整表达式造成临时对象的产生;
+		6.3.2) 临时性对象在完整表达式尚未评估完全之前, 不得被摧毁;
+		6.3.3) 凡含有表达式执行结果的临时性对象, 应该存留到object的初始化操作完成为止;
+		6.3.4) 如果一个临时性对象被绑定于一个reference, 对象将残留, 直到被初始化之reference的声明结束, 或直到临时对象的生命范畴(scope)结束
+									--视哪一种情况先到达而定;
+		6.3.5) 临时性对象的迷思(神话, 传说):
+			1) 反聚合(disaggregated): 把那些临时性对象拆开为一对一对的临时性double变量;
+			2) 在实现代码时, 要尽可能的避免临时性变量的生成和销毁, 否则整体程序的性能会降低;
+
+
+		
 
 				
 

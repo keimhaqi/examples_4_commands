@@ -159,8 +159,35 @@ Chapter3: Iterators & traits skills
 		4.4.3) deque: 使用所谓的map作为主控, map不是STL map;
 			4.4.3.1) map: 是一小块连续空间, 其中每个元素(节点)都是指针, 指向另一段连续空间--缓冲区;
 			4.4.3.2) 缓冲区: deque的存储空间实体, 默认为512B;
+		4.5) stack: 
+			1) 修改某物接口, 形成另一种风貌之性质者, 称为adapter(配接器);
+		4.7) heap: 实现priority queue的底层机制;
+			1) 实际上是binary max heap;
+			2) binary heap是一种complete binary tree(完全二叉树):
+				2.1) 整棵树除了最底层叶节点之外, 是填满的, 而最底层的叶节点由左至右不得有空隙;
+			3) 由于完全二叉树的特点, 实现priority queue可以使用一个vector和一组heap算法(插入, 删除, 取极值, 将一个整数组排列成一个heap);
+			4) 根据元素的排列方式, heap可以分为max-heap和min-heap:
+				4.1) max-heap: 每个节点的键值key都大于等于子节点的键值;
+				4.2) min-heap: 每个节点的键值key都小于等于子节点的键值;
+			5) STL提供的是max-heap;
+			6) push heap算法:
+				6.1) 新加入的元素放在最下一层作为叶节点, 填补在由左至右的第一个空格;
+				6.2) percolate up(上溯): 把新节点拿来与父节点进行比较, 如果其键值(key)比父节点大, 就父子对换位置;
+			7) pop heap算法:
+				7.1) pop操作取走根节点(其实是移至底部容器vector的最后一个元素)之后, 为了满足complete binary tree的条件, 必须将最下一层最右边的叶节点拿掉;
+									实际是为这个被拿掉的节点找一个适当的位置;
+				7.2) percolate down(下溯)程序: 将根节点(最大值被取走后, 形成一个洞)填入被夺走生存空间的叶节点的值;
+									再拿它和两个子节点比较键值(key), 并与较大子节点进行交换位置, 直到洞的键值大于左右两个子节点, 或直到下放至叶节点为止;
+				7.3) 
+NOTE:
+__STL_NULL_TMP_ARGS: 
+	1) 在头文件<stl_config.h>中定义:
+	#ifdef __STL_EXPLICIT_FUNCTION_TMPL_ARGS
+	#define __STL_NULL_TMPL_ARGS <>
+	#else
+	#define __STL_NULL_TMPL_ARGS
+	#endif
+	2) 常用在class template的friend函数晟声明;
+	3) 以array表述tree的方式, 被称为隐式表述法(implicit representation);
 
-
-
-        
 
