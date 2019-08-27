@@ -1,0 +1,9 @@
+curl -X POST "localhost:9200/_aliases?pretty" -H 'Content-Type: application/json' -d'
+{
+    "actions": [
+        { "remove": { "index": "my_index_v1", "alias": "my_index" }},
+        { "add":    { "index": "my_index_v2", "alias": "my_index" }}
+    ]
+}
+'
+

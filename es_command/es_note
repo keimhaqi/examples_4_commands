@@ -1,0 +1,9 @@
+时序数据: 时间驱动相关性, 例如日志或者社交网络数据流(piwik);
+基于用户的数据: 拥有很大的文档集合, 但可以按照用户或客户细分;
+shard路由计算公式: shard = hash(routing) % number_of_primary_shards
+
+now throttling indexing: 不过有时候合并会拖累写入速率。如果这个真的发生了，
+																									Elasticsearch 会自动限制索引请求到单个线程里。
+																									这个可以防止出现 段爆炸 问题，即数以百计的段在被合并之前就生成出来。
+																									如果 Elasticsearch 发现合并拖累索引了，它会会记录一个声明有 now throttling indexing 的 
+																									INFO 级别信息。
