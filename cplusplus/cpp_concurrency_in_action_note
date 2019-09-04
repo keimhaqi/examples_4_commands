@@ -74,4 +74,3 @@ Chapter3:
 					std::unique_lock<boost::shared_mutex>进行上锁动作;
 		3) 嵌套锁: 需要在同一个线程对同一个互斥量上多次锁, 可以使用std::recursive_mutex;
 			3.1) 当进行了三次lock时, 需要做三次unlock;
-			

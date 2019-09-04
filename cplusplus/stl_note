@@ -191,7 +191,745 @@ __STL_NULL_TMP_ARGS:
 	3) 以array表述tree的方式, 被称为隐式表述法(implicit representation);
 
 第五章: 关联式容器:
-	0) 关联式容器: 
+	0) 树: 
+		0.1) 节点的高度(height): 某节点到其最深子节点(叶节点)的路径长度, 称为该节点的高度;
+		0.2) 树的高度: 根节点的高度;
+		0.3) 深度(depth): 根节点到任何一节点的路径长度, 称为该节点的深度;
+		0.4) 路径长度: 根节点到任何节点之间的唯一路径(path), 路径所经过的边数称为路径长度(length);
+		0.5) 节点的大小(size): 某节点所有子节点包括自己的总数;
+	2) RB-tree(红黑树):
+		2.1) 红黑树定义:
+			2.1.1) 一个二叉搜索树;
+			2.1.2) 每个节点不是红色就是黑色;
+			2.1.3) 根节点为黑色;
+			2.1.4) 任一节点至NULL(树尾端)的任何路径, 所含之黑节点数必须相同;
+	5) map:
+		底层使用RB_TREE, value使用pair, pair定义:
+			5.1) 
+				template<class T1, class T2>
+				struct pair{
+					typedef T1 first_type;
+					typedef T2 second_type;
+					T1 first;
+					T2 second;
+
+					pair(): first(T1()), second(T2()){}
+					pair(const T1& a, const T2& b): first(a), second(b){}
+				};
+
+			5.2) T & operator[](const key_type & k){
+				return (*
+					(
+						(
+							insert(value_type(k, T()))
+						).first
+					)
+				).second;
+			}
+			5.3) 使用RB-TREE的前提:
+				假设输入数据具有足够的随机性;
+	7) 使用hashtable的开销: 空间和初始化的时间开销;
+		7.1) 负载系数(loading factor): 元素个数除以表格大小;
+			7.1.1) 负载系数永远在0~1之间, 除非采用开链(separate chaining)策略;
+			7.1.2) 碰撞问题的解决方法: 
+				1) 线性探测(linear probing):
+					插入:
+						当hash function计算出来的位置不可用时, 直接循环往下一一寻找(如果到尾端, 到头部继续寻找),直到找到一个可用空间为止;
+					搜寻:
+						当hash function计算出来的位置上的元素值与我们的搜寻目标不符, 就循环一一寻找, 直到找到吻合者, 或者直到遇上空格元素;
+					删除:
+						采用惰性删除(lazy deletion): 只标记删除记号, 实际删除操作则待表格重新整理(rehashing)时再进行:
+						原因:
+							hash table中的每一个元素不仅表述它自己, 也关系到其他元素的排列;
+					1.1) 使用现行探测的假设: 
+						1.1.1) 表格足够大:
+						1.1.2) 每个元素都够独立: 
+					1.2) 主集团(primary clustering):
+						平均插入成本的成长幅度, 远高于负载系数的成长幅度;
+				2) 二次探测(quadratic probing): 主要解决主集团的问题;
+					2.1) 解决碰撞问题的方程式: F(i) = i^2;
+						如果hash function计算出的新元素的位置为H, 而该位置已经被使用, 那么我们就依序尝试H+1^2, H+2^2, H+3^2;
+					2.2) 如果表格大小为质数(prime), 而且永远保持负载系数在0.5以下(当超过0.5时重新配置并重新整理表格), 那么可以确定每一个新元素
+										插入所需要的探测次数不多于2;
+					2.3) 二次探测可以消除主集团(primary clustering), 却可能造成次集团(secondary clustering):
+						2.3.1) 次集团(secondary clustering): 两个元素经hash function计算出来的位置若相同, 通插入时所探测的位置也相同,
+													形成某种浪费;
+						2.3.2) 次集团(secondary clustering)的解决方法: 复试散列(double hashing);
+				3) 开链(separate chaining): 在每一个表格中维护一个list: hash function为我们分配某一个list, 
+							然后我们在那个list身上执行元素的插入, 搜寻, 删除等操作;
+		7.2) SGI把计算元素位置的任务赋予给bkt_num(), 由它调用hash function取得一个可执行modulus(取模)运算的值;
+			7.2.1) 找出最接近并大于n的那个质数
+			inline unsigned long __stl_next_prime(unsigned long n){
+				const unsigned long * first = __stl_prime_list;
+				const unsigned long * last = __stl_prime_list + __stl_num_primes;
+				const unsigned long * pos = lower_bound(first, last, n);
+				return pos == last ? *(last - 1) : *pos;
+			}
+			7.2.2) 重建表格的判断原则: 拿元素个数(把新增元素计入后)和bucket vector的大小来比较:
+										如果前者大于后者, 则重建表格;
+		7.7) hash functions:
+			7.7.1) SGI对于char, int, long的hash function仅仅是把数字返回给调用者
+			7.7.2) SGI对于字符串的hash function实现方法:
+			template <class Key> struct hash {};
+			inline size_t __stl_hash_string(const char * s){
+				unsigned long h = 0;
+				for(; *s; ++s){
+					h = 5 * h + *s;
+				}
+				return size_t(h);
+			}
+			
+			__STL_TEMPLATE_NULL struct hash<char*>
+			{
+				size_t operator()(const char * s) const {
+					return __stl_hash_string(s);
+				}
+			}
+
+			__STL_TEMPLATE_NULL struct hash<const char*>
+			{
+				size_t operator()(const char *s)const{
+					return __stl_hash_string(s);
+				}
+			}
+
+			__STL_TEMPLATE_NULL struct hash<char>{
+				size_t operator()(char x) const{return x;}
+			}
+
+			__STL_TEMPLATE_NULL struct hash<unsigned char>{
+				size_t operator()(unsigned char x) const{ return x;}
+			}
+
+			__STL_TEMPLATE_NULL struct hash<signed char>{
+				size_t operator())(signed char x) const { return x;}
+			}
+
+			__STL_TEMPLATE_NULL struct hash<short>{
+				size_t operator())(short x) const { return x;}
+			}
+
+			__STL_TEMPLATE_NULL struct hash<int>{
+				size_t operator())(int x) const { return x;}
+			}
+
+			__STL_TEMPLATE_NULL struct hash<unsigned int>{
+				size_t operator())(unsigned int x) const { return x;}
+			}
+
+			__STL_TEMPLATE_NULL struct hash<long>{
+				size_t operator())(long x) const { return x;}
+			}
+
+			__STL_TEMPLATE_NULL struct hash<unsigned long>{
+				size_t operator())(unsigned long x) const { return x;}
+			}
+
+
+NOTE:
+	散列函数(hash function): 负责将一个元素映射为"大小可接受之索引", 这样的函数称为hash function(散列函数);
+
+第六章: 算法:
+	6.1) 算法概观:
+		6.1.1) 算法分析与复杂度表示O()
+			1) 如果有任何正值常数c和N0, 使得当N >= N0时, T(N) <= cF(N), 那么我们便可将T(N)的复杂度表示为O(F(N));
+			2) 如果有一个算法, 花费固定的时间(常数时间, O(1))将问题的规模降低某个固定比例(通常是1/2), 我们便说此算法的复杂度是
+						O(logN);
+		6.1.2) STL算法总览
+		6.1.3) 质变算法mutating algorithm -- 会改变操作对象之值
+		6.1.4) 非质变算法nonmutating algorithm -- 不改变操作对象之值
+		6.1.5) STL算法的一般形式
+	6.2) 算法的泛华过程:
+		6.2.1) 泛化: 只要把操作对象的型别加以抽象化, 把操作对象的标示法和区间目标的移动行为抽象化, 整个算法也在一个抽象层面上
+									工作了, 整个过程被称为泛型化;
+	6.3) 数值算法<stl_numeric.h>
+		6.3.1) 
+	6.4) 基本算法<stl_algobase.h>
+		6.4.2) equal, fill, fill_n, iter_swap, lexicographical_compare, max, min, mismatch, swap;
+			1) equal: 比较两个容器是否相等:
+				1.1) 如果两个序列在[first, last)区间内相等, equal()返回true;
+				1.2) 如果第二个序列的元素比较多, 多出来的元素不予考虑;
+				1.3) 希望保证完全相等:
+					(vec1.size() == vec2.size() && equal(vec1.begin(), vec1.end(), vec2.begin()));
+				1.4) 当第二个序列的元素不足时会有不可预期的结果;
+			2) fill_n: 将[first, last)内的前n个元素改填新值, 返回的迭代器指向被填入的最后一个元素的下一个位置;
+				2.1) 当n超越了现有容器的大小, 会造成不可预期的错误;
+				2.1) 解决方法:	使用inserter 产生一个具有插入而非覆写能力的迭代器;
+					2.1.1) inserter()可产生一个用来修饰迭代器的配接器;
+					int ia[3] = {0,1,2};
+					vector<int> iv(ia, ia + 3);	// 由于初始化只有3个元素, 因此容器大小为3, 如果直接调用fill_n来覆写的话会导致向非法空间覆写数据;
+					fill_n(inserter(iv, iv.begin()), 5, 7);	// 解决方法是吧覆写迭代器转化为插入迭代器, 使用inserter();
+			3) iter_swap:
+				template<class ForwardIterator1, class ForwardIterator2>
+				inline void iter_swap(ForwardIterator1 a, ForwardIterator2 b){
+					__iter_swap(a, b, value_type(a));
+				}
+
+				template <class ForwardIterator1, class ForwardIterator2, class T>
+				inline void __iter_swap(ForwardIterator1 a, ForwardIterator2 b, T*){
+					T tmp = *a;
+					*a = *b;
+					*b = tmp;
+				}
+
+				template <class Iterator>
+				inline typename iterator_traits<Iterator>::value_type*
+				value_type(const Iterator&){
+					return static_cast<typename iterator_traits<Iterator>::value_type*>(0);
+				}
+			4) lexicographical_compare: 
+				1) 功能: 以字典序对[first1, last1), [first2, last2)中的内容进行比较:
+					1.1) 返回结果:
+						1.1.1) 如果第一个序列的元素较小, 返回true, 否则返回false;
+						1.1.2) 如果到达last1而尚未到达last2, 返回true;
+						1.1.3) 如果到达last2而尚未到达last1, 返回false;
+						1.1.4) 如果同时到达last和last2(所有元素都匹配), 返回false;
+					1.2) 算法结束条件:
+						1.2.1) 某一组对应元素彼此不相等;
+						1.2.2) 同时到达last1和last2(当两个序列的大小相同);
+						1.2.3) 到达last1或last2;
+				2) 
+					template<class InputIterator1, class InputIterator2>
+					bool lexicographical_compare(InputIterator1 first1, InputIterator1 last1,
+																																		InputIterator2 first2, InputIterator2 last2){
+						// 一下循环, 任何一个序列到达尾端, 就结束, 否则两个序列就相应元素一一进行比对
+						for(; first1 != last1 && first2 != last2; first1++, first2++){
+							if(*first1 < *first2)	// 第一序列的元素值小于第二序列的元素值;
+								return true;
+							if(*first2 < *first1)	// 第二序列的元素值小于第一序列的元素值;
+								return false;
+							// 如果不符合以上两个条件, 表示两值相等, 那就进行下一组相应元素的比对;
+						}
+						// 进行到这里, 如果第一个序列到达尾端, 而第二个序列尚有余额, 那么第一序列小于第二序列;
+						return first1 == last1 && first2 != last2;
+					}
+
+					特化版本:
+					inline bool
+					lexicographical_compare(const unsigned char * first1,
+																													const unsigned char * last1,
+																													const unsigned char * first2,
+																													const unsigned char * last2){
+						const size_t len1 = last1 - first1;	// 第一个序列的长度;
+						const size_t len2 = last2 - first2;	// 第二个序列的长度;
+						// 先比较相同长度的一段, memcmp()速度极快;
+						const int result = memcmp(first1, first2, min(len1, len2));
+						// 如果不相上下, 则长度较长者被视为较大;
+						return result != 0 ? result < 0 : len1 < len2;
+					}
+			5) mismatch: 用来平行比较两个序列, 指出两者之间的第一个不匹配点, 返回一对迭代器, 分别指向两个序列中不匹配点;
+				5.1) 如果第二个元素比第一个元素多, 多出来的元素忽略不计;
+				5.2) 如果第二个元素比第一个元素少, 发生不可预期的错误;
+			6) copy: 当输入区间和输出区间完全没有重叠, 不会有问题, 但是有重叠的话, 可能会有不可预期的错误;
+				6.1) 这里的错误是指, 在进行复制之前, 序列的后续原有的值由于已经通过复制操作被覆盖, 从而导致后续的数值丢失, 最终导致拷贝结果不正确;
+			7) copy_backward:
+				7.1) 当输入区间与输出区间有重叠时, 可能会出现错误, 例如需要拷贝的源数据被覆盖的问题;
+			
+	6.5) set相关算法:
+		6.5.1) 并集(union), 交集(intersection), 差集(difference), 对称集(symmetric difference):
+			1) 四个算法接收的set, 必须是有序区间(sorted range), 元素值可以重复出现;
+			2) 只可以用于以RB-TREE为底层机制的set/multi_set, 而不可以使用以hashtable为底层机制的set/multi_set;
+		6.5.2) set_union:
+		// 算法前提: set是一种sorted range;
+		template<class InputIterator1, class InputIterator2, class OutputIterator>
+		OutputIterator set_union(InputIterator1 first1, InputIterator1 last1,
+																											InputIterator2 first2, InputIterator2 last2,
+																											OutputIterator result
+		){
+			// 在两个区间内分别移动迭代器, 首先将元素较小者(假设A区)记录与目标区, 然后
+			// 移动A区迭代器使之前进; 同时另一个迭代器不动, 然后进行新一次的比大小, 记录
+			// 小值, 迭代器移动...直到两区中有一区到达尾端, 如果元素相等, 取S1者记录与目标区,
+			// 并同时移动两个迭代器;
+			while(first1 != last1 && first2 != last2){
+				if(*first1 < *first2){
+					*result = *first1;
+					first1++;
+				}else if(*first2 < *first1){
+					*result = *first2;
+					first2++;
+				}else{
+					*result = *first1;
+					first1++;
+					first2++;
+				}
+				++result;
+			}
+			
+			// 只要两区之中有一区到达尾端, 就结束上述的while循环;
+			// 以下将尚未到达尾端的区间的所有剩余元素拷贝到目的端;
+			// 此刻的[first1, last1)和[first2, last2)之中有一个是空白区间;
+			return copy(first2, last2, copy(first1,last1, result));
+		}
+		6.5.3) set_intersection:
+		// 算法前提: set是一种sorted range;
+		template<class InputIterator1, class InputIterator2, class OutputIterator>
+		OutputIterator set_union(InputIterator1 first1, InputIterator1 last1,
+																											InputIterator2 first2, InputIterator2 last2,
+																											OutputIterator result
+		){
+			// 当两个区间都尚未到达尾端时, 执行以下操作...
+			while(first1 != last1 && first2 != last2){
+				// 在区间内分别移动迭代器, 直到遇有元素值相同, 暂停, 将该值记录于目标区间;
+				// 再继续移动迭代器, 直到两区中有一区到达尾端;
+				if(*first1 < *first2){
+					++first1;
+				}else if(*first2 < *first1){
+					++first2;
+				}else {
+					*result = *first1;
+					++first1;
+					++first2;
+					++result;
+				}
+			}
+			return result;
+		}
+		6.5.4) set_difference:
+		// 算法前提: set是一种sorted range;
+		template<class InputIterator1, class InputIterator2, class OutputIterator>
+		OutputIterator set_union(InputIterator1 first1, InputIterator1 last1,
+																											InputIterator2 first2, InputIterator2 last2,
+																											OutputIterator result
+		){
+			// 当两个区间都尚未到达尾端时, 执行以下操作...
+			while(first1 != last1 && first2 != last2){
+				// 在两个区间内分别移动迭代器, 当第一个区间的元素等于第二区间的元素(表示此值同时存在于
+				//	两个区间内), 就让两区间同时前进, 当第一区间的元素大于第二区间的元素, 就让第二区间前进;
+				// 有了这两种处理, 就保证当第一个区间的元素小于第二区间的元素时, 第一区间的元素只存在于
+				// 第一区间中, 不存在于第二区间, 于是将它记录在目标区;
+				if(*first1 < *first2){
+					*result = *first1;
+					++first1;
+					++result;
+				}else if(*first2 < *first1){
+					++first2;
+				}else{
+					++first1;
+					++first2;
+				}
+			}
+			return copy(first1, lastt1, result);
+		}
+		6.5.5) set_symmetric_difference: 取S1-S2和S2-S1的并集;
+	6.6) heap算法:make_heap, pop_heap, push_heap, sort_heap;
+	6.7) 其他算法:
+		6.7.1) 单纯的数据处理算法:
+			1) swap_ranges: 第二区间的元素个数不应该小于第一个区间中元素的个数;
+			2) transform: 第二区间的元素个数不应该小于第一个区间中元素的个数;
+		6.7.2) adjacent_find: 找出第一组满足条件的相邻元素;
+			template<class ForwardIterator>
+			ForwardIterator adjacent_find(ForwardIterator first, ForwardIterator last){
+				if(first == last) return lase;
+				ForwardIterator next = first;
+				while(++next != last){
+					if(*first == *next) return first;
+					first = next;
+				}
+				return next;
+			}
+		6.7.3) count: 运用equalit操作符, 把[first, last)区间内的每一个元素和指定值value进行比较, 返回与value相等的元素个数;
+		6.7.4) count_if: 将指定操作(一个仿函数)pred实施与[first, last)区间内的每一个元素身上, 并将"造成pred之计算结果为true"的所有元素的个数返回;
+		6.7.5) find_end: 在序列1[first, last)所涵盖的区间中, 查找序列2[first, last)的最后一次出现点, 如果
+									序列1之内不存在"完全匹配序列2"的子序列, 便返回迭代器last1;
+			6.7.5.1) 对于BidirectionalIterator类型的迭代器, 在内部会逆向查找第一个符合序列2的位置, 整理对应的逆向迭代器,并把位置信息再转换为正向的迭代器;
+		6.7.6) find_first_of: 以[first2, last2)区间内的某些元素作为查找目标, 寻找它们在[first1, last1)区间内第一次出现的地点;
+			6.7.6.1) 如果查找失败, 则返回last1;
+		6.7.8) for_each: 将仿函数f施行于[first,last)区间内的每一个元素身上;
+			6.7.8.1) f不可改变元素内容, 因为first和last都是InputIterators, 不保证接受赋值行为(assignment);
+		6.7.9) includes(应用于有序区间): 判断序列S2是否涵盖于序列S1, S1和S2都必须是有序集合, 其中元素可以重复;
+			6.7.9.1) 传入的comp必须满足以下case3:
+				if(comp(*first2, *first1))							// case1;
+					...
+				else if(comp(*first1, *first2))		// case2;
+					...
+				else																													// case3;
+		6.7.10) partition: 会将区间[first, last)中的元素重新排列:
+			6.7.10.1) 所有满足一元条件运算pred判定为true的元素, 会被放在区间的前段, 被判定为false的元素都会被放在区间的后段;
+			6.7.10.1) 不稳定, 如果要保持稳定性, 可以使用stable_partition;
+		6.7.11) reverse: 颠倒序列[first, last)
+		// 分派函数(dispatch function)
+		template <class BidirectionalIterator>
+		inline void reverse(BidirectionalIterator first, BidirectionalIterator last){
+			__reverse(first, last, iterator_category(first));
+		}
+
+		// reverse的bidiretional iterator版本
+		template <class BidirectionalIterator>
+		void __reverse(BidirectionalIterator first, BidirectionalIterator last, bidirectional_iterator_tag){
+			while(true){
+				if (first == last || first == --last){
+					return;
+				}else{
+					iter_swap(first++, last);
+				}
+			}
+		}
+
+		// reverse的random access iterator版本
+		template <class RandomAccessIterator>
+		void __reverse(RandomAccessIterator first, RandomAccessIterator last, random_access_iterator_tag){
+			// 以下, 头尾两两互换, 然后头部累进一个位置, 尾部累退一个位置, 两者交错时即停止;
+			// 注意, 只有random iterators 才能做一下的first < last判断;
+			while(first < last) iter_swap(first++, --last);
+		}
+		6.7.12) search_n: 在序列[first, last)中查找count个符合条件之元素所形成的子序列, 返回指向子序列起始点;
+		// 版本二
+		// 查找连续count个元素皆满足指定条件所形成的子序列的起始点, 返回其发生位置;
+		template <class ForwardIterator, class Integer, class T, class BinaryPredicate>
+		ForwardIterator search_n(ForwardIterator first, ForwardIterator last, Integer count, 
+																											const T& value, BinaryPredicate binary_pred
+		){
+			if(count <= 0)
+				return first;
+			else{
+				while(first != last){
+					if(binary_pred(*first, value)) break;
+					++first;
+				}
+				while(first != last){
+					Integer n = count - 1;
+					ForwardIterator i = first;
+					++i;
+					// 以下循环确定接下来count-1个元素是否都符合条件
+					while(i != last && n != 0 && binary_pred(*i, value)){
+						++i;
+						--n;	// 既然这个元素符合条件, "应符合条件的元素个数便可减1;
+					}
+					if(n == 0){	// n==0表示确实找到了count个符合条件的元素, 功德圆满;
+						return first;
+					}else{
+						while(i != last){
+							if(binary_pred(*i, value)) break;	// 查找下一个符合条件的元素;
+							++i;
+						}
+					}
+				}
+				return last;
+			}
+		}
+		6.7.12) swap_ranges: 将区间[first, last)内的元素与"从first2开始, 个数相同"的元素互相交换;
+			6.7.12.1) 如果两个序列互相重叠, 或者第二个序列的元素个数小于第一个序列, 执行结果未可预期;
+			// 将两段等长区间内的元素互换;
+			template <class ForwardIterator1, class ForwardIterator2>
+			ForwardIterator2 swap_ranges(ForwardIterator1 first1, ForwardIterator1 last1,
+																																ForwardIterator2 first2
+			){
+				for(	; first1 != last1; ++first1, ++first2){
+					iter_swap(first1, first2);
+				}
+				return first2;
+			}
+		6.7.13) transform: 
+			6.7.13.1) 版本1: 以仿函数op作用于[first, last)中的每一个元素身上, 并以其结果产生出一个新序列;
+			6.7.13.2) 版本2: 以仿函数binary_op作用于一双元素身上(其中一个元素来自序列1, 另一个元素来自序列2);
+			6.7.13.3) 返回结果指向result的下一个位置;
+			6.7.13.4) 如果序列2元素个数少于序列1,执行结果未可预期;
+			// 版本一
+			template <class InputIterator, class OutputIterator, class UnaryOperation>
+			OutputIterator transform(InputIterator first, InputIterator last, OutputIterator result, UnaryOperation op){
+				for( ; first != last; ++first, ++result){
+					*result = op(*first);
+				}
+				return result;
+			}
+			// 版本二
+			template <class InputIterator1, class InputIterator2, class OutputIterator, class BinaryOperation>
+			OutputIterator transform(InputIterator1 first1, InputIterator1 last1, 
+																												InputIterator2 first2, OutputIterator result,
+																												BinaryOperation binary_op
+			){
+				for(	; first1 != last1; ++first1, ++first2, ++result){
+					*result = binary_op(*first1, *first2);
+				}
+				return result;
+			}
+		6.7.14) unique: 移除序列中相邻重复的元素;
+			tips: 如果想移除整个序列中所有重复的元素, 则需要对序列先做排序;
+			6.7.14.1) 返回一个迭代器指向新区建的尾端;
+		6.7.15) unique_copy: 
+		// 版本一;
+		template <class InputIterator, class OutputIterator>
+		inline OutputIterator unique_copy(InputIterator first,
+																																				InputIterator last,
+																																				OutputIterator result
+		){
+			if(first == last) return result;
+			// 以下, 根据result的iterator category做不同的处理;
+			return __unique_copy(first, last, result, iterator_category(result));
+		}
+
+		// 版本一辅助函数, forward_iterator_tag版本
+		template <class InputIterator, class ForwardIterator>
+		ForwardIterator __unique_copy(InputIterator first,
+																																InputIterator last,
+																																ForwardIterator result,
+																																forward_iterator_tag
+		){
+			*result = *first;
+			while(++first != last){
+				// 以下, 元素不同, 就记录, 否则(元素相同), 就跳过;
+				if(*result != *first) *++result = *first;
+			}
+			return ++result;
+		}
+
+		// 版本一辅助函数, output_iterator_tag版
+		template <class InputIterator, class OutputIterator>
+		inline OutputIterator __unique_copy(InputIterator first,
+																																						InputIterator last,
+																																						OutputIterator result,
+																																						output_iterator_tag
+		){
+			// 以下, output iterator有一些功能限制, 所以必须先知道其value_type;
+			return __unique_copy(first, last, result, value_type(first));
+		}
+
+		// 由于output iterator为write only, 无法向forward iterator那般可以读取;
+		// 所以不能有类似*result != *first这样的判断操作, 所以才需要设计这一版本;
+		// 例如ostream_iterator就是一个output iterator;
+		template<class InputIterator, class OutputIterator, class T>
+		OutputIterator __unique_copy(InputIterator first, InputIterator last,
+																															OutputIterator result, T*
+		){
+			// T为output iterator的value type;
+			T value = *first;
+			*result = value;
+			while(++first != last){
+				if(value != *first){
+					value = *first;
+					*++result = value;
+				}
+			}
+			return ++result;
+		}
+		6.7.16) lower_bound(应用于有序区间): 试图在已排序的[first, last)中寻找元素value:
+			6.7.16.1) 如果[first, last)具有与value相等的元素(s), 则返回指向s的迭代器;
+			6.7.16.2) 如果没有, 则返回假设该元素存在时应该出现的位置 -- 返回一个迭代器, 指向第一个不小于value的元素;
+			6.7.16.3) 返回值: 在不破坏排序状态的原则下, 可插入value的第一个位置;
+			template <class ForwardIterator, class T, class Distance>
+			ForwardIterator __lower_bound(ForwardIterator first,
+																																	ForwardIterator last,
+																																	const T& value,
+																																	Distance *,
+																																	forward_iterator_tag
+			){
+				Distance len = 0;
+				distance(first, last, len);
+				Distance half;
+				ForwardIterator middle;
+				while(len > 0){
+					half = len >> 1;
+					middle = first;
+					advance(middle, half);
+					if(*middle < value){
+						first = middle;
+						++first;	// 令first指向middle的下一个位置;
+						len = len - half - 1;
+					}else{
+						len = half;
+					}
+				}
+				return first;
+			}
+		6.7.17) upper_bound: 试图在已排序的[first, last)中寻找value:
+			6.7.17.1) 返回值: 在不破坏顺序的情况下, 可插入value的最后一个合适位置;
+				tips: 当value存在于序列中时, 返回值指向value所在位置的下一个位置;
+				template <class ForwardIterator, class T, class Distaince>
+				ForwardIterator __upper_bound(ForwardIterator first,
+																																		ForwardIterator last,
+																																		const T& value, Distaince *,
+																																		forward_iterator_tag
+				){
+					Distaince len = 0;
+					distance(first, last, len);
+					Distaince half;
+					ForwardIterator middle;
+
+					while(len){
+						half = len >> 1;
+						middle = first;
+						advance(middle, half);
+						if(value < *middle){
+							len = half;
+						}else{
+							first = middle;
+							++first;
+							len = len - half - 1;
+						}
+					}
+					return first;
+				}
+		6.7.18) binary_search(应用于有序区间);
+		6.7.19) next_permutation(查看序列是否有下一个排列组合);
+		template <class BidirectionalIterator>
+		bool next_permutation(BidirectionalIterator first,
+																								BidirectionalIterator last){
+			if(first == last) return false;
+			BidirectionalIterator i = first;
+			++i;
+			if(i == last) return false;
+			i = last;
+			--i;
+
+			for(;;){
+				BidirectionalIterator ii = i;
+				--i;
+
+				// 以上, 锁定一组(两个)相邻元素
+				if(*i < *ii){
+					BidirectionalIterator j = last;
+					while(!(*i < *--j));
+					iter_swap(i, j);
+					reverse(ii, last);
+					return true;
+				}
+
+				if(i == first){
+					reverse(first, last);
+					return false;
+				}
+			}
+		}
+		6.7.20) prev_permutation: 查看序列是否有前一个排列组合;
+		template <class BidirectionalIterator>
+		bool prev_permutation(BidirectionalIterator first, BidirectionalIterator last){
+			if(first == last) return false;	// 空区间;
+			BidirectionalIterator i = first;
+			++i;
+			if(i == last) return false;
+			i = last;
+			--i;
+
+			for(;;){
+				BidirectionalIterator ii = i;
+				--i;
+				// 以上, 锁定一组(两个)相邻元素;
+				if(*ii < *i){
+					BidirectionalIterator j = last;
+					while(!(*--j < *i));
+					iter_swap(i, j);
+					reverse(ii, last);
+					return true;
+				}
+
+				if(i == first){
+					reverse(first, last);
+					return false;
+				}
+			}
+		}
+
+		6.7.21) random_shuffle: 将序列[first, last)的元素次序随即重排, 必须保证某一个排列出现的概率为1/N!, 否则是错误的;
+		tips:
+			第二版带有仿函数的参数, 参数类型为by reference, 而不是by value是因为随机数产生器拥有一个特质: 拥有局部状态;
+			局部状态: 保证每次产生出来的随机数能够随即;
+		6.7.22) partial_sort/partial_sort_copy: 接收一个middle迭代器, 使middle-first个元素以递增或者递减的顺序排序, 其余的顺序不考虑;
+		tips: 
+			1) 使用partial_sort还是sort的依据: 根据效率来看, 如果只需要序列中前N个元素以递增或递减的方式排列, 则使用partial_sort, 否则使用sort;
+			2) 算法内部使用heap_sort来进行排序;
+			3) partial_sort只接受RandomAccessIterator;
+		6.7.23) sort:
+			6.7.23.1) Quick Sort: 
+				1) 最坏情况: 分割(partitioning)时产生出一个空的子空间--完全没有达到分割的预期效果;
+				2) median-of-three partitioning: 取整个序列的头, 尾, 中央三个位置的元素, 以其中值(median)作为枢纽, 也叫做mediun-of-three-QuickSort;
+				3) 为了能够实现median-of-three partitioning, 迭代器需要能够随即定位, 因此需要是个RandomAccessIterators;
+			6.7.23.2) IntroSort: 近乎于median-of-3 Quick Sort相同快, 但是当分割行为有恶化为二次行为的倾向时, 能够自我侦测, 转而改用
+													Heap Sort, 使效率维持在Heap Sort的O(NlogN), 又比一开始就使用Heap Sort来的好;
+		6.7.24） equal_range(应用于有序区间):
+			6.7.24.1) 试图在有序区间[first, last)中寻找value, 返回迭代器i和j:
+				1) i指向value可插入的第一个位置;
+				2) j指向value可插入的最后一个位置;
+				template <class ForwardIterator, class T>
+				inline pair<ForwardIterator, ForwardIterator>
+				equal_range(ForwardIterator first, ForwardIterator last, const T& value){
+					// 根据迭代器种类采用不同的策略;
+					return __equal_range(first, last, value, distance_type(first),
+						iterator_category(first)
+					);
+				}
+
+				// template<class RandomAccessIterator, class T, class Distaince>
+				pair<RandomAccessIterator first, RandomAccessIterator last>
+				__equal_range(RandomAccessIterator first, RandomAccessIterator last,
+																		const T& value, Distaince *, random_access_iterator_tag
+				){
+					Distance len = last - first;
+					Distance half;
+					RandomAccessIterator middle, left, right;
+					while(len>0){
+						half = len >> 1;
+						middle = first + half;
+						if(*middle < value){
+							first = middle + 1;
+							len = len - half - 1;
+						}else if(value < *middle){
+							len = half;
+						}else{
+							left = lower_bound(first, middle, value);
+							rigth = upper_bound(++middle, first+len, value);
+							return pair<RandomAccessIterator, RandomAccessIterator>(left, right);
+						}
+					}
+					return pair<RandomAccessIterator, RandomAccessIterator>(first, first);
+				}
+		6.7.25) inplace_merge(应用于有序区间): 如果两个连接在一起的序列[first, middle)和[middle, last)都已排序, 那么
+										inplace_merge可将它们结合成单一一个序列, 并保持有序性;
+			6.7.25.1) 是稳定的排序算法;
+		6.7.26) nth_element: 不会对序列做排序, 只是依据指定元素, 把小于指定元素的放在此元素左侧, 大于指定元素的放在此元素的右侧;
+			template <class RandomAccessIterator>
+			inline void nth_element(RandomAccessIterator first,
+																											RandomAccessIterator nth,
+																											RandomAccessIterator last
+			){
+				__nth_element(first, nth, last, value_type(first));
+			}
+
+			template <class RandomAccessIterator, class T>
+			void __nth_element(RandomAccessIterator first, RandomAccessIterator nth, 
+																						RandomAccessIterator last, T*
+			){
+				while(last - first > 3){
+					// 采用median-of-3 partition, 参数(first, last, pivot);
+					// 返回一个迭代器, 指向分割后右段的第一个元素
+					RandomAccessIterator cut = __unguarded_partition
+						(first, last, T(__median(*first, *(first + (last - first)/2), *(last-1))));
+					if(cut <= nth)
+						first = cut;
+					else
+						last = cut;
+				}
+				__insertion_sort(first, last);
+			}
+		6.7.27) merge_sort: 需要借助额外的空间, 并且需要在内存中做大量的交换操作, 因此效率上不如QuickSort;
+		tips:
+			优点: 概念简单, 实现简单;
+		template <class BidirectionalIterator>
+		void mergesort(BidirectionalIterator first, BidirectionalIterator last){
+			typename iterator_traits<BidirectionalIterator>::difference_type n
+				= distance(first, last);
+			if(n == 0 || n == 1)
+				return;
+			else{
+				BidirectionalIterator mid = first + n / 2;
+				mergesort(first, mid);
+				mergesort(mid, last);
+				inplace_merge(first, mid, last);
+			}
+		}
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
 
 
 
