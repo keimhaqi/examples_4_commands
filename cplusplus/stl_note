@@ -917,6 +917,242 @@ NOTE:
 			}
 		}
 
+第七章 仿函数(functors):
+	7.1) 仿函数分类:
+		7.1.1) 根据操作数分类: 一元和二元仿函数;
+		7.1.2) 根据功能分类: 算术运算(Arithmetic), 关系运算(Rational), 逻辑运算(Logical);
+		7.1.3) STL内建仿函数: <functional>
+	7.2) 可配接(Adaptable)的关键:
+		7.2.1) 仿函数的可配接性(adaptability);
+		7.2.2) 仿函数型别: 表示函数的参数类型和返回值类型;
+		7.2.3) unary_function: 表示一元函数的参数类型和返回值类型:
+		template <class Arg, class Result>
+		struct unary_function{
+			typedef Arg argument_type;
+			typedef Result result_type;
+		};
+		7.2.4) binary_function: 表示二元函数的第一参数型别和第二参数型别和返回值型别;
+		template <class Arg1, class Arg2, class Result>
+		struct binary_function{
+			typedef Arg1 first_argument_type;
+			typedef Arg2 second_argument_type;
+			typedef Result result_type;
+		};
+	7.3) 算数类(Arithmetic)仿函数:
+		7.3.1) 加法: plus<T>
+		template <class T>
+		struct plus: public binary_function<T, T, T>{
+			T operator()(const T& x, const T& y) const {return x + y;}
+		};
+		7.3.2) 减法: minus<T>
+		template <class T>
+		struct minus: public binary_function<T, T, T>{
+			T operator()(const T& x, const T& y) const { return x - y;}
+		};
+		7.3.3) 乘法: multiplies<T>
+		template <class T>
+		struct multiplies: public binary_function<T, T, T>{
+			T operator()(const T& x, const T& y) const {return x * y;}
+		};
+		7.3.4) 除法: divides<T>
+		template <class T>
+		struct divides: public binary_function<T, T, T>{
+			T operator()(const T& x, const T& y) const {return x / y;}
+		};
+		7.3.5) 模去(modulus): modulus<T>
+		template <class T>
+		struct modulus: public binary_function<T, T, T>{
+			T operator()(const T& x, const T& y) const{return x % y;}
+		}
+		7.3.6) 否定(negation): negate<T>
+		template <class T>
+		struct negate: public binary_function<T, T>{
+			T operator()(const T& x) const {return -x;}
+		}
+		7.3.7) 证同元素(identity element):
+			7.3.7.1) 运算op的证同元素(identity element): 数值A若与该元素做op运算, 会得到A自己;
+			eg: 加法的证同元素为0, 乘法的证同元素为1;
+
+			template <class T>
+			inline
+			T identity_element(plus<T>){
+				return T(0);
+			}
+
+			template <class T>
+			inline
+			T identity_element(multiplies<T>){
+				return T(1);
+			}
+
+	7.4) 关系运算类(Relational)仿函数
+		7.4.1) 等于(equality): equal_to<T>;
+		template <class T>
+		struct equal_to: public binary_function<T, T, bool>{
+			bool operator()(const T& x, const T& y) const {return x == y;}
+		};
+		7.4.2) 不等于(inequality): not_equal_to<T>;
+		template <class T>
+		struct not_equal_to: public binary_function<T, T, bool>{
+			bool operator()(const T& x, const T& y) const {return x != y;}
+		};
+		7.4.3) 大于(greater than): greater<T>;
+		template <class T>
+		struct greater: public binary_function<T, T, bool>{
+			bool operator()(const T& x, const T& y) const {return x > y;}
+		};
+		7.4.4) 大于等于(greater than or equal): greater_equal<T>;
+		template <class T>
+		struct greater_equal: public binary_function<T, T, bool>{
+			bool operator()(const T& x, const T& y) const {return x >= y;}
+		};
+		7.4.5) 小于(less than): less<T>;
+		template <class T>
+		struct less: public binary_function<T, T, bool>{
+			bool operator()(const T& x, const T& y) const {return x <= y;}
+		};
+		7.4.6) 小于或等于(less than or equal): less_equal<T>;
+		template <class T>
+		struct less_equal: public binary_function<T, T, bool>{
+			bool operator()(const T& x, const T& y) const {return x <= y;}
+		};
+	7.5) 逻辑运算类仿函数
+		7.5.1) 证同函数:
+		template <class T>
+		struct identity: public unary_function<T, T>{
+			const T& operator()(const T& x) const {return x;}
+		};
+		7.5.2) 选择函数: 传回第一个元素;
+		template <class Pair>
+		struct select1st: public unary_function<pair, typename Pair::first_type>{
+			const typename Pair::first_type & oeprator()(const Pair & x) const {
+				return x.first;
+			}
+		};
+		7.5.3) 选择函数: 传回第二个元素;
+		template <class Pair>
+		struct select2nd: public unary_function<pair, typename Pair::second_type>{
+			const typename Pair::second_type & oeprator()(const Pair & x) const {
+				return x.second;
+			}
+		};
+		7.5.4) 投射函数: 传回第一个参数, 忽略第二个参数:
+		template <class Arg1, class Arg2>
+		struct project1st: public binary_function<Arg1, Arg2, Arg1>{
+			Arg1 operator()(const Arg1& x, const Arg2 &) const { return x;}
+		};
+
+		7.5.5) 投射函数: 传回第二个参数, 忽略第一个参数:
+		template <class Arg1, class Arg2>
+		struct proejct2nd: public binary_function<Arg1, Arg2, Arg2>{
+			Arg2 operator()(const Arg1 &, const Arg2 & y) const { return y;}
+		};
+
+第八章: 配接器(Adapter):
+	tips: 
+		1) adapter: 将一个class的接口转换为另一个class的接口, 使原本因接口不兼容而不能合作的classes, 可以一起运作;
+	8.1) 配接器分类:
+		1) function adapter: 改变仿函数接口;
+		2) container adapter: 改变容器接口;
+		3) iterator adapter: 改变迭代器接口;
+		8.1.1) contaier adapters: queue和stack;
+		8.1.2) iterator adapters: 包括isert iterator, reverse iterator, iostream iterator;
+			8.1.2.1) insert iterator: 把一般迭代器的赋值(assign)操作转变为插入(insert)操作;
+			8.1.2.2) reverse iterator: 可以把一般迭代器的行进方向逆转, 使原本应该前进的operator++变成了后退操作, 使原本应该后退的operator--变成了前进操作;
+			8.1.2.3) iostream iterator: 可以把迭代器绑定到iostream对象上, 例如绑定到istream对象上, 称为istream_iterator;
+	8.2) container adapters:
+		8.2.1) stack: 一个作用于容器之上的配接器, 底层采用deque;
+		8.2.2) queue: 一个作用于容器之上的配接器, 底层采用deque;
+	8.3) iterator adapters;
+		8.3.1) 只在绝对必要的时候才定义一个istream iterator;
+	8.4) function adapters:
+		8.4.1) 对返回值进行逻辑否定: not1和not2
+		8.4.2) 对参数进行绑定: bind1st, bind2nd
+			8.4.2.1) 
+			template <class Operation>
+			class binder1st:
+				public unary_function<typename Operation::second_argument_type,
+																										typename Operation::result_type>
+			{
+				protected:
+					Operation op;	// 内部成员;
+					typename Operation::first_argument_type value;	// 内部成员;
+				public:
+					// constructor
+					bind1st(const Operation & x,
+												const typename Operation::first_argument_type& y)
+												: op(x), value(y){}
+					typename Operation::result_type
+					operator()(const typename Operation::second_argument_type& x) const{
+						return op(value, x);	// 实际调用表达式, 并将value绑定为第一参数;
+					}
+			};
+
+			// 辅助函数, 让我们得以方便使用binder1st<Op>
+			template <class Operation, class T>
+			inline binder1st<Operation> bind1st(const Operation& op, const T& x){
+				typedef typename Operation::first_argument_type arg1_type;
+				return bind1st<Operation>(op, arg1_type(x));	// 以上, 注意, 先把x转型为op的第一参数型别;
+			}
+
+			8.4.2.2) 
+			template <class Operation>
+			class binder2nd:
+				public unary_function<typename Operation::first_argument_type,
+																										typename Operation::result_type>{
+					protected:
+						Operation op;	// 内部成员;
+						typename Operation::second_argument_type value; // 内部成员;
+					public:
+						// constructor
+						binder2nd(const Operation& x,
+																const typename Operation::second_argument_type& y
+						): op(x), value(y){}	// 将表达式和第一参数记录于内部成员;
+						typename Operation::result_type
+						operator()(const typename Operation::first_argument_type & x)const {
+							return op(x, value);
+						}
+			};
+
+			// 辅助函数, 让我们方便使用binder2nd<Op>
+			template <class Operation, class T>
+			inline binder2nd<Operation> bind2nd(const Operation& op, const T& x){
+				typedef typename Operation::second_argument_type arg2_type;
+				return binder2nd<Operation>(op, arg2_type(x));
+			}
+		8.4.3) 
+			8.4.3.1) compose1:
+			template <class Operation1, class Operation2>
+			class unary_compose:
+				public unary_function<typename Operation2::argument_type,
+																										typename Operation1::result_type>
+			{
+				protected:
+					Operation1 op1;	// 内部成员;
+					Operation2 op2;	// 内部成员;
+				public:
+					// constructor;
+					unary_compose(const Operation1& x, const Operation2& y):
+					op1(x), op2(y){}
+
+					typename Operation1::result_type
+					operator()(const typename Operation2::argument_type& x){
+						return op1(op2(x));
+					}
+			};
+
+			8.4.3.2) compos2:
+	8.4.5) 用于成员函数指针: mem_fun, mem_fun_ref;
+		tips: 
+			1) 当容器元素类型为X&或者X*时, 而我们又以虚拟(virtual)成员函数作为仿函数, 便可以藉由泛型算法
+			完成所谓的多态调用(polymorphic function call);
+			2) STL容器只支持实值语义, 因此vector<X*>可以, 但是不可以使用vector<X&>;
+		8.4.5.1) 
+
+
+
+
+		
 
 
 
